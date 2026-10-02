@@ -9,11 +9,10 @@ Bạn không cần biết code để sử dụng hệ thống này. Hãy làm th
 
 1. **Cài đặt Antigravity:** Truy cập `https://antigravity.google` để tải và cài đặt ứng dụng **Google Antigravity**. Chọn model **Gemini 3.1 Pro** để có sức mạnh tốt nhất.
 2. **Cấp quyền Tự động (Full Turbo):**
-   - Tải thư mục dự án `BINHDUONG` về máy và mở bằng Antigravity.
-   - Vào phần **Cài đặt (Settings)** của Antigravity, bật tùy chọn cho phép AI chạy lệnh Terminal tự động mà không cần hỏi (Auto-approve tool calls).
+   - Mở ứng dụng Antigravity. Vào phần **Cài đặt (Settings)**, bật tùy chọn cho phép AI chạy lệnh Terminal tự động mà không cần hỏi (Auto-approve tool calls).
 3. **Cài đặt bằng "Câu Thần Chú":**
    - Copy nguyên văn câu lệnh dưới đây dán vào khung chat của Antigravity và bấm Enter:
-   > *"Tôi là nhân viên văn phòng mới. Hãy đọc kỹ thư mục dự án này (đặc biệt là Skill.md) và tự động setup toàn bộ môi trường làm việc cho tôi. Khởi tạo venv, cài đặt toàn bộ thư viện python cần thiết. Cứ tự động chạy, làm xong thì báo cáo cho tôi."*
+   > *"Tôi là nhân viên văn phòng mới. Hãy giúp tôi tải (clone) toàn bộ dự án từ GitHub https://github.com/QuanDo610/BinhDuongCN23 về máy. Sau đó, đọc kỹ file Skill.md trong đó để tự động setup toàn bộ môi trường làm việc: khởi tạo venv, cài đặt các thư viện python cần thiết. Cứ tự động chạy, làm xong thì báo cáo cho tôi."*
 
 Hệ thống sẽ tự động cài đặt mọi thứ (Python, thư viện xử lý Word/Excel/PDF...) trong vòng 1-2 phút!
 
