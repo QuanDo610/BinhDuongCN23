@@ -14,21 +14,26 @@
 - **QUY ĐỊNH BẮT BUỘC ĐỐI VỚI FILE `.DOCX`:** Mọi file output có đuôi `.docx` khi tạo mới hoặc cập nhật **MẶC ĐỊNH BẮT BUỘC 100% PHẢI ĐƯỢC FORMAT THEO QUY CHUẨN NGHỊ ĐỊNH 30/2020/NĐ-CP** (tham chiếu chi tiết tại [QUY_CHUAN_DOCX_ND30.md](file:///Users/admin/Desktop/BINHDUONG/QUY_CHUAN_DOCX_ND30.md)). **Quy tắc này áp dụng tự động trong mọi tác vụ mà không cần người dùng phải nhắc lại trong mỗi yêu cầu.**
 - Đối với yêu cầu tạo file để mở trên trình duyệt (HTML):
   - Chỉ sử dụng HTML, CSS và Javascript thuần túy (Vanilla).
-  - Trừ khi người dùng có yêu cầu chia file cụ thể, **tất cả HTML, CSS và JS phải được gộp chung vào 1 file `.html` duy nhất** để dễ dàng xem.
+  - Tích hợp các CDN nếu cần thiết để biểu diễn dữ liệu trực quan (ví dụ: dùng CDN MermaidJS để vẽ flowchart, KaTeX/MathJax để hiển thị công thức toán học).
+  - Trừ khi người dùng có yêu cầu chia file cụ thể, **tất cả mã HTML, CSS và JS (kể cả CDN script) phải được gộp chung vào 1 file `.html` duy nhất** để dễ dàng xem.
 
 ## 4. Quản lý File
 - Luôn lưu các file kết quả vào thư mục `OUTPUT/`.
 - Tuyệt đối không ghi đè hay chỉnh sửa trực tiếp vào file gốc trong thư mục `documents/`.
 
-## 5. Giữ nguyên định dạng tài liệu gốc (Format Preserving)
+## 5. Báo cáo Rà soát & Yêu cầu File Đối chiếu (Audit Reporting)
+- **Báo cáo những gì đã sửa:** Sau khi thực hiện rà soát (Audit), AI BẮT BUỘC phải tạo một file báo cáo (hoặc tóm tắt trực tiếp trong chat) liệt kê chi tiết các lỗi đã phát hiện và những thông tin cụ thể đã được điều chỉnh.
+- **Hỏi lại nếu thiếu File gốc:** Nếu người dùng yêu cầu rà soát chéo hoặc đối chiếu số liệu nhưng lại cung cấp thiếu file nguồn (file đối chiếu), AI **TẠM DỪNG XỬ LÝ VÀ PHẢI HỎI LẠI NGƯỜI DÙNG** để xin thêm file. Tuyệt đối không được im lặng bỏ qua, tự biên dịch hay làm bừa dẫn đến sai lệch dữ liệu.
+
+## 6. Giữ nguyên định dạng tài liệu gốc (Format Preserving)
 - Khi xuất kết quả ra các định dạng văn bản (đặc biệt là `.docx`), AI phải tái tạo lại tối đa format của bản PDF gốc kết hợp với quy chuẩn thể thức Nghị định 30.
 - Bao gồm: Chiều trang (Landscape/Portrait), phông chữ tiêu chuẩn (Times New Roman), các dòng tiêu đề in đậm, các dòng căn cứ pháp lý in nghiêng, và giữ nguyên cấu trúc/câu từ trong bảng biểu.
 
-## 6. Kiểm tra chéo Toán học & Logic (Mathematical Cross-check)
+## 7. Kiểm tra chéo Toán học & Logic (Mathematical Cross-check)
 - AI bắt buộc phải tự động tính toán, cộng dồn lại tất cả các cột tổng, hàng tổng trong các bảng biểu và thuyết minh khi đọc dữ liệu.
 - Nếu phát hiện sai sót số học hoặc mâu thuẫn từ bản gốc, tự động điều chỉnh số liệu đúng vào file kết quả cuối cùng (OUTPUT) và thông báo trong khung chat.
 
-## 7. Quy chuẩn trình bày văn bản .docx (Mặc định tuân thủ toàn diện Nghị định 30/2020/NĐ-CP)
+## 8. Quy chuẩn trình bày văn bản .docx (Mặc định tuân thủ toàn diện Nghị định 30/2020/NĐ-CP)
 > **NGUYÊN TẮC BẤT DI BẤT DỊCH:** Bất cứ khi nào tạo mới hoặc chỉnh sửa file văn bản hành chính (`.docx`), AI **tự động áp dụng toàn bộ quy chuẩn sau đây mà người dùng không cần phải nhắc lại**:
 Toàn bộ chi tiết kỹ thuật được quy định tại [QUY_CHUAN_DOCX_ND30.md](file:///Users/admin/Desktop/BINHDUONG/QUY_CHUAN_DOCX_ND30.md):
 
