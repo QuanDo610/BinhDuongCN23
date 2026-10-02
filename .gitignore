@@ -1,0 +1,33 @@
+# Môi trường ảo & Cache
+venv/
+__pycache__/
+*.pyc
+
+# BẢO MẬT TUYỆT MẬT - Chặn tất cả thông tin nhạy cảm
+.env*
+*.vault
+*.secret
+*.key
+storage_state*.json
+session_state*.json
+credentials.json
+user_credentials.json
+
+# Báo cáo chứa screenshot và data nhạy cảm
+chrome_automation/reports/
+reports/
+
+# Hệ điều hành
+.DS_Store
+Thumbs.db
+
+# Dữ liệu và Kết quả (Không đưa lên Git)
+documents/*
+!documents/.gitkeep
+OUTPUT/*
+!OUTPUT/.gitkeep
+
+# Không đẩy theo yêu cầu User
+QQ/
+*.html
+chrome_automation/
