@@ -20,6 +20,7 @@
 ## 4. Quản lý File
 - Luôn lưu các file kết quả vào thư mục `OUTPUT/`.
 - Tuyệt đối không ghi đè hay chỉnh sửa trực tiếp vào file gốc trong thư mục `documents/`.
+- **Tự động Quản lý Phiên bản (Auto-versioning):** Khi tạo mới file, AI BẮT BUỘC phải tự động kiểm tra trong thư mục `OUTPUT/` xem file cùng tên đã tồn tại chưa để tự động tăng hậu tố phiên bản (`_v1`, `_v2`, `_v3`...). Tránh việc ghi đè mất file cũ và giúp người dùng không phải bận tâm về việc đặt tên file.
 
 ## 5. Báo cáo Rà soát & Yêu cầu File Đối chiếu (Audit Reporting)
 - **Báo cáo những gì đã sửa:** Sau khi thực hiện rà soát (Audit), AI BẮT BUỘC phải tạo một file báo cáo (hoặc tóm tắt trực tiếp trong chat) liệt kê chi tiết các lỗi đã phát hiện và những thông tin cụ thể đã được điều chỉnh.
