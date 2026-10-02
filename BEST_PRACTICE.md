@@ -24,14 +24,12 @@ Quá trình xử lý văn bản trong dự án tuân theo luồng công việc 1
 
 ```mermaid
 flowchart TD
-    A[Nhận tài liệu từ cấp trên\n(Zalo, Email, iDesk)] -->|Tải về máy| B(Thư mục: /documents)
-    B -->|Ra lệnh cho AI| C{AI Xử lý Dữ liệu\n(Chạy Python/Phân tích)}
-    
-    C -->|Sinh Văn Bản NĐ30| D[Thư mục: /OUTPUT\n(File .docx)]
-    C -->|Lọc Báo Cáo| E[Thư mục: /OUTPUT\n(File .xlsx, .html)]
-    C -->|Báo Lỗi Dữ Liệu| F[Cảnh báo thiếu Data]
-    
-    D --> G((In Ấn / Trình Ký))
+    A[Nhận Tài Liệu] --> B(Thư mục documents)
+    B --> C{AI Xử Lý}
+    C --> D[Kết quả File DOCX]
+    C --> E[Kết quả File XLSX]
+    C --> F[Cảnh báo Lỗi]
+    D --> G((Trình Ký))
     E --> G
 ```
 
@@ -40,7 +38,7 @@ flowchart TD
 
 ---
 
-## 2. 📁 Quy Chuẩn Tổ Chức Dữ Liệu
+## 3. 📁 Quy Chuẩn Tổ Chức Dữ Liệu
 
 Khi bạn clone/tải dự án này về máy, hãy luôn ghi nhớ 3 không gian làm việc chính:
 
@@ -52,7 +50,7 @@ Khi bạn clone/tải dự án này về máy, hãy luôn ghi nhớ 3 không gia
 
 ---
 
-## 3. 🏷️ Quy Chuẩn Đặt Tên File (Naming Convention)
+## 4. 🏷️ Quy Chuẩn Đặt Tên File (Naming Convention)
 
 Để hệ thống (và AI) dễ dàng nhận diện và dọn dẹp, toàn bộ file khi đưa vào hệ thống phải tuân thủ quy tắc sau:
 
@@ -60,10 +58,13 @@ Khi bạn clone/tải dự án này về máy, hãy luôn ghi nhớ 3 không gia
     *   Sai: `Báo cáo tháng 9 bản mới.docx`
     *   Đúng: `Bao_cao_thang_9_ban_moi.docx`
 *   ✅ **Sử dụng Dấu gạch dưới (`_`) để phân cách chữ.**
+*   ✅ **Đặt tên theo chuẩn Nghị định 30 (Khuyến nghị cao):** Sử dụng Bảng chữ viết tắt loại văn bản tại Phụ lục III NĐ30.
+    *   Công thức: `[Mã VB NĐ30]_[Số hiệu]_[Cơ quan]_[Trích yếu]_[Ngày]`
+    *   Ví dụ (Quyết định): `QD_45_CN23_Phan_cong_nhiem_vu_20261002.docx`
+    *   Ví dụ (Tờ trình): `TTr_12_CN23_De_xuat_mua_sam_20261002.pdf`
 *   ✅ **Quản lý Phiên bản (Versioning):**
     *   Khi đang nháp, thêm hậu tố: `_v1`, `_v2`. Ví dụ: `Phuong_an_CN23_v1.docx`
     *   Khi đã chốt, thêm hậu tố: `_FINAL`. Ví dụ: `Phuong_an_CN23_FINAL.docx`
-*   ✅ **Gắn Ngày tháng (Nếu cần):** Dùng định dạng `YYYYMMDD`. Ví dụ: `Bao_cao_20261002.xlsx`
 
 > [!TIP]
 > Việc đặt tên chuẩn giúp bộ máy dọn dẹp hàng tuần của AI biết đâu là file nháp để dọn vào thùng rác, và đâu là file `_FINAL` để giữ lại mãi mãi.
