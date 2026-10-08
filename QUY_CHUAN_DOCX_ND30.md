@@ -35,19 +35,19 @@ Sử dụng bảng layout 2 cột không viền (borderless table) ở đầu tr
 | Vị trí / Ô số | Thành phần thể thức | Loại chữ | Cỡ chữ | Kiểu chữ | Ghi chú & Kỹ thuật canh lề |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | **Ô số 1** | **Quốc hiệu & Tiêu ngữ** | | | | Nằm góc trên bên phải |
-| | - Dòng 1: CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM | In hoa | 12 - 13 | Đứng, **đậm** | Canh giữa ô |
-| | - Dòng 2: Độc lập - Tự do - Hạnh phúc | In thường | 13 - 14 | Đứng, **đậm** | Viết hoa chữ cái đầu mỗi cụm từ, nối bằng gạch nối (-) có dấu cách |
-| | - Nét kẻ ngang bên dưới | Đường nét liền | - | - | Chiều dài bằng chính xác chiều dài dòng chữ Tiêu ngữ, canh giữa |
+| | - Dòng 1: CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM | In hoa | **13** (chuẩn đối với văn bản cấp Chi nhánh/Sở) | Đứng, **đậm** | Canh giữa ô. Cỡ chữ 12 hoặc 13 theo NĐ 30, chuẩn thống nhất chọn cỡ **13** |
+| | - Dòng 2: Độc lập - Tự do - Hạnh phúc | In thường | **13** (hoặc 14) | Đứng, **đậm** | Viết hoa chữ cái đầu mỗi cụm từ, nối bằng gạch nối (-) có dấu cách. Chuẩn thống nhất chọn cỡ **13** |
+| | - Nét kẻ ngang bên dưới | Đường nét liền mảnh | - | - | **BẮT BUỘC có chiều dài bằng chính xác 100% chiều dài dòng chữ Tiêu ngữ** (phủ kín từ chữ đầu "Độc" đến hết chữ cuối "phúc"), canh giữa. Không được kẻ ngắn lửng lơ. |
 | **Ô số 2** | **Tên cơ quan, tổ chức ban hành** | | | | Nằm góc trên bên trái, ngang hàng Ô 1 |
-| | - Tên cơ quan chủ quản cấp trên (nếu có) | In hoa | 12 - 13 | Đứng | Canh giữa ô |
-| | - Tên cơ quan ban hành văn bản | In hoa | 12 - 13 | Đứng, **đậm** | Canh giữa ô |
-| | - Nét kẻ ngang bên dưới | Đường nét liền | - | - | Chiều dài từ $1/3$ đến $1/2$ chiều dài dòng chữ tên cơ quan, canh giữa |
+| | - Tên cơ quan chủ quản cấp trên (nếu có) | In hoa | **12** | Đứng | Canh giữa ô. Ví dụ: `VĂN PHÒNG ĐĂNG KÝ ĐẤT ĐAI`, `THÀNH PHỐ HỒ CHÍ MINH` đặt cỡ **12**, kiểu đứng |
+| | - Tên cơ quan ban hành văn bản | In hoa | **13** | Đứng, **đậm** | Canh giữa ô. Ví dụ: `CHI NHÁNH SỐ 23` đặt cỡ **13**, in hoa, **đứng, đậm** |
+| | - Nét kẻ ngang bên dưới | Đường nét liền mảnh | - | - | **Chiều dài bằng xấp xỉ 2/3 chiều dài dòng chữ tên cơ quan ban hành**, canh giữa. |
 | **Ô số 3** | **Số, ký hiệu văn bản** | | 13 | Đứng | Canh giữa dưới Ô số 2 |
 | | - Từ "Số:" | In thường | 13 | Đứng | Sau có dấu hai chấm (:). Số nhỏ hơn 10 phải thêm số 0 ở trước (ví dụ: `Số: 05/...`) |
 | | - Phần ký hiệu (chữ viết tắt) | In hoa | 13 | Đứng | Giữa số và ký hiệu có dấu `/`, giữa các nhóm từ có dấu `-` (không cách) |
-| **Ô số 4** | **Địa danh và thời gian ban hành** | In thường | 13 - 14 | *Nghiêng* | Canh giữa dưới Tiêu ngữ (Ô 1). Ví dụ: *Hà Nội, ngày 05 tháng 03 năm 2020*. Ngày < 10, tháng 1, 2 phải ghi thêm số 0 |
+| **Ô số 4** | **Địa danh và thời gian ban hành** | In thường | 13 - 14 | *Nghiêng* | Canh giữa dưới Tiêu ngữ (Ô 1). Ví dụ: *Thành phố Hồ Chí Minh, ngày 08 tháng 10 năm 2026*. Ngày < 10, tháng 1, 2 phải ghi thêm số 0 |
 | **Ô số 5a** | **Tên loại & trích yếu (văn bản có tên loại)** | | | | Canh giữa trang, dưới số ký hiệu và ngày tháng |
-| | - Tên loại văn bản (QUYẾT ĐỊNH, BÁO CÁO...) | In hoa | 13 - 14 | Đứng, **đậm** | Canh giữa |
+| | - Tên loại văn bản (QUYẾT ĐỊNH, BÁO CÁO, TỜ TRÌNH...) | In hoa | 13 - 14 | Đứng, **đậm** | Canh giữa |
 | | - Trích yếu nội dung văn bản | In thường | 13 - 14 | Đứng, **đậm** | Dưới tên loại. Có đường gạch ngang nét liền dài bằng $1/3$ đến $1/2$ dòng trích yếu, canh giữa |
 | **Ô số 5b** | **Trích yếu nội dung Công văn** | In thường | 12 - 13 | Đứng | Canh giữa dưới Số ký hiệu (Ô 3). Bắt đầu bằng `V/v ...`. Cách số ký hiệu 6pt |
 | **Ô số 6** | **Nội dung văn bản** | | | | |
@@ -177,4 +177,26 @@ for cell in header_table.rows[0].cells:
     tcPr = cell._tc.get_or_add_tcPr()
     tcBorders = parse_xml(r'<w:tcBorders %s><w:top w:val="none"/><w:left w:val="none"/><w:bottom w:val="none"/><w:right w:val="none"/></w:tcBorders>' % nsdecls('w'))
     tcPr.append(tcBorders)
+
+# 5. Chuẩn tạo đường kẻ ngang nét liền mảnh hiển thị tương thích 100% mọi phiên bản Word
+def add_divider_line(cell_or_doc, length_type="nation"):
+    """
+    Tạo đường kẻ ngang mảnh bằng chuỗi em-dash (—) nối liền không đứt đoạn,
+    đảm bảo hiển thị hoàn hảo trên Word (Windows, macOS, Mobile, WPS, Web Viewer).
+    - length_type="agency": Dưới tên cơ quan ban hành 'CHI NHÁNH SỐ 23' -> 8 em-dashes (xấp xỉ 2/3 độ dài chữ).
+    - length_type="nation": Dưới Tiêu ngữ 'Độc lập - Tự do - Hạnh phúc' -> 18 em-dashes (phủ trọn 100% từ 'Độc' tới 'phúc').
+    - length_type="subject": Dưới Trích yếu nội dung -> 8 em-dashes.
+    """
+    p = cell_or_doc.add_paragraph()
+    p.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    p.paragraph_format.space_before = Pt(0)
+    p.paragraph_format.space_after = Pt(4)
+    p.paragraph_format.line_spacing = 0.8
+    
+    dash_count = 18 if length_type == "nation" else 8
+    r = p.add_run("—" * dash_count)
+    r.font.name = "Times New Roman"
+    r.font.size = Pt(8.5)
+    r.bold = True
+    return p
 ```
