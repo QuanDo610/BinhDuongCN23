@@ -1,0 +1,61 @@
+BẢNG DỰ TOÁN & BÁO GIÁ DỊCH VỤ PHẦN MỀM
+XÂY DỰNG MỚI HỆ THỐNG OERP ĐIỀU HÀNH TÁC NGHIỆP ĐẤT ĐAI
+(Áp dụng đơn giá ưu đãi nội bộ: 20 USD / giờ làm việc - Tỷ giá: 25.400 VNĐ/USD)
+Kính gửi: Chị Nguyễn Thị Bích Tuyền
+Đồng gửi: Chị Bùi Thị Minh Nguyệt (Bộ phận chuyên môn)
+Căn cứ theo yêu cầu rà soát, đánh giá phương án thay thế phần mềm OERP thuê ngoài hiện tại bằng phương án xây dựng mới độc lập, nhằm mục tiêu làm chủ hoàn toàn mã nguồn (Source Code), dữ liệu và có thể chủ động sửa chữa, bảo trì lâu dài cho Chi nhánh; tôi xin gửi bảng dự toán khối lượng công việc, thời gian và chi phí lập trình theo đơn giá hỗ trợ ưu đãi nội bộ là 20 USD / giờ (~ 508.000 VNĐ/giờ) chi tiết như sau:
+Tổng chi phí dự toán bằng chữ: Tám trăm mười hai triệu tám trăm nghìn đồng chẵn (tương đương 32.000 USD).
+GHI CHÚ VỀ TIẾN ĐỘ THỰC HIỆN & KHUYẾN NGHỊ THỰC TẾ:
+Thời gian thực hiện:  Với khối lượng 1.600 giờ, nếu 01 nhân sự làm việc liên tục toàn thời gian (160 giờ/tháng) sẽ mất khoảng 10 tháng; nếu triển khai theo nhóm dự án 3-4 người sẽ mất khoảng 4-5 tháng.
+Bàn giao sản phẩm:  Bàn giao 100% Mã nguồn gốc (Full Source Code C# & Angular), CSDL mới độc lập, tài liệu thiết kế hệ thống và cam kết bảo hành, hỗ trợ kỹ thuật trực tiếp trong 3 tháng đầu.
+Khuyến nghị so sánh phương án:  Mức dự toán 812.800.000 đ là chi phí xây mới hoàn toàn phần mềm đạt chuẩn. Tuy nhiên, căn cứ theo tiêu chí tiết kiệm ngân sách 'Tăng xin giảm mua', nếu cơ quan lựa chọn PHƯƠNG ÁN DI DỜI BẢN CHẠY VÀ CSDL CŨ VỀ MÁY CHỦ HP CÓ SẴN TẠI CHI NHÁNH thì CHI PHÍ ĐẦU TƯ LÀ 0 ĐỒNG và cắt giảm được ngay 9.600.000 đ/năm tiền thuê ngoài. Tôi trân trọng báo cáo đầy đủ cả 2 phương án để Lãnh đạo xem xét, quyết định.
+
+=== [DANH SÁCH BẢNG BIỂU TRONG TÀI LIỆU] ===
+
+--- Bảng số 1 (1 hàng, 2 cột) ---
+VĂN PHÒNG ĐĂNG KÝ ĐẤT ĐAI TP.HCM CHI NHÁNH SỐ 23 Số: ...... /BG-CN23 | CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM Độc lập - Tự do - Hạnh phúc Thủ Dầu Một, ngày 28 tháng 09 năm 2026
+
+--- Bảng số 2 (40 hàng, 5 cột) ---
+STT | Giai đoạn & Nội dung công việc chi tiết | Thời lượng (Giờ) | Đơn giá (USD) | Thành tiền (VNĐ)
+I | KHẢO SÁT & THU THẬP YÊU CẦU (REQUIREMENTS) | 140 h | $2,800 | 71,120,000 đ
+1.1 | Phỏng vấn các bộ phận: Một Cửa, Đo đạc, Thẩm tra, Thuế, Lãnh đạo | 40 | $800 | 20,320,000 đ
+1.2 | Rà soát quy trình TTHC đất đai, mẫu phiếu hẹn, biên nhận, sổ theo dõi | 30 | $600 | 15,240,000 đ
+1.3 | Xây dựng tài liệu đặc tả yêu cầu chức năng phần mềm (SRS) | 40 | $800 | 20,320,000 đ
+1.4 | Thiết kế Wireframe & Prototype giao diện mẫu Figma cho 9 phân hệ | 30 | $600 | 15,240,000 đ
+II | THIẾT KẾ KIẾN TRÚC HỆ THỐNG & CƠ SỞ DỮ LIỆU | 90 h | $1,800 | 45,720,000 đ
+2.1 | Thiết kế mô hình CSDL quan hệ (ERD Schema) tối ưu, chuẩn hóa | 40 | $800 | 20,320,000 đ
+2.2 | Thiết kế kiến trúc Backend API, Security RBAC (phân quyền đa cấp phòng ban) | 30 | $600 | 15,240,000 đ
+2.3 | Thiết kế giải pháp lưu trữ File số hóa (tích hợp NAS Synology nội bộ) | 20 | $400 | 10,160,000 đ
+III | LẬP TRÌNH BACKEND & CƠ SỞ DỮ LIỆU (CORE API) | 460 h | $9,200 | 233,680,000 đ
+3.1 | Module Phân quyền, Xác thực bảo mật cán bộ & Ghi nhật ký (Audit Log) | 40 | $800 | 20,320,000 đ
+3.2 | Module Một Cửa: Tiếp nhận hồ sơ, sinh mã biên nhận, tra cứu ngăn chặn | 80 | $1,600 | 40,640,000 đ
+3.3 | Module Quy trình: Phân công đo đạc, luân chuyển nội bộ, tính thuế | 90 | $1,800 | 45,720,000 đ
+3.4 | Module Quản lý file scan: Upload, nén ảnh, bảo mật trích lục, tài liệu | 60 | $1,200 | 30,480,000 đ
+3.5 | Module Trả kết quả: Bàn giao sổ đỏ, ký nhận, xuất / nhập dữ liệu Excel | 40 | $800 | 20,320,000 đ
+3.6 | Module Tra cứu hồ sơ Một Cửa & Dashboard giám sát luồng trích đo | 50 | $1,000 | 25,400,000 đ
+3.7 | Module Báo cáo thống kê CCHC, lọc tham số & xuất báo cáo lãnh đạo | 60 | $1,200 | 30,480,000 đ
+3.8 | Tích hợp cổng SMS Brandname tự động & Engine xuất văn bản Word/PDF | 40 | $800 | 20,320,000 đ
+IV | LẬP TRÌNH GIAO DIỆN CLIENT (FRONTEND DEVELOPMENT) | 420 h | $8,400 | 213,360,000 đ
+4.1 | Xây dựng khung ứng dụng (Layout, Navigation, Component Design System) | 60 | $1,200 | 30,480,000 đ
+4.2 | Lập trình 9 phân hệ giao diện người dùng tương thích API Backend | 260 | $5,200 | 132,080,000 đ
+4.3 | Lập trình Dashboard biểu đồ trực quan, tối ưu tốc độ tải và responsive | 60 | $1,200 | 30,480,000 đ
+4.4 | Tối ưu thao tác phím tắt, in biên nhận nhanh tại quầy Một Cửa | 40 | $800 | 20,320,000 đ
+V | CHUYỂN ĐỔI & LÀM SẠCH DỮ LIỆU CŨ (DATA MIGRATION) | 90 h | $1,800 | 45,720,000 đ
+5.1 | Viết script trích xuất, làm sạch và chuyển đổi CSDL cũ sang hệ thống mới | 60 | $1,200 | 30,480,000 đ
+5.2 | Đối soát tính toàn vẹn dữ liệu (Data Integrity check) hồ sơ lịch sử | 30 | $600 | 15,240,000 đ
+VI | KIỂM THỬ CHẤT LƯỢNG & BẢO MẬT (QA/QC & TESTING) | 180 h | $3,600 | 91,440,000 đ
+6.1 | Kiểm thử chức năng chi tiết theo từng luồng nghiệp vụ đất đai | 70 | $1,400 | 35,560,000 đ
+6.2 | Kiểm thử chịu tải cao điểm Một Cửa (Load & Stress Testing) | 30 | $600 | 15,240,000 đ
+6.3 | Kiểm thử an toàn thông tin & bảo mật (Security Pentest chống lộ CSDL) | 40 | $800 | 20,320,000 đ
+6.4 | Tổ chức kiểm thử người dùng thực tế (UAT) với cán bộ Chi nhánh | 40 | $800 | 20,320,000 đ
+VII | TRIỂN KHAI, BÀN GIAO & ĐÀO TẠO (DELIVERY) | 80 h | $1,600 | 40,640,000 đ
+7.1 | Cài đặt hệ thống trên cụm máy chủ HP cơ quan & cấu hình mạng an toàn | 30 | $600 | 15,240,000 đ
+7.2 | Soạn thảo bộ tài liệu Hướng dẫn sử dụng và Tài liệu kỹ thuật quản trị | 25 | $500 | 12,700,000 đ
+7.3 | Đào tạo, chuyển giao và trực tiếp hướng dẫn cán bộ sử dụng | 25 | $500 | 12,700,000 đ
+VIII | BẢO TRÌ & HỖ TRỢ VẬN HÀNH (MAINTENANCE - 3 THÁNG ĐẦU) | 140 h | $2,800 | 71,120,000 đ
+8.1 | Trực kỹ thuật xử lý sự cố trong giờ hành chính tiếp dân (SLA khẩn cấp) | 80 | $1,600 | 40,640,000 đ
+8.2 | Cân chỉnh, tối ưu hiệu năng CSDL định kỳ, tự động sao lưu an toàn vào NAS | 60 | $1,200 | 30,480,000 đ
+★ | TỔNG CỘNG TOÀN BỘ CHU TRÌNH DỰ ÁN | 1,600 h | $32,000 | 812,800,000 đ
+
+--- Bảng số 3 (1 hàng, 2 cột) ---
+Nơi nhận: - Như trên (báo cáo); - Chị Bùi Thị Minh Nguyệt (phối hợp); - Lưu: Hồ sơ kế hoạch CNTT. | NGƯỜI LẬP BÁO GIÁ     Đỗ Trọng Minh Quân

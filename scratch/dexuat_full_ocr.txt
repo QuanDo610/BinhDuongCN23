@@ -1,0 +1,658 @@
+=== TRANG 1 ===
+VĂN PHÒNG ĐĂNG KÝ ĐÂT ĐAI
+THÀNH PHÔ HÔ CHÍ MINH
+CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM
+CHI NHÁNH SỐ 23
+Độc lập - Tự do - Hạnh phúc
+Số: 1342 /CN23-HCTH
+Thủ Dầu Một, ngày 22 tháng 6 năm 2026
+V/v xin chủ trương bố trí kinh phí trang bị
+hệ điều hành bản quyền và hệ thống an toàn an
+ninh mạng
+Kính gửi: Văn phòng đăng ký đất đai thành phố Hồ Chí Minh.
+Căn cứ Nghị định số 60/2021/NĐ-CP ngày 21/6/2021 của Chính phủ về quy định co
+chế tự chủ tài chính của đơn vị sự nghiệp công lập;
+Căn cứ Nghị định số 111/2025/NĐ-CP ngày 22/5/2025 của Chính phủ sửa đổi, bổ
+sung một số điều của Nghị định số 60/2021/NĐ-CP ngày 21/6/2021 của Chính phủ quy
+định cơ chế tự chủ tài chính của đơn vị sự nghiệp công lập;
+Căn cứ Quyết định số 157/QĐ-VPĐK-HC ngày 24/11/2025 của Văn phòng Đăng ký
+đất đai Thành phố Hồ Chí Minh về việc ban hành Quy chế đảm bảo an toàn thông tin
+mạng, an ninh mạng trong hoạt động ứng dụng công nghệ thông tin;
+ĐẬT DAI THA
+CHI NHANH
+Căn cứ Công văn số 14324/SNNMT-TTSĐS ngày 04 tháng 12 năm 2025 của Sở Fài
+ĐĂNG KY DAI
+VĂN PHONG
+nguyên và Môi trường thành phố Hồ Chí Minh về việc đảm bảo an toàn thông tin mạng..
+an ninh mạng trong triển khai xây dựng, hoàn thiện, vận hành, kết nối, đồng bộ, chia sẻ cơ
+sở dữ liệu đất đai;
+Căn cứ Công văn số 2535/VPĐK-HC ngày 26/01/2026 về việc đảm bảo an toàn, an
+ninh mạng, rà soát, bốc tách mã độc và Thông báo kết luận số 18302/TB-VPĐK-HC ngày
+17/6/2026 của Văn phòng Đăng ký đất đai thành phố Hồ Chí Minh.
+Chi nhánh Văn phòng Đăng ký dất đai số 23 (sau đây gọi tắt là Chi nhánh) báo cáo
+Văn phòng Đăng ký đất đai Thành phố Hồ Chí Minh về tình trạng an toàn thông tin mạng
+và đề xuất xin chủ trương kinh phí đảm bảo hoạt động của hệ thống an toàn thông tin như
+sau:
+1. Tình trạng bảo mật hệ thống thông tin tại Chi nhánh
+Hệ thống Tường lửa cứng (Hard Firewall): Chi nhánh đang vận hành thiết bị
+Firewall FortiGate F61 (Số hiệu: FGT61FTK2301882) phục vụ cho khoảng 75 người
+dùng thực tế. Hạ tầng kỹ thuật được lắp đặt đúng tiêu chuẩn (trong tủ rack, có bộ lưu điện
+UPS dự phòng). Gói License hiện tại trang bị đầy đủ các tính năng bảo mật nâng cao
+
+=== TRANG 2 ===
+2
+(Advanced Malware Protection, kiếm soát ứng dụng, lọc URL/DNS/Video và gói hỗ trợ
+FortiCare Premium) có thời hạn sử dụng đến ngày 30/09/2026.
+Hệ thống phần mềm diệt virus: Chi nhánh sử dụng giải pháp phần mềm Kaspersky
+Endpoint Security bảo vệ cho 80 thiết bị máy chủ và máy trạm do Công ty thiết bị văn
+phòng Xuân Phước cung cấp. Bản quyền của hệ thống phần mềm diệt virus này đã chính
+thức hết hạn từ ngày 23/03/2026.
+2. Khó khăn, vướng mắc và nguy cơ mất an toàn hệ thống hiện hữu
+Trước đó, Chi nhánh đã tổng hợp số liệu để kiến nghị gửi cấp trên xem xét, chấp
+thuận chủ trương bố trí kinh phí trang bị bản quyền hệ điều hành Windows và phần mềm
+diệt virus nhằm đảm bảo an toàn hệ thống. Tuy nhiên, do quy trình thẩm định chưa được
+xem xét giải quyết kịp thời nên đến nay đơn vị vẫn chưa có nguồn kinh phí để triển khai
+thực hiện.
+Việc phân mêm diệt virus Kaspersky đã hết hạn bản quyền từ đầu tháng 03/2026
+cộng với việc hệ điều hành Windows và bộ ứng dụng văn phòng Office tại đơn vị còn một
+số máy chưa được trang bị bản quyền dồng bộ đã và đang tạo ra các lỗ hỗng bảo mật trên
+thớn cộn trển tửống mn nội bộ của Ci nhánh. Hiện tại, các máy tính phục vụ công tác
+chuyên môn không thế tự động cập nhật các mẫu nhận diện mã độc mới, dẫn đến nguy cơ
+rất cao bị virus, phần mềm gián điệp, hoặc mã độc tống tiền (Ransomware) xâm nhập.
+Điều này đe dọa trực tiếp đến tính toàn vẹn, bảo mật của Cơ sở dữ liệu đất đai đang vận
+hành, dễ gây gián đoạn hoặc làm tê liệt hoạt động hành chính công tại đơn vị.
+Bên cạnh đó, thời hạn bản quyền sử dụng thiết bị Tường lửa cứng FortiGate F61
+cũng sẽ kết thúc vào ngày 30/09/2026. Do quy trình mua sắm công, kiểm định giá thường
+kéo dài từ 2 đến 3: tháng, nếu không được xem xét chấp thuận chủ trương bố trí vốn ngay
+từ giai đoạn này, hệ thống bảo mật của Chi nhánh sẽ đứng trước nguy cơ mất hoàn toàn
+các lá chắn an ninh mạng cốt lõi vào cuối quý III năm 2026. Để tối ưu hóa chi phí và
+giảm thiểu các thủ tục hành chính lặp lại hằng năm, việc xin chủ trương gia hạn gói bảo
+mật 03 năm liên tục cho thiết bị này là hết sức cần thiết và cấp bách.
+3. Đề xuất kinh phí trang bị phần mềm bản quyền và gia hạn thiết bị bảo mật
+Nhằm đảm bảo tuân thủ Quy chế an toàn thông tin mạng theo Quyết định số
+157/QĐ-VPĐK-HC và các văn bản chỉ đạo của Sở Tài nguyên và Môi trường, phục vụ
+công tác vận hành hệ thống dữ liệu địa chính thông suốt, an toàn, Chi nhánh kính đề xuất
+Văn phòng Đăng ký đất đai Thành phố xem xét, chấp thuận chủ trương bố trí kinh phí
+thực hiện đồng bộ với các nội dung chi tiết như sau:
+- Hệ điều hành Windows có bản quyền (Sử dụng lâu dài): 447.200.000 đồng cho
+80 máy.
+- Office bản quyền (Sử dụng một năm): 159.200.000 đồng cho 80 máy
+
+=== TRANG 3 ===
+3
+- Phần mềm diệt virus nâng cao (Kaspersky Next EDR Optimum - Thời hạn 01
+năm): 100.000.000 đồng cho 80 máy
+- Về gói bảo mật Firewall FortiGate F61( đề nghị Văn phòng đăng ký đất đai
+Thành phố Hồ Chí Minh cho chủ trương chọn 01 trong 02 phương án) từ bảng báo giá
+tạm thời từ tháng 03/2026 sau đây:
+a/ Gia hạn gói bảo mật Unified Threat Protection (UTP) cho thiết bị Firewall
+FortiGate F61 (Thời hạn 03 năm): 46.429.000 đồng.
+b/ Gia hạn gói bảo mật Unified Threat Protection (UTP) cho thiết bị Firewall
+FortiGate F61 (Thời hạn 01 năm): 17.143.000 đồng.
+Tổng kinh phí đề xuất trang bị và gia hạn bảo mật là: 752.829.000 đồng (Bằng
+chũ: Bảy trăm năm mươi hai triệu tám trăm hai mươi chín nghìn đồng chẵn) đối với
+phương án sử dụng gói bảo mật Tường lửa thời hạn 03 năm hoặc 723.543.000 đồng
+(Bằng chữ: Bảy trăm hai mươi ba triệu năm trăm bốn mươi ba ngàn đồng chẵn) đối với
+phương án sử dụng gói bảo mật Tường lửa thời hạn 01 năm.
+Chi phí trên được xây dựng dựa trên bảng báo giá tham khảo trên mạng Internet và
+bảng chào giá kỹ thuật đính kèm hệ thống phòng thủ Firewall tại thời điểm báo cáo.
+Kính trình Văn phòng Đăng ký đất đai Thành phố xem xét, chấp thuận.
+Trân trọng.
+(Đinh kèm các bàng báo siá tham khảo thời điểm bảo cáo). ph
+Nơi nhận:
+- BGĐ CN23;
+- Văn phòng Đăng ký đất đai TPHCM (bc)
+KT.GIÁM ĐỐC
+PHÓ GIÁM ĐỐC
+- Tổ trưởng các Tổ chuyên môn CN23;
+HI NHANH
+- Lưu: VT, HCTH, Tân V2
+1ON3
+ĐÁNG
+Ngo x Nguyễn Thị Lệ Hằng
+
+=== TRANG 4 ===
+Danh mục
+Nhập tên điện thoại, laptop, phụ kiện... cần tìm
+Q
+Giỏ hàng
+iphone 17 laptop
+sansais
+iphone 16 macbook mảy lạnh phần mềm tivi
+PC E-Power hiệu năng cao
+Thu cũ iPhone giá tốt
+Chọn khu vực để xem ưu đãi v
+Trang chủ / Phần mềm / Windows
+Windows
+Tìm sản phẩm theo nhu cầu = Dùng bộ lọc ngay
+Tìm thấy 3 kết quà
+Nối bật
+Giá tăng dần
+Giá giàm dần
+Trà góp 0%
+= Bộ lọc tìm kiếm
+Mức giá
+^
+# Windows t1
+Windows 11 Pri
+Pro
+Windows 11
+3.890.000đ
+5.590.000đ
+Home
+ui crooue
+Thời gian bàn quyền
+^
+Vĩnh viễn
+5.590.000đ
+Hàng sắp về
+3.890.000đ
+Phần mềm ứng dụng Windows
+Key-online Windows 11 Pro
+GGWA - Windows 11 Pro -...
+Key-online Windows 11 Home
+32bit/64bit_FPP (Vĩnh viễn;...
+4.990.000đ
+32bit/64bit FPP (Vĩnh viễn;...
+OOCB
+cOC
+Giàm 800.000đ khi thanh toán qua
+thẻ Visa SCB.
+Giảm 800.000đ khi thanh toán qua
+Giảm 800.000đ khi thanh toán qua
+* Thêm vào so sánh
+thẻ Visa SCB.
+thẻ Visa SCB.
+* Thêm vào so sánh
+* Thêm vào so sánh
+Zalo
+Windows là lựa chọn quen thuộc của hàng triệu người dùng trên toàn cầu.
+300k
+Nhờ có khả năng tương thích mạnh mẽ, giao diện thân thiện và nhiều tính năng
+thông minh, Windows đã trở thành nền tàng hệ điều hành phổ biến nhất. Hãy
+
+=== TRANG 5 ===
+cùng FPT Shop tìm hiểu kỹ hơn về phần mềm Windows, lý do nên lựa chọn và
+cách để chọn phiên bản phù hợp.
+Xem thêm v
+Thơng hiệu đàm bảo
+Nhập khẩu, bảo hành chính hãng
+Đổi trả dễ dàng
+Giao hàng tận nơi
+Theo chính sách đổi trà tại FPT Shop
+Sản phẩm chất lượng
+Trên toàn quốc
+Đàm bảo tương thích và độ bền cao
+Hệ thông FPT Shop trên toàn quốc
+Bao góm Cửa hàng T?1 Shop, Trung căm Điện máy, Trung têm taptop, F.Srudio, S. Stud
+Xem canh sách cửa hàng
+300
+
+=== TRANG 6 ===
+Danh mục
+Nhập tên điện thoại, laptop, phụ kiện... cần tim
+Q
+Gió hàng
+iphone 17 laptop samsung iphone 16 macbook máy lạnh phân mềm tivi
+PC E-Power hiệu năng cao
+Thu cũ iPhone giá tốt
+• Chọn khu vực để xem ưu đãi v
+Trang chủ / Phần mềm / Microsoft Office
+Microsoft Office
+Tìm sàn phẩm theo nhu cầu = Dùng bộ lọc ngay
+= Bộ lọc tìm kiếm
+12 tháng x
+Tìm thấy 4 kết quả
+Nổi bật
+Giá tăng dần
+Giá giảm dần
+Trả góp 0%
+Mức giá
+2.090.000đ
+5.890.000đ
+# Microsoft 365
+: Microsoft 365
+Family
+Personal
+: Microsoft 365
+: Microsoft 365
+Business
+Business
+Thời gian bản quyền
+^
+12 tháng
+Vĩnh viên
+BAE
+R1
+2.590.000đ -23%
+2.090.000đ - 19%
+1.990.000đ
+1.690.000đ
+Hàng sắp về
+3.890.000đ
+Giảm 600.000đ
+Giàm 400.000đ
+Còn 11 ngày 13:32:34
+Dịch vụ điện toán đám mây
+Còn 11 ngày 13:32:34
+Microsoft 365 Business...
+Key-online Microsoft 365
+Phần mềm Microsoft 365
+Phần mềm Microsoft 365
+Personal Subscr PK Lic 1YR...
+3.590.000đ
+Business Standard (01 năm; O...
+Family Subscr PK Lic 1YR...
+OOCB
+OOCB
+Yrediv
+OOCB
+Giảm 800.000đ khi thanh toán qua
+Giảm 800.000đ khi thanh toán qua
+Giảm 800.000đ khi thanh toán qua
+Giảm 800.000đ khi thanh toán qua
+thẻ Visa SCB.
+thè Visa SCB.
+the Visa SCB.
+the Visa SCB.
++ Thêm vào so sánh
++ Thêm vào so sánh
+* Thêm vào so sánh
++ Thêm vào so sánh
+Zalo
+nanho
+Booi
+
+=== TRANG 7 ===
+Thương hiệu đàm bảo
+Nhập khẩu, bảo hành chính hãng
+Đồi trả dễ dàng
+Theo chính sách đổi trà tại FPT Shop
+Giao hàng tận nơi
+Trên toàn quốc
+Sản phẩm chất lượng
+Đảm bào tương thích và độ bền cao
+Hệ thông FPT Shop trên toàn quốc
+han gồm Cửa hàng FPT Shop, Trung tám Điện
+tâm Laptop, F.Studio, S.Studio, Garnin Brand Störel
+Xem danh sách cửa hàng
+TÀI ỨNG DỤNG FPT SHOP
+VỀ CHÚNG TÔI
+CHÍNH SÁCH
+Tải ngay trên
+HỖ TRỢ THANH TOÁN
+App Store
+Giới thiệu về công ty
+Chinh sách bảo hành
+VISA
+Tải ngay trên
+Duy chế hoat động
+Chinh sách đổi trả
+VNPAY* Zalopay
+napas2
+Krudivo
+Google Play.
+Dự ăn Doanh nghiệp
+Chính sách bào trột
+momo
+* Foypay
+lin tức khuyển mạ
+muadee
+KẾT NÔI VỚI FPT SHOP
+Chinh sách trà góp
+Điên thoại chinh háng
+Chính sách khui họp sản phẩm
+PayMr @Pay
+SAMSUNG G Pay
+Giới thiệu máy đôi trà
+Chinh sảch giao hàng 8 lão đạt
+TỔNG ĐẠI MIỀN PHÍ
+CHỨNG NHẬN
+Hướng dần mua hàng & thanh toạn chũng
+Chinh sách mạng di dộng FPT
+Từ vấn mua hàng (Miễn phí)
+Đại lý uý quyên và CTBH uý quyến của Applel
+Chính sách bạo mạt dữ têu cả nhân
+Bm *
+1800.6601 (Nhánh 1)
+Tra cứu hoa đơn điên tử
+Quy định về hỗ trợ kỹ thuật & sao lửu dữ liêu
+Hồ trợ kỷ thuật
+Tra cứu bảo hành
+:800.6601 (Nhanh 2)
+Chính sách giao hang & lắp dặt Điện may, Gia dụng
+Câu hời thưởng gặp
+Góp ý, khiếu nại và tiếp nhận cảnh báo vị phạm
+Chính sách chương trình khách hàng thân thiệt
+1800.6616 (8h00 - 22h00)
+WEBSITE CÜNG FPT RETAIL
+Cửa hàng vy quyển bối Apple:
+Trung tàm bảo hành ủy quyện Apple:
+Chuổi nhà thuản
+BC5.
+Ben.
+© 2007 - 2024 Công Ty Cổ Phần Bán Lè Kỹ Thuật Số FPT • Địa chi: 261 - 263 Khánh Hội, P. Vĩnh Hội, TP. Hồ Chi Minh • GPĐKKD số 0311609355 do Sở KHĐT TP.HCM cấp ngày
+08/03/2012.
+
+=== TRANG 8 ===
+GP số 47/CP-TTĐT d8 s0009 h #8PCM cap nga
+Nun hàng ghin ton18
+thoạl: (028) 7302 3456
+TrunG tam sici Ve
+Emei: fptshop@fpt.com
+Tông đai hồ trợ
+24H Cong nghệ
+Chịu trách nhiệm nội dung: Nguyễn Trịnh Nhật Linh.
+O PHUCANH®
+Nhập từ khóa tim kiếm...
+Sản phẩm
+BUILD PC
+GIÒ HANG 0
+DANH MỤC SÁN PHAM
+DEAL GIỜ VÀNG (27)
+Trang chủ / Phần mềm bản quyền / Phần mêm Diệt virus / Kaspersky
+Phần mềm Diệt Virus Kaspersky Next EDR Optimum (1 thiết bị/ 12 tháng)
+Zoom
+Giá Khuyến mãi:
+Đang còn hàng tại:
+1.990.000 đ
+2.400.000 đ
+(Bấm xem dẫn đường)
+-18%
+- Liên hệ 1900 2164
+[Giá đã có VAT]
+Học sinh, sinh viên giảm tới 1 triệu đồng
+Phúc Anh cam kết
+(Xem ngay)
+100% sản phẩm chính hãng
+Thanh toán ngay - Ưu đãi lên tới 1 triệu
+(Xem ngay)
+100% giá cạnh tranh so với thị trường
+Bảo hành: Không bảo hành. Sản phẩm
+Chính sách bán hàng và bảo hành
+không áp dụng chính sách đổi trà
+Mua hàng trà góp lãi suất 0% Chi tiết
+Giao hàng tận nơi miễn phí (Xem chi tiết)
+Giao hàng nhanh 2h và miễn phí giao
+Kaspersky Nex
+Lượt xem: 3.104 ° So sánh
+hàng từ 500.000d Chi tiết
+Ưu đãi vàng dành cho khách hàng
+Sản phẩm cùng loại
+doanh nghiệp Chi tiết
+EDR Optimul
+O
+Đổi mới sản phẩm đến 30 ngày Chi tiết
+Kaspersky
+Next EDR
+Next EDR
+Kaspersky
+Kaspersky
+Next EDR
+Dich vu bảo hành tận tâm, chuyên
+Foundations
+Optimum 1
+nghiệp Chi tiết
+Foundations
+Bảo vệ điểm cuối cơ bản: Cung cấp bảo vệ cơ bản chống lại
+1 thiết bị/ 12
+thiết bi/ 12
+1 thiết bi/ 24
+các mối đe doa phổ biến như virus và phần mềm độc hại.
+tháng
+tháng
+tháng
+1.250.000 g
+1.990.000d
+1.790.000 g
+bảo mật và cập nhật.
+Quản lý tập trung: Cho phép quản lý tập trung các chính sách
+Tiết kiệm chi phí: Cung cấp giải pháp phủ hợp cho các doanh
+nghiệp có nhu cầu bảo mật cơ bản với chỉ phí hợp lý.
+Kaspersky
+Kaspersky
+(8h-21h)
+Next EDR
+Neyt EDR
+doanh nghiệp nhỏ hoặc những doanh nghiệp có tài nguyên IT
+Dễ sử dụng: Cải đặt và quản lý đơn giản, phủ hợp cho các
+Optimum 1
+Optimum 1
+han chế.
+thiết bị/ 24
+thiết bị/ 36
+(zalo
+Yêu cầu mua từ 5 bô trở lên
+tháng
+tháng
+(8h-21h)
+So sánh (0)
+2 590.000 g
+3 590.000 g
+Xem thêm cầu hình chi tiết
+(8h-21h)
+TƯ VĂN NGAY
+
+=== TRANG 9 ===
+Ừ ƯU ĐÃI VÀ QUÀ TẶNG
+KHUYẾN MÃI:
++ Giảm ngay 2% khi mua từ 5 đến 10
+bàn
++ Giảm ngay 3% khi mua từ 11 đến 50
+bản
++ Giảm ngay 5% khi mua từ 51 bản trở
+lên
+Đặc điểm nổi bật
+Video
+Sản phẩm liên quan
+Bình luận người dùng
+Đánh giá sản phẩm
+ĐẶC ĐIM NÓI BẠT
+Cấu hình Phần mềm
+Diệt Virus Kaspersky
+Next EDR Optimum
+Phần mềm Diệt Virus Kaspersky Next EDR Optimum (1 thiết bị/ 12 tháng)
+(1 thiết bị/ 12 tháng)
+Kaspersky Next EDR Optimum là giải pháp bảo mật thế hệ mới được phát triển bởi Kaspersky, mang đến khả năng bảo
+vệ chủ động. thông minh và toàn diện cho cả doanh nghiệp và người dùng cá nhân. Với giấy phép sử dụng 12 tháng cho
+Phiên bản
+Kasper
+1 thiết bị, đặc biệt dành cho thiết bị văn phòng, phần mềm giúp phát hiện, ngăn chặn và phần ứng hiệu quả trước các mối
+sky
+đe dọa an ninh mạng phức tạp, đảm bảo an toàn dữ liệu trong mọi môi trường làm việc hiện đại.
+Next
+EDR
+Bảo mật đa lớp với công nghệ trí tuệ nhân tạo tiên tiến
+Optimu
+m
+Kaspersky Next EDR Optimum sử dụng nền tảng chống mà độc đa tầng (Muiti-layered Protection) kết hợp với trí tuệ
+nhân tạo (Al) và phân tích hành vi người dùng (Behavioral Analysis) để phát hiện và diệt virus, trojan, spyware,
+Hình thức cấp
+Key
+ransomware hay tấn công zero-day. Phần mềm còn được trang bị tường lửa cá nhân (Personal Firewall) và công cụ
+phép
+điện tử
+chống tấn công mạng (Network Attack Blocker) giúp bảo vệ người dùng khỏi các truy cập trái phép và xâm nhập tử
+Internet. Đặc biệt, công nghệ Anti-Ransomware Protection có khả năng theo dõi hành vi đáng ngờ và khôi phục dữ liệu bị
+Số lượng thiết bị
+1 thiết
+mã hóa trái phép, giảm thiểu tối đa thiệt hại do tấn công mạng.
+cài đặt
+bị
+12
+Tuời hạn bàn
+tháng
+Ngôn ngữ
+Tiếng
+Việt
+(8h-21h)
+Dùng cho khách
+Cá
+Đọc thêm v
+hàng
+nhân/
+Doanh
+nghiệp
+(8h-21h)
+VIDEO
+Tương thích hệ
+Window
+điều hành
+s,
+macos
+(8h-21h)
+
+=== TRANG 10 ===
+* 0104-2026_SSTS-QUO_. x
++ Create
+Sign in
+idit
+Convert
+E-Sign
+Find text or tools
+60
+Share
+ort a PDF
+CÔNG TY CỐ PHẦN DỊCH VỤ KỸ THUẬT VÀ GIẢI PHÁP THÔNG MINH
+Đia điểm kính doanh: 121/2/3 Đướng số 6. Phưong Bình Trưng.
+Trụ sở: Tảng 14 HM Tower. 412 Nguyễn Thị Minh Khai, Phường Bản Cò, TP. HCM, Việt Nam
+SMART SOLUTIONS
+TP. HCM. Viêt Nam
+a PDF
+40 0001 001%
+* MST: 0317018091
+* Tel: (1-84) 914 279 386 * Email: salest@ ssts.vn
+* Website: httpx://ssts.vn
+BÁNG CHÀO GIÁ
+te a PDF
+Số hiệu: 0104-2026/SSTS-QUO/VPBD RENEW
+Ngày: 1-Apr-2026
+bine files
+Kinh gửi: CHI NHÁNH VĂN PHÓNG ĐĂNG KÝ ĐÁT ĐAI THÁNH PHỐ THỨ DÂU MỘT
+IAI
+Địa chỉ. Số 358. Đường Hưynh Vân Cú, Phường Chánh Mỹ, Thành phố Thủ Dầu Một, Binh Dương
+Người nhận: Lý Minh Tân
+snize pages
+Ол,
+Công tị CP Dịch Vụ Kị Thuật và Giái Pháp Thông Minh sin cung cấp bảo giá đến quý khách như sau:
+ssistant
+STT
+Mã hiệu
+Mô rà chi tiết
+Hàng sản xuất
+Đit
+Số lượng
+Đơn giá (VNĐ)
+Thành tiên chưa VAT
+(NĐ)
+Option 1 năm
+erative summary
+FGI61FTK2301S828 - Exp 28/9/2026
+EC-10-0061F-950-02-
+Unified Threat Protection (UTP) (IPS. Advanced Malware Protection, Application
+Control, URL. DNS & Video Filtering. Antispam Service, and FortiCare Premium)
+Fortinet
+License
+1
+17.143,000
+17.143,000
+uest e-signatures
+Tổng (chua VAT):
+17.143.000
+1& OCR
+Thuế GIGT (VAT 0%):
+Tổng cộng (bao gồi VAT):
+17.143,000
+ect a PDF
+Option 3 năm
+FC-10-0061F_950-02 FGT61FTK23018S28 - Exp 28/9/2026
+36
+(oirol TRI Das 8 Video Tiere Arapan Serice ard Frioe ein
+Fortinet
+License
+1
+46.429,000
+46.429.000
+act a PDF
+Tổng (chun VAT):
+16.429,000
+press a PDF
+Thuế GTGT (VAT 0%):
+Tổng cộng (bao gồm VAT):
+16.129.000
+are a form
+Điều kiện:
+- Hình thức thanh toán: chuyên khoản
+- Thời gian đặt hàng: 01-02 tuần ké từ ngày ký hợp đồng.
+- Điều kiện thanh toán: Thanh toán 100% trong vòng 5 ngày kẻ từ ngày ký hợp đồng và gửi thông báo giao hàng
+- Chi tiết thanh toán:
++ Số Tài Khoản: 454543636
++ Chủ Tải Khoán: Công ty Cô phần Dịch vụ kỳ thuật và Giải pháp thông minh
++ Ngân hàng: TMCP Quân Đội - Chi nhành Phú Nhuận
+:and e-sign PDF forms & agreements
+- Bảo hành: theo tiêu chuân của NSX.
+- Bảo giả có hiều lực 15 ngày kẻ từ ngày kv.
+Free trial
+Chân thành cảm oni và mong sơm nhận được phân hồi của quý khách hàng!
+Hế c kàn co bất lử tử mư no vn tông kiên hệ với ngưới kỷ tên đưới đât:.
+Đại điện Công tr CP Dịch vụ kỹ chuật rà Giải pháp thông minh
+2s ghi rò họ iên ở đóng dán;
+Kỉ: ch rõ ho tên đ đong đản/
+Xác nhân của khách hàng
+
+=== TRANG 11 ===
+HỘ KINH DOANH CỬA HÀNG THIẾT BỊ MÁY MÓC VĂN PHÒNG
+XP
+XUÂN PHƯỚC
+77/2/32 Nguyễn Đức Thuận - Phú Lợi - TP. Hồ Chí Minh
+T BN TA HANG THIẾT BỊ MÁY MÓC VẤN PHÒNG
+MN PHƯỚC
+**********
+********
+*****
+****
+MST: 8595859495-
+T71232 Nguyễn Đức Thuận, Khu 6, P.Phủ Lợt,
+BẢNG BÁO GIÁ
+Kính gỏi :
+CHI NHÁNH VĂN PHÒNG ĐĂNG KÝ ĐẤT ĐAI TP. TDM
+Đia chi :
+Số 358 Huỳnh Văn Cù, Phường Thủ Dầu Một - Thành phố Hồ Chí Minh
+Hộ kinh doanh cửa hàng thiết bị máy móc văn phòng XUÂN PHƯỚC kính gới bảng báo
+giá các thiết bị máy văn phòng đến quý cơ quan như sau :
+THỜI HẠN
+(Năm)
+CHI TIẾT KỸ THUẬT THIẾT BỊ
+SL
+ĐVT
+ĐƠN GIÁ
+(động Việt Nam)
+THÀNH TIỀN
+(đòng Việt Nam)
+Bản quyền phân mêm Kaspersky
+1 năm
+dùng cho máy tính Next BDR
+Foundations VNM 50-99 User lY
+1
+Bộ
+59.500.000
+59.500.000
+RnIPI Lic ( 1 Server + 74 user )
+Tổng Cộng:
+59.500.000
+Bản quyên phân mêm Kaspersky
+dùng cho máy tính Next EDR
+3 năm
+Foundations VNM 50-99 User 1Y
+1
+Bộ
+99.900.000
+99.900.000
+RnIPI Lic ( 1 Server + 74 user )
+-Sử dụng trong vòng 3 năm
+Tổng Cộng:
+99.900.000
+• Bảng báo giá đã được tính thuế
+• Thanh toán bằng tiền mặt hoặc chuyển khoản.
+• Các thiết bị mới 100%, Giao hàng tận nơi .
+• MỘI CHI TIẾT XIN QUÝ KHÁCH LIÊN HỆ VỀ CỨA HÀNG ĐIỆN THOẠI : (0987) 073339.

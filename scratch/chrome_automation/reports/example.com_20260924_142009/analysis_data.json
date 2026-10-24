@@ -1,0 +1,23 @@
+{
+  "target_url": "https://example.com",
+  "analyzed_at": "2026-09-24T14:20:16.825583",
+  "title": "Example Domain",
+  "description": "",
+  "status_code": 200,
+  "tech_stack": [],
+  "api_endpoints": [],
+  "forms_count": 0,
+  "forms": [],
+  "links": {
+    "total": 1,
+    "internal": 0,
+    "external": 1,
+    "samples": [
+      {
+        "text": "Learn more",
+        "url": "https://iana.org/domains/example"
+      }
+    ]
+  },
+  "screenshot": "/Users/admin/Desktop/BINHDUONG/chrome_automation/reports/example.com_20260924_142009/screenshots/fullpage.png"
+}

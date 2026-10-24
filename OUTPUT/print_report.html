@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Báo Cáo Tiến Độ & Quản Trị Hệ Thống IT - Chi Nhánh 23 Bình Dương</title>
+
+  <!-- KaTeX CSS & JS via CDN (Hỗ trợ công thức LaTeX) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"></script>
+
+  <!-- Marked.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&family=Times+New+Roman&display=swap');
+
+    :root {
+      --primary-color: #0f4c81;
+      --secondary-color: #2b3a4a;
+      --text-color: #1a202c;
+      --border-color: #cbd5e1;
+      --bg-alt: #f8fafc;
+      --accent-danger: #b91c1c;
+      --accent-success: #15803d;
+      --accent-warning: #b45309;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Times New Roman', 'Roboto', serif, sans-serif;
+      color: var(--text-color);
+      background-color: #f1f5f9;
+      line-height: 1.6;
+      font-size: 13.5pt;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    /* Toolbar for browser view */
+    .toolbar-container {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: #0f172a;
+      color: #fff;
+      padding: 12px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    .toolbar-title {
+      font-size: 15px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .toolbar-actions {
+      display: flex;
+      gap: 12px;
+    }
+
+    .btn {
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      border: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s;
+      text-decoration: none;
+    }
+
+    .btn-print {
+      background: #0284c7;
+      color: white;
+    }
+    .btn-print:hover { background: #0369a1; }
+
+    .btn-back {
+      background: #334155;
+      color: #e2e8f0;
+    }
+    .btn-back:hover { background: #475569; }
+
+    /* Printable Page Container */
+    .page-container {
+      max-width: 210mm; /* Chuẩn khổ A4 */
+      margin: 24px auto;
+      background: #ffffff;
+      padding: 20mm 15mm 20mm 15mm;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      border-radius: 4px;
+    }
+
+    /* Official Administrative Document Header */
+    .admin-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 25px;
+      border-bottom: 2px solid #334155;
+      padding-bottom: 15px;
+    }
+
+    .admin-left {
+      width: 48%;
+      text-align: center;
+      font-size: 11pt;
+      line-height: 1.35;
+    }
+
+    .admin-right {
+      width: 48%;
+      text-align: center;
+      font-size: 11pt;
+      line-height: 1.35;
+    }
+
+    .header-sub {
+      font-size: 10.5pt;
+      margin-top: 4px;
+    }
+
+    .header-line {
+      width: 120px;
+      height: 1px;
+      background: #000;
+      margin: 4px auto;
+    }
+
+    .doc-title-block {
+      text-align: center;
+      margin: 20px 0 25px 0;
+    }
+
+    .doc-title {
+      font-size: 18pt;
+      font-weight: bold;
+      color: #0f172a;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 6px;
+    }
+
+    .doc-subtitle {
+      font-size: 12pt;
+      font-style: italic;
+      color: #475569;
+    }
+
+    /* Meta Info Box */
+    .meta-box {
+      background-color: #f8fafc;
+      border: 1px solid #cbd5e1;
+      border-left: 5px solid #0284c7;
+      border-radius: 6px;
+      padding: 12px 16px;
+      margin-bottom: 25px;
+      font-size: 11pt;
+    }
+
+    .meta-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px 16px;
+    }
+
+    /* Section Headings */
+    h2.report-heading {
+      font-size: 14pt;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: #0f4c81;
+      border-bottom: 1.5px solid #0f4c81;
+      padding-bottom: 4px;
+      margin-top: 24px;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    h3.report-subheading {
+      font-size: 12pt;
+      font-weight: bold;
+      color: #1e293b;
+      margin-top: 16px;
+      margin-bottom: 8px;
+    }
+
+    /* Tables */
+    table.report-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0 18px 0;
+      font-size: 10.5pt;
+    }
+
+    table.report-table th, 
+    table.report-table td {
+      border: 1px solid #94a3b8;
+      padding: 7px 10px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    table.report-table th {
+      background-color: #e2e8f0;
+      color: #0f172a;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    table.report-table tr:nth-child(even) {
+      background-color: #f8fafc;
+    }
+
+    /* Highlight Badges */
+    .badge {
+      display: inline-block;
+      padding: 2px 7px;
+      border-radius: 4px;
+      font-size: 9.5pt;
+      font-weight: bold;
+    }
+    .badge-danger { background: #fee2e2; color: #991b1b; border: 1px solid #f87171; }
+    .badge-success { background: #dcfce7; color: #166534; border: 1px solid #86efac; }
+    .badge-warning { background: #fef3c7; color: #92400e; border: 1px solid #fcd34d; }
+    .badge-info { background: #e0f2fe; color: #075985; border: 1px solid #7dd3fc; }
+
+    /* Callout & Quotes */
+    .callout {
+      border-left: 4px solid #b91c1c;
+      background-color: #fff1f2;
+      padding: 10px 14px;
+      margin: 12px 0;
+      border-radius: 0 6px 6px 0;
+      font-size: 11pt;
+    }
+    .callout-title {
+      font-weight: bold;
+      color: #9f1239;
+      margin-bottom: 4px;
+    }
+
+    .notice-box {
+      border: 1px dashed #0284c7;
+      background: #f0f9ff;
+      padding: 10px 14px;
+      border-radius: 6px;
+      margin: 12px 0;
+      font-size: 11pt;
+    }
+
+    /* Timeline events */
+    .event-item {
+      margin-bottom: 10px;
+      padding-left: 14px;
+      border-left: 3px solid #0284c7;
+      font-size: 11pt;
+    }
+    .event-date {
+      font-weight: bold;
+      color: #0369a1;
+    }
+
+    /* Signatures block */
+    .sign-container {
+      margin-top: 40px;
+      display: flex;
+      justify-content: space-between;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+
+    .sign-box {
+      width: 45%;
+      text-align: center;
+      font-size: 11pt;
+    }
+    .sign-space {
+      height: 75px;
+    }
+    .sign-name {
+      font-weight: bold;
+      font-size: 12pt;
+    }
+
+    /* LaTeX / KaTeX adjustments */
+    .katex-display {
+      margin: 0.5em 0 !important;
+    }
+
+    /* PRINT SPECIFIC RULES */
+    @media print {
+      @page {
+        size: A4 portrait;
+        margin: 15mm 12mm 15mm 12mm;
+      }
+
+      body {
+        background-color: #ffffff;
+        font-size: 11pt;
+        color: #000000;
+      }
+
+      .no-print {
+        display: none !important;
+      }
+
+      .page-container {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        box-shadow: none !important;
+        border-radius: 0 !important;
+      }
+
+      /* Prevent ugly cuts in print */
+      table.report-table, 
+      .meta-box, 
+      .callout, 
+      .notice-box, 
+      .sign-container,
+      .avoid-break {
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+      }
+
+      h2.report-heading, h3.report-subheading {
+        page-break-after: avoid !important;
+        break-after: avoid !important;
+      }
+
+      table.report-table th {
+        background-color: #f1f5f9 !important;
+        color: #000 !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Floating Browser Toolbar (Hidden during Print) -->
+  <div class="toolbar-container no-print">
+    <div class="toolbar-title">
+      <i class="fa-solid fa-file-invoice" style="color: #38bdf8;"></i>
+      <span>BÁO CÁO TIẾN ĐỘ & HỒ SƠ QUẢN TRỊ IT - CHI NHÁNH 23</span>
+    </div>
+    <div class="toolbar-actions">
+      <a href="document_viewer.html" class="btn btn-back">
+        <i class="fa-solid fa-folder-open"></i> Kho Tài Liệu Gốc
+      </a>
+      <a href="index.html" class="btn btn-back">
+        <i class="fa-solid fa-arrow-left"></i> Về Dashboard
+      </a>
+      <button onclick="window.print()" class="btn btn-print">
+        <i class="fa-solid fa-print"></i> In Báo Cáo / Xuất PDF (Ctrl + P)
+      </button>
+    </div>
+  </div>
+
+  <!-- Main Report Document Container -->
+  <div class="page-container" id="printable-document">
+
+    <!-- Official Header -->
+    <div class="admin-header">
+      <div class="admin-left">
+        <strong>VĂN PHÒNG ĐĂNG KÝ ĐẤT ĐAI TP.HCM</strong><br>
+        <strong>CHI NHÁNH SỐ 23</strong>
+        <div class="header-line"></div>
+      </div>
+      <div class="admin-right">
+        <strong>CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM</strong><br>
+        <strong>Độc lập - Tự do - Hạnh phúc</strong><br>
+        <div class="header-line"></div>
+        <span class="header-sub"><em>Thủ Dầu Một, ngày 10 tháng 09 năm 2026</em></span>
+      </div>
+    </div>
+
+    <!-- Document Title -->
+    <div class="doc-title-block">
+      <h1 class="doc-title">BÁO CÁO TIẾN ĐỘ & HIỆN TRẠNG QUẢN TRỊ HỆ THỐNG CNTT</h1>
+      <p class="doc-subtitle">Hồ sơ theo dõi tiếp quản công việc, kiểm kê thiết bị, quản trị rủi ro & văn bản pháp lý</p>
+    </div>
+
+    <!-- Personnel & Contract Box -->
+    <div class="meta-box">
+      <div class="meta-grid">
+        <div><strong>Cán bộ phụ trách:</strong> ĐỖ TRỌNG MINH QUÂN (Kỹ sư phần mềm)</div>
+        <div><strong>Loại hợp đồng:</strong> Thử việc 02 tháng (03/09/2026 – 03/11/2026)</div>
+        <div><strong>Địa điểm công tác:</strong> Số 358 Huỳnh Văn Cù, P. Thủ Dầu Một</div>
+        <div><strong>Người bàn giao:</strong> Ông LÝ MINH TÂN (Thôi việc từ 01/10/2026)</div>
+        <div><strong>Lãnh đạo phê duyệt:</strong> Bà NGUYỄN THỊ LỆ HẰNG (Phó Giám đốc)</div>
+        <div><strong>Chuyên viên cấp trên hỗ trợ:</strong> Ông PHÙNG VƯƠNG QUỐC (VPĐKĐĐ TP.HCM - Cơ sở 2)</div>
+      </div>
+    </div>
+
+    <!-- 1. CỘT MỐC LÀM VIỆC ĐẶC BIỆT: THƯ MỜI 16/09/2026 -->
+    <div class="notice-box avoid-break">
+      <strong style="color: #0369a1; font-size: 11.5pt;"><i class="fa-solid fa-bullhorn"></i> SỰ KIỆN QUAN TRỌNG: LÀM VIỆC VỚI CHUYÊN GIA TP.HCM (NGÀY 16/09/2026)</strong>
+      <p style="margin-top: 4px; font-size: 10.5pt;">
+        Theo <strong>Thư mời ngày 10/09/2026</strong> do Phó Giám đốc Nguyễn Thị Lệ Hằng ký: Vào hồi <strong>08h30 sáng thứ Tư (16/09/2026)</strong>, ông <strong>Phùng Vương Quốc</strong> (VPĐKĐĐ TP.HCM – Cơ sở 2) sẽ trực tiếp xuống Chi nhánh 23 để khảo sát hệ thống mạng, máy chủ và hướng dẫn nhận bàn giao nhiệm vụ IT của ông Lý Minh Tân cho Đỗ Trọng Minh Quân.
+      </p>
+    </div>
+
+    <!-- 2. NHẬT KÝ TIẾN ĐỘ THEO DÕI (PROGRESS TIMELINE) -->
+    <h2 class="report-heading"><i class="fa-solid fa-clock-rotate-left"></i> 1. NHẬT KÝ TIẾN ĐỘ CÔNG VIỆC (CHRONOLOGICAL LOG)</h2>
+    <div class="event-item">
+      <span class="event-date">03/09/2026:</span> Bắt đầu làm việc theo Hợp đồng thử việc tại Chi nhánh 23 (Số 358 đường Huỳnh Văn Cù). Làm quen môi trường, khảo sát phòng Server và máy trạm các phòng ban.
+    </div>
+    <div class="event-item">
+      <span class="event-date">04/09 – 08/09/2026:</span> Khảo sát sơ bộ hệ thống mạng LAN, các máy chủ HP, thiết bị tường lửa FortiGate 61F và vị trí phân bổ khoảng 80 máy trạm.
+    </div>
+    <div class="event-item">
+      <span class="event-date">09/09/2026:</span>
+      <ul style="margin-left: 20px; margin-top: 3px;">
+        <li>Ký <strong>Biên bản bàn giao IT</strong> với ông Lý Minh Tân (Bàn giao 3 máy chủ, 1 NAS DS423+, 1 FortiGate 61F, kho linh kiện và 8 ổ cứng di động).</li>
+        <li>Chi nhánh ban hành <strong>Công văn số 2162/CN23-HCTH</strong> báo cáo khó khăn hệ thống thiếu bản quyền bảo mật và xin cấp trên cử nhân sự hỗ trợ chuyên môn cho Đỗ Trọng Minh Quân.</li>
+      </ul>
+    </div>
+    <div class="event-item">
+      <span class="event-date">10/09/2026 (Hôm nay):</span>
+      <ul style="margin-left: 20px; margin-top: 3px;">
+        <li>Phó Giám đốc ký <strong>Thư mời gửi VPĐK TP.HCM Cơ sở 2</strong> cử anh Phùng Vương Quốc xuống hỗ trợ bàn giao vào sáng 16/09/2026.</li>
+        <li>Tiếp nhận 4 bộ hồ sơ kiểm kê: Thống kê thiết bị đang dùng vs cần thanh lý 2026, danh mục 67 máy trạm cán bộ H09 và sổ tra cứu mã mực in/photo.</li>
+      </ul>
+    </div>
+    <div class="event-item">
+      <span class="event-date">16/09/2026 (Kế hoạch):</span> Buổi làm việc chính thức giữa Lãnh đạo Chi nhánh, anh Lý Minh Tân, Đỗ Trọng Minh Quân và anh Phùng Vương Quốc (TP.HCM).
+    </div>
+
+    <!-- 3. HIỆN TRẠNG PHÒNG SERVER & ĐỊA CHỈ IP QUẢN TRỊ -->
+    <h2 class="report-heading"><i class="fa-solid fa-server"></i> 2. HIỆN TRẠNG THIẾT BỊ & DỮ LIỆU PHÒNG MÁY CHỦ (SERVER ROOM)</h2>
+    <p style="font-size: 10.5pt; margin-bottom: 6px;">Toàn bộ phần cứng máy chủ trung tâm và địa chỉ IP kết nối quản trị được tiếp nhận như sau:</p>
+    
+    <table class="report-table">
+      <thead>
+        <tr>
+          <th style="width: 6%;">STT</th>
+          <th style="width: 25%;">Thiết Bị / Model</th>
+          <th style="width: 20%;">Địa Chỉ IP</th>
+          <th>Chức Năng & Dữ Liệu Lưu Trữ</th>
+          <th style="width: 15%;">Hiện Trạng</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: center;">1</td>
+          <td><strong>Server 1</strong> (HP DL360 Gen8)</td>
+          <td style="font-family: monospace; font-weight: bold; text-align: center;">10.17.2.252</td>
+          <td>Ứng dụng DNS; chứa dữ liệu hồ sơ quét cũ; hồ sơ giao dịch bảo đảm.</td>
+          <td style="text-align: center;"><span class="badge badge-success">Đang hoạt động</span></td>
+        </tr>
+        <tr>
+          <td style="text-align: center;">2</td>
+          <td><strong>Server 2</strong> (HP DL360 Gen9)</td>
+          <td style="font-family: monospace; font-weight: bold; text-align: center;">10.17.2.125</td>
+          <td>Chứa folder Chung (ổ F:); folder HSQ-TDM (ổ G:); folder Banve DD (ổ H:) và dữ liệu khác.</td>
+          <td style="text-align: center;"><span class="badge badge-success">Đang hoạt động</span></td>
+        </tr>
+        <tr>
+          <td style="text-align: center;">3</td>
+          <td><strong>Server 3</strong> (StoreEasy 1460)</td>
+          <td style="font-family: monospace; font-weight: bold; text-align: center;">10.17.2.100</td>
+          <td>Folder Dataweb (Banve DD & HSQ-TDM); file Giấy chứng nhận phần mềm HSQ.</td>
+          <td style="text-align: center;"><span class="badge badge-success">Đang hoạt động</span></td>
+        </tr>
+        <tr>
+          <td style="text-align: center;">4</td>
+          <td><strong>Tường Lửa</strong> (FortiGate 61F)</td>
+          <td style="font-family: monospace; font-weight: bold; text-align: center;">192.168.1.254</td>
+          <td>Quản trị an ninh mạng toàn đơn vị. <em>(Gói license bảo mật hết hạn 30/09/2026)</em></td>
+          <td style="text-align: center;"><span class="badge badge-danger">Hết hạn license</span></td>
+        </tr>
+        <tr>
+          <td style="text-align: center;">5</td>
+          <td><strong>NAS Backup</strong> (DS423+)</td>
+          <td style="font-family: monospace; font-weight: bold; text-align: center;">10.17.2.150:65001</td>
+          <td>Thiết bị lưu trữ sao lưu dữ liệu dự phòng tự động.</td>
+          <td style="text-align: center;"><span class="badge badge-success">Đang hoạt động</span></td>
+        </tr>
+        <tr>
+          <td style="text-align: center;">6</td>
+          <td><strong>02 Modem VNPT</strong></td>
+          <td style="text-align: center; font-style: italic;">WAN Gateway</td>
+          <td>Đường truyền cáp quang kết nối Internet 2 line dự phòng.</td>
+          <td style="text-align: center;"><span class="badge badge-success">Đang hoạt động</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- 4. ĐỐI SOÁT TÀI SẢN: ĐANG DÙNG VS THANH LÝ -->
+    <h2 class="report-heading"><i class="fa-solid fa-boxes-packing"></i> 3. BẢNG KIỂM KÊ TÀI SẢN: ĐANG SỬ DỤNG VS CẦN THANH LÝ 2026</h2>
+    <p style="font-size: 10.5pt; margin-bottom: 6px;">Căn cứ danh sách kiểm kê ngày 10/09/2026, phân định rõ phạm vi trách nhiệm vận hành của cán bộ IT mới:</p>
+
+    <table class="report-table">
+      <thead>
+        <tr>
+          <th>Chủng Loại Thiết Bị</th>
+          <th style="width: 18%;">Đang Sử Dụng</th>
+          <th style="width: 18%;">Cần Thanh Lý</th>
+          <th style="width: 16%;">Tổng Số Thiết Bị</th>
+          <th>Ghi Chú</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Máy vi tính để bàn (PC)</strong></td>
+          <td style="text-align: center; font-weight: bold; color: #15803d;">75</td>
+          <td style="text-align: center; font-weight: bold; color: #b91c1c;">55</td>
+          <td style="text-align: center; font-weight: bold;">130</td>
+          <td>67 máy đã gán mã định danh H09. 55 máy nằm trong danh mục cần thanh lý 2026.</td>
+        </tr>
+        <tr>
+          <td><strong>Máy tính xách tay (Laptop)</strong></td>
+          <td style="text-align: center; color: #64748b;">0</td>
+          <td style="text-align: center; font-weight: bold; color: #b91c1c;">2</td>
+          <td style="text-align: center; font-weight: bold;">2</td>
+          <td>Nằm trong danh mục số lượng cần thanh lý 2026.</td>
+        </tr>
+        <tr>
+          <td><strong>Máy chủ (Server)</strong></td>
+          <td style="text-align: center; font-weight: bold; color: #15803d;">3</td>
+          <td style="text-align: center; color: #64748b;">0</td>
+          <td style="text-align: center; font-weight: bold;">3</td>
+          <td>HP DL360 Gen8, Gen9 & StoreEasy 1460 (kèm 1 NAS Synology DS423+).</td>
+        </tr>
+        <tr>
+          <td><strong>Máy in khổ A3</strong></td>
+          <td style="text-align: center; font-weight: bold; color: #15803d;">15</td>
+          <td style="text-align: center; font-weight: bold; color: #b91c1c;">9</td>
+          <td style="text-align: center; font-weight: bold;">24</td>
+          <td>Dòng HP LaserJet Pro M706n dùng mực HP 93A (có 1 máy mới dự phòng lưu kho).</td>
+        </tr>
+        <tr>
+          <td><strong>Máy in khổ A4</strong></td>
+          <td style="text-align: center; font-weight: bold; color: #15803d;">23</td>
+          <td style="text-align: center; font-weight: bold; color: #b91c1c;">6</td>
+          <td style="text-align: center; font-weight: bold;">29</td>
+          <td>HP 402d, 404dn, 4003dn, P2035, Brother (có máy bố trí tại Một cửa phường).</td>
+        </tr>
+        <tr>
+          <td><strong>Máy quét (Scan) A3</strong></td>
+          <td style="text-align: center; font-weight: bold; color: #15803d;">9</td>
+          <td style="text-align: center; font-weight: bold; color: #b91c1c;">1</td>
+          <td style="text-align: center; font-weight: bold;">10</td>
+          <td>Phục vụ quét số hóa hồ sơ địa chính và bản đồ.</td>
+        </tr>
+        <tr>
+          <td><strong>Máy quét (Scan) A4</strong></td>
+          <td style="text-align: center; font-weight: bold; color: #15803d;">2</td>
+          <td style="text-align: center; font-weight: bold; color: #b91c1c;">2</td>
+          <td style="text-align: center; font-weight: bold;">4</td>
+          <td>Phục vụ tiếp nhận hồ sơ tại quầy một cửa.</td>
+        </tr>
+        <tr>
+          <td><strong>Máy Photocopy</strong></td>
+          <td style="text-align: center; font-weight: bold; color: #15803d;">3</td>
+          <td style="text-align: center; font-weight: bold; color: #b91c1c;">7</td>
+          <td style="text-align: center; font-weight: bold;">10</td>
+          <td>01 Ricoh IM3000 + 02 Konica Minolta Bizhub 367. 7 máy nằm trong danh mục thanh lý 2026.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="meta-box avoid-break" style="margin-top: 10px;">
+      <strong>* Kho linh kiện dự phòng mới:</strong> 02 nguồn server, 07 quạt tản nhiệt server, 07 quạt tản nhiệt PC, 05 nguồn máy trạm PC, 04 chuột máy tính, 01 UPS 750VA, 01 máy in A3 mới.<br>
+      <strong>* Thiết bị lưu trữ ngoài:</strong> 03 ổ 8TB (lưu đơn vị), 01 ổ 2TB (lưu đơn vị), 04 ổ 4TB (03 ổ lưu đơn vị, <strong>01 ổ bên VBDLIS đang tạm giữ</strong>).
+    </div>
+
+    <!-- 5. SỔ TAY TRA CỨU MÃ HỘP MỰC -->
+    <h2 class="report-heading avoid-break"><i class="fa-solid fa-print"></i> 4. SỔ TAY TRA CỨU MÃ MỰC IN & MÁY PHOTOCOPY</h2>
+    <table class="report-table avoid-break">
+      <thead>
+        <tr>
+          <th>Loại Thiết Bị</th>
+          <th>Model Máy</th>
+          <th style="width: 25%;">Mã Hộp Mực Chính Hãng</th>
+          <th style="width: 12%;">Số Lượng</th>
+          <th>Vị Trí Phân Bổ / Ghi Chú</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Máy In A3</strong></td>
+          <td>HP LaserJet Pro M706n</td>
+          <td style="font-weight: bold; color: #b45309;">HP 93A (CZ192A)</td>
+          <td style="text-align: center;">16 máy</td>
+          <td>Phòng Đo đạc, Cấp giấy, Lưu trữ (có 1 máy mới lưu kho)</td>
+        </tr>
+        <tr>
+          <td rowspan="7"><strong>Máy In A4</strong></td>
+          <td>HP LaserJet Pro M402d</td>
+          <td style="font-weight: bold; color: #b45309;">HP 26A (CF226A)</td>
+          <td style="text-align: center;">9 máy</td>
+          <td>Một cửa P. Chánh Hiệp, Phú An: 1 máy/phường</td>
+        </tr>
+        <tr>
+          <td>HP LaserJet Pro M404dn</td>
+          <td style="font-weight: bold; color: #b45309;">HP 76A (CF276A)</td>
+          <td style="text-align: center;">8 máy</td>
+          <td>Một cửa P. Thủ Dầu Một: 1 máy</td>
+        </tr>
+        <tr>
+          <td>HP LaserJet Pro 4003dn</td>
+          <td style="font-weight: bold; color: #b45309;">HP 151A (W1510A)</td>
+          <td style="text-align: center;">5 máy</td>
+          <td>Một cửa P. Thủ Dầu Một: 1 máy</td>
+        </tr>
+        <tr>
+          <td>HP LaserJet P2035</td>
+          <td style="font-weight: bold; color: #b45309;">HP 05A (CE505A)</td>
+          <td style="text-align: center;">3 máy</td>
+          <td>Một cửa P. Thủ Dầu Một</td>
+        </tr>
+        <tr>
+          <td>Brother HL – 2240D</td>
+          <td style="font-weight: bold; color: #b45309;">Brother TN-2280</td>
+          <td style="text-align: center;">3 máy</td>
+          <td>Một cửa P. Phú Lợi: 1 máy</td>
+        </tr>
+        <tr>
+          <td>Brother HL – L2320D</td>
+          <td style="font-weight: bold; color: #b45309;">Brother TN-2385</td>
+          <td style="text-align: center;">1 máy</td>
+          <td>Một cửa P. Bình Dương</td>
+        </tr>
+        <tr>
+          <td>Fuji Xerox P225db</td>
+          <td style="font-weight: bold; color: #b45309;">Xerox CT202330</td>
+          <td style="text-align: center;">1 máy</td>
+          <td>Phòng chuyên môn văn phòng</td>
+        </tr>
+        <tr>
+          <td rowspan="2"><strong>Máy Photo</strong></td>
+          <td>Ricoh IM3000</td>
+          <td style="font-weight: bold; color: #b45309;">Ricoh Type IM 2500</td>
+          <td style="text-align: center;">1 máy</td>
+          <td>Máy photo đa năng Hành chính</td>
+        </tr>
+        <tr>
+          <td>Konica Minolta Bizhub 367</td>
+          <td style="font-weight: bold; color: #b45309;">Konica Minolta TN-323</td>
+          <td style="text-align: center;">2 máy</td>
+          <td>Máy photo văn phòng</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- 6. MA TRẬN RỦI RO & BẢO VỆ PHÁP LÝ -->
+    <h2 class="report-heading avoid-break"><i class="fa-solid fa-shield-virus"></i> 5. QUẢN TRỊ RỦI RO & CĂN CỨ BẢO VỆ TRÁCH NHIỆM (SHIELD MATRIX)</h2>
+    
+    <div class="callout avoid-break">
+      <div class="callout-title"><i class="fa-solid fa-triangle-exclamation"></i> CẢNH BÁO RỦI RO BẢO MẬT HẠ TẦNG (CĂN CỨ CV 1342/CN23-HCTH & CV 2162/CN23-HCTH):</div>
+      <ul style="margin-left: 18px; font-size: 10.5pt; line-height: 1.5;">
+        <li><strong>Bản quyền diệt virus Kaspersky:</strong> Đã hết hạn bản quyền từ ngày <strong>23/03/2026</strong> (mặc dù trên danh mục 67 máy đều ghi nhận có cài). Nguy cơ cao bị lây lan mã độc qua USB của người dân nộp hồ sơ.</li>
+        <li><strong>Thiết bị tường lửa FortiGate 61F:</strong> Hết hạn toàn bộ các gói dịch vụ bản quyền bảo mật (license) vào ngày <strong>30/09/2026</strong>. Sẽ mất các tính năng chống xâm nhập (IPS), lọc web độc hại và antivirus gateway.</li>
+        <li><strong>Đề xuất kinh phí bản quyền & ATTT (CV 1342 ngày 22/06/2026):</strong> Đơn vị đã khảo sát 80 máy và lập dự toán <strong>752.829.000 đ</strong> (PA 1 - FortiGate 3 năm) hoặc <strong>723.543.000 đ</strong> (PA 2 - FortiGate 1 năm) xin cấp trên bố trí kinh phí.</li>
+      </ul>
+    </div>
+
+    <table class="report-table avoid-break">
+      <thead>
+        <tr>
+          <th style="width: 25%;">Hạng Mục Rủi Ro</th>
+          <th style="width: 14%;">Mức Độ</th>
+          <th>Căn Cứ Văn Bản Bảo Vệ Trách Nhiệm</th>
+          <th>Phương Án Ứng Phó Tạm Thời</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Kaspersky hết hạn (23/03)</strong></td>
+          <td style="text-align: center;"><span class="badge badge-danger">Rủi ro cao</span></td>
+          <td>Mục 2 - CV 2162 & Báo giá CV 1342</td>
+          <td>Tạm thời kích hoạt Windows Defender, hạn chế cắm USB lạ.</td>
+        </tr>
+        <tr>
+          <td><strong>FortiGate hết hạn (30/09)</strong></td>
+          <td style="text-align: center;"><span class="badge badge-danger">Rủi ro cao</span></td>
+          <td>Mục 2 - CV 2162 & Mục 4 - CV 1342</td>
+          <td>Sao lưu cấu hình Firewall, trao đổi với anh Quốc ngày 16/09.</td>
+        </tr>
+        <tr>
+          <td><strong>Bản quyền Windows & Office</strong></td>
+          <td style="text-align: center;"><span class="badge badge-warning">Chờ kinh phí</span></td>
+          <td>Công văn số 1342/CN23-HCTH (752,8 tr)</td>
+          <td>Đã lập dự toán 80 máy gửi cấp trên từ ngày 22/06/2026.</td>
+        </tr>
+        <tr>
+          <td><strong>Năng lực chuyên môn IT</strong></td>
+          <td style="text-align: center;"><span class="badge badge-success">Đã bảo vệ</span></td>
+          <td>Mục 3 & 4 CV 2162 & Thư mời 10/09</td>
+          <td>Lãnh đạo xác nhận chuyên môn phần mềm, xin cấp trên hỗ trợ.</td>
+        </tr>
+        <tr>
+          <td><strong>01 Ổ cứng 4TB bên ngoài</strong></td>
+          <td style="text-align: center;"><span class="badge badge-warning">Cần đối soát</span></td>
+          <td>Mục 4 - Biên bản bàn giao IT</td>
+          <td>Yêu cầu biên nhận bàn giao của đơn vị VBDLIS đang giữ.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- CHỮ KÝ XÁC NHẬN BÁO CÁO -->
+    <div class="sign-container">
+      <div class="sign-box">
+        <strong>NGƯỜI LẬP BÁO CÁO</strong><br>
+        <span style="font-size: 10pt; font-style: italic;">(Ký và ghi rõ họ tên)</span>
+        <div class="sign-space"></div>
+        <div class="sign-name">Đỗ Trọng Minh Quân</div>
+      </div>
+      <div class="sign-box">
+        <strong>LÃNH ĐẠO ĐƠN VỊ</strong><br>
+        <span style="font-size: 10pt; font-style: italic;">(Ký, ghi rõ họ tên và đóng dấu)</span>
+        <div class="sign-space"></div>
+        <div class="sign-name">Nguyễn Thị Lệ Hằng</div>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    // Tự động kích hoạt KaTeX render cho các công thức $...$ và $$...$$
+    document.addEventListener("DOMContentLoaded", function() {
+      if (window.renderMathInElement) {
+        renderMathInElement(document.getElementById('printable-document'), {
+          delimiters: [
+            {left: '$$', right: '$$', display: true},
+            {left: '$', right: '$', display: false},
+            {left: '\\(', right: '\\)', display: false},
+            {left: '\\[', right: '\\]', display: true}
+          ],
+          throwOnError: false
+        });
+      }
+    });
+  </script>
+</body>
+</html>

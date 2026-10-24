@@ -1,0 +1,1354 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ĐỀ ÁN THAM MƯU: HỆ THỐNG QUẢN LÝ CÔNG VIỆC QUA GMAIL CÁ NHÂN - CHI NHÁNH VPĐKĐĐ SỐ 23</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <style>
+    :root {
+      --primary: #1e3a8a;
+      --primary-mid: #1d4ed8;
+      --primary-light: #3b82f6;
+      --primary-bg: #eff6ff;
+      --success: #059669;
+      --success-bg: #ecfdf5;
+      --warning: #d97706;
+      --warning-bg: #fffbeb;
+      --danger: #dc2626;
+      --danger-bg: #fef2f2;
+      --purple: #7c3aed;
+      --purple-bg: #f5f3ff;
+      --slate-900: #0f172a;
+      --slate-800: #1e293b;
+      --slate-700: #334155;
+      --slate-600: #475569;
+      --slate-500: #64748b;
+      --slate-200: #e2e8f0;
+      --slate-100: #f1f5f9;
+      --slate-50: #f8fafc;
+      --radius: 12px;
+      --shadow: 0 4px 6px -1px rgba(15, 23, 42, 0.07), 0 2px 4px -2px rgba(15, 23, 42, 0.05);
+      --shadow-lg: 0 10px 25px -5px rgba(15, 23, 42, 0.12), 0 8px 10px -6px rgba(15, 23, 42, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: #f1f5f9;
+      color: var(--slate-800);
+      line-height: 1.6;
+      padding-bottom: 4rem;
+    }
+
+    /* Header */
+    header {
+      background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 55%, #1d4ed8 100%);
+      color: white;
+      padding: 2.25rem 2rem 1.75rem;
+      border-bottom: 4px solid #38bdf8;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.18);
+    }
+
+    .container {
+      max-width: 1420px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .badge-top {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(56, 189, 248, 0.18);
+      border: 1px solid rgba(56, 189, 248, 0.45);
+      color: #e0f2fe;
+      padding: 0.35rem 0.9rem;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 0.75rem;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1.25;
+      margin-bottom: 0.5rem;
+    }
+
+    header .subtitle {
+      color: #cbd5e1;
+      font-size: 1rem;
+      max-width: 980px;
+      margin-bottom: 1.25rem;
+    }
+
+    .meta-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      padding-top: 1rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.15);
+      font-size: 0.85rem;
+    }
+
+    .meta-item {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 0.4rem 0.85rem;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    /* Navigation Tabs */
+    .nav-tabs-wrapper {
+      background: white;
+      border-bottom: 1px solid var(--slate-200);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    }
+
+    .nav-tabs {
+      max-width: 1420px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      display: flex;
+      gap: 0.35rem;
+      overflow-x: auto;
+    }
+
+    .tab-btn {
+      padding: 1rem 1.25rem;
+      border: none;
+      background: transparent;
+      font-family: inherit;
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--slate-600);
+      cursor: pointer;
+      border-bottom: 3px solid transparent;
+      white-space: nowrap;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all 0.2s;
+    }
+
+    .tab-btn:hover {
+      color: var(--primary-mid);
+      background: var(--slate-50);
+    }
+
+    .tab-btn.active {
+      color: var(--primary-mid);
+      border-bottom-color: var(--primary-mid);
+      background: var(--primary-bg);
+    }
+
+    .tab-content {
+      display: none;
+      padding-top: 1.75rem;
+      animation: fadeIn 0.25s ease;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(4px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Cards & Grids */
+    .card {
+      background: white;
+      border-radius: var(--radius);
+      border: 1px solid var(--slate-200);
+      box-shadow: var(--shadow);
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      padding-bottom: 0.85rem;
+      margin-bottom: 1.25rem;
+      border-bottom: 2px solid var(--slate-100);
+    }
+
+    .card-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--slate-900);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .grid-4 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    @media (max-width: 768px) {
+      .grid-2, .grid-3 { grid-template-columns: 1fr; }
+    }
+
+    /* Stat Cards */
+    .stat-card {
+      background: white;
+      border-radius: var(--radius);
+      padding: 1.35rem;
+      border: 1px solid var(--slate-200);
+      box-shadow: var(--shadow);
+      border-left: 5px solid var(--primary-mid);
+    }
+
+    .stat-card .label {
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--slate-500);
+      letter-spacing: 0.04em;
+      margin-bottom: 0.4rem;
+    }
+
+    .stat-card .value {
+      font-size: 1.85rem;
+      font-weight: 800;
+      color: var(--slate-900);
+      font-family: 'Fira Code', monospace;
+      margin-bottom: 0.35rem;
+    }
+
+    .stat-card .desc {
+      font-size: 0.85rem;
+      color: var(--slate-600);
+    }
+
+    /* Tables */
+    .table-wrap {
+      overflow-x: auto;
+      border: 1px solid var(--slate-200);
+      border-radius: 10px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.88rem;
+    }
+
+    thead th {
+      background: #f8fafc;
+      color: var(--slate-700);
+      font-weight: 700;
+      text-align: left;
+      padding: 0.85rem 1rem;
+      border-bottom: 2px solid var(--slate-200);
+      white-space: nowrap;
+    }
+
+    tbody td {
+      padding: 0.8rem 1rem;
+      border-bottom: 1px solid var(--slate-200);
+      vertical-align: top;
+    }
+
+    tbody tr:hover {
+      background-color: #f8fafc;
+    }
+
+    .tr-highlight {
+      background-color: #eff6ff !important;
+      border-left: 4px solid var(--primary-mid);
+    }
+
+    /* Badges & Pills */
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      padding: 0.22rem 0.65rem;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: 700;
+    }
+
+    .pill-green { background: var(--success-bg); color: var(--success); border: 1px solid #a7f3d0; }
+    .pill-blue { background: var(--primary-bg); color: var(--primary-mid); border: 1px solid #bfdbfe; }
+    .pill-amber { background: var(--warning-bg); color: var(--warning); border: 1px solid #fde68a; }
+    .pill-red { background: var(--danger-bg); color: var(--danger); border: 1px solid #fecaca; }
+    .pill-purple { background: var(--purple-bg); color: var(--purple); border: 1px solid #ddd6fe; }
+
+    /* Pipeline Box */
+    .pipeline-steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+
+    .step-box {
+      background: var(--slate-50);
+      border: 1px solid var(--slate-200);
+      border-top: 4px solid var(--primary-mid);
+      border-radius: 10px;
+      padding: 1.15rem;
+      position: relative;
+    }
+
+    .step-num {
+      display: inline-block;
+      background: var(--primary-mid);
+      color: white;
+      font-weight: 800;
+      font-size: 0.75rem;
+      padding: 0.2rem 0.55rem;
+      border-radius: 6px;
+      margin-bottom: 0.5rem;
+    }
+
+    .step-box h4 {
+      font-size: 0.98rem;
+      color: var(--slate-900);
+      margin-bottom: 0.45rem;
+    }
+
+    .step-box p {
+      font-size: 0.84rem;
+      color: var(--slate-600);
+      margin-bottom: 0.5rem;
+    }
+
+    /* Callouts */
+    .callout {
+      padding: 1rem 1.25rem;
+      border-radius: 10px;
+      margin-bottom: 1.25rem;
+      font-size: 0.9rem;
+    }
+
+    .callout-info {
+      background: #eff6ff;
+      border-left: 4px solid #2563eb;
+      color: #1e3a8a;
+    }
+
+    .callout-success {
+      background: #ecfdf5;
+      border-left: 4px solid #059669;
+      color: #065f46;
+    }
+
+    .callout-warning {
+      background: #fffbeb;
+      border-left: 4px solid #d97706;
+      color: #92400e;
+    }
+
+    /* Code Block */
+    .code-container {
+      background: #0f172a;
+      color: #e2e8f0;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 1.25rem;
+    }
+
+    .code-header {
+      background: #1e293b;
+      padding: 0.65rem 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: #94a3b8;
+      border-bottom: 1px solid #334155;
+    }
+
+    pre {
+      padding: 1rem;
+      overflow-x: auto;
+      font-family: 'Fira Code', monospace;
+      font-size: 0.82rem;
+      line-height: 1.55;
+    }
+
+    .btn {
+      padding: 0.55rem 1.1rem;
+      border-radius: 8px;
+      border: none;
+      font-family: inherit;
+      font-weight: 600;
+      font-size: 0.85rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      transition: all 0.15s;
+    }
+
+    .btn-primary {
+      background: var(--primary-mid);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: var(--primary);
+    }
+
+    .btn-success {
+      background: var(--success);
+      color: white;
+    }
+
+    .btn-success:hover {
+      background: #047857;
+    }
+
+    .btn-copy {
+      background: #334155;
+      color: white;
+      padding: 0.35rem 0.75rem;
+      font-size: 0.78rem;
+    }
+
+    .btn-copy:hover {
+      background: #475569;
+    }
+
+    /* Mockup Email & Calendar */
+    .mockup-box {
+      border: 1px solid var(--slate-200);
+      border-radius: 10px;
+      background: #ffffff;
+      overflow: hidden;
+    }
+
+    .mockup-bar {
+      background: var(--slate-100);
+      padding: 0.6rem 1rem;
+      border-bottom: 1px solid var(--slate-200);
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--slate-700);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .mockup-body {
+      padding: 1.15rem;
+      font-size: 0.87rem;
+    }
+
+    .cal-event {
+      background: #eff6ff;
+      border-left: 4px solid #2563eb;
+      padding: 0.65rem 0.85rem;
+      border-radius: 6px;
+      margin-bottom: 0.6rem;
+    }
+
+    .cal-event.urgent {
+      background: #fef2f2;
+      border-left-color: #dc2626;
+    }
+
+    .cal-event.measure {
+      background: #ecfdf5;
+      border-left-color: #059669;
+    }
+
+    ul.clean-list {
+      padding-left: 1.2rem;
+    }
+
+    ul.clean-list li {
+      margin-bottom: 0.4rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <div class="badge-top">🏛️ ĐỀ ÁN THAM MƯU CHUYỂN ĐỔI SỐ NỘI BỘ &bull; CHI PHÍ 0 ĐỒNG</div>
+      <h1>MÔ HÌNH QUẢN LÝ ĐẦU CÔNG VIỆC & TIẾN ĐỘ NGHIỆP VỤ CHỈ VỚI GMAIL CÁ NHÂN</h1>
+      <p class="subtitle">
+        Giải pháp đồng bộ hóa <strong>Google Sheets + Google Forms + Google Calendar + Google Apps Script + Looker Studio</strong> phục vụ Ban Giám đốc điều hành xuyên suốt: <strong>Chiến dịch Kế hoạch 9999</strong> (Rà soát &rarr; Lục hồ sơ &rarr; Quét/Scan &rarr; Chỉnh lý Không gian), <strong>Phần mềm Quản lý Văn bản (QLVB)</strong>, <strong>Hệ thống Đo đạc OERP</strong> và <strong>Giao việc điều hành tuần</strong>.
+      </p>
+      <div class="meta-strip">
+        <div class="meta-item">👤 <strong>Kính trình:</strong> Giám đốc Nguyễn Chiến Thắng & Ban Giám đốc Chi nhánh 23</div>
+        <div class="meta-item">🛠️ <strong>Tham mưu kỹ thuật:</strong> Đỗ Trọng Minh Quân (CNTT - Tổ Hành chính - Tổng hợp)</div>
+        <div class="meta-item">📍 <strong>Đơn vị:</strong> Chi nhánh VPĐKĐĐ số 23 (358 Huỳnh Văn Cù, P. Thủ Dầu Một - Phụ trách 05 phường)</div>
+        <div class="meta-item">💰 <strong>Ngân sách phần mềm:</strong> 0 VNĐ (Tận dụng 100% Gmail cá nhân của 75 cán bộ)</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navigation Tabs -->
+  <div class="nav-tabs-wrapper">
+    <div class="nav-tabs">
+      <button class="tab-btn active" onclick="openTab('tab1', this)">1. Giải Bài Toán Gmail Cá Nhân & So Sánh Phần Mềm</button>
+      <button class="tab-btn" onclick="openTab('tab2', this)">2. Quy Trình Liên Hoàn Các Tổ (9999, QLVB, Đo Đạc)</button>
+      <button class="tab-btn" onclick="openTab('tab3', this)">3. Mô Phỏng Master Sheet, Calendar & Tự Động Nhắc Việc</button>
+      <button class="tab-btn" onclick="openTab('tab4', this)">4. Mã Nguồn Apps Script & Lộ Trình 3 Ngày Triển Khai</button>
+    </div>
+  </div>
+
+  <div class="container">
+
+    <!-- ==================== TAB 1 ==================== -->
+    <div id="tab1" class="tab-content active">
+
+      <div class="grid-4">
+        <div class="stat-card" style="border-left-color: #2563eb;">
+          <div class="label">NHÂN SỰ & ĐỊNH DANH</div>
+          <div class="value">100% Gmail</div>
+          <div class="desc">Sử dụng trực tiếp <strong>Gmail cá nhân (@gmail.com)</strong> của ~75 viên chức, NLĐ tại 03 Tổ chuyên môn & 05 phường Một cửa.</div>
+        </div>
+        <div class="stat-card" style="border-left-color: #059669;">
+          <div class="label">DÂY CHUYỀN KẾ HOẠCH 9999</div>
+          <div class="value">4 Tổ Liên Hoàn</div>
+          <div class="desc">Kết nối tự động: <strong>Rà soát (7.256 thửa) &rarr; Kho Lục (4.371 HS) &rarr; Tổ Scan &rarr; Không gian (42.368 thửa)</strong>.</div>
+        </div>
+        <div class="stat-card" style="border-left-color: #d97706;">
+          <div class="label">KIỂM SOÁT CÔNG VĂN QLVB</div>
+          <div class="value">636 Văn bản</div>
+          <div class="desc">Tự động quét file xuất từ QLVB, bắn <strong>Email + Lịch nhắc hạn (Google Calendar)</strong> cho cán bộ có nguy cơ trễ hạn.</div>
+        </div>
+        <div class="stat-card" style="border-left-color: #7c3aed;">
+          <div class="label">CHI PHÍ BẢN QUYỀN</div>
+          <div class="value">0 Đồng</div>
+          <div class="desc">Không cần mua tài khoản Microsoft 365 hay phần mềm ngoài; triển khai ngay trong <strong>03 ngày làm việc</strong>.</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">💡 1. Tại sao chỉ cần "Gmail cá nhân" là quản lý chặt chẽ được 100% đầu việc tại Chi nhánh 23?</div>
+          <span class="pill pill-blue">Giải pháp thực chiến</span>
+        </div>
+        <div class="callout callout-info">
+          <strong>Thực trạng (Nỗi đau) hiện tại của Chi nhánh 23:</strong>
+          Hiện nay đơn vị đang vận hành song song nhiều phần mềm rời rạc (<strong>QLVB</strong> để xử lý công văn, <strong>VBDLIS</strong> cập nhật cơ sở dữ liệu, <strong>OERP vpdkddtdm.vn</strong> cho hồ sơ đo đạc/một cửa) trong khi chiến dịch <strong>Kế hoạch 9999</strong> và <strong>giao việc nội bộ</strong> lại ghi chép thủ công trên các file Excel rời rạc. Nhân viên gõ chữ tự do vào ô Excel (ví dụ: <code>"rà gửi lục: 108 thửa cập nhật lên nhóm 1: 46 thửa"</code>) làm máy tính không thể cộng tự động, Giám đốc không biết hồ sơ đang tắc ở khâu Rà soát, khâu Kho lục hay khâu Quét Scan, và việc nhắc nhở trên nhóm Zalo bị trôi tin nhắn.
+        </div>
+
+        <div class="grid-3">
+          <div class="step-box" style="border-top-color: #2563eb;">
+            <span class="step-num">CƠ CHẾ 1: ĐỊNH DANH & PHÂN QUYỀN</span>
+            <h4>Mỗi Gmail cá nhân = 1 Mã định danh (ID)</h4>
+            <p>Trên <strong>Google Sheets</strong> và <strong>Google Forms</strong>, tính năng <em>Protected Sheets & Ranges</em> cho phép khóa chặt từng cột/bảng theo đúng địa chỉ <code>@gmail.com</code> cá nhân:</p>
+            <ul class="clean-list" style="font-size: 0.83rem; color: var(--slate-700);">
+              <li><strong>Ban Giám đốc (3 Gmail):</strong> Toàn quyền xem Dashboard tổng hợp & giao việc.</li>
+              <li><strong>Tổ trưởng / Nhóm trưởng (6 Gmail):</strong> Quyền duyệt và phân bổ chỉ tiêu cho tổ mình.</li>
+              <li><strong>Viên chức, NLĐ (~65 Gmail):</strong> Chỉ được nhập số liệu của chính mình, không sửa/xóa được số liệu của đồng nghiệp.</li>
+            </ul>
+          </div>
+
+          <div class="step-box" style="border-top-color: #059669;">
+            <span class="step-num" style="background: #059669;">CƠ CHẾ 2: ĐỒNG BỘ LỊCH ĐIỆN THOẠI</span>
+            <h4>Gắn việc thẳng vào Google Calendar</h4>
+            <p>Mọi điện thoại Android và iPhone của cán bộ đều đã đăng nhập sẵn Gmail cá nhân. Khi Giám đốc hoặc Tổ trưởng giao việc có hạn chót (Deadline):</p>
+            <ul class="clean-list" style="font-size: 0.83rem; color: var(--slate-700);">
+              <li>Hệ thống tự động đẩy sự kiện (Event) vào <strong>Google Calendar</strong> của đúng Gmail cán bộ đó.</li>
+              <li>Điện thoại nhân viên tự động <strong>rung thông báo (Push Notification)</strong> trước hạn 24 giờ và 2 giờ mà không tốn 1 đồng phí SMS.</li>
+            </ul>
+          </div>
+
+          <div class="step-box" style="border-top-color: #d97706;">
+            <span class="step-num" style="background: #d97706;">CƠ CHẾ 3: ROBOT NHẮC VIỆC TỰ ĐỘNG</span>
+            <h4>Google Apps Script chạy ngầm 24/7</h4>
+            <p>Tích hợp sẵn miễn phí bên trong Google Sheet là bộ lập lịch <strong>Google Apps Script Triggers</strong>:</p>
+            <ul class="clean-list" style="font-size: 0.83rem; color: var(--slate-700);">
+              <li><strong>07h30 sáng:</strong> Tự động gửi Gmail nhắc riêng từng cán bộ có công văn QLVB sắp quá hạn hoặc nợ chỉ tiêu 9999.</li>
+              <li><strong>16h30 chiều:</strong> Nhắc các Tổ nhập sản lượng trong ngày.</li>
+              <li><strong>17h00 chiều:</strong> Tự động gửi Email Báo cáo tổng hợp (Executive Summary) tới Giám đốc Nguyễn Chiến Thắng.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- BẢNG SO SÁNH CÁC PHẦN MỀM -->
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">📊 2. Bảng So Sánh Các Phần Mềm Quản Lý Tiến Độ Công Việc (Đánh giá cho đặc thù Chi nhánh 23)</div>
+          <span class="pill pill-green">Tư vấn lựa chọn công cụ</span>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th style="width: 210px;">Phần mềm / Giải pháp</th>
+                <th style="width: 110px;">Chi phí</th>
+                <th>Ưu điểm nổi bật</th>
+                <th>Nhược điểm / Hạn chế tại Chi nhánh 23</th>
+                <th style="width: 170px;">Mức độ phù hợp</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="tr-highlight">
+                <td>
+                  <strong>1. Hệ sinh thái Google (Google Sheets + Forms + Calendar + Apps Script + Looker Studio)</strong>
+                </td>
+                <td><span class="pill pill-green">0 VNĐ (Miễn phí)</span></td>
+                <td>
+                  &bull; <strong>Chỉ cần Gmail cá nhân</strong>, ai cũng biết dùng ngay.<br>
+                  &bull; Quản lý cực tốt cả <strong>số lượng định lượng lớn</strong> (42.368 thửa đất, 4.371 hồ sơ kho) lẫn <strong>đầu việc định tính</strong> (công văn, nhiệm vụ BGĐ giao).<br>
+                  &bull; Tự động hóa 100% gửi Gmail & tạo lịch Google Calendar qua Apps Script.<br>
+                  &bull; Kết nối trực tiếp với file Excel xuất ra từ phần mềm QLVB và OERP.
+                </td>
+                <td>
+                  &bull; Cần 01 cán bộ IT (Minh Quân) thiết lập cấu trúc chuẩn, khóa phân quyền và cài sẵn mã Apps Script ban đầu (mất khoảng 2-3 ngày).
+                </td>
+                <td>
+                  <span class="pill pill-green">⭐ KHUYẾN NGHỊ SỐ 1 (9.8/10)</span>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <strong>2. Google AppSheet (Tạo App di động từ Google Sheets)</strong>
+                </td>
+                <td><span class="pill pill-blue">Miễn phí (Bản Prototype &le;10 đầu mối)</span></td>
+                <td>
+                  &bull; Biến file Google Sheet thành ứng dụng có giao diện nút bấm đẹp mắt trên điện thoại/máy tính.<br>
+                  &bull; Rất tiện cho Tổ trưởng các tổ (Lục, Scan, Đo đạc) bấm duyệt trạng thái.
+                </td>
+                <td>
+                  &bull; Bản miễn phí giới hạn tối đa 10 người dùng trực tiếp (nếu mở cho cả 75 người dùng sẽ bị Google tính phí $5-$10/người/tháng).<br>
+                  &bull; <em>Giải pháp:</em> Dùng cho Ban Giám đốc & các Tổ trưởng, còn nhân viên nhập qua Google Form/Sheet.
+                </td>
+                <td>
+                  <span class="pill pill-blue">Bổ trợ giai đoạn 2 (8.5/10)</span>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <strong>3. Trello / Asana / Notion</strong>
+                </td>
+                <td><span class="pill pill-amber">Freemium (Giới hạn bản Free)</span></td>
+                <td>
+                  &bull; Giao diện bảng kéo thả (Kanban: Cần làm &rarr; Đang làm &rarr; Xong) trực quan với các công việc dự án nhỏ.
+                </td>
+                <td>
+                  &bull; <strong>Không thể quản lý dây chuyền số lượng lớn</strong> (không thể tạo 7.256 thẻ Trello cho 7.256 thửa đất 9999 hay cộng dồn sản lượng scan hàng ngày).<br>
+                  &bull; Bản miễn phí của Trello giới hạn 10 thành viên/Workspace và không cho xem dạng Lịch (Calendar View).
+                </td>
+                <td>
+                  <span class="pill pill-amber">Không phù hợp đặc thù đất đai (5.0/10)</span>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <strong>4. Lark Suite (Feishu)</strong>
+                </td>
+                <td><span class="pill pill-blue">Miễn phí (&le; 20-50 user)</span></td>
+                <td>
+                  &bull; Tích hợp Chat + Lịch + Bảng dữ liệu (Lark Base) hiện đại, tự động hóa tốt.
+                </td>
+                <td>
+                  &bull; Buộc 75 cán bộ phải cài phần mềm mới, tạo tài khoản mới và học cách sử dụng từ đầu.<br>
+                  &bull; Rủi ro nhạy cảm về quy định an toàn thông tin khi lưu trữ dữ liệu hành chính nhà nước trên máy chủ nền tảng nước ngoài bên thứ 3.
+                </td>
+                <td>
+                  <span class="pill pill-amber">Khó triển khai đồng bộ (6.0/10)</span>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <strong>5. Nhóm Zalo / Zalo To-Do</strong>
+                </td>
+                <td><span class="pill pill-green">Miễn phí</span></td>
+                <td>
+                  &bull; Tốc độ truyền đạt thông tin tức thời, 100% cán bộ đang sử dụng hàng ngày.
+                </td>
+                <td>
+                  &bull; <strong>Trôi tin nhắn nghiêm trọng</strong>, không tổng hợp được biểu đồ tiến độ, không cộng tự động được KPI, không phân tích được điểm nghẽn giữa các Tổ.
+                </td>
+                <td>
+                  <span class="pill pill-red">Chỉ dùng làm kênh thông báo phụ (4.5/10)</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ==================== TAB 2 ==================== -->
+    <div id="tab2" class="tab-content">
+
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">🔄 1. Sơ Đồ Kiến Trúc Luồng Công Việc Liên Hoàn Giữa Các Tổ Tại Chi Nhánh 23</div>
+          <span class="pill pill-blue">Thiết kế riêng cho Chi nhánh VPĐKĐĐ số 23</span>
+        </div>
+
+        <p style="font-size: 0.9rem; color: var(--slate-600); margin-bottom: 1rem;">
+          Khác với các cơ quan hành chính thông thường, công việc tại <strong>Chi nhánh Văn phòng Đăng ký đất đai số 23</strong> có tính chất <strong>dây chuyền khép kín (Pipeline)</strong>: kết quả đầu ra của Tổ này là đầu vào của Tổ tiếp theo. Dưới đây là sơ đồ kết nối toàn bộ các Tổ chỉ bằng <strong>01 Hệ thống Google Sheets Master + Google Calendar + Gmail cá nhân</strong>:
+        </p>
+
+        <div style="background: #f8fafc; border: 1px solid var(--slate-200); border-radius: 10px; padding: 1.25rem; overflow-x: auto; margin-bottom: 1.25rem;">
+          <pre class="mermaid" style="background: transparent; color: inherit; text-align: center;">
+flowchart TD
+    subgraph BGD["🏛️ BAN GIÁM ĐỐC CHI NHÁNH 23 (GĐ Nguyễn Chiến Thắng, PGĐ Lệ Hằng, PGĐ Huy Cường)"]
+        D_DASH["📊 Dashboard Điều Hành Thời Gian Thực<br/>(Google Sheets Master / Looker Studio / HTML)"]
+        D_CAL["📅 Google Calendar Ban Giám Đốc<br/>(Lịch giao ban Thứ Hai, Hạn công văn, Lịch đo đạc)"]
+    end
+
+    subgraph LUONG_9999["🚀 LUỒNG 1: DÂY CHUYỀN CHIẾN DỊCH KẾ HOẠCH 9999 (5 PHƯỜNG: THỦ DẦU MỘT, PHÚ LỢI, BÌNH DƯƠNG, CHÁNH HIỆP, PHÚ AN)"]
+        T_RASOAT["1️⃣ TỔ RÀ SOÁT (35 Cán bộ)<br/>Định mức: 7.256 thửa<br/>Tách 2 luồng: Đủ ĐK Nhóm 1 vs Thiếu HS Quét"]
+        T_LUC["2️⃣ TỔ LỤC HỒ SƠ KHO (4 Cán bộ)<br/>Duy, Son, H.Xuân, A.Xuân<br/>Nhận danh sách tự động từ Tổ Rà soát (4.371 HS)"]
+        T_SCAN["3️⃣ TỔ QUÉT / SCAN HỒ SƠ (3 Cán bộ)<br/>Quyền Trinh, Đỗ Yến, Thúy Son<br/>9 máy Scan A3 + 2 máy A4 &rarr; Đẩy Server HSQ-TDM"]
+        T_KG["4️⃣ TỔ KHÔNG GIAN & ĐO ĐẠC (8+ Cán bộ)<br/>Khôi, Đạt, Oanh, T.Anh, V.Tuấn, Tân, K.Duy, Duyên<br/>Chỉnh lý 42.368 thửa thiếu không gian"]
+        NHOM1["✅ CẬP NHẬT SẠCH VÀO NHÓM 1 (VBDLIS)"]
+
+        T_RASOAT -->|"Đủ điều kiện"| NHOM1
+        T_RASOAT -->|"Báo thiếu HS Quét (Tự động nhảy vào Rổ Kho)"| T_LUC
+        T_LUC -->|"Đã lục giao lên Scan (Tự động nhảy vào Rổ Scan)"| T_SCAN
+        T_SCAN -->|"Scan xong đẩy Server (Báo Gmail lại cho Tổ Rà soát)"| NHOM1
+        T_KG -->|"Hoàn tất đồ họa không gian"| NHOM1
+    end
+
+    subgraph LUONG_QLVB["📨 LUỒNG 2 & 3: PHẦN MỀM QLVB, ĐO ĐẠC OERP & GIAO VIỆC ĐỘT XUẤT"]
+        QLVB["📂 Phần mềm QLVB (636 Công văn đến)<br/>Văn thư xuất Excel mỗi 8h00 sáng"]
+        OERP["🗺️ Phần mềm OERP (vpdkddtdm.vn)<br/>Lịch hẹn đo đạc thực địa & Hồ sơ Một cửa"]
+        GV_BGD["📌 Giao việc Họp Giao Ban Thứ Hai<br/>Nhiệm vụ đột xuất của GĐ / PGĐ"]
+    end
+
+    subgraph GOOGLE_CORE["⚙️ TRái TIM TỰ ĐỘNG HÓA: GOOGLE APPS SCRIPT + GMAIL CÁ NHÂN"]
+        GAS["🤖 Robot Google Apps Script<br/>&bull; 07h30: Gửi Gmail nhắc việc & công văn sắp quá hạn<br/>&bull; Tự động gắn Deadline vào Google Calendar cá nhân<br/>&bull; 17h00: Gửi Báo cáo tổng hợp cho Giám đốc"]
+    end
+
+    LUONG_9999 --> GAS
+    QLVB --> GAS
+    OERP --> GAS
+    GV_BGD --> GAS
+    GAS --> D_DASH
+    GAS --> D_CAL
+          </pre>
+        </div>
+      </div>
+
+      <!-- CHI TIẾT CÁCH QUẢN LÝ TỪNG TỔ -->
+      <div class="grid-2">
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">🗂️ Tổ 1 & Tổ 2: Tổ Rà Soát &rarr; Tổ Lục Hồ Sơ (Kho lưu trữ)</div>
+            <span class="pill pill-amber">Khắc phục đứt gãy thông tin</span>
+          </div>
+          <p style="font-size: 0.88rem; margin-bottom: 0.75rem;">
+            <strong>Vấn đề hiện tại trong file <code>DS BAO CAO 9999 THEO NGAY.xlsx</code>:</strong> Cán bộ rà soát đang nhập gộp cả chữ và số vào 1 ô (ví dụ: <em>"rà gửi lục: 108 thửa cập nhật lên nhóm 1: 46 thửa"</em>), dẫn đến Tổ Kho (Huỳnh Thành Duy, Nguyễn Trang Thúy Son, Nguyễn Hoàng Xuân, Vương Ánh Xuân) không biết chính xác hôm nay có bao nhiêu hồ sơ mới chuyển xuống, và hồ sơ nào kho tìm không thấy.
+          </p>
+          <p style="font-size: 0.88rem; font-weight: 700; color: var(--primary); margin-bottom: 0.4rem;">Cách quản lý mới bằng Gmail + Google Sheet/Form:</p>
+          <ul class="clean-list" style="font-size: 0.86rem; color: var(--slate-700);">
+            <li><strong>Chuẩn hóa nhập liệu bằng số (16h30 hàng ngày):</strong> Mỗi cán bộ đăng nhập bằng Gmail cá nhân vào biểu mẫu 30 giây, nhập tách biệt 2 ô số nguyên: <code>[Số thửa đã đưa vào Nhóm 1]</code> và <code>[Số thửa thiếu HS chuyển Kho lục]</code>.</li>
+            <li><strong>Tự động tạo "Rổ Việc Tổ Kho":</strong> Ngay khi Tổ Rà soát bấm Gửi, công thức <code>SUMIFS</code> tự động cộng dồn số hồ sơ cần lục vào bảng việc của Tổ Kho, đồng thời gửi 1 email tóm tắt danh sách thửa cần lục về Gmail của đ/c <strong>Huỳnh Thành Duy</strong> (nhóm trưởng kho).</li>
+            <li><strong>Theo dõi tồn kho (WIP):</strong> Cuối ngày, 4 cán bộ Tổ Lục nhập <code>[Số bộ đã lục giao lên Scan]</code> và <code>[Số bộ kho không có / sai HS]</code>. Hệ thống tự động tính <strong>Tồn kho chưa lục = Tổng nhận - (Đã lục + Kho không có)</strong>.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">🖨️ Tổ 3: Tổ Quét / Scan Hồ Sơ (9 máy Scan A3, 2 máy Scan A4)</div>
+            <span class="pill pill-green">Kiểm soát nút thắt cổ chai</span>
+          </div>
+          <p style="font-size: 0.88rem; margin-bottom: 0.75rem;">
+            <strong>Đặc thù nghiệp vụ tại Chi nhánh 23:</strong> Tổ Scan (Nguyễn Nhật Quyền Trinh, Đỗ Thị Yến, Nguyễn Trang Thúy Son) nhận hồ sơ giấy từ Kho lục đưa lên, quét trên hệ thống 9 máy Scan A3 & 2 máy Scan A4, sau đó lưu vào máy chủ <code>Server 2 (10.17.2.125 - ổ G:\HSQ-TDM)</code> và <code>Server 3 (10.17.2.100 - Dataweb)</code>.
+          </p>
+          <p style="font-size: 0.88rem; font-weight: 700; color: var(--primary); margin-bottom: 0.4rem;">Cách quản lý mới bằng Gmail + Google Sheet/Form:</p>
+          <ul class="clean-list" style="font-size: 0.86rem; color: var(--slate-700);">
+            <li><strong>Liên thông tự động với Tổ Lục:</strong> Số lượng <em>"Đã lục giao lên Scan"</em> của Tổ Kho chính là <strong>Đầu vào (Input)</strong> của Tổ Scan. Giám đốc nhìn vào Dashboard sẽ thấy ngay: <em>Kho đã giao lên 302 bộ, nhưng Tổ Scan mới quét được 91 bộ &rarr; Tồn tại bàn Scan 211 bộ</em>.</li>
+            <li><strong>Vòng lặp khép kín (Closed-loop Notification):</strong> Khi Tổ Scan đánh dấu "Đã Scan xong lô hồ sơ phường Thủ Dầu Một / Chánh Hiệp", Google Apps Script tự động gửi Gmail báo ngược lại cho cán bộ Tổ Rà soát phụ trách phường đó để mở <code>HSQ-TDM</code> lấy file PDF đính kèm vào VBDLIS đưa về Nhóm 1!</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">📐 Tổ 4: Tổ Đo Đạc & Chỉnh Lý Không Gian (Tổ Kỹ thuật Địa chính)</div>
+            <span class="pill pill-purple">Kết hợp Google Calendar & Sheet</span>
+          </div>
+          <p style="font-size: 0.88rem; margin-bottom: 0.75rem;">
+            <strong>Đặc thù nghiệp vụ:</strong> Vừa phải giải quyết <strong>42.368 thửa đất thiếu không gian</strong> tại 5 phường (Bình Dương: 13.620; Phú Lợi: 7.844; Phú An: 7.665; Thủ Dầu Một: 6.932; Chánh Hiệp: 6.307), vừa phải đi đo đạc thực địa và xuất bản vẽ trích đo trên phần mềm <strong>OERP (vpdkddtdm.vn)</strong>.
+          </p>
+          <p style="font-size: 0.88rem; font-weight: 700; color: var(--primary); margin-bottom: 0.4rem;">Cách quản lý mới bằng Gmail + Google Calendar:</p>
+          <ul class="clean-list" style="font-size: 0.86rem; color: var(--slate-700);">
+            <li><strong>Lịch Đo đạc Thực địa dùng chung (Shared Google Calendar):</strong> Tạo 01 bộ lịch <code>[CN23] Lịch Đo Đạc Thực Địa</code> chia sẻ cho Gmail của toàn bộ kỹ thuật viên đo đạc (Nguyễn Anh Khôi, Lê Hoàng Xuân Đạt, Phạm Hoàng Oanh, Nguyễn Tuấn Anh, Ân Văn Tuấn, Nguyễn Khánh Duy, Nguyễn Thị Mỹ Duyên) và PGĐ phụ trách <strong>Nguyễn Thị Lệ Hằng</strong>. Ai đi đo thửa nào, phường nào, khung giờ nào đều hiện rõ trên điện thoại.</li>
+            <li><strong>Bảng Burn-down 42.368 thửa thiếu không gian:</strong> Tự động trừ lùi số thửa hoàn thành mỗi ngày và dự báo (Forecast) ngày hoàn thành theo tốc độ hiện tại của từng phường.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">📨 Tổ 5: Quản Lý Văn Bản Đến (QLVB) & Giao Việc Ban Giám Đốc</div>
+            <span class="pill pill-red">Chống quá hạn công văn 100%</span>
+          </div>
+          <p style="font-size: 0.88rem; margin-bottom: 0.75rem;">
+            <strong>Đặc thù nghiệp vụ:</strong> Từ ngày 05/10 đến 15/10/2026, Chi nhánh 23 có tới <strong>636 công văn đến</strong> trên phần mềm QLVB (trong đó còn 163 chưa xử lý, 140 đang xử lý, một số cán bộ tồn đọng cao như Hồ Lê Thanh Vũ 91 CV, Huỳnh Thị Ái Nhi 41 CV, Huỳnh Tấn Nguyên 32 CV, Lê Sơn Thanh 30 CV).
+          </p>
+          <p style="font-size: 0.88rem; font-weight: 700; color: var(--primary); margin-bottom: 0.4rem;">Cách quản lý mới bằng Gmail + Google Apps Script:</p>
+          <ul class="clean-list" style="font-size: 0.86rem; color: var(--slate-700);">
+            <li><strong>Đồng bộ 1 chạm (One-click Sync):</strong> Mỗi sáng lúc 08h00, Văn thư xuất file Excel từ phần mềm QLVB và dán vào tab <code>QLVB_RAW</code> trên Google Sheet.</li>
+            <li><strong>Cảnh báo tự động qua Gmail cá nhân:</strong> Hệ thống tự động đối chiếu Tên cán bộ với Danh bạ Gmail và bắn Email cảnh báo đỏ cho những cán bộ có công văn <strong>Quá hạn</strong> hoặc <strong>Tồn đọng &gt; 10 văn bản</strong>, đồng thời CC cho Tổ trưởng trực tiếp đôn đốc.</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ==================== TAB 3 ==================== -->
+    <div id="tab3" class="tab-content">
+
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">🖥️ 1. Thiết Kế Cấu Trúc 6 Phân Hệ Trong File <code>MASTER_QUAN_LY_CONG_VIEC_CN23.gsheet</code></div>
+          <button class="btn btn-success" onclick="triggerSimulation()">⚡ Bấm Chạy Thử Kịch Bản Tự Động Gửi Gmail & Tạo Lịch Calendar</button>
+        </div>
+
+        <div id="simAlert" class="callout callout-success" style="display: none;">
+          <strong>✅ ĐÃ KÍCH HOẠT MÔ PHỎNG ROBOT GOOGLE APPS SCRIPT THÀNH CÔNG!</strong><br>
+          Hệ thống vừa quét bảng dữ liệu mẫu bên dưới và phát hiện: (1) Đ/c <strong>Hồ Lê Thanh Vũ</strong> đang tồn 91 công văn QLVB cần xử lý; (2) Đ/c <strong>Huỳnh Thành Duy (Tổ Kho)</strong> nhận 182 hồ sơ mới từ Tổ Rà soát chuyển xuống; (3) Giám đốc <strong>Nguyễn Chiến Thắng</strong> vừa giao nhiệm vụ mới cho Tổ Hành chính - Tổng hợp. Hãy xem <strong>Hộp thư Gmail và Lịch Google Calendar mô phỏng</strong> vừa được cập nhật ở phần dưới!
+        </div>
+
+        <div class="table-wrap" style="margin-bottom: 1.5rem;">
+          <table>
+            <thead>
+              <tr>
+                <th>Tên Sheet (Tab)</th>
+                <th>Mục đích & Nội dung dữ liệu</th>
+                <th>Người có quyền Nhập/Sửa (Theo Gmail)</th>
+                <th>Tự động hóa (Apps Script / Công thức)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Tab 1: <code>00_DASHBOARD_BGD</code></strong></td>
+                <td>Bảng điều khiển tổng hợp toàn Chi nhánh dành cho Giám đốc Nguyễn Chiến Thắng và 2 Phó Giám đốc: Tỷ lệ hoàn thành 9999, Nút thắt Kho/Scan, Cảnh báo công văn QLVB.</td>
+                <td><span class="pill pill-purple">Chỉ xem (Khoá sửa 100%)</span></td>
+                <td>Tự động vẽ biểu đồ và cập nhật số liệu tức thì từ các Tab 2, 3, 4, 5.</td>
+              </tr>
+              <tr>
+                <td><strong>Tab 2: <code>01_DANH_BA_GMAIL</code></strong></td>
+                <td>Danh sách ~75 viên chức, NLĐ Chi nhánh 23: Họ tên, Tổ chuyên môn, Nhóm 9999, Địa bàn phường, <strong>Địa chỉ Gmail cá nhân</strong>, Số điện thoại, Gmail Tổ trưởng.</td>
+                <td><span class="pill pill-blue">Admin IT (Minh Quân) & Tổ trưởng HCTH</span></td>
+                <td>Bảng gốc để hàm <code>VLOOKUP</code> lấy Gmail gửi thông báo và phân quyền tự động.</td>
+              </tr>
+              <tr>
+                <td><strong>Tab 3: <code>02_DAY_CHUYEN_9999</code></strong></td>
+                <td>Theo dõi liên hoàn 4 khâu: <strong>Rà soát (5 phường) &rarr; Lục HS Kho &rarr; Quét/Scan HS &rarr; Chỉnh lý Không gian</strong>. Tự động tính tồn đọng ở từng khâu.</td>
+                <td><span class="pill pill-green">35 Cán bộ nhập qua Google Form / Cột được phân quyền</span></td>
+                <td>Tự động cộng sản lượng ngày, tính % KPI, báo động đỏ nếu khâu Scan hoặc Lục bị ứ đọng.</td>
+              </tr>
+              <tr>
+                <td><strong>Tab 4: <code>03_KIEM_SOAT_QLVB</code></strong></td>
+                <td>Dữ liệu dán từ file xuất của phần mềm Quản lý Văn bản (<code>TINHHINHXULYCONGVANDEN.xlsx</code>): Tổng CV, Chưa xử lý, Đang xử lý, Quá hạn.</td>
+                <td><span class="pill pill-amber">Văn thư (Tổ HCTH) cập nhật mỗi 8h00 sáng</span></td>
+                <td>Tự động lọc cán bộ có CV quá hạn / tồn cao &rarr; Bắn Gmail nhắc nhở lúc 08h15 sáng.</td>
+              </tr>
+              <tr>
+                <td><strong>Tab 5: <code>04_LICH_DO_DAC_OERP</code></strong></td>
+                <td>Lịch phân công đo đạc thực địa và thẩm định bản vẽ trích đo (đồng bộ từ hệ thống <code>vpdkddtdm.vn</code>).</td>
+                <td><span class="pill pill-blue">Tổ trưởng/Tổ phó Tổ Kỹ thuật Địa chính & Lưu trữ</span></td>
+                <td>Khi thêm dòng lịch đo mới &rarr; Tự động đẩy sự kiện lên <strong>Google Calendar Tổ Đo Đạc</strong>.</td>
+              </tr>
+              <tr>
+                <td><strong>Tab 6: <code>05_GIAO_VIEC_BGD</code></strong></td>
+                <td>Sổ theo dõi các nhiệm vụ do Giám đốc / Phó Giám đốc giao tại cuộc họp giao ban thứ Hai hàng tuần hoặc giao đột xuất.</td>
+                <td><span class="pill pill-red">Ban Giám đốc & Tổ trưởng 03 Tổ</span></td>
+                <td>Khi cột Trạng thái = "Mới giao" &rarr; Tự động gửi Gmail giao việc + Tạo lịch hạn chót trên Calendar người nhận.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- MÔ PHỎNG BẢNG DỮ LIỆU LIÊN HOÀN -->
+        <h4 style="margin-bottom: 0.75rem; color: var(--slate-900);">📋 Minh Họa Trực Quan: Bảng Dữ Liệu Dây Chuyền 9999 & QLVB Đã Gắn Với Gmail Cá Nhân</h4>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Mã NV</th>
+                <th>Họ và Tên Cán Bộ</th>
+                <th>Tổ / Bộ Phận</th>
+                <th>Gmail Cá Nhân (Định danh)</th>
+                <th>Đầu Việc Đang Phụ Trách</th>
+                <th style="text-align: right;">Chỉ Tiêu / Nhận</th>
+                <th style="text-align: right;">Đã Xử Lý</th>
+                <th style="text-align: right;">Tồn / Chờ</th>
+                <th>Trạng Thái & Hành Động Tự Động</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>CN23-01</code></td>
+                <td><strong>Nguyễn Thị Thùy Trang</strong></td>
+                <td>Tổ Rà soát (P. Thủ Dầu Một)</td>
+                <td><code>thuytrang.cn23@...gmail.com</code></td>
+                <td>Rà soát 9999 &rarr; Đưa vào Nhóm 1 & Báo lục kho</td>
+                <td style="text-align: right; font-family: 'Fira Code', monospace;">209 thửa</td>
+                <td style="text-align: right; font-family: 'Fira Code', monospace;">209 thửa</td>
+                <td style="text-align: right; font-family: 'Fira Code', monospace;">0</td>
+                <td><span class="pill pill-green">✅ Đạt 100% (Đã chuyển 156 HS xuống Kho)</span></td>
+              </tr>
+              <tr>
+                <td><code>CN23-02</code></td>
+                <td><strong>Huỳnh Thành Duy</strong></td>
+                <td>Tổ Lục Hồ Sơ (Kho lưu trữ)</td>
+                <td><code>thanhduy.kho23@...gmail.com</code></td>
+                <td>Lục hồ sơ giấy trong kho giao lên Tổ Scan</td>
+                <td style="text-align: right; font-family: 'Fira Code', monospace;">1,450 bộ</td>
+                <td style="text-align: right; font-family: 'Fira Code', monospace;">173 bộ</td>
+                <td style="text-align: right; font-family: 'Fira Code', monospace; color: var(--warning); font-weight: 700;">1,277 bộ</td>
+                <td><span class="pill pill-amber">🔔 Tự động gửi Gmail danh sách thửa cần lục lúc 7h30</span></td>
+              </tr>
+              <tr>
+                <td><code>CN23-03</code></td>
+                <td><strong>Nguyễn Nhật Quyền Trinh</strong></td>
+                <td>Tổ Quét / Scan Hồ Sơ</td>
+                <td><code>quyentrinh.scan23@...gmail.com</code></td>
+                <td>Scan HS từ kho lục lên &rarr; Đẩy Server HSQ-TDM</td>
+                <td style="text-align: right; font-family: 'Fira Code', monospace;">302 bộ (Kho giao)</td>
+                <td style="text-align: right; font-family: 'Fira Code', monospace;">51 bộ</td>
+                <td style="text-align: right; font-family: 'Fira Code', monospace; color: var(--danger); font-weight: 700;">251 bộ</td>
+                <td><span class="pill pill-red">⚠️ Cảnh báo ứ đọng tại khâu Scan (Cần tăng cường máy A3)</span></td>
+              </tr>
+              <tr>
+                <td><code>CN23-04</code></td>
+                <td><strong>Nguyễn Anh Khôi</strong></td>
+                <td>Tổ Đo Đạc / Không Gian</td>
+                <td><code>anhkhoi.dodac23@...gmail.com</code></td>
+                <td>Chỉnh lý thửa thiếu không gian (P. Bình Dương) + Đo OERP</td>
+                <td style="text-align: right; font-family: 'Fira Code', monospace;">13,620 thửa</td>
+                <td style="text-align: right; font-family: 'Fira Code', monospace;">125 thửa/tuần</td>
+                <td style="text-align: right; font-family: 'Fira Code', monospace;">13,495 thửa</td>
+                <td><span class="pill pill-blue">📅 Đã đồng bộ lịch đo thực địa lên Google Calendar</span></td>
+              </tr>
+              <tr>
+                <td><code>CN23-05</code></td>
+                <td><strong>Hồ Lê Thanh Vũ</strong></td>
+                <td>Thụ lý Công văn QLVB</td>
+                <td><code>thanhvu.cn23@...gmail.com</code></td>
+                <td>Xử lý công văn đến trên phần mềm QLVB</td>
+                <td style="text-align: right; font-family: 'Fira Code', monospace;">123 CV</td>
+                <td style="text-align: right; font-family: 'Fira Code', monospace;">32 CV</td>
+                <td style="text-align: right; font-family: 'Fira Code', monospace; color: var(--danger); font-weight: 700;">91 CV</td>
+                <td><span class="pill pill-red">🚨 Авто-Email nhắc hạn mỗi sáng + Gắn lịch Calendar</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- MÔ PHỎNG GMAIL & GOOGLE CALENDAR TRÊN ĐIỆN THOẠI NHÂN VIÊN -->
+      <div class="grid-2">
+        <div class="mockup-box">
+          <div class="mockup-bar">
+            <span>📧 MÔ PHỎNG: EMAIL TỰ ĐỘNG GỬI TỚI GMAIL CÁ NHÂN CÁN BỘ (07:30 SÁNG)</span>
+            <span class="pill pill-red">Gmail Tự Động</span>
+          </div>
+          <div class="mockup-body" id="mockupEmailBody">
+            <div style="border-bottom: 1px solid var(--slate-200); padding-bottom: 0.65rem; margin-bottom: 0.75rem; font-size: 0.82rem; color: var(--slate-600);">
+              <div><strong>Từ:</strong> Hệ thống Điều hành Công việc - Chi nhánh VPĐKĐĐ số 23 &lt;quanlycongviec.cn23@gmail.com&gt;</div>
+              <div><strong>Tới:</strong> Cán bộ thụ lý &lt;thanhvu.cn23@gmail.com&gt;, &lt;thanhduy.kho23@gmail.com&gt;</div>
+              <div><strong>CC:</strong> Giám đốc Nguyễn Chiến Thắng, Tổ trưởng chuyên môn</div>
+              <div><strong>Tiêu đề:</strong> <span style="color: var(--danger); font-weight: 700;">[CN23 - NHẮC VIỆC NGÀY 16/10/2026] Thông báo tiến độ Công văn QLVB & Chỉ tiêu Kế hoạch 9999</span></div>
+            </div>
+            <div style="font-size: 0.86rem; color: var(--slate-800); line-height: 1.65;">
+              <p>Kính gửi đồng chí,</p>
+              <p style="margin-top: 0.4rem;">Hệ thống Quản lý tiến độ Chi nhánh Văn phòng Đăng ký đất đai số 23 tự động thông báo đầu việc trong ngày <strong>16/10/2026</strong> của đồng chí như sau:</p>
+              <div style="background: #fef2f2; border: 1px solid #fecaca; border-radius: 8px; padding: 0.75rem; margin: 0.65rem 0;">
+                <strong>1. Tình hình xử lý Công văn đến (Phần mềm QLVB):</strong><br>
+                &bull; Tổng số công văn được giao: <strong>123 văn bản</strong> (Đã hoàn tất: 32 | <strong>Chưa xử lý: 91 văn bản</strong>).<br>
+                &bull; <em>Đề nghị đồng chí ưu tiên đăng nhập hệ thống QLVB giải quyết dứt điểm các văn bản sắp đến hạn trước 16h00 hôm nay.</em>
+              </div>
+              <div style="background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 8px; padding: 0.75rem; margin: 0.65rem 0;">
+                <strong>2. Dây chuyền Kế hoạch 9999 (Liên thông Rà soát - Kho - Scan):</strong><br>
+                &bull; Số hồ sơ mới từ Tổ Rà soát vừa chuyển xuống Kho chờ lục: <strong>+182 hồ sơ</strong>.<br>
+                &bull; Link nhập báo cáo kết quả cuối ngày (trước 16h30): <a href="#" onclick="return false;" style="color: #2563eb; font-weight: 600;">[Bấm vào đây để mở Form Báo cáo 30 giây]</a>
+              </div>
+              <p style="font-size: 0.78rem; color: var(--slate-500); margin-top: 0.5rem;">* Lịch nhắc hạn đã được tự động thêm vào ứng dụng Google Calendar trên điện thoại của đồng chí.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mockup-box">
+          <div class="mockup-bar">
+            <span>📅 MÔ PHỎNG: LỊCH GOOGLE CALENDAR TỰ ĐỘNG HIỆN TRÊN ĐIỆN THOẠI CÁN BỘ</span>
+            <span class="pill pill-blue">Đồng bộ 2 chiều</span>
+          </div>
+          <div class="mockup-body">
+            <p style="font-size: 0.82rem; color: var(--slate-600); margin-bottom: 0.75rem;">
+              Khi nhân viên mở ứng dụng <strong>Google Calendar</strong> (hoặc Lịch iPhone/Android gắn với Gmail cá nhân), toàn bộ các đầu việc được giao từ Google Sheet sẽ hiển thị rõ ràng theo màu sắc từng Tổ:
+            </p>
+
+            <div class="cal-event urgent">
+              <div style="display: flex; justify-content: space-between; font-weight: 700; font-size: 0.85rem; color: #991b1b;">
+                <span>🚨 [QLVB] Hạn chót xử lý 18 Công văn đến cần xử lý gấp</span>
+                <span>08:00 - 11:30</span>
+              </div>
+              <div style="font-size: 0.8rem; color: #7f1d1d; margin-top: 0.2rem;">
+                Người nhận: Tổ ĐK&CGCN, Tổ HCTH &bull; Nhắc trước: 120 phút qua thông báo điện thoại
+              </div>
+            </div>
+
+            <div class="cal-event measure">
+              <div style="display: flex; justify-content: space-between; font-weight: 700; font-size: 0.85rem; color: #065f46;">
+                <span>📐 [TỔ ĐO ĐẠC - OERP] Đo đạc thực địa 06 hồ sơ trích đo P. Phú Lợi & Chánh Hiệp</span>
+                <span>08:30 - 11:00</span>
+              </div>
+              <div style="font-size: 0.8rem; color: #047857; margin-top: 0.2rem;">
+                Phụ trách: Nguyễn Tuấn Anh, Lý Minh Tân &bull; Đồng bộ từ lịch hẹn OERP vpdkddtdm.vn
+              </div>
+            </div>
+
+            <div class="cal-event">
+              <div style="display: flex; justify-content: space-between; font-weight: 700; font-size: 0.85rem; color: #1e40af;">
+                <span>📊 [KẾ HOẠCH 9999] Chốt số liệu Rà soát - Lục HS - Scan HS trong ngày</span>
+                <span>16:15 - 16:45</span>
+              </div>
+              <div style="font-size: 0.8rem; color: #1e3a8a; margin-top: 0.2rem;">
+                Lặp lại: Hàng ngày (Thứ 2 - Thứ 7) &bull; Đính kèm sẵn link Google Form nhập sản lượng
+              </div>
+            </div>
+
+            <div class="cal-event" style="background: #f5f3ff; border-left-color: #7c3aed;">
+              <div style="display: flex; justify-content: space-between; font-weight: 700; font-size: 0.85rem; color: #5b21b6;">
+                <span>🏛️ [GIAO BAN CHI NHÁNH 23] Họp Ban Giám đốc & Tổ trưởng 03 Tổ chuyên môn</span>
+                <span>Thứ Hai hàng tuần</span>
+              </div>
+              <div style="font-size: 0.8rem; color: #6d28d9; margin-top: 0.2rem;">
+                Chủ trì: Giám đốc Nguyễn Chiến Thắng &bull; Tự động đính kèm link Dashboard tiến độ tuần
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BIỂU ĐỒ MÔ PHỎNG ĐIỂM NGHẼN DÂY CHUYỀN -->
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">📈 2. Biểu Đồ Phân Tích Điểm Nghẽn Dây Chuyền 9999 & Tải Công Văn QLVB (Dành cho Giám đốc)</div>
+          <span class="pill pill-green">Tự động cập nhật từ Google Sheets</span>
+        </div>
+        <div class="grid-2" style="margin-bottom: 0;">
+          <div>
+            <h4 style="font-size: 0.92rem; margin-bottom: 0.75rem; color: var(--slate-700);">Phễu Luân Chuyển Hồ Sơ Kế Hoạch 9999 (Rà soát &rarr; Lục Kho &rarr; Scan &rarr; Nhóm 1)</h4>
+            <canvas id="pipelineChart" height="210"></canvas>
+          </div>
+          <div>
+            <h4 style="font-size: 0.92rem; margin-bottom: 0.75rem; color: var(--slate-700);">Khối Lượng 42.368 Thửa Đất Thiếu Không Gian Theo 05 Phường Phụ Trách</h4>
+            <canvas id="wardChart" height="210"></canvas>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ==================== TAB 4 ==================== -->
+    <div id="tab4" class="tab-content">
+
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">💻 1. Bộ Mã Nguồn Google Apps Script Hoàn Chỉnh (Copy - Paste Chạy Ngay)</div>
+          <span class="pill pill-blue">Dành cho Kỹ sư CNTT Đỗ Trọng Minh Quân</span>
+        </div>
+
+        <div class="callout callout-info">
+          <strong>Hướng dẫn cài đặt trong 2 phút:</strong> Mở file Google Sheet Master của Chi nhánh 23 &rarr; Trên thanh menu chọn <strong>Tiện ích mở rộng (Extensions) &rarr; Apps Script</strong> &rarr; Dán đoạn mã bên dưới vào file <code>Code.gs</code> &rarr; Bấm biểu tượng Đồng hồ báo thức (<strong>Triggers / Kích hoạt</strong>) ở cột trái để hẹn giờ chạy tự động lúc <strong>07h30 sáng</strong> và <strong>17h00 chiều</strong> hàng ngày.
+        </div>
+
+        <div class="code-container">
+          <div class="code-header">
+            <span>📜 Code.gs — Tự động Giao việc qua Gmail cá nhân + Đẩy Lịch Google Calendar + Báo cáo Giám đốc</span>
+            <button class="btn btn-copy" onclick="copyCode('gasCode1', this)">📋 Copy toàn bộ Code</button>
+          </div>
+          <pre id="gasCode1">/**
+ * HỆ THỐNG TỰ ĐỘNG QUẢN LÝ CÔNG VIỆC QUA GMAIL & GOOGLE CALENDAR
+ * Đơn vị: Chi nhánh Văn phòng Đăng ký đất đai số 23 - TP.HCM
+ * Phụ trách kỹ thuật: Đỗ Trọng Minh Quân (Tổ Hành chính - Tổng hợp)
+ */
+
+const CONFIG = {
+  DIRECTOR_EMAIL: "ncthang.cn23@gmail.com", // Thay bằng Gmail thực tế của Giám đốc Nguyễn Chiến Thắng
+  DEPUTY_EMAILS: "ntlhang.cn23@gmail.com,dhcuong.cn23@gmail.com", // Gmail 2 Phó Giám đốc
+  FORM_REPORT_URL: "https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform",
+  SHEET_TASKS: "05_GIAO_VIEC_BGD",
+  SHEET_QLVB: "03_KIEM_SOAT_QLVB",
+  SHEET_9999: "02_DAY_CHUYEN_9999"
+};
+
+/**
+ * CHỨC NĂNG 1: Tự động gửi Gmail giao việc & Gắn thẳng vào Google Calendar của nhân viên
+ * Chạy khi Ban Giám đốc / Tổ trưởng thêm đầu việc mới vào Sheet "05_GIAO_VIEC_BGD"
+ */
+function syncNewTasksToGmailAndCalendar() {
+  const ss = SpreadsheetApp.getActiveSpreadsheet();
+  const sheet = ss.getSheetByName(CONFIG.SHEET_TASKS);
+  if (!sheet) return;
+
+  const data = sheet.getDataRange().getValues();
+  const calendar = CalendarApp.getDefaultCalendar();
+
+  // Cấu trúc cột: [0] Mã việc | [1] Nội dung việc | [2] Tổ chuyên môn | [3] Họ tên người nhận | [4] Gmail cá nhân | [5] Ngày bắt đầu | [6] Hạn hoàn thành | [7] Mức độ | [8] Đã đồng bộ?
+  for (let i = 1; i &lt; data.length; i++) {
+    const [taskId, title, dept, staffName, staffEmail, startDate, dueDate, priority, synced] = data[i];
+
+    if (staffEmail &amp;&amp; title &amp;&amp; synced !== "ĐÃ ĐỒNG BỘ") {
+      const deadline = new Date(dueDate);
+      const start = startDate ? new Date(startDate) : new Date();
+
+      // 1. Tạo sự kiện trên Google Calendar và mời thẳng Gmail cá nhân của cán bộ
+      const eventTitle = `[CN23 - ${dept}] ${title} (${staffName})`;
+      const eventDesc = `Nhiệm vụ do Ban Giám đốc Chi nhánh 23 giao.\nNgười phụ trách: ${staffName}\nMức độ: ${priority}\nBáo cáo kết quả tại: ${ss.getUrl()}`;
+      
+      calendar.createAllDayEvent(eventTitle, deadline, {
+        description: eventDesc,
+        guests: staffEmail,
+        sendInvites: true
+      });
+
+      // 2. Gửi Email thông báo giao việc chi tiết
+      const subject = `[CHI NHÁNH 23 - GIAO VIỆC] ${title} - Hạn: ${Utilities.formatDate(deadline, "GMT+7", "dd/MM/yyyy")}`;
+      const htmlBody = `
+        &lt;div style="font-family: Arial, sans-serif; line-height: 1.6; color: #1e293b;"&gt;
+          &lt;h3 style="color: #1e3a8a;"&gt;THÔNG BÁO GIAO NHIỆM VỤ CÔNG TÁC - CHI NHÁNH VPĐKĐĐ SỐ 23&lt;/h3&gt;
+          &lt;p&gt;Kính gửi đồng chí &lt;strong&gt;${staffName}&lt;/strong&gt; (${dept}),&lt;/p&gt;
+          &lt;p&gt;Ban Giám đốc / Tổ trưởng vừa phân công nhiệm vụ mới cho đồng chí trên Hệ thống Quản lý Công việc:&lt;/p&gt;
+          &lt;ul&gt;
+            &lt;li&gt;&lt;strong&gt;Mã công việc:&lt;/strong&gt; ${taskId}&lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;Nội dung nhiệm vụ:&lt;/strong&gt; ${title}&lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;Thời hạn hoàn thành:&lt;/strong&gt; &lt;span style="color: #dc2626; font-weight: bold;"&gt;${Utilities.formatDate(deadline, "GMT+7", "dd/MM/yyyy")}&lt;/span&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;strong&gt;Mức độ ưu tiên:&lt;/strong&gt; ${priority}&lt;/li&gt;
+          &lt;/ul&gt;
+          &lt;p&gt;Sự kiện nhắc hạn đã được tự động thêm vào ứng dụng &lt;strong&gt;Google Calendar&lt;/strong&gt; trên điện thoại của đồng chí.&lt;/p&gt;
+          &lt;p&gt;&lt;a href="${ss.getUrl()}" style="background:#1d4ed8;color:white;padding:8px 14px;text-decoration:none;border-radius:6px;"&gt;Mở Bảng Theo Dõi Tiến Độ&lt;/a&gt;&lt;/p&gt;
+        &lt;/div&gt;
+      `;
+
+      MailApp.sendEmail({
+        to: staffEmail,
+        subject: subject,
+        htmlBody: htmlBody
+      });
+
+      // Đánh dấu đã đồng bộ để không gửi trùng
+      sheet.getRange(i + 1, 9).setValue("ĐÃ ĐỒNG BỘ");
+    }
+  }
+}
+
+/**
+ * CHỨC NĂNG 2: Robot quét Công văn QLVB & Tiến độ 9999 lúc 07h30 sáng hàng ngày
+ * Tự động gửi Gmail nhắc riêng những cán bộ đang nợ công văn hoặc tồn hồ sơ Lục/Scan
+ */
+function morningDailyReminder_0730() {
+  const ss = SpreadsheetApp.getActiveSpreadsheet();
+  const sheetQLVB = ss.getSheetByName(CONFIG.SHEET_QLVB);
+  if (!sheetQLVB) return;
+
+  const rows = sheetQLVB.getDataRange().getValues();
+  // Cấu trúc cột: [0] Họ tên | [1] Gmail | [2] Tổng CV | [3] Chưa xử lý (Trong hạn) | [4] Quá hạn | [5] Đang xử lý
+  for (let i = 1; i &lt; rows.length; i++) {
+    const [name, email, total, pending, overdue, doing] = rows[i];
+    if (!email) continue;
+
+    if (Number(overdue) &gt; 0 || Number(pending) &gt;= 10) {
+      const subject = `[CN23 - CẢNH BÁO QLVB] Đ/c ${name} hiện có ${pending} công văn chưa xử lý (${overdue} quá hạn)`;
+      const htmlBody = `
+        &lt;div style="font-family: Arial, sans-serif; line-height: 1.6;"&gt;
+          &lt;p&gt;Kính gửi đồng chí &lt;strong&gt;${name}&lt;/strong&gt;,&lt;/p&gt;
+          &lt;p&gt;Theo số liệu trích xuất từ Phần mềm Quản lý Văn bản (QLVB) sáng nay:&lt;/p&gt;
+          &lt;ul&gt;
+            &lt;li&gt;Số công văn đến chưa xử lý: &lt;strong style="color:#d97706;"&gt;${pending} văn bản&lt;/strong&gt;&lt;/li&gt;
+            &lt;li&gt;Số công văn quá hạn: &lt;strong style="color:#dc2626;"&gt;${overdue} văn bản&lt;/strong&gt;&lt;/li&gt;
+            &lt;li&gt;Số công văn đang xử lý: &lt;strong&gt;${doing} văn bản&lt;/strong&gt;&lt;/li&gt;
+          &lt;/ul&gt;
+          &lt;p&gt;Đề nghị đồng chí khẩn trương xử lý trên hệ thống QLVB và cập nhật báo cáo Kế hoạch 9999 trước 16h30 chiều nay tại: &lt;a href="${CONFIG.FORM_REPORT_URL}"&gt;Form Báo Cáo Ngày&lt;/a&gt;.&lt;/p&gt;
+        &lt;/div&gt;
+      `;
+      MailApp.sendEmail({ to: email, subject: subject, htmlBody: htmlBody });
+    }
+  }
+}</pre>
+        </div>
+      </div>
+
+      <!-- LỘ TRÌNH 3 NGÀY TRIỂN KHAI -->
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">🚀 2. Lộ Trình 03 Ngày Triển Khai Thực Tế Tại Chi Nhánh 23 (Không Làm Gián Đoạn Nghiệp Vụ)</div>
+          <span class="pill pill-green">Cầm tay chỉ việc</span>
+        </div>
+
+        <div class="pipeline-steps">
+          <div class="step-box" style="border-top-color: #2563eb;">
+            <span class="step-num">NGÀY 1: CHUẨN HÓA ĐỊNH DANH</span>
+            <h4>Thu thập Gmail & Dựng Master Sheet</h4>
+            <p>1. Lập bảng danh bạ ~75 viên chức, NLĐ của 03 Tổ chuyên môn kèm địa chỉ <code>@gmail.com</code> cá nhân.<br>
+               2. Khởi tạo file <code>MASTER_QUAN_LY_CONG_VIEC_CN23</code> trên Google Drive của Chi nhánh và thiết lập phân quyền <em>Protected Ranges</em>.<br>
+               3. Tạo 02 bộ lịch dùng chung trên Google Calendar: <code>[CN23] Lịch Điều Hành & Giao Ban</code> và <code>[CN23] Lịch Đo Đạc Thực Địa</code>.</p>
+          </div>
+
+          <div class="step-box" style="border-top-color: #059669;">
+            <span class="step-num" style="background: #059669;">NGÀY 2: CHUẨN HÓA KẾ HOẠCH 9999</span>
+            <h4>Tạo Google Form 30s & Cài Apps Script</h4>
+            <p>1. Tạo <strong>Google Form Báo cáo 9999 hàng ngày</strong> chia sẵn theo 4 vai trò: (a) Tổ Rà soát 5 phường, (b) Tổ Lục hồ sơ kho, (c) Tổ Quét Scan, (d) Tổ Không gian.<br>
+               2. Chấm dứt hoàn toàn việc gõ chữ tự do vào ô Excel; chuyển 100% sang nhập số nguyên để hàm tự động cộng trừ tồn kho giữa Tổ Lục và Tổ Scan.<br>
+               3. Dán đoạn mã Google Apps Script và bật Trigger tự động lúc 07h30 sáng và 17h00 chiều.</p>
+          </div>
+
+          <div class="step-box" style="border-top-color: #7c3aed;">
+            <span class="step-num" style="background: #7c3aed;">NGÀY 3: KẾT NỐI QLVB & BÀN GIAO BGĐ</span>
+            <h4>Đồng bộ QLVB & Trình Giám đốc</h4>
+            <p>1. Hướng dẫn bộ phận Văn thư (Tổ HCTH) thao tác 1 phút mỗi sáng: xuất file Excel từ phần mềm QLVB và dán vào tab <code>03_KIEM_SOAT_QLVB</code>.<br>
+               2. Cài biểu tượng (Bookmark) Dashboard lên máy tính và điện thoại của <strong>Giám đốc Nguyễn Chiến Thắng</strong>, <strong>PGĐ Nguyễn Thị Lệ Hằng</strong> và <strong>PGĐ Đặng Huy Cường</strong>.<br>
+               3. Đưa số liệu Dashboard vào sử dụng chính thức tại cuộc họp giao ban thứ Hai hàng tuần.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script>
+    // Khởi tạo Mermaid
+    mermaid.initialize({ startOnLoad: true, theme: 'default', securityLevel: 'loose' });
+
+    // Chuyển Tab
+    function openTab(tabId, btnEl) {
+      document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
+      document.getElementById(tabId).classList.add('active');
+      btnEl.classList.add('active');
+    }
+
+    // Mô phỏng chạy kịch bản
+    function triggerSimulation() {
+      const alertBox = document.getElementById('simAlert');
+      alertBox.style.display = 'block';
+      alertBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
+    // Copy Code
+    function copyCode(preId, btn) {
+      const text = document.getElementById(preId).innerText;
+      navigator.clipboard.writeText(text).then(() => {
+        const orig = btn.innerText;
+        btn.innerText = '✅ Đã Copy!';
+        setTimeout(() => btn.innerText = orig, 2000);
+      });
+    }
+
+    // Vẽ biểu đồ trong Tab 3
+    window.addEventListener('DOMContentLoaded', () => {
+      const ctx1 = document.getElementById('pipelineChart').getContext('2d');
+      new Chart(ctx1, {
+        type: 'bar',
+        data: {
+          labels: [
+            '1. Giao Rà Soát (35 CB)',
+            '2. Đã Rà Soát Xong',
+            '3. Đủ ĐK Vào Nhóm 1',
+            '4. Báo Kho Lục HS',
+            '5. Kho Đã Lục Giao Scan',
+            '6. Tổ Scan Đã Quét Xong'
+          ],
+          datasets: [{
+            label: 'Số lượng Thửa đất / Hồ sơ',
+            data: [7256, 7042, 3796, 3228, 372, 91],
+            backgroundColor: [
+              '#1e3a8a',
+              '#2563eb',
+              '#059669',
+              '#d97706',
+              '#7c3aed',
+              '#dc2626'
+            ],
+            borderRadius: 6
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: { display: false }
+          },
+          scales: {
+            y: { beginAtZero: true }
+          }
+        }
+      });
+
+      const ctx2 = document.getElementById('wardChart').getContext('2d');
+      new Chart(ctx2, {
+        type: 'doughnut',
+        data: {
+          labels: [
+            'P. Bình Dương (13.620 thửa)',
+            'P. Phú Lợi (7.844 thửa)',
+            'P. Phú An (7.665 thửa)',
+            'P. Thủ Dầu Một (6.932 thửa)',
+            'P. Chánh Hiệp (6.307 thửa)'
+          ],
+          datasets: [{
+            data: [13620, 7844, 7665, 6932, 6307],
+            backgroundColor: ['#1d4ed8', '#059669', '#d97706', '#7c3aed', '#0284c7']
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: { position: 'right' }
+          }
+        }
+      });
+    });
+  </script>
+</body>
+</html>

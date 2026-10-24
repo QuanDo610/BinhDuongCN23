@@ -1,0 +1,1248 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Báo Cáo Kết Quả 02 Tháng Thử Việc - Đỗ Trọng Minh Quân (CN23)</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Font Awesome 6 CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: #f8fafc;
+      color: #0f172a;
+    }
+
+    .font-mono-code {
+      font-family: 'Fira Code', monospace;
+    }
+
+    .tab-btn {
+      transition: all 0.2s ease;
+    }
+
+    .tab-btn.active {
+      background-color: #0284c7;
+      color: #ffffff;
+      box-shadow: 0 4px 12px rgba(2, 132, 199, 0.25);
+    }
+
+    .card-hover {
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .card-hover:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.08), 0 8px 10px -6px rgba(15, 23, 42, 0.04);
+    }
+
+    /* Print Styling for Official Report */
+    @media print {
+      body {
+        background-color: #ffffff !important;
+        color: #000000 !important;
+        font-size: 12pt;
+      }
+      .no-print {
+        display: none !important;
+      }
+      .print-only {
+        display: block !important;
+      }
+      .tab-pane {
+        display: block !important;
+        margin-bottom: 1.5rem;
+        page-break-inside: avoid;
+      }
+      .shadow-sm, .shadow, .shadow-md, .shadow-lg {
+        box-shadow: none !important;
+      }
+      .border {
+        border-color: #cbd5e1 !important;
+      }
+      main {
+        max-width: 100% !important;
+        padding: 0 !important;
+      }
+    }
+
+    .print-only {
+      display: none;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col antialiased">
+
+  <!-- PRINT-ONLY OFFICIAL HEADER (NGHỊ ĐỊNH 30 STYLE) -->
+  <div class="print-only max-w-4xl mx-auto w-full pt-4 pb-6 border-b-2 border-slate-800 mb-6" style="font-family: 'Times New Roman', Times, serif;">
+    <div class="grid grid-cols-2 text-center">
+      <div>
+        <p class="font-bold text-sm uppercase">VĂN PHÒNG ĐĂNG KÝ ĐẤT ĐAI TP.HCM</p>
+        <p class="font-bold text-sm uppercase">CHI NHÁNH SỐ 23</p>
+        <p class="text-xs">————————</p>
+      </div>
+      <div>
+        <p class="font-bold text-sm uppercase">CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM</p>
+        <p class="font-bold text-sm">Độc lập - Tự do - Hạnh phúc</p>
+        <p class="text-xs">——————————————————</p>
+        <p class="italic text-sm mt-1">Thủ Dầu Một, ngày 16 tháng 10 năm 2026</p>
+      </div>
+    </div>
+    <div class="text-center mt-6">
+      <h1 class="font-bold text-xl uppercase">BÁO CÁO KẾT QUẢ CÔNG VIỆC TRONG 02 THÁNG THỬ VIỆC</h1>
+      <p class="font-semibold text-sm mt-1">Họ và tên: Đỗ Trọng Minh Quân — Chuyên môn: Kỹ sư phần mềm (Bộ phận CNTT - Tổ Hành chính - Tổng hợp)</p>
+      <p class="text-sm italic">Thời gian thử việc: Từ ngày 03/09/2026 đến ngày 03/11/2026</p>
+    </div>
+  </div>
+
+  <!-- TOP HERO HEADER -->
+  <header class="bg-gradient-to-r from-slate-900 via-sky-950 to-indigo-950 text-white border-b border-sky-800/60 shadow-lg no-print">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+      <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-5">
+        
+        <!-- Left Title & Identity -->
+        <div class="flex items-start sm:items-center gap-4">
+          <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-sky-400 to-indigo-600 flex items-center justify-center text-white shadow-lg shadow-sky-500/30 flex-shrink-0 border border-white/20">
+            <i class="fa-solid fa-user-check text-2xl"></i>
+          </div>
+          <div>
+            <div class="flex flex-wrap items-center gap-2 mb-1">
+              <span class="px-2.5 py-0.5 text-[11px] font-bold uppercase tracking-wider rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-400/30">
+                <i class="fa-solid fa-circle-check mr-1"></i>Báo cáo tổng kết thử việc (02 Tháng)
+              </span>
+              <span class="px-2.5 py-0.5 text-[11px] font-semibold rounded-full bg-sky-500/20 text-sky-200 border border-sky-400/30">
+                03/09/2026 – 03/11/2026
+              </span>
+            </div>
+            <h1 class="text-xl sm:text-2xl font-extrabold tracking-tight text-white">
+              BÁO CÁO KẾT QUẢ THỰC HIỆN CÔNG VIỆC TRONG 02 THÁNG THỬ VIỆC
+            </h1>
+            <p class="text-xs sm:text-sm text-sky-200/90 mt-1">
+              <strong class="text-white">Nhân sự:</strong> Đỗ Trọng Minh Quân (Kỹ sư Phần mềm) &bull; 
+              <strong class="text-white">Bộ phận:</strong> CNTT thuộc Tổ Hành chính – Tổng hợp &bull; 
+              <strong class="text-white">Đơn vị:</strong> Chi nhánh Văn phòng Đăng ký đất đai Số 23
+            </p>
+          </div>
+        </div>
+
+        <!-- Right Quick Actions -->
+        <div class="flex flex-wrap items-center gap-2.5">
+          <button onclick="showAllTabsForPrint()" class="px-4 py-2 rounded-xl text-xs font-semibold bg-white/10 hover:bg-white/20 text-white border border-white/20 transition flex items-center gap-2">
+            <i class="fa-solid fa-layer-group text-sky-300"></i> Mở toàn bộ mục
+          </button>
+          <button onclick="window.print()" class="px-4 py-2 rounded-xl text-xs font-bold bg-sky-500 hover:bg-sky-400 text-slate-950 transition shadow-md shadow-sky-500/20 flex items-center gap-2">
+            <i class="fa-solid fa-print"></i> In Báo Cáo / Xuất PDF
+          </button>
+          <a href="index.html" class="px-3.5 py-2 rounded-xl text-xs font-semibold bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-600 transition flex items-center gap-1.5">
+            <i class="fa-solid fa-arrow-up-right-from-square text-sky-400"></i> Dashboard IT
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Employee Info Strip -->
+      <div class="mt-5 pt-4 border-t border-white/10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 text-xs text-slate-300">
+        <div class="bg-white/5 rounded-xl px-3.5 py-2.5 border border-white/10 flex items-center gap-3">
+          <i class="fa-solid fa-file-signature text-sky-400 text-base"></i>
+          <div>
+            <div class="text-[11px] text-slate-400">Hợp đồng thử việc</div>
+            <div class="font-semibold text-white">03/09/2026 – 03/11/2026 (HĐTV-VPĐK-CS2)</div>
+          </div>
+        </div>
+        <div class="bg-white/5 rounded-xl px-3.5 py-2.5 border border-white/10 flex items-center gap-3">
+          <i class="fa-solid fa-building-user text-emerald-400 text-base"></i>
+          <div>
+            <div class="text-[11px] text-slate-400">Trực thuộc quản lý</div>
+            <div class="font-semibold text-white">Tổ Hành chính – Tổng hợp (QĐ 2637)</div>
+          </div>
+        </div>
+        <div class="bg-white/5 rounded-xl px-3.5 py-2.5 border border-white/10 flex items-center gap-3">
+          <i class="fa-solid fa-location-dot text-amber-400 text-base"></i>
+          <div>
+            <div class="text-[11px] text-slate-400">Địa điểm công tác</div>
+            <div class="font-semibold text-white">358 Huỳnh Văn Cù, P. Thủ Dầu Một</div>
+          </div>
+        </div>
+        <div class="bg-white/5 rounded-xl px-3.5 py-2.5 border border-white/10 flex items-center gap-3">
+          <i class="fa-solid fa-Screwdriver-wrench text-purple-400 text-base"></i>
+          <div>
+            <div class="text-[11px] text-slate-400">Vai trò đảm nhiệm</div>
+            <div class="font-semibold text-white">Hỗ trợ IT, Phần mềm & Chuẩn hóa Văn bản</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTAINER -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex-1 w-full">
+
+    <!-- 1. EXECUTIVE KPI SUMMARY CARDS -->
+    <section class="mb-7">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+        
+        <!-- Card 1: IT Helpdesk & Network -->
+        <div class="bg-white rounded-2xl p-4 border border-slate-200 shadow-xs card-hover border-l-4 border-l-sky-600">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-[11px] font-bold uppercase tracking-wider text-sky-700">Hỗ Trợ Trực Tiếp (Helpdesk)</span>
+            <span class="w-8 h-8 rounded-lg bg-sky-50 text-sky-600 flex items-center justify-center"><i class="fa-solid fa-headset"></i></span>
+          </div>
+          <div class="text-2xl font-extrabold text-slate-900 font-mono-code">75 PC & Wifi</div>
+          <p class="text-xs text-slate-600 mt-1">
+            Reset Wifi khi mất mạng; cài đặt <strong>WPS, VBDLIS, AutoCAD, Chrome, Driver</strong> cho máy trạm.
+          </p>
+        </div>
+
+        <!-- Card 2: Server & Asset Inventory -->
+        <div class="bg-white rounded-2xl p-4 border border-slate-200 shadow-xs card-hover border-l-4 border-l-indigo-600">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-[11px] font-bold uppercase tracking-wider text-indigo-700">Rà Soát Server & Quản Trị Rủi Ro</span>
+            <span class="w-8 h-8 rounded-lg bg-indigo-50 text-indigo-600 flex items-center justify-center"><i class="fa-solid fa-server"></i></span>
+          </div>
+          <div class="text-2xl font-extrabold text-slate-900 font-mono-code">03 Server & 67 H09</div>
+          <p class="text-xs text-slate-600 mt-1">
+            Kiểm đếm 130 PC, 3 Server; thẳng thắn làm rõ chuyên môn phần mềm để bảo đảm an toàn dữ liệu cơ quan.
+          </p>
+        </div>
+
+        <!-- Card 3: Software & System Survey -->
+        <div class="bg-white rounded-2xl p-4 border border-slate-200 shadow-xs card-hover border-l-4 border-l-emerald-600">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-[11px] font-bold uppercase tracking-wider text-emerald-700">Dashboard QLVB & Quản Trị Việc</span>
+            <span class="w-8 h-8 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center"><i class="fa-solid fa-chart-line"></i></span>
+          </div>
+          <div class="text-2xl font-extrabold text-slate-900 font-mono-code">QLVB & GĐ Thắng</div>
+          <p class="text-xs text-slate-600 mt-1">
+            Dashboard QLVB theo dõi văn bản; đề xuất giải pháp quản lý công việc và đo lường KPI cho Giám đốc Thắng.
+          </p>
+        </div>
+
+        <!-- Card 4: Core Automation Tools -->
+        <div class="bg-white rounded-2xl p-4 border border-slate-200 shadow-xs card-hover border-l-4 border-l-amber-500">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-[11px] font-bold uppercase tracking-wider text-amber-700">Công Cụ Tự Động Hóa</span>
+            <span class="w-8 h-8 rounded-lg bg-amber-50 text-amber-600 flex items-center justify-center"><i class="fa-solid fa-gears"></i></span>
+          </div>
+          <div class="text-2xl font-extrabold text-slate-900 font-mono-code">67/67 Tài Liệu</div>
+          <p class="text-xs text-slate-600 mt-1">
+            Xây dựng <strong>NĐ30 Engine</strong>, <strong>Apple Vision OCR</strong> & Pipeline bóc tách text tra cứu 0.05s.
+          </p>
+        </div>
+
+        <!-- Card 5: Administrative Documents & Reports -->
+        <div class="bg-white rounded-2xl p-4 border border-slate-200 shadow-xs card-hover border-l-4 border-l-rose-600">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-[11px] font-bold uppercase tracking-wider text-rose-700">Văn Bản & Báo Cáo Xuất Bản</span>
+            <span class="w-8 h-8 rounded-lg bg-rose-50 text-rose-600 flex items-center justify-center"><i class="fa-solid fa-file-word"></i></span>
+          </div>
+          <div class="text-2xl font-extrabold text-slate-900 font-mono-code">40+ File Output</div>
+          <p class="text-xs text-slate-600 mt-1">
+            Soạn thảo & rà soát <strong>17 file DOCX</strong> chuẩn NĐ 30, <strong>03 file XLSX</strong> & <strong>20 Dashboard/Báo cáo HTML</strong>.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 2. NAVIGATION TABS & SEARCH BAR -->
+    <div class="bg-white rounded-2xl p-2 border border-slate-200 shadow-xs mb-6 flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-3 no-print">
+      <div class="flex flex-wrap gap-1.5" id="tab-buttons">
+        <button onclick="switchTab('tab-all')" id="btn-tab-all" class="tab-btn active px-3.5 py-2 rounded-xl text-xs font-bold flex items-center gap-1.5">
+          <i class="fa-solid fa-table-cells-large"></i> Tất cả hạng mục (Tổng hợp)
+        </button>
+        <button onclick="switchTab('tab-support')" id="btn-tab-support" class="tab-btn px-3.5 py-2 rounded-xl text-xs font-semibold text-slate-700 hover:bg-slate-100 flex items-center gap-1.5">
+          <i class="fa-solid fa-screwdriver-wrench text-sky-600"></i> 1. Hỗ trợ IT & Máy trạm (Thực tế)
+        </button>
+        <button onclick="switchTab('tab-infra')" id="btn-tab-infra" class="tab-btn px-3.5 py-2 rounded-xl text-xs font-semibold text-slate-700 hover:bg-slate-100 flex items-center gap-1.5">
+          <i class="fa-solid fa-network-wired text-indigo-600"></i> 2. Rà soát Server & Quản trị Rủi ro IT
+        </button>
+        <button onclick="switchTab('tab-software')" id="btn-tab-software" class="tab-btn px-3.5 py-2 rounded-xl text-xs font-semibold text-slate-700 hover:bg-slate-100 flex items-center gap-1.5">
+          <i class="fa-solid fa-laptop-code text-emerald-600"></i> 3. Dashboard QLVB & Quản trị Việc (GĐ Thắng)
+        </button>
+        <button onclick="switchTab('tab-docs')" id="btn-tab-docs" class="tab-btn px-3.5 py-2 rounded-xl text-xs font-semibold text-slate-700 hover:bg-slate-100 flex items-center gap-1.5">
+          <i class="fa-solid fa-scale-balanced text-amber-600"></i> 4. Văn bản NĐ30 & Kiểm toán Số liệu
+        </button>
+        <button onclick="switchTab('tab-tools')" id="btn-tab-tools" class="tab-btn px-3.5 py-2 rounded-xl text-xs font-semibold text-slate-700 hover:bg-slate-100 flex items-center gap-1.5">
+          <i class="fa-solid fa-robot text-purple-600"></i> 5. Công cụ Tự động hóa & Quy chuẩn
+        </button>
+      </div>
+
+      <!-- Search Filter -->
+      <div class="relative min-w-[240px]">
+        <i class="fa-solid fa-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-xs"></i>
+        <input type="text" id="globalSearch" onkeyup="filterTasks()" placeholder="Tìm nhanh công việc, phần mềm, tên file..." class="w-full pl-8 pr-3 py-1.5 text-xs bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:border-sky-500 focus:bg-white transition">
+      </div>
+    </div>
+
+    <!-- ===================================================================== -->
+    <!-- PHẦN BIỂU ĐỒ TỔNG QUAN & TÓM TẮT ĐÓNG GÓP (HIỂN THỊ Ở CHẾ ĐỘ TỔNG HỢP) -->
+    <!-- ===================================================================== -->
+    <div id="overview-charts-section" class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8 no-print">
+      
+      <!-- Chart 1: Phân bổ nhóm công việc -->
+      <div class="bg-white rounded-2xl p-5 border border-slate-200 shadow-xs flex flex-col justify-between">
+        <div>
+          <h3 class="text-sm font-bold text-slate-900 flex items-center gap-2 mb-1">
+            <i class="fa-solid fa-chart-pie text-sky-600"></i> Cơ Cấu Nhóm Công Việc Thực Hiện
+          </h3>
+          <p class="text-xs text-slate-500 mb-4">Phân bổ tỷ trọng các mảng nghiệp vụ trong 02 tháng thử việc</p>
+        </div>
+        <div class="h-56 flex items-center justify-center">
+          <canvas id="workloadChart"></canvas>
+        </div>
+      </div>
+
+      <!-- Chart 2: Thống kê sản phẩm đầu ra -->
+      <div class="bg-white rounded-2xl p-5 border border-slate-200 shadow-xs flex flex-col justify-between">
+        <div>
+          <h3 class="text-sm font-bold text-slate-900 flex items-center gap-2 mb-1">
+            <i class="fa-solid fa-chart-column text-indigo-600"></i> Thống Kê Sản Phẩm & Hồ Sơ Đã Xử Lý
+          </h3>
+          <p class="text-xs text-slate-500 mb-4">Số lượng tài liệu gốc, văn bản NĐ30, báo cáo HTML và công cụ kỹ thuật</p>
+        </div>
+        <div class="h-56 flex items-center justify-center">
+          <canvas id="deliverablesChart"></canvas>
+        </div>
+      </div>
+
+      <!-- Summary Highlights Box -->
+      <div class="bg-gradient-to-br from-sky-50 via-white to-indigo-50 rounded-2xl p-5 border border-sky-200 shadow-xs flex flex-col justify-between">
+        <div>
+          <div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-sky-100 text-sky-800 text-[11px] font-bold uppercase mb-3">
+            <i class="fa-solid fa-star text-amber-500"></i> Giá trị đóng góp nổi bật
+          </div>
+          <h3 class="text-base font-bold text-slate-900 mb-3">Tóm tắt Kết quả 02 Tháng Thử việc</h3>
+          <ul class="space-y-2.5 text-xs text-slate-700 leading-relaxed">
+            <li class="flex items-start gap-2">
+              <i class="fa-solid fa-check-circle text-emerald-600 mt-0.5"></i>
+              <span><strong>Đảm bảo vận hành liên tục tại chỗ:</strong> Xử lý tức thời sự cố mất mạng/Reset Wifi; cài đặt WPS Office (thay MS Office hết bản quyền), VBDLIS, AutoCAD, Chrome, Driver bàn phím cho các máy trạm.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i class="fa-solid fa-check-circle text-emerald-600 mt-0.5"></i>
+              <span><strong>Minh bạch hóa tài sản & phòng ngừa rủi ro CSDL:</strong> Tham gia phối hợp rà soát, kiểm đếm hiện trạng phòng Server; thẳng thắn làm rõ giới hạn chuyên môn Kỹ sư Phần mềm để không nhận bàn giao phần cứng ngoài năng lực, bảo đảm an toàn dữ liệu và pháp lý cho đơn vị; đồng thời tham mưu văn bản kiến nghị cấp trên cử nhân sự chuyên trách tiếp quản (CV 2162, BC khuyết IT).</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i class="fa-solid fa-check-circle text-emerald-600 mt-0.5"></i>
+              <span><strong>Dashboard QLVB & Giải pháp Quản trị Việc (GĐ Thắng):</strong> Xây dựng Dashboard giám sát trực tuyến luồng văn bản QLVB và Kế hoạch 9999 (theo dõi 35 cán bộ, 7.256 hồ sơ); nghiên cứu định hướng mô hình số hóa giao việc, đo lường KPI minh bạch hỗ trợ Giám đốc Nguyễn Chiến Thắng chỉ đạo điều hành tức thời.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i class="fa-solid fa-check-circle text-emerald-600 mt-0.5"></i>
+              <span><strong>Giải pháp tiết kiệm ngân sách:</strong> Đề xuất phương án di dời hệ thống OERP về Server HP nội bộ với <strong>chi phí 0 đồng</strong> (tiết kiệm 9,6 triệu/năm thuê ngoài), kèm dự toán đối chứng 812,8 triệu đ.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i class="fa-solid fa-check-circle text-emerald-600 mt-0.5"></i>
+              <span><strong>Tự động hóa chuẩn Nghị định 30:</strong> Xây dựng bộ công cụ OCR & NĐ30 Engine giúp rà soát, phát hiện sai sót số học/logic và xuất hàng chục văn bản, báo cáo, Dashboard điều hành cho Lãnh đạo.</span>
+            </li>
+          </ul>
+        </div>
+        <div class="mt-4 pt-3 border-t border-sky-200/70 flex items-center justify-between text-[11px] text-slate-500">
+          <span>Cập nhật: 16/10/2026</span>
+          <span class="font-semibold text-sky-700">Chi nhánh VPĐKĐĐ Số 23</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ===================================================================== -->
+    <!-- MỤC 1: HỖ TRỢ KỸ THUẬT TRỰC TIẾP, XỬ LÝ MẠNG & CÀI ĐẶT MÁY TRẠM      -->
+    <!-- ===================================================================== -->
+    <section id="tab-support" class="tab-pane mb-8 searchable-section">
+      <div class="bg-white rounded-2xl border border-slate-200 shadow-xs overflow-hidden">
+        
+        <!-- Section Header -->
+        <div class="bg-gradient-to-r from-sky-600 to-blue-700 px-6 py-4 text-white flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 rounded-xl bg-white/20 flex items-center justify-center text-white font-bold">
+              <i class="fa-solid fa-screwdriver-wrench"></i>
+            </div>
+            <div>
+              <h2 class="text-base sm:text-lg font-bold">PHẦN 1. HỖ TRỢ KỸ THUẬT TRỰC TIẾP, XỬ LÝ SỰ CỐ MẠNG & CÀI ĐẶT MÁY TRẠM (IT HELPDESK)</h2>
+              <p class="text-xs text-sky-100">Hỗ trợ trực tiếp hàng ngày cho cán bộ, viên chức và người lao động tại các Tổ chuyên môn</p>
+            </div>
+          </div>
+          <span class="px-3 py-1 rounded-full text-xs font-bold bg-white/20 text-white whitespace-nowrap self-start sm:self-center">
+            Thực hiện thường xuyên / Đột xuất
+          </span>
+        </div>
+
+        <div class="p-6">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+
+            <!-- Item 1.1: Reset Wifi & Khắc phục mất mạng -->
+            <div class="p-5 rounded-xl bg-sky-50/60 border border-sky-200 flex flex-col justify-between task-card">
+              <div>
+                <div class="flex items-center justify-between gap-2 mb-3">
+                  <span class="px-2.5 py-1 rounded-md bg-sky-600 text-white text-xs font-bold flex items-center gap-1.5">
+                    <i class="fa-solid fa-wifi"></i> Hạ tầng Mạng & Wifi Cơ quan
+                  </span>
+                  <span class="text-xs font-semibold text-emerald-700 bg-emerald-100 px-2.5 py-0.5 rounded-full">
+                    <i class="fa-solid fa-bolt mr-1"></i>Ứng cứu tức thời
+                  </span>
+                </div>
+                <h3 class="text-base font-bold text-slate-900 mb-2">
+                  1. Trực xử lý sự cố mất mạng & Reset hệ thống Wifi / Modem
+                </h3>
+                <p class="text-xs sm:text-sm text-slate-700 leading-relaxed mb-3">
+                  Chủ động kiểm tra, khởi động lại (Reset) các bộ phát Wifi, kiểm tra tín hiệu 02 đường truyền cáp quang Modem VNPT và thiết bị mạng nội bộ mỗi khi xảy ra tình trạng rớt mạng, treo kết nối hoặc nghẽn băng thông.
+                </p>
+                <div class="bg-white p-3 rounded-lg border border-sky-100 text-xs text-slate-600 space-y-1">
+                  <div><strong class="text-slate-800">• Phạm vi phục vụ:</strong> Toàn bộ các phòng ban tại trụ sở 358 Huỳnh Văn Cù (Tổ Hành chính - Tổng hợp, Tổ Đăng ký & Cấp GCN, Tổ Kỹ thuật Địa chính & Lưu trữ).</div>
+                  <div><strong class="text-slate-800">• Hiệu quả:</strong> Khôi phục nhanh kết nối Internet và mạng LAN nội bộ, không để gián đoạn việc luân chuyển hồ sơ trực tuyến trên cổng QLVB, OERP và VBDLIS.</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 1.2: Cài đặt phần mềm máy trạm -->
+            <div class="p-5 rounded-xl bg-indigo-50/50 border border-indigo-200 flex flex-col justify-between task-card">
+              <div>
+                <div class="flex items-center justify-between gap-2 mb-3">
+                  <span class="px-2.5 py-1 rounded-md bg-indigo-600 text-white text-xs font-bold flex items-center gap-1.5">
+                    <i class="fa-solid fa-desktop"></i> Hỗ trợ 75 Máy trạm (Workstations)
+                  </span>
+                  <span class="text-xs font-semibold text-indigo-700 bg-indigo-100 px-2.5 py-0.5 rounded-full">
+                    Cài đặt & Khắc phục lỗi
+                  </span>
+                </div>
+                <h3 class="text-base font-bold text-slate-900 mb-2">
+                  2. Cài đặt lại phần mềm chuyên môn, văn phòng & Driver ngoại vi
+                </h3>
+                <p class="text-xs sm:text-sm text-slate-700 leading-relaxed mb-3">
+                  Trực tiếp hỗ trợ cài đặt mới, cài đặt lại và cấu hình phần mềm trên máy tính trạm của cán bộ các phòng ban mỗi khi máy lỗi, hết hạn bản quyền hoặc thay đổi vị trí làm việc:
+                </p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
+                  <div class="bg-white p-2.5 rounded-lg border border-indigo-100">
+                    <div class="font-bold text-slate-900 flex items-center gap-1.5">
+                      <i class="fa-solid fa-file-lines text-blue-600"></i> WPS Office
+                    </div>
+                    <p class="text-slate-600 mt-0.5">Cài đặt thay thế cho Microsoft Office bị hết bản quyền (trong thời gian chờ phê duyệt kinh phí dự toán CV 1342), đảm bảo đọc/soạn thảo Word, Excel, PDF bình thường.</p>
+                  </div>
+                  <div class="bg-white p-2.5 rounded-lg border border-indigo-100">
+                    <div class="font-bold text-slate-900 flex items-center gap-1.5">
+                      <i class="fa-solid fa-database text-emerald-600"></i> VBDLIS Desktop
+                    </div>
+                    <p class="text-slate-600 mt-0.5">Cài đặt và cấu hình phần mềm Hệ thống thông tin đất đai VBDLIS Desktop phục vụ tác nghiệp hồ sơ địa chính, cấp GCN.</p>
+                  </div>
+                  <div class="bg-white p-2.5 rounded-lg border border-indigo-100">
+                    <div class="font-bold text-slate-900 flex items-center gap-1.5">
+                      <i class="fa-solid fa-compass-drafting text-rose-600"></i> AutoCAD
+                    </div>
+                    <p class="text-slate-600 mt-0.5">Cài đặt phần mềm kỹ thuật AutoCAD phục vụ đọc, kiểm tra bản vẽ trích đo địa chính và sơ đồ thửa đất.</p>
+                  </div>
+                  <div class="bg-white p-2.5 rounded-lg border border-indigo-100">
+                    <div class="font-bold text-slate-900 flex items-center gap-1.5">
+                      <i class="fa-brands fa-chrome text-amber-500"></i> Chrome & Driver Bàn phím
+                    </div>
+                    <p class="text-slate-600 mt-0.5">Cài đặt trình duyệt Google Chrome (chạy QLVB, OERP) và cài đặt/cập nhật Driver cho bàn phím, chuột, thiết bị ngoại vi bị lỗi nhận diện.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Bảng tổng hợp chi tiết các hạng mục Support máy trạm -->
+          <div class="mt-5 overflow-x-auto border border-slate-200 rounded-xl">
+            <table class="w-full text-left border-collapse text-xs sm:text-sm">
+              <thead>
+                <tr class="bg-slate-100 text-slate-800 border-b border-slate-200">
+                  <th class="py-2.5 px-4 font-bold w-12 text-center">STT</th>
+                  <th class="py-2.5 px-4 font-bold">Hạng mục hỗ trợ kỹ thuật</th>
+                  <th class="py-2.5 px-4 font-bold">Nguyên nhân / Nhu cầu phát sinh</th>
+                  <th class="py-2.5 px-4 font-bold">Giải pháp kỹ thuật đã thực hiện</th>
+                  <th class="py-2.5 px-4 font-bold text-center">Kết quả</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-200 text-slate-700">
+                <tr class="hover:bg-slate-50 task-row">
+                  <td class="py-2.5 px-4 text-center font-semibold">1</td>
+                  <td class="py-2.5 px-4 font-bold text-slate-900">Reset Wifi & Thiết bị mạng</td>
+                  <td class="py-2.5 px-4">Mất kết nối Internet/LAN cục bộ hoặc treo thiết bị phát sóng khi nhiều máy truy cập đồng thời.</td>
+                  <td class="py-2.5 px-4">Kiểm tra đèn tín hiệu Modem VNPT, Router/Access Point và thực hiện Reset khôi phục kết nối ngay lập tức.</td>
+                  <td class="py-2.5 px-4 text-center"><span class="px-2 py-0.5 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-800">Đảm bảo kết nối</span></td>
+                </tr>
+                <tr class="hover:bg-slate-50 task-row">
+                  <td class="py-2.5 px-4 text-center font-semibold">2</td>
+                  <td class="py-2.5 px-4 font-bold text-slate-900">Chuyển đổi sang WPS Office</td>
+                  <td class="py-2.5 px-4">Toàn bộ máy trạm hết hạn bản quyền MS Office (đã nêu trong CV 1342/CN23-HCTH), bị khóa tính năng soạn thảo.</td>
+                  <td class="py-2.5 px-4">Gỡ bỏ bản lỗi, cài đặt <strong>WPS Office</strong> tương thích 100% định dạng <code>.docx</code>, <code>.xlsx</code> và thiết lập font chuẩn Times New Roman.</td>
+                  <td class="py-2.5 px-4 text-center"><span class="px-2 py-0.5 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-800">Hoạt động ổn định</span></td>
+                </tr>
+                <tr class="hover:bg-slate-50 task-row">
+                  <td class="py-2.5 px-4 text-center font-semibold">3</td>
+                  <td class="py-2.5 px-4 font-bold text-slate-900">Cài đặt VBDLIS Desktop</td>
+                  <td class="py-2.5 px-4">Cán bộ nghiệp vụ cần phần mềm chuyên ngành để tra cứu, cập nhật hồ sơ địa chính và đồng bộ CSDL đất đai.</td>
+                  <td class="py-2.5 px-4">Cài đặt bộ cài <strong>VBDLIS Desktop</strong>, cấu hình môi trường kết nối máy chủ cơ sở dữ liệu cho các máy trạm chuyên môn.</td>
+                  <td class="py-2.5 px-4 text-center"><span class="px-2 py-0.5 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-800">Hoạt động ổn định</span></td>
+                </tr>
+                <tr class="hover:bg-slate-50 task-row">
+                  <td class="py-2.5 px-4 text-center font-semibold">4</td>
+                  <td class="py-2.5 px-4 font-bold text-slate-900">Cài đặt AutoCAD</td>
+                  <td class="py-2.5 px-4">Nhân sự bộ phận Đo đạc / Kỹ thuật địa chính cần mở và xử lý các file bản vẽ kỹ thuật (ổ đĩa H: <code>Banve DD</code>).</td>
+                  <td class="py-2.5 px-4">Cài đặt và cấu hình phần mềm <strong>AutoCAD</strong> phù hợp với cấu hình phần cứng từng máy trạm (mã H09).</td>
+                  <td class="py-2.5 px-4 text-center"><span class="px-2 py-0.5 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-800">Hoạt động ổn định</span></td>
+                </tr>
+                <tr class="hover:bg-slate-50 task-row">
+                  <td class="py-2.5 px-4 text-center font-semibold">5</td>
+                  <td class="py-2.5 px-4 font-bold text-slate-900">Cài đặt Google Chrome & Driver Bàn phím</td>
+                  <td class="py-2.5 px-4">Trình duyệt cũ lỗi hiển thị cổng điện tử; một số máy trạm không nhận bàn phím/thiết bị ngoại vi.</td>
+                  <td class="py-2.5 px-4">Cài đặt mới <strong>Google Chrome</strong>, nạp lại <strong>Driver bàn phím (Keyboard Driver)</strong> và kiểm tra cổng kết nối USB.</td>
+                  <td class="py-2.5 px-4 text-center"><span class="px-2 py-0.5 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-800">Khắc phục 100%</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- MỤC 2: QUẢN TRỊ HẠ TẦNG SERVER, KIỂM KÊ TÀI SẢN & AN TOÀN THÔNG TIN  -->
+    <!-- ===================================================================== -->
+    <section id="tab-infra" class="tab-pane mb-8 searchable-section">
+      <div class="bg-white rounded-2xl border border-slate-200 shadow-xs overflow-hidden">
+        
+        <div class="bg-gradient-to-r from-indigo-700 to-slate-900 px-6 py-4 text-white flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 rounded-xl bg-white/20 flex items-center justify-center text-white font-bold">
+              <i class="fa-solid fa-server"></i>
+            </div>
+            <div>
+              <h2 class="text-base sm:text-lg font-bold">PHẦN 2. PHỐI HỢP RÀ SOÁT HẠ TẦNG SERVER, KIỂM KÊ TÀI SẢN & THAM MƯU BẢO ĐẢM AN TOÀN THÔNG TIN</h2>
+              <p class="text-xs text-indigo-200">Phối hợp kiểm đếm hạ tầng phòng Server, phân định rõ phạm vi chuyên môn phần mềm để bảo đảm an toàn dữ liệu cơ quan</p>
+            </div>
+          </div>
+          <span class="px-3 py-1 rounded-full text-xs font-bold bg-white/20 text-white whitespace-nowrap self-start sm:self-center">
+            03 Server &bull; 130 PC &bull; 10 Mã mực
+          </span>
+        </div>
+
+        <div class="p-6 space-y-6">
+          
+          <!-- Grid 3 Columns: Server Room, Asset Inventory, Security Shield -->
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-5">
+            
+            <!-- Box 2.1: Phòng Server & Thiết bị lưu trữ -->
+            <div class="p-5 rounded-xl bg-slate-50 border border-slate-200 task-card">
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-xs font-bold uppercase tracking-wider text-indigo-700 bg-indigo-100 px-2.5 py-1 rounded-md">
+                  2.1. Phòng Server & Giới hạn Trách nhiệm
+                </span>
+                <a href="BB_ban_giao_IT_final.docx" class="text-xs font-semibold text-sky-600 hover:underline flex items-center gap-1 no-print">
+                  <i class="fa-solid fa-download"></i> BB_ban_giao_IT
+                </a>
+              </div>
+              <h3 class="text-sm font-bold text-slate-900 mb-2">Rà soát Hiện trạng Phòng Server & Làm Rõ Phạm Vi Chuyên Môn</h3>
+              <ul class="text-xs text-slate-700 space-y-2 leading-relaxed">
+                <li><strong>• Phối hợp kiểm đếm cụm máy chủ:</strong> Tham gia rà soát, ghi nhận chi tiết hiện trạng kỹ thuật 03 máy chủ (HP DL360 Gen8 - <code>10.17.2.252</code>, HP DL360 Gen9 - <code>10.17.2.125</code>, StoreEasy 1460 - <code>10.17.2.100</code>), Tường lửa FortiGate 61F, NAS Synology DS423+, 02 Modem VNPT, 08 ổ cứng rời và 27 linh kiện dự phòng.</li>
+                <li><strong>• Thẳng thắn làm rõ giới hạn chuyên môn:</strong> Với tinh thần trách nhiệm cao đối với CSDL đất đai, bản thân đã chủ động báo cáo trung thực với Lãnh đạo về chuyên môn được đào tạo là <strong>Kỹ sư Phần mềm (Software Engineer)</strong>, chưa đủ chuyên môn sâu về phần cứng máy chủ vật lý và an ninh mạng tầng sâu; do đó <strong>đã báo cáo không ký nhận bàn giao quản trị phần cứng/máy chủ</strong> nhằm bảo đảm an toàn dữ liệu, tránh rủi ro pháp lý và trách nhiệm nếu xảy ra sự cố hư hỏng vật lý hoặc mất dữ liệu.</li>
+                <li><strong>• Chủ động tham mưu giải pháp an toàn:</strong> Tích cực phối hợp tham mưu Lãnh đạo ban hành văn bản chính thức kiến nghị cấp trên cử nhân sự chuyên trách phần cứng toàn thời gian tiếp quản (Công văn 2162/CN23-HCTH, Báo cáo khuyết IT).</li>
+              </ul>
+            </div>
+
+            <!-- Box 2.2: Kiểm kê Tài sản Đang dùng vs Thanh lý -->
+            <div class="p-5 rounded-xl bg-slate-50 border border-slate-200 task-card">
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-xs font-bold uppercase tracking-wider text-emerald-700 bg-emerald-100 px-2.5 py-1 rounded-md">
+                  2.2. Kiểm kê & Định danh H09
+                </span>
+                <a href="index.html" class="text-xs font-semibold text-sky-600 hover:underline flex items-center gap-1 no-print">
+                  <i class="fa-solid fa-table"></i> Xem bảng kê
+                </a>
+              </div>
+              <h3 class="text-sm font-bold text-slate-900 mb-2">Đối soát Thiết bị Đang sử dụng vs Cần thanh lý 2026</h3>
+              <ul class="text-xs text-slate-700 space-y-2 leading-relaxed">
+                <li><strong>• Máy tính bàn (PC):</strong> Tổng <strong>130 máy</strong> — Tách bạch rõ <strong>75 máy đang sử dụng</strong> (trong đó <strong>67 máy trạm</strong> đã định danh mã <code>H091206001PC1</code> đến <code>PC67</code> theo từng cán bộ/phòng ban) và <strong>55 máy cần thanh lý</strong> (cùng 02 Laptop thanh lý).</li>
+                <li><strong>• Máy in A3 & A4:</strong> Quản lý <strong>15 máy in A3</strong> đang dùng (9 thanh lý) và <strong>23 máy in A4</strong> đang dùng (6 thanh lý).</li>
+                <li><strong>• Máy Scan & Photocopy:</strong> <strong>11 máy Scan</strong> đang dùng (9 A3, 2 A4; 3 thanh lý) và <strong>03 máy Photocopy</strong> đang dùng (Ricoh IM3000, 2 Konica Bizhub 367; 7 thanh lý).</li>
+                <li><strong>• Sổ tay Mã mực in:</strong> Chuẩn hóa bảng tra cứu nhanh 10 mã hộp mực chính hãng cho trụ sở và Một cửa các phường (HP 93A, 26A, 76A, 151A, 05A, Brother TN-2280, TN-2385...).</li>
+              </ul>
+            </div>
+
+            <!-- Box 2.3: Tham mưu An toàn thông tin & Phối hợp Cấp trên -->
+            <div class="p-5 rounded-xl bg-slate-50 border border-slate-200 task-card">
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-xs font-bold uppercase tracking-wider text-amber-800 bg-amber-100 px-2.5 py-1 rounded-md">
+                  2.3. Quản trị Rủi ro ATTT
+                </span>
+                <a href="print_report.html" class="text-xs font-semibold text-sky-600 hover:underline flex items-center gap-1 no-print">
+                  <i class="fa-solid fa-file-shield"></i> Báo cáo IT
+                </a>
+              </div>
+              <h3 class="text-sm font-bold text-slate-900 mb-2">Tham mưu Văn bản Bảo vệ Pháp lý & Đón Chuyên gia</h3>
+              <ul class="text-xs text-slate-700 space-y-2 leading-relaxed">
+                <li><strong>• Cảnh báo rủi ro bảo mật:</strong> Ghi nhận và báo cáo hiện trạng Kaspersky Next EDR hết hạn từ 23/03/2026, license FortiGate 61F hết hạn 30/09/2026 và thiếu bản quyền Windows/Office trên máy trạm.</li>
+                <li><strong>• Hồ sơ tham mưu cấp trên:</strong> Tổng hợp căn cứ dự toán <strong>Công văn 1342/CN23-HCTH</strong> (xin chủ trương <strong>752.829.000 đ</strong> mua bản quyền), phối hợp ban hành <strong>Công văn 2162/CN23-HCTH</strong> (09/09/2026) và soạn thảo <strong>Báo cáo khuyết nhân sự IT (`BC_khuyết_IT.docx`)</strong>.</li>
+                <li><strong>• Làm việc với chuyên gia TP.HCM:</strong> Chuẩn bị Thư mời (10/09/2026) và làm việc trực tiếp với ông <strong>Phùng Vương Quốc</strong> (VPĐKĐĐ TP.HCM - Cơ sở 2) ngày <strong>16/09/2026</strong> để khảo sát mạng và máy chủ.</li>
+              </ul>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- MỤC 3: KHẢO SÁT HỆ THỐNG PHẦN MỀM, DASHBOARD QLVB & QUẢN TRỊ VIỆC     -->
+    <!-- ===================================================================== -->
+    <section id="tab-software" class="tab-pane mb-8 searchable-section">
+      <div class="bg-white rounded-2xl border border-slate-200 shadow-xs overflow-hidden">
+        
+        <div class="bg-gradient-to-r from-emerald-700 to-teal-800 px-6 py-4 text-white flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 rounded-xl bg-white/20 flex items-center justify-center text-white font-bold">
+              <i class="fa-solid fa-laptop-code"></i>
+            </div>
+            <div>
+              <h2 class="text-base sm:text-lg font-bold">PHẦN 3. KHẢO SÁT HỆ THỐNG PHẦN MỀM, DASHBOARD QLVB & GIẢI PHÁP QUẢN TRỊ CÔNG VIỆC CHO GIÁM ĐỐC NGUYỄN CHIẾN THẮNG</h2>
+              <p class="text-xs text-emerald-100">Phát huy thế mạnh Kỹ sư Phần mềm để tối ưu chi phí OERP (0 đồng), trực quan hóa dữ liệu QLVB và đề xuất giải pháp giao việc - đo lường KPI cho Ban Giám đốc</p>
+            </div>
+          </div>
+          <span class="px-3 py-1 rounded-full text-xs font-bold bg-white/20 text-white whitespace-nowrap self-start sm:self-center">
+            Dashboard QLVB &bull; KPI 35 Cán bộ &bull; Tiết kiệm 9,6tr/năm
+          </span>
+        </div>
+
+        <div class="p-6 space-y-5">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-5">
+
+            <!-- Project 3.1: Hệ thống OERP vpdkddtdm.vn -->
+            <div class="p-5 rounded-xl bg-emerald-50/50 border border-emerald-200 flex flex-col justify-between task-card">
+              <div>
+                <div class="flex items-center justify-between gap-2 mb-2.5">
+                  <span class="px-2.5 py-0.5 rounded bg-emerald-600 text-white text-[11px] font-bold uppercase">
+                    Hệ thống OERP (vpdkddtdm.vn)
+                  </span>
+                  <span class="text-xs font-bold text-emerald-800">Chi phí đầu tư: 0 Đồng</span>
+                </div>
+                <h3 class="text-base font-bold text-slate-900 mb-2">
+                  1. Khảo sát Kiến trúc OERP & Lập Phương án Di dời Server Nội bộ
+                </h3>
+                <p class="text-xs text-slate-700 leading-relaxed mb-3">
+                  Sử dụng công cụ tự động hóa trình duyệt (Playwright) để khảo sát toàn diện 9 phân hệ của hệ thống Điều hành tác nghiệp đất đai <code>vpdkddtdm.vn</code> (Frontend Angular SPA, Backend ASP.NET IIS <code>apisql.vpdkddtdm.vn</code>, CSDL MS SQL Server).
+                </p>
+                <ul class="text-xs text-slate-700 space-y-1.5 mb-3">
+                  <li><strong>• Báo cáo khảo sát kỹ thuật:</strong> Lập Sitemap, phân tích luồng xử lý hồ sơ Một cửa liên thông và đánh giá khả năng thu hồi CSDL (<code>.bak</code>) về cơ quan.</li>
+                  <li><strong>• Phương án Di dời Server "0 Đồng":</strong> Đề xuất tận dụng cụm máy chủ <strong>HP DL360 Gen9 & StoreEasy 1460</strong> sẵn có tại phòng Server cùng NAS DS423+, giúp <strong>cắt giảm 100% chi phí thuê ngoài (800.000đ/tháng = 9.600.000đ/năm)</strong> và bảo mật tuyệt đối dữ liệu đất đai.</li>
+                  <li><strong>• Bảng dự toán đối chứng (812,8 triệu đ):</strong> Lập bảng phân rã 1.600 giờ công (8 giai đoạn phát triển phần mềm mới) làm cơ sở tham chiếu để Lãnh đạo thấy rõ lợi ích kinh tế của phương án di dời 0 đồng.</li>
+                </ul>
+              </div>
+              <div class="pt-3 border-t border-emerald-200/70 flex flex-wrap gap-2 text-[11px] font-semibold">
+                <span class="px-2 py-1 rounded bg-white text-emerald-800 border border-emerald-200">📄 Bao_cao_khao_sat_he_thong_OERP.docx</span>
+                <span class="px-2 py-1 rounded bg-white text-emerald-800 border border-emerald-200">📄 Bao_cao_phuong_an_di_doi_server_OERP_0_dong.docx</span>
+                <span class="px-2 py-1 rounded bg-white text-emerald-800 border border-emerald-200">📄 Bang_bao_gia_du_an_OERP_software.docx</span>
+              </div>
+            </div>
+
+            <!-- Project 3.2: Khảo sát Hệ thống QLVB TP.HCM -->
+            <div class="p-5 rounded-xl bg-sky-50/50 border border-sky-200 flex flex-col justify-between task-card">
+              <div>
+                <div class="flex items-center justify-between gap-2 mb-2.5">
+                  <span class="px-2.5 py-0.5 rounded bg-sky-600 text-white text-[11px] font-bold uppercase">
+                    Cổng QLVB (qlvb.tphcm.gov.vn)
+                  </span>
+                  <span class="text-xs font-bold text-sky-800">Zero-Mutation Audit</span>
+                </div>
+                <h3 class="text-base font-bold text-slate-900 mb-2">
+                  2. Khảo sát Kiến trúc & Cơ chế Vận hành Hệ thống QLVB TP.HCM
+                </h3>
+                <p class="text-xs text-slate-700 leading-relaxed mb-3">
+                  Thực hiện khảo sát ngoại vi an toàn (Read-only, không tác động dữ liệu) đối với Trục liên thông Quản lý văn bản và Điều hành điện tử của UBND TP.HCM (nền tảng VNPT-iOffice).
+                </p>
+                <ul class="text-xs text-slate-700 space-y-1.5 mb-3">
+                  <li><strong>• Bản đồ kiến trúc (Sitemap):</strong> Phân tích cấu trúc phân vùng Public Gateway (Login, SSO TP.HCM, Hỗ trợ kỹ thuật) và 5 phân hệ nghiệp vụ nội bộ (Văn bản đến, Văn bản đi, Ký số USB Token/SmartCA, Giao việc, Báo cáo thống kê).</li>
+                  <li><strong>• Xác minh quy trình hỗ trợ sự cố:</strong> Chuẩn hóa thông tin đầu mối Trung tâm Chuyển đổi số TP.HCM (<code>ttcds@tphcm.gov.vn</code>) và quy trình khôi phục mật khẩu/tài khoản công vụ cho cán bộ Chi nhánh.</li>
+                </ul>
+              </div>
+              <div class="pt-3 border-t border-sky-200/70 flex items-center justify-between">
+                <span class="text-[11px] text-slate-500">Định dạng: HTML Interactive Report</span>
+                <a href="Bao_cao_Khao_sat_QLVB_TPHCM.html" target="_blank" class="px-3 py-1 rounded-lg bg-sky-600 hover:bg-sky-700 text-white text-xs font-semibold transition no-print">
+                  Mở Báo cáo QLVB <i class="fa-solid fa-arrow-up-right-from-square ml-1 text-[10px]"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Project 3.3: Dashboard Trực quan Hệ thống QLVB -->
+            <div class="p-5 rounded-xl bg-blue-50/50 border border-blue-200 flex flex-col justify-between task-card">
+              <div>
+                <div class="flex items-center justify-between gap-2 mb-2.5">
+                  <span class="px-2.5 py-0.5 rounded bg-blue-600 text-white text-[11px] font-bold uppercase">
+                    Dashboard Phần Mềm QLVB
+                  </span>
+                  <span class="text-xs font-bold text-blue-800">Giám sát Luồng Văn Bản</span>
+                </div>
+                <h3 class="text-base font-bold text-slate-900 mb-2">
+                  3. Xây dựng Dashboard Giám Sát Phần Mềm Quản Lý Văn Bản (QLVB)
+                </h3>
+                <p class="text-xs text-slate-700 leading-relaxed mb-3">
+                  Trực quan hóa toàn diện dòng chảy văn bản công vụ trên phần mềm QLVB của đơn vị, xóa bỏ tình trạng xử lý thủ công, thiếu số liệu tổng hợp tức thời:
+                </p>
+                <ul class="text-xs text-slate-700 space-y-1.5 mb-3">
+                  <li><strong>• Theo dõi trạng thái hộp thư tác nghiệp:</strong> Phản ánh số lượng <strong>18 văn bản đến cần xử lý</strong>, <strong>8 nhiệm vụ đang giao</strong>, <strong>27 văn bản cần cập nhật/lấy lại</strong>, <strong>11 văn bản trả lại</strong> và <strong>4 văn bản đến mới trong ngày</strong>.</li>
+                  <li><strong>• Kiểm soát thời hạn & cảnh báo quá hạn:</strong> Cung cấp cái nhìn toàn cảnh về các văn bản sắp đến hạn và quá hạn, giúp cán bộ phụ trách không bị sót việc và Ban Giám đốc dễ dàng đôn đốc.</li>
+                  <li><strong>• Chuẩn hóa dữ liệu kết xuất:</strong> Hỗ trợ lọc theo phòng ban, ngày tiếp nhận, trích yếu văn bản, phục vụ xuất báo cáo định kỳ cho các cuộc họp giao ban đầu tuần.</li>
+                </ul>
+              </div>
+              <div class="pt-3 border-t border-blue-200/70 flex items-center justify-between">
+                <span class="text-[11px] text-slate-500">Tích hợp trong Dashboard Điều Hành</span>
+                <a href="Dashboard_TienDo_QLVB_GiamDoc_Thang.html" target="_blank" class="px-3 py-1 rounded-lg bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold transition no-print">
+                  Xem Dashboard QLVB <i class="fa-solid fa-arrow-up-right-from-square ml-1 text-[10px]"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Project 3.4: Định hướng & Giải pháp Quản trị Công việc cho GĐ Thắng -->
+            <div class="p-5 rounded-xl bg-amber-50/50 border border-amber-200 flex flex-col justify-between task-card">
+              <div>
+                <div class="flex items-center justify-between gap-2 mb-2.5">
+                  <span class="px-2.5 py-0.5 rounded bg-amber-600 text-white text-[11px] font-bold uppercase">
+                    Tham mưu Giám đốc Nguyễn Chiến Thắng
+                  </span>
+                  <span class="text-xs font-bold text-amber-900">Task Management & KPI</span>
+                </div>
+                <h3 class="text-base font-bold text-slate-900 mb-2">
+                  4. Nghiên Cứu Định Hướng & Giải Pháp Quản Trị Công Việc Cho Giám Đốc
+                </h3>
+                <p class="text-xs text-slate-700 leading-relaxed mb-3">
+                  Nghiên cứu, tìm kiếm giải pháp chuyển đổi số trong quản lý điều hành công việc cho Giám đốc Nguyễn Chiến Thắng, giải quyết bài toán cốt lõi: <em>"Làm sao để người đứng đầu nắm bắt tức thời ai đang làm gì, tiến độ ra sao, khối lượng công việc nhiều hay ít để phân công công bằng?"</em>
+                </p>
+                <ul class="text-xs text-slate-700 space-y-1.5 mb-3">
+                  <li><strong>• Đo lường tải công việc thực tế (Thực nghiệm Kế hoạch 9999):</strong> Thiết kế bảng phân rã chỉ tiêu và giám sát chi tiết tiến độ của <strong>35 cán bộ</strong> (tổng <strong>7.256 hồ sơ/thửa đất</strong>, đạt <strong>97,1%</strong>); nhận diện ngay 5 cán bộ còn tồn đọng 649 hồ sơ để Lãnh đạo hỗ trợ tháo gỡ.</li>
+                  <li><strong>• Mô hình Cây công việc phân cấp 3 tầng:</strong> <em>Ban Giám đốc (chỉ đạo mục tiêu) &rarr; Tổ trưởng (giao việc theo QĐ 2637) &rarr; Chuyên viên (thực thi và cập nhật tiến độ)</em>, gắn liền văn bản QLVB với đầu việc cụ thể.</li>
+                  <li><strong>• Lộ trình công nghệ 2 bước (Tiết kiệm ngân sách):</strong>
+                    <br>&bull; <em>Giai đoạn 1 (Hiện tại - 0 đồng):</em> Ứng dụng Dashboard Web nội bộ kết hợp bảng tính Master để tự động tổng hợp số liệu tuần/tháng báo cáo Giám đốc.
+                    <br>&bull; <em>Giai đoạn 2 (Dài hạn):</em> Tích hợp phân hệ Quản trị nhiệm vụ và chấm điểm KPI tự động vào cổng điều hành nội bộ của Chi nhánh.</li>
+                </ul>
+              </div>
+              <div class="pt-3 border-t border-amber-200/70 flex items-center justify-between">
+                <span class="text-[11px] text-slate-500">Mô hình quản trị số Chi nhánh 23</span>
+                <a href="Dashboard_TienDo_QLVB_GiamDoc_Thang.html" target="_blank" class="px-3 py-1 rounded-lg bg-amber-600 hover:bg-amber-700 text-white text-xs font-semibold transition no-print">
+                  Mở Báo cáo GĐ Thắng <i class="fa-solid fa-arrow-up-right-from-square ml-1 text-[10px]"></i>
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- MỤC 4: SOẠN THẢO VĂN BẢN HÀNH CHÍNH CHUẨN NĐ30 & KIỂM TOÁN SỐ LIỆU   -->
+    <!-- ===================================================================== -->
+    <section id="tab-docs" class="tab-pane mb-8 searchable-section">
+      <div class="bg-white rounded-2xl border border-slate-200 shadow-xs overflow-hidden">
+        
+        <div class="bg-gradient-to-r from-amber-600 to-orange-700 px-6 py-4 text-white flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 rounded-xl bg-white/20 flex items-center justify-center text-white font-bold">
+              <i class="fa-solid fa-scale-balanced"></i>
+            </div>
+            <div>
+              <h2 class="text-base sm:text-lg font-bold">PHẦN 4. RÀ SOÁT, KIỂM TOÁN SỐ LIỆU & SOẠN THẢO VĂN BẢN HÀNH CHÍNH CHUẨN NGHỊ ĐỊNH 30/2020/NĐ-CP</h2>
+              <p class="text-xs text-amber-100">Đối chiếu chéo tài liệu pháp lý, phát hiện sai sót toán học/logic và xuất bản trọn bộ file Word (.docx), Excel (.xlsx), HTML (.html)</p>
+            </div>
+          </div>
+          <span class="px-3 py-1 rounded-full text-xs font-bold bg-white/20 text-white whitespace-nowrap self-start sm:self-center">
+            17 File DOCX &bull; 03 File XLSX &bull; 18 Báo cáo HTML
+          </span>
+        </div>
+
+        <div class="p-6 space-y-6">
+
+          <!-- Sub-group 4.1: Nhóm Phương án Tài sản công, Trụ sở & Định mức diện tích -->
+          <div>
+            <h3 class="text-sm font-bold text-slate-900 uppercase tracking-wider mb-3 flex items-center gap-2 border-b border-slate-200 pb-2">
+              <span class="w-6 h-6 rounded-md bg-amber-100 text-amber-800 flex items-center justify-center text-xs">4.1</span>
+              Hồ sơ Phương án Sử dụng Tài sản công, Định mức Diện tích Trụ sở & Kinh phí Sửa chữa, PCCC
+            </h3>
+            <div class="overflow-x-auto border border-slate-200 rounded-xl">
+              <table class="w-full text-left border-collapse text-xs sm:text-sm">
+                <thead>
+                  <tr class="bg-slate-100 text-slate-800 border-b border-slate-200">
+                    <th class="py-2.5 px-4 font-bold w-10 text-center">#</th>
+                    <th class="py-2.5 px-4 font-bold">Tên công việc & Nội dung xử lý</th>
+                    <th class="py-2.5 px-4 font-bold">Tài liệu nguồn đối chiếu</th>
+                    <th class="py-2.5 px-4 font-bold">Sản phẩm đầu ra ( tại <code>OUTPUT/</code> )</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-200 text-slate-700">
+                  <tr class="hover:bg-slate-50 task-row">
+                    <td class="py-2.5 px-4 text-center font-semibold">1</td>
+                    <td class="py-2.5 px-4">
+                      <div class="font-bold text-slate-900">Soạn thảo & Chuẩn hóa Phương án Sử dụng Tài sản công CN23</div>
+                      <p class="text-xs text-slate-600 mt-0.5">Chuẩn hóa toàn diện theo thể thức NĐ 30/2020/NĐ-CP và bố cục mẫu chuẩn của Chi nhánh 27 / Chi nhánh 33.</p>
+                    </td>
+                    <td class="py-2.5 px-4 text-xs"><code>Phương án CN23_1.PDF</code>, <code>PA23r_1.PDF</code>, <code>1656_0001.signed.pdf</code>, <code>CN27.pdf</code>, <code>Phuong an CN33.pdf</code></td>
+                    <td class="py-2.5 px-4 text-xs space-y-1">
+                      <div><a href="Phuong_an_CN23_new_ND30.docx" class="text-sky-700 font-semibold hover:underline"><i class="fa-regular fa-file-word mr-1"></i>Phuong_an_CN23_new_ND30.docx</a></div>
+                      <div><a href="Phuong_an_CN23_final_new_v1.docx" class="text-sky-700 font-semibold hover:underline"><i class="fa-regular fa-file-word mr-1"></i>Phuong_an_CN23_final_new_v1.docx</a></div>
+                      <div><a href="phuong_an_cn23_new.docx" class="text-sky-700 font-semibold hover:underline"><i class="fa-regular fa-file-word mr-1"></i>phuong_an_cn23_new.docx</a></div>
+                    </td>
+                  </tr>
+                  <tr class="hover:bg-slate-50 task-row">
+                    <td class="py-2.5 px-4 text-center font-semibold">2</td>
+                    <td class="py-2.5 px-4">
+                      <div class="font-bold text-slate-900">Kiểm toán Số liệu, Phát hiện Mâu thuẫn & Sửa Bảng Đối chiếu Định mức Diện tích</div>
+                      <p class="text-xs text-slate-600 mt-0.5">Kiểm tra chéo toán học theo Nghị định 155/2025/NĐ-CP, phát hiện lỗi cộng tổng diện tích làm việc/kho lưu trữ và xuất bản phụ lục đã hiệu chỉnh.</p>
+                    </td>
+                    <td class="py-2.5 px-4 text-xs"><code>Bảng đối chiếu định mức CN23.docx</code>, <code>phuluc 01102026.docx</code>, <code>155-cp.signed.pdf</code></td>
+                    <td class="py-2.5 px-4 text-xs space-y-1">
+                      <div><a href="Phu_luc_Bang_doi_chieu_CN23_1_Da_Sua.docx" class="text-sky-700 font-semibold hover:underline"><i class="fa-regular fa-file-word mr-1"></i>Phu_luc_Bang_doi_chieu_CN23_1_Da_Sua.docx</a></div>
+                      <div><a href="Bao_cao_Ra_soat_Mau_thuan_Phuong_an_Taisan_CN23.html" target="_blank" class="text-amber-700 font-semibold hover:underline"><i class="fa-solid fa-bug mr-1"></i>Bao_cao_Ra_soat_Mau_thuan_Taisan.html</a></div>
+                      <div><a href="Bao_cao_Sai_sot_Phuong_an_CN23_1.html" target="_blank" class="text-amber-700 font-semibold hover:underline"><i class="fa-solid fa-magnifying-glass-chart mr-1"></i>Bao_cao_Sai_sot_Phuong_an_CN23_1.html</a></div>
+                      <div><a href="Bao_cao_Do_so_lieu_Bang_doi_chieu_dinh_muc_CN23.html" target="_blank" class="text-amber-700 font-semibold hover:underline"><i class="fa-solid fa-calculator mr-1"></i>Bao_cao_Do_so_lieu_Bang_doi_chieu.html</a></div>
+                      <div><a href="Bang_doi_chieu_format_CN23_CN27.html" target="_blank" class="text-indigo-700 font-semibold hover:underline"><i class="fa-solid fa-columns mr-1"></i>Bang_doi_chieu_format_CN23_CN27.html</a></div>
+                    </td>
+                  </tr>
+                  <tr class="hover:bg-slate-50 task-row">
+                    <td class="py-2.5 px-4 text-center font-semibold">3</td>
+                    <td class="py-2.5 px-4">
+                      <div class="font-bold text-slate-900">Trích xuất & Chuẩn hóa Phụ lục Lấy ý kiến Trụ sở Nhà đất (Phụ lục 1 – 6)</div>
+                      <p class="text-xs text-slate-600 mt-0.5">Trích xuất thông tin trụ sở Chi nhánh 23 và Phụ lục 6 (Đề nghị cấp bổ sung cơ sở nhà, đất Điểm trạm y tế 3 - Chánh Mỹ cũ) từ bộ hồ sơ 35 trang của Sở NN&MT.</p>
+                    </td>
+                    <td class="py-2.5 px-4 text-xs"><code>phu lục Lấy Ý kiến.signed.pdf</code>, <code>phulucnew1.xlsx</code>, <code>Công văn 18146</code>, <code>Công văn 2154</code></td>
+                    <td class="py-2.5 px-4 text-xs space-y-1">
+                      <div><a href="phuluc_lay_y_kien_new.html" target="_blank" class="text-emerald-700 font-semibold hover:underline"><i class="fa-solid fa-table mr-1"></i>phuluc_lay_y_kien_new.html</a></div>
+                      <div><a href="thong_tin_chi_nhanh_23_tru_so.html" target="_blank" class="text-emerald-700 font-semibold hover:underline"><i class="fa-solid fa-building mr-1"></i>thong_tin_chi_nhanh_23_tru_so.html</a></div>
+                      <div><a href="thong_tin_phu_luc_6_cap_bo_sung.html" target="_blank" class="text-emerald-700 font-semibold hover:underline"><i class="fa-solid fa-file-circle-plus mr-1"></i>thong_tin_phu_luc_6_cap_bo_sung.html</a></div>
+                    </td>
+                  </tr>
+                  <tr class="hover:bg-slate-50 task-row">
+                    <td class="py-2.5 px-4 text-center font-semibold">4</td>
+                    <td class="py-2.5 px-4">
+                      <div class="font-bold text-slate-900">Lập Phương án Xin Kinh phí Trang bị Tài sản Giám đốc, Chống thấm Trụ sở & PCCC</div>
+                      <p class="text-xs text-slate-600 mt-0.5">Xây dựng dự toán trang bị tài sản Giám đốc mới nhậm chức (≤ 64 triệu đ theo QĐ 355), chống thấm sàn mái/sê nô và mua sắm 26 thiết bị PCCC cơ sở.</p>
+                    </td>
+                    <td class="py-2.5 px-4 text-xs"><code>355_0001.pdf</code>, <code>Phương án chống thấm CN 34.docx</code>, <code>Báo cáo PCCC 2026 - CN23.docx</code></td>
+                    <td class="py-2.5 px-4 text-xs space-y-1">
+                      <div><a href="Phuong_an_xin_kinh_phi_CN23_v2.docx" class="text-sky-700 font-semibold hover:underline"><i class="fa-regular fa-file-word mr-1"></i>Phuong_an_xin_kinh_phi_CN23_v2.docx</a></div>
+                      <div><a href="Phuong_an_xin_kinh_phi_CN23_v2.html" target="_blank" class="text-indigo-700 font-semibold hover:underline"><i class="fa-solid fa-chart-pie mr-1"></i>Phuong_an_xin_kinh_phi_CN23_v2.html</a></div>
+                    </td>
+                  </tr>
+                  <tr class="hover:bg-slate-50 task-row">
+                    <td class="py-2.5 px-4 text-center font-semibold">5</td>
+                    <td class="py-2.5 px-4">
+                      <div class="font-bold text-slate-900">Phân tích Quy chế Chi tiêu Nội bộ (QĐ 355) & Rà soát Trách nhiệm Kế toán / Mua sắm</div>
+                      <p class="text-xs text-slate-600 mt-0.5">Bóc tách 72 trang QĐ 355/QĐ-VPĐK-KHTC để làm rõ quy trình tìm nhà cung cấp, lấy 03 báo giá, hóa đơn và trách nhiệm giữa Bộ phận đề xuất và Phòng Kế toán.</p>
+                    </td>
+                    <td class="py-2.5 px-4 text-xs"><code>355_0001.pdf</code> (72 trang scan)</td>
+                    <td class="py-2.5 px-4 text-xs space-y-1">
+                      <div><a href="Tom_tat_Quy_che_chi_tieu_noi_bo_QD355_VPDK_v1.html" target="_blank" class="text-sky-700 font-semibold hover:underline"><i class="fa-solid fa-book-open mr-1"></i>Tom_tat_Quy_che_QD355_VPDK_v1.html</a></div>
+                      <div><a href="Bao_cao_Ra_soat_Trach_nhiem_Ke_toan_Nha_cung_cap_Hoa_don_Thu_tuc_chi_QD355_v1.html" target="_blank" class="text-rose-700 font-semibold hover:underline"><i class="fa-solid fa-scale-unbalanced mr-1"></i>Bao_cao_Trach_nhiem_Ke_toan_QD355.html</a></div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Sub-group 4.2: Nhóm Văn bản Tổ chức, Nhân sự, Hành chính & Thống kê -->
+          <div>
+            <h3 class="text-sm font-bold text-slate-900 uppercase tracking-wider mb-3 flex items-center gap-2 border-b border-slate-200 pb-2">
+              <span class="w-6 h-6 rounded-md bg-indigo-100 text-indigo-800 flex items-center justify-center text-xs">4.2</span>
+              Văn bản Tổ chức Bộ máy, Hành chính Nhân sự, Tờ trình Nghiệp vụ & Bảng tính Thống kê (Excel 603)
+            </h3>
+            <div class="overflow-x-auto border border-slate-200 rounded-xl">
+              <table class="w-full text-left border-collapse text-xs sm:text-sm">
+                <thead>
+                  <tr class="bg-slate-100 text-slate-800 border-b border-slate-200">
+                    <th class="py-2.5 px-4 font-bold w-10 text-center">#</th>
+                    <th class="py-2.5 px-4 font-bold">Tên công việc & Nội dung thực hiện</th>
+                    <th class="py-2.5 px-4 font-bold">Căn cứ / Tài liệu gốc</th>
+                    <th class="py-2.5 px-4 font-bold">Sản phẩm đầu ra ( tại <code>OUTPUT/</code> )</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-200 text-slate-700">
+                  <tr class="hover:bg-slate-50 task-row">
+                    <td class="py-2.5 px-4 text-center font-semibold">6</td>
+                    <td class="py-2.5 px-4">
+                      <div class="font-bold text-slate-900">Soạn thảo Quy chế làm việc & Quyết định Phân công nhiệm vụ Chi nhánh 23</div>
+                      <p class="text-xs text-slate-600 mt-0.5">Cập nhật theo mô hình tổ chức mới của Quyết định 2637/QĐ-SNNMT-VP và Nội quy cơ quan VPĐKĐĐ TP.HCM.</p>
+                    </td>
+                    <td class="py-2.5 px-4 text-xs"><code>2637-Q-SNN.pdf</code>, <code>01QĐ.signed.pdf</code>, <code>02_1.PDF</code>, <code>BB phân công lãnh đạo 01102026.doc</code></td>
+                    <td class="py-2.5 px-4 text-xs space-y-1">
+                      <div><a href="Quy_che_lam_viec_Chi_nhanh_23.docx" class="text-sky-700 font-semibold hover:underline"><i class="fa-regular fa-file-word mr-1"></i>Quy_che_lam_viec_Chi_nhanh_23.docx</a></div>
+                      <div><a href="Quyet_dinh_phan_cong_CN23.docx" class="text-sky-700 font-semibold hover:underline"><i class="fa-regular fa-file-word mr-1"></i>Quyet_dinh_phan_cong_CN23.docx</a></div>
+                    </td>
+                  </tr>
+                  <tr class="hover:bg-slate-50 task-row">
+                    <td class="py-2.5 px-4 text-center font-semibold">7</td>
+                    <td class="py-2.5 px-4">
+                      <div class="font-bold text-slate-900">Phân tích Lịch sử 4 Thế hệ Quyết định Tổ chức (2015–2026) & Thẩm quyền Tổ trưởng</div>
+                      <p class="text-xs text-slate-600 mt-0.5">Đối chiếu sự thay đổi cơ cấu tổ chức qua QĐ 204, QĐ 1368, QĐ 272 và QĐ 2637 hiện hành (chuyển từ 4 Tổ sang 3 Tổ chuyên môn, phân định trách nhiệm Tổ trưởng).</p>
+                    </td>
+                    <td class="py-2.5 px-4 text-xs"><code>204_0001.pdf</code>, <code>1368_1.PDF</code>, <code>272- thay the 1368.pdf</code>, <code>2637-Q-SNN.pdf</code></td>
+                    <td class="py-2.5 px-4 text-xs space-y-1">
+                      <div><a href="orgchart.html" target="_blank" class="text-indigo-700 font-semibold hover:underline"><i class="fa-solid fa-sitemap mr-1"></i>orgchart.html (Sơ đồ tổ chức)</a></div>
+                      <div><a href="compare_regulations.html" target="_blank" class="text-emerald-700 font-semibold hover:underline"><i class="fa-solid fa-code-compare mr-1"></i>compare_regulations.html</a></div>
+                      <div><a href="so_sanh_to_truong.html" target="_blank" class="text-amber-700 font-semibold hover:underline"><i class="fa-solid fa-user-shield mr-1"></i>so_sanh_to_truong.html</a></div>
+                    </td>
+                  </tr>
+                  <tr class="hover:bg-slate-50 task-row">
+                    <td class="py-2.5 px-4 text-center font-semibold">8</td>
+                    <td class="py-2.5 px-4">
+                      <div class="font-bold text-slate-900">Chuẩn hóa Bộ Biểu mẫu Hồ sơ Giải quyết Thôi việc cho 03 Tổ Chuyên môn</div>
+                      <p class="text-xs text-slate-600 mt-0.5">Thiết kế trọn bộ 3 văn bản liên hoàn (Phiếu trình Giám đốc CN23, Biên bản họp Tổ & Công đoàn, Đơn xin thôi việc) chuẩn NĐ 30 cho từng Tổ.</p>
+                    </td>
+                    <td class="py-2.5 px-4 text-xs"><code>Phieu trinh P.KT + BB + Don nghi viec.pdf</code>, <code>2637-Q-SNN.pdf</code></td>
+                    <td class="py-2.5 px-4 text-xs space-y-1">
+                      <div><a href="Mau_ho_so_thoi_viec_To_Hanh_chinh_Tong_hop_CN23.docx" class="text-sky-700 font-semibold hover:underline"><i class="fa-regular fa-file-word mr-1"></i>Mau_ho_so_thoi_viec_To_HCTH.docx</a></div>
+                      <div><a href="Mau_ho_so_thoi_viec_To_Dang_ky_va_Cap_GCN_CN23.docx" class="text-sky-700 font-semibold hover:underline"><i class="fa-regular fa-file-word mr-1"></i>Mau_ho_so_thoi_viec_To_DK_GCN.docx</a></div>
+                      <div><a href="Mau_ho_so_thoi_viec_To_Ky_thuat_Dia_chinh_va_Luu_tru_CN23.docx" class="text-sky-700 font-semibold hover:underline"><i class="fa-regular fa-file-word mr-1"></i>Mau_ho_so_thoi_viec_To_KTDC_LT.docx</a></div>
+                    </td>
+                  </tr>
+                  <tr class="hover:bg-slate-50 task-row">
+                    <td class="py-2.5 px-4 text-center font-semibold">9</td>
+                    <td class="py-2.5 px-4">
+                      <div class="font-bold text-slate-900">Chuẩn hóa Báo cáo Dân chủ cơ sở, Công văn đi nước ngoài & Tờ trình Đo đạc RTK</div>
+                      <p class="text-xs text-slate-600 mt-0.5">Định dạng chuẩn NĐ 30 cho Báo cáo thực hiện dân chủ ở cơ sở, Công văn trình TP giải quyết đơn xin đi nước ngoài việc riêng và Tờ trình đăng ký dữ liệu trạm vệ tinh RTK.</p>
+                    </td>
+                    <td class="py-2.5 px-4 text-xs"><code>Kết quả thực hiện dân chủ cơ sở.docx</code>, <code>09.10 CQ trinh TP.docx</code>, <code>to trinh RTK 07_10_2026.docx</code></td>
+                    <td class="py-2.5 px-4 text-xs space-y-1">
+                      <div><a href="Bao_cao_dan_chu_co_so_CN23.docx" class="text-sky-700 font-semibold hover:underline"><i class="fa-regular fa-file-word mr-1"></i>Bao_cao_dan_chu_co_so_CN23.docx</a></div>
+                      <div><a href="Cong_van_trinh_TP_di_nuoc_ngoai_CN23.docx" class="text-sky-700 font-semibold hover:underline"><i class="fa-regular fa-file-word mr-1"></i>Cong_van_trinh_TP_di_nuoc_ngoai_CN23.docx</a></div>
+                      <div><a href="To_trinh_dang_ky_thong_tin_do_dac_CN23.docx" class="text-sky-700 font-semibold hover:underline"><i class="fa-regular fa-file-word mr-1"></i>To_trinh_dang_ky_thong_tin_do_dac_CN23.docx</a></div>
+                    </td>
+                  </tr>
+                  <tr class="hover:bg-slate-50 task-row">
+                    <td class="py-2.5 px-4 text-center font-semibold">10</td>
+                    <td class="py-2.5 px-4">
+                      <div class="font-bold text-slate-900">Xử lý Bảng tính Số liệu Hồ sơ TTHC Tuần / Tháng 9 / 9 Tháng (Theo Mẫu 603)</div>
+                      <p class="text-xs text-slate-600 mt-0.5">Tự động hóa cộng dồn, kiểm tra chéo số tồn kỳ trước, số tiếp nhận, đã giải quyết (đúng hạn/quá hạn) và đang giải quyết theo biểu mẫu thống kê 603.</p>
+                    </td>
+                    <td class="py-2.5 px-4 text-xs"><code>Mẫu báo cáo tuần mới theo 603.xlsx</code>, <code>bcthang092026.xlsx</code>, <code>báo cáo 9 tháng.pdf</code></td>
+                    <td class="py-2.5 px-4 text-xs space-y-1">
+                      <div><a href="Bao_cao_tuan_603_v1.xlsx" class="text-emerald-700 font-semibold hover:underline"><i class="fa-regular fa-file-excel mr-1"></i>Bao_cao_tuan_603_v1.xlsx</a></div>
+                      <div><a href="bcthang092026_v1.xlsx" class="text-emerald-700 font-semibold hover:underline"><i class="fa-regular fa-file-excel mr-1"></i>bcthang092026_v1.xlsx</a></div>
+                      <div><a href="bcthang092026_So_lieu_9_thang_v1.xlsx" class="text-emerald-700 font-semibold hover:underline"><i class="fa-regular fa-file-excel mr-1"></i>bcthang092026_So_lieu_9_thang_v1.xlsx</a></div>
+                    </td>
+                  </tr>
+                  <tr class="hover:bg-slate-50 task-row">
+                    <td class="py-2.5 px-4 text-center font-semibold">11</td>
+                    <td class="py-2.5 px-4">
+                      <div class="font-bold text-slate-900">Xây dựng Báo cáo Dashboard QLVB & Đề xuất Giải pháp Quản trị Giao việc (Kế hoạch 9999) cho Giám đốc</div>
+                      <p class="text-xs text-slate-600 mt-0.5">Phân tích hộp thư QLVB thời gian thực; tổng hợp, đo lường tiến độ 7.256 hồ sơ của 35 cán bộ và nghiên cứu mô hình số hóa quản trị công việc cho Giám đốc Nguyễn Chiến Thắng.</p>
+                    </td>
+                    <td class="py-2.5 px-4 text-xs"><code>QUẢN LÝ CÔNG VIỆC KẾ HOẠCH 9999 - MASTER.xlsx</code>, <code>BẢNG KPI CÔNG VIỆC.xlsx</code>, Cổng <code>qlvb.tphcm.gov.vn</code></td>
+                    <td class="py-2.5 px-4 text-xs space-y-1">
+                      <div><a href="Dashboard_TienDo_QLVB_GiamDoc_Thang.html" target="_blank" class="text-indigo-700 font-semibold hover:underline"><i class="fa-solid fa-chart-column mr-1"></i>Dashboard_TienDo_QLVB_GiamDoc_Thang.html</a></div>
+                      <div><a href="Bao_cao_Khao_sat_QLVB_TPHCM.html" target="_blank" class="text-sky-700 font-semibold hover:underline"><i class="fa-solid fa-globe mr-1"></i>Bao_cao_Khao_sat_QLVB_TPHCM.html</a></div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- MỤC 5: XÂY DỰNG HỆ THỐNG CÔNG CỤ TỰ ĐỘNG HÓA & QUY CHUẨN DỰ ÁN       -->
+    <!-- ===================================================================== -->
+    <section id="tab-tools" class="tab-pane mb-8 searchable-section">
+      <div class="bg-white rounded-2xl border border-slate-200 shadow-xs overflow-hidden">
+        
+        <div class="bg-gradient-to-r from-purple-700 to-indigo-900 px-6 py-4 text-white flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 rounded-xl bg-white/20 flex items-center justify-center text-white font-bold">
+              <i class="fa-solid fa-robot"></i>
+            </div>
+            <div>
+              <h2 class="text-base sm:text-lg font-bold">PHẦN 5. XÂY DỰNG CORE ENGINES TỰ ĐỘNG HÓA XỬ LÝ VĂN BẢN & CHUẨN HÓA QUY TRÌNH</h2>
+              <p class="text-xs text-purple-200">Đóng gói kỹ năng lập trình Python & Swift thành nền tảng tự động hóa phục vụ lâu dài cho cán bộ văn phòng Chi nhánh 23</p>
+            </div>
+          </div>
+          <span class="px-3 py-1 rounded-full text-xs font-bold bg-white/20 text-white whitespace-nowrap self-start sm:self-center">
+            Python &bull; Swift OCR &bull; Nghị định 30
+          </span>
+        </div>
+
+        <div class="p-6">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+
+            <!-- Tool 1 -->
+            <div class="p-4 rounded-xl bg-purple-50/50 border border-purple-200 task-card">
+              <div class="text-xs font-bold text-purple-700 uppercase mb-1 font-mono-code">tools/nd30_engine.py</div>
+              <h3 class="text-sm font-bold text-slate-900 mb-2">1. NĐ 30 Core Document Engine</h3>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                Module Python sinh file Word (<code>.docx</code>) tự động tuân thủ 100% Nghị định 30/2020/NĐ-CP: Khổ A4, lề chuẩn (20-20-30-15mm), Quốc hiệu - Tiêu ngữ bảng ẩn viền, đường kẻ em-dash chính xác, lặp dòng tiêu đề bảng (<code>tblHeader</code>), chống cắt dòng (<code>cantSplit</code>) và đánh số trang Header bỏ trang 1.
+              </p>
+            </div>
+
+            <!-- Tool 2 -->
+            <div class="p-4 rounded-xl bg-purple-50/50 border border-purple-200 task-card">
+              <div class="text-xs font-bold text-purple-700 uppercase mb-1 font-mono-code">tools/ocr_vision.swift</div>
+              <h3 class="text-sm font-bold text-slate-900 mb-2">2. Apple Vision Native OCR</h3>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                Biên dịch công cụ gốc trên macOS tích hợp <strong>Apple PDFKit & Vision Framework</strong>, cho phép bóc tách văn bản tiếng Việt có dấu chính xác cao từ các file PDF scan đóng dấu đỏ nhiều trang (như QĐ 355 72 trang, NĐ 186 139 trang, NĐ 30 76 trang).
+              </p>
+            </div>
+
+            <!-- Tool 3 -->
+            <div class="p-4 rounded-xl bg-purple-50/50 border border-purple-200 task-card">
+              <div class="text-xs font-bold text-purple-700 uppercase mb-1 font-mono-code">tools/doc_pipeline.py</div>
+              <h3 class="text-sm font-bold text-slate-900 mb-2">3. Auto Document Pipeline</h3>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                Hệ thống tự động quét kho <code>documents/</code>, kiểm tra mã băm MD5 (<code>documents_index.json</code>) và bóc tách toàn bộ <strong>67/67 tài liệu</strong> (Word, Excel, PDF) sang bộ nhớ đệm <code>scratch/cache_texts/</code>, giúp tìm kiếm toàn văn chỉ trong <strong>0,05 giây</strong>.
+              </p>
+            </div>
+
+            <!-- Tool 4 -->
+            <div class="p-4 rounded-xl bg-purple-50/50 border border-purple-200 task-card">
+              <div class="text-xs font-bold text-purple-700 uppercase mb-1 font-mono-code">BEST_PRACTICE & FRAMEWORK</div>
+              <h3 class="text-sm font-bold text-slate-900 mb-2">4. Chuẩn hóa Quy trình & Cẩm nang</h3>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                Tái cấu trúc toàn bộ thư mục dự án sạch sẽ (loại bỏ 124 file lộn xộn), thiết lập bộ quy tắc kiểm toán 7 tiêu chí (<code>TIEU_CHI_RA_SOAT.md</code>) và biên soạn <strong>Cẩm nang vận hành AI cho nhân viên văn phòng</strong> (<a href="BEST_PRACTICE.html" target="_blank" class="text-purple-700 font-semibold underline">BEST_PRACTICE.html</a>).
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- MỤC 6: DÒNG THỜI GIAN (TIMELINE) 02 THÁNG THỬ VIỆC                    -->
+    <!-- ===================================================================== -->
+    <section class="mb-8">
+      <div class="bg-white rounded-2xl border border-slate-200 shadow-xs p-6">
+        <h2 class="text-base sm:text-lg font-bold text-slate-900 flex items-center gap-2.5 mb-5">
+          <i class="fa-solid fa-timeline text-sky-600"></i>
+          <span>LỘ TRÌNH THỰC HIỆN CÔNG VIỆC QUA CÁC GIAI ĐOẠN (03/09/2026 – 16/10/2026)</span>
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+          
+          <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 relative">
+            <span class="inline-block px-2.5 py-0.5 rounded bg-sky-100 text-sky-800 text-[11px] font-bold mb-2">
+              Giai đoạn 1: 03/09 – 16/09/2026
+            </span>
+            <h4 class="text-sm font-bold text-slate-900 mb-1.5">Rà soát Hạ tầng IT & Làm rõ Giới hạn Chuyên môn</h4>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Ký HĐTV, phối hợp khảo sát kiểm đếm cụm máy chủ, thẳng thắn báo cáo không ký nhận bàn giao phần cứng ngoài chuyên môn để bảo vệ an toàn CSDL cơ quan; thống kê 75 PC đang dùng vs 55 PC thanh lý, định danh 67 máy H09, tham mưu CV 2162 & đón chuyên gia TP.HCM (16/09).
+            </p>
+          </div>
+
+          <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 relative">
+            <span class="inline-block px-2.5 py-0.5 rounded bg-indigo-100 text-indigo-800 text-[11px] font-bold mb-2">
+              Giai đoạn 2: 17/09 – 30/09/2026
+            </span>
+            <h4 class="text-sm font-bold text-slate-900 mb-1.5">Hỗ trợ Máy trạm & Khảo sát Hệ thống OERP</h4>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Trực xử lý mạng/Reset Wifi, cài WPS Office, VBDLIS, AutoCAD, Chrome, Driver cho máy trạm. Khảo sát kỹ thuật <code>vpdkddtdm.vn</code>, lập phương án di dời Server OERP 0 đồng (28/09).
+            </p>
+          </div>
+
+          <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 relative">
+            <span class="inline-block px-2.5 py-0.5 rounded bg-emerald-100 text-emerald-800 text-[11px] font-bold mb-2">
+              Giai đoạn 3: 01/10 – 10/10/2026
+            </span>
+            <h4 class="text-sm font-bold text-slate-900 mb-1.5">Rà soát Pháp lý, Phương án Tài sản & QĐ 2637</h4>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Kiểm toán Phương án sử dụng tài sản công CN23, Bảng đối chiếu định mức NĐ 155, Phụ lục trụ sở nhà đất; soạn Quy chế làm việc, QĐ phân công, 03 bộ mẫu hồ sơ thôi việc, Tờ trình RTK & Báo cáo tuần/tháng 603.
+            </p>
+          </div>
+
+          <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 relative">
+            <span class="inline-block px-2.5 py-0.5 rounded bg-amber-100 text-amber-800 text-[11px] font-bold mb-2">
+              Giai đoạn 4: 11/10 – 16/10/2026
+            </span>
+            <h4 class="text-sm font-bold text-slate-900 mb-1.5">Dashboard QLVB, Giải pháp Quản trị Việc & Tự động hóa</h4>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Xây dựng Dashboard QLVB thời gian thực và Dashboard Kế hoạch 9999 (7.256 hồ sơ) trình Giám đốc; nghiên cứu định hướng & đề xuất giải pháp số hóa quản trị công việc cho Giám đốc Nguyễn Chiến Thắng; lập Phương án xin kinh phí tài sản GĐ, chống thấm & PCCC (theo QĐ 355); đóng gói Core Engine NĐ30 & OCR Pipeline.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PRINT-ONLY SIGNATURE FOOTER -->
+    <div class="print-only max-w-4xl mx-auto w-full mt-10 pt-4" style="font-family: 'Times New Roman', Times, serif;">
+      <div class="grid grid-cols-3 text-center gap-4">
+        <div>
+          <p class="font-bold text-sm uppercase">LÃNH ĐẠO CHI NHÁNH</p>
+          <p class="italic text-xs">(Ký, ghi rõ họ tên)</p>
+          <div class="h-24"></div>
+        </div>
+        <div>
+          <p class="font-bold text-sm uppercase">TỔ TRƯỞNG TỔ HCTH</p>
+          <p class="italic text-xs">(Ký, ghi rõ họ tên)</p>
+          <div class="h-24"></div>
+        </div>
+        <div>
+          <p class="font-bold text-sm uppercase">NGƯỜI BÁO CÁO</p>
+          <p class="italic text-xs">(Ký, ghi rõ họ tên)</p>
+          <div class="h-24"></div>
+          <p class="font-bold text-sm">Đỗ Trọng Minh Quân</p>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-white border-t border-slate-200 py-5 mt-8 no-print">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-2">
+      <div>
+        <strong>Báo cáo Tổng kết 02 Tháng Thử việc (03/09/2026 – 03/11/2026)</strong> &bull; Người thực hiện: <strong>Đỗ Trọng Minh Quân</strong>
+      </div>
+      <div>
+        Chi nhánh Văn phòng Đăng ký đất đai Số 23 &bull; Lưu trữ tại: <code>OUTPUT/Bao_cao_Ket_qua_Thu_viec_2_Thang_Do_Trong_Minh_Quan.html</code>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JAVASCRIPT LOGIC -->
+  <script>
+    // Tab switching
+    function switchTab(tabId) {
+      const panes = document.querySelectorAll('.tab-pane');
+      const buttons = document.querySelectorAll('.tab-btn');
+      const chartsSection = document.getElementById('overview-charts-section');
+
+      buttons.forEach(btn => btn.classList.remove('active'));
+      const activeBtn = document.getElementById('btn-' + tabId);
+      if (activeBtn) activeBtn.classList.add('active');
+
+      if (tabId === 'tab-all') {
+        panes.forEach(p => p.style.display = 'block');
+        if (chartsSection) chartsSection.style.display = 'grid';
+      } else {
+        panes.forEach(p => {
+          p.style.display = (p.id === tabId) ? 'block' : 'none';
+        });
+        if (chartsSection) chartsSection.style.display = 'none';
+      }
+    }
+
+    function showAllTabsForPrint() {
+      switchTab('tab-all');
+    }
+
+    // Live Search Filter
+    function filterTasks() {
+      const query = document.getElementById('globalSearch').value.toLowerCase().trim();
+      const rows = document.querySelectorAll('.task-row');
+      const cards = document.querySelectorAll('.task-card');
+
+      rows.forEach(row => {
+        const text = row.innerText.toLowerCase();
+        row.style.display = text.includes(query) ? '' : 'none';
+      });
+
+      cards.forEach(card => {
+        const text = card.innerText.toLowerCase();
+        card.style.display = text.includes(query) ? '' : 'none';
+      });
+    }
+
+    // Initialize Charts
+    window.addEventListener('DOMContentLoaded', () => {
+      // 1. Doughnut Chart: Workload Distribution
+      const ctxWorkload = document.getElementById('workloadChart').getContext('2d');
+      new Chart(ctxWorkload, {
+        type: 'doughnut',
+        data: {
+          labels: [
+            'Hỗ trợ IT & Máy trạm (Wifi, WPS, VBDLIS, CAD...)',
+            'Soạn thảo & Kiểm toán Văn bản NĐ30',
+            'Dashboard QLVB & Quản lý việc (GĐ Thắng)',
+            'Khảo sát OERP & Di dời Server 0 Đồng',
+            'Rà soát Server & Công cụ Tự động hóa'
+          ],
+          datasets: [{
+            data: [28, 27, 18, 15, 12],
+            backgroundColor: [
+              '#0284c7', // sky-600
+              '#d97706', // amber-600
+              '#059669', // emerald-600
+              '#4f46e5', // indigo-600
+              '#9333ea'  // purple-600
+            ],
+            borderWidth: 2,
+            borderColor: '#ffffff'
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: {
+              position: 'right',
+              labels: {
+                boxWidth: 12,
+                font: { size: 11, family: 'Inter' },
+                color: '#334155'
+              }
+            }
+          },
+          cutout: '62%'
+        }
+      });
+
+      // 2. Bar Chart: Deliverables Count
+      const ctxDeliverables = document.getElementById('deliverablesChart').getContext('2d');
+      new Chart(ctxDeliverables, {
+        type: 'bar',
+        data: {
+          labels: [
+            'Tài liệu gốc đã OCR',
+            'Máy trạm H09/Đang dùng',
+            'Báo cáo & Dashboard HTML',
+            'Văn bản Word chuẩn NĐ30',
+            'Phần mềm hỗ trợ cài đặt',
+            'Core Engines & Tools'
+          ],
+          datasets: [{
+            label: 'Số lượng thực hiện',
+            data: [67, 75, 20, 17, 6, 5],
+            backgroundColor: [
+              'rgba(147, 51, 234, 0.8)',
+              'rgba(2, 132, 199, 0.85)',
+              'rgba(5, 150, 105, 0.85)',
+              'rgba(217, 119, 6, 0.85)',
+              'rgba(79, 70, 229, 0.85)',
+              'rgba(225, 29, 72, 0.85)'
+            ],
+            borderRadius: 6
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { display: false }
+          },
+          scales: {
+            y: {
+              beginAtZero: true,
+              grid: { color: '#f1f5f9' },
+              ticks: { font: { size: 11 } }
+            },
+            x: {
+              grid: { display: false },
+              ticks: { font: { size: 10 } }
+            }
+          }
+        }
+      });
+    });
+  </script>
+</body>
+</html>

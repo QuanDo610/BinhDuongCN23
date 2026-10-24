@@ -37,11 +37,11 @@ Sử dụng bảng layout 2 cột không viền (borderless table) ở đầu tr
 | **Ô số 1** | **Quốc hiệu & Tiêu ngữ** | | | | Nằm góc trên bên phải |
 | | - Dòng 1: CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM | In hoa | **13** (chuẩn đối với văn bản cấp Chi nhánh/Sở) | Đứng, **đậm** | Canh giữa ô. Cỡ chữ 12 hoặc 13 theo NĐ 30, chuẩn thống nhất chọn cỡ **13** |
 | | - Dòng 2: Độc lập - Tự do - Hạnh phúc | In thường | **13** (hoặc 14) | Đứng, **đậm** | Viết hoa chữ cái đầu mỗi cụm từ, nối bằng gạch nối (-) có dấu cách. Chuẩn thống nhất chọn cỡ **13** |
-| | - Nét kẻ ngang bên dưới | Đường nét liền mảnh | - | - | **BẮT BUỘC có chiều dài bằng chính xác 100% chiều dài dòng chữ Tiêu ngữ** (phủ kín từ chữ đầu "Độc" đến hết chữ cuối "phúc"), canh giữa. Không được kẻ ngắn lửng lơ. |
+| | - Nét kẻ ngang bên dưới | Đường nét liền mảnh | - | - | **BẮT BUỘC có chiều dài bằng chính xác 100% chiều dài dòng chữ Tiêu ngữ** (phủ trọn vẹn từ chữ đầu "Độc" đến hết chữ cuối "phúc" bằng đúng 18 ký tự em-dash cỡ chữ **8.5pt**), canh giữa. Khoảng cách gần chân chữ vừa phải bằng cách đặt khoảng cách dòng đoạn kẻ cố định `exact 6pt` (`w:line="120" w:lineRule="exact"`). |
 | **Ô số 2** | **Tên cơ quan, tổ chức ban hành** | | | | Nằm góc trên bên trái, ngang hàng Ô 1 |
 | | - Tên cơ quan chủ quản cấp trên (nếu có) | In hoa | **12** | Đứng | Canh giữa ô. Ví dụ: `VĂN PHÒNG ĐĂNG KÝ ĐẤT ĐAI`, `THÀNH PHỐ HỒ CHÍ MINH` đặt cỡ **12**, kiểu đứng |
 | | - Tên cơ quan ban hành văn bản | In hoa | **13** | Đứng, **đậm** | Canh giữa ô. Ví dụ: `CHI NHÁNH SỐ 23` đặt cỡ **13**, in hoa, **đứng, đậm** |
-| | - Nét kẻ ngang bên dưới | Đường nét liền mảnh | - | - | **Chiều dài bằng xấp xỉ 2/3 chiều dài dòng chữ tên cơ quan ban hành**, canh giữa. |
+| | - Nét kẻ ngang bên dưới | Đường nét liền mảnh | - | - | **Chiều dài bằng xấp xỉ 2/3 chiều dài dòng chữ tên cơ quan ban hành** (8 ký tự em-dash cỡ **8.5pt**), canh giữa. Khoảng cách gần chân chữ vừa phải tương tự Ô 1. |
 | **Ô số 3** | **Số, ký hiệu văn bản** | | 13 | Đứng | Canh giữa dưới Ô số 2 |
 | | - Từ "Số:" | In thường | 13 | Đứng | Sau có dấu hai chấm (:). Số nhỏ hơn 10 phải thêm số 0 ở trước (ví dụ: `Số: 05/...`) |
 | | - Phần ký hiệu (chữ viết tắt) | In hoa | 13 | Đứng | Giữa số và ký hiệu có dấu `/`, giữa các nhóm từ có dấu `-` (không cách) |
@@ -183,15 +183,16 @@ def add_divider_line(cell_or_doc, length_type="nation"):
     """
     Tạo đường kẻ ngang mảnh bằng chuỗi em-dash (—) nối liền không đứt đoạn,
     đảm bảo hiển thị hoàn hảo trên Word (Windows, macOS, Mobile, WPS, Web Viewer).
-    - length_type="agency": Dưới tên cơ quan ban hành 'CHI NHÁNH SỐ 23' -> 8 em-dashes (xấp xỉ 2/3 độ dài chữ).
-    - length_type="nation": Dưới Tiêu ngữ 'Độc lập - Tự do - Hạnh phúc' -> 18 em-dashes (phủ trọn 100% từ 'Độc' tới 'phúc').
-    - length_type="subject": Dưới Trích yếu nội dung -> 8 em-dashes.
+    - length_type="agency": Dưới tên cơ quan ban hành 'CHI NHÁNH SỐ 23' -> 8 em-dashes cỡ 8.5pt (xấp xỉ 2/3 độ dài chữ).
+    - length_type="nation": Dưới Tiêu ngữ 'Độc lập - Tự do - Hạnh phúc' -> 18 em-dashes cỡ 8.5pt (phủ trọn 100% từ 'Độc' tới 'phúc').
+    - length_type="subject": Dưới Trích yếu nội dung -> 8 em-dashes cỡ 8.5pt.
+    Khoảng cách (spacing): Dùng khoảng cách dòng cố định exact 6pt (w:line="120" w:lineRule="exact") và cỡ chữ ký tự 8.5pt. Điều này đảm bảo đường kẻ được kéo sát lên gần chân chữ vừa phải, thanh thoát, đồng thời chiều dài phủ chính xác 100% từ 'Độc' sang 'phúc'.
     """
     p = cell_or_doc.add_paragraph()
     p.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    p.paragraph_format.space_before = Pt(0)
-    p.paragraph_format.space_after = Pt(4)
-    p.paragraph_format.line_spacing = 0.8
+    pPr = p._p.get_or_add_pPr()
+    sp = parse_xml(r'<w:spacing %s w:before="0" w:after="80" w:line="120" w:lineRule="exact"/>' % nsdecls('w'))
+    pPr.append(sp)
     
     dash_count = 18 if length_type == "nation" else 8
     r = p.add_run("—" * dash_count)

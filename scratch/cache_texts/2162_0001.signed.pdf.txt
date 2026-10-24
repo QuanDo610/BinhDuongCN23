@@ -1,0 +1,91 @@
+=== TRANG 1/2 ===
+Người ký: CHI NHANH VĂN PHÒNG ĐĂNG KÝ ĐÁT
+ĐAI SỐ 23
+HỒ CHÍ MINH, SỞ NÔNG NGHIỆP VÀ MÔI TRƯỜNG,
+Cơ quan: VĂN PHÒNG ĐĂNG KÝ ĐẤT ĐAI THÀNH PHỐ
+Thời gian ký: 09.09.2026 10:39:45 +07:00
+ỦY BAN NHÂN DÂN THÀNH PHÔ HÔ CHÍ MINH
+VĂN PHÒNG ĐĂNG KÝ ĐẤT ĐAI
+THANH PHÔ HÔ CHI MINH
+CỘNG HOA XÃ HỘI CHỦ NGHĨA VIỆT NAM
+CHI NHÁNH SỐ 23
+Độc lập - Tự do - Hạnh phúc
+Số: 262 /CN23-HCTH
+Thủ Dầu Một, ngày 09 tháng9 năm 2026
+Về việc đề nghị hỗ trợ công tác
+bàn giao, vận hành hệ thông mạng
+Kính gửi: Văn phòng đăng ký đất đai Thành phố Hồ Chí Minh.
+Chi nhánh Văn phòng đăng ký đất đai số 23 (sau đây gọi tắt là Chi
+nhánh) xin báo cáo Văn phòng đăng ký đất đai Thành phố Hồ Chí Minh về tình
+hình nhân sự công nghệ thông tin (IT) tại đơn vị và xin ý kiến chỉ đạo, hỗ trợ
+công tác chuyên môn với các nội dung cụ thế sau:
+1. Tình hình tiếp nhận đơn xin thôi việc của ông Lý Minh Tân
+Ngày 15/8/2026, Chi nhánh tiếp nhận Đơn xin thôi việc của ông Lý Minh
+Tân (sinh năm 1984), hiện là Tổ phó Tổ Kỹ thuật địa chính và Lưu trữ, phụ
+trach công tác quản trị mạng, an toàn và an ninh thông tin tại Chi nhánh. Thời
+gian công tác tại đơn vị: 16 năm 4 tháng.
+Theo đơn và qua trao đổi năm bắt tâm tư, ông Tân có nguyện vọng xin
+chấm dứt hợp đồng lao động kế từ ngày 01/10/2026 (thực hiện thời gian báo
+trước 45 ngày theo quy định).
+Lý do xin thôi việc: Áp lực kinh tế và áp lực chuyên môn do hệ thống hạ
+tâng an toàn thông tin của đơn vị đang đôi mặt nhiêu rủi ro, câp trên chưa trả phí
+vận hành phân mêm diệt virus, tường lửa, hệ điêu hành bản quyên... theo tiêu
+chuẩn bảo mật gây tâm lý bất an của IT trong việc quản trị, vận hành hệ thống.
+2. Khái quát tình hình khó khăn tại đơn vị và áp lực vận hành hệ
+thống an toàn thông tin
+* Quy mô và hạ tâng ông Lý Minh Tân đang quản lý: Hệ thông mạng
+nội bộ của Chi nhánh hiện đang kêt nôi và phục vụ vận hành khoảng 80 máy
+trạm kết nối Cơ sở dữ liệu đất đai. Khối lượng công việc xử lý hồ sơ lớn, yêu
+cầu bảo đảm tính toàn vẹn, bảo mật dữ liệu và kết nối thông suốt luôn ở mức
+cao.
+* Thực trạng an toàn thông tin hiện hữu:
+23/3/2026.
+- Phần mềm diệt virus Kaspersky đã hết hạn bản quyền từ ngày
+- Thiết bị tường lửa cứng FortiGate F61 đã hết hạn bản quyền các gói dịch
+vụ bảo mật (license) vào ngày 30/9/2026.
+=== TRANG 2/2 ===
+2
+- Hệ thống máy trạm có 1 số máy chưa được trang bị bản quyền hệ điều
+hành và phần mềm văn phòng đồng bộ. Đơn vị đã có văn bản xin chủ trương bố
+trí kinh phí nhưng hiện chưa được phê duyệt triển khai. Các yếu tố này đặt hệ
+thống trước nguy cơ rất cao bị mã độc, virus tấn công, làm tê liệt dữ liệu nếu xảy
+ra sự cố kỹ thuật.
+3. Khó khăn trong công tác tiếp nhận bàn giao và nhân sự thay thế
+năm 1999) để thực hiện công tác IT. Tuy nhiên, chuyên môn đào tạo của ông
+Hiện nay, Chi nhánh đang nhận thử việc ông Đỗ Trọng Minh Quân (sinh
+Minh Quân thuộc mảng phần mềm, tuổi đời và tuổi nghề còn rất trẻ trong khi
+tính chất công việc bàn giao tại Chi nhánh yêu cầu kinh nghiệm lâu năm về
+phần cứng, quản trị mạng, hạ tầng kết nối và bảo mật hệ thống. Do đó, về
+mặt chuyên môn và kinh nghiệm thực tế của ông Quân chưa thể dáp ứng các yêu
+cầu công việc.
+Đồng thời, việc một nhân sự mới đang trong giai đoạn thử việc phải tiếp
+quản, vận hành độc lập toàn bộ hệ sinh thái mạng gồm 80 máy tính, kèm theo
+các thiết bị chuyên dụng (Firewall, Server dữ liệu địa chính) trong bối cảnh hệ
+thông đang thiêu hụt các lớp bảo mật bản quyên là một thách thức quá lớn, khó
+bảo đảm hoàn thành nhiệm vụ và tiêm ân nhiêu nguy cơ gián đoạn hoạt động
+chuyên môn của Chi nhánh.
+4. Đề xuất, kiến nghị
+Nhăm bảo đảm công tác vận hành hệ thông công nghệ thông tin và cơ sở
+dữ liệu địa chính tại Chi nhánh không bị gián đoạn, rúi ro sau ngày 01/10/2026
+do thiếu nhân lực IT có kinh nghiệm chuyên môn, Chi nhánh kính đề xuất cấp
+trên xem xét, hỗ trợ các nội dung sau đây:
+1. Cử nhân sự chuyên trách về mạng và hạ tầng thông tin phối hợp, hỗ trợ
+trực tiếp công tác bàn giao chuyên môn giữa ông Lý Minh Tân và ông Minh
+Quân.
+2. Hướng dẫn nghiệp vụ, hỗ trợ kỹ thuật định kỳ cho nhân sự thử việc
+trong giai đoạn đầu tiếp quản, quản trị hệ thống 80 máy tính tại Chi nhánh.
+3. Xem xét phương án điều động, bố trí nhân sự IT chuyên trách phần
+cứng, hạ tầng mạng có kinh nghiệm về hỗ trợ Chi nhánh nếu nhân sự thử việc
+không thể đáp ứng yêu cầu công việc sau thời gian đánh giá.
+nhiệm vụ được giao./. -
+Chi nhánh kính trình cấp trên xem xét, kịp thời hỗ trợ đơn vị hoàn thành
+- Như trên (báo cáo);
+Nơi nhận:
+KT.GIAM ĐÔC
+- BGĐ CNVP;
+VI DAT DAI THA
+CHI NHÁNH PHÓ GIÁM ĐÓC
+- Lưu: VT, T
+VĂN PHONG
+23
+HN Đặng Huy Cường

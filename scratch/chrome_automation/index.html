@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Báo Cáo Khảo Sát Hệ Thống OERP & Phương Án Di Dời Server Lưu Trữ</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f8fafc;
+      color: #0f172a;
+    }
+    .active-tab {
+      border-bottom: 3px solid #0284c7;
+      color: #0284c7;
+      font-weight: 700;
+      background-color: #f0f9ff;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col antialiased">
+
+  <!-- TOP HEADER -->
+  <header class="bg-white border-b border-slate-200 sticky top-0 z-40 shadow-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+      <div class="flex items-center space-x-3">
+        <div class="w-11 h-11 rounded-xl bg-gradient-to-tr from-sky-600 to-indigo-600 text-white flex items-center justify-center text-xl shadow-sm">
+          <i class="fa-solid fa-server"></i>
+        </div>
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="text-xs font-bold tracking-wide uppercase px-2 py-0.5 rounded-md bg-sky-100 text-sky-800">Báo cáo CNTT & Hạ tầng</span>
+            <span class="text-xs px-2 py-0.5 rounded-md bg-emerald-100 text-emerald-800 font-semibold"><i class="fa-solid fa-shield-halved mr-1"></i>Đã xác thực phiên</span>
+          </div>
+          <h1 class="text-base sm:text-lg font-bold text-slate-900 leading-tight">
+            Khảo Sát OERP & Phương Án Dời Về Máy Chủ Cơ Quan (Chi Phí 0 VNĐ)
+          </h1>
+          <p class="text-xs text-slate-500">Chi nhánh VPĐKĐĐ TP. Thủ Dầu Một • Cắt giảm 100% chi phí thuê ngoài (800k/tháng) • Tận dụng cụm HP Server có sẵn</p>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-2.5 self-end md:self-auto">
+        <button onclick="window.print()" class="px-3 py-2 text-xs font-semibold text-slate-700 bg-slate-100 hover:bg-slate-200 rounded-lg transition flex items-center gap-1.5 border border-slate-200">
+          <i class="fa-solid fa-print"></i> In Báo Cáo
+        </button>
+        <a href="https://vpdkddtdm.vn/vptdm/trangchu" target="_blank" class="px-3.5 py-2 text-xs font-semibold text-white bg-sky-600 hover:bg-sky-700 rounded-lg shadow-sm transition flex items-center gap-1.5">
+          <i class="fa-solid fa-arrow-up-right-from-square"></i> Mở OERP Web
+        </a>
+      </div>
+    </div>
+
+    <!-- NAVIGATION TABS -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-slate-100 flex overflow-x-auto no-scrollbar">
+      <button onclick="switchTab('tab-overview')" id="btn-tab-overview" class="tab-btn px-4 py-3 text-xs sm:text-sm font-medium text-slate-600 hover:text-sky-600 border-b-2 border-transparent transition flex items-center gap-2 whitespace-nowrap active-tab">
+        <i class="fa-solid fa-chart-pie"></i> 1. Tổng Quan & Hiện Trạng
+      </button>
+      <button onclick="switchTab('tab-sitemap')" id="btn-tab-sitemap" class="tab-btn px-4 py-3 text-xs sm:text-sm font-medium text-slate-600 hover:text-sky-600 border-b-2 border-transparent transition flex items-center gap-2 whitespace-nowrap">
+        <i class="fa-solid fa-sitemap"></i> 2. Sitemap & 9 Phân Hệ (Ảnh thật)
+      </button>
+      <button onclick="switchTab('tab-solutions')" id="btn-tab-solutions" class="tab-btn px-4 py-3 text-xs sm:text-sm font-medium text-slate-600 hover:text-sky-600 border-b-2 border-transparent transition flex items-center gap-2 whitespace-nowrap">
+        <i class="fa-solid fa-hard-drive"></i> 3. Đề Xuất 3 Phương Án Di Dời
+      </button>
+      <button onclick="switchTab('tab-roadmap')" id="btn-tab-roadmap" class="tab-btn px-4 py-3 text-xs sm:text-sm font-medium text-slate-600 hover:text-sky-600 border-b-2 border-transparent transition flex items-center gap-2 whitespace-nowrap">
+        <i class="fa-solid fa-list-check"></i> 4. Kế Hoạch Trình Cấp Trên
+      </button>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT CONTAINER -->
+  <main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6">
+
+    <!-- KPI STATS CARDS -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+      <!-- Card 1 -->
+      <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-xs">
+        <div class="flex items-center justify-between text-slate-500 mb-2">
+          <span class="text-xs font-semibold uppercase tracking-wider">Chi phí Server hiện tại</span>
+          <span class="w-8 h-8 rounded-lg bg-amber-50 text-amber-600 flex items-center justify-center text-sm font-bold">
+            <i class="fa-solid fa-receipt"></i>
+          </span>
+        </div>
+        <div class="text-2xl font-extrabold text-slate-900">800.000 <span class="text-sm font-normal text-slate-500">đ/tháng</span></div>
+        <p class="text-xs text-amber-700 mt-1 flex items-center gap-1">
+          <i class="fa-solid fa-triangle-exclamation"></i> Đang "xài ké" server bên ngoài
+        </p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-xs">
+        <div class="flex items-center justify-between text-slate-500 mb-2">
+          <span class="text-xs font-semibold uppercase tracking-wider">Mức độ rủi ro dữ liệu</span>
+          <span class="w-8 h-8 rounded-lg bg-rose-50 text-rose-600 flex items-center justify-center text-sm font-bold">
+            <i class="fa-solid fa-shield-virus"></i>
+          </span>
+        </div>
+        <div class="text-2xl font-extrabold text-rose-600">RẤT CAO</div>
+        <p class="text-xs text-slate-500 mt-1">Không nắm quyền Admin & root server</p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-xs">
+        <div class="flex items-center justify-between text-slate-500 mb-2">
+          <span class="text-xs font-semibold uppercase tracking-wider">Hạ tầng công nghệ</span>
+          <span class="w-8 h-8 rounded-lg bg-sky-50 text-sky-600 flex items-center justify-center text-sm font-bold">
+            <i class="fa-solid fa-code"></i>
+          </span>
+        </div>
+        <div class="text-xl font-bold text-slate-900">Angular + IIS .NET</div>
+        <p class="text-xs text-sky-700 mt-1">Database: Microsoft SQL Server</p>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-xs">
+        <div class="flex items-center justify-between text-slate-500 mb-2">
+          <span class="text-xs font-semibold uppercase tracking-wider">Phương án tối ưu ngân sách</span>
+          <span class="w-8 h-8 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center text-sm font-bold">
+            <i class="fa-solid fa-server"></i>
+          </span>
+        </div>
+        <div class="text-xl font-bold text-emerald-700">0 VNĐ (Có sẵn)</div>
+        <p class="text-xs text-slate-500 mt-1">Dùng cụm HP DL360 & StoreEasy tại Chi nhánh</p>
+      </div>
+    </div>
+
+    <!-- ==================== TAB 1: TỔNG QUAN & HIỆN TRẠNG ==================== -->
+    <div id="tab-overview" class="tab-content space-y-6">
+      
+      <!-- Box phân tích hiện trạng 800k/tháng -->
+      <div class="bg-gradient-to-r from-amber-500/10 via-orange-500/5 to-transparent border border-amber-200 rounded-2xl p-5 sm:p-6 bg-white shadow-xs">
+        <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+          <div class="flex items-start gap-3.5">
+            <div class="w-12 h-12 rounded-xl bg-amber-500 text-white flex items-center justify-center text-2xl shrink-0 shadow-xs">
+              <i class="fa-solid fa-circle-exclamation"></i>
+            </div>
+            <div>
+              <h2 class="text-base sm:text-lg font-bold text-slate-900">
+                Đánh Giá Hiện Trạng: Đang Trả 800.000 đ/tháng Để "Xài Ké" Server Bên Ngoài
+              </h2>
+              <p class="text-sm text-slate-600 mt-1 leading-relaxed">
+                Với đơn giá <strong>800.000 đ/tháng (~ 9.600.000 đ/năm)</strong>, đây thực chất là chi phí thuê một gói VPS ảo hóa cấu hình trung bình (thường từ 2-4 vCPU, 4GB-8GB RAM, 50GB-100GB SSD). 
+                Tuy nhiên, vấn đề cốt lõi không nằm ở giá tiền mà nằm ở <strong>quyền sở hữu dữ liệu</strong>.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-5 pt-5 border-t border-amber-200/60">
+          <div class="bg-white/80 p-3.5 rounded-xl border border-amber-100">
+            <div class="text-xs font-bold text-rose-600 uppercase flex items-center gap-1.5 mb-1">
+              <i class="fa-solid fa-ban"></i> Rủi ro 1: Không có quyền tự chủ
+            </div>
+            <p class="text-xs text-slate-600">Đơn vị không nắm tài khoản quản trị máy chủ (Administrator/SA), không thể chủ động sao lưu, kiểm tra log hay bảo vệ khi có sự cố mạng.</p>
+          </div>
+          <div class="bg-white/80 p-3.5 rounded-xl border border-amber-100">
+            <div class="text-xs font-bold text-rose-600 uppercase flex items-center gap-1.5 mb-1">
+              <i class="fa-solid fa-database"></i> Rủi ro 2: Dữ liệu đất đai nhạy cảm
+            </div>
+            <p class="text-xs text-slate-600">Hàng vạn hồ sơ đất đai, số thửa, chủ đất, CCCD và file scan giấy tờ lưu trữ chung trên hạ tầng tư nhân, tiềm ẩn nguy cơ rò rỉ dữ liệu công dân.</p>
+          </div>
+          <div class="bg-white/80 p-3.5 rounded-xl border border-amber-100">
+            <div class="text-xs font-bold text-rose-600 uppercase flex items-center gap-1.5 mb-1">
+              <i class="fa-solid fa-handshake-slash"></i> Rủi ro 3: Bị động hoàn toàn
+            </div>
+            <p class="text-xs text-slate-600">Nếu bên đối tác gặp sự cố (mất mạng, hư phần cứng, tranh chấp hợp đồng), toàn bộ khâu tiếp nhận Một cửa của Chi nhánh sẽ bị gián đoạn tức thì.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sơ đồ kiến trúc công nghệ -->
+      <div class="bg-white rounded-2xl border border-slate-200 p-6 shadow-xs">
+        <div class="flex items-center justify-between mb-4">
+          <div>
+            <h3 class="text-base font-bold text-slate-900 flex items-center gap-2">
+              <i class="fa-solid fa-network-wired text-sky-600"></i> Bóc Tách Kiến Trúc Kỹ Thuật Hệ Thống OERP Hiện Tại
+            </h3>
+            <p class="text-xs text-slate-500">Kết quả bóc tách từ các gói tin mạng XHR/Fetch và bundle JavaScript</p>
+          </div>
+          <span class="text-xs px-2.5 py-1 bg-slate-100 text-slate-600 font-semibold rounded-lg border border-slate-200">
+            Audit 24/09/2026
+          </span>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4 text-xs">
+          <!-- Cột 1: Người dùng & CDN -->
+          <div class="border border-slate-200 rounded-xl p-4 bg-slate-50/50">
+            <div class="w-8 h-8 rounded-lg bg-sky-100 text-sky-700 flex items-center justify-center font-bold text-sm mb-3">1</div>
+            <h4 class="font-bold text-slate-900 text-sm mb-1">Cổng Truy Cập & CDN</h4>
+            <div class="space-y-1.5 text-slate-600">
+              <p>• <strong>Tên miền:</strong> <code class="text-sky-700">vpdkddtdm.vn</code></p>
+              <p>• <strong>Gateway:</strong> Cloudflare WAF/CDN</p>
+              <p>• <strong>IP máy chủ:</strong> 172.67.215.43 & 104.21.53.164</p>
+              <p>• <strong>Bảo mật:</strong> SSL/TLS Cloudflare</p>
+            </div>
+          </div>
+
+          <!-- Cột 2: Frontend -->
+          <div class="border border-slate-200 rounded-xl p-4 bg-slate-50/50">
+            <div class="w-8 h-8 rounded-lg bg-indigo-100 text-indigo-700 flex items-center justify-center font-bold text-sm mb-3">2</div>
+            <h4 class="font-bold text-slate-900 text-sm mb-1">Giao Diện (Frontend)</h4>
+            <div class="space-y-1.5 text-slate-600">
+              <p>• <strong>Framework:</strong> Angular SPA</p>
+              <p>• <strong>UI Lib:</strong> Bootstrap 4.5.2, jQuery</p>
+              <p>• <strong>Build:</strong> <code>runtime-es2015</code>, <code>main-es2015</code></p>
+              <p>• <strong>Đặc điểm:</strong> 100% chạy trên trình duyệt client, rất nhẹ, dễ clone.</p>
+            </div>
+          </div>
+
+          <!-- Cột 3: Backend API -->
+          <div class="border border-slate-200 rounded-xl p-4 bg-slate-50/50">
+            <div class="w-8 h-8 rounded-lg bg-purple-100 text-purple-700 flex items-center justify-center font-bold text-sm mb-3">3</div>
+            <h4 class="font-bold text-slate-900 text-sm mb-1">Máy Chủ API (Backend)</h4>
+            <div class="space-y-1.5 text-slate-600">
+              <p>• <strong>Subdomain:</strong> <code class="text-purple-700">apisql.vpdkddtdm.vn</code></p>
+              <p>• <strong>Web Server:</strong> Microsoft IIS</p>
+              <p>• <strong>Runtime:</strong> ASP.NET v4.0.30319</p>
+              <p>• <strong>Upload API:</strong> <code>api/UploadFile/...</code></p>
+              <p>• <strong>Vị trí:</strong> Đang đặt ké server bên thứ ba.</p>
+            </div>
+          </div>
+
+          <!-- Cột 4: Database & Storage -->
+          <div class="border border-slate-200 rounded-xl p-4 bg-slate-50/50">
+            <div class="w-8 h-8 rounded-lg bg-rose-100 text-rose-700 flex items-center justify-center font-bold text-sm mb-3">4</div>
+            <h4 class="font-bold text-slate-900 text-sm mb-1">Database & File Storage</h4>
+            <div class="space-y-1.5 text-slate-600">
+              <p>• <strong>CSDL:</strong> Microsoft SQL Server (MSSQL)</p>
+              <p>• <strong>Thủ tục:</strong> <code>A1011SELEDN</code>, <code>HT2000</code></p>
+              <p>• <strong>Lưu file:</strong> Ổ đĩa nội bộ của máy chủ đối tác.</p>
+              <p>• <strong>Rủi ro:</strong> Điểm thắt then chốt cần di dời!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== TAB 2: SITEMAP & 9 PHÂN HỆ ==================== -->
+    <div id="tab-sitemap" class="tab-content hidden space-y-6">
+      
+      <div class="bg-white rounded-2xl border border-slate-200 p-5 shadow-xs">
+        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 mb-4">
+          <div>
+            <h3 class="text-base font-bold text-slate-900 flex items-center gap-2">
+              <i class="fa-solid fa-images text-sky-600"></i> Khảo Sát Chi Tiết 9 Phân Hệ Nghiệp Vụ (Hình Ảnh Thực Tế)
+            </h3>
+            <p class="text-xs text-slate-500">Ảnh chụp màn hình thực tế thu thập từ phiên làm việc đã xác thực trong hệ thống</p>
+          </div>
+          <span class="text-xs font-semibold text-sky-700 bg-sky-50 px-3 py-1 rounded-lg border border-sky-100">
+            Tổng cộng 9 phân hệ chức năng
+          </span>
+        </div>
+
+        <!-- Grid 9 phân hệ -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+
+          <!-- 1. Tiếp nhận -->
+          <div class="bg-slate-50 rounded-xl border border-slate-200 overflow-hidden hover:shadow-md transition">
+            <div class="h-44 bg-slate-200 overflow-hidden relative cursor-pointer group" onclick="showModal('reports/pages_audit/TiepNhanHoSo.png', '1. Tiếp Nhận Hồ Sơ')">
+              <img src="reports/pages_audit/TiepNhanHoSo.png" alt="Tiếp nhận hồ sơ" class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-300">
+              <div class="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white text-xs font-semibold gap-1.5">
+                <i class="fa-solid fa-magnifying-glass-plus"></i> Xem ảnh lớn
+              </div>
+            </div>
+            <div class="p-4">
+              <div class="flex items-center justify-between mb-1.5">
+                <span class="text-[11px] font-bold text-sky-700 bg-sky-100 px-2 py-0.5 rounded">Phân hệ Một Cửa</span>
+                <span class="text-xs text-slate-400">/vptdm/tiepnhanhoso</span>
+              </div>
+              <h4 class="text-sm font-bold text-slate-900 mb-1">Tiếp Nhận Hồ Sơ Mới</h4>
+              <p class="text-xs text-slate-600 line-clamp-2">Nhập số tờ, số thửa, số nhà, diện tích. In biên nhận, xuất Word, cấu hình lịch đo đạc, tra cứu ngăn chặn giao dịch và gửi SMS tự động cho người dân.</p>
+            </div>
+          </div>
+
+          <!-- 2. Xử lý hồ sơ -->
+          <div class="bg-slate-50 rounded-xl border border-slate-200 overflow-hidden hover:shadow-md transition">
+            <div class="h-44 bg-slate-200 overflow-hidden relative cursor-pointer group" onclick="showModal('reports/pages_audit/XuLyHoSo.png', '2. Xử Lý Hồ Sơ')">
+              <img src="reports/pages_audit/XuLyHoSo.png" alt="Xử lý hồ sơ" class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-300">
+              <div class="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white text-xs font-semibold gap-1.5">
+                <i class="fa-solid fa-magnifying-glass-plus"></i> Xem ảnh lớn
+              </div>
+            </div>
+            <div class="p-4">
+              <div class="flex items-center justify-between mb-1.5">
+                <span class="text-[11px] font-bold text-indigo-700 bg-indigo-100 px-2 py-0.5 rounded">Tác Nghiệp Nội Bộ</span>
+                <span class="text-xs text-slate-400">/vptdm/xulyhoso</span>
+              </div>
+              <h4 class="text-sm font-bold text-slate-900 mb-1">Quy Trình Xử Lý & Chuyển Giao</h4>
+              <p class="text-xs text-slate-600 line-clamp-2">Phân công lịch đo đạc địa chính, chức năng tính thuế, quy trình thực hiện, chuyển hồ sơ nội bộ giữa các phòng ban, giao phiếu nhanh, xuất Excel theo dõi.</p>
+            </div>
+          </div>
+
+          <!-- 3. Trả hồ sơ -->
+          <div class="bg-slate-50 rounded-xl border border-slate-200 overflow-hidden hover:shadow-md transition">
+            <div class="h-44 bg-slate-200 overflow-hidden relative cursor-pointer group" onclick="showModal('reports/pages_audit/TraHoSo.png', '3. Trả Hồ Sơ')">
+              <img src="reports/pages_audit/TraHoSo.png" alt="Trả hồ sơ" class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-300">
+              <div class="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white text-xs font-semibold gap-1.5">
+                <i class="fa-solid fa-magnifying-glass-plus"></i> Xem ảnh lớn
+              </div>
+            </div>
+            <div class="p-4">
+              <div class="flex items-center justify-between mb-1.5">
+                <span class="text-[11px] font-bold text-emerald-700 bg-emerald-100 px-2 py-0.5 rounded">Hoàn Tất Kết Quả</span>
+                <span class="text-xs text-slate-400">/vptdm/trahoso</span>
+              </div>
+              <h4 class="text-sm font-bold text-slate-900 mb-1">Trả Hồ Sơ Cho Khách Hàng</h4>
+              <p class="text-xs text-slate-600 line-clamp-2">Bàn giao giấy chứng nhận / hồ sơ trích đo cho người dân, ký nhận kết quả, chức năng xuất và nhập (Import) danh sách trả qua file Excel.</p>
+            </div>
+          </div>
+
+          <!-- 4. Tra cứu hồ sơ -->
+          <div class="bg-slate-50 rounded-xl border border-slate-200 overflow-hidden hover:shadow-md transition">
+            <div class="h-44 bg-slate-200 overflow-hidden relative cursor-pointer group" onclick="showModal('reports/pages_audit/TraCuuHoSo.png', '4. Tra Cứu Hồ Sơ')">
+              <img src="reports/pages_audit/TraCuuHoSo.png" alt="Tra cứu hồ sơ" class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-300">
+              <div class="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white text-xs font-semibold gap-1.5">
+                <i class="fa-solid fa-magnifying-glass-plus"></i> Xem ảnh lớn
+              </div>
+            </div>
+            <div class="p-4">
+              <div class="flex items-center justify-between mb-1.5">
+                <span class="text-[11px] font-bold text-purple-700 bg-purple-100 px-2 py-0.5 rounded">Tra Cứu</span>
+                <span class="text-xs text-slate-400">/vptdm/tracuuhoso</span>
+              </div>
+              <h4 class="text-sm font-bold text-slate-900 mb-1">Tra Cứu Tiến Độ & Bản Đồ</h4>
+              <p class="text-xs text-slate-600 line-clamp-2">Tra cứu nhanh bằng mã biên nhận Một Cửa hoặc tên khách hàng/công ty. Xem danh sách ảnh scan tài liệu và bản vẽ sản phẩm đo đạc.</p>
+            </div>
+          </div>
+
+          <!-- 5. Dashboard Trích đo -->
+          <div class="bg-slate-50 rounded-xl border border-slate-200 overflow-hidden hover:shadow-md transition">
+            <div class="h-44 bg-slate-200 overflow-hidden relative cursor-pointer group" onclick="showModal('reports/pages_audit/DashboardTrichDo.png', '5. Dashboard Trích Đo')">
+              <img src="reports/pages_audit/DashboardTrichDo.png" alt="Dashboard trích đo" class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-300">
+              <div class="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white text-xs font-semibold gap-1.5">
+                <i class="fa-solid fa-magnifying-glass-plus"></i> Xem ảnh lớn
+              </div>
+            </div>
+            <div class="p-4">
+              <div class="flex items-center justify-between mb-1.5">
+                <span class="text-[11px] font-bold text-amber-700 bg-amber-100 px-2 py-0.5 rounded">Giám Sát Quy Trình</span>
+                <span class="text-xs text-slate-400">/vptdm/dashboard-trichdo</span>
+              </div>
+              <h4 class="text-sm font-bold text-slate-900 mb-1">Dashboard Luồng Xử Lý Trích Đo</h4>
+              <p class="text-xs text-slate-600 line-clamp-2">Biểu đồ giám sát tiến độ xử lý hồ sơ theo từng điểm quy trình đo đạc, kiểm soát các điểm nghẽn và thời gian xử lý của cán bộ.</p>
+            </div>
+          </div>
+
+          <!-- 6. Thống kê tổng hợp -->
+          <div class="bg-slate-50 rounded-xl border border-slate-200 overflow-hidden hover:shadow-md transition">
+            <div class="h-44 bg-slate-200 overflow-hidden relative cursor-pointer group" onclick="showModal('reports/pages_audit/ThongKeTongHop.png', '6. Thống Kê Tổng Hợp')">
+              <img src="reports/pages_audit/ThongKeTongHop.png" alt="Thống kê tổng hợp" class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-300">
+              <div class="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white text-xs font-semibold gap-1.5">
+                <i class="fa-solid fa-magnifying-glass-plus"></i> Xem ảnh lớn
+              </div>
+            </div>
+            <div class="p-4">
+              <div class="flex items-center justify-between mb-1.5">
+                <span class="text-[11px] font-bold text-cyan-700 bg-cyan-100 px-2 py-0.5 rounded">Báo Cáo Lãnh Đạo</span>
+                <span class="text-xs text-slate-400">/vptdm/thongketonghop</span>
+              </div>
+              <h4 class="text-sm font-bold text-slate-900 mb-1">Thống Kê Tổng Hợp & Xuất Excel</h4>
+              <p class="text-xs text-slate-600 line-clamp-2">Bộ lọc theo tham số báo cáo, thống kê hồ sơ đến hạn, trễ hạn, chi tiết luồng giao nộp để phục vụ báo cáo định kỳ cho Ban Giám đốc.</p>
+            </div>
+          </div>
+
+          <!-- 7. Sửa hồ sơ -->
+          <div class="bg-slate-50 rounded-xl border border-slate-200 overflow-hidden hover:shadow-md transition">
+            <div class="h-44 bg-slate-200 overflow-hidden relative cursor-pointer group" onclick="showModal('reports/pages_audit/SuaHoSo.png', '7. Sửa Hồ Sơ')">
+              <img src="reports/pages_audit/SuaHoSo.png" alt="Sửa hồ sơ" class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-300">
+              <div class="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white text-xs font-semibold gap-1.5">
+                <i class="fa-solid fa-magnifying-glass-plus"></i> Xem ảnh lớn
+              </div>
+            </div>
+            <div class="p-4">
+              <div class="flex items-center justify-between mb-1.5">
+                <span class="text-[11px] font-bold text-rose-700 bg-rose-100 px-2 py-0.5 rounded">Cập Nhật Thông Tin</span>
+                <span class="text-xs text-slate-400">/vptdm/suahoso</span>
+              </div>
+              <h4 class="text-sm font-bold text-slate-900 mb-1">Sửa Thông Tin & Tài Liệu Bổ Sung</h4>
+              <p class="text-xs text-slate-600 line-clamp-2">Điều chỉnh các thông tin nhân thân, thửa đất khi có sai sót và quản lý danh sách tài liệu khách hàng cần nộp bổ sung.</p>
+            </div>
+          </div>
+
+          <!-- 8. Quản lý trạng thái -->
+          <div class="bg-slate-50 rounded-xl border border-slate-200 overflow-hidden hover:shadow-md transition">
+            <div class="h-44 bg-slate-200 overflow-hidden relative cursor-pointer group" onclick="showModal('reports/pages_audit/QuanLyTrangThai.png', '8. Quản Lý Trạng Thái')">
+              <img src="reports/pages_audit/QuanLyTrangThai.png" alt="Quản lý trạng thái" class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-300">
+              <div class="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white text-xs font-semibold gap-1.5">
+                <i class="fa-solid fa-magnifying-glass-plus"></i> Xem ảnh lớn
+              </div>
+            </div>
+            <div class="p-4">
+              <div class="flex items-center justify-between mb-1.5">
+                <span class="text-[11px] font-bold text-slate-700 bg-slate-200 px-2 py-0.5 rounded">Quyền Admin/Tổ Trưởng</span>
+                <span class="text-xs text-slate-400">/vptdm/quanlytrangthaihoso</span>
+              </div>
+              <h4 class="text-sm font-bold text-slate-900 mb-1">Hoàn Thành, Hủy & Khôi Phục</h4>
+              <p class="text-xs text-slate-600 line-clamp-2">Điều phối vòng đời hồ sơ: cưỡng chế hoàn thành, hủy hồ sơ bị rút hoặc sai thủ tục, và khôi phục hồ sơ khi cần xử lý lại.</p>
+            </div>
+          </div>
+
+          <!-- 9. Trang chủ -->
+          <div class="bg-slate-50 rounded-xl border border-slate-200 overflow-hidden hover:shadow-md transition">
+            <div class="h-44 bg-slate-200 overflow-hidden relative cursor-pointer group" onclick="showModal('reports/pages_audit/TrangChu.png', '9. Trang Chủ Cán Bộ')">
+              <img src="reports/pages_audit/TrangChu.png" alt="Trang chủ cán bộ" class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-300">
+              <div class="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white text-xs font-semibold gap-1.5">
+                <i class="fa-solid fa-magnifying-glass-plus"></i> Xem ảnh lớn
+              </div>
+            </div>
+            <div class="p-4">
+              <div class="flex items-center justify-between mb-1.5">
+                <span class="text-[11px] font-bold text-teal-700 bg-teal-100 px-2 py-0.5 rounded">Trang Cá Nhân</span>
+                <span class="text-xs text-slate-400">/vptdm/trangchu</span>
+              </div>
+              <h4 class="text-sm font-bold text-slate-900 mb-1">Bảng Theo Dõi Công Việc Cá Nhân</h4>
+              <p class="text-xs text-slate-600 line-clamp-2">Danh sách các hồ sơ được phân bổ cho cá nhân cán bộ đang đăng nhập để xử lý trong ngày, có bộ lọc tìm kiếm nhanh.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== TAB 3: ĐỀ XUẤT 3 PHƯƠNG ÁN DI DỜI ==================== -->
+    <div id="tab-solutions" class="tab-content hidden space-y-6">
+      
+      <div class="bg-white rounded-2xl border border-slate-200 p-6 shadow-xs">
+        <div class="mb-5">
+          <h3 class="text-base sm:text-lg font-bold text-slate-900 flex items-center gap-2">
+            <i class="fa-solid fa-scale-balanced text-sky-600"></i> So Sánh Chi Tiết Các Phương Án Giải Quyết Bài Toán Server
+          </h3>
+          <p class="text-xs text-slate-500 mt-0.5">So sánh giữa hiện trạng đang xài ké (800k/tháng) và các phương án đưa về đơn vị tự quyết</p>
+        </div>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-left border-collapse text-xs sm:text-sm">
+            <thead>
+              <tr class="bg-slate-100/75 border-y border-slate-200 text-slate-700">
+                <th class="p-3.5 font-bold">Tiêu chí so sánh</th>
+                <th class="p-3.5 font-bold text-amber-700 bg-amber-50/50 border-x border-amber-200/60">Hiện trạng (800k/tháng)</th>
+                <th class="p-3.5 font-bold text-emerald-700 bg-emerald-50/50 border-r border-emerald-200/60">🌟 Phương án 1 (Khuyên dùng)<br><span class="font-normal text-xs">Thuê Cloud VNPT / Viettel riêng</span></th>
+                <th class="p-3.5 font-bold text-indigo-700">Phương án 2<br><span class="font-normal text-xs">Mua Máy chủ On-Premise</span></th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-200">
+              <!-- Chi phí -->
+              <tr>
+                <td class="p-3.5 font-semibold text-slate-800 bg-slate-50/50">1. Chi phí tài chính</td>
+                <td class="p-3.5 text-slate-700 bg-amber-50/20 border-x border-amber-200/40">
+                  <strong>800.000 đ / tháng</strong><br>
+                  <span class="text-xs text-slate-500">(~ 9.600.000 đ / năm)</span>
+                </td>
+                <td class="p-3.5 text-emerald-800 bg-emerald-50/20 border-r border-emerald-200/40">
+                  <strong>900.000 – 1.300.000 đ / tháng</strong><br>
+                  <span class="text-xs text-slate-500">Chi phí gần tương đương mức cũ!</span>
+                </td>
+                <td class="p-3.5 text-slate-700">
+                  Đầu tư ban đầu: <strong>35 - 50 triệu</strong><br>
+                  <span class="text-xs text-slate-500">Khấu hao 5-7 năm, không phí hàng tháng</span>
+                </td>
+              </tr>
+
+              <!-- Quyền sở hữu -->
+              <tr>
+                <td class="p-3.5 font-semibold text-slate-800 bg-slate-50/50">2. Chủ quyền dữ liệu</td>
+                <td class="p-3.5 text-rose-600 font-semibold bg-amber-50/20 border-x border-amber-200/40">
+                  <i class="fa-solid fa-xmark mr-1"></i> Bị động hoàn toàn<br>
+                  <span class="text-xs font-normal text-slate-500">Dữ liệu nằm trên tài khoản đối tác</span>
+                </td>
+                <td class="p-3.5 text-emerald-700 font-semibold bg-emerald-50/20 border-r border-emerald-200/40">
+                  <i class="fa-solid fa-check mr-1"></i> 100% Độc lập tự chủ<br>
+                  <span class="text-xs font-normal text-slate-500">Chi nhánh đứng tên hợp đồng & nắm quyền Root</span>
+                </td>
+                <td class="p-3.5 text-emerald-700 font-semibold">
+                  <i class="fa-solid fa-check mr-1"></i> 100% Độc lập tự chủ<br>
+                  <span class="text-xs font-normal text-slate-500">Máy chủ nằm ngay tại văn phòng Chi nhánh</span>
+                </td>
+              </tr>
+
+              <!-- Thay đổi phần mềm -->
+              <tr>
+                <td class="p-3.5 font-semibold text-slate-800 bg-slate-50/50">3. Ảnh hưởng phần mềm</td>
+                <td class="p-3.5 text-slate-700 bg-amber-50/20 border-x border-amber-200/40">Đang chạy</td>
+                <td class="p-3.5 text-emerald-700 font-semibold bg-emerald-50/20 border-r border-emerald-200/40">
+                  <i class="fa-solid fa-thumbs-up mr-1"></i> KHÔNG thay đổi phần mềm<br>
+                  <span class="text-xs font-normal text-slate-500">Bê nguyên xi bộ OERP sang cài đặt lại</span>
+                </td>
+                <td class="p-3.5 text-emerald-700 font-semibold">
+                  <i class="fa-solid fa-thumbs-up mr-1"></i> KHÔNG thay đổi phần mềm<br>
+                  <span class="text-xs font-normal text-slate-500">Bê nguyên xi bộ OERP sang cài đặt lại</span>
+                </td>
+              </tr>
+
+              <!-- Hạ tầng yêu cầu -->
+              <tr>
+                <td class="p-3.5 font-semibold text-slate-800 bg-slate-50/50">4. Yêu cầu vận hành</td>
+                <td class="p-3.5 text-slate-700 bg-amber-50/20 border-x border-amber-200/40">Đối tác lo</td>
+                <td class="p-3.5 text-slate-700 bg-emerald-50/20 border-r border-emerald-200/40">
+                  <strong>Rất nhàn</strong>: Nhà đài (Viettel/VNPT) lo nguồn điện, mạng cáp quang, điều hòa 24/7.
+                </td>
+                <td class="p-3.5 text-slate-700">
+                  Cần chuẩn bị: Phòng máy, bộ lưu điện UPS, 2 đường truyền Internet tĩnh, chống sét.
+                </td>
+              </tr>
+
+              <!-- Đánh giá tổng thể -->
+              <tr>
+                <td class="p-3.5 font-semibold text-slate-800 bg-slate-50/50">5. Kết luận khuyến nghị</td>
+                <td class="p-3.5 bg-amber-50/20 border-x border-amber-200/40">
+                  <span class="px-2 py-0.5 rounded bg-rose-100 text-rose-800 font-bold text-xs">Cần chấm dứt sớm</span>
+                </td>
+                <td class="p-3.5 bg-emerald-50/20 border-r border-emerald-200/40">
+                  <span class="px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 font-bold text-xs">Khuyến nghị chọn số 1</span>
+                </td>
+                <td class="p-3.5">
+                  <span class="px-2 py-0.5 rounded bg-slate-200 text-slate-800 font-bold text-xs">Khả thi nếu có ngân sách</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Chi tiết phương án 1 -->
+        <div class="mt-6 bg-emerald-50/60 border border-emerald-200 rounded-xl p-5">
+          <h4 class="text-sm font-bold text-emerald-900 flex items-center gap-2 mb-2">
+            <i class="fa-solid fa-star text-amber-500"></i> Tại sao Phương Án 1 (Thuê Cloud độc lập) là phương án tối ưu nhất cho bạn?
+          </h4>
+          <ul class="text-xs sm:text-sm text-slate-700 space-y-2 list-disc pl-5">
+            <li><strong>Chi phí không chênh lệch:</strong> Bạn đang trả 800k/tháng cho bên kia. Giờ lấy ngân sách đó (~1tr/tháng) ký thẳng hợp đồng với VNPT Cloud hoặc Viettel IDC. Ngân sách gần như không phát sinh thêm!</li>
+            <li><strong>Chính chủ 100%:</strong> Hợp đồng hóa đơn tài chính xuất theo tên Chi nhánh, thanh toán bằng ngân sách nhà nước hoàn toàn minh bạch.</li>
+            <li><strong>Không cần IT phần cứng:</strong> Viettel/VNPT lo 100% phần cứng, backup tự động, uptime 99.9%. Chi nhánh chỉ cần giữ mật khẩu Admin máy chủ.</li>
+            <li><strong>Công ty phần mềm chỉ làm nhiệm vụ:</strong> Sang cài đặt phần mềm và làm hợp đồng bảo trì dịch vụ, không được quyền giữ dữ liệu làm "con tin".</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== TAB 4: KẾ HOẠCH TRÌNH CẤP TRÊN ==================== -->
+    <div id="tab-roadmap" class="tab-content hidden space-y-6">
+      
+      <div class="bg-white rounded-2xl border border-slate-200 p-6 shadow-xs">
+        <div class="mb-5">
+          <h3 class="text-base sm:text-lg font-bold text-slate-900 flex items-center gap-2">
+            <i class="fa-solid fa-list-ol text-sky-600"></i> Lộ Trình 4 Bước Triển Khai Chuyển Đổi Không Làm Gián Đoạn Nghiệp Vụ
+          </h3>
+          <p class="text-xs text-slate-500 mt-0.5">Kịch bản từng bước để bạn báo cáo lãnh đạo và làm việc với công ty phần mềm</p>
+        </div>
+
+        <div class="space-y-4">
+          <!-- Bước 1 -->
+          <div class="flex items-start gap-4 p-4 rounded-xl border border-slate-200 bg-slate-50">
+            <div class="w-8 h-8 rounded-full bg-sky-600 text-white flex items-center justify-center font-bold text-sm shrink-0">1</div>
+            <div>
+              <h4 class="text-sm font-bold text-slate-900">Bước 1: Trình Lãnh Đạo Phê Duyệt Chủ Trương "Đưa Dữ Liệu Về Tự Quyết"</h4>
+              <p class="text-xs text-slate-600 mt-1">
+                Báo cáo lãnh đạo: Giữ nguyên phần mềm OERP, chuyển phần máy chủ lưu trữ (đang tốn 800k/tháng) sang thuê 1 Cloud độc lập của Viettel/VNPT đứng tên Chi nhánh. Chi phí dự kiến: ~1.000.000 đ/tháng.
+              </p>
+            </div>
+          </div>
+
+          <!-- Bước 2 -->
+          <div class="flex items-start gap-4 p-4 rounded-xl border border-slate-200 bg-slate-50">
+            <div class="w-8 h-8 rounded-full bg-indigo-600 text-white flex items-center justify-center font-bold text-sm shrink-0">2</div>
+            <div>
+              <h4 class="text-sm font-bold text-slate-900">Bước 2: Chuẩn Bị Máy Chủ Cloud Mới (1-2 Ngày)</h4>
+              <p class="text-xs text-slate-600 mt-1">
+                Khởi tạo máy chủ Cloud Windows Server 2022 (4 vCPU, 8GB-16GB RAM, 200GB SSD). Cài đặt sẵn IIS 10, .NET Framework 4.8 và SQL Server 2019 Standard.
+              </p>
+            </div>
+          </div>
+
+          <!-- Bước 3 -->
+          <div class="flex items-start gap-4 p-4 rounded-xl border border-slate-200 bg-slate-50">
+            <div class="w-8 h-8 rounded-full bg-purple-600 text-white flex items-center justify-center font-bold text-sm shrink-0">3</div>
+            <div>
+              <h4 class="text-sm font-bold text-slate-900">Bước 3: Yêu Cầu Công Ty Đối Tác Bàn Giao & Di Dời Dữ Liệu</h4>
+              <div class="text-xs text-slate-600 mt-1 space-y-1">
+                <p>• Yêu cầu xuất file sao lưu đầy đủ: <code>.bak</code> của Microsoft SQL Server.</p>
+                <p>• Yêu cầu copy toàn bộ thư mục file scan đính kèm (File Storage).</p>
+                <p>• Cung cấp gói publish của Backend API <code>apisql.vpdkddtdm.vn</code> để cài lên máy chủ mới.</p>
+                <p>• Restore dữ liệu và chạy nghiệm thu thử nghiệm (Staging) xem mọi tính năng hoạt động chuẩn.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bước 4 -->
+          <div class="flex items-start gap-4 p-4 rounded-xl border border-slate-200 bg-slate-50">
+            <div class="w-8 h-8 rounded-full bg-emerald-600 text-white flex items-center justify-center font-bold text-sm shrink-0">4</div>
+            <div>
+              <h4 class="text-sm font-bold text-slate-900">Bước 4: Chuyển Đổi DNS Chính Thức (Thực Hiện Vào Tối Thứ 6 / Cuối Tuần)</h4>
+              <p class="text-xs text-slate-600 mt-1">
+                Để không làm gián đoạn việc tiếp nhận hồ sơ Một Cửa: Trỏ DNS tên miền <code>vpdkddtdm.vn</code> và <code>apisql.vpdkddtdm.vn</code> sang IP máy chủ mới vào chiều thứ 6. Sáng thứ 2 cán bộ đến làm việc bình thường trên máy chủ mới của đơn vị!
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mẫu lời thoại báo cáo lãnh đạo -->
+        <div class="mt-6 p-4 rounded-xl bg-slate-900 text-slate-200 text-xs sm:text-sm">
+          <div class="text-amber-400 font-bold mb-2 flex items-center gap-1.5">
+            <i class="fa-solid fa-comment-dots"></i> Gợi ý câu trả lời ngắn gọn khi báo cáo Lãnh đạo:
+          </div>
+          <p class="italic text-slate-300 leading-relaxed">
+            "Dạ thưa anh/chị, em đã khảo sát kỹ toàn bộ hệ thống OERP. Phần mềm hiện tại rất chuẩn cho nghiệp vụ của chi nhánh mình nên <strong>ta giữ nguyên 100% phần mềm, không cần làm cái mới</strong>.<br><br>
+            Hiện tại mình đang trả <strong>800.000 đ/tháng</strong> để xài ké server của công ty ngoài nên dữ liệu đất đai của dân nằm bên họ, rất rủi ro. Phương án tối ưu nhất là đơn vị mình <strong>tự đứng tên thuê 1 Cloud riêng của VNPT/Viettel</strong> với mức giá tương đương (~1 triệu/tháng). Sau đó mình mời công ty phần mềm sang chuyển dữ liệu và cài đặt vào máy chủ của mình. Khi đó mình nắm chìa khóa quản trị, họ chỉ bảo trì kỹ thuật, đúng theo yêu cầu tự quyết kho lưu trữ của cấp trên ạ."
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- MODAL PREVIEW IMAGE -->
+  <div id="image-modal" class="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-xs hidden flex items-center justify-center p-4" onclick="closeModal()">
+    <div class="max-w-5xl w-full bg-white rounded-2xl overflow-hidden shadow-2xl border border-slate-700" onclick="event.stopPropagation()">
+      <div class="flex items-center justify-between p-3.5 border-b border-slate-200 bg-slate-50">
+        <h4 id="modal-title" class="text-sm font-bold text-slate-900">Chi tiết ảnh</h4>
+        <button onclick="closeModal()" class="w-8 h-8 rounded-lg bg-slate-200 text-slate-700 hover:bg-slate-300 flex items-center justify-center text-sm font-bold transition">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div class="p-2 max-h-[80vh] overflow-auto bg-slate-100 flex items-center justify-center">
+        <img id="modal-img" src="" alt="Screenshot" class="max-w-full h-auto rounded-lg shadow-xs">
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="bg-white border-t border-slate-200 py-4 text-center text-xs text-slate-500 mt-auto">
+    Báo cáo khảo sát & Đề xuất hạ tầng lưu trữ hệ thống OERP • Chi nhánh Văn phòng Đăng ký đất đai TP. Thủ Dầu Một • 2026
+  </footer>
+
+  <script>
+    function switchTab(tabId) {
+      document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
+      document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active-tab'));
+      
+      const target = document.getElementById(tabId);
+      if (target) target.classList.remove('hidden');
+      
+      const btn = document.getElementById('btn-' + tabId);
+      if (btn) btn.classList.add('active-tab');
+    }
+
+    function showModal(src, title) {
+      document.getElementById('modal-img').src = src;
+      document.getElementById('modal-title').innerText = title;
+      document.getElementById('image-modal').classList.remove('hidden');
+    }
+
+    function closeModal() {
+      document.getElementById('image-modal').classList.add('hidden');
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeModal();
+    });
+  </script>
+</body>
+</html>

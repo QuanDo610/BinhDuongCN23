@@ -1,0 +1,442 @@
+{
+  "title": "Chi nhánh văn phòng Đăng ký đất đai",
+  "url": "https://vpdkddtdm.vn/vptdm/trangchu",
+  "scripts": [
+    "https://connect.facebook.net/vi_VN/bundle/sdk.js/",
+    "https://code.jquery.com/jquery-3.5.1.min.js",
+    "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js",
+    "https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js",
+    "https://www.googletagmanager.com/gtag/js?id=G-Q2NKVMW4KP",
+    "https://vpdkddtdm.vn/1-es2015.0f6620fc8bfbc9eaf743.js",
+    "https://vpdkddtdm.vn/7-es2015.1a47cb2a23ade653b510.js",
+    "https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v9.0",
+    "https://vpdkddtdm.vn/runtime-es2015.2eabdae82252374501c4.js",
+    "https://vpdkddtdm.vn/runtime-es5.2eabdae82252374501c4.js",
+    "https://vpdkddtdm.vn/polyfills-es5.c339422c1c5092959ce2.js",
+    "https://vpdkddtdm.vn/polyfills-es2015.9866b8873cb166247404.js",
+    "https://vpdkddtdm.vn/scripts.69dd17c38f8e45e1068f.js",
+    "https://vpdkddtdm.vn/vendor-es2015.6e0b55cbcc6035e24b42.js",
+    "https://vpdkddtdm.vn/vendor-es5.6e0b55cbcc6035e24b42.js",
+    "https://vpdkddtdm.vn/main-es2015.b7d72e4d542c7df1656e.js",
+    "https://vpdkddtdm.vn/main-es5.b7d72e4d542c7df1656e.js",
+    "https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495"
+  ],
+  "menu_tree": [
+    {
+      "text": "TRANG CHỦ",
+      "href": "/vptdm",
+      "tag": "a",
+      "classes": "nav-link ng-star-inserted"
+    },
+    {
+      "text": "TIẾP NHẬN",
+      "href": "javascript:void(0);",
+      "tag": "a",
+      "classes": "nav-link dropdown-toggle"
+    },
+    {
+      "text": "Tiếp nhận hồ sơ",
+      "href": "/vptdm/tiepnhanhoso",
+      "tag": "a",
+      "classes": "dropdown-item ng-star-inserted"
+    },
+    {
+      "text": "Xử lý hồ sơ",
+      "href": "/vptdm/xulyhoso",
+      "tag": "a",
+      "classes": "dropdown-item ng-star-inserted"
+    },
+    {
+      "text": "Sửa hồ sơ",
+      "href": "/vptdm/suahoso",
+      "tag": "a",
+      "classes": "dropdown-item ng-star-inserted"
+    },
+    {
+      "text": "Trả hồ sơ",
+      "href": "/vptdm/trahoso",
+      "tag": "a",
+      "classes": "dropdown-item ng-star-inserted"
+    },
+    {
+      "text": "TRA CỨU",
+      "href": "javascript:void(0);",
+      "tag": "a",
+      "classes": "nav-link dropdown-toggle"
+    },
+    {
+      "text": "Tra cứu hồ sơ",
+      "href": "/vptdm/tracuuhoso",
+      "tag": "a",
+      "classes": "dropdown-item ng-star-inserted"
+    },
+    {
+      "text": "QUẢN LÝ HỒ SƠ",
+      "href": "javascript:void(0);",
+      "tag": "a",
+      "classes": "nav-link dropdown-toggle"
+    },
+    {
+      "text": "Tra cứu - Cập nhật tình trạng hồ sơ",
+      "href": "/vptdm/quanlytrangthaihoso",
+      "tag": "a",
+      "classes": "dropdown-item ng-star-inserted"
+    },
+    {
+      "text": "THỐNG KÊ",
+      "href": "javascript:void(0);",
+      "tag": "a",
+      "classes": "nav-link dropdown-toggle"
+    },
+    {
+      "text": "Dashboard",
+      "href": "/vptdm/dashboard-trichdo",
+      "tag": "a",
+      "classes": "dropdown-item ng-star-inserted"
+    },
+    {
+      "text": "Thống kê tổng hợp",
+      "href": "/vptdm/thongketonghop",
+      "tag": "a",
+      "classes": "dropdown-item ng-star-inserted"
+    },
+    {
+      "text": "Tải ứng dụng di động",
+      "href": "/download",
+      "tag": "a",
+      "classes": "text-primary font-weight-bold text-center"
+    }
+  ],
+  "captured_submenus": {
+    "TIẾP NHẬN": [
+      {
+        "text": "TRANG CHỦ",
+        "href": "/vptdm"
+      },
+      {
+        "text": "TIẾP NHẬN",
+        "href": "javascript:void(0);"
+      },
+      {
+        "text": "Tiếp nhận hồ sơ",
+        "href": "/vptdm/tiepnhanhoso"
+      },
+      {
+        "text": "Xử lý hồ sơ",
+        "href": "/vptdm/xulyhoso"
+      },
+      {
+        "text": "Sửa hồ sơ",
+        "href": "/vptdm/suahoso"
+      },
+      {
+        "text": "Trả hồ sơ",
+        "href": "/vptdm/trahoso"
+      },
+      {
+        "text": "TRA CỨU",
+        "href": "javascript:void(0);"
+      },
+      {
+        "text": "Tra cứu hồ sơ",
+        "href": "/vptdm/tracuuhoso"
+      },
+      {
+        "text": "QUẢN LÝ HỒ SƠ",
+        "href": "javascript:void(0);"
+      },
+      {
+        "text": "Tra cứu - Cập nhật tình trạng hồ sơ",
+        "href": "/vptdm/quanlytrangthaihoso"
+      },
+      {
+        "text": "THỐNG KÊ",
+        "href": "javascript:void(0);"
+      },
+      {
+        "text": "Dashboard",
+        "href": "/vptdm/dashboard-trichdo"
+      },
+      {
+        "text": "Thống kê tổng hợp",
+        "href": "/vptdm/thongketonghop"
+      }
+    ],
+    "TRA CỨU": [
+      {
+        "text": "TRANG CHỦ",
+        "href": "/vptdm"
+      },
+      {
+        "text": "TIẾP NHẬN",
+        "href": "javascript:void(0);"
+      },
+      {
+        "text": "Tiếp nhận hồ sơ",
+        "href": "/vptdm/tiepnhanhoso"
+      },
+      {
+        "text": "Xử lý hồ sơ",
+        "href": "/vptdm/xulyhoso"
+      },
+      {
+        "text": "Sửa hồ sơ",
+        "href": "/vptdm/suahoso"
+      },
+      {
+        "text": "Trả hồ sơ",
+        "href": "/vptdm/trahoso"
+      },
+      {
+        "text": "TRA CỨU",
+        "href": "javascript:void(0);"
+      },
+      {
+        "text": "Tra cứu hồ sơ",
+        "href": "/vptdm/tracuuhoso"
+      },
+      {
+        "text": "QUẢN LÝ HỒ SƠ",
+        "href": "javascript:void(0);"
+      },
+      {
+        "text": "Tra cứu - Cập nhật tình trạng hồ sơ",
+        "href": "/vptdm/quanlytrangthaihoso"
+      },
+      {
+        "text": "THỐNG KÊ",
+        "href": "javascript:void(0);"
+      },
+      {
+        "text": "Dashboard",
+        "href": "/vptdm/dashboard-trichdo"
+      },
+      {
+        "text": "Thống kê tổng hợp",
+        "href": "/vptdm/thongketonghop"
+      }
+    ],
+    "QUẢN LÝ HỒ SƠ": [
+      {
+        "text": "TRANG CHỦ",
+        "href": "/vptdm"
+      },
+      {
+        "text": "TIẾP NHẬN",
+        "href": "javascript:void(0);"
+      },
+      {
+        "text": "Tiếp nhận hồ sơ",
+        "href": "/vptdm/tiepnhanhoso"
+      },
+      {
+        "text": "Xử lý hồ sơ",
+        "href": "/vptdm/xulyhoso"
+      },
+      {
+        "text": "Sửa hồ sơ",
+        "href": "/vptdm/suahoso"
+      },
+      {
+        "text": "Trả hồ sơ",
+        "href": "/vptdm/trahoso"
+      },
+      {
+        "text": "TRA CỨU",
+        "href": "javascript:void(0);"
+      },
+      {
+        "text": "Tra cứu hồ sơ",
+        "href": "/vptdm/tracuuhoso"
+      },
+      {
+        "text": "QUẢN LÝ HỒ SƠ",
+        "href": "javascript:void(0);"
+      },
+      {
+        "text": "Tra cứu - Cập nhật tình trạng hồ sơ",
+        "href": "/vptdm/quanlytrangthaihoso"
+      },
+      {
+        "text": "THỐNG KÊ",
+        "href": "javascript:void(0);"
+      },
+      {
+        "text": "Dashboard",
+        "href": "/vptdm/dashboard-trichdo"
+      },
+      {
+        "text": "Thống kê tổng hợp",
+        "href": "/vptdm/thongketonghop"
+      }
+    ],
+    "THỐNG KÊ": [
+      {
+        "text": "TRANG CHỦ",
+        "href": "/vptdm"
+      },
+      {
+        "text": "TIẾP NHẬN",
+        "href": "javascript:void(0);"
+      },
+      {
+        "text": "Tiếp nhận hồ sơ",
+        "href": "/vptdm/tiepnhanhoso"
+      },
+      {
+        "text": "Xử lý hồ sơ",
+        "href": "/vptdm/xulyhoso"
+      },
+      {
+        "text": "Sửa hồ sơ",
+        "href": "/vptdm/suahoso"
+      },
+      {
+        "text": "Trả hồ sơ",
+        "href": "/vptdm/trahoso"
+      },
+      {
+        "text": "TRA CỨU",
+        "href": "javascript:void(0);"
+      },
+      {
+        "text": "Tra cứu hồ sơ",
+        "href": "/vptdm/tracuuhoso"
+      },
+      {
+        "text": "QUẢN LÝ HỒ SƠ",
+        "href": "javascript:void(0);"
+      },
+      {
+        "text": "Tra cứu - Cập nhật tình trạng hồ sơ",
+        "href": "/vptdm/quanlytrangthaihoso"
+      },
+      {
+        "text": "THỐNG KÊ",
+        "href": "javascript:void(0);"
+      },
+      {
+        "text": "Dashboard",
+        "href": "/vptdm/dashboard-trichdo"
+      },
+      {
+        "text": "Thống kê tổng hợp",
+        "href": "/vptdm/thongketonghop"
+      }
+    ]
+  },
+  "api_calls": [
+    {
+      "method": "POST",
+      "url": "https://vpdkddtdm.vn/cdn-cgi/rum?",
+      "status": 204,
+      "content_type": "text/plain"
+    },
+    {
+      "method": "POST",
+      "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-Q2NKVMW4KP&gtm=45je69m1v884363253za200zd884363253xf1&_p=1790236731493&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAAAAQ&cid=1637004492.1790236322&frm=0&pscdl=noapi&rcb=11&sr=1440x900&uaa=arm&uab=64&uafvl=HeadlessChrome%3B153.0.8010.12%7CNot_A%2520Brand%3B8.0.0.0%7CChromium%3B153.0.8010.12&uam=&uamb=0&uap=macOS&uapv=27.0.0&uaw=0&ul=en-us&_s=1&tag_exp=115938466~115938469~118897920~118897930~120213116~120385422~120469145~120469153&sid=1790236322&sct=1&seg=1&dl=https%3A%2F%2Fvpdkddtdm.vn%2Fvptdm%2Ftrangchu&dt=Chi%20nh%C3%A1nh%20v%C4%83n%20ph%C3%B2ng%20%C4%90%C4%83ng%20k%C3%BD%20%C4%91%E1%BA%A5t%20%C4%91ai&en=page_view&_ee=1&tfd=1342",
+      "status": 204,
+      "content_type": "text/plain"
+    },
+    {
+      "method": "POST",
+      "url": "https://apisql.vpdkddtdm.vn/api/ChucNang/postA1012DangNhapA",
+      "status": 200,
+      "content_type": "application/json; charset=utf-8"
+    },
+    {
+      "method": "POST",
+      "url": "https://apisql.vpdkddtdm.vn/api/ChucNang/PostHT2000ThuTucTongHop",
+      "status": 200,
+      "content_type": "application/json; charset=utf-8"
+    },
+    {
+      "method": "POST",
+      "url": "https://apisql.vpdkddtdm.vn/api/ChucNang/PostHt1031ThuocTinhXuLy",
+      "status": 200,
+      "content_type": "application/json; charset=utf-8"
+    },
+    {
+      "method": "POST",
+      "url": "https://apisql.vpdkddtdm.vn/api/ChucNang/postA1011SELEDN",
+      "status": 200,
+      "content_type": "application/json; charset=utf-8"
+    },
+    {
+      "method": "POST",
+      "url": "https://apisql.vpdkddtdm.vn/api/ChucNang/PostHT2000ThuTucTongHop",
+      "status": 200,
+      "content_type": "application/json; charset=utf-8"
+    },
+    {
+      "method": "POST",
+      "url": "https://apisql.vpdkddtdm.vn/api/ChucNang/postA1011SELEDN",
+      "status": 200,
+      "content_type": "application/json; charset=utf-8"
+    },
+    {
+      "method": "POST",
+      "url": "https://apisql.vpdkddtdm.vn/api/ChucNang/postA1012DangNhapA",
+      "status": 200,
+      "content_type": "application/json; charset=utf-8"
+    },
+    {
+      "method": "POST",
+      "url": "https://apisql.vpdkddtdm.vn/api/ChucNang/PostHT2000ThuTucTongHop",
+      "status": 200,
+      "content_type": "application/json; charset=utf-8"
+    },
+    {
+      "method": "POST",
+      "url": "https://apisql.vpdkddtdm.vn/api/ChucNang/PostHT2000ThuTucTongHop",
+      "status": 200,
+      "content_type": "application/json; charset=utf-8"
+    },
+    {
+      "method": "POST",
+      "url": "https://apisql.vpdkddtdm.vn/api/ChucNang/PostHT2000ThuTucTongHop",
+      "status": 200,
+      "content_type": "application/json; charset=utf-8"
+    },
+    {
+      "method": "POST",
+      "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-Q2NKVMW4KP&gtm=45je69m1v884363253za200zd884363253xf1&_p=1790236731493&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEAAAAQ&ae=a&cid=1637004492.1790236322&frm=0&pscdl=noapi&rcb=11&sr=1440x900&uaa=arm&uab=64&uafvl=HeadlessChrome%3B153.0.8010.12%7CNot_A%2520Brand%3B8.0.0.0%7CChromium%3B153.0.8010.12&uam=&uamb=0&uap=macOS&uapv=27.0.0&uaw=0&ul=en-us&_s=2&tag_exp=115938466~115938469~118897920~118897930~120213116~120385422~120469145~120469153&sid=1790236322&sct=1&seg=1&dl=https%3A%2F%2Fvpdkddtdm.vn%2Fvptdm%2Ftrangchu&dt=Chi%20nh%C3%A1nh%20v%C4%83n%20ph%C3%B2ng%20%C4%90%C4%83ng%20k%C3%BD%20%C4%91%E1%BA%A5t%20%C4%91ai&en=scroll&epn.percent_scrolled=90&_et=3&tfd=6346",
+      "status": 204,
+      "content_type": "text/plain"
+    },
+    {
+      "method": "POST",
+      "url": "https://apisql.vpdkddtdm.vn/api/ChucNang/PostHT2000ThuTucTongHop",
+      "status": 200,
+      "content_type": "application/json; charset=utf-8"
+    },
+    {
+      "method": "POST",
+      "url": "https://apisql.vpdkddtdm.vn/api/ChucNang/PostHT2000ThuTucTongHop",
+      "status": 200,
+      "content_type": "application/json; charset=utf-8"
+    },
+    {
+      "method": "POST",
+      "url": "https://apisql.vpdkddtdm.vn/api/ChucNang/PostHT2000ThuTucTongHop",
+      "status": 200,
+      "content_type": "application/json; charset=utf-8"
+    }
+  ],
+  "storages_keys": [
+    "AVATAR",
+    "storeUserCredential",
+    "PW_POLICY_CHECKED",
+    "PW_FORCE_CHANGE"
+  ],
+  "storages": {
+    "localStorage": {
+      "AVATAR": "assets/Hinh/Avatar/avatar.png",
+      "storeUserCredential": "{\"nhanvien_id\":45701,\"pass_qlvb\":\"d0584L0+EUh7w2g2fd+Ivg==\",\"matk\":\"tdm_nguyetbtm\",\"tennguoidung\":\"BÙI THỊ MINH NGUYỆT\",\"avatar\":null,\"nguoidung_id\":49307,\"donvi_id\":20227,\"module_id\":20,\"log_dn_id\":397099,\"hethong\":null}"
+    },
+    "sessionStorage": {
+      "PW_POLICY_CHECKED": "1",
+      "PW_FORCE_CHANGE": "{\"needs\":false,\"enforce\":false}"
+    }
+  }
+}

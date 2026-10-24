@@ -1,0 +1,29 @@
+TỜ TRÌNH
+Về việc đề xuất đăng ký sử dụng thông tin dữ liệu đo đạc và bản đồ nhằm cung cấp thông tin dữ liệu thu nhận từ mạng lưới trạm định vị vệ tinh quốc gia về dữ liệu đo đạc thời gian thực (RTK) để phục vụ công tác đo đạc, lập bản đồ.
+Kính gửi: Văn phòng đăng ký đất đai Thành phố Hồ Chí Minh.
+Căn cứ pháp lý thực hiện:
+Căn cứ Quyết định số 2637/QĐ-SNNMT-VP ngày 15/12/2025 của Sở Nông nghiệp và Môi trường Thành phố Hồ Chí Minh ban hành Quy định chức năng, nhiệm vụ, quyền hạn và cơ cấu tổ chức của Chi nhánh Văn phòng đăng ký đất đai số 23 trực thuộc Văn phòng đăng ký đất đai Thành phố Hồ Chí Minh;
+Căn cứ Thông tư số 47/2024/TT-BTC ngày 10 tháng 7 năm 2024 của Bộ Tài chính về việc Quy định mức thu, chế độ thu, nộp, miễn, quản lý và sử dụng phí khai thác, sử dụng thông tin dữ liệu đo đạc và bản đo
+Nội dung đề xuất:
+Hiện nay, Chi nhánh Văn phòng đăng ký đất đai số 23 sử dụng các thiết bị định vị GNSS/GPS RTK trong quá trình hoạt động đo đạc bản đồ. Theo đó, phương pháp đo RTK sử dụng trạm CORS quốc gia như một trạm Base cố định để thu nhận tín hiệu GNSS/GPS, từ đó đưa ra vị trí nhanh chóng, và chính xác.
+Theo quy định tại Điều 2, Thông tư số 47/2024/TT-BTC ngày 10/7/2024 của Bộ Tài chính, việc sử dụng dữ liệu đo động thời gian thực (dữ liệu tiếp nhận từ trạm CORS) để thực hiện hoạt động đo đạc phải đóng (nộp) phí với mức phí là 6.750.000 đồng/12 tháng/máy thu.
+Căn cứ nhu cầu sử dụng thiết bị định vị GNSS/GPS RTK trong quá trình hoạt động đo đạc bản đồ, Chi nhánh Văn phòng đăng ký đất đai số 23 xác định có 04 thiết bị sử dụng trạm CORS gần đến thời gian gia hạn với tổng kinh phí đăng ký sử dụng dữ liệu: 27.000.000 đồng (bằng chữ: Hai mươi bảy triệu đồng chẵn).
+* Cụ thể:
+Chi nhánh Văn phòng Đăng ký đất đai số 23 đề nghị Văn phòng Đăng ký đất đai Thành phố Hồ Chí Minh xem xét, chỉ đạo việc đăng ký sử dụng thông tin dữ liệu đo đạc và bản đồ nhằm cung cấp thông tin dữ liệu thu nhận từ mạng lưới trạm định vị vệ tinh quốc gia về dữ liệu đo đạc thời gian thực (RTK) để phục vụ công tác đo đạc, lập bản đồ.
+Rất mong sớm nhận được sự quan tâm, xem xét của Văn phòng đăng ký đất đai Thành phố ./.
+
+=== [DANH SÁCH BẢNG BIỂU TRONG TÀI LIỆU] ===
+
+--- Bảng số 1 (1 hàng, 2 cột) ---
+VĂN PHÒNG ĐĂNG KÝ ĐẤT ĐAI THÀNH PHỐ HỒ CHÍ MINH CHI NHÁNH SỐ 23  So:            /TTr-CN23 | CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM Độc lập - Tự do - Hạnh phúc               Thủ Dầu Một, ngày      tháng      năm 2026
+
+--- Bảng số 2 (6 hàng, 4 cột) ---
+STT | Loại máy | Số máy (Serial number) | Đơn giá (đồng/12 tháng)
+1 | Trimble DA2 | 6430100158 | 6.750.000
+2 | Trimble DA2 | 6416100243 | 6.750.000
+3 | Trimble DA2 | 6340100189 | 6.750.000
+4 | Trimble DA2 | 6416100009 | 6.750.000
+ | Tổng | 27.000.000
+
+--- Bảng số 3 (1 hàng, 2 cột) ---
+Nơi nhận:  -Như trên;  -Phòng Kỹ thuật địa chính và Lưu trữ;  -Phòng Hành chính – Tổng hợp;  -Phòng Kế hoạch - Tài chính;  -BGĐ Chi nhánh;  -Lưu: VT. | KT. GIÁM ĐỐC              PHÓ GIÁM ĐỐC                                   Nguyễn Thị Lệ Hằng

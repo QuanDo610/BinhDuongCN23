@@ -1,0 +1,822 @@
+# -*- coding: utf-8 -*-
+html_content = """<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bảng Tiến Độ & Quản Trị Hệ Thống IT - Chi Nhánh 23</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- KaTeX CSS & JS for LaTeX Math Rendering -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"></script>
+  
+  <!-- Marked.js for Markdown Parsing -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f8fafc;
+      color: #0f172a;
+    }
+    
+    /* Markdown body styles in Light Mode */
+    .markdown-body {
+      color: #334155;
+      line-height: 1.75;
+      font-size: 0.925rem;
+    }
+    .markdown-body h1, .markdown-body h2, .markdown-body h3, .markdown-body h4 {
+      color: #0f172a;
+      font-weight: 700;
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
+    }
+    .markdown-body h1 {
+      font-size: 1.6rem;
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 0.5rem;
+      color: #0369a1;
+    }
+    .markdown-body h2 {
+      font-size: 1.3rem;
+      border-bottom: 1px solid #e2e8f0;
+      padding-bottom: 0.4rem;
+      color: #0284c7;
+    }
+    .markdown-body h3 {
+      font-size: 1.1rem;
+      color: #0369a1;
+    }
+    .markdown-body table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.25rem 0;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+    }
+    .markdown-body th {
+      background-color: #f1f5f9;
+      color: #0f172a;
+      font-weight: 600;
+      border: 1px solid #cbd5e1;
+      padding: 9px 12px;
+      text-align: left;
+    }
+    .markdown-body td {
+      border: 1px solid #e2e8f0;
+      padding: 9px 12px;
+      text-align: left;
+      color: #334155;
+    }
+    .markdown-body tr:nth-child(even) {
+      background-color: #f8fafc;
+    }
+    .markdown-body tr:hover {
+      background-color: #f0f9ff;
+    }
+    .markdown-body blockquote {
+      border-left: 4px solid #0284c7;
+      padding-left: 1rem;
+      margin: 1.25rem 0;
+      background-color: #f0f9ff;
+      border-radius: 0 8px 8px 0;
+      padding-top: 0.75rem;
+      padding-bottom: 0.75rem;
+      color: #0369a1;
+    }
+    .markdown-body code {
+      background-color: #f1f5f9;
+      color: #e11d48;
+      padding: 0.2rem 0.45rem;
+      border-radius: 4px;
+      font-size: 0.875em;
+      border: 1px solid #e2e8f0;
+    }
+    .markdown-body pre {
+      background-color: #0f172a;
+      color: #f8fafc;
+      padding: 1rem;
+      border-radius: 8px;
+      overflow-x: auto;
+    }
+    .markdown-body pre code {
+      background-color: transparent;
+      color: inherit;
+      border: none;
+      padding: 0;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col antialiased bg-slate-50 text-slate-900">
+
+  <!-- Top Header Navigation -->
+  <header class="bg-white border-b border-slate-200 sticky top-0 z-50 shadow-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex flex-col lg:flex-row lg:items-center justify-between gap-3">
+      
+      <!-- Brand & Title -->
+      <div class="flex items-center space-x-3.5">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-sky-600 to-indigo-600 flex items-center justify-center text-white shadow-md shadow-sky-500/20 flex-shrink-0">
+          <i class="fa-solid fa-server text-base"></i>
+        </div>
+        <div>
+          <h1 class="text-base sm:text-lg font-bold text-slate-900 tracking-tight leading-snug">IT WORKFLOW & PROGRESS DASHBOARD</h1>
+          <p class="text-xs font-medium text-slate-500">VĂN PHÒNG ĐĂNG KÝ ĐẤT ĐAI TP.HCM - CHI NHÁNH SỐ 23</p>
+        </div>
+      </div>
+
+      <!-- Quick Status Badges & Quick Links -->
+      <div class="flex flex-wrap items-center gap-2">
+        <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium bg-emerald-50 text-emerald-800 border border-emerald-300">
+          <span class="w-2 h-2 mr-1.5 bg-emerald-500 rounded-full animate-pulse"></span>
+          Thử việc (03/09 - 03/11/2026)
+        </span>
+        <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium bg-sky-50 text-sky-800 border border-sky-300">
+          <i class="fa-solid fa-calendar-check text-sky-600 mr-1.5"></i>
+          Hẹn 8h30 16/09 đón Chuyên gia TP.HCM
+        </span>
+        
+        <a href="document_viewer.html" class="inline-flex items-center px-3 py-1 rounded-lg text-xs font-semibold bg-indigo-600 hover:bg-indigo-700 text-white shadow-xs transition">
+          <i class="fa-solid fa-folder-open mr-1.5"></i> Kho Tài Liệu Gốc (11 Files)
+        </a>
+        <a href="print_report.html" target="_blank" class="inline-flex items-center px-3 py-1 rounded-lg text-xs font-semibold bg-slate-800 hover:bg-slate-900 text-white shadow-xs transition">
+          <i class="fa-solid fa-print mr-1.5"></i> Xuất PDF (Print)
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 flex-1 w-full">
+    
+    <!-- Top Alert Banners: Event 16/09 & Risk Shield 2162 -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-5 mb-8">
+      
+      <!-- Event 16/09 Box -->
+      <div class="lg:col-span-2 p-5 sm:p-6 rounded-2xl bg-gradient-to-br from-sky-50 via-white to-blue-50 border border-sky-200 shadow-sm flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between gap-3 mb-2.5">
+            <span class="inline-flex items-center gap-1.5 px-2.5 py-1 text-[11px] font-bold uppercase rounded-md bg-sky-100 text-sky-800 border border-sky-300">
+              <i class="fa-solid fa-bell text-sky-600"></i> Mới nhận hôm nay: Thư mời 10/09/2026
+            </span>
+            <span class="text-xs font-bold text-sky-700 bg-sky-100/70 px-2 py-0.5 rounded border border-sky-200 hidden sm:inline-block">
+              08h30 sáng 16/09/2026
+            </span>
+          </div>
+
+          <h2 class="text-base sm:text-lg font-bold text-slate-900 mt-1">
+            Lịch làm việc với chuyên gia VPĐKĐĐ TP.HCM (Cơ sở 2)
+          </h2>
+          
+          <p class="text-xs sm:text-sm text-slate-700 mt-2.5 leading-relaxed">
+            Phó Giám đốc Nguyễn Thị Lệ Hằng đã ký Thư mời mời ông <strong class="text-slate-900 font-bold">Phùng Vương Quốc</strong> xuống Chi nhánh 23 vào <strong class="text-sky-800 bg-sky-100/60 px-1 py-0.5 rounded font-bold">08h30 sáng thứ Tư (16/09/2026)</strong> để khảo sát hệ thống mạng, máy chủ và trực tiếp hướng dẫn bàn giao nhiệm vụ IT cho bạn!
+          </p>
+        </div>
+
+        <div class="mt-4 pt-3 border-t border-sky-100 flex flex-wrap items-center justify-between gap-2">
+          <span class="text-xs text-slate-500">Địa điểm: 358 Huỳnh Văn Cù, P. Thủ Dầu Một</span>
+          <button onclick="switchTab('tab-event')" class="px-3.5 py-1.5 text-xs font-semibold bg-sky-600 hover:bg-sky-700 text-white rounded-lg transition shadow-xs flex items-center gap-1.5">
+            Chi tiết chuẩn bị đón tiếp <i class="fa-solid fa-arrow-right text-[10px]"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Risk Shield Box -->
+      <div class="p-5 sm:p-6 rounded-2xl bg-gradient-to-br from-amber-50 via-white to-orange-50 border border-amber-200 shadow-sm flex flex-col justify-between">
+        <div>
+          <div class="flex items-center space-x-2 text-amber-900 text-xs font-bold uppercase tracking-wide mb-2.5">
+            <i class="fa-solid fa-shield-halved text-amber-600 text-sm"></i>
+            <span>Căn cứ Công văn 2162</span>
+          </div>
+          
+          <h2 class="text-base font-bold text-slate-900 mt-1">
+            Lá Chắn Bảo Vệ Pháp Lý IT
+          </h2>
+
+          <p class="text-xs sm:text-sm text-slate-700 mt-2 leading-relaxed">
+            Hệ thống 80 máy đối mặt rủi ro Kaspersky hết hạn (23/03) & FortiGate hết license (30/09). Văn bản 2162/CN23-HCTH đã chính thức kiến nghị hỗ trợ chuyên môn cho bạn.
+          </p>
+        </div>
+
+        <div class="mt-4 pt-3 border-t border-amber-200 flex items-center justify-between text-xs">
+          <span class="text-slate-600">Trạng thái: <strong class="text-emerald-700 font-semibold">Đã được bảo vệ</strong></span>
+          <button onclick="switchTab('tab-risk')" class="text-sky-700 font-semibold hover:text-sky-900 hover:underline flex items-center gap-1">
+            Ma trận rủi ro <i class="fa-solid fa-chevron-right text-[10px]"></i>
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Navigation Tabs Bar -->
+    <div class="flex border-b border-slate-200 mb-6 space-x-2 overflow-x-auto pb-px">
+      <button onclick="switchTab('tab-overview')" id="btn-tab-overview" class="tab-btn px-4 py-2.5 text-sm font-semibold border-b-2 border-sky-600 text-sky-700 bg-sky-50/50 rounded-t-lg flex items-center space-x-2 whitespace-nowrap">
+        <i class="fa-solid fa-chart-pie"></i><span>Tổng Quan & Số Liệu</span>
+      </button>
+      <button onclick="switchTab('tab-inventory')" id="btn-tab-inventory" class="tab-btn px-4 py-2.5 text-sm font-semibold border-b-2 border-transparent text-slate-600 hover:text-sky-700 hover:border-slate-300 flex items-center space-x-2 whitespace-nowrap transition">
+        <i class="fa-solid fa-boxes-packing"></i><span>Kiểm Kê: Đang Dùng vs Thanh Lý</span>
+      </button>
+      <button onclick="switchTab('tab-network')" id="btn-tab-network" class="tab-btn px-4 py-2.5 text-sm font-semibold border-b-2 border-transparent text-slate-600 hover:text-sky-700 hover:border-slate-300 flex items-center space-x-2 whitespace-nowrap transition">
+        <i class="fa-solid fa-server"></i><span>Phòng Server & IP</span>
+      </button>
+      <button onclick="switchTab('tab-toner')" id="btn-tab-toner" class="tab-btn px-4 py-2.5 text-sm font-semibold border-b-2 border-transparent text-slate-600 hover:text-sky-700 hover:border-slate-300 flex items-center space-x-2 whitespace-nowrap transition">
+        <i class="fa-solid fa-print"></i><span>Tra Cứu Mã Mực In</span>
+      </button>
+      <button onclick="switchTab('tab-event')" id="btn-tab-event" class="tab-btn px-4 py-2.5 text-sm font-semibold border-b-2 border-transparent text-slate-600 hover:text-sky-700 hover:border-slate-300 flex items-center space-x-2 whitespace-nowrap transition">
+        <i class="fa-solid fa-handshake"></i><span>Buổi Làm Việc 16/09</span>
+      </button>
+      <button onclick="switchTab('tab-risk')" id="btn-tab-risk" class="tab-btn px-4 py-2.5 text-sm font-semibold border-b-2 border-transparent text-slate-600 hover:text-sky-700 hover:border-slate-300 flex items-center space-x-2 whitespace-nowrap transition">
+        <i class="fa-solid fa-shield-virus"></i><span>Rủi Ro & Pháp Lý</span>
+      </button>
+      <button onclick="switchTab('tab-markdown')" id="btn-tab-markdown" class="tab-btn px-4 py-2.5 text-sm font-semibold border-b-2 border-transparent text-slate-600 hover:text-sky-700 hover:border-slate-300 flex items-center space-x-2 whitespace-nowrap transition">
+        <i class="fa-brands fa-markdown"></i><span>Trình Xem Markdown & LaTeX</span>
+      </button>
+    </div>
+
+    <!-- TAB 1: OVERVIEW -->
+    <section id="tab-overview" class="tab-content block space-y-6">
+      
+      <!-- Metric Cards -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        
+        <div class="bg-white border border-slate-200 rounded-xl p-5 shadow-xs">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-semibold uppercase tracking-wider text-slate-500">Máy Trạm Đang Dùng</span>
+            <span class="w-9 h-9 rounded-lg bg-sky-100 text-sky-600 flex items-center justify-center"><i class="fa-solid fa-desktop"></i></span>
+          </div>
+          <div class="mt-2 text-2xl sm:text-3xl font-bold text-slate-900">75 PC</div>
+          <p class="text-xs text-slate-500 mt-1">67 máy đã gán mã định danh H09</p>
+        </div>
+
+        <div class="bg-white border border-slate-200 rounded-xl p-5 shadow-xs">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-semibold uppercase tracking-wider text-slate-500">Máy Tính Chờ Thanh Lý</span>
+            <span class="w-9 h-9 rounded-lg bg-rose-100 text-rose-600 flex items-center justify-center"><i class="fa-solid fa-trash-can"></i></span>
+          </div>
+          <div class="mt-2 text-2xl sm:text-3xl font-bold text-rose-600">55 PC + 2 Laptop</div>
+          <p class="text-xs text-slate-500 mt-1">Nằm trong danh mục thanh lý 2026</p>
+        </div>
+
+        <div class="bg-white border border-slate-200 rounded-xl p-5 shadow-xs">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-semibold uppercase tracking-wider text-slate-500">Máy In Đang Dùng</span>
+            <span class="w-9 h-9 rounded-lg bg-amber-100 text-amber-600 flex items-center justify-center"><i class="fa-solid fa-print"></i></span>
+          </div>
+          <div class="mt-2 text-2xl sm:text-3xl font-bold text-slate-900">38 Máy</div>
+          <p class="text-xs text-slate-500 mt-1">15 A3 + 23 A4 (15 máy chờ thanh lý)</p>
+        </div>
+
+        <div class="bg-white border border-slate-200 rounded-xl p-5 shadow-xs">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-semibold uppercase tracking-wider text-slate-500">Máy Scan & Photo</span>
+            <span class="w-9 h-9 rounded-lg bg-emerald-100 text-emerald-600 flex items-center justify-center"><i class="fa-solid fa-copy"></i></span>
+          </div>
+          <div class="mt-2 text-2xl sm:text-3xl font-bold text-slate-900">11 Scan + 3 Photo</div>
+          <p class="text-xs text-slate-500 mt-1">9 Scan A3 chuyên số hóa hồ sơ địa chính</p>
+        </div>
+      </div>
+
+      <!-- Personnel & Handover Card -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        
+        <!-- Nhân sự -->
+        <div class="bg-white border border-slate-200 rounded-xl p-6 shadow-xs">
+          <h3 class="text-base font-bold text-slate-900 flex items-center mb-4">
+            <i class="fa-solid fa-id-card text-sky-600 mr-2.5"></i> Hồ Sơ Công Tác Nhân Sự IT
+          </h3>
+          <div class="space-y-3 text-sm">
+            <div class="flex justify-between items-center py-2.5 border-b border-slate-100">
+              <span class="text-slate-500">Họ và tên nhân sự:</span>
+              <span class="font-semibold text-slate-900">Đỗ Trọng Minh Quân (06/10/1999)</span>
+            </div>
+            <div class="flex justify-between items-center py-2.5 border-b border-slate-100">
+              <span class="text-slate-500">Chuyên môn đào tạo:</span>
+              <span class="font-semibold text-sky-700 bg-sky-50 px-2 py-0.5 rounded">Kỹ sư phần mềm</span>
+            </div>
+            <div class="flex justify-between items-center py-2.5 border-b border-slate-100">
+              <span class="text-slate-500">Địa điểm & Đơn vị:</span>
+              <span class="font-medium text-slate-800">Chi nhánh 23 (358 Huỳnh Văn Cù, P. Thủ Dầu Một)</span>
+            </div>
+            <div class="flex justify-between items-center py-2.5 border-b border-slate-100">
+              <span class="text-slate-500">Người bàn giao:</span>
+              <span class="font-medium text-slate-800">Lý Minh Tân (Nghỉ việc từ 01/10/2026)</span>
+            </div>
+            <div class="flex justify-between items-center py-2.5">
+              <span class="text-slate-500">Chuyên viên TP.HCM hỗ trợ:</span>
+              <span class="font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded">Phùng Vương Quốc (Làm việc từ 16/09/2026)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hồ sơ văn bản đã tiếp nhận -->
+        <div class="bg-white border border-slate-200 rounded-xl p-6 shadow-xs">
+          <h3 class="text-base font-bold text-slate-900 flex items-center mb-4">
+            <i class="fa-solid fa-folder-tree text-indigo-600 mr-2.5"></i> Hồ Sơ & Văn Bản Đã Tiếp Nhận
+          </h3>
+          <ul class="space-y-2.5 text-xs">
+            <li class="p-3 rounded-lg bg-slate-50 border border-slate-200 flex justify-between items-center hover:bg-sky-50/50 transition">
+              <div>
+                <p class="font-bold text-slate-900">Thư mời làm việc (10/09/2026)</p>
+                <p class="text-slate-500 mt-0.5">Mời anh Phùng Vương Quốc hỗ trợ bàn giao ngày 16/09/2026</p>
+              </div>
+              <span class="px-2.5 py-1 rounded bg-sky-100 text-sky-800 border border-sky-300 font-semibold font-mono">TM_1.PDF</span>
+            </li>
+            <li class="p-3 rounded-lg bg-slate-50 border border-slate-200 flex justify-between items-center hover:bg-sky-50/50 transition">
+              <div>
+                <p class="font-bold text-slate-900">Công văn số 2162/CN23-HCTH (09/09/2026)</p>
+                <p class="text-slate-500 mt-0.5">Báo cáo rủi ro bản quyền & đề nghị cử nhân sự kèm cặp</p>
+              </div>
+              <span class="px-2.5 py-1 rounded bg-rose-100 text-rose-800 border border-rose-300 font-semibold font-mono">2162.signed.pdf</span>
+            </li>
+            <li class="p-3 rounded-lg bg-slate-50 border border-slate-200 flex justify-between items-center hover:bg-sky-50/50 transition">
+              <div>
+                <p class="font-bold text-slate-900">Biên bản bàn giao IT (09/09/2026)</p>
+                <p class="text-slate-500 mt-0.5">3 Server, 1 NAS, 1 FortiGate, kho linh kiện và 8 ổ cứng</p>
+              </div>
+              <span class="px-2.5 py-1 rounded bg-emerald-100 text-emerald-800 border border-emerald-300 font-semibold font-mono">BB Bàn Giao</span>
+            </li>
+            <li class="p-3 rounded-lg bg-slate-50 border border-slate-200 flex justify-between items-center hover:bg-sky-50/50 transition">
+              <div>
+                <p class="font-bold text-slate-900">Bảng kê thiết bị đang dùng & thanh lý 2026</p>
+                <p class="text-slate-500 mt-0.5">Phân định 75 PC sống vs 55 PC thanh lý, 67 mã H09, mã mực</p>
+              </div>
+              <span class="px-2.5 py-1 rounded bg-amber-100 text-amber-900 border border-amber-300 font-semibold font-mono">4 File Excel/Docx</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 2: INVENTORY (ĐANG DÙNG VS THANH LÝ) -->
+    <section id="tab-inventory" class="tab-content hidden space-y-6">
+      <div class="bg-white border border-slate-200 rounded-xl p-6 shadow-xs">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between pb-4 border-b border-slate-200 mb-4 gap-2">
+          <div>
+            <h3 class="text-base font-bold text-slate-900 flex items-center">
+              <i class="fa-solid fa-scale-balanced text-sky-600 mr-2.5"></i> Bảng Đối Soát Tài Sản: Đang Sử Dụng vs Cần Thanh Lý 2026
+            </h3>
+            <p class="text-xs text-slate-500 mt-1">Theo các file Excel và Word kiểm kê tài sản nhận ngày 10/09/2026</p>
+          </div>
+          <span class="px-2.5 py-1 rounded-md text-xs font-semibold bg-slate-100 text-slate-700 border border-slate-300 self-start sm:self-auto">
+            Số lượng thanh lý: Số thuần túy
+          </span>
+        </div>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm text-left border-collapse">
+            <thead class="text-xs uppercase bg-slate-50 text-slate-700 border-b border-slate-200 font-bold">
+              <tr>
+                <th class="py-3.5 px-4">Loại Thiết Bị</th>
+                <th class="py-3.5 px-4 text-emerald-700">Đang Sử Dụng</th>
+                <th class="py-3.5 px-4 text-rose-700">Cần Thanh Lý</th>
+                <th class="py-3.5 px-4 text-slate-800">Tổng Kiểm Đếm</th>
+                <th class="py-3.5 px-4">Ghi Chú Chi Tiết</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100 text-slate-700">
+              <tr class="hover:bg-slate-50/80 transition">
+                <td class="py-3.5 px-4 font-semibold text-slate-900 flex items-center">
+                  <i class="fa-solid fa-desktop text-slate-400 mr-2.5"></i> Máy vi tính để bàn (PC)
+                </td>
+                <td class="py-3.5 px-4 font-bold text-emerald-700 font-mono text-base">75</td>
+                <td class="py-3.5 px-4 font-bold text-rose-700 font-mono text-base">55</td>
+                <td class="py-3.5 px-4 font-mono font-bold text-slate-900">130</td>
+                <td class="py-3.5 px-4 text-xs text-slate-600">67 máy đã gán mã định danh H09. 55 máy nằm trong danh mục số lượng cần thanh lý năm 2026.</td>
+              </tr>
+              <tr class="hover:bg-slate-50/80 transition">
+                <td class="py-3.5 px-4 font-semibold text-slate-900 flex items-center">
+                  <i class="fa-solid fa-laptop text-slate-400 mr-2.5"></i> Máy vi tính xách tay (Laptop)
+                </td>
+                <td class="py-3.5 px-4 text-slate-400 font-mono">0</td>
+                <td class="py-3.5 px-4 font-bold text-rose-700 font-mono text-base">2</td>
+                <td class="py-3.5 px-4 font-mono font-bold text-slate-900">2</td>
+                <td class="py-3.5 px-4 text-xs text-slate-600">Nằm trong danh mục số lượng cần thanh lý năm 2026.</td>
+              </tr>
+              <tr class="hover:bg-slate-50/80 transition">
+                <td class="py-3.5 px-4 font-semibold text-slate-900 flex items-center">
+                  <i class="fa-solid fa-server text-slate-400 mr-2.5"></i> Máy chủ vật lý (Server)
+                </td>
+                <td class="py-3.5 px-4 font-bold text-emerald-700 font-mono text-base">3</td>
+                <td class="py-3.5 px-4 text-slate-400 font-mono">0</td>
+                <td class="py-3.5 px-4 font-mono font-bold text-slate-900">3</td>
+                <td class="py-3.5 px-4 text-xs text-slate-600">HP DL360 Gen8, HP Gen9, StoreEasy 1460 (kèm 1 NAS Synology DS423+).</td>
+              </tr>
+              <tr class="hover:bg-slate-50/80 transition">
+                <td class="py-3.5 px-4 font-semibold text-slate-900 flex items-center">
+                  <i class="fa-solid fa-print text-slate-400 mr-2.5"></i> Máy in khổ A3
+                </td>
+                <td class="py-3.5 px-4 font-bold text-emerald-700 font-mono text-base">15</td>
+                <td class="py-3.5 px-4 font-bold text-rose-700 font-mono text-base">9</td>
+                <td class="py-3.5 px-4 font-mono font-bold text-slate-900">24</td>
+                <td class="py-3.5 px-4 text-xs text-slate-600">Dòng HP LaserJet Pro M706n dùng mực HP 93A (có 1 máy mới dự phòng trong kho).</td>
+              </tr>
+              <tr class="hover:bg-slate-50/80 transition">
+                <td class="py-3.5 px-4 font-semibold text-slate-900 flex items-center">
+                  <i class="fa-solid fa-print text-slate-400 mr-2.5"></i> Máy in khổ A4
+                </td>
+                <td class="py-3.5 px-4 font-bold text-emerald-700 font-mono text-base">23</td>
+                <td class="py-3.5 px-4 font-bold text-rose-700 font-mono text-base">6</td>
+                <td class="py-3.5 px-4 font-mono font-bold text-slate-900">29</td>
+                <td class="py-3.5 px-4 text-xs text-slate-600">HP 402d, 404dn, 4003dn, P2035, Brother (phân bổ cả ở các phường một cửa).</td>
+              </tr>
+              <tr class="hover:bg-slate-50/80 transition">
+                <td class="py-3.5 px-4 font-semibold text-slate-900 flex items-center">
+                  <i class="fa-solid fa-camera text-slate-400 mr-2.5"></i> Máy quét (Scan) A3
+                </td>
+                <td class="py-3.5 px-4 font-bold text-emerald-700 font-mono text-base">9</td>
+                <td class="py-3.5 px-4 font-bold text-rose-700 font-mono text-base">1</td>
+                <td class="py-3.5 px-4 font-mono font-bold text-slate-900">10</td>
+                <td class="py-3.5 px-4 text-xs text-slate-600">Trang bị chuyên dụng cho số hóa hồ sơ bản đồ và địa chính.</td>
+              </tr>
+              <tr class="hover:bg-slate-50/80 transition">
+                <td class="py-3.5 px-4 font-semibold text-slate-900 flex items-center">
+                  <i class="fa-solid fa-camera text-slate-400 mr-2.5"></i> Máy quét (Scan) A4
+                </td>
+                <td class="py-3.5 px-4 font-bold text-emerald-700 font-mono text-base">2</td>
+                <td class="py-3.5 px-4 font-bold text-rose-700 font-mono text-base">2</td>
+                <td class="py-3.5 px-4 font-mono font-bold text-slate-900">4</td>
+                <td class="py-3.5 px-4 text-xs text-slate-600">Scan hồ sơ tiếp nhận nhanh.</td>
+              </tr>
+              <tr class="hover:bg-slate-50/80 transition">
+                <td class="py-3.5 px-4 font-semibold text-slate-900 flex items-center">
+                  <i class="fa-solid fa-copy text-slate-400 mr-2.5"></i> Máy Photocopy
+                </td>
+                <td class="py-3.5 px-4 font-bold text-emerald-700 font-mono text-base">3</td>
+                <td class="py-3.5 px-4 font-bold text-rose-700 font-mono text-base">7</td>
+                <td class="py-3.5 px-4 font-mono font-bold text-slate-900">10</td>
+                <td class="py-3.5 px-4 text-xs text-slate-600">01 Ricoh IM3000 + 02 Konica Minolta Bizhub 367. 7 máy nằm trong danh mục thanh lý 2026.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 3: SERVER & NETWORK -->
+    <section id="tab-network" class="tab-content hidden space-y-6">
+      <div class="bg-white border border-slate-200 rounded-xl p-6 shadow-xs">
+        <h3 class="text-base font-bold text-slate-900 mb-2 flex items-center">
+          <i class="fa-solid fa-network-wired text-sky-600 mr-2.5"></i> Địa Chỉ IP & Cấu Trúc Dữ Liệu Phòng Server
+        </h3>
+        <p class="text-xs text-slate-500 mb-4">Các thông số vận hành cốt lõi bàn giao từ ông Lý Minh Tân ngày 09/09/2026:</p>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm text-left border-collapse">
+            <thead class="text-xs uppercase bg-slate-50 text-slate-700 border-b border-slate-200 font-bold">
+              <tr>
+                <th class="py-3.5 px-4">Thiết Bị / Model</th>
+                <th class="py-3.5 px-4">Địa chỉ IP</th>
+                <th class="py-3.5 px-4">Thư mục & Dữ liệu quản trị</th>
+                <th class="py-3.5 px-4">Tình trạng</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100 text-slate-700">
+              <tr class="hover:bg-slate-50/80 transition">
+                <td class="py-3.5 px-4 font-semibold text-slate-900">Server 1 (HP DL360 Gen8)</td>
+                <td class="py-3.5 px-4 font-mono text-sky-700 font-bold">10.17.2.252</td>
+                <td class="py-3.5 px-4">Chạy DNS Server, lưu dữ liệu hồ sơ quét cũ, hồ sơ giao dịch bảo đảm.</td>
+                <td class="py-3.5 px-4"><span class="px-2.5 py-1 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200">Hoạt động</span></td>
+              </tr>
+              <tr class="hover:bg-slate-50/80 transition">
+                <td class="py-3.5 px-4 font-semibold text-slate-900">Server 2 (HP DL360 Gen9)</td>
+                <td class="py-3.5 px-4 font-mono text-sky-700 font-bold">10.17.2.125</td>
+                <td class="py-3.5 px-4">Thư mục <code>Chung</code> (ổ F:), <code>HSQ-TDM</code> (ổ G:), <code>Banve DD</code> (ổ H:).</td>
+                <td class="py-3.5 px-4"><span class="px-2.5 py-1 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200">Hoạt động</span></td>
+              </tr>
+              <tr class="hover:bg-slate-50/80 transition">
+                <td class="py-3.5 px-4 font-semibold text-slate-900">Server 3 (StoreEasy 1460)</td>
+                <td class="py-3.5 px-4 font-mono text-sky-700 font-bold">10.17.2.100</td>
+                <td class="py-3.5 px-4">Thư mục <code>Dataweb</code> (Banve DD & HSQ-TDM); file GCN của phần mềm HSQ.</td>
+                <td class="py-3.5 px-4"><span class="px-2.5 py-1 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200">Hoạt động</span></td>
+              </tr>
+              <tr class="hover:bg-slate-50/80 transition">
+                <td class="py-3.5 px-4 font-semibold text-slate-900">Tường lửa FortiGate 61F</td>
+                <td class="py-3.5 px-4 font-mono text-amber-700 font-bold">192.168.1.254</td>
+                <td class="py-3.5 px-4">Tường lửa mạng toàn đơn vị (Sắp hết hạn license ngày 30/09/2026).</td>
+                <td class="py-3.5 px-4"><span class="px-2.5 py-1 rounded-full text-xs font-semibold bg-amber-50 text-amber-800 border border-amber-200">Sắp hết hạn license</span></td>
+              </tr>
+              <tr class="hover:bg-slate-50/80 transition">
+                <td class="py-3.5 px-4 font-semibold text-slate-900">NAS Synology DS423+</td>
+                <td class="py-3.5 px-4 font-mono text-sky-700 font-bold">10.17.2.150:65001</td>
+                <td class="py-3.5 px-4">Lưu trữ sao lưu tự động định kỳ từ các máy chủ và dữ liệu chia sẻ.</td>
+                <td class="py-3.5 px-4"><span class="px-2.5 py-1 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200">Hoạt động</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 4: TONER / INK LOOKUP -->
+    <section id="tab-toner" class="tab-content hidden space-y-6">
+      <div class="bg-white border border-slate-200 rounded-xl p-6 shadow-xs">
+        <h3 class="text-base font-bold text-slate-900 mb-1 flex items-center">
+          <i class="fa-solid fa-fill-drip text-sky-600 mr-2.5"></i> Sổ Tay Tra Cứu Mã Hộp Mực Máy In & Photocopy Toàn Đơn Vị
+        </h3>
+        <p class="text-xs text-slate-500 mb-4">Khi phòng ban hoặc Bộ phận Một cửa báo hết mực, tra mã hộp mực tương ứng tại đây để xuất kho hoặc báo văn phòng cấp:</p>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm text-left border-collapse">
+            <thead class="text-xs uppercase bg-slate-50 text-slate-700 border-b border-slate-200 font-bold">
+              <tr>
+                <th class="py-3.5 px-4">Loại Máy</th>
+                <th class="py-3.5 px-4">Hãng & Chủng Loại Thiết Bị</th>
+                <th class="py-3.5 px-4 text-sky-800">Mã Hộp Mực Cần Dùng</th>
+                <th class="py-3.5 px-4">Số Lượng Máy</th>
+                <th class="py-3.5 px-4">Vị Trí Phân Bổ / Ghi Chú</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100 text-slate-700">
+              <tr class="hover:bg-slate-50/80 transition">
+                <td class="py-3.5 px-4 font-bold text-emerald-700">Máy In A3</td>
+                <td class="py-3.5 px-4 font-medium text-slate-900">HP LaserJet Pro M706n</td>
+                <td class="py-3.5 px-4 font-mono font-bold text-amber-800 bg-amber-50/60 rounded">HP 93A (CZ192A)</td>
+                <td class="py-3.5 px-4 font-mono font-semibold">16 cái</td>
+                <td class="py-3.5 px-4 text-xs text-slate-600">Các phòng chuyên môn địa chính, đo đạc, cấp giấy</td>
+              </tr>
+              <tr class="hover:bg-slate-50/80 transition">
+                <td class="py-3.5 px-4 font-bold text-sky-700">Máy In A4</td>
+                <td class="py-3.5 px-4 font-medium text-slate-900">HP LaserJet Pro M402d</td>
+                <td class="py-3.5 px-4 font-mono font-bold text-amber-800 bg-amber-50/60 rounded">HP 26A (CF226A)</td>
+                <td class="py-3.5 px-4 font-mono font-semibold">9 cái</td>
+                <td class="py-3.5 px-4 text-xs text-slate-600">Một cửa P. Chánh Hiệp (1 cái), Một cửa P. Phú An (1 cái)</td>
+              </tr>
+              <tr class="hover:bg-slate-50/80 transition">
+                <td class="py-3.5 px-4 font-bold text-sky-700">Máy In A4</td>
+                <td class="py-3.5 px-4 font-medium text-slate-900">HP LaserJet Pro M404dn</td>
+                <td class="py-3.5 px-4 font-mono font-bold text-amber-800 bg-amber-50/60 rounded">HP 76A (CF276A)</td>
+                <td class="py-3.5 px-4 font-mono font-semibold">8 cái</td>
+                <td class="py-3.5 px-4 text-xs text-slate-600">Một cửa P. Thủ Dầu Một (1 cái)</td>
+              </tr>
+              <tr class="hover:bg-slate-50/80 transition">
+                <td class="py-3.5 px-4 font-bold text-sky-700">Máy In A4</td>
+                <td class="py-3.5 px-4 font-medium text-slate-900">HP LaserJet Pro 4003dn</td>
+                <td class="py-3.5 px-4 font-mono font-bold text-amber-800 bg-amber-50/60 rounded">HP 151A (W1510A)</td>
+                <td class="py-3.5 px-4 font-mono font-semibold">5 cái</td>
+                <td class="py-3.5 px-4 text-xs text-slate-600">Một cửa P. Thủ Dầu Một (1 cái)</td>
+              </tr>
+              <tr class="hover:bg-slate-50/80 transition">
+                <td class="py-3.5 px-4 font-bold text-sky-700">Máy In A4</td>
+                <td class="py-3.5 px-4 font-medium text-slate-900">HP LaserJet P2035</td>
+                <td class="py-3.5 px-4 font-mono font-bold text-amber-800 bg-amber-50/60 rounded">HP 05A (CE505A)</td>
+                <td class="py-3.5 px-4 font-mono font-semibold">3 cái</td>
+                <td class="py-3.5 px-4 text-xs text-slate-600">Một cửa P. Thủ Dầu Một</td>
+              </tr>
+              <tr class="hover:bg-slate-50/80 transition">
+                <td class="py-3.5 px-4 font-bold text-sky-700">Máy In A4</td>
+                <td class="py-3.5 px-4 font-medium text-slate-900">Brother HL – 2240D</td>
+                <td class="py-3.5 px-4 font-mono font-bold text-amber-800 bg-amber-50/60 rounded">Brother TN-2280</td>
+                <td class="py-3.5 px-4 font-mono font-semibold">3 cái</td>
+                <td class="py-3.5 px-4 text-xs text-slate-600">Một cửa P. Phú Lợi (1 cái)</td>
+              </tr>
+              <tr class="hover:bg-slate-50/80 transition">
+                <td class="py-3.5 px-4 font-bold text-sky-700">Máy In A4</td>
+                <td class="py-3.5 px-4 font-medium text-slate-900">Brother HL – L2320D</td>
+                <td class="py-3.5 px-4 font-mono font-bold text-amber-800 bg-amber-50/60 rounded">Brother TN-2385</td>
+                <td class="py-3.5 px-4 font-mono font-semibold">1 cái</td>
+                <td class="py-3.5 px-4 text-xs text-slate-600">Một cửa P. Bình Dương</td>
+              </tr>
+              <tr class="hover:bg-slate-50/80 transition">
+                <td class="py-3.5 px-4 font-bold text-sky-700">Máy In A4</td>
+                <td class="py-3.5 px-4 font-medium text-slate-900">Fuji Xerox Docuprint P225db</td>
+                <td class="py-3.5 px-4 font-mono font-bold text-amber-800 bg-amber-50/60 rounded">Xerox CT202330</td>
+                <td class="py-3.5 px-4 font-mono font-semibold">1 cái</td>
+                <td class="py-3.5 px-4 text-xs text-slate-600">Văn phòng</td>
+              </tr>
+              <tr class="hover:bg-slate-50/80 transition">
+                <td class="py-3.5 px-4 font-bold text-indigo-700">Photocopy</td>
+                <td class="py-3.5 px-4 font-medium text-slate-900">Ricoh IM3000</td>
+                <td class="py-3.5 px-4 font-mono font-bold text-amber-800 bg-amber-50/60 rounded">Ricoh Type IM 2500</td>
+                <td class="py-3.5 px-4 font-mono font-semibold">1 cái</td>
+                <td class="py-3.5 px-4 text-xs text-slate-600">Máy photocopy đa năng phòng hành chính</td>
+              </tr>
+              <tr class="hover:bg-slate-50/80 transition">
+                <td class="py-3.5 px-4 font-bold text-indigo-700">Photocopy</td>
+                <td class="py-3.5 px-4 font-medium text-slate-900">Konica Minolta Bizhub 367</td>
+                <td class="py-3.5 px-4 font-mono font-bold text-amber-800 bg-amber-50/60 rounded">Konica TN-323</td>
+                <td class="py-3.5 px-4 font-mono font-semibold">2 cái</td>
+                <td class="py-3.5 px-4 text-xs text-slate-600">Máy photocopy văn phòng</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 5: EVENT 16/09 PREPARATION -->
+    <section id="tab-event" class="tab-content hidden space-y-6">
+      <div class="bg-white border border-slate-200 rounded-xl p-6 shadow-xs">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between pb-4 border-b border-slate-200 mb-4 gap-2">
+          <div>
+            <h3 class="text-base font-bold text-slate-900 flex items-center">
+              <i class="fa-solid fa-calendar-day text-sky-600 mr-2.5"></i> Kế Hoạch Chuẩn Bị Làm Việc Với Anh Phùng Vương Quốc (16/09/2026)
+            </h3>
+            <p class="text-xs text-slate-500 mt-1">Lúc <strong>08h30 sáng thứ Tư (16/09/2026)</strong> tại 358 Huỳnh Văn Cù, P. Thủ Dầu Một</p>
+          </div>
+          <span class="px-3 py-1 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-800 border border-emerald-300 self-start sm:self-auto">
+            Cột mốc quan trọng nhất
+          </span>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5 text-sm">
+          <div class="p-5 rounded-xl bg-slate-50 border border-slate-200">
+            <h4 class="font-bold text-sky-800 flex items-center mb-3">
+              <i class="fa-solid fa-list-check text-sky-600 mr-2"></i> 4 Việc Cần Bạn Chuẩn Bị Trước
+            </h4>
+            <ul class="space-y-2.5 text-xs text-slate-700">
+              <li class="flex items-start"><i class="fa-solid fa-check text-emerald-600 mr-2 mt-0.5"></i> In sẵn Biên bản bàn giao IT và Danh mục 67 máy trạm H09.</li>
+              <li class="flex items-start"><i class="fa-solid fa-check text-emerald-600 mr-2 mt-0.5"></i> Chuẩn bị sẵn sổ ghi chép mật khẩu & tài khoản hệ thống (admin Server, NAS, Firewall).</li>
+              <li class="flex items-start"><i class="fa-solid fa-check text-emerald-600 mr-2 mt-0.5"></i> Chuẩn bị chìa khóa mở tủ rack phòng Server, kiểm tra quạt và đèn tín hiệu các máy chủ.</li>
+              <li class="flex items-start"><i class="fa-solid fa-check text-emerald-600 mr-2 mt-0.5"></i> Lập danh sách thắc mắc về đường truyền CSDL Đất đai từ Bình Dương về TP.HCM.</li>
+            </ul>
+          </div>
+
+          <div class="p-5 rounded-xl bg-slate-50 border border-slate-200">
+            <h4 class="font-bold text-indigo-900 flex items-center mb-3">
+              <i class="fa-solid fa-comments text-indigo-600 mr-2"></i> Câu Hỏi Cần Nhờ Anh Quốc Hướng Dẫn
+            </h4>
+            <ul class="space-y-2.5 text-xs text-slate-700">
+              <li class="flex items-start"><i class="fa-solid fa-question text-amber-600 mr-2 mt-0.5"></i> Hướng xử lý khi FortiGate 61F hết hạn license ngày 30/09 (Có gói tập trung không?).</li>
+              <li class="flex items-start"><i class="fa-solid fa-question text-amber-600 mr-2 mt-0.5"></i> Cách thức kiểm tra và phục hồi dữ liệu từ bản sao lưu NAS Synology DS423+.</li>
+              <li class="flex items-start"><i class="fa-solid fa-question text-amber-600 mr-2 mt-0.5"></i> Đầu mối hỗ trợ kỹ thuật trên TP.HCM khi hệ thống mạng cơ sở 23 gặp sự cố rớt mạng.</li>
+              <li class="flex items-start"><i class="fa-solid fa-question text-amber-600 mr-2 mt-0.5"></i> Xin tài liệu hướng dẫn vận hành hoặc sơ đồ kết nối CSDL VBDLIS.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 6: RISKS & DISPATCH 2162 -->
+    <section id="tab-risk" class="tab-content hidden space-y-6">
+      <div class="bg-white border border-slate-200 rounded-xl p-6 shadow-xs">
+        <h3 class="text-base font-bold text-rose-800 mb-2 flex items-center">
+          <i class="fa-solid fa-shield-cat text-rose-600 mr-2.5"></i> Ma Trận Rủi Ro & Cơ Chế Bảo Vệ Trách Nhiệm IT
+        </h3>
+        <p class="text-sm text-slate-600 mb-6">
+          Văn bản số <strong>2162/CN23-HCTH</strong> ngày 09/09/2026 là văn cứ pháp lý cao nhất ghi nhận hiện trạng khách quan trước khi bạn tiếp nhận quản lý hệ thống:
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="p-5 rounded-xl bg-rose-50/50 border border-rose-200">
+            <div class="flex items-center space-x-2 text-rose-800 font-bold text-sm mb-2">
+              <i class="fa-solid fa-bug text-rose-600"></i>
+              <span>Kaspersky Antivirus Hết Hạn (23/03/2026)</span>
+            </div>
+            <p class="text-xs text-slate-700 leading-relaxed">
+              Phần mềm diệt virus tập trung trên 80 máy trạm đã hết hạn hơn 5 tháng. Nguy cơ lây lan ransomware và virus qua USB hồ sơ người dân nộp rất cao.
+            </p>
+            <div class="mt-3 text-[11px] font-mono text-emerald-800 font-semibold bg-emerald-50 p-1.5 rounded border border-emerald-200">
+              ✔ Căn cứ bảo vệ: Mục 2 - Công văn 2162/CN23-HCTH.
+            </div>
+          </div>
+
+          <div class="p-5 rounded-xl bg-rose-50/50 border border-rose-200">
+            <div class="flex items-center space-x-2 text-rose-800 font-bold text-sm mb-2">
+              <i class="fa-solid fa-fire text-rose-600"></i>
+              <span>Firewall FortiGate 61F Hết Hạn License (30/09/2026)</span>
+            </div>
+            <p class="text-xs text-slate-700 leading-relaxed">
+              Các gói Antivirus, IPS, Web Filtering trên phần cứng tường lửa sẽ dừng cập nhật sau 30/09. Hệ thống chỉ chạy định tuyến và lọc packet tĩnh.
+            </p>
+            <div class="mt-3 text-[11px] font-mono text-emerald-800 font-semibold bg-emerald-50 p-1.5 rounded border border-emerald-200">
+              ✔ Căn cứ bảo vệ: Mục 2 - Công văn 2162/CN23-HCTH.
+            </div>
+          </div>
+
+          <div class="p-5 rounded-xl bg-amber-50/50 border border-amber-200">
+            <div class="flex items-center space-x-2 text-amber-900 font-bold text-sm mb-2">
+              <i class="fa-solid fa-compact-disc text-amber-600"></i>
+              <span>55 Máy PC Thuộc Danh Mục Cần Thanh Lý 2026</span>
+            </div>
+            <p class="text-xs text-slate-700 leading-relaxed">
+              Đơn vị có 55 PC và 2 laptop thuộc bảng kê số lượng cần thanh lý năm 2026, tách biệt hoàn toàn khỏi danh mục 75 máy đang sử dụng.
+            </p>
+            <div class="mt-3 text-[11px] font-mono text-emerald-800 font-semibold bg-emerald-50 p-1.5 rounded border border-emerald-200">
+              ✔ Căn cứ bảo vệ: Danh mục cần thanh lý năm 2026.
+            </div>
+          </div>
+
+          <div class="p-5 rounded-xl bg-sky-50/50 border border-sky-200">
+            <div class="flex items-center space-x-2 text-sky-900 font-bold text-sm mb-2">
+              <i class="fa-solid fa-user-shield text-sky-600"></i>
+              <span>Năng Lực Chuyên Môn & Đã Có Thư Mời Cấp Trên</span>
+            </div>
+            <p class="text-xs text-slate-700 leading-relaxed">
+              Lãnh đạo Chi nhánh ghi nhận bạn là Kỹ sư phần mềm mới thử việc, đã ký Thư mời mời anh Phùng Vương Quốc (Cơ sở 2 TP.HCM) xuống kèm cặp vào 16/09.
+            </p>
+            <div class="mt-3 text-[11px] font-mono text-emerald-800 font-semibold bg-emerald-50 p-1.5 rounded border border-emerald-200">
+              ✔ Căn cứ bảo vệ: CV 2162 & Thư mời ngày 10/09/2026.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 7: MARKDOWN VIEWER & LIVE LATEX -->
+    <section id="tab-markdown" class="tab-content hidden space-y-6">
+      <div class="bg-white border border-slate-200 rounded-xl p-6 shadow-xs">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between pb-4 border-b border-slate-200 mb-6 gap-3">
+          <div>
+            <h3 class="text-base font-bold text-slate-900 flex items-center">
+              <i class="fa-brands fa-markdown text-sky-600 mr-2.5 text-lg"></i>
+              Xem Toàn Bộ Nội Dung PROGRESS_BINHDUONG.md (Live Rendered)
+            </h3>
+            <p class="text-xs text-slate-500 mt-1">Được render tự động với Marked.js & KaTeX CDN (hỗ trợ công thức $ và $$)</p>
+          </div>
+          <div class="flex items-center space-x-2">
+            <button onclick="renderCustomMarkdown()" class="px-3.5 py-1.5 text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 border border-slate-300 rounded-lg transition shadow-2xs">
+              <i class="fa-solid fa-rotate-right mr-1.5"></i> Làm mới
+            </button>
+          </div>
+        </div>
+
+        <!-- Render Target -->
+        <div id="markdown-output" class="markdown-body p-6 bg-slate-50/50 rounded-xl border border-slate-200">
+          <p class="text-slate-400 italic">Đang tải nội dung markdown...</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="bg-white border-t border-slate-200 py-4 text-center text-xs text-slate-500">
+    Hệ Thống Theo Dõi Tiến Độ IT & Quản Trị Hệ Thống - VĂN PHÒNG ĐĂNG KÝ ĐẤT ĐAI TP.HCM - CHI NHÁNH SỐ 23
+  </footer>
+
+  <script>
+    // Tab switching logic
+    function switchTab(tabId) {
+      document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.classList.remove('border-sky-600', 'text-sky-700', 'bg-sky-50/50');
+        btn.classList.add('border-transparent', 'text-slate-600');
+      });
+      
+      const targetContent = document.getElementById(tabId);
+      if (targetContent) targetContent.classList.remove('hidden');
+      
+      const targetBtn = document.getElementById('btn-' + tabId);
+      if (targetBtn) {
+        targetBtn.classList.remove('border-transparent', 'text-slate-600');
+        targetBtn.classList.add('border-sky-600', 'text-sky-700', 'bg-sky-50/50');
+      }
+
+      if (tabId === 'tab-markdown') {
+        renderCustomMarkdown();
+      }
+    }
+
+    // Render markdown and apply KaTeX rules
+    function renderCustomMarkdown() {
+      const container = document.getElementById('markdown-output');
+      
+      fetch('PROGRESS_BINHDUONG.md')
+        .then(res => {
+          if (res.ok) return res.text();
+          throw new Error('Could not fetch file');
+        })
+        .catch(() => {
+          return `# NHẬT KÝ TIẾN ĐỘ IT - CHI NHÁNH SỐ 23\nĐã cập nhật ngày 10/09/2026.`;
+        })
+        .then(mdText => {
+          container.innerHTML = marked.parse(mdText);
+          
+          // Apply KaTeX auto-render rules for LaTeX math notation
+          if (window.renderMathInElement) {
+            renderMathInElement(container, {
+              delimiters: [
+                {left: '$$', right: '$$', display: true},
+                {left: '$', right: '$', display: false},
+                {left: '\\(', right: '\\)', display: false},
+                {left: '\\[', right: '\\]', display: true}
+              ],
+              throwOnError: false
+            });
+          }
+        });
+    }
+
+    // Initialize on DOM load
+    document.addEventListener("DOMContentLoaded", function() {
+      renderCustomMarkdown();
+    });
+  </script>
+</body>
+</html>
+"""
+
+with open('/Users/admin/Desktop/BINHDUONG/OUTPUT/index.html', 'w', encoding='utf-8') as f:
+    f.write(html_content)
+
+print("Updated OUTPUT/index.html successfully!")

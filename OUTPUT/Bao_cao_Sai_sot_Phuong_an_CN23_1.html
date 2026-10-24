@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Báo Cáo Đối Chiếu Sai Sót - Phương án CN23_1</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; margin: 40px auto; max-width: 900px; color: #333; }
+        h1 { color: #0056b3; text-align: center; border-bottom: 2px solid #0056b3; padding-bottom: 10px; }
+        h2 { color: #0056b3; margin-top: 30px; }
+        .error-card { border-left: 5px solid #d9534f; background-color: #fdf7f7; padding: 20px; margin-bottom: 20px; border-radius: 4px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+        .error-title { font-weight: bold; color: #c9302c; font-size: 1.2em; margin-bottom: 10px; }
+        .detail { margin-bottom: 8px; }
+        .highlight { background-color: #ffeb3b; font-weight: bold; padding: 0 4px; }
+    </style>
+</head>
+<body>
+    <h1>BÁO CÁO ĐỐI CHIẾU SAI SÓT, MÂU THUẪN</h1>
+    <p style="text-align: center; font-style: italic;">Tài liệu: Phương án CN23_1.PDF</p>
+    <p>Dưới đây là danh sách các lỗi sai sót toán học và mâu thuẫn logic phát hiện được khi đối chiếu giữa phần Thuyết minh (Trang 1-9) và Bảng Phụ lục đối chiếu (Trang 10-12).</p>
+
+    <div class="error-card">
+        <div class="error-title">Lỗi 1: Mâu thuẫn về định mức diện tích Ban Giám đốc và Chuyên viên</div>
+        <div class="detail"><strong>Thuyết minh (Trang 4):</strong> Gộp chung 3 người Ban Giám đốc vào nhóm "chuyên viên và tương đương" thành 82 người, nhân với định mức 15 m²/người (ra 1.230 m²). Tổng diện tích làm việc là 1.260 m².</div>
+        <div class="detail"><strong>Bảng đối chiếu (Trang 10, 11 - Mục B.1):</strong> Lại tách riêng 3 Ban Giám đốc (định mức 20 m²/người = 60 m²) và 79 Chuyên viên (định mức 15 m²/người = 1.185 m²).</div>
+        <div class="detail" style="color: #c9302c;"><strong>Sai sót:</strong> Nếu cộng theo chi tiết bảng đối chiếu thì tổng phải là 60 + 1.185 + 30 (phục vụ) = <span class="highlight">1.275 m²</span>. Tuy nhiên, tại dòng tổng B.1, bảng vẫn sao chép y nguyên con số 1.260 m² từ thuyết minh sang, dẫn đến sai lệch toán học.</div>
+    </div>
+
+    <div class="error-card">
+        <div class="error-title">Lỗi 2: Tính toán sai "Tổng diện tích sử dụng chung"</div>
+        <div class="detail"><strong>Bảng đối chiếu (Trang 11 - Mục B.2):</strong> Tại cột "Diện tích cần thiết", mục 2.1 (Sử dụng chung toàn trụ sở) là 1.071,00 m² và mục 2.2 (Nhà để xe) là 505,00 m². Lẽ ra tổng của mục 2 phải là 1.576,00 m².</div>
+        <div class="detail" style="color: #c9302c;"><strong>Sai sót:</strong> Dòng "2. Tổng diện tích sử dụng chung" lại điền sai thành <span class="highlight">1.260,00 m²</span> (bằng đúng con số của mục B.1 phía trên).</div>
+    </div>
+
+    <div class="error-card">
+        <div class="error-title">Lỗi 3: Cộng gộp sai số liệu "Kho lưu trữ"</div>
+        <div class="detail"><strong>Bảng đối chiếu (Trang 11 - Mục C):</strong> Cột "Diện tích cần thiết" của Kho lưu trữ có 2 mục con là C.1 (600,00 m²) và C.2 (300,00 m²).</div>
+        <div class="detail" style="color: #c9302c;"><strong>Sai sót:</strong> Tổng chính xác phải là 900,00 m², nhưng ở dòng tổng C lại bị "làm tròn" lên thành <span class="highlight">1.000,00 m²</span>.</div>
+    </div>
+
+    <div class="error-card">
+        <div class="error-title">Lỗi 4: Phép trừ cột "So sánh" (Thiếu hụt) bị sai logic</div>
+        <div class="detail"><strong>Bảng đối chiếu (Trang 10 - Mục B):</strong> Cột "Hiện trạng" là 835,30 m², cột "Cần thiết" là 2.331,00 m².</div>
+        <div class="detail" style="color: #c9302c;"><strong>Sai sót:</strong> Phép trừ đúng phải là 835,30 - 2.331,00 = <span class="highlight">-1.495,70 m²</span> (con số này có nhắc đúng ở trang 4 Thuyết minh). Tuy nhiên, trong Bảng đối chiếu lại điền sai thành -1.925,40 m² do người lập bảng cộng dồn sai các ô của cột So sánh bên dưới thay vì làm phép tính tổng.</div>
+    </div>
+
+    <div class="error-card">
+        <div class="error-title">Lỗi 5: Phân bổ diện tích Hiện trạng sai lệch, "đẻ" thêm diện tích</div>
+        <div class="detail"><strong>Thuyết minh (Trang 5, 6):</strong> Phân tích chi tiết tổng 835,30 m² sàn hiện hữu gồm: Phòng làm việc (280 m²), Sử dụng chung (149,3 m²), và Kho lưu trữ (406 m²). Nhà để xe 200 m² là công trình ngoài sân, không nằm trong 835,30 m² này.</div>
+        <div class="detail"><strong>Bảng đối chiếu (Trang 10, 11):</strong> Ghi nhận Hiện trạng "Diện tích làm việc" là 535,30 m²; Hiện trạng "Sử dụng chung" là 300,00 m² (nhét cả nhà để xe 200 m² vào); và Hiện trạng "Kho" vẫn là 406,00 m².</div>
+        <div class="detail" style="color: #c9302c;"><strong>Sai sót:</strong> Nếu cộng 3 con số trong bảng đối chiếu (535,30 + 300,00 + 406,00), tổng diện tích sàn hiện trạng biến thành <span class="highlight">1.241,30 m²</span>, vượt xa quy mô thực tế của công trình là 835,30 m². Đơn vị đã tính trùng lặp không gian làm việc với kho lưu trữ.</div>
+    </div>
+
+    <div class="error-card">
+        <div class="error-title">Lỗi 6: Dòng "Tổng cộng đối chiếu toàn trụ sở (B+C)" bỏ sót dữ liệu</div>
+        <div class="detail"><strong>Bảng đối chiếu (Trang 12):</strong> Dòng TỔNG CỘNG ĐỐI CHIẾU TOÀN TRỤ SỞ (B + C).</div>
+        <div class="detail" style="color: #c9302c;"><strong>Sai sót Cột Cần thiết:</strong> Ghi tổng là 2.331,00 m², đây thực chất mới chỉ là định mức cần thiết của riêng mục B, bỏ sót hoàn toàn mục C (1.000 m²). Đáng lẽ B+C cần thiết phải là <span class="highlight">3.331,00 m²</span>.</div>
+        <div class="detail" style="color: #c9302c;"><strong>Sai sót Cột So sánh:</strong> Ghi -2.519,40 m². Con số này sinh ra do cộng dồn hai kết quả vốn đã bị sai (-1.925,40 của B và -594,00 của C). Nếu làm phép trừ trực tiếp (835,30 - 3.331,00) thì kết quả thiếu hụt phải là <span class="highlight">-2.495,70 m²</span>.</div>
+    </div>
+
+</body>
+</html>

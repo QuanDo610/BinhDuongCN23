@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Báo Cáo Dò Số Liệu & Thiếu Data - Bảng Đối Chiếu Định Mức CN23</title>
+    <style>
+        :root {
+            --primary: #1a56db;
+            --primary-dark: #1e429f;
+            --danger: #e02424;
+            --danger-bg: #fdf2f2;
+            --danger-border: #f8b4b4;
+            --warning: #d97706;
+            --warning-bg: #fffbeb;
+            --warning-border: #fcd34d;
+            --success: #057a55;
+            --success-bg: #f3faf7;
+            --success-border: #84e1bc;
+            --info: #0284c7;
+            --info-bg: #f0f9ff;
+            --info-border: #bae6fd;
+            --text-main: #1f2937;
+            --text-muted: #4b5563;
+            --bg-page: #f8fafc;
+            --bg-card: #ffffff;
+            --border-color: #e5e7eb;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-page);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 30px 15px;
+        }
+
+        .container {
+            max-width: 1050px;
+            margin: 0 auto;
+            background: var(--bg-card);
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #1e293b 0%, #1e3a8a 100%);
+            color: #ffffff;
+            padding: 35px 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 23px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .header p.subtitle {
+            font-size: 14.5px;
+            opacity: 0.9;
+            margin-bottom: 15px;
+        }
+
+        .meta-badges {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            font-size: 13px;
+        }
+
+        .meta-badge {
+            background: rgba(255, 255, 255, 0.18);
+            padding: 5px 14px;
+            border-radius: 20px;
+            backdrop-filter: blur(4px);
+        }
+
+        .content {
+            padding: 35px 30px;
+        }
+
+        .alert-box {
+            padding: 18px 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            display: flex;
+            gap: 15px;
+            align-items: flex-start;
+        }
+
+        .alert-danger {
+            background-color: var(--danger-bg);
+            border: 1px solid var(--danger-border);
+            color: #991b1b;
+        }
+
+        .alert-danger strong {
+            color: #7f1d1d;
+            font-size: 15px;
+        }
+
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .summary-card {
+            padding: 16px 20px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            text-align: center;
+        }
+
+        .summary-card.red {
+            background: var(--danger-bg);
+            border-color: var(--danger-border);
+            color: var(--danger);
+        }
+
+        .summary-card.orange {
+            background: var(--warning-bg);
+            border-color: var(--warning-border);
+            color: var(--warning);
+        }
+
+        .summary-card.blue {
+            background: var(--info-bg);
+            border-color: var(--info-border);
+            color: var(--info);
+        }
+
+        .summary-card .num {
+            font-size: 28px;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .summary-card .label {
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-top: 4px;
+        }
+
+        .section-title {
+            font-size: 17.5px;
+            font-weight: 700;
+            color: var(--primary-dark);
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 10px;
+            margin: 35px 0 20px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-transform: uppercase;
+        }
+
+        .section-title span.badge-num {
+            background: var(--primary);
+            color: white;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+        }
+
+        .card {
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            margin-bottom: 22px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+        }
+
+        .card-header {
+            padding: 14px 18px;
+            font-weight: 600;
+            font-size: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .card-header.danger {
+            background-color: var(--danger-bg);
+            border-bottom: 1px solid var(--danger-border);
+            color: #991b1b;
+        }
+
+        .card-header.warning {
+            background-color: var(--warning-bg);
+            border-bottom: 1px solid var(--warning-border);
+            color: #92400e;
+        }
+
+        .card-header.info {
+            background-color: var(--info-bg);
+            border-bottom: 1px solid var(--info-border);
+            color: #075985;
+        }
+
+        .tag {
+            font-size: 11.5px;
+            font-weight: 700;
+            padding: 3px 10px;
+            border-radius: 12px;
+            text-transform: uppercase;
+        }
+
+        .tag-danger {
+            background: #fee2e2;
+            color: #b91c1c;
+            border: 1px solid #fca5a5;
+        }
+
+        .tag-warning {
+            background: #fef3c7;
+            color: #b45309;
+            border: 1px solid #fde68a;
+        }
+
+        .card-body {
+            padding: 18px 20px;
+            font-size: 14.5px;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .grid-2 { grid-template-columns: 1fr; }
+        }
+
+        .box-compare {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            padding: 12px 15px;
+        }
+
+        .box-compare h4 {
+            font-size: 12.5px;
+            text-transform: uppercase;
+            color: #64748b;
+            margin-bottom: 6px;
+            letter-spacing: 0.5px;
+        }
+
+        .highlight-red {
+            background-color: #fee2e2;
+            color: #991b1b;
+            font-weight: 600;
+            padding: 1px 6px;
+            border-radius: 4px;
+        }
+
+        .highlight-green {
+            background-color: #d1fae5;
+            color: #065f46;
+            font-weight: 600;
+            padding: 1px 6px;
+            border-radius: 4px;
+        }
+
+        .fix-guide {
+            background-color: #f0fdf4;
+            border-left: 4px solid var(--success);
+            padding: 12px 16px;
+            border-radius: 0 6px 6px 0;
+            margin-top: 12px;
+            font-size: 14px;
+            color: #166534;
+        }
+
+        .fix-guide strong {
+            color: #14532d;
+        }
+
+        table.custom-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13.5px;
+            margin-top: 12px;
+        }
+
+        table.custom-table th, table.custom-table td {
+            border: 1px solid #cbd5e1;
+            padding: 9px 12px;
+            text-align: left;
+        }
+
+        table.custom-table th {
+            background-color: #f1f5f9;
+            color: #334155;
+            font-weight: 600;
+        }
+
+        table.custom-table tr:nth-child(even) {
+            background-color: #f8fafc;
+        }
+
+        .footer {
+            background: #f1f5f9;
+            border-top: 1px solid var(--border-color);
+            padding: 20px 30px;
+            font-size: 13px;
+            color: var(--text-muted);
+            text-align: center;
+        }
+
+        @media print {
+            body { padding: 0; background: white; }
+            .container { box-shadow: none; border: none; }
+            .card { break-inside: avoid; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <h1>BÁO CÁO DÒ SỐ LIỆU & THIẾU DATA ĐỐI CHIẾU</h1>
+        <p class="subtitle">Rà soát chuyên sâu file "Bảng đối chiếu định mức CN23.docx" (Cập nhật 16:17 - 02/10/2026)</p>
+        <div class="meta-badges">
+            <span class="meta-badge">📁 File nguồn: documents/Bảng đối chiếu định mức CN23.docx</span>
+            <span class="meta-badge">⚖️ Tiêu chuẩn: Nghị định 155/2025/NĐ-CP & Thông tư 09/2007/TT-BNV</span>
+            <span class="meta-badge">🕒 Thời điểm kiểm tra: 16:20 - 02/10/2026</span>
+            <span class="meta-badge">⚠️ Cảnh báo: Phát hiện lỗi đội diện tích sàn +41 m² & Thiếu 4 data đối chiếu</span>
+        </div>
+    </div>
+
+    <div class="content">
+
+        <!-- THẺ CẢNH BÁO NỔI BẬT -->
+        <div class="alert-box alert-danger">
+            <div style="font-size: 26px;">🚨</div>
+            <div>
+                <strong>CẢNH BÁO NGUY CƠ BỊ BẮT BẺ SỐ LIỆU KHI THẨM ĐỊNH:</strong>
+                <p style="margin-top: 5px; font-size: 14px;">Trong bản sửa đổi lúc 16:17, người lập bảng đã điều chỉnh mục diện tích sử dụng chung (Mục B.2) và vô tình làm <strong>đội diện tích sàn khối nhà từ 835,30 m² lên 876,30 m² (dôi dư +41,00 m²)</strong>, dẫn tới việc Bảng đối chiếu tự mâu thuẫn ngay với dòng 1 của chính nó và mâu thuẫn với Biên bản bàn giao 2019. Đồng thời, bảng vẫn đang <strong>thiếu 4 dữ liệu đối chiếu then chốt</strong> của hồ sơ.</p>
+            </div>
+        </div>
+
+        <div class="summary-grid">
+            <div class="summary-card red">
+                <div class="num">+41 m²</div>
+                <div class="label">Diện tích sàn bị đội ảo</div>
+            </div>
+            <div class="summary-card red">
+                <div class="num">04</div>
+                <div class="label">Dữ liệu đối chiếu bị thiếu</div>
+            </div>
+            <div class="summary-card orange">
+                <div class="num">1.260 m²</div>
+                <div class="label">Công thức 85% bị sót số cũ</div>
+            </div>
+            <div class="summary-card blue">
+                <div class="num">548 m²</div>
+                <div class="label">Sàn kho trạm y tế bị bỏ quên</div>
+            </div>
+        </div>
+
+        <!-- PHẦN 1 -->
+        <div class="section-title">
+            <span class="badge-num">1</span>
+            Bóc tách lỗi làm đội diện tích sàn (+41,00 m²) trong bản cập nhật 16:17
+        </div>
+
+        <div class="card">
+            <div class="card-header danger">
+                <span>1.1. Mục 2.1 (Sử dụng chung trong nhà) tự cộng thêm 26 m² phòng họp ảo và trùng lặp 15 m² phòng máy chủ</span>
+                <span class="tag tag-danger">Phát hiện trọng điểm</span>
+            </div>
+            <div class="card-body">
+                <div class="grid-2">
+                    <div class="box-compare">
+                        <h4>Thực tế theo Bảng phòng ốc 13 phòng (Table 2)</h4>
+                        <p>• Bộ phận Một cửa: <strong>26,00 m²</strong> (STT 9)</p>
+                        <p>• Phòng máy chủ (Server): <strong>15,00 m²</strong> (STT 10)</p>
+                        <p>• Hành lang, cầu thang, WC: <strong>108,30 m²</strong> (STT 13)</p>
+                        <p>• <em>Không có phòng họp riêng (Giám đốc, PGĐ kiêm phòng họp)</em></p>
+                        <p>➔ Tổng dùng chung trong nhà: <span class="highlight-green">149,30 m²</span></p>
+                        <p>➔ Tổng sàn khối nhà: 280 (làm việc) + 406 (kho) + 149,30 = <span class="highlight-green">835,30 m²</span> (Khớp Biên bản 2019)</p>
+                    </div>
+                    <div class="box-compare">
+                        <h4>Mục 2.1 trong file cập nhật lúc 16:17</h4>
+                        <p>• Bộ phận Một cửa: <strong>26,00 m²</strong></p>
+                        <p>• Phòng máy chủ CNTT: <strong>15,00 m²</strong></p>
+                        <p>• Phòng họp chuyên môn kết hợp tiếp dân: <span class="highlight-red">26,00 m² (ẢO)</span></p>
+                        <p>• Sảnh, hành lang, cầu thang, WC: <span class="highlight-red">123,30 m² (TRÙNG 15 m²)</span></p>
+                        <p>➔ Tổng dùng chung trong nhà bị đội lên: <span class="highlight-red">190,30 m²</span></p>
+                        <p>➔ Kéo tổng sàn khối nhà bị đội lên: 280 + 406 + 190,30 = <span class="highlight-red">876,30 m²</span> (+41 m² so với thực tế 835,30 m²)</p>
+                    </div>
+                </div>
+                <p><strong>Nguồn gốc con số 41,00 m²:</strong></p>
+                <ul style="margin: 6px 0 10px 25px;">
+                    <li><strong>26,00 m² phòng họp:</strong> Thực tế trụ sở 358 Huỳnh Văn Cù không có phòng họp riêng. Trong Bảng phòng ốc đã ghi rõ: Phòng Giám đốc kiêm phòng họp, Phòng Phó Giám đốc kiêm phòng họp. Việc tự đưa thêm phòng họp 26 m² vào đã làm tăng diện tích ngoài thực tế.</li>
+                    <li><strong>15,00 m² hành lang:</strong> Thực tế hành lang chỉ có 108,30 m². Ai đó đã lấy 108,30 + 15,00 = 123,30 m² (vừa tính phòng máy chủ riêng 15 m², vừa cộng gộp 15 m² đó vào hành lang).</li>
+                </ul>
+                <div class="fix-guide">
+                    <strong>Cách sửa chuẩn xác:</strong> Đưa Mục 2.1 về đúng thực tế: Diện tích sử dụng chung trong nhà là <strong>149,30 m²</strong> (26 m² Một cửa + 15 m² Server + 108,30 m² hành lang). Khi đó tổng hiện trạng toàn trụ sở (gồm cả nhà xe 200 m²) là <strong>1.035,30 m²</strong> (khớp 100% với con số 835,30 m² sàn khối nhà ở dòng 1 Mục A).
+                </div>
+            </div>
+        </div>
+
+        <!-- PHẦN 2 -->
+        <div class="section-title">
+            <span class="badge-num">2</span>
+            Chi tiết 4 dữ liệu đối chiếu bị thiếu (Data Gaps) cần bổ sung
+        </div>
+
+        <!-- Thiếu data 1 -->
+        <div class="card">
+            <div class="card-header danger">
+                <span>2.1. Thiếu dữ liệu diện tích sàn 548 m² của Trạm Y tế 3 tại Mục C (Kho lưu trữ)</span>
+                <span class="tag tag-danger">Thiếu data cốt lõi</span>
+            </div>
+            <div class="card-body">
+                <p><strong>Thực trạng hiện tại:</strong></p>
+                <ul style="margin: 6px 0 10px 25px;">
+                    <li>Mục đích xây dựng Phương án là <strong>xin điều chuyển Trạm Y tế 3 để làm Kho lưu trữ hồ sơ địa chính</strong>.</li>
+                    <li>Thế nhưng tại STT 3 Mục C (Row 16): Cột hiện trạng lại điền: <em>"1.276,20 (đất)"</em>, cột nhu cầu điền: <em>"1.276,20"</em>, cột so sánh điền: <em>"Đạt"</em>.</li>
+                    <li>Con số <strong>548,00 m² diện tích sàn xây dựng</strong> của Trạm Y tế (theo Trích đo 69-2015) hoàn toàn không được đưa vào tính toán!</li>
+                </ul>
+                <div class="fix-guide">
+                    <strong>Dữ liệu cần bổ sung:</strong> Đưa con số 548,00 m² sàn trạm y tế vào dòng phương án giải quyết kho:<br>
+                    • Hiện trạng kho tại 358: <strong>406,00 m²</strong> (thiếu 494 m² so với định mức 900 m²).<br>
+                    • Tiếp nhận cải tạo sàn Trạm Y tế 3: <strong>548,00 m² sàn</strong>.<br>
+                    • Tổng diện tích kho sau tiếp nhận: 406,00 + 548,00 = <strong>954,00 m²</strong> ➔ <strong>Đạt 106% định mức kho</strong>, giải quyết triệt để bài toán thiếu kho!
+                </div>
+            </div>
+        </div>
+
+        <!-- Thiếu data 2 -->
+        <div class="card">
+            <div class="card-header warning">
+                <span>2.2. Thiếu dữ liệu giải trình độ lệch 5,10 m² đất với Mảnh trích đo số 69-2015</span>
+                <span class="tag tag-warning">Thiếu data thuyết minh bản vẽ</span>
+            </div>
+            <div class="card-body">
+                <div class="grid-2">
+                    <div class="box-compare">
+                        <h4>Trong Bảng đối chiếu (Row 4 & Row 16)</h4>
+                        <p>Diện tích khuôn viên đất Trạm Y tế 3: <br><span class="highlight-red">1.276,20 m²</span></p>
+                    </div>
+                    <div class="box-compare">
+                        <h4>Mảnh trích đo số 69-2015 đính kèm (Trang 14)</h4>
+                        <p>Tổng diện tích khu đất cơ sở y tế: <br><span class="highlight-green">1.281,30 m²</span></p>
+                    </div>
+                </div>
+                <p>Hai số liệu lệch nhau <strong>5,10 m²</strong> (1.281,30 - 1.276,20 = 5,10) nhưng trong cột Ghi chú hoàn toàn không có dữ liệu giải trình.</p>
+                <div class="fix-guide">
+                    <strong>Dữ liệu cần bổ sung vào cột Ghi chú:</strong> <em>"Diện tích theo trích đo 69-2015 là 1.281,30 m²; diện tích khuôn viên đất thực tế bàn giao đề nghị điều chuyển sau khi trừ hành lang an toàn bảo vệ mương là 1.276,20 m²."</em>
+                </div>
+            </div>
+        </div>
+
+        <!-- Thiếu data 3 -->
+        <div class="card">
+            <div class="card-header warning">
+                <span>2.3. Thiếu dữ liệu giải trình khớp nối với Công văn 1136/UBND-VP của Phường</span>
+                <span class="tag tag-warning">Thiếu data đồng bộ hồ sơ</span>
+            </div>
+            <div class="card-body">
+                <p>Trong Công văn số 1136/UBND-VP ngày 08/5/2026 của UBND phường Thủ Dầu Một đính kèm theo hồ sơ, Phường nêu rõ Chi nhánh đang sử dụng diện tích đất <strong>8.849,9 m²</strong> và diện tích sàn <strong>1.763,25 m²</strong>.</p>
+                <p>Trong khi đó, Bảng đối chiếu chỉ kê khai đất là <strong>1.417,70 m²</strong> và sàn là <strong>835,30 m²</strong> mà không hề có chú thích hay thuyết minh lý do.</p>
+                <div class="fix-guide">
+                    <strong>Dữ liệu cần bổ sung vào cột Ghi chú Mục 1:</strong> <em>"Khuôn viên đất 1.417,70 m² và sàn 835,30 m² là phần diện tích độc lập Chi nhánh sử dụng ổn định nằm trong tổng thể khu đất công 8.849,9 m² và sàn 1.763,25 m² của trụ sở Chánh Mỹ cũ do UBND Phường quản lý chung nêu tại Công văn số 1136/UBND-VP."</em>
+                </div>
+            </div>
+        </div>
+
+        <!-- Thiếu data 4 -->
+        <div class="card">
+            <div class="card-header danger">
+                <span>2.4. Thiếu cấu trúc phân tách giữa ĐẤT và SÀN tại Mục A (Dẫn đến phép cộng sai học thuật)</span>
+                <span class="tag tag-danger">Cộng mét vuông sàn với đất</span>
+            </div>
+            <div class="card-body">
+                <p>Tại dòng tổng Mục A (Row 2):</p>
+                <p>• Cột Hiện trạng ghi: <span class="highlight-red">2.111,5 m²</span> (Lấy 835,30 m² sàn khối nhà + 1.276,20 m² đất Trạm y tế).</p>
+                <p>• Cột Cần thiết ghi: <span class="highlight-red">4.127,2 m²</span> (Lấy 2.851,00 m² định mức sàn B + 1.276,20 m² đất Trạm y tế).</p>
+                <div class="fix-guide">
+                    <strong>Dữ liệu cần bổ sung:</strong> Tách riêng rõ ràng 2 chỉ tiêu độc lập:<br>
+                    • <strong>Tổng diện tích khuôn viên đất:</strong> 1.417,70 + 1.276,20 = <strong>2.693,90 m²</strong> (Đạt 100%).<br>
+                    • <strong>Tổng diện tích sàn công trình:</strong> 835,30 + 548,00 = <strong>1.383,30 m²</strong>.
+                </div>
+            </div>
+        </div>
+
+        <!-- PHẦN 3 -->
+        <div class="section-title">
+            <span class="badge-num">3</span>
+            Mâu thuẫn công thức Nghị định 155/2025/NĐ-CP tại Mục 2.1
+        </div>
+
+        <div class="card">
+            <div class="card-header warning">
+                <span>3.1. Cột Ghi chú Mục 2.1 vẫn giữ công thức cũ 1.260 m² × 85% = 1.071 m²</span>
+                <span class="tag tag-warning">Số liệu không nhất quán</span>
+            </div>
+            <div class="card-body">
+                <p>Tại Mục 1 (Row 6): Tổng diện tích chức danh của 85 người là <strong>1.275,00 m²</strong> (3 × 20 + 79 × 15 + 3 × 10 = 1.275).</p>
+                <p>Nhưng tại Mục 2.1 (Row 11 - Cột Ghi chú): Vẫn ghi: <em>"Khoản 2 Điều 6 Nghị định 155: Tối đa không quá 85% diện tích chức danh (<span class="highlight-red">1.260 x 85% = 1.071 m²</span>)"</em>.</p>
+                <div class="fix-guide">
+                    <strong>Cách sửa:</strong> Chuẩn hóa đồng bộ theo con số 1.275,00 m²:<br>
+                    1.275,00 m² × 85% = <strong>1.083,75 m²</strong>
+                    Cộng với 505 m² nhà để xe ➔ Tổng diện tích sử dụng chung cần thiết là <strong>1.588,75 m²</strong>.
+                </div>
+            </div>
+        </div>
+
+        <!-- PHẦN 4 -->
+        <div class="section-title">
+            <span class="badge-num">4</span>
+            Bảng đối chiếu định mức chuẩn hóa hoàn chỉnh (Khuyến nghị áp dụng)
+        </div>
+
+        <p style="margin-bottom: 12px; font-size: 14px;">Bảng dưới đây đã <strong>khắc phục dứt điểm lỗi đội diện tích sàn +41 m²</strong>, <strong>bổ sung đầy đủ 4 dữ liệu đối chiếu bị thiếu</strong> và <strong>chuẩn hóa công thức 85% theo Nghị định 155</strong>:</p>
+
+        <table class="custom-table" style="font-size: 12.5px;">
+            <thead>
+                <tr style="background: #e2e8f0;">
+                    <th style="width: 4%;">STT</th>
+                    <th style="width: 28%;">Chỉ tiêu</th>
+                    <th style="width: 12%;">Hiện trạng (m²)</th>
+                    <th style="width: 10%;">Định mức</th>
+                    <th style="width: 12%;">Nhu cầu NĐ 155 (m²)</th>
+                    <th style="width: 12%;">Chênh lệch (m²)</th>
+                    <th style="width: 22%;">Ghi chú & Dữ liệu bổ sung</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="background: #f8fafc; font-weight: 600;">
+                    <td>A</td>
+                    <td colspan="6">HIỆN TRẠNG NHÀ, ĐẤT ĐANG QUẢN LÝ VÀ ĐỀ NGHỊ TIẾP NHẬN</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Cơ sở 358 Huỳnh Văn Cù:<br>• Đất: 1.417,70 m²<br>• Sàn xây dựng: 835,30 m²</td>
+                    <td>835,30 (sàn)<br>1.417,70 (đất)</td>
+                    <td>85 người</td>
+                    <td>2.863,75 (sàn)<br>1.417,70 (đất)</td>
+                    <td>-2.028,45 (sàn)<br>0,00 (đất)</td>
+                    <td>Nằm trong khuôn viên 8.849,9 m² đất của UBND phường Chánh Mỹ cũ do Phường quản lý chung (CV 1136).</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Điểm trạm y tế 3 (liền kề):<br>• Đất đề nghị nhận: 1.276,20 m²<br>• Sàn trạm y tế cũ: 548,00 m²</td>
+                    <td>548,00 (sàn)<br>1.276,20 (đất)</td>
+                    <td>-</td>
+                    <td>900,00 (sàn kho)<br>1.276,20 (đất)</td>
+                    <td>-352,00 (sàn kho)<br>0,00 (đất)</td>
+                    <td>Theo Trích đo 69-2015 là 1.281,30 m²; diện tích nhận sau trừ hành lang mương là 1.276,20 m². Đang bỏ trống.</td>
+                </tr>
+                <tr style="background: #f1f5f9; font-weight: 600;">
+                    <td>-</td>
+                    <td>Tổng khuôn viên đất (1+2):</td>
+                    <td>2.693,90</td>
+                    <td>-</td>
+                    <td>2.693,90</td>
+                    <td>0,00</td>
+                    <td>Đất khuôn viên liền kề độc lập, sử dụng 100% đúng công năng.</td>
+                </tr>
+                <tr style="background: #f8fafc; font-weight: 600;">
+                    <td>B</td>
+                    <td colspan="6">DIỆN TÍCH SÀN LÀM VIỆC THEO TIÊU CHUẨN ĐỊNH MỨC NGHỊ ĐỊNH 155/2025/NĐ-CP</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Diện tích làm việc chức danh (85 người):</td>
+                    <td>280,00</td>
+                    <td>85</td>
+                    <td>1.275,00</td>
+                    <td><span class="highlight-red">-995,00</span></td>
+                    <td>Phụ lục II Nghị định 155/2025/NĐ-CP (03 BGĐ × 20 = 60; 79 CV × 15 = 1.185; 03 HĐLĐ × 10 = 30).</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Tổng diện tích sử dụng chung:</td>
+                    <td>349,30</td>
+                    <td>-</td>
+                    <td>1.588,75</td>
+                    <td><span class="highlight-red">-1.239,45</span></td>
+                    <td>Gồm trong nhà 149,30 m² + Nhà để xe ngoài nhà 200,00 m².</td>
+                </tr>
+                <tr>
+                    <td>2.1</td>
+                    <td>Sử dụng chung trong nhà (Một cửa 26 m² + Server 15 m² + Hành lang WC 108,3 m²):</td>
+                    <td>149,30</td>
+                    <td>-</td>
+                    <td>1.083,75</td>
+                    <td><span class="highlight-red">-934,45</span></td>
+                    <td>Khoản 2 Điều 6 NĐ 155: Tối đa 85% diện tích chức danh (1.275,00 m² × 85% = 1.083,75 m²).</td>
+                </tr>
+                <tr>
+                    <td>2.2</td>
+                    <td>Nhà để xe (Công trình ngoài nhà):</td>
+                    <td>200,00</td>
+                    <td>85 người</td>
+                    <td>505,00</td>
+                    <td><span class="highlight-red">-305,00</span></td>
+                    <td>Khoản 3 Điều 3 NĐ 155 và TCVN 4319:2012. Không tính vào diện tích sàn thông thủy.</td>
+                </tr>
+                <tr style="background: #f8fafc; font-weight: 600;">
+                    <td>C</td>
+                    <td colspan="6">DIỆN TÍCH KHO LƯU TRỮ VÀ XỬ LÝ NGHIỆP VỤ HỒ SƠ ĐỊA CHÍNH (THÔNG TƯ 09/2007/TT-BNV)</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Kho bảo quản hồ sơ địa chính hiện có:</td>
+                    <td>406,00</td>
+                    <td>>3.000m TL</td>
+                    <td>600,00</td>
+                    <td><span class="highlight-red">-194,00</span></td>
+                    <td>Kho hiện hữu 391 m² + kho sáp nhập 15 m² đã lấp đầy 100% công suất.</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Khu vực xử lý nghiệp vụ lưu trữ:</td>
+                    <td>0,00</td>
+                    <td>-</td>
+                    <td>300,00</td>
+                    <td><span class="highlight-red">-300,00</span></td>
+                    <td>Bố trí bằng 50% diện tích sàn kho bảo quản tài liệu.</td>
+                </tr>
+                <tr style="background: #ecfdf5; font-weight: 600;">
+                    <td>3</td>
+                    <td>Phương án giải quyết kho lưu trữ:<br>Tiếp nhận sàn Trạm Y tế 3 cải tạo làm kho</td>
+                    <td>548,00<br>(nhận mới)</td>
+                    <td>-</td>
+                    <td>548,00</td>
+                    <td><span class="highlight-green">+54,00</span></td>
+                    <td>Tổng diện tích kho sau tiếp nhận đạt 954,00 m² (406 + 548), đáp ứng 106% định mức kho chuyên ngành!</td>
+                </tr>
+                <tr style="background: #eff6ff; font-weight: 700;">
+                    <td></td>
+                    <td>TỔNG CỘNG ĐỐI CHIẾU TOÀN TRỤ SỞ</td>
+                    <td>1.035,30</td>
+                    <td>85 người</td>
+                    <td>3.763,75</td>
+                    <td><span class="highlight-red">-2.728,45</span></td>
+                    <td>Hiện trạng mới đáp ứng 27,51% định mức. Cấp thiết phải bổ sung tiếp nhận Trạm Y tế 3.</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+    <div class="footer">
+        Báo cáo dò số liệu kỹ thuật — Thư mục OUTPUT — Chi nhánh Văn phòng Đăng ký đất đai số 23.
+    </div>
+</div>
+
+</body>
+</html>

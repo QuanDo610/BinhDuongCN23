@@ -1,0 +1,40 @@
+BÁO CÁO KHẢO SÁT & ĐÁNH GIÁ TOÀN DIỆN
+HỆ THỐNG PHẦN MỀM OERP ĐIỀU HÀNH TÁC NGHIỆP ĐẤT ĐAI
+(Hệ thống phục vụ chuyên môn tại địa chỉ web: https://vpdkddtdm.vn)
+Kính gửi: Chị Nguyễn Thị Bích Tuyền
+Đồng gửi: Chị Bùi Thị Minh Nguyệt (Bộ phận chuyên môn)
+Thực hiện công tác rà soát, đánh giá hiện trạng các phần mềm và hạ tầng công nghệ thông tin phục vụ tác nghiệp tại Chi nhánh, tôi đã tiến hành kiểm tra kỹ thuật chi tiết đối với hệ thống phần mềm OERP đang vận hành tại địa chỉ https://vpdkddtdm.vn. Nay xin trân trọng báo cáo kết quả khảo sát kỹ thuật cụ thể như sau:
+I. MỤC TIÊU NGHIỆP VỤ VÀ VAI TRÒ CỦA HỆ THỐNG
+Hệ thống OERP tại Chi nhánh là phần mềm tác nghiệp chuyên sâu, đóng vai trò số hóa toàn bộ chu trình xử lý hồ sơ địa chính từ khâu tiếp nhận của người dân cho đến khi trao trả kết quả. Cụ thể phục vụ 4 mục tiêu trọng tâm:
+Số hóa quy trình Một Cửa liên thông: Tiếp nhận hồ sơ cấp sổ lần đầu, chuyển nhượng, tách thửa, đo vẽ trích lục địa chính của cả tổ chức và cá nhân.
+Kiểm soát mốc thời gian & Chống trễ hạn: Ghi nhận chính xác thời điểm luân chuyển hồ sơ giữa các bộ phận (Một cửa -> Đo đạc -> Thẩm tra -> Thuế -> Trả kết quả) nhằm phục vụ chỉ số Cải cách hành chính (CCHC).
+Tra cứu ngăn chặn giao dịch tức thì: Hỗ trợ cán bộ kiểm tra ngay thửa đất có đang bị tranh chấp, kê biên thi hành án hay cấm chuyển nhượng trước khi lập biên nhận.
+Tương tác tự động với người dân: Tích hợp cổng SMS Brandname tự động gửi tin nhắn báo tiến độ và mời người dân đến nhận kết quả đúng hẹn.
+II. BẢN ĐỒ CHỨC NĂNG (SITEMAP) & CÁC PHÂN HỆ NGHIỆP VỤ
+Qua khảo sát thực tế qua tài khoản nghiệp vụ, hệ thống gồm 9 phân hệ chức năng khép kín:
+III. KIẾN TRÚC KỸ THUẬT & THÔNG TIN NHÀ CUNG CẤP TÊN MIỀN/SERVER
+Frontend (Giao diện): Được xây dựng bằng công nghệ Single Page Application (Angular SPA) kết hợp Bootstrap 4.5.2 và jQuery. Giao diện chạy hoàn toàn trên trình duyệt cán bộ, tải rất nhanh.
+Backend (Máy chủ xử lý API): Máy chủ Windows Server chạy Microsoft IIS với nền tảng ASP.NET (phiên bản v4.0.30319). Địa chỉ máy chủ API: apisql.vpdkddtdm.vn.
+Cơ sở dữ liệu (Database): Sử dụng Microsoft SQL Server (MSSQL). Dữ liệu được truy vấn trực tiếp qua các thủ tục lưu sẵn (Stored Procedures: A1011SELEDN, HT2000, postA1012DangNhapA).
+Tên miền & Nhà cung cấp: Qua tra cứu chính thức tại Hệ thống Quản lý Tên miền Quốc gia (VNNIC), tên miền vpdkddtdm.vn đang do cá nhân ông TRẦN HỒ BẢO HOÀNG đứng tên đăng ký qua Công ty Cổ phần GMO-Z.com RUNSYSTEM (Đăng ký ngày 07/07/2026, hết hạn 07/07/2027).
+Chi phí thuê ngoài hiện tại: Cơ quan đang chi trả 800.000 đồng/tháng (tương đương 9.600.000 đồng/năm) để thuê chỗ đặt server và duy trì hệ thống bên ngoài.
+
+=== [DANH SÁCH BẢNG BIỂU TRONG TÀI LIỆU] ===
+
+--- Bảng số 1 (1 hàng, 2 cột) ---
+VĂN PHÒNG ĐĂNG KÝ ĐẤT ĐAI TP.HCM CHI NHÁNH SỐ 23 Số: ...... /BC-CN23 | CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM Độc lập - Tự do - Hạnh phúc Thủ Dầu Một, ngày 28 tháng 09 năm 2026
+
+--- Bảng số 2 (10 hàng, 3 cột) ---
+STT | Phân hệ & Đường dẫn | Chức năng & Tương tác nghiệp vụ chính
+1 | Trang Chủ /vptdm/trangchu | Danh sách các hồ sơ được phân bổ cho cá nhân cán bộ đăng nhập cần thụ lý trong ngày.
+2 | Tiếp Nhận Hồ Sơ /vptdm/tiepnhanhoso | Nhập thông tin số tờ, số thửa, số nhà, diện tích. In biên nhận Một Cửa, xuất Word, cấu hình lịch đo đạc, tra cứu ngăn chặn giao dịch và gửi SMS tự động.
+3 | Xử Lý Hồ Sơ /vptdm/xulyhoso | Phân công lịch đo đạc địa chính, chức năng thuế, chuyển hồ sơ nội bộ giữa các khâu, giao phiếu nhanh, xuất Excel theo dõi.
+4 | Sửa Hồ Sơ /vptdm/suahoso | Điều chỉnh thông tin nhân thân, thửa đất khi có sai lệch; quản lý danh mục tài liệu yêu cầu người dân bổ sung.
+5 | Trả Hồ Sơ /vptdm/trahoso | Bàn giao sổ đỏ/kết quả trích đo cho khách hàng, ký nhận kết quả, chức năng xuất và nhập danh sách qua Excel.
+6 | Tra Cứu Hồ Sơ /vptdm/tracuuhoso | Tra cứu tiến độ hồ sơ theo mã biên nhận Một Cửa hoặc tên khách hàng/công ty. Xem danh sách ảnh scan và bản vẽ trích lục.
+7 | Quản Lý Trạng Thái /vptdm/quanlytrangthaihoso | Chức năng dành cho lãnh đạo/tổ trưởng: Hoàn thành cưỡng chế, Hủy hồ sơ sai thủ tục, Khôi phục hồ sơ cần xử lý lại.
+8 | Dashboard Trích Đo /vptdm/dashboard-trichdo | Biểu đồ trực quan giám sát tiến độ xử lý hồ sơ trích đo theo từng điểm quy trình đo đạc để phát hiện điểm nghẽn.
+9 | Thống Kê Tổng Hợp /vptdm/thongketonghop | Bộ lọc theo tham số báo cáo, thống kê tỷ lệ đúng hạn/trễ hạn, xuất dữ liệu chi tiết ra file Excel phục vụ báo cáo lãnh đạo.
+
+--- Bảng số 3 (1 hàng, 2 cột) ---
+Nơi nhận: - Như trên (báo cáo); - Chị Bùi Thị Minh Nguyệt (phối hợp); - Lưu: Hồ sơ kỹ thuật IT. | NGƯỜI LẬP BÁO CÁO     Đỗ Trọng Minh Quân

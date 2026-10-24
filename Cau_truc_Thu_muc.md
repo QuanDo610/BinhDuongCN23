@@ -9,9 +9,12 @@ BINHDUONG/
 │
 ├── documents/          # CHỈ chứa tài liệu đầu vào (PDF, DOCX, XLSX). Không chứa file code.
 ├── OUTPUT/             # CHỈ chứa kết quả đầu ra (báo cáo, file DOCX/XLSX mới, file HTML, PDF).
-├── tools/              # CHỈ chứa các mã nguồn (Python scripts, JS, v.v) thực thi tác vụ.
-├── venv/               # Môi trường ảo Python (Không đụng vào).
+├── tools/              # CHỈ chứa các công cụ cốt lõi dùng chung (nd30_engine.py, doc_pipeline.py...).
+├── scratch/            # Bộ nhớ đệm tạm thời: Cache text bóc tách siêu tốc, OCR, staging (chặn Git).
+├── venv/               # Môi trường ảo Python (Không đụng vào, nền tảng kỹ thuật ngầm).
 │
+├── TASK_TRACKER.md     # Bảng theo dõi tiến độ & cấu trúc dự án (Trực tiếp tại Root).
+├── LICH_SU_CONG_VIEC.md# Nhật ký chi tiết tiến độ công việc.
 ├── Gemini.md           # Hướng dẫn tổng quan cho AI (Bắt buộc).
 ├── Agent.md            # Hành vi và tính cách của AI.
 ├── Rule.md             # Quy tắc nghiêm ngặt mà AI phải tuân theo.
@@ -28,4 +31,4 @@ BINHDUONG/
   - Code nằm ở `tools/`. Tuyệt đối không để `.py` lạc ra ngoài.
   - Dữ liệu thô nằm ở `documents/`. Không sửa trực tiếp file trong này.
   - Kết quả xuất ra nằm ở `OUTPUT/`.
-- **Tên File (Naming Convention):** Sử dụng `_` thay vì khoảng trắng (VD: `Bao_cao_thang_1.docx` thay vì `Bao cao thang 1.docx`). Các file nháp hoặc đang chỉnh sửa nên có hậu tố version (`_v1`, `_v2`), file chốt phải có `_FINAL`.
+- **Tên File & Quy ước cập nhật:** Sử dụng `_` thay vì khoảng trắng (VD: `Bao_cao_thang_1.docx`). Khi cập nhật hoặc chỉnh sửa văn bản, thực hiện cập nhật trực tiếp trên file hiện có trong `OUTPUT/`, không tự ý sinh thêm file phiên bản mới (`_v2`, `_v3`...). Chỉ tạo file mới khi có yêu cầu/nhiệm vụ hoàn toàn mới.

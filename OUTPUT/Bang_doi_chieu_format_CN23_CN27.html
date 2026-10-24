@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bảng Đối Chiếu Bố Cục Nội Dung & Thể Thức: CN23 vs CN27</title>
+    <style>
+        :root {
+            --primary: #1e3a8a;
+            --primary-dark: #0f172a;
+            --primary-light: #2563eb;
+            --primary-bg: #eff6ff;
+            --accent: #0284c7;
+            --danger: #dc2626;
+            --danger-bg: #fef2f2;
+            --danger-border: #fca5a5;
+            --warning: #d97706;
+            --warning-bg: #fffbeb;
+            --warning-border: #fcd34d;
+            --success: #16a34a;
+            --success-bg: #f0fdf4;
+            --success-border: #86efac;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border-color: #cbd5e1;
+            --bg-page: #f8fafc;
+            --bg-card: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-page);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 25px 15px;
+        }
+
+        .container {
+            max-width: 1240px;
+            margin: 0 auto;
+            background: var(--bg-card);
+            border-radius: 14px;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #1d4ed8 100%);
+            color: #ffffff;
+            padding: 35px 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+
+        .header p.subtitle {
+            font-size: 15px;
+            opacity: 0.92;
+            margin-bottom: 16px;
+        }
+
+        .meta-badges {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            font-size: 13px;
+        }
+
+        .meta-badge {
+            background: rgba(255, 255, 255, 0.16);
+            padding: 6px 14px;
+            border-radius: 20px;
+            backdrop-filter: blur(4px);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+        }
+
+        /* Navigation Tabs */
+        .nav-tabs {
+            display: flex;
+            background: #e2e8f0;
+            padding: 6px 6px 0 6px;
+            border-bottom: 2px solid var(--primary);
+            gap: 4px;
+        }
+
+        .nav-tab {
+            padding: 12px 22px;
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--text-muted);
+            background: #cbd5e1;
+            border-radius: 8px 8px 0 0;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.2s ease;
+        }
+
+        .nav-tab.active {
+            background: #ffffff;
+            color: var(--primary);
+            border-top: 3px solid var(--primary);
+        }
+
+        .nav-tab:hover {
+            color: var(--primary);
+            background: #f1f5f9;
+        }
+
+        .content {
+            padding: 30px;
+        }
+
+        /* Highlight Feedback Box */
+        .feedback-alert {
+            background: linear-gradient(135deg, #f0fdf4 0%, #e0f2fe 100%);
+            border: 1.5px solid #0284c7;
+            border-radius: 10px;
+            padding: 18px 22px;
+            margin-bottom: 25px;
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+        }
+
+        .feedback-alert .icon {
+            font-size: 28px;
+            line-height: 1;
+        }
+
+        .feedback-alert .text-title {
+            font-size: 16px;
+            font-weight: 800;
+            color: #0369a1;
+            text-transform: uppercase;
+            margin-bottom: 4px;
+        }
+
+        .feedback-alert .text-desc {
+            font-size: 14px;
+            color: #0f172a;
+            line-height: 1.5;
+        }
+
+        /* Metric Grid */
+        .metric-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .metric-card {
+            padding: 16px 20px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            background: #ffffff;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+
+        .metric-card.blue { border-top: 4px solid var(--primary-light); background: #f8faff; }
+        .metric-card.green { border-top: 4px solid var(--success); background: #f6fdf9; }
+        .metric-card.orange { border-top: 4px solid var(--warning); background: #fffdf5; }
+        .metric-card.red { border-top: 4px solid var(--danger); background: #fff8f8; }
+
+        .metric-card .num {
+            font-size: 30px;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 4px;
+        }
+
+        .metric-card.blue .num { color: var(--primary-light); }
+        .metric-card.green .num { color: var(--success); }
+        .metric-card.orange .num { color: var(--warning); }
+        .metric-card.red .num { color: var(--danger); }
+
+        .metric-card .label {
+            font-size: 12.5px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            letter-spacing: 0.5px;
+        }
+
+        /* Section Header */
+        .section-header {
+            font-size: 17.5px;
+            font-weight: 800;
+            color: var(--primary);
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 10px;
+            margin: 35px 0 20px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            text-transform: uppercase;
+        }
+
+        .section-header .tag-badge {
+            background: var(--primary-bg);
+            color: var(--primary);
+            padding: 3px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            border: 1px solid #bfdbfe;
+            text-transform: none;
+            font-weight: 600;
+        }
+
+        /* Structure Overview Grid */
+        .macro-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin-bottom: 25px;
+        }
+
+        @media (max-width: 860px) {
+            .macro-grid { grid-template-columns: 1fr; }
+        }
+
+        .macro-card {
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 16px 18px;
+            background: #ffffff;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+            border-top: 4px solid var(--primary-light);
+        }
+
+        .macro-card h3 {
+            font-size: 14.5px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .macro-card p {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 8px;
+        }
+
+        .macro-card .status-pill {
+            display: inline-block;
+            font-size: 11.5px;
+            font-weight: 700;
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+
+        /* Comparison Table */
+        .table-responsive {
+            overflow-x: auto;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+
+        table.bocuc-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13.5px;
+            background: white;
+        }
+
+        table.bocuc-table th, table.bocuc-table td {
+            border: 1px solid #e2e8f0;
+            padding: 12px 14px;
+            vertical-align: top;
+        }
+
+        table.bocuc-table th {
+            background: #f8fafc;
+            color: #334155;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 12px;
+            letter-spacing: 0.5px;
+        }
+
+        table.bocuc-table tr:hover {
+            background-color: #f8fafc;
+        }
+
+        .tag-match {
+            background: #dcfce7;
+            color: #166534;
+            border: 1px solid #86efac;
+            font-size: 11px;
+            font-weight: 700;
+            padding: 3px 8px;
+            border-radius: 4px;
+            text-transform: uppercase;
+            display: inline-block;
+        }
+
+        .tag-diff {
+            background: #fee2e2;
+            color: #991b1b;
+            border: 1px solid #f87171;
+            font-size: 11px;
+            font-weight: 700;
+            padding: 3px 8px;
+            border-radius: 4px;
+            text-transform: uppercase;
+            display: inline-block;
+        }
+
+        .tag-variant {
+            background: #fef3c7;
+            color: #92400e;
+            border: 1px solid #fbbf24;
+            font-size: 11px;
+            font-weight: 700;
+            padding: 3px 8px;
+            border-radius: 4px;
+            text-transform: uppercase;
+            display: inline-block;
+        }
+
+        .text-cn27 {
+            color: #15803d;
+            font-weight: 600;
+        }
+
+        .text-cn23 {
+            color: #b91c1c;
+            font-weight: 600;
+        }
+
+        .note-box {
+            background: #fffbeb;
+            border: 1px solid #fde68a;
+            padding: 14px 18px;
+            border-radius: 8px;
+            font-size: 13.5px;
+            color: #92400e;
+            margin-bottom: 25px;
+        }
+
+        .note-box strong {
+            color: #78350f;
+        }
+
+        /* Detail Compare Card */
+        .card-block {
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            margin-bottom: 20px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+        }
+
+        .card-block-header {
+            padding: 12px 18px;
+            font-weight: 700;
+            font-size: 14.5px;
+            background: #f1f5f9;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .card-block-body {
+            padding: 18px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        @media (max-width: 800px) {
+            .card-block-body { grid-template-columns: 1fr; }
+        }
+
+        .col-view {
+            padding: 14px;
+            border-radius: 6px;
+            font-size: 13px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .col-view.left { background: #f0fdf4; border-color: #bbf7d0; }
+        .col-view.right { background: #fef2f2; border-color: #fecaca; }
+
+        .col-view h4 {
+            font-size: 12px;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .col-view.left h4 { color: #166534; }
+        .col-view.right h4 { color: #991b1b; }
+
+        .item-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .item-list li {
+            padding: 6px 0;
+            border-bottom: 1px dashed #cbd5e1;
+            font-size: 13px;
+        }
+
+        .item-list li:last-child {
+            border-bottom: none;
+        }
+
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            text-align: center;
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Header -->
+    <div class="header">
+        <h1>BẢNG ĐỐI CHIẾU BỐ CỤC NỘI DUNG & THỂ THỨC</h1>
+        <p class="subtitle">Đối chiếu cấu trúc đề mục, phân vùng nội dung giữa CN23 và bản mẫu chuẩn CN27 (Kế hoạch 2027)</p>
+        <div class="meta-badges">
+            <span class="meta-badge">📄 Bản chuẩn đối chiếu: <strong>CN27.pdf</strong></span>
+            <span class="meta-badge">📝 Bản cần kiểm tra: <strong>đề xuất kế hoạch năm 2027 CN23 cT.docx</strong></span>
+            <span class="meta-badge">🎯 Tiêu chí: <strong>Bố cục các Phần, Đề mục lớn, Chủ đề nhiệm vụ</strong></span>
+        </div>
+    </div>
+
+    <!-- Navigation Tabs -->
+    <div class="nav-tabs">
+        <a href="#bocuc" class="nav-tab active">📑 PHẦN I: ĐỐI CHIẾU BỐ CỤC NỘI DUNG</a>
+        <a href="#thethuc" class="nav-tab">📐 PHẦN II: TỔNG HỢP LỖI THỂ THỨC (FORMAT)</a>
+        <a href="#khuyennghi" class="nav-tab">📋 PHẦN III: HÀNH ĐỘNG KHẮC PHỤC</a>
+    </div>
+
+    <div class="content">
+        <!-- Feedback Alert Box -->
+        <div class="feedback-alert">
+            <div class="icon">📌</div>
+            <div>
+                <div class="text-title">Nội dung đối chiếu theo Feedback chỉ đạo</div>
+                <div class="text-desc">
+                    <em>"Đối chiếu bố cục nội dung nha em, ví dụ: I về vấn đề gì, II về nội dung gì, không đi vào chi tiết, phía trên là thể thức rồi".</em><br>
+                    Báo cáo dưới đây tập trung vào <strong>Cấu trúc khung sườn (Macro Outline)</strong>: phân tích từ 3 phần lớn của tài liệu, đối chiếu chi tiết đề mục <strong>I. MỤC TIÊU</strong>, so sánh song song <strong>8 nhiệm vụ lớn của MỤC II</strong>, và danh mục <strong>12 mục công tác của BẢNG PHỤ LỤC</strong>.
+                </div>
+            </div>
+        </div>
+
+        <!-- Metric Summary -->
+        <div class="metric-grid">
+            <div class="metric-card green">
+                <div class="num">03 / 03</div>
+                <div class="label">Khung phần lớn (Trùng khớp 100%)</div>
+            </div>
+            <div class="metric-card orange">
+                <div class="num">03 / 08</div>
+                <div class="label">Đề mục Mục II trùng khớp hoàn toàn</div>
+            </div>
+            <div class="metric-card red">
+                <div class="num">01</div>
+                <div class="label">Đề mục Mục II khác biệt hoàn toàn (Mục 5)</div>
+            </div>
+            <div class="metric-card blue">
+                <div class="num">01 Khối lạ</div>
+                <div class="label">CN23 tự chèn thêm tóm tắt mở đầu</div>
+            </div>
+        </div>
+
+        <!-- ========================================== -->
+        <!-- PHẦN I: ĐỐI CHIẾU BỐ CỤC NỘI DUNG -->
+        <!-- ========================================== -->
+        <div id="bocuc">
+            <div class="section-header">
+                <span>1. TỔNG QUAN BỐ CỤC 3 PHẦN LỚN CỦA VĂN BẢN</span>
+                <span class="tag-badge">Khung sườn tổng thể</span>
+            </div>
+
+            <div class="macro-grid">
+                <div class="macro-card">
+                    <h3>📄 PHẦN 1: CÔNG VĂN ĐỀ XUẤT</h3>
+                    <p>• <strong>CN27:</strong> Gồm 1 trang công văn hành chính (Kính gửi VPĐKĐĐ TP; Căn cứ CV 33457 & QĐ 2641; Đề xuất Kế hoạch; PGĐ ký).</p>
+                    <p>• <strong>CN23:</strong> Tương đồng bố cục (Gửi Phòng HC-TH VPĐKĐĐ TP; Căn cứ CV 33457 & QĐ 2637; Giám đốc ký).</p>
+                    <span class="status-pill" style="background: #dcfce7; color: #15803d;">Khớp về bố cục chính</span>
+                </div>
+                <div class="macro-card">
+                    <h3>📝 PHẦN 2: DỰ THẢO KẾ HOẠCH</h3>
+                    <p>• <strong>CN27:</strong> Gồm 2 mục lớn: <code>I. MỤC TIÊU</code> (Mục tiêu chung & 5 chỉ tiêu) và <code>II. NHIỆM VỤ TRỌNG TÂM</code> (8 nhiệm vụ lớn).</p>
+                    <p>• <strong>CN23:</strong> Có thêm <code>TRỌNG TÂM KẾ HOẠCH</code> (4 bullet), <code>I. MỤC TIÊU</code> (9 chỉ tiêu), và <code>II. NHIỆM VỤ TRỌNG TÂM</code> (8 nhiệm vụ).</p>
+                    <span class="status-pill" style="background: #fef3c7; color: #b45309;">Có chèn khối lạ & biến thể tiêu đề</span>
+                </div>
+                <div class="macro-card">
+                    <h3>📊 PHẦN 3: PHỤ LỤC CHƯƠNG TRÌNH</h3>
+                    <p>• <strong>CN27:</strong> Bảng 8 cột, gồm đúng <strong>12 mục công tác</strong> phân bổ theo các tổ và lĩnh vực.</p>
+                    <p>• <strong>CN23:</strong> Bảng 8 cột, gồm đúng <strong>12 mục công tác</strong> bám sát khung 12 việc của CN27.</p>
+                    <span class="status-pill" style="background: #dcfce7; color: #15803d;">Khớp 12/12 đầu việc</span>
+                </div>
+            </div>
+
+            <!-- BẢNG ĐỐI CHIẾU BỐ CỤC CHI TIẾT PHẦN II -->
+            <div class="section-header">
+                <span>2. ĐỐI CHIẾU CHI TIẾT ĐỀ MỤC PHẦN II: ĐỀ XUẤT NỘI DUNG KẾ HOẠCH</span>
+                <span class="tag-badge">So sánh Mục I & Mục II</span>
+            </div>
+
+            <div class="table-responsive">
+                <table class="bocuc-table">
+                    <thead>
+                        <tr>
+                            <th style="width: 14%;">Cấp Đề Mục</th>
+                            <th style="width: 33%;">Bản Mẫu Chuẩn CN27 (PDF)</th>
+                            <th style="width: 33%;">Bản Hiện Tại CN23 (DOCX)</th>
+                            <th style="width: 10%; text-align: center;">Đánh Giá</th>
+                            <th style="width: 10%;">Ghi Chú Bố Cục</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Khối mở đầu -->
+                        <tr style="background: #fff8f8;">
+                            <td><strong>Khối Mở Đầu</strong><br><small style="color: var(--text-muted);">Trước Mục I</small></td>
+                            <td><span class="text-cn27">KHÔNG CÓ KHỐI NÀY.</span><br>Sau Tiêu đề và dòng đính kèm là bắt đầu ngay đề mục <code>I. MỤC TIÊU</code>.</td>
+                            <td><span class="text-cn23">TỰ CHÈN THÊM 1 KHỐI:</span><br>
+                                • <strong>TRỌNG TÂM KẾ HOẠCH NĂM 2027 CHI NHÁNH SỐ 23</strong><br>
+                                • Đơn vị thực hiện: Chi nhánh 23...<br>
+                                • Phạm vi quản lý: 05 phường...<br>
+                                • Trụ sở tiếp nhận: 358 Huỳnh Văn Cù...<br>
+                                • Mục tiêu năm 2027: DVC trực tuyến >80%...
+                            </td>
+                            <td style="text-align: center;"><span class="tag-diff">Khác Biệt</span></td>
+                            <td>CN23 tự chèn thêm khối tóm tắt không có trong mẫu chuẩn CN27.</td>
+                        </tr>
+
+                        <!-- Mục I -->
+                        <tr>
+                            <td><strong>Mục I. MỤC TIÊU</strong><br><small style="color: var(--text-muted);">1. Mục tiêu chung</small></td>
+                            <td><strong>1. Mục tiêu chung:</strong><br>Nâng cao chất lượng hiệu quả hoạt động đăng ký đất đai, cấp GCN, CĐS, lấy người dân làm trung tâm phục vụ.</td>
+                            <td><strong>1. Mục tiêu chung:</strong><br>Nâng cao chất lượng hiệu quả hoạt động đăng ký đất đai, giải quyết TTHC, số hóa, công khai minh bạch.</td>
+                            <td style="text-align: center;"><span class="tag-match">Trùng Khớp</span></td>
+                            <td>Đồng nhất về chủ đề và kết cấu đề mục.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Mục I. MỤC TIÊU</strong><br><small style="color: var(--text-muted);">2. Các chỉ tiêu chủ yếu</small></td>
+                            <td><strong>2. Các chỉ tiêu chủ yếu:</strong><br>
+                                Gồm <strong>05 chỉ tiêu / gạch đầu dòng</strong>:<br>
+                                1. Giải quyết hồ sơ đúng hạn (>98%), số hóa thành phần.<br>
+                                2. Cập nhật, chỉnh lý hồ sơ địa chính và CSDL kịp thời.<br>
+                                3. Số hóa, quản lý, lưu trữ, khai thác hồ sơ địa chính.<br>
+                                4. Luân chuyển hồ sơ đúng quy trình, hạn chế bổ sung.<br>
+                                5. Kỷ luật kỷ cương hành chính, giải quyết kiến nghị.
+                            </td>
+                            <td><strong>2. Các chỉ tiêu chủ yếu:</strong><br>
+                                Mở rộng thành <strong>09 chỉ tiêu / gạch đầu dòng</strong>:<br>
+                                1. Hồ sơ TTHC đúng hạn (>98,5%).<br>
+                                2. Dịch vụ công trực tuyến (>80%).<br>
+                                3. Số hóa 100% hồ sơ đầu vào.<br>
+                                4. Cập nhật 100% biến động CSDL.<br>
+                                5. Thu phí không dùng tiền mặt (VietQR).<br>
+                                6. 100% cán bộ chấp hành kỷ cương.<br>
+                                7. Số hóa, quản lý lưu trữ địa chính.<br>
+                                8. Luân chuyển, trả kết quả đúng hẹn.<br>
+                                9. Trách nhiệm công vụ, tiếp công dân.
+                            </td>
+                            <td style="text-align: center;"><span class="tag-variant">Biến Thể</span></td>
+                            <td>CN27 gom thành 5 nhóm lớn; CN23 băm nhỏ thành 9 chỉ tiêu chi tiết.</td>
+                        </tr>
+
+                        <!-- Mục II: 8 Nhiệm vụ -->
+                        <tr>
+                            <td><strong>Mục II - Nhiệm vụ 1</strong></td>
+                            <td><strong>1. Nâng cao hiệu quả công tác đăng ký đất đai và giải quyết thủ tục hành chính</strong></td>
+                            <td><strong>1. Nâng cao hiệu quả công tác đăng ký đất đai và giải quyết thủ tục hành chính</strong></td>
+                            <td style="text-align: center;"><span class="tag-match">Khớp 100%</span></td>
+                            <td>Tiêu đề và nội dung nhiệm vụ hoàn toàn trùng khớp.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Mục II - Nhiệm vụ 2</strong></td>
+                            <td><strong>2. Tăng cường quản lý, chỉnh lý và cập nhật hồ sơ địa chính</strong></td>
+                            <td><strong>2. Tăng cường quản lý, chỉnh lý và cập nhật hồ sơ địa chính</strong></td>
+                            <td style="text-align: center;"><span class="tag-match">Khớp 100%</span></td>
+                            <td>Tiêu đề và nội dung nhiệm vụ hoàn toàn trùng khớp.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Mục II - Nhiệm vụ 3</strong></td>
+                            <td><strong>3. Đẩy mạnh chuyển đổi số và hoàn thiện cơ sở dữ liệu đất đai</strong></td>
+                            <td><strong>3. Đẩy mạnh chuyển đổi số và hoàn thiện cơ sở dữ liệu đất đai</strong></td>
+                            <td style="text-align: center;"><span class="tag-match">Khớp 100%</span></td>
+                            <td>Tiêu đề và nội dung nhiệm vụ hoàn toàn trùng khớp.</td>
+                        </tr>
+                        <tr style="background: #fffdf5;">
+                            <td><strong>Mục II - Nhiệm vụ 4</strong></td>
+                            <td><strong>4. Nâng cao chất lượng công tác đo đạc, bản đồ và cung cấp thông tin đất đai</strong></td>
+                            <td><strong>4. Nâng cao chất lượng công tác đo đạc, bản đồ và trích đo địa chính</strong></td>
+                            <td style="text-align: center;"><span class="tag-variant">Biến Thể</span></td>
+                            <td>CN27 nhấn vào <em>"cung cấp thông tin đất đai"</em>; CN23 đổi thành <em>"trích đo địa chính"</em>.</td>
+                        </tr>
+                        <tr style="background: #fef2f2;">
+                            <td><strong>Mục II - Nhiệm vụ 5</strong></td>
+                            <td><strong>5. Tăng cường phối hợp trong thực hiện nhiệm vụ quản lý nhà nước về đất đai</strong><br>
+                                <small style="color: #15803d;">Trọng tâm: Phối hợp cơ quan quản lý, tiếp nhận biến động, cấp đính chính GCN.</small>
+                            </td>
+                            <td><strong>5. Tăng cường công tác đăng ký giao dịch bảo đảm và cung cấp thông tin đất đai</strong><br>
+                                <small style="color: #b91c1c;">Trọng tâm: Đăng ký thế chấp, xóa thế chấp TCTD, cung cấp thông tin cho dân.</small>
+                            </td>
+                            <td style="text-align: center;"><span class="tag-diff">Khác Biệt</span></td>
+                            <td><strong>Khác biệt lớn nhất:</strong> Đổi hẳn chủ đề nhiệm vụ từ "Phối hợp quản lý nhà nước" sang "Giao dịch bảo đảm".</td>
+                        </tr>
+                        <tr style="background: #fffdf5;">
+                            <td><strong>Mục II - Nhiệm vụ 6</strong></td>
+                            <td><strong>6. Nâng cao chất lượng phục vụ người dân và tổ chức</strong></td>
+                            <td><strong>6. Nâng cao chất lượng phục vụ người dân, công khai minh bạch và tiếp nhận phản ánh</strong></td>
+                            <td style="text-align: center;"><span class="tag-variant">Biến Thể</span></td>
+                            <td>CN23 kéo dài tiêu đề, bổ sung thêm cụm <em>"công khai minh bạch và tiếp nhận phản ánh"</em>.</td>
+                        </tr>
+                        <tr style="background: #fffdf5;">
+                            <td><strong>Mục II - Nhiệm vụ 7</strong></td>
+                            <td><strong>7. Nâng cao hiệu quả quản lý nội bộ và chất lượng đội ngũ</strong></td>
+                            <td><strong>7. Nâng cao hiệu quả quản lý nội bộ, chấn chỉnh kỷ cương và phát triển nguồn nhân lực</strong></td>
+                            <td style="text-align: center;"><span class="tag-variant">Biến Thể</span></td>
+                            <td>CN23 đổi vế sau thành <em>"chấn chỉnh kỷ cương và phát triển nguồn nhân lực"</em>.</td>
+                        </tr>
+                        <tr style="background: #fffdf5;">
+                            <td><strong>Mục II - Nhiệm vụ 8</strong></td>
+                            <td><strong>8. Tổ chức thực hiện và theo dõi, đánh giá kết quả</strong></td>
+                            <td><strong>8. Tổ chức thực hiện và kiểm tra, đánh giá</strong></td>
+                            <td style="text-align: center;"><span class="tag-variant">Biến Thể</span></td>
+                            <td>CN27 dùng <em>"theo dõi, đánh giá kết quả"</em>; CN23 rút ngắn thành <em>"kiểm tra, đánh giá"</em>.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- BỐ CỤC PHỤ LỤC CHƯƠNG TRÌNH CÔNG TÁC (12 NHIỆM VỤ BẢNG) -->
+            <div class="section-header">
+                <span>3. ĐỐI CHIẾU BỐ CỤC PHẦN III: PHỤ LỤC CHƯƠNG TRÌNH CÔNG TÁC (BẢNG 8 CỘT)</span>
+                <span class="tag-badge">12 Đầu Việc Công Tác</span>
+            </div>
+
+            <div class="note-box">
+                📌 <strong>Nhận xét tổng thể Phần III:</strong> Về mặt <strong>Bố cục các mục công việc</strong>, CN23 bám sát <strong>100% (12/12 mục)</strong> theo danh mục công tác chuẩn của CN27. Sự khác biệt chủ yếu nằm ở tiêu đề 2 cột bảng và chi tiết phụ trách nội bộ của Chi nhánh 23.
+            </div>
+
+            <div class="table-responsive">
+                <table class="bocuc-table">
+                    <thead>
+                        <tr>
+                            <th style="width: 6%; text-align: center;">TT</th>
+                            <th style="width: 44%;">Chủ Đề Đầu Việc - Bản Chuẩn CN27</th>
+                            <th style="width: 44%;">Chủ Đề Đầu Việc - Bản Đang Làm CN23</th>
+                            <th style="width: 6%; text-align: center;">Khớp</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="text-align: center; font-weight: bold;">1</td>
+                            <td>Tiếp nhận, giải quyết hồ sơ đăng ký biến động QSDĐ, cấp, đính chính, thu hồi GCN.</td>
+                            <td>Tiếp nhận, giải quyết hồ sơ đăng ký biến động QSDĐ, cấp, đính chính, thu hồi GCN.</td>
+                            <td style="text-align: center;"><span class="tag-match">Khớp</span></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center; font-weight: bold;">2</td>
+                            <td>Đăng ký biện pháp bảo đảm bằng QSDĐ và tài sản gắn liền với đất.</td>
+                            <td>Đăng ký biện pháp bảo đảm bằng QSDĐ và tài sản gắn liền với đất.</td>
+                            <td style="text-align: center;"><span class="tag-match">Khớp</span></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center; font-weight: bold;">3</td>
+                            <td>Rà soát, lập, chỉnh lý, lưu trữ, quản lý hồ sơ địa chính và phôi GCN.</td>
+                            <td>Rà soát, lập, chỉnh lý, lưu trữ, quản lý hồ sơ địa chính và phôi GCN.</td>
+                            <td style="text-align: center;"><span class="tag-match">Khớp</span></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center; font-weight: bold;">4</td>
+                            <td>Cập nhật, chỉnh lý, đồng bộ hóa CSDL địa chính vào CSDL đất đai quốc gia.</td>
+                            <td>Cập nhật, chỉnh lý, đồng bộ hóa CSDL địa chính vào CSDL đất đai quốc gia.</td>
+                            <td style="text-align: center;"><span class="tag-match">Khớp</span></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center; font-weight: bold;">5</td>
+                            <td>Đo đạc, lập bản đồ địa chính, trích lục bản đồ, kiểm tra duyệt mảnh trích đo.</td>
+                            <td>Đo đạc, lập bản đồ địa chính, trích lục bản đồ, kiểm tra duyệt mảnh trích đo.</td>
+                            <td style="text-align: center;"><span class="tag-match">Khớp</span></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center; font-weight: bold;">6</td>
+                            <td>Cung cấp hồ sơ, bản đồ, thông tin số liệu đất đai qua các thời kỳ.</td>
+                            <td>Cung cấp hồ sơ, bản đồ, thông tin số liệu đất đai qua các thời kỳ.</td>
+                            <td style="text-align: center;"><span class="tag-match">Khớp</span></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center; font-weight: bold;">7</td>
+                            <td>Thực hiện thống kê, kiểm kê đất đai và lập bản đồ hiện trạng sử dụng đất.</td>
+                            <td>Thực hiện thống kê, kiểm kê đất đai và lập bản đồ hiện trạng sử dụng đất.</td>
+                            <td style="text-align: center;"><span class="tag-match">Khớp</span></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center; font-weight: bold;">8</td>
+                            <td>Kiểm tra, đối chiếu, chỉnh lý biến động bản đồ địa chính, sổ mục kê gửi cấp xã/phường.</td>
+                            <td>Kiểm tra, đối chiếu, chỉnh lý biến động bản đồ địa chính, sổ mục kê gửi UBND phường.</td>
+                            <td style="text-align: center;"><span class="tag-match">Khớp</span></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center; font-weight: bold;">9</td>
+                            <td>Tiếp nhận, xử lý phản ánh, kiến nghị, khiếu nại, tố cáo thuộc thẩm quyền.</td>
+                            <td>Tiếp nhận, xử lý phản ánh, kiến nghị, khiếu nại, tố cáo thuộc thẩm quyền.</td>
+                            <td style="text-align: center;"><span class="tag-match">Khớp</span></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center; font-weight: bold;">10</td>
+                            <td>Thực hiện thu phí, lệ phí về đất đai; quản lý tài chính, tài sản.</td>
+                            <td>Thực hiện thu phí, lệ phí về đất đai; quản lý tài chính, tài sản.</td>
+                            <td style="text-align: center;"><span class="tag-match">Khớp</span></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center; font-weight: bold;">11</td>
+                            <td>Chế độ thống kê, tổng hợp, báo cáo định kỳ và đột xuất theo quy định.</td>
+                            <td>Chế độ thống kê, tổng hợp, báo cáo định kỳ và đột xuất theo quy định.</td>
+                            <td style="text-align: center;"><span class="tag-match">Khớp</span></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center; font-weight: bold;">12</td>
+                            <td>Rà soát quy trình nội bộ, nâng cao chất lượng hướng dẫn hồ sơ, CCHC, kỷ luật.</td>
+                            <td>Rà soát quy trình nội bộ, nâng cao chất lượng hồ sơ; đẩy mạnh DVC trực tuyến, CĐS.</td>
+                            <td style="text-align: center;"><span class="tag-match">Khớp</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- ========================================== -->
+        <!-- PHẦN II: TỔNG HỢP LỖI THỂ THỨC (FORMAT) -->
+        <!-- ========================================== -->
+        <div id="thethuc" style="margin-top: 40px;">
+            <div class="section-header">
+                <span>4. TỔNG HỢP CÁC LỖI THỂ THỨC TRÌNH BÀY (FORMAT NĐ 30)</span>
+                <span class="tag-badge">16 Tiêu Chí Format</span>
+            </div>
+
+            <div class="note-box">
+                ⚠️ <strong>Tóm tắt phần Thể thức:</strong> Dù Bố cục nội dung tương đối đồng nhất ở khung lớn, nhưng <strong>Hình thức trình bày văn bản (Format)</strong> của CN23 bị lỗi nghiêm trọng khi ép bảng 8 cột vào trang A4 Đứng (gây tràn lề phải 4cm), mất toàn bộ số trang, mất đường kẻ ngang thể thức, và nhét 'Kính gửi:' vào bảng 2 cột.
+            </div>
+
+            <div class="table-responsive">
+                <table class="bocuc-table">
+                    <thead>
+                        <tr>
+                            <th style="width: 6%; text-align: center;">STT</th>
+                            <th style="width: 24%;">Yếu Tố Thể Thức</th>
+                            <th style="width: 32%;">Bản Chuẩn CN27 (PDF)</th>
+                            <th style="width: 32%;">Bản Đang Soạn CN23 (DOCX)</th>
+                            <th style="width: 6%; text-align: center;">Mức Độ</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="text-align: center; font-weight: bold;">1</td>
+                            <td><strong>Hướng trang Bảng Phụ lục</strong></td>
+                            <td>Khổ A4 Ngang (Landscape: 297 x 210 mm)</td>
+                            <td>Khổ A4 Đứng (Portrait: 210 x 297 mm)</td>
+                            <td style="text-align: center;"><span class="tag-diff">Lỗi Nặng</span></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center; font-weight: bold;">2</td>
+                            <td><strong>Kích thước lề Bảng biểu</strong></td>
+                            <td>Rộng 739 pt (~26 cm), canh giữa vừa vặn</td>
+                            <td>Bị kéo lề âm -2.3cm, <strong>tràn lề phải >4cm</strong></td>
+                            <td style="text-align: center;"><span class="tag-diff">Lỗi Nặng</span></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center; font-weight: bold;">3</td>
+                            <td><strong>Cỡ chữ trong Bảng</strong></td>
+                            <td>Cỡ <strong>13pt</strong> chuẩn Nghị định 30</td>
+                            <td>Bị co ép xuống <strong>11pt</strong> do thiếu chỗ</td>
+                            <td style="text-align: center;"><span class="tag-variant">Sai cỡ</span></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center; font-weight: bold;">4</td>
+                            <td><strong>Đánh số trang Header</strong></td>
+                            <td>Đánh số ở Header, canh giữa, cỡ 12pt</td>
+                            <td><strong>Không có số trang</strong> (Header trống rỗng)</td>
+                            <td style="text-align: center;"><span class="tag-diff">Lỗi Nặng</span></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center; font-weight: bold;">5</td>
+                            <td><strong>Đường kẻ thể thức Trang 1</strong></td>
+                            <td>Đủ 2 đường nét liền dưới Chi nhánh & Tiêu ngữ</td>
+                            <td><strong>Không có đường kẻ nào</strong> (để trống)</td>
+                            <td style="text-align: center;"><span class="tag-diff">Lỗi Nặng</span></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center; font-weight: bold;">6</td>
+                            <td><strong>Bố cục phần 'Kính gửi:'</strong></td>
+                            <td>Đoạn văn bình thường, lùi đầu dòng, 14pt</td>
+                            <td>Nhét vào Bảng 2 cột (Table 1) kỳ quặc</td>
+                            <td style="text-align: center;"><span class="tag-diff">Lỗi Nặng</span></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center; font-weight: bold;">7</td>
+                            <td><strong>Gạch đầu dòng (-) Mục II</strong></td>
+                            <td>Đầu mỗi nhiệm vụ 1-7 đều có dấu gạch (<code>- </code>)</td>
+                            <td><strong>Mất toàn bộ dấu gạch đầu dòng</strong></td>
+                            <td style="text-align: center;"><span class="tag-variant">Lỗi list</span></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center; font-weight: bold;">8</td>
+                            <td><strong>Canh lề nội dung</strong></td>
+                            <td>Canh đều 2 bên tuyệt đối (<strong>Justify</strong>)</td>
+                            <td>Canh trái lộn xộn (Left-align)</td>
+                            <td style="text-align: center;"><span class="tag-variant">Canh lề</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- ========================================== -->
+        <!-- PHẦN III: HÀNH ĐỘNG KHẮC PHỤC -->
+        <!-- ========================================== -->
+        <div id="khuyennghi" style="margin-top: 40px;">
+            <div class="section-header">
+                <span>5. ĐỀ XUẤT HƯỚNG XỬ LÝ CHUẨN HOÁ CN23 THEO CN27</span>
+                <span class="tag-badge">Hành Động Cụ Thể</span>
+            </div>
+
+            <div style="background: #f8fafc; border: 1px solid var(--border-color); border-radius: 8px; padding: 22px;">
+                <h4 style="color: var(--primary); margin-bottom: 12px; font-size: 15px;">A. Về Bố Cục Nội Dung:</h4>
+                <ul style="padding-left: 20px; font-size: 13.5px; line-height: 1.8; margin-bottom: 16px;">
+                    <li><strong>Xóa khối tóm tắt lạ:</strong> Bỏ khối <em>"TRỌNG TÂM KẾ HOẠCH NĂM 2027 CHI NHÁNH SỐ 23"</em> và 4 bullet đầu trang 2 để đi thẳng vào <code>I. MỤC TIÊU</code> như CN27.</li>
+                    <li><strong>Điều chỉnh Tiêu đề Mục II - Nhiệm vụ 5:</strong> Xem xét nếu muốn đồng bộ 100% với CN27 thì đổi tên thành <em>"5. Tăng cường phối hợp trong thực hiện nhiệm vụ quản lý nhà nước về đất đai"</em>; nếu giữ đặc thù riêng của CN23 (giao dịch bảo đảm) thì cần thông báo rõ với lãnh đạo.</li>
+                    <li><strong>Bổ sung gạch đầu dòng:</strong> Đặt dấu gạch đầu dòng (<code>- </code>) trước các đoạn văn trong 8 nhiệm vụ của Mục II.</li>
+                </ul>
+
+                <h4 style="color: var(--primary); margin-bottom: 12px; font-size: 15px;">B. Về Thể Thức (Format):</h4>
+                <ul style="padding-left: 20px; font-size: 13.5px; line-height: 1.8;">
+                    <li><strong>Tách Section 2 Landscape:</strong> Chuyển Phụ lục bảng 8 cột sang khổ A4 nằm ngang để triệt tiêu lỗi tràn lề 4cm.</li>
+                    <li><strong>Tăng cỡ chữ bảng:</strong> Trả cỡ chữ bảng từ 11pt về 13pt tiêu chuẩn.</li>
+                    <li><strong>Đánh số trang & Kẻ nét liền:</strong> Chèn mã đánh số trang Header canh giữa và vẽ 2 đường kẻ ngang em-dash chuẩn ở trang 1.</li>
+                    <li><strong>Bỏ Bảng Kính gửi:</strong> Chuyển 'Kính gửi:' thành đoạn văn bình thường.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer">
+            Báo cáo cập nhật tự động theo Feedback người dùng • Hệ thống Rà soát Thể thức & Bố cục Văn bản (Dự án BINHDUONG)
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

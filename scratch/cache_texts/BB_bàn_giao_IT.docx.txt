@@ -1,0 +1,69 @@
+BIÊN BẢN BÀN GIAO CÔNG VIỆC QUẢN TRỊ MẠNG VÀ
+HỆ THỐNG CÔNG NGHỆ THÔNG TIN
+Hôm nay, ngày ...... tháng ...... năm 2026, tại đơn vị tiến hành lập biên bản bàn giao công việc và thiết bị công nghệ thông tin (IT) giữa các bên gồm:
+I. THÀNH PHẦN THAM GIA
+Bên giao: Ông: Lý Minh Tân
+Chức danh/Bộ phận: IT
+Bên nhận: Ông: Đỗ Trọng Minh Quân
+Chức danh/Bộ phận: Tiếp nhận công việc IT
+Người giám sát:
+Ông/Bà: ....................................................
+Chức vụ: Giám sát
+Đại diện Lãnh đạo đơn vị:
+Bà: Nguyễn Thị Lệ Hằng
+Chức vụ: Lãnh đạo Chi nhánh
+II. NỘI DUNG BÀN GIAO
+1. Thiết bị và Dữ liệu Phòng máy chủ (Server)
+Tổng số lượng phần cứng tại phòng Server gồm: 03 máy chủ (Server), 01 thiết bị NAS Synology DS423+, 01 tường lửa phần cứng, 02 modem mạng VNPT
+Chi tiết từng thiết bị như sau:
+(Lưu ý: Toàn bộ thông tin tài khoản và mật khẩu đăng nhập của các thiết bị nêu trên được bàn giao bằng kênh bảo mật/danh sách riêng).
+2. Danh mục Thiết bị văn phòng (Máy tính, máy in, máy scan, photocopy)
+Số lượng, hiện trạng và vị trí bố trí máy trạm, máy in, máy quét (scan), máy photocopy được lập thành bảng thống kê chi tiết theo file đính kèm biên bản này.
+3. Thiết bị, linh kiện dự phòng mới
+4. Thiết bị lưu trữ ngoài (Ổ cứng di động lưu trữ dữ liệu qua các năm)
+III. KẾT THÚC VÀ XÁC NHẬN
+Biên bản này được lập xong vào hồi ...... giờ ...... phút, ngày ...... tháng ...... năm 2026.
+Hai bên đã tiến hành kiểm tra, xác nhận tình trạng thực tế và đồng ý ký tên dưới đây. Biên bản được lập thành các bản có giá trị pháp lý như nhau, mỗi bên giữ một bản để theo dõi, thực hiện.
+
+=== [DANH SÁCH BẢNG BIỂU TRONG TÀI LIỆU] ===
+
+--- Bảng số 1 (3 hàng, 3 cột) ---
+VĂN PHÒNG ĐĂNG KÝ ĐẤT ĐAI THÀNH PHỐ HỒ CHÍ MINH CHI NHÁNH SỐ 23 |  | CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM Độc lập - Tự do - Hạnh phúc
+Số:           /CN23-HCTH |  | Thủ Dầu Một, ngày    tháng 09 năm 2026
+
+
+--- Bảng số 2 (7 hàng, 5 cột) ---
+STT | Thiết bị / Model | Địa chỉ IP | Chức năng / Nội dung dữ liệu lưu trữ | Ghi chú
+1 | Máy chủ 1 (HP DL360 Gen8) | 10.17.2.252 | Ứng dụng DNS; chứa dữ liệu hồ sơ quét cũ; hồ sơ giao dịch bảo đảm. | Đang hoạt động
+2 | Máy chủ 2 (HP DL360 Gen9) | 10.17.2.125 | Chứa folder Chung (ổ đĩa F); folder HSQ-TDM (ổ đĩa G); folder Banve DD (ổ đĩa H) và các dữ liệu khác. | Đang hoạt động
+3 | Máy chủ 3 (StoreEasy 1460) | 10.17.2.100 | Chứa folder Dataweb (gồm Banve DD và HSQ-TDM); folder HSQ-TDM chứa dữ liệu file Giấy chứng nhận của phần mềm Hồ sơ quét. | Đang hoạt động
+4 | Tường lửa FortiGate 61F | 192.168.1.254 | Quản trị an ninh mạng. | Đang hoạt động
+5 | NAS Backup (NAS423+) | 10.17.2.150:65001 | Sao lưu dữ liệu dự phòng. | Đang hoạt động
+6 | Modem VNPT (02 cái) | Theo cấu hình mạng | Đường truyền kết nối Internet. | Đang hoạt động
+
+--- Bảng số 3 (8 hàng, 5 cột) ---
+STT | Tên thiết bị / Linh kiện | Quy cách / Chủng loại | Số lượng | Tình trạng
+1 | Nguồn máy chủ (Server Power Supply) | Dành cho máy chủ | 02 cái | Mới
+2 | Quạt tản nhiệt máy chủ (Server Fan) | Dành cho máy chủ | 07 cái | Mới
+3 | Quạt tản nhiệt máy trạm | Dành cho PC | 07 cái | Mới
+4 | Nguồn máy trạm (PC Power Supply) | Dành cho PC | 05 cái | Mới
+5 | Chuột máy tính | Chuột cắm ngoài | 04 cái | Mới
+6 | Bộ lưu điện (UPS) | UPS 750VA | 01 cái | Mới
+7 | Máy in khổ A3 | HP LaserJet Pro M706n | 01 cái | Mới
+
+--- Bảng số 4 (4 hàng, 4 cột) ---
+STT | Loại dung lượng | Số lượng bàn giao | Hiện trạng lưu giữ / Ghi chú
+1 | Ổ 8TB | 03 ổ | Đầy đủ, lưu tại đơn vị
+2 | Ổ 4TB | 04 ổ | Trong đó: 03 ổ lưu tại đơn vị, 01 ổ hiện đơn vị triển khai phần mềm VBDLIS đang tạm giữ
+3 | Ổ 2TB | 01 ổ | Đầy đủ, lưu tại đơn vị
+
+--- Bảng số 5 (4 hàng, 2 cột) ---
+BÊN NHẬN | BÊN GIAO
+(Ký và ghi rõ họ tên)
+Đỗ Trọng Minh Quân | Lý Minh Tân
+
+
+--- Bảng số 6 (3 hàng, 2 cột) ---
+GIÁM SÁT | LÃNH ĐẠO CHI NHÁNH
+(Ký và ghi rõ họ tên) | (Ký, ghi rõ họ tên và đóng dấu)
+.................................................... | Nguyễn Thị Lệ Hằng

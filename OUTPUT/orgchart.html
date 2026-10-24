@@ -1,0 +1,1469 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sơ Đồ Cơ Cấu Tổ Chức - Chi Nhánh 23 (QĐ 2637/QĐ-SNNMT-VP)</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f8fafc;
+      color: #0f172a;
+    }
+    
+    /* Tree connector lines */
+    .tree-line-v {
+      width: 2px;
+      background-color: #cbd5e1;
+      margin: 0 auto;
+    }
+    .tree-line-h {
+      height: 2px;
+      background-color: #cbd5e1;
+    }
+    
+    /* Custom shadow & card transitions */
+    .org-card {
+      transition: all 0.2s ease-in-out;
+    }
+    .org-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.08), 0 8px 10px -6px rgba(15, 23, 42, 0.04);
+    }
+    
+    /* Print optimizations */
+    @media print {
+      body {
+        background-color: #ffffff !important;
+      }
+      .no-print {
+        display: none !important;
+      }
+      .print-break-inside-avoid {
+        break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-slate-50 text-slate-900 flex flex-col antialiased selection:bg-sky-100 selection:text-sky-900">
+
+  <!-- TOP HEADER / BRANDING -->
+  <header class="bg-white border-b border-slate-200 sticky top-0 z-40 shadow-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+      <div class="flex items-center space-x-3.5">
+        <div class="w-11 h-11 rounded-xl bg-gradient-to-tr from-sky-600 to-indigo-600 flex items-center justify-center text-white shadow-sm ring-2 ring-sky-100 flex-shrink-0">
+          <i class="fa-solid fa-sitemap text-lg"></i>
+        </div>
+        <div>
+          <div class="flex items-center gap-2 flex-wrap">
+            <h1 class="text-base sm:text-lg font-extrabold text-slate-900 tracking-tight">
+              SƠ ĐỒ CƠ CẤU TỔ CHỨC & PHÂN CÔNG NHIỆM VỤ
+            </h1>
+            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-sky-100 text-sky-800 border border-sky-200">
+              Quyết định 2637/QĐ-SNNMT-VP
+            </span>
+          </div>
+          <p class="text-xs text-slate-600 font-medium">
+            VĂN PHÒNG ĐĂNG KÝ ĐẤT ĐAI TP.HCM - CHI NHÁNH SỐ 23
+            <span class="text-slate-400 mx-1">•</span>
+            <span class="text-slate-500">358 Huỳnh Văn Cù, P. Thủ Dầu Một</span>
+          </p>
+        </div>
+      </div>
+
+      <!-- Header actions -->
+      <div class="flex items-center space-x-2 no-print self-end md:self-auto flex-wrap">
+        <a href="so_sanh_to_truong.html" class="inline-flex items-center px-3 py-1.5 rounded-lg text-xs font-semibold bg-amber-50 hover:bg-amber-100 text-amber-800 border border-amber-300 transition shadow-2xs">
+          <i class="fa-solid fa-user-shield mr-1.5 text-amber-600"></i> Thẩm Quyền Tổ Trưởng
+        </a>
+        <a href="compare_regulations.html" class="inline-flex items-center px-3 py-1.5 rounded-lg text-xs font-semibold bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-300 transition shadow-2xs">
+          <i class="fa-solid fa-code-compare mr-1.5 text-emerald-600"></i> So Sánh 4 QĐ
+        </a>
+        <a href="index.html" class="inline-flex items-center px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 border border-slate-300 transition shadow-2xs">
+          <i class="fa-solid fa-gauge mr-1.5 text-slate-500"></i> Dashboard IT
+        </a>
+        <a href="document_viewer.html" class="inline-flex items-center px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 border border-slate-300 transition shadow-2xs">
+          <i class="fa-solid fa-folder-open mr-1.5 text-amber-600"></i> Kho Tài Liệu
+        </a>
+        <button onclick="window.print()" class="inline-flex items-center px-3 py-1.5 rounded-lg text-xs font-semibold bg-sky-600 hover:bg-sky-700 text-white shadow-xs transition">
+          <i class="fa-solid fa-print mr-1.5"></i> In / Xuất PDF
+        </button>
+      </div>
+    </div>
+
+    <!-- SUB-NAVIGATION BAR / VIEW MODES -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-between gap-3 py-2 no-print">
+      <div class="flex items-center space-x-1 overflow-x-auto w-full sm:w-auto scrollbar-none">
+        <button onclick="switchView('tree')" id="btn-view-tree" class="view-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-sky-50 text-sky-700 border border-sky-200 flex items-center gap-1.5 transition whitespace-nowrap">
+          <i class="fa-solid fa-network-wired text-sky-600"></i> Sơ Đồ Cây Phân Cấp
+        </button>
+        <button onclick="switchView('departments')" id="btn-view-departments" class="view-btn px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-600 hover:text-slate-900 hover:bg-slate-100 border border-transparent flex items-center gap-1.5 transition whitespace-nowrap">
+          <i class="fa-solid fa-building-columns text-slate-500"></i> 3 Tổ Nghiệp Vụ
+        </button>
+        <button onclick="switchView('tasks')" id="btn-view-tasks" class="view-btn px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-600 hover:text-slate-900 hover:bg-slate-100 border border-transparent flex items-center gap-1.5 transition whitespace-nowrap">
+          <i class="fa-solid fa-list-check text-slate-500"></i> 17 Nhiệm Vụ (Điều 2)
+        </button>
+        <button onclick="switchView('wards')" id="btn-view-wards" class="view-btn px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-600 hover:text-slate-900 hover:bg-slate-100 border border-transparent flex items-center gap-1.5 transition whitespace-nowrap">
+          <i class="fa-solid fa-map-location-dot text-slate-500"></i> 5 Phường & Một Cửa
+        </button>
+        <button onclick="switchView('governance')" id="btn-view-governance" class="view-btn px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-600 hover:text-slate-900 hover:bg-slate-100 border border-transparent flex items-center gap-1.5 transition whitespace-nowrap">
+          <i class="fa-solid fa-scale-balanced text-slate-500"></i> Chế Độ & Quy Chế
+        </button>
+      </div>
+
+      <!-- Quick Search input -->
+      <div class="relative w-full sm:w-72 flex-shrink-0">
+        <i class="fa-solid fa-magnifying-glass absolute left-3 top-2.5 text-slate-400 text-xs"></i>
+        <input type="text" id="orgSearchInput" oninput="filterOrgContent(this.value)" placeholder="Tìm chức danh, nhiệm vụ, mạng, phôi..." 
+               class="w-full pl-8 pr-3 py-1.5 text-xs rounded-lg border border-slate-300 bg-white focus:outline-hidden focus:ring-2 focus:ring-sky-500 focus:border-sky-500 text-slate-800 placeholder-slate-400">
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTAINER -->
+  <main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-6">
+
+    <!-- OVERVIEW STATS BANNER -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-3.5">
+      <div class="bg-white border border-slate-200 rounded-xl p-3.5 shadow-2xs flex items-center space-x-3">
+        <div class="w-10 h-10 rounded-lg bg-amber-50 border border-amber-200 text-amber-700 flex items-center justify-center flex-shrink-0">
+          <i class="fa-solid fa-landmark text-base"></i>
+        </div>
+        <div>
+          <div class="text-[11px] font-medium text-slate-500 uppercase tracking-wider">Cơ Quan Cấp Trên</div>
+          <div class="text-xs font-bold text-slate-900 truncate">Sở NN&MT & VPĐKĐĐ TP</div>
+          <div class="text-[10px] text-amber-700 font-semibold">Chỉ đạo toàn diện</div>
+        </div>
+      </div>
+
+      <div class="bg-white border border-slate-200 rounded-xl p-3.5 shadow-2xs flex items-center space-x-3">
+        <div class="w-10 h-10 rounded-lg bg-sky-50 border border-sky-200 text-sky-700 flex items-center justify-center flex-shrink-0">
+          <i class="fa-solid fa-user-tie text-base"></i>
+        </div>
+        <div>
+          <div class="text-[11px] font-medium text-slate-500 uppercase tracking-wider">Lãnh Đạo Đơn Vị</div>
+          <div class="text-xs font-bold text-slate-900">Giám Đốc & Các PGĐ</div>
+          <div class="text-[10px] text-sky-700 font-semibold">Chế độ thủ trưởng</div>
+        </div>
+      </div>
+
+      <div class="bg-white border border-slate-200 rounded-xl p-3.5 shadow-2xs flex items-center space-x-3">
+        <div class="w-10 h-10 rounded-lg bg-emerald-50 border border-emerald-200 text-emerald-700 flex items-center justify-center flex-shrink-0">
+          <i class="fa-solid fa-layer-group text-base"></i>
+        </div>
+        <div>
+          <div class="text-[11px] font-medium text-slate-500 uppercase tracking-wider">Cơ Cấu Khối Nghiệp Vụ</div>
+          <div class="text-xs font-bold text-slate-900">03 Tổ Chuyên Môn</div>
+          <div class="text-[10px] text-emerald-700 font-semibold">HCTH • Đăng Ký • Kỹ Thuật</div>
+        </div>
+      </div>
+
+      <div class="bg-white border border-slate-200 rounded-xl p-3.5 shadow-2xs flex items-center space-x-3">
+        <div class="w-10 h-10 rounded-lg bg-indigo-50 border border-indigo-200 text-indigo-700 flex items-center justify-center flex-shrink-0">
+          <i class="fa-solid fa-city text-base"></i>
+        </div>
+        <div>
+          <div class="text-[11px] font-medium text-slate-500 uppercase tracking-wider">Địa Bàn Phụ Trách</div>
+          <div class="text-xs font-bold text-slate-900">05 Phường Trọng Điểm</div>
+          <div class="text-[10px] text-indigo-700 font-semibold">Thủ Dầu Một, Chánh Hiệp...</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ======================================================== -->
+    <!-- VIEW 1: INTERACTIVE HIERARCHICAL ORG TREE -->
+    <!-- ======================================================== -->
+    <section id="view-tree" class="org-view space-y-6">
+
+      <!-- Tree Container Box -->
+      <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-xs overflow-x-auto">
+        <div class="min-w-[900px] flex flex-col items-center py-4">
+
+          <!-- LEVEL 0: SỞ NÔNG NGHIỆP VÀ MÔI TRƯỜNG TP.HCM -->
+          <div class="flex flex-col items-center text-center">
+            <div class="org-card cursor-pointer w-96 p-4 rounded-xl bg-gradient-to-b from-amber-50/80 to-white border-2 border-amber-300 shadow-xs hover:border-amber-500 text-left relative group"
+                 onclick="openDetails('so_nnmt')">
+              <div class="flex items-center justify-between mb-1.5">
+                <span class="px-2 py-0.5 text-[10px] font-bold uppercase rounded-md bg-amber-100 text-amber-800 border border-amber-200">
+                  Cấp Quyết Định Ban Hành
+                </span>
+                <span class="text-xs text-slate-400 group-hover:text-amber-600"><i class="fa-solid fa-circle-info"></i> Chi tiết</span>
+              </div>
+              <h3 class="text-sm font-extrabold text-slate-900">SỞ NÔNG NGHIỆP VÀ MÔI TRƯỜNG TP.HCM</h3>
+              <p class="text-xs text-slate-600 mt-1">Giám đốc Sở: <strong>Nguyễn Toàn Thắng</strong> (Người ký QĐ số 2637)</p>
+              <div class="mt-2 text-[11px] text-slate-500 bg-amber-50/50 p-2 rounded-lg border border-amber-100">
+                <i class="fa-solid fa-stamp text-amber-600 mr-1"></i> Bổ nhiệm Giám đốc, Phó Giám đốc Chi nhánh; ban hành quy chế tổ chức bộ máy.
+              </div>
+            </div>
+
+            <!-- Vertical connector line -->
+            <div class="tree-line-v h-6"></div>
+          </div>
+
+          <!-- LEVEL 1: VĂN PHÒNG ĐĂNG KÝ ĐẤT ĐAI TP.HCM -->
+          <div class="flex flex-col items-center text-center">
+            <div class="org-card cursor-pointer w-96 p-4 rounded-xl bg-gradient-to-b from-indigo-50/80 to-white border-2 border-indigo-300 shadow-xs hover:border-indigo-500 text-left relative group"
+                 onclick="openDetails('vpdkdd_tp')">
+              <div class="flex items-center justify-between mb-1.5">
+                <span class="px-2 py-0.5 text-[10px] font-bold uppercase rounded-md bg-indigo-100 text-indigo-800 border border-indigo-200">
+                  Cơ Quan Quản Lý Trực Tiếp, Toàn Diện
+                </span>
+                <span class="text-xs text-slate-400 group-hover:text-indigo-600"><i class="fa-solid fa-circle-info"></i> Chi tiết</span>
+              </div>
+              <h3 class="text-sm font-extrabold text-slate-900">VĂN PHÒNG ĐĂNG KÝ ĐẤT ĐAI TP.HCM</h3>
+              <p class="text-xs text-slate-600 mt-1">Chỉ đạo trực tiếp theo Quyết định 1886/QĐ-UBND (Hợp nhất TP.HCM, Bình Dương, BR-VT)</p>
+              <div class="mt-2 text-[11px] text-indigo-900 bg-indigo-50/50 p-2 rounded-lg border border-indigo-100 flex items-center justify-between">
+                <span><i class="fa-solid fa-user-shield text-indigo-600 mr-1"></i> Có Ban Giám đốc VP phụ trách Chi nhánh 23</span>
+                <span class="text-[10px] font-semibold bg-indigo-100 px-1.5 py-0.5 rounded text-indigo-700">Điều 1 & 9</span>
+              </div>
+            </div>
+
+            <!-- Vertical connector line -->
+            <div class="tree-line-v h-6"></div>
+          </div>
+
+          <!-- LEVEL 2: CHI NHÁNH SỐ 23 & BAN GIÁM ĐỐC -->
+          <div class="flex flex-col items-center text-center w-full">
+            <div class="org-card cursor-pointer w-[460px] p-5 rounded-2xl bg-gradient-to-b from-sky-50 to-white border-2 border-sky-400 shadow-sm hover:border-sky-600 text-left relative group"
+                 onclick="openDetails('chi_nhanh_23')">
+              <div class="flex items-center justify-between mb-2">
+                <span class="px-2.5 py-0.5 text-xs font-bold uppercase rounded-md bg-sky-600 text-white shadow-2xs">
+                  CHI NHÁNH VĂN PHÒNG ĐĂNG KÝ ĐẤT ĐAI SỐ 23
+                </span>
+                <span class="text-xs text-sky-700 font-semibold group-hover:underline"><i class="fa-solid fa-arrow-up-right-from-square"></i> Xem hồ sơ</span>
+              </div>
+              <div class="grid grid-cols-2 gap-2.5 mt-2">
+                <div class="bg-white p-2.5 rounded-xl border border-sky-200">
+                  <div class="text-[11px] font-bold text-sky-900 uppercase"><i class="fa-solid fa-user-tie text-sky-600 mr-1"></i> Giám Đốc Chi Nhánh</div>
+                  <div class="text-xs text-slate-700 mt-1 leading-snug">Người đứng đầu, điều hành theo chế độ thủ trưởng toàn diện đơn vị (Điều 3).</div>
+                </div>
+                <div class="bg-white p-2.5 rounded-xl border border-sky-200">
+                  <div class="text-[11px] font-bold text-sky-900 uppercase"><i class="fa-solid fa-users text-sky-600 mr-1"></i> Các Phó Giám Đốc</div>
+                  <div class="text-xs text-slate-700 mt-1 leading-snug">Giúp việc Giám đốc theo lĩnh vực (PGĐ Nguyễn Thị Lệ Hằng, PGĐ Phạm Thanh Tùng...).</div>
+                </div>
+              </div>
+              <div class="mt-2.5 pt-2 border-t border-sky-100 flex items-center justify-between text-[11px] text-slate-500">
+                <span><i class="fa-solid fa-stamp text-sky-600 mr-1"></i> Đơn vị sự nghiệp có tư cách pháp nhân & con dấu riêng</span>
+                <span class="font-mono font-semibold text-slate-700">Trụ sở: 358 Huỳnh Văn Cù</span>
+              </div>
+            </div>
+
+            <!-- Connector from Chi nhánh to 3 Departments -->
+            <div class="tree-line-v h-8"></div>
+            
+            <!-- Horizontal distribution line -->
+            <div class="w-[84%] tree-line-h relative">
+              <div class="absolute left-0 top-0 w-2 h-2 rounded-full bg-slate-400 -mt-[3px]"></div>
+              <div class="absolute left-1/2 top-0 w-2 h-2 rounded-full bg-slate-400 -mt-[3px] -ml-1"></div>
+              <div class="absolute right-0 top-0 w-2 h-2 rounded-full bg-slate-400 -mt-[3px]"></div>
+            </div>
+            <div class="w-[84%] flex justify-between">
+              <div class="tree-line-v h-6"></div>
+              <div class="tree-line-v h-6"></div>
+              <div class="tree-line-v h-6"></div>
+            </div>
+          </div>
+
+          <!-- LEVEL 3: 03 TỔ NGHIỆP VỤ CHUYÊN MÔN (ARTICLE 3 & 4) -->
+          <div class="w-full grid grid-cols-3 gap-6 pt-1">
+
+            <!-- TỔ 1: TỔ HÀNH CHÍNH – TỔNG HỢP -->
+            <div class="org-card cursor-pointer rounded-xl bg-white border-2 border-emerald-300 shadow-xs hover:border-emerald-500 p-4 text-left flex flex-col justify-between group"
+                 onclick="openDetails('to_hcth')">
+              <div>
+                <div class="flex items-center justify-between mb-2">
+                  <span class="px-2 py-0.5 text-[10px] font-bold uppercase rounded-md bg-emerald-100 text-emerald-800 border border-emerald-200">
+                    Tổ Nghiệp Vụ Số 1
+                  </span>
+                  <span class="text-[11px] text-slate-400 group-hover:text-emerald-700 font-semibold"><i class="fa-solid fa-circle-info"></i> Chi tiết</span>
+                </div>
+                <h4 class="text-sm font-extrabold text-slate-900 flex items-center">
+                  <i class="fa-solid fa-briefcase text-emerald-600 mr-2"></i>
+                  TỔ HÀNH CHÍNH – TỔNG HỢP
+                </h4>
+                <p class="text-xs text-slate-600 mt-1 font-medium">
+                  Cơ cấu: Tổ trưởng + Không quá 03 Tổ phó (Điều 4)
+                </p>
+
+                <!-- Highlighting IT component -->
+                <div class="mt-3 p-2.5 rounded-lg bg-emerald-50/80 border border-emerald-200">
+                  <div class="text-xs font-bold text-emerald-900 flex items-center">
+                    <i class="fa-solid fa-laptop-code text-emerald-600 mr-1.5"></i>
+                    Bộ Phận CNTT & Quản Trị Hệ Thống
+                  </div>
+                  <p class="text-[11px] text-emerald-800 mt-1">
+                    ★ Vị trí công tác của <strong>Đỗ Trọng Minh Quân</strong>: Quản trị 80 thiết bị mạng, máy chủ HP, hệ thống FortiGate, Kaspersky và CSDL đất đai.
+                  </p>
+                </div>
+
+                <!-- Core duties list -->
+                <ul class="mt-3 space-y-1.5 text-xs text-slate-700">
+                  <li class="flex items-start">
+                    <i class="fa-solid fa-check text-emerald-600 mt-0.5 mr-1.5 text-[10px]"></i>
+                    <span>Tổ chức cán bộ, viên chức, hợp đồng lao động & tiền lương.</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fa-solid fa-check text-emerald-600 mt-0.5 mr-1.5 text-[10px]"></i>
+                    <span>Tiếp nhận hồ sơ & trả kết quả giải quyết TTHC (Một cửa).</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fa-solid fa-check text-emerald-600 mt-0.5 mr-1.5 text-[10px]"></i>
+                    <span>Tài chính kế toán, thu phí, lệ phí & dịch vụ đất đai.</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fa-solid fa-check text-emerald-600 mt-0.5 mr-1.5 text-[10px]"></i>
+                    <span>Văn thư, lưu trữ công văn, quản lý con dấu đơn vị.</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="mt-4 pt-2.5 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-500">
+                <span>Khoản 13, 14, 16 Điều 2</span>
+                <span class="text-emerald-700 font-semibold">Xem 5 nhiệm vụ &rarr;</span>
+              </div>
+            </div>
+
+            <!-- TỔ 2: TỔ ĐĂNG KÝ VÀ CẤP GIẤY CHỨNG NHẬN -->
+            <div class="org-card cursor-pointer rounded-xl bg-white border-2 border-rose-300 shadow-xs hover:border-rose-500 p-4 text-left flex flex-col justify-between group"
+                 onclick="openDetails('to_dangky')">
+              <div>
+                <div class="flex items-center justify-between mb-2">
+                  <span class="px-2 py-0.5 text-[10px] font-bold uppercase rounded-md bg-rose-100 text-rose-800 border border-rose-200">
+                    Tổ Nghiệp Vụ Số 2
+                  </span>
+                  <span class="text-[11px] text-slate-400 group-hover:text-rose-700 font-semibold"><i class="fa-solid fa-circle-info"></i> Chi tiết</span>
+                </div>
+                <h4 class="text-sm font-extrabold text-slate-900 flex items-center">
+                  <i class="fa-solid fa-certificate text-rose-600 mr-2"></i>
+                  TỔ ĐĂNG KÝ & CẤP GCN
+                </h4>
+                <p class="text-xs text-slate-600 mt-1 font-medium">
+                  Cơ cấu: Tổ trưởng + Không quá 03 Tổ phó (Điều 4)
+                </p>
+
+                <!-- Key focus -->
+                <div class="mt-3 p-2.5 rounded-lg bg-rose-50/80 border border-rose-200">
+                  <div class="text-xs font-bold text-rose-900 flex items-center">
+                    <i class="fa-solid fa-stamp text-rose-600 mr-1.5"></i>
+                    Thẩm Tra Đăng Ký & Biến Động Đất Đai
+                  </div>
+                  <p class="text-[11px] text-rose-800 mt-1">
+                    Giải quyết thủ tục cho cá nhân, cộng đồng, người gốc Việt Nam định cư tại nước ngoài trên 5 phường.
+                  </p>
+                </div>
+
+                <!-- Core duties list -->
+                <ul class="mt-3 space-y-1.5 text-xs text-slate-700">
+                  <li class="flex items-start">
+                    <i class="fa-solid fa-check text-rose-600 mt-0.5 mr-1.5 text-[10px]"></i>
+                    <span>Đăng ký biến động quyền sử dụng đất & tài sản trên đất.</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fa-solid fa-check text-rose-600 mt-0.5 mr-1.5 text-[10px]"></i>
+                    <span>Cấp, đính chính, thu hồi, hủy Giấy chứng nhận (Sổ đỏ/hồng).</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fa-solid fa-check text-rose-600 mt-0.5 mr-1.5 text-[10px]"></i>
+                    <span>Đăng ký biện pháp bảo đảm (thế chấp, xóa thế chấp ngân hàng).</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fa-solid fa-check text-rose-600 mt-0.5 mr-1.5 text-[10px]"></i>
+                    <span>Cập nhật cơ sở dữ liệu địa chính & sổ mục kê biến động.</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="mt-4 pt-2.5 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-500">
+                <span>Khoản 1, 2, 8, 11 Điều 2</span>
+                <span class="text-rose-700 font-semibold">Xem 6 nhiệm vụ &rarr;</span>
+              </div>
+            </div>
+
+            <!-- TỔ 3: TỔ KỸ THUẬT ĐỊA CHÍNH VÀ LƯU TRỮ -->
+            <div class="org-card cursor-pointer rounded-xl bg-white border-2 border-purple-300 shadow-xs hover:border-purple-500 p-4 text-left flex flex-col justify-between group"
+                 onclick="openDetails('to_kythuat')">
+              <div>
+                <div class="flex items-center justify-between mb-2">
+                  <span class="px-2 py-0.5 text-[10px] font-bold uppercase rounded-md bg-purple-100 text-purple-800 border border-purple-200">
+                    Tổ Nghiệp Vụ Số 3
+                  </span>
+                  <span class="text-[11px] text-slate-400 group-hover:text-purple-700 font-semibold"><i class="fa-solid fa-circle-info"></i> Chi tiết</span>
+                </div>
+                <h4 class="text-sm font-extrabold text-slate-900 flex items-center">
+                  <i class="fa-solid fa-map-location text-purple-600 mr-2"></i>
+                  TỔ KỸ THUẬT ĐỊA CHÍNH & LƯU TRỮ
+                </h4>
+                <p class="text-xs text-slate-600 mt-1 font-medium">
+                  Cơ cấu: Tổ trưởng + Không quá 03 Tổ phó (Điều 4)
+                </p>
+
+                <!-- Key focus -->
+                <div class="mt-3 p-2.5 rounded-lg bg-purple-50/80 border border-purple-200">
+                  <div class="text-xs font-bold text-purple-900 flex items-center">
+                    <i class="fa-solid fa-compass-drafting text-purple-600 mr-1.5"></i>
+                    Đo Đạc Bản Đồ & Quản Trị Kho Hồ Sơ
+                  </div>
+                  <p class="text-[11px] text-purple-800 mt-1">
+                    Quản lý phôi GCN, đo đạc địa chính, chỉnh lý bản đồ và lưu trữ hồ sơ địa chính qua các thời kỳ.
+                  </p>
+                </div>
+
+                <!-- Core duties list -->
+                <ul class="mt-3 space-y-1.5 text-xs text-slate-700">
+                  <li class="flex items-start">
+                    <i class="fa-solid fa-check text-purple-600 mt-0.5 mr-1.5 text-[10px]"></i>
+                    <span>Đo đạc, lập bản đồ địa chính, trích lục bản đồ, duyệt trích đo.</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fa-solid fa-check text-purple-600 mt-0.5 mr-1.5 text-[10px]"></i>
+                    <span>Tiếp nhận, quản lý nghiêm ngặt việc sử dụng phôi GCN.</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fa-solid fa-check text-purple-600 mt-0.5 mr-1.5 text-[10px]"></i>
+                    <span>Lập, lưu trữ, số hóa và quản lý kho hồ sơ địa chính.</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fa-solid fa-check text-purple-600 mt-0.5 mr-1.5 text-[10px]"></i>
+                    <span>Cập nhật CSDL quốc gia về đất đai; thống kê, kiểm kê định kỳ.</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="mt-4 pt-2.5 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-500">
+                <span>Khoản 2, 3, 4, 6, 7, 9, 10 Điều 2</span>
+                <span class="text-purple-700 font-semibold">Xem 7 nhiệm vụ &rarr;</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- LEVEL 4: PHẠM VI 5 PHƯỜNG & HỆ THỐNG PHỐI HỢP NGOẠI VI -->
+          <div class="w-full mt-8 pt-6 border-t-2 border-dashed border-slate-200">
+            <div class="text-center mb-4">
+              <span class="px-3 py-1 text-xs font-bold uppercase rounded-full bg-slate-200 text-slate-700 tracking-wider">
+                MẠNG LƯỚI PHỐI HỢP & TIẾP NHẬN TẠI ĐỊA BÀN 5 PHƯỜNG (ĐIỀU 2 & ĐIỀU 9)
+              </span>
+            </div>
+
+            <div class="grid grid-cols-5 gap-3">
+              <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl text-center hover:bg-sky-50/50 hover:border-sky-300 transition">
+                <i class="fa-solid fa-building text-sky-600 text-lg mb-1"></i>
+                <div class="text-xs font-bold text-slate-900">P. Thủ Dầu Một</div>
+                <div class="text-[10px] text-slate-500 mt-0.5">Trụ sở Chi nhánh 23</div>
+                <div class="mt-1 text-[10px] font-mono text-sky-700 bg-sky-100/50 py-0.5 rounded">Trọng điểm TTHC</div>
+              </div>
+
+              <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl text-center hover:bg-sky-50/50 hover:border-sky-300 transition">
+                <i class="fa-solid fa-house-chimney-user text-indigo-600 text-lg mb-1"></i>
+                <div class="text-xs font-bold text-slate-900">P. Chánh Hiệp</div>
+                <div class="text-[10px] text-slate-500 mt-0.5">Một cửa phường</div>
+                <div class="mt-1 text-[10px] font-mono text-indigo-700 bg-indigo-100/50 py-0.5 rounded">M402d (HP 26A)</div>
+              </div>
+
+              <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl text-center hover:bg-sky-50/50 hover:border-sky-300 transition">
+                <i class="fa-solid fa-landmark-flag text-emerald-600 text-lg mb-1"></i>
+                <div class="text-xs font-bold text-slate-900">P. Phú Lợi</div>
+                <div class="text-[10px] text-slate-500 mt-0.5">Một cửa phường</div>
+                <div class="mt-1 text-[10px] font-mono text-emerald-700 bg-emerald-100/50 py-0.5 rounded">Brother HL-2240</div>
+              </div>
+
+              <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl text-center hover:bg-sky-50/50 hover:border-sky-300 transition">
+                <i class="fa-solid fa-tree-city text-amber-600 text-lg mb-1"></i>
+                <div class="text-xs font-bold text-slate-900">P. Phú An</div>
+                <div class="text-[10px] text-slate-500 mt-0.5">Một cửa phường</div>
+                <div class="mt-1 text-[10px] font-mono text-amber-700 bg-amber-100/50 py-0.5 rounded">M402d (HP 26A)</div>
+              </div>
+
+              <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl text-center hover:bg-sky-50/50 hover:border-sky-300 transition">
+                <i class="fa-solid fa-map-pin text-rose-600 text-lg mb-1"></i>
+                <div class="text-xs font-bold text-slate-900">P. Bình Dương</div>
+                <div class="text-[10px] text-slate-500 mt-0.5">Một cửa phường</div>
+                <div class="mt-1 text-[10px] font-mono text-rose-700 bg-rose-100/50 py-0.5 rounded">Brother HL-2320</div>
+              </div>
+            </div>
+
+            <!-- Inter-agency connections bar -->
+            <div class="mt-4 p-3 rounded-xl bg-slate-100/70 border border-slate-200 flex flex-wrap items-center justify-between gap-2 text-xs text-slate-600">
+              <span class="font-semibold text-slate-800"><i class="fa-solid fa-handshake mr-1.5 text-slate-500"></i> Cơ chế phối hợp liên ngành (Điều 9 khoản 4):</span>
+              <div class="flex items-center space-x-2 flex-wrap">
+                <span class="bg-white px-2 py-0.5 rounded border border-slate-300 text-[11px] font-medium text-slate-700">UBND 5 Phường</span>
+                <span class="bg-white px-2 py-0.5 rounded border border-slate-300 text-[11px] font-medium text-slate-700">Chi cục Thuế</span>
+                <span class="bg-white px-2 py-0.5 rounded border border-slate-300 text-[11px] font-medium text-slate-700">Kho bạc & Ngân hàng</span>
+                <span class="bg-white px-2 py-0.5 rounded border border-slate-300 text-[11px] font-medium text-slate-700">Đơn vị CSDL VBDLIS</span>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================== -->
+    <!-- VIEW 2: 3 TỔ NGHIỆP VỤ DEEP DIVE -->
+    <!-- ======================================================== -->
+    <section id="view-departments" class="org-view hidden space-y-6">
+      <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-xs">
+        <div class="max-w-3xl mb-6">
+          <h2 class="text-base font-bold text-slate-900 flex items-center">
+            <i class="fa-solid fa-building-user text-sky-600 mr-2"></i>
+            Chi Tiết Chức Năng 03 Tổ Nghiệp Vụ Chuyên Môn (Điều 3 & Điều 4)
+          </h2>
+          <p class="text-xs text-slate-600 mt-1">
+            Quy định rõ cơ cấu lãnh đạo: Mỗi Tổ chuyên môn có 01 Tổ trưởng và <strong>không quá 03 Tổ phó</strong>. Việc bổ nhiệm do Giám đốc Chi nhánh quyết định sau khi có ý kiến thống nhất của Ban Giám đốc VPĐKĐĐ Thành phố phụ trách đơn vị.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+          <!-- Col 1: Tổ Hành chính - Tổng hợp -->
+          <div class="rounded-xl border border-emerald-200 bg-emerald-50/20 p-5 flex flex-col justify-between space-y-4">
+            <div>
+              <div class="flex items-center justify-between pb-3 border-b border-emerald-200">
+                <div>
+                  <span class="text-[10px] font-bold text-emerald-800 uppercase tracking-wide bg-emerald-100 px-2 py-0.5 rounded">Tổ Chuyên Môn 1</span>
+                  <h3 class="text-base font-extrabold text-slate-900 mt-1">Tổ Hành Chính – Tổng Hợp</h3>
+                </div>
+                <div class="w-10 h-10 rounded-xl bg-emerald-600 text-white flex items-center justify-center text-lg shadow-xs">
+                  <i class="fa-solid fa-folder-tree"></i>
+                </div>
+              </div>
+
+              <!-- Lãnh đạo tổ -->
+              <div class="mt-3 bg-white p-3 rounded-lg border border-emerald-100 text-xs">
+                <div class="font-bold text-slate-900"><i class="fa-solid fa-user-gear text-emerald-600 mr-1.5"></i> Định mức lãnh đạo tổ:</div>
+                <div class="text-slate-600 mt-0.5">• 01 Tổ trưởng phụ trách chung</div>
+                <div class="text-slate-600">• Tối đa 03 Tổ phó giúp việc</div>
+              </div>
+
+              <!-- Nhánh CNTT Highlight -->
+              <div class="mt-3 bg-white p-3.5 rounded-xl border-2 border-emerald-400 shadow-2xs">
+                <div class="flex items-center justify-between text-xs font-extrabold text-emerald-900">
+                  <span><i class="fa-solid fa-server text-emerald-600 mr-1"></i> Bộ Phận CNTT & Mạng</span>
+                  <span class="text-[10px] bg-emerald-100 text-emerald-800 px-1.5 py-0.2 rounded font-mono">Trọng Tâm</span>
+                </div>
+                <p class="text-xs text-slate-700 mt-1.5 leading-relaxed">
+                  Quản lý 80 máy trạm, 3 máy chủ HP, thiết bị mạng Cisco/FortiGate, sao lưu NAS Synology, CSDL đất đai và an toàn an ninh mạng.
+                </p>
+                <div class="mt-2 text-[11px] font-semibold text-emerald-800 bg-emerald-50 p-1.5 rounded border border-emerald-200">
+                  Nhân sự: Đỗ Trọng Minh Quân (Kỹ sư phần mềm)
+                </div>
+              </div>
+
+              <!-- Danh mục trách nhiệm chi tiết -->
+              <div class="mt-4 space-y-2 text-xs text-slate-700">
+                <div class="font-bold text-slate-900 text-xs">Các mảng công tác chính:</div>
+                <div class="flex items-start gap-1.5">
+                  <i class="fa-solid fa-circle-check text-emerald-600 text-[10px] mt-1"></i>
+                  <span><strong>Tổ chức cán bộ & lao động:</strong> Quản lý hồ sơ viên chức, tuyển dụng, đào tạo, bồi dưỡng, thi đua khen thưởng.</span>
+                </div>
+                <div class="flex items-start gap-1.5">
+                  <i class="fa-solid fa-circle-check text-emerald-600 text-[10px] mt-1"></i>
+                  <span><strong>Một cửa & Trả kết quả:</strong> Tiếp nhận hồ sơ TTHC từ công dân, theo dõi luân chuyển hồ sơ đúng hạn.</span>
+                </div>
+                <div class="flex items-start gap-1.5">
+                  <i class="fa-solid fa-circle-check text-emerald-600 text-[10px] mt-1"></i>
+                  <span><strong>Kế toán & Tài chính:</strong> Quản trị tài sản công, thu phí - lệ phí, quyết toán kinh phí tự chủ của đơn vị.</span>
+                </div>
+                <div class="flex items-start gap-1.5">
+                  <i class="fa-solid fa-circle-check text-emerald-600 text-[10px] mt-1"></i>
+                  <span><strong>Văn thư & Hành chính:</strong> Tiếp nhận công văn đến/đi, quản lý con dấu pháp lý, phục vụ hội họp.</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-3 border-t border-emerald-200 text-[11px] text-slate-500 flex justify-between">
+              <span>Căn cứ: Điều 3, Điều 4 & Khoản 13-16 Điều 2</span>
+              <button onclick="openDetails('to_hcth')" class="text-emerald-700 font-semibold hover:underline">Chi tiết &rarr;</button>
+            </div>
+          </div>
+
+          <!-- Col 2: Tổ Đăng ký và Cấp giấy chứng nhận -->
+          <div class="rounded-xl border border-rose-200 bg-rose-50/20 p-5 flex flex-col justify-between space-y-4">
+            <div>
+              <div class="flex items-center justify-between pb-3 border-b border-rose-200">
+                <div>
+                  <span class="text-[10px] font-bold text-rose-800 uppercase tracking-wide bg-rose-100 px-2 py-0.5 rounded">Tổ Chuyên Môn 2</span>
+                  <h3 class="text-base font-extrabold text-slate-900 mt-1">Tổ Đăng Ký & Cấp GCN</h3>
+                </div>
+                <div class="w-10 h-10 rounded-xl bg-rose-600 text-white flex items-center justify-center text-lg shadow-xs">
+                  <i class="fa-solid fa-file-signature"></i>
+                </div>
+              </div>
+
+              <!-- Lãnh đạo tổ -->
+              <div class="mt-3 bg-white p-3 rounded-lg border border-rose-100 text-xs">
+                <div class="font-bold text-slate-900"><i class="fa-solid fa-user-gear text-rose-600 mr-1.5"></i> Định mức lãnh đạo tổ:</div>
+                <div class="text-slate-600 mt-0.5">• 01 Tổ trưởng phụ trách chung</div>
+                <div class="text-slate-600">• Tối đa 03 Tổ phó giúp việc</div>
+              </div>
+
+              <!-- Highlight nghiệp vụ -->
+              <div class="mt-3 bg-white p-3.5 rounded-xl border border-rose-200 shadow-2xs">
+                <div class="text-xs font-extrabold text-rose-900">
+                  <i class="fa-solid fa-id-card-clip text-rose-600 mr-1"></i> Trọng Tâm Nghiệp Vụ Cấp Sổ
+                </div>
+                <p class="text-xs text-slate-700 mt-1.5 leading-relaxed">
+                  Thực hiện toàn bộ quy trình tiếp nhận, thẩm tra hồ sơ pháp lý, trình ký cấp mới, cấp đổi, cấp lại và đăng ký biến động đất đai.
+                </p>
+              </div>
+
+              <!-- Danh mục trách nhiệm chi tiết -->
+              <div class="mt-4 space-y-2 text-xs text-slate-700">
+                <div class="font-bold text-slate-900 text-xs">Các mảng công tác chính:</div>
+                <div class="flex items-start gap-1.5">
+                  <i class="fa-solid fa-circle-check text-rose-600 text-[10px] mt-1"></i>
+                  <span><strong>Đăng ký biến động:</strong> Chuyển nhượng, tặng cho, thừa kế, chia tách thửa đất cho cá nhân và cộng đồng.</span>
+                </div>
+                <div class="flex items-start gap-1.5">
+                  <i class="fa-solid fa-circle-check text-rose-600 text-[10px] mt-1"></i>
+                  <span><strong>Cấp & Chỉnh lý GCN:</strong> Thẩm tra điều kiện cấp Giấy chứng nhận, đính chính sai sót, thu hồi và hủy GCN theo luật.</span>
+                </div>
+                <div class="flex items-start gap-1.5">
+                  <i class="fa-solid fa-circle-check text-rose-600 text-[10px] mt-1"></i>
+                  <span><strong>Giao dịch bảo đảm:</strong> Đăng ký thế chấp, xóa thế chấp quyền sử dụng đất vay vốn tại các tổ chức tín dụng.</span>
+                </div>
+                <div class="flex items-start gap-1.5">
+                  <i class="fa-solid fa-circle-check text-rose-600 text-[10px] mt-1"></i>
+                  <span><strong>Chỉnh lý CSDL:</strong> Cập nhật biến động hồ sơ địa chính và thông báo việc biến động cho UBND 5 phường.</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-3 border-t border-rose-200 text-[11px] text-slate-500 flex justify-between">
+              <span>Căn cứ: Điều 3, Điều 4 & Khoản 1, 2, 8, 11, 12 Điều 2</span>
+              <button onclick="openDetails('to_dangky')" class="text-rose-700 font-semibold hover:underline">Chi tiết &rarr;</button>
+            </div>
+          </div>
+
+          <!-- Col 3: Tổ Kỹ thuật Địa chính và Lưu trữ -->
+          <div class="rounded-xl border border-purple-200 bg-purple-50/20 p-5 flex flex-col justify-between space-y-4">
+            <div>
+              <div class="flex items-center justify-between pb-3 border-b border-purple-200">
+                <div>
+                  <span class="text-[10px] font-bold text-purple-800 uppercase tracking-wide bg-purple-100 px-2 py-0.5 rounded">Tổ Chuyên Môn 3</span>
+                  <h3 class="text-base font-extrabold text-slate-900 mt-1">Tổ Kỹ Thuật & Lưu Trữ</h3>
+                </div>
+                <div class="w-10 h-10 rounded-xl bg-purple-600 text-white flex items-center justify-center text-lg shadow-xs">
+                  <i class="fa-solid fa-compass-drafting"></i>
+                </div>
+              </div>
+
+              <!-- Lãnh đạo tổ -->
+              <div class="mt-3 bg-white p-3 rounded-lg border border-purple-100 text-xs">
+                <div class="font-bold text-slate-900"><i class="fa-solid fa-user-gear text-purple-600 mr-1.5"></i> Định mức lãnh đạo tổ:</div>
+                <div class="text-slate-600 mt-0.5">• 01 Tổ trưởng phụ trách chung</div>
+                <div class="text-slate-600">• Tối đa 03 Tổ phó giúp việc</div>
+              </div>
+
+              <!-- Highlight nghiệp vụ -->
+              <div class="mt-3 bg-white p-3.5 rounded-xl border border-purple-200 shadow-2xs">
+                <div class="text-xs font-extrabold text-purple-900">
+                  <i class="fa-solid fa-vault text-purple-600 mr-1"></i> Quản Trị Phôi GCN & Kho Hồ Sơ
+                </div>
+                <p class="text-xs text-slate-700 mt-1.5 leading-relaxed">
+                  Chịu trách nhiệm bảo mật và quản lý phôi GCN trắng, kho lưu trữ hồ sơ địa chính, dữ liệu không gian bản đồ số.
+                </p>
+              </div>
+
+              <!-- Danh mục trách nhiệm chi tiết -->
+              <div class="mt-4 space-y-2 text-xs text-slate-700">
+                <div class="font-bold text-slate-900 text-xs">Các mảng công tác chính:</div>
+                <div class="flex items-start gap-1.5">
+                  <i class="fa-solid fa-circle-check text-purple-600 text-[10px] mt-1"></i>
+                  <span><strong>Đo đạc địa chính:</strong> Lập bản đồ địa chính, trích đo, trích lục thửa đất, duyệt mảnh trích đo kỹ thuật.</span>
+                </div>
+                <div class="flex items-start gap-1.5">
+                  <i class="fa-solid fa-circle-check text-purple-600 text-[10px] mt-1"></i>
+                  <span><strong>Quản lý phôi GCN:</strong> Nhận, cấp phát, lưu kho, đối soát và hủy phôi in hỏng theo quy chế nghiêm ngặt.</span>
+                </div>
+                <div class="flex items-start gap-1.5">
+                  <i class="fa-solid fa-circle-check text-purple-600 text-[10px] mt-1"></i>
+                  <span><strong>Kho lưu trữ địa chính:</strong> Lưu trữ hồ sơ gốc qua các thời kỳ, số hóa tài liệu, cung cấp trích lục thông tin thửa đất.</span>
+                </div>
+                <div class="flex items-start gap-1.5">
+                  <i class="fa-solid fa-circle-check text-purple-600 text-[10px] mt-1"></i>
+                  <span><strong>Thống kê & CSDL quốc gia:</strong> Cập nhật bản đồ vào CSDL Quốc gia đất đai; kiểm kê hiện trạng sử dụng đất định kỳ.</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-3 border-t border-purple-200 text-[11px] text-slate-500 flex justify-between">
+              <span>Căn cứ: Điều 3, Điều 4 & Khoản 2-7, 9, 10 Điều 2</span>
+              <button onclick="openDetails('to_kythuat')" class="text-purple-700 font-semibold hover:underline">Chi tiết &rarr;</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================== -->
+    <!-- VIEW 3: 17 STATUTORY DUTIES (ARTICLE 2) MATRIX -->
+    <!-- ======================================================== -->
+    <section id="view-tasks" class="org-view hidden space-y-6">
+      <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-xs">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between pb-4 border-b border-slate-200 mb-4 gap-2">
+          <div>
+            <h2 class="text-base font-bold text-slate-900 flex items-center">
+              <i class="fa-solid fa-clipboard-list text-sky-600 mr-2"></i>
+              Bảng Phân Định 17 Nhiệm Vụ & Quyền Hạn Của Chi Nhánh Số 23 (Điều 2)
+            </h2>
+            <p class="text-xs text-slate-600 mt-1">
+              Trích lục nguyên văn từ Quyết định số 2637/QĐ-SNNMT-VP kèm phân định Tổ chủ trì & Hệ thống CNTT liên quan
+            </p>
+          </div>
+          <div class="flex items-center space-x-2">
+            <span class="text-xs text-slate-500 font-medium">Lọc theo Tổ:</span>
+            <select id="taskOrgFilter" onchange="filterTasksByOrg(this.value)" class="text-xs rounded-lg border border-slate-300 bg-white px-2.5 py-1 text-slate-700">
+              <option value="all">Tất cả 17 nhiệm vụ</option>
+              <option value="HCTH">Tổ Hành chính – Tổng hợp</option>
+              <option value="DANGKY">Tổ Đăng ký & Cấp GCN</option>
+              <option value="KYTHUAT">Tổ Kỹ thuật & Lưu trữ</option>
+              <option value="LANHDAO">Ban Giám Đốc Chi Nhánh</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-xs text-slate-800 border-collapse">
+            <thead>
+              <tr class="bg-slate-100/80 border-b border-slate-200 text-slate-700 uppercase font-bold text-[11px]">
+                <th class="py-3 px-3 w-14 text-center">Khoản</th>
+                <th class="py-3 px-4">Nội Dung Nhiệm Vụ (Theo Văn Bản Gốc QĐ 2637)</th>
+                <th class="py-3 px-3 w-44">Tổ Chủ Trì Thực Hiện</th>
+                <th class="py-3 px-3 w-40">Hệ Thống CNTT / Phần Mềm</th>
+              </tr>
+            </thead>
+            <tbody id="taskListBody" class="divide-y divide-slate-200 font-normal">
+              
+              <!-- Khoản 1 -->
+              <tr class="task-row hover:bg-slate-50/80 transition" data-org="DANGKY">
+                <td class="py-3 px-3 text-center font-bold text-sky-700 bg-slate-50/50">1</td>
+                <td class="py-3 px-4">
+                  <strong>Đăng ký biến động quyền sử dụng đất</strong>, quyền sở hữu tài sản gắn liền với đất cho người sử dụng đất, chủ sở hữu tài sản gắn liền với đất là cá nhân, cộng đồng dân cư, người gốc Việt Nam định cư ở nước ngoài.
+                </td>
+                <td class="py-3 px-3">
+                  <span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-semibold bg-rose-100 text-rose-800 border border-rose-200">
+                    Tổ Đăng ký & Cấp GCN
+                  </span>
+                </td>
+                <td class="py-3 px-3 text-slate-600 font-mono text-[11px]">Hệ thống VBDLIS / Một cửa</td>
+              </tr>
+
+              <!-- Khoản 2 -->
+              <tr class="task-row hover:bg-slate-50/80 transition" data-org="KYTHUAT">
+                <td class="py-3 px-3 text-center font-bold text-sky-700 bg-slate-50/50">2</td>
+                <td class="py-3 px-4">
+                  Thực hiện <strong>đo đạc, chỉnh lý, lập bản đồ địa chính</strong>, trích lục bản đồ địa chính; cấp, đính chính, thu hồi, hủy Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản gắn liền với đất; hủy kết quả đăng ký biến động trên Giấy chứng nhận.
+                </td>
+                <td class="py-3 px-3">
+                  <span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-semibold bg-purple-100 text-purple-800 border border-purple-200">
+                    Tổ Kỹ thuật & Tổ Đăng ký
+                  </span>
+                </td>
+                <td class="py-3 px-3 text-slate-600 font-mono text-[11px]">MicroStation / ViLIS / VBDLIS</td>
+              </tr>
+
+              <!-- Khoản 3 -->
+              <tr class="task-row hover:bg-slate-50/80 transition" data-org="KYTHUAT">
+                <td class="py-3 px-3 text-center font-bold text-sky-700 bg-slate-50/50">3</td>
+                <td class="py-3 px-4">
+                  <strong>Kiểm tra, ký duyệt mảnh trích đo</strong> bản đồ địa chính thửa đất theo quy định; kiểm tra, xác nhận phiếu chỉnh lý đo đạc bản đồ, sơ đồ tài sản gắn liền với đất do tổ chức, cá nhân cung cấp phục vụ đăng ký, cấp Giấy chứng nhận.
+                </td>
+                <td class="py-3 px-3">
+                  <span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-semibold bg-purple-100 text-purple-800 border border-purple-200">
+                    Tổ Kỹ thuật Địa chính
+                  </span>
+                </td>
+                <td class="py-3 px-3 text-slate-600 font-mono text-[11px]">AutoCAD / Bản đồ địa chính</td>
+              </tr>
+
+              <!-- Khoản 4 -->
+              <tr class="task-row hover:bg-slate-50/80 transition" data-org="KYTHUAT">
+                <td class="py-3 px-3 text-center font-bold text-sky-700 bg-slate-50/50">4</td>
+                <td class="py-3 px-4">
+                  Lập, chỉnh lý, cập nhật, <strong>lưu trữ và quản lý hồ sơ địa chính</strong>; tiếp nhận, quản lý việc <strong>sử dụng phôi Giấy chứng nhận</strong> theo quy định của pháp luật.
+                </td>
+                <td class="py-3 px-3">
+                  <span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-semibold bg-purple-100 text-purple-800 border border-purple-200">
+                    Tổ Kỹ thuật & Lưu trữ
+                  </span>
+                </td>
+                <td class="py-3 px-3 text-slate-600 font-mono text-[11px]">Phần mềm Quản lý Phôi & Hồ sơ</td>
+              </tr>
+
+              <!-- Khoản 5 -->
+              <tr class="task-row hover:bg-slate-50/80 transition" data-org="HCTH">
+                <td class="py-3 px-3 text-center font-bold text-sky-700 bg-slate-50/50">5</td>
+                <td class="py-3 px-4">
+                  <strong>Cập nhật, chỉnh lý cơ sở dữ liệu địa chính</strong>, đồng bộ hóa, khai thác dữ liệu đất đai; <strong>xây dựng, quản lý, vận hành hệ thống thông tin đất đai</strong> theo quy định của pháp luật.
+                </td>
+                <td class="py-3 px-3">
+                  <span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-semibold bg-emerald-100 text-emerald-800 border border-emerald-200">
+                    Tổ HCTH (CNTT) & Tổ ĐK
+                  </span>
+                </td>
+                <td class="py-3 px-3 text-slate-600 font-mono text-[11px]">Máy chủ HP, VBDLIS, NAS Backup</td>
+              </tr>
+
+              <!-- Khoản 6 -->
+              <tr class="task-row hover:bg-slate-50/80 transition" data-org="KYTHUAT">
+                <td class="py-3 px-3 text-center font-bold text-sky-700 bg-slate-50/50">6</td>
+                <td class="py-3 px-4">
+                  <strong>Cập nhật bản đồ địa chính</strong> vào cơ sở dữ liệu quốc gia về đất đai.
+                </td>
+                <td class="py-3 px-3">
+                  <span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-semibold bg-purple-100 text-purple-800 border border-purple-200">
+                    Tổ Kỹ thuật Địa chính
+                  </span>
+                </td>
+                <td class="py-3 px-3 text-slate-600 font-mono text-[11px]">CSDL Quốc Gia Đất Đai</td>
+              </tr>
+
+              <!-- Khoản 7 -->
+              <tr class="task-row hover:bg-slate-50/80 transition" data-org="KYTHUAT">
+                <td class="py-3 px-3 text-center font-bold text-sky-700 bg-slate-50/50">7</td>
+                <td class="py-3 px-4">
+                  Thực hiện <strong>thống kê, kiểm kê đất đai</strong> và lập bản đồ hiện trạng sử dụng đất.
+                </td>
+                <td class="py-3 px-3">
+                  <span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-semibold bg-purple-100 text-purple-800 border border-purple-200">
+                    Tổ Kỹ thuật Địa chính
+                  </span>
+                </td>
+                <td class="py-3 px-3 text-slate-600 font-mono text-[11px]">TK-Online / GIS</td>
+              </tr>
+
+              <!-- Khoản 8 -->
+              <tr class="task-row hover:bg-slate-50/80 transition" data-org="DANGKY">
+                <td class="py-3 px-3 text-center font-bold text-sky-700 bg-slate-50/50">8</td>
+                <td class="py-3 px-4">
+                  Thực hiện <strong>đăng ký biện pháp bảo đảm</strong> bằng quyền sử dụng đất, quyền sở hữu tài sản gắn liền với đất theo quy định của pháp luật.
+                </td>
+                <td class="py-3 px-3">
+                  <span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-semibold bg-rose-100 text-rose-800 border border-rose-200">
+                    Tổ Đăng ký & Cấp GCN
+                  </span>
+                </td>
+                <td class="py-3 px-3 text-slate-600 font-mono text-[11px]">Phần mềm ĐK Giao dịch bảo đảm</td>
+              </tr>
+
+              <!-- Khoản 9 -->
+              <tr class="task-row hover:bg-slate-50/80 transition" data-org="KYTHUAT">
+                <td class="py-3 px-3 text-center font-bold text-sky-700 bg-slate-50/50">9</td>
+                <td class="py-3 px-4">
+                  <strong>Cung cấp hồ sơ, bản đồ, thông tin, số liệu đất đai</strong>, tài sản gắn liền với đất cho các tổ chức, cá nhân theo quy định của pháp luật.
+                </td>
+                <td class="py-3 px-3">
+                  <span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-semibold bg-purple-100 text-purple-800 border border-purple-200">
+                    Tổ Kỹ thuật & Lưu trữ
+                  </span>
+                </td>
+                <td class="py-3 px-3 text-slate-600 font-mono text-[11px]">Cổng dịch vụ công / Tra cứu</td>
+              </tr>
+
+              <!-- Khoản 10 -->
+              <tr class="task-row hover:bg-slate-50/80 transition" data-org="KYTHUAT">
+                <td class="py-3 px-3 text-center font-bold text-sky-700 bg-slate-50/50">10</td>
+                <td class="py-3 px-4">
+                  Thực hiện <strong>đối chiếu, cung cấp thông tin thửa đất</strong> theo hồ sơ địa chính qua các thời kỳ cho tổ chức, cá nhân theo quy định.
+                </td>
+                <td class="py-3 px-3">
+                  <span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-semibold bg-purple-100 text-purple-800 border border-purple-200">
+                    Tổ Kỹ thuật & Lưu trữ
+                  </span>
+                </td>
+                <td class="py-3 px-3 text-slate-600 font-mono text-[11px]">Kho tài liệu số hóa</td>
+              </tr>
+
+              <!-- Khoản 11 -->
+              <tr class="task-row hover:bg-slate-50/80 transition" data-org="DANGKY">
+                <td class="py-3 px-3 text-center font-bold text-sky-700 bg-slate-50/50">11</td>
+                <td class="py-3 px-4">
+                  Kiểm tra, đối chiếu, thực hiện <strong>chỉnh lý biến động bản đồ địa chính và sổ mục kê đất đai</strong>; thông báo việc cập nhật, chỉnh lý biến động cho Ủy ban nhân dân cấp phường, xã, đặc khu.
+                </td>
+                <td class="py-3 px-3">
+                  <span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-semibold bg-rose-100 text-rose-800 border border-rose-200">
+                    Tổ ĐK & Tổ Kỹ thuật
+                  </span>
+                </td>
+                <td class="py-3 px-3 text-slate-600 font-mono text-[11px]">VBDLIS liên thông 5 Phường</td>
+              </tr>
+
+              <!-- Khoản 12 -->
+              <tr class="task-row hover:bg-slate-50/80 transition" data-org="LANHDAO">
+                <td class="py-3 px-3 text-center font-bold text-sky-700 bg-slate-50/50">12</td>
+                <td class="py-3 px-4">
+                  <strong>Giải quyết đơn thư phản ánh, kiến nghị, khiếu nại, tố cáo</strong> theo thẩm quyền và theo quy định pháp luật.
+                </td>
+                <td class="py-3 px-3">
+                  <span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-semibold bg-amber-100 text-amber-800 border border-amber-200">
+                    Ban Giám Đốc Chi Nhánh
+                  </span>
+                </td>
+                <td class="py-3 px-3 text-slate-600 font-mono text-[11px]">Hệ thống quản lý đơn thư TP</td>
+              </tr>
+
+              <!-- Khoản 13 -->
+              <tr class="task-row hover:bg-slate-50/80 transition" data-org="HCTH">
+                <td class="py-3 px-3 text-center font-bold text-sky-700 bg-slate-50/50">13</td>
+                <td class="py-3 px-4">
+                  Tổ chức thực hiện <strong>tiếp nhận hồ sơ và trả kết quả</strong> giải quyết thủ tục đăng ký đất đai, tài sản gắn liền với đất.
+                </td>
+                <td class="py-3 px-3">
+                  <span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-semibold bg-emerald-100 text-emerald-800 border border-emerald-200">
+                    Bộ Phận Một Cửa (HCTH)
+                  </span>
+                </td>
+                <td class="py-3 px-3 text-slate-600 font-mono text-[11px]">Phần mềm Một cửa điện tử</td>
+              </tr>
+
+              <!-- Khoản 14 -->
+              <tr class="task-row hover:bg-slate-50/80 transition" data-org="HCTH">
+                <td class="py-3 px-3 text-center font-bold text-sky-700 bg-slate-50/50">14</td>
+                <td class="py-3 px-4">
+                  Thực hiện <strong>thu phí, lệ phí theo quy định</strong> của pháp luật và các khoản thu từ dịch vụ công về đất đai quy định tại Điều 154 Luật Đất đai.
+                </td>
+                <td class="py-3 px-3">
+                  <span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-semibold bg-emerald-100 text-emerald-800 border border-emerald-200">
+                    Bộ Phận Kế Toán (HCTH)
+                  </span>
+                </td>
+                <td class="py-3 px-3 text-slate-600 font-mono text-[11px]">Hóa đơn điện tử & Kho bạc</td>
+              </tr>
+
+              <!-- Khoản 15 -->
+              <tr class="task-row hover:bg-slate-50/80 transition" data-org="LANHDAO">
+                <td class="py-3 px-3 text-center font-bold text-sky-700 bg-slate-50/50">15</td>
+                <td class="py-3 px-4">
+                  Thực hiện các <strong>dịch vụ trên cơ sở chức năng, nhiệm vụ</strong> phù hợp với năng lực theo quy định của pháp luật.
+                </td>
+                <td class="py-3 px-3">
+                  <span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-semibold bg-amber-100 text-amber-800 border border-amber-200">
+                    Lãnh Đạo & Các Tổ
+                  </span>
+                </td>
+                <td class="py-3 px-3 text-slate-600 font-mono text-[11px]">Cổng Dịch Vụ Công</td>
+              </tr>
+
+              <!-- Khoản 16 -->
+              <tr class="task-row hover:bg-slate-50/80 transition" data-org="HCTH">
+                <td class="py-3 px-3 text-center font-bold text-sky-700 bg-slate-50/50">16</td>
+                <td class="py-3 px-4">
+                  <strong>Quản lý viên chức, người lao động, tài chính, tài sản</strong> thuộc Chi nhánh quản lý, sử dụng; thực hiện chế độ báo cáo theo quy định của pháp luật về các lĩnh vực công tác được giao.
+                </td>
+                <td class="py-3 px-3">
+                  <span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-semibold bg-emerald-100 text-emerald-800 border border-emerald-200">
+                    Tổ HCTH
+                  </span>
+                </td>
+                <td class="py-3 px-3 text-slate-600 font-mono text-[11px]">Phần mềm Quản lý Cán bộ & Tài sản</td>
+              </tr>
+
+              <!-- Khoản 17 -->
+              <tr class="task-row hover:bg-slate-50/80 transition" data-org="LANHDAO">
+                <td class="py-3 px-3 text-center font-bold text-sky-700 bg-slate-50/50">17</td>
+                <td class="py-3 px-4">
+                  Thực hiện <strong>các nhiệm vụ khác</strong> do Giám đốc Sở Nông nghiệp và Môi trường, Giám đốc Văn phòng đăng ký đất đai giao và theo quy định của pháp luật.
+                </td>
+                <td class="py-3 px-3">
+                  <span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-semibold bg-amber-100 text-amber-800 border border-amber-200">
+                    Ban Giám Đốc Chi Nhánh
+                  </span>
+                </td>
+                <td class="py-3 px-3 text-slate-600 font-mono text-[11px]">Hệ thống chỉ đạo điều hành</td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================== -->
+    <!-- VIEW 4: 5 WARDS GEOGRAPHIC SCOPE & EQUIPMENT -->
+    <!-- ======================================================== -->
+    <section id="view-wards" class="org-view hidden space-y-6">
+      <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-xs">
+        <div class="max-w-3xl mb-6">
+          <h2 class="text-base font-bold text-slate-900 flex items-center">
+            <i class="fa-solid fa-map-location-dot text-sky-600 mr-2"></i>
+            Phạm Vi Thẩm Quyền Giải Quyết Thủ Tục Đất Đai (Điều 2)
+          </h2>
+          <p class="text-xs text-slate-600 mt-1">
+            Theo Điều 2 Quyết định 2637, Chi nhánh số 23 thực hiện nhiệm vụ giải quyết TTHC đất đai trong phạm vi <strong>05 phường</strong> trên địa bàn. Dưới đây là mạng lưới tiếp nhận Một cửa và thiết bị CNTT phân bổ thực tế:
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-5 gap-4">
+
+          <!-- Phường Thủ Dầu Một -->
+          <div class="border-2 border-sky-300 rounded-xl p-4 bg-sky-50/40 flex flex-col justify-between">
+            <div>
+              <div class="w-8 h-8 rounded-lg bg-sky-600 text-white flex items-center justify-center text-sm mb-2 shadow-2xs">
+                <i class="fa-solid fa-building-columns"></i>
+              </div>
+              <h3 class="text-sm font-extrabold text-slate-900">Phường Thủ Dầu Một</h3>
+              <p class="text-xs text-sky-800 font-medium mt-0.5">Trụ sở Chi nhánh 23</p>
+              <div class="mt-3 text-xs text-slate-700 space-y-1.5">
+                <div>• <strong>Địa chỉ:</strong> 358 Huỳnh Văn Cù</div>
+                <div>• <strong>Bộ máy:</strong> Toàn bộ 3 Tổ & Ban Giám đốc</div>
+                <div>• <strong>Máy in Một cửa:</strong> HP M404dn (HP 76A), HP 4003dn (HP 151A), HP P2035</div>
+              </div>
+            </div>
+            <div class="mt-4 pt-2 border-t border-sky-200 text-[10px] text-sky-700 font-semibold uppercase">
+              Trung tâm tiếp nhận chính
+            </div>
+          </div>
+
+          <!-- Phường Chánh Hiệp -->
+          <div class="border border-slate-200 rounded-xl p-4 bg-white flex flex-col justify-between hover:border-slate-300 transition shadow-2xs">
+            <div>
+              <div class="w-8 h-8 rounded-lg bg-indigo-600 text-white flex items-center justify-center text-sm mb-2 shadow-2xs">
+                <i class="fa-solid fa-house-chimney"></i>
+              </div>
+              <h3 class="text-sm font-extrabold text-slate-900">Phường Chánh Hiệp</h3>
+              <p class="text-xs text-slate-500 font-medium mt-0.5">Một cửa phường</p>
+              <div class="mt-3 text-xs text-slate-700 space-y-1.5">
+                <div>• <strong>Nhiệm vụ:</strong> Tiếp nhận hồ sơ biến động cơ sở</div>
+                <div>• <strong>Đường truyền:</strong> VPN về Chi nhánh 23</div>
+                <div>• <strong>Máy in Một cửa:</strong> HP M402d (Hộp mực HP 26A)</div>
+              </div>
+            </div>
+            <div class="mt-4 pt-2 border-t border-slate-100 text-[10px] text-slate-500 font-mono">
+              Liên thông trực tuyến
+            </div>
+          </div>
+
+          <!-- Phường Phú Lợi -->
+          <div class="border border-slate-200 rounded-xl p-4 bg-white flex flex-col justify-between hover:border-slate-300 transition shadow-2xs">
+            <div>
+              <div class="w-8 h-8 rounded-lg bg-emerald-600 text-white flex items-center justify-center text-sm mb-2 shadow-2xs">
+                <i class="fa-solid fa-tree-city"></i>
+              </div>
+              <h3 class="text-sm font-extrabold text-slate-900">Phường Phú Lợi</h3>
+              <p class="text-xs text-slate-500 font-medium mt-0.5">Một cửa phường</p>
+              <div class="mt-3 text-xs text-slate-700 space-y-1.5">
+                <div>• <strong>Nhiệm vụ:</strong> Tiếp nhận hồ sơ & chứng thực</div>
+                <div>• <strong>Đường truyền:</strong> Mạng số liệu chuyên dùng</div>
+                <div>• <strong>Máy in Một cửa:</strong> Brother HL-2240D (TN-2280)</div>
+              </div>
+            </div>
+            <div class="mt-4 pt-2 border-t border-slate-100 text-[10px] text-slate-500 font-mono">
+              Liên thông trực tuyến
+            </div>
+          </div>
+
+          <!-- Phường Phú An -->
+          <div class="border border-slate-200 rounded-xl p-4 bg-white flex flex-col justify-between hover:border-slate-300 transition shadow-2xs">
+            <div>
+              <div class="w-8 h-8 rounded-lg bg-amber-600 text-white flex items-center justify-center text-sm mb-2 shadow-2xs">
+                <i class="fa-solid fa-map-location"></i>
+              </div>
+              <h3 class="text-sm font-extrabold text-slate-900">Phường Phú An</h3>
+              <p class="text-xs text-slate-500 font-medium mt-0.5">Một cửa phường</p>
+              <div class="mt-3 text-xs text-slate-700 space-y-1.5">
+                <div>• <strong>Nhiệm vụ:</strong> Tiếp nhận & trả kết quả TTHC</div>
+                <div>• <strong>Đường truyền:</strong> VPN an toàn</div>
+                <div>• <strong>Máy in Một cửa:</strong> HP M402d (Hộp mực HP 26A)</div>
+              </div>
+            </div>
+            <div class="mt-4 pt-2 border-t border-slate-100 text-[10px] text-slate-500 font-mono">
+              Liên thông trực tuyến
+            </div>
+          </div>
+
+          <!-- Phường Bình Dương -->
+          <div class="border border-slate-200 rounded-xl p-4 bg-white flex flex-col justify-between hover:border-slate-300 transition shadow-2xs">
+            <div>
+              <div class="w-8 h-8 rounded-lg bg-rose-600 text-white flex items-center justify-center text-sm mb-2 shadow-2xs">
+                <i class="fa-solid fa-city"></i>
+              </div>
+              <h3 class="text-sm font-extrabold text-slate-900">Phường Bình Dương</h3>
+              <p class="text-xs text-slate-500 font-medium mt-0.5">Một cửa phường</p>
+              <div class="mt-3 text-xs text-slate-700 space-y-1.5">
+                <div>• <strong>Nhiệm vụ:</strong> Tiếp nhận đăng ký giao dịch</div>
+                <div>• <strong>Đường truyền:</strong> Cổng một cửa TP</div>
+                <div>• <strong>Máy in Một cửa:</strong> Brother HL-L2320D (TN-2385)</div>
+              </div>
+            </div>
+            <div class="mt-4 pt-2 border-t border-slate-100 text-[10px] text-slate-500 font-mono">
+              Liên thông trực tuyến
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================== -->
+    <!-- VIEW 5: GOVERNANCE & WORKING REGIME (CHAPTER III) -->
+    <!-- ======================================================== -->
+    <section id="view-governance" class="org-view hidden space-y-6">
+      <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-xs">
+        <div class="max-w-3xl mb-6">
+          <h2 class="text-base font-bold text-slate-900 flex items-center">
+            <i class="fa-solid fa-gavel text-sky-600 mr-2"></i>
+            Chế Độ Làm Việc & Quy Chế Quan Hệ Công Tác (Chương III - QĐ 2637)
+          </h2>
+          <p class="text-xs text-slate-600 mt-1">
+            Quy định các nguyên tắc vận hành, chế độ hội họp, thẩm quyền ký duyệt và quy định nghỉ phép của viên chức, người lao động
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+          <!-- Box 1: Chế độ làm việc & Thẩm quyền (Điều 7) -->
+          <div class="p-5 rounded-xl border border-slate-200 bg-slate-50/50 space-y-3">
+            <h3 class="text-sm font-bold text-slate-900 flex items-center">
+              <i class="fa-solid fa-user-shield text-sky-600 mr-2"></i>
+              1. Chế Độ Làm Việc & Nguyên Tắc Thủ Trưởng (Điều 7)
+            </h3>
+            <ul class="space-y-2 text-xs text-slate-700 leading-relaxed">
+              <li class="flex items-start">
+                <i class="fa-solid fa-caret-right text-sky-600 mt-0.5 mr-1.5"></i>
+                <span><strong>Chế độ thủ trưởng:</strong> Chi nhánh làm việc theo chế độ thủ trưởng và bảo đảm nguyên tắc tập trung dân chủ. Giám đốc Chi nhánh chịu trách nhiệm toàn diện trước GĐ Văn phòng ĐKĐĐ và GĐ Sở NN&MT.</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fa-solid fa-caret-right text-sky-600 mt-0.5 mr-1.5"></i>
+                <span><strong>Trách nhiệm cá nhân:</strong> Mỗi viên chức chủ động đề xuất giải quyết công việc đúng pháp luật và chịu trách nhiệm cá nhân trước pháp luật, trước Lãnh đạo đơn vị về đề xuất của mình.</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fa-solid fa-caret-right text-sky-600 mt-0.5 mr-1.5"></i>
+                <span><strong>Quy định chuyển tiếp:</strong> Không chuyển công việc thuộc chức năng của mình sang tổ chức khác hoặc đẩy lên Ban Giám đốc VPĐKĐĐ Thành phố; không làm thay việc đơn vị khác.</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Box 2: Quy định Nghỉ Phép (Điều 8) -->
+          <div class="p-5 rounded-xl border border-slate-200 bg-slate-50/50 space-y-3">
+            <h3 class="text-sm font-bold text-slate-900 flex items-center">
+              <i class="fa-solid fa-calendar-check text-emerald-600 mr-2"></i>
+              2. Quy Định Nghỉ Phép & Vắng Mặt (Điều 8 Khoản 3)
+            </h3>
+            <ul class="space-y-2 text-xs text-slate-700 leading-relaxed">
+              <li class="flex items-start">
+                <i class="fa-solid fa-caret-right text-emerald-600 mt-0.5 mr-1.5"></i>
+                <span><strong>Nghỉ dưới 03 ngày:</strong> Viên chức phải báo cáo bằng văn bản và phải được <strong>Lãnh đạo Chi nhánh số 23</strong> chấp thuận đồng ý.</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fa-solid fa-caret-right text-emerald-600 mt-0.5 mr-1.5"></i>
+                <span><strong>Nghỉ từ 03 ngày trở lên:</strong> Phải có ý kiến đề xuất của Lãnh đạo Chi nhánh và phải được sự <strong>chấp thuận của Ban Giám đốc VPĐKĐĐ Thành phố</strong> phụ trách Chi nhánh.</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fa-solid fa-caret-right text-emerald-600 mt-0.5 mr-1.5"></i>
+                <span><strong>Giám đốc Chi nhánh vắng mặt:</strong> Vắng mặt từ <strong>1/2 ngày làm việc trở lên</strong> phải báo cáo và được sự chấp thuận của Ban Giám đốc VPĐKĐĐ Thành phố.</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Box 3: Quan hệ với Cơ quan cấp trên & Cơ sở 2 (Điều 9) -->
+          <div class="p-5 rounded-xl border border-slate-200 bg-slate-50/50 space-y-3">
+            <h3 class="text-sm font-bold text-slate-900 flex items-center">
+              <i class="fa-solid fa-diagram-project text-indigo-600 mr-2"></i>
+              3. Quan Hệ Công Tác Giữa Các Đơn Vị (Điều 9)
+            </h3>
+            <ul class="space-y-2 text-xs text-slate-700 leading-relaxed">
+              <li class="flex items-start">
+                <i class="fa-solid fa-caret-right text-indigo-600 mt-0.5 mr-1.5"></i>
+                <span><strong>Với VPĐKĐĐ TP.HCM:</strong> Chịu sự quản lý, chỉ đạo trực tiếp, toàn diện. Thực hiện nghiêm chế độ báo cáo định kỳ và đột xuất.</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fa-solid fa-caret-right text-indigo-600 mt-0.5 mr-1.5"></i>
+                <span><strong>Với các đơn vị trực thuộc VPĐKĐĐ (như Cơ sở 2):</strong> Phối hợp chặt chẽ, lấy ý kiến bằng văn bản, cung cấp đầy đủ thông tin (Căn cứ thực tế: mời anh Phùng Vương Quốc từ Cơ sở 2 sang hỗ trợ chuyên môn CNTT).</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Box 4: Văn hóa tiếp dân & Giao tiếp (Điều 9 Khoản 5) -->
+          <div class="p-5 rounded-xl border border-slate-200 bg-slate-50/50 space-y-3">
+            <h3 class="text-sm font-bold text-slate-900 flex items-center">
+              <i class="fa-solid fa-comments text-amber-600 mr-2"></i>
+              4. Quy Tắc Giao Tiếp Với Người Dân & Doanh Nghiệp (Điều 9 Khoản 5)
+            </h3>
+            <ul class="space-y-2 text-xs text-slate-700 leading-relaxed">
+              <li class="flex items-start">
+                <i class="fa-solid fa-caret-right text-amber-600 mt-0.5 mr-1.5"></i>
+                <span><strong>Chuẩn mực ngôn ngữ:</strong> Phải luôn tôn trọng, lắng nghe, hướng dẫn rõ ràng, cụ thể quy trình xử lý và giải thích cặn kẽ thắc mắc của tổ chức, cá nhân.</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fa-solid fa-caret-right text-amber-600 mt-0.5 mr-1.5"></i>
+                <span><strong>Nghiêm cấm hành vi:</strong> Nghiêm cấm thái độ quan liêu, nhũng nhiễu, gây khó khăn cho tổ chức, cá nhân khi giải quyết thủ tục đăng ký đất đai.</span>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ======================================================== -->
+  <!-- SLIDE-OVER MODAL FOR NODE DETAILS -->
+  <!-- ======================================================== -->
+  <div id="detailsModal" class="fixed inset-0 z-50 overflow-hidden hidden" aria-labelledby="slide-over-title" role="dialog" aria-modal="true">
+    <div class="absolute inset-0 bg-slate-900/40 backdrop-blur-2xs transition-opacity" onclick="closeDetails()"></div>
+
+    <div class="fixed inset-y-0 right-0 pl-10 max-w-full flex">
+      <div class="w-screen max-w-md bg-white shadow-2xl border-l border-slate-200 flex flex-col justify-between">
+        
+        <!-- Modal Header -->
+        <div class="p-5 border-b border-slate-200 flex items-center justify-between bg-slate-50">
+          <div class="flex items-center space-x-2.5">
+            <div id="modalIconBox" class="w-9 h-9 rounded-lg bg-sky-600 text-white flex items-center justify-center text-sm shadow-2xs">
+              <i class="fa-solid fa-info"></i>
+            </div>
+            <div>
+              <h3 id="modalTitle" class="text-sm font-extrabold text-slate-900">Chi Tiết Vị Trí</h3>
+              <p id="modalSub" class="text-[11px] text-slate-500">Căn cứ Quyết định 2637/QĐ-SNNMT-VP</p>
+            </div>
+          </div>
+          <button onclick="closeDetails()" class="text-slate-400 hover:text-slate-600 p-1.5 rounded-lg hover:bg-slate-200 transition">
+            <i class="fa-solid fa-xmark text-base"></i>
+          </button>
+        </div>
+
+        <!-- Modal Body Content -->
+        <div id="modalBody" class="p-6 overflow-y-auto flex-1 space-y-4 text-xs text-slate-700 leading-relaxed">
+          <!-- Dynamic Content -->
+        </div>
+
+        <!-- Modal Footer -->
+        <div class="p-4 border-t border-slate-200 bg-slate-50 flex items-center justify-between">
+          <span class="text-[11px] text-slate-500">VPĐKĐĐ TP.HCM - CN 23</span>
+          <button onclick="closeDetails()" class="px-3.5 py-1.5 bg-slate-200 hover:bg-slate-300 text-slate-700 font-semibold rounded-lg text-xs transition">
+            Đóng
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="bg-white border-t border-slate-200 py-4 text-center text-xs text-slate-500 no-print">
+    Sơ Đồ Cơ Cấu Tổ Chức Bộ Máy - Căn cứ Quyết định số 2637/QĐ-SNNMT-VP của Sở Nông nghiệp và Môi trường TP.HCM
+  </footer>
+
+  <!-- JAVASCRIPT LOGIC -->
+  <script>
+    // Detailed node information dictionary
+    const nodeDetails = {
+      so_nnmt: {
+        title: "SỞ NÔNG NGHIỆP VÀ MÔI TRƯỜNG TP.HCM",
+        sub: "Cơ quan cấp trên ban hành Quyết định 2637",
+        icon: "fa-landmark",
+        iconBg: "bg-amber-600",
+        content: `
+          <div class="p-3 rounded-lg bg-amber-50 border border-amber-200 mb-3">
+            <div class="font-bold text-amber-900">Giám đốc Sở: Nguyễn Toàn Thắng</div>
+            <div class="text-[11px] text-amber-800 mt-0.5">Ký ban hành QĐ số 2637/QĐ-SNNMT-VP</div>
+          </div>
+          <p><strong>Thẩm quyền chính theo Quyết định:</strong></p>
+          <ul class="list-disc ml-4 space-y-1 mt-1 text-slate-600">
+            <li>Ban hành quy định chức năng, nhiệm vụ, quyền hạn và cơ cấu tổ chức của Chi nhánh Văn phòng đăng ký đất đai số 23.</li>
+            <li>Quyết định bổ nhiệm, bổ nhiệm lại, miễn nhiệm, điều động, luân chuyển, khen thưởng, kỷ luật đối với Giám đốc và các Phó Giám đốc Chi nhánh số 23 (Điều 3 khoản 1d).</li>
+            <li>Xem xét, sửa đổi, bổ sung hoặc bãi bỏ Quy định theo đề xuất của Giám đốc VPĐKĐĐ Thành phố (Điều 11).</li>
+          </ul>
+        `
+      },
+      vpdkdd_tp: {
+        title: "VĂN PHÒNG ĐĂNG KÝ ĐẤT ĐAI TP.HCM",
+        sub: "Cơ quan quản lý, chỉ đạo trực tiếp toàn diện",
+        icon: "fa-building-flag",
+        iconBg: "bg-indigo-600",
+        content: `
+          <div class="p-3 rounded-lg bg-indigo-50 border border-indigo-200 mb-3">
+            <div class="font-bold text-indigo-900">Chỉ đạo trực tiếp, toàn diện (Điều 1 & Điều 9)</div>
+            <div class="text-[11px] text-indigo-800 mt-0.5">Thành lập theo QĐ 1886/QĐ-UBND (Hợp nhất TP.HCM, Bình Dương, BR-VT)</div>
+          </div>
+          <p><strong>Trách nhiệm chỉ đạo và phê duyệt:</strong></p>
+          <ul class="list-disc ml-4 space-y-1 mt-1 text-slate-600">
+            <li>Có thành viên Ban Giám đốc VPĐKĐĐ Thành phố trực tiếp phụ trách Chi nhánh số 23.</li>
+            <li>Thống nhất ý kiến về việc thành lập, tổ chức lại, giải thể các Tổ chuyên môn thuộc Chi nhánh (Điều 3 khoản 2).</li>
+            <li>Thống nhất ý kiến về nhân sự bổ nhiệm Tổ trưởng, Tổ phó các Tổ chuyên môn (Điều 4 khoản 3).</li>
+            <li>Chấp thuận việc nghỉ phép từ 03 ngày trở lên của viên chức, người lao động Chi nhánh (Điều 8 khoản 3a).</li>
+            <li>Chấp thuận việc vắng mặt từ 1/2 ngày làm việc trở lên của Giám đốc Chi nhánh (Điều 8 khoản 3b).</li>
+            <li>Điều phối các đơn vị bạn (như Cơ sở 2 - Chuyên gia Phùng Vương Quốc) hỗ trợ chuyên môn cho Chi nhánh 23.</li>
+          </ul>
+        `
+      },
+      chi_nhanh_23: {
+        title: "CHI NHÁNH VĂN PHÒNG ĐĂNG KÝ ĐẤT ĐAI SỐ 23",
+        sub: "Đơn vị sự nghiệp công lập trực thuộc",
+        icon: "fa-sitemap",
+        iconBg: "bg-sky-600",
+        content: `
+          <div class="p-3 rounded-lg bg-sky-50 border border-sky-200 mb-3">
+            <div class="font-bold text-sky-900">Trụ sở: 358 Huỳnh Văn Cù, P. Thủ Dầu Một</div>
+            <div class="text-[11px] text-sky-800 mt-0.5">Có tư cách pháp nhân, con dấu riêng và được mở tài khoản (Điều 1)</div>
+          </div>
+          <p><strong>Cơ cấu Lãnh đạo Chi nhánh (Điều 3):</strong></p>
+          <ul class="list-disc ml-4 space-y-1.5 mt-1 text-slate-600">
+            <li><strong>Giám đốc Chi nhánh:</strong> Người đứng đầu đơn vị, chịu trách nhiệm toàn diện trước GĐ Văn phòng ĐKĐĐ Thành phố, GĐ Sở NN&MT và pháp luật. Làm việc theo chế độ thủ trưởng (Điều 7).</li>
+            <li><strong>Các Phó Giám đốc Chi nhánh:</strong> Giúp việc Giám đốc, phụ trách một số mặt công tác (ghi nhận trong thực tế: PGĐ Nguyễn Thị Lệ Hằng - phụ trách HCTH/ký tờ trình; PGĐ Phạm Thanh Tùng - phụ trách ký hợp đồng thử việc).</li>
+            <li><strong>03 Tổ chuyên môn trực thuộc:</strong> Tổ Hành chính – Tổng hợp, Tổ Đăng ký & Cấp GCN, Tổ Kỹ thuật Địa chính & Lưu trữ.</li>
+          </ul>
+        `
+      },
+      to_hcth: {
+        title: "TỔ HÀNH CHÍNH – TỔNG HỢP (HCTH)",
+        sub: "Căn cứ Điều 3, Điều 4 & Khoản 5, 13, 14, 16 Điều 2",
+        icon: "fa-briefcase",
+        iconBg: "bg-emerald-600",
+        content: `
+          <div class="p-3 rounded-lg bg-emerald-50 border border-emerald-200 mb-3">
+            <div class="font-bold text-emerald-900">Định mức: Tổ trưởng + Không quá 03 Tổ phó</div>
+            <div class="text-[11px] text-emerald-800 mt-0.5">Bao gồm Bộ phận Quản trị Mạng & CNTT của Đỗ Trọng Minh Quân</div>
+          </div>
+          <p><strong>Các nhiệm vụ trọng yếu:</strong></p>
+          <ul class="list-disc ml-4 space-y-1.5 mt-1 text-slate-600">
+            <li><strong>Bộ phận Quản trị Mạng & CNTT:</strong> Xây dựng, quản lý, vận hành hệ thống thông tin đất đai, bảo mật hệ thống mạng LAN/WAN, FortiGate 61F, cập nhật Kaspersky, quản trị 3 máy chủ HP và dữ liệu sao lưu NAS Synology.</li>
+            <li><strong>Bộ phận Tiếp nhận & Trả kết quả (Một cửa):</strong> Tiếp nhận hồ sơ đăng ký đất đai của người dân, kiểm tra tính hợp lệ và trả kết quả.</li>
+            <li><strong>Bộ phận Kế toán - Tài chính:</strong> Quản lý tài chính, tài sản, thu phí, lệ phí và dịch vụ công đất đai (Điều 2 khoản 14).</li>
+            <li><strong>Tổ chức cán bộ & Văn thư:</strong> Quản lý viên chức, người lao động, hợp đồng lao động, văn thư lưu trữ, con dấu pháp lý.</li>
+          </ul>
+        `
+      },
+      to_dangky: {
+        title: "TỔ ĐĂNG KÝ VÀ CẤP GIẤY CHỨNG NHẬN",
+        sub: "Căn cứ Điều 3, Điều 4 & Khoản 1, 2, 8, 11 Điều 2",
+        icon: "fa-certificate",
+        iconBg: "bg-rose-600",
+        content: `
+          <div class="p-3 rounded-lg bg-rose-50 border border-rose-200 mb-3">
+            <div class="font-bold text-rose-900">Định mức: Tổ trưởng + Không quá 03 Tổ phó</div>
+            <div class="text-[11px] text-rose-800 mt-0.5">Chuyên trách nghiệp vụ cấp GCN & Đăng ký biến động</div>
+          </div>
+          <p><strong>Các nhiệm vụ trọng yếu:</strong></p>
+          <ul class="list-disc ml-4 space-y-1.5 mt-1 text-slate-600">
+            <li>Thực hiện đăng ký biến động QSDĐ cho cá nhân, cộng đồng, người gốc VN định cư ở nước ngoài (Khoản 1).</li>
+            <li>Thẩm định hồ sơ Cấp, đính chính, thu hồi, hủy Giấy chứng nhận (Sổ đỏ/Sổ hồng) (Khoản 2).</li>
+            <li>Đăng ký biện pháp bảo đảm (thế chấp, giải chấp ngân hàng) (Khoản 8).</li>
+            <li>Kiểm tra, đối chiếu, cập nhật chỉnh lý biến động trên sổ mục kê và CSDL địa chính; gửi thông báo biến động cho UBND 5 phường (Khoản 11).</li>
+          </ul>
+        `
+      },
+      to_kythuat: {
+        title: "TỔ KỸ THUẬT ĐỊA CHÍNH VÀ LƯU TRỮ",
+        sub: "Căn cứ Điều 3, Điều 4 & Khoản 2, 3, 4, 6, 7, 9, 10 Điều 2",
+        icon: "fa-compass-drafting",
+        iconBg: "bg-purple-600",
+        content: `
+          <div class="p-3 rounded-lg bg-purple-50 border border-purple-200 mb-3">
+            <div class="font-bold text-purple-900">Định mức: Tổ trưởng + Không quá 03 Tổ phó</div>
+            <div class="text-[11px] text-purple-800 mt-0.5">Chuyên trách đo đạc bản đồ, phôi GCN & kho hồ sơ địa chính</div>
+          </div>
+          <p><strong>Các nhiệm vụ trọng yếu:</strong></p>
+          <ul class="list-disc ml-4 space-y-1.5 mt-1 text-slate-600">
+            <li>Đo đạc, lập, chỉnh lý và trích lục bản đồ địa chính (Khoản 2).</li>
+            <li>Kiểm tra, ký duyệt mảnh trích đo bản đồ địa chính thửa đất, phiếu chỉnh lý đo đạc (Khoản 3).</li>
+            <li>Tiếp nhận, bảo quản và quản lý việc sử dụng phôi Giấy chứng nhận nghiêm ngặt theo quy định (Khoản 4).</li>
+            <li>Lập, chỉnh lý, số hóa, lưu trữ và bảo quản kho hồ sơ địa chính qua các thời kỳ (Khoản 4, 10).</li>
+            <li>Cập nhật bản đồ địa chính vào CSDL quốc gia về đất đai (Khoản 6).</li>
+            <li>Thống kê, kiểm kê đất đai và lập bản đồ hiện trạng sử dụng đất định kỳ (Khoản 7).</li>
+          </ul>
+        `
+      }
+    };
+
+    // Open detail slide-over modal
+    function openDetails(nodeKey) {
+      const data = nodeDetails[nodeKey];
+      if (!data) return;
+
+      document.getElementById('modalTitle').textContent = data.title;
+      document.getElementById('modalSub').textContent = data.sub;
+      
+      const iconBox = document.getElementById('modalIconBox');
+      iconBox.className = `w-9 h-9 rounded-lg ${data.iconBg} text-white flex items-center justify-center text-sm shadow-2xs`;
+      iconBox.innerHTML = `<i class="fa-solid ${data.icon}"></i>`;
+
+      document.getElementById('modalBody').innerHTML = data.content;
+      document.getElementById('detailsModal').classList.remove('hidden');
+    }
+
+    // Close detail slide-over modal
+    function closeDetails() {
+      document.getElementById('detailsModal').classList.add('hidden');
+    }
+
+    // View switching function
+    function switchView(viewName) {
+      document.querySelectorAll('.org-view').forEach(el => el.classList.add('hidden'));
+      document.querySelectorAll('.view-btn').forEach(btn => {
+        btn.classList.remove('bg-sky-50', 'text-sky-700', 'border-sky-200');
+        btn.classList.add('text-slate-600', 'border-transparent');
+      });
+
+      const targetView = document.getElementById('view-' + viewName);
+      if (targetView) targetView.classList.remove('hidden');
+
+      const targetBtn = document.getElementById('btn-view-' + viewName);
+      if (targetBtn) {
+        targetBtn.classList.remove('text-slate-600', 'border-transparent');
+        targetBtn.classList.add('bg-sky-50', 'text-sky-700', 'border-sky-200');
+      }
+    }
+
+    // Task list filter by department
+    function filterTasksByOrg(orgCode) {
+      const rows = document.querySelectorAll('.task-row');
+      rows.forEach(row => {
+        if (orgCode === 'all' || row.getAttribute('data-org') === orgCode) {
+          row.style.display = '';
+        } else {
+          row.style.display = 'none';
+        }
+      });
+    }
+
+    // Live instant search across elements
+    function filterOrgContent(keyword) {
+      const q = keyword.toLowerCase().trim();
+      if (!q) {
+        document.querySelectorAll('.org-card, .task-row').forEach(el => {
+          el.style.opacity = '1';
+          el.style.display = '';
+        });
+        return;
+      }
+
+      // Filter in tree view
+      document.querySelectorAll('.org-card').forEach(card => {
+        const text = card.textContent.toLowerCase();
+        if (text.includes(q)) {
+          card.style.opacity = '1';
+          card.style.borderColor = '#0284c7';
+        } else {
+          card.style.opacity = '0.35';
+          card.style.borderColor = '';
+        }
+      });
+
+      // Filter in task table
+      document.querySelectorAll('.task-row').forEach(row => {
+        const text = row.textContent.toLowerCase();
+        if (text.includes(q)) {
+          row.style.display = '';
+          row.style.backgroundColor = '#f0f9ff';
+        } else {
+          row.style.display = 'none';
+          row.style.backgroundColor = '';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

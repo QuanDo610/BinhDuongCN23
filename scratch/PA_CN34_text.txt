@@ -1,0 +1,254 @@
+MỤC LỤC
+DANH MỤC BIỂU VÀ PHỤ LỤC
+Biểu 1: Nội dung và khối lượng 	13
+Biểu 2: Dự toán kinh phí sửa chữa chống thấm 	14
+Phụ lục 01: Bảng báo giá của 03 đơn vị thi công .	19
+Chủ quản: Sở Nông nghiệp và Môi trường
+Đơn vị: Văn phòng Đăng ký đất đai Thành phố Hồ Chí Minh
+Mã số QHNS: 1122149
+PHƯƠNG ÁN DỰ TOÁN
+Công tác: “Sửa chữa chống thấm, chống dột của trụ sở chi nhánh 34”
+MỤC ĐÍCH
+A. Giới thiệu chung về hoạt động của hệ thống Văn phòng đăng ký đất đai Thành phố Hồ Chí Minh:
+Căn cứ pháp lý
+Luật Đất đai và các Nghị định, Thông tư hướng dẫn
+- Luật Đất đai số 31/2024/QH15 được sửa đổi bổ sung một số điều theo Luật số 43/2024/QH15;
+- Nghị định số 101/2024/NĐ-CP ngày 29 tháng 7 năm 2024 của Chính phủ quy định về điều tra cơ bản đất đai; đăng ký, cấp giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản gắn liền với đất và hệ thống thông tin đất đai;
+- Nghị định số 102/2024/NĐ-CP ngày 30 tháng 7 năm 2024 của Chính phủ quy định chi tiết thi hành một số điều của Luật Đất đai;
+- Nghị định số 151/2025/NĐ-CP ngày 12 tháng 6 năm 2025 của Chính phủ quy định về phân định thẩm quyền của chính quyền địa phương 02 cấp, phân quyền, phân cấp trong lĩnh vực đất đai;
+- Nghị định số 226/2025/NĐ-CP ngày 15 tháng 8 năm 2025 sửa đổi, bổ sung một số điều của các Nghị định quy định chi tiết thi hành Luật Đất đai;
+- Thông tư số 08/2024/TT-BTNMT ngày 31 tháng 7 năm 2024 của Bộ Tài nguyên và Môi trường quy định về thống kê, kiểm kê đất đai và lập bản đồ hiện trạng sử dụng đất;
+- Thông tư số 10/2024/TT-BTNMT ngày 31 tháng 7 năm 2024 của Bộ Tài nguyên và Môi trường quy định về hồ sơ địa chính, giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản gắn liền với đất;
+- Thông tư số 23/2025/TT-BTNMT ngày 20 tháng 6 năm 2025 của Bộ trưởng Bộ Nông nghiệp và Môi trường quy định phân cấp, phân định thẩm quyền quản lý nhà nước trong lĩnh vực đất đai.
+a/ Văn bản về cơ chế của đơn vị sự nghiệp công lập
+- Nghị định số 60/2021/NĐ-CP ngày 21 tháng 6 năm 2021 của Chính phủ về quy
+định cơ chế tự chủ tài chính của đơn vị sự nghiệp công lập;
+- Nghị định số 106/2020/NĐ-CP ngày 10 tháng 9 năm 2020 của Chính phủ về vị trí việc làm và số lượng người làm việc trong đơn vị sự nghiệp công lập;
+-Nghị định số 120/2020/NĐ-CP ngày 07 tháng 10 năm 2020 của Chính phủ quy
+định về thành lập, tổ chức lại, giải thể đơn vị sự nghiệp công lập;
+-Nghị định số 111/2022/NĐ-CP ngày 30 tháng 12 năm 2022 của Chính phủ về hợp đồng đối với một số loại công việc trong cơ quan hành chính và đơn vị sự nghiệp công lập;
+-Nghị định số 111/2025/NĐ-CP ngày 22 tháng 5 năm 2025 của Chính phủ sửa đổi, bổ sung một số điều của Nghị định số 60/2021/NĐ-CP ngày 21 tháng 6 năm 2021 của chính phủ quy định cơ chế tự chủ tài chính của đơn vị sự nghiệp công lập;
+- Thông tư số 56/2022/TT-BTC ngày 16 tháng 9 năm 2022 của Bộ Tài chính hướng dẫn một số nội dung về cơ chế tự chủ tài chính của đơn vị sự nghiệp công lập; xử lý tài sản, tài chính khi tổ chức lại, giải thể đơn vị sự nghiệp công lập;
+b/Văn bản về thành lập, ban hành Quy chế tổ chức và hoạt động
+- Quyết định số 1886/QĐ-UBND ngày 01 tháng 10 năm 2025 của Ủy ban nhân dân Thành phố về tổ chức lại Văn phòng Đăng ký đất đai Thành phố Hồ Chí Minh trực thuộc Sở Nông nghiệp và Môi trường Thành phố Hồ Chí Minh trên cơ sở hợp nhất Văn phòng Đăng ký đất đai Thành phố Hồ Chí Minh, Văn phòng Đăng ký đất đai tỉnh Bình Dương và Văn phòng Đăng ký đất đai tỉnh Bà Rịa – Vũng Tàu;
+ - Quyết định số 2648/QĐ-SNNMT-VP ngày 15/12/2025 của Giám đốc Sở Nông nghiệp và Môi trường Thành phố Hồ Chí Minh về ban hành Quy định chức năng, nhiệm vụ, quyền hạn và cơ cấu tổ chức của Chi nhánh Văn phòng đăng ký đất đai số 34 trực thuộc Văn phòng đăng ký đất đai Thành phố Hồ Chí Minh;
+c/ Văn bản về quy chế tài chính
+- Quyết định số 2882/QĐ-SNNMT-KHTC ngày 29 tháng 12 năm 2025 của Giám đốc Sở Nông nghiệp và Môi trường về việc giao chỉ tiêu dự toán thu, chi ngân sách năm 2026 cho các cơ quan, đơn vị thuộc Sở Nông nghiệp và Môi trường; 
+- Quyết định số 792/QĐ-SNNMT-KHTC ngày 10 tháng 02 năm 2026 của Giám đốc Sở Nông nghiệp và Môi trường về việc điều chỉnh dự toán ngân sách nhà nước năm 2026 cho các cơ quan, đơn vị thuộc Sở Nông nghiệp và Môi trường (lần 3);
+- Quyết định số 805/QĐ-SNNMT-KHTC ngày 10 tháng 02 năm 2026 của Giám đốc Sở Nông nghiệp và Môi trường về việc điều chỉnh dự toán ngân sách nhà nước năm 2026 cho các cơ quan, đơn vị thuộc Sở Nông nghiệp và Môi trường (lần 4);
+- Quyết định số 907/QĐ-SNNMT-KHTC ngày 13 tháng 02 năm 2026 của Giám đốc Sở Nông nghiệp và Môi trường về việc điều chỉnh dự toán ngân sách nhà nước năm 2026 cho các cơ quan, đơn vị thuộc Sở Nông nghiệp và Môi trường (lần 5);
+- Quyết định số 1020/QĐ-SNNMT-KHTC ngày 04 tháng 3 năm 2026 của Giám đốc Sở Nông nghiệp và Môi trường về việc điều chỉnh dự toán ngân sách nhà nước năm 2026 cho các cơ quan, đơn vị thuộc Sở Nông nghiệp và Môi trường (lần 6); trong đó đơn vị sử dụng ngân sách: Văn phòng Đăng ký đất đai Thành phố Hồ Chí Minh - Mã quan hệ ngân sách 1122149 - Mã KBNN nơi giao dịch: 0111 - Mã chương 412 - Mã ngành kinh tế 338;
+d/ Văn bản về định mức kinh tế kỹ thuật của các hoạt động nghiệp vụ
+- Thông tư số 03/2022/TT-BTNMT ngày 28 tháng 02 năm 2022 của Bộ trưởng Bộ Tài nguyên và Môi trường ban hành Quy định kỹ thuật và định mức kinh tế - kỹ thuật về công tác thu nhận, lưu trữ, bảo quản và cung cấp thông tin, dữ liệu tài nguyên và môi trường;
+- Thông tư số 136/2017/TT-BTC ngày 22 tháng 12 năm 2017 của Bộ trưởng Bộ Tài chính quy định lập, quản lý, sử dụng kinh phí chi hoạt động kinh tế đối với các nhiệm vụ chi về tài nguyên và môi trường.
+  2. Vị trí, chức năng, nhiệm vụ, quyền hạn
+Chi nhánh Văn phòng đăng ký đất đai số 34 là đơn vị sự nghiệp công lập trực thuộc Văn phòng đăng ký đất đai Thành phố Hồ Chí Minh, có chức năng thực hiện đăng ký đất đai, nhà ở và tài sản khác gắn liền với đất; xây dựng, quản lý, cập nhật, chỉnh lý thống nhất hồ sơ địa chính và cơ sở dữ liệu đất đai; thống kê, kiểm kê đất đai; cung cấp thông tin về đất đai cho các tổ chức, cá nhân theo quy định của pháp luật;
+Chi nhánh Văn phòng đăng ký đất đai số 34 quyết định về quy chế làm việc và trình tự giải quyết công việc trong nội bộ Chi nhánh Văn phòng đăng ký đất đai số 34 và mối quan hệ công tác với các tổ chức, cá nhân bên ngoài có liên quan đến việc thực hiện chức năng, nhiệm vụ, quyền hạn của Chi nhánh Văn phòng đăng ký đất đai số 34.
+Trụ sở chính của Chi nhánh Văn phòng đăng ký đất đai số 34 đặt tại số 7 Nguyễn Du, khu phố Vạn Hạnh, phường Phú Mỹ, Thành phố Hồ Chí Minh.
+3. Cơ cấu tổ chức
+4. Chế độ làm việc: 
+Chi nhánh Văn phòng đăng ký đất đai số 34 làm việc theo nguyên tắc tập trung dân chủ, thực hiện chế độ thủ trưởng; bảo đảm sự lãnh đạo của Đảng, sự chỉ đạo, điều hành của Văn phòng đăng ký đất đai Thành phố Hồ Chí Minh, tuân thủ quy định của pháp luật và Quy chế làm việc này. Viên chức và người lao động phải thực hiện, giải quyết công việc đúng chức năng, nhiệm vụ, quyền hạn được giao và theo quy định của pháp luật. 
+Giám đốc là thủ trưởng, người đứng đầu, chịu trách nhiệm chỉ đạo, điều hành toàn bộ hoạt động của Chi nhánh theo chức năng, nhiệm vụ, quyền hạn được quy định; chịu trách nhiệm trước, Giám đốc Sở Nông nghiệp và Môi trường, Giám đốc Văn phòng đăng ký đất đai Thành phố và trước pháp luật về kết quả hoạt động của Chi nhánh. 
+5. Các tổ chức chính trị, chính trị - xã hội:
+- Chi bộ Chi nhánh Văn phòng đăng ký đất đai số 34 trực thuộc Đảng bộ Sở Tài nguyên & Môi Trường Thành phố Hồ Chí Minh.
+- Chi nhánh Văn phòng đăng ký đất đai số 34 tổ chức và sinh hoạt theo chỉ đạo của Đảng bộ Sở Tài nguyên & Môi Trường Thành phố Hồ Chí Minh.
+6. Số lượng viên chức, lao động hợp đồng:
+Căn cứ Đề án vị trí việc làm và cơ cấu viên chức theo chức danh nghề nghiệp tại Văn phòng đăng ký đất đai Thành phố đã được phê duyệt tại Quyết định số 57/QĐ-VPĐK-HC ngày 12 tháng 02 năm 2026 là 75 người và được phân bổ như sau:
+- Ban Giám đốc: 03 người; 
+- Hành chính – Tổng hợp: 11 người (06 viên chức, 05 người lao động);
+- Kế toán: 01 người;
+- Đăng ký và cấp GCN: 21 người (06 viên chức, 15 người lao động);
+- Kỹ thuật Địa chính và Lưu trữ: 28 người ;(11 viên chức, 17 người lao động);
+- Bảo vệ: 02 người.
+- Lao công: 01 người.
+7. Trụ sở hoạt động:
+Trụ sở chính của Chi nhánh Văn phòng đăng ký đất đai số 34 đặt tại số 7 Nguyễn Du, khu phố Vạn Hạnh, phường Phú Mỹ, Thành phố Hồ Chí Minh.
+8. Về cơ chế tài chính:
+8.1. Chi nhánh Văn phòng đăng ký đất đai số 34 thực hiện cơ chế tự chủ tài chính theo Nghị định 60/2021/NNĐ-CP đối với đơn vị sự nghiệp công lập theo loại hình tự bảo đảm chi phí hoạt động.
+8.2. Nguồn tài chính sử dụng:
+a) Kinh phí cấp cho hoạt động không thường xuyên thực hiện chức năng, nhiệm vụ của Văn phòng đăng ký đất đai Thành phố Hồ Chí Minh theo quy định hiện hành để phù hợp với cơ chế tự chủ của đơn vị sự nghiệp công lập.
+b) Nguồn thu từ hoạt động sự nghiệp, gồm:
+- Phí trong lĩnh vực đăng ký đất đai, đăng ký giao dịch bảo đảm, khai thác đất đai, cung cấp thông tin đất đai theo quy định của pháp luật hiện hành và quy định cụ thể của Hội đồng nhân dân tỉnh Bà Rịa – Vũng Tàu (cũ).
+- Các khoản thu từ thực hiện hoạt động dịch vụ theo hợp đồng ký kết và theo quy định của pháp luật gồm: kiểm tra nội nghiệp bản vẽ.
+- Các khoản thu từ hoạt động sự nghiệp khác theo quy định của pháp luật.
+c) Nguồn vốn được cấp từ Ngân sách nhà nước để thực hiện nhiệm vụ theo quyết định của Ủy ban nhân Thành phố hoặc Sở Tài nguyên và Môi trường. 
+d) Nguồn vốn vay từ các tổ chức tín dụng (Năm 2025: Không có);
+e) Nguồn vốn từ liên doanh, liên kết để thực hiện các chương trình, phương án, dự án, đề án đã được cấp có thẩm quyền phê duyệt (Năm 2025: Không có);
+f) Nguồn viện trợ, tài trợ và các nguồn khác theo quy định của pháp luật (Năm 2025: Không có);
+B.  Mục đích của phương án:
+1. Căn cứ xây dựng phương án
+Ngày 25 tháng 12 năm 2018, Ủy ban nhân dân tỉnh Bà Rịa – Vũng Tàu (cũ) ban hành quyết định số 3668 “về việc điều chuyển tài sản nhà nước từ UBND Thị xã Phú Mỹ về Văn phòng Đăng ký đất đai tỉnh thuộc Sở Tài nguyên và Môi trường. Sở Tài Nguyên và Môi Trường tỉnh Bà Rịa - Vũng Tàu (cũ) đã bố trí cho Chi nhánh văn phòng Đăng ký đất đai thị xã Phú Mỹ - nay là Chi nhánh số 34. 
+- Năm 2019, Văn phòng Đăng ký đất đai tỉnh Bà Rịa – Vũng tàu (cũ) đã đầu tư sửa chữa, nâng cấp trụ sở Chi nhánh Phú Mỹ thành một khối nhà cấp 4, với tổng diện tích làm việc khoảng 361 m2 (10 phòng làm việc), diện tích kho lưu trữ hồ sơ tài liệu đất đai là 500m2.
+Đến nay, hiện trạng sàn mái, tường sàn mái, trần nhà bị thấm dột của chi nhánh Văn phòng Đăng ký đất đai Thành phố Phú Mỹ (nay là Chi nhánh Văn phòng Đăng ký đất đai số 34) chưa được sửa chữa, chống thấm, dột. Như vậy, mục đích của phương án “Sửa chữa chống thấm Chi nhánh Văn phòng đăng ký đất đai số 34” là nhu cầu cấp thiết nhằm tạo điều kiện đảm bảo môi trường làm việc khô thoáng sạch đẹp, nhằm đảo bảo điều kiện bảo quản tài liệu, dữ liệu chuyên môn của đơn vị tránh làm ẩm mốc, rách, mất mát hư hỏng theo đúng quy chuẩn, quy định hiện hành. 
+2. Việc xây dựng phương án sửa chữa, chống thấm trụ sở chi nhánh số 34 nhằm các mục đích sau:
+- Đảm bảo sơ sở vật chất, môi trường làm việc thoáng mát sạch sẽ không bị dột và ẩm ướt, trơn trượt.
+- Đảm bảo điều kiện bảo quản tài liệu, dữ liệu chuyên môn của đơn vị không bị ẩm mốc, hư hỏng, khô thoáng .
+- Sử dụng nguồn kinh phí của đơn vị đúng quy định, tiết kiệm và hiệu quả cao.
+- Là cơ sở để lập kế hoạch lựa chọn nhà thầu và tổ chức đấu thầu theo quy định của pháp luật.
+II. YÊU CẦU
+1. Phạm vi sửa chữa chống thấm
+Việc sửa chữa chống thấm trụ sở chi nhánh 34 phải đảm bảo đáp ứng nhu cầu cơ sở vật chất, bảo quản lưu trữ tài liệu công tác chuyên môn của Chi nhánh Văn phòng Đăng ký đất đai số 34.
+2. Về công tác thi công sửa chữa chống thấm
+Phương án dự toán thuê đơn vị thi công sửa chữa chống thấm của đơn vị trong năm 2026 được thực hiện cụ thể như sau:
+2.1. Chống thấm sàn mái, sê nô mái, mương đón nước mái tôn bằng màng chống thấm   Bitumode Delta – P 3mm : 
+a/ Chuẩn bị mặt bằng:
+- Bề mặt cần chống thấm phải đặc chắc, không nứt nẻ, các tạp chất, mảnh vỡ, bụi bẩn phải được vệ sinh đúng yêu cầu. Các lớp vật liệu bề mặt có lực bám dính không tốt hoặc có khả năng bong tróc phải được đục bỏ hoàn toàn, các lổ ty phải được cắt lún sâu 0,01mm. 
+- Dùng máy mài chuyên dụng mài bỏ tạp chất… tạo nhám để tạo bám dính tốt.
+- Các vết nứt (nếu có) phải được xử lý, vá lại vết nứt, lỗ mọt lớn trước khi thi công chống thấm.
+Chân tường phải được bo góc 45 độ (tùy theo mạch ngừng).
+b/ Phủ lớp lót:
+- Thêm 20-50% nước vào Sikaproof Membrane và trộn đều. 
+- Dùng chổi hoặc rulo quét lên 1 lớp lót. 
+- Định mức 0.2kg/m2.
+2.2. Chống thấm tường sàn mái, tường sê nô mái, tường mương đón nước mái tôn bằng SikaCoat Plus:
+a/ Chuẩn bị mặt bằng:
+ Tường cũ: Phải cạo bỏ dầu mỡ, rêu mốc, các lớp sơn, vôi cũ sau đó rửa kỹ bằng nước sạch và để khô.
+Bước 1: Chuẩn bị hỗn hợp theo tỷ lệ như sau:
++ Thùng 25 kg Mastic dẻo: 4-7 kg Xi măng 
++ Lượng nước sạch (vừa đủ).
+Bước 2: +  Dùng bay trét 1 lớp, mỗi lớp cách nhau từ 3 – 4 giờ. 
++ Để khô sau 6 – 8 giờ dùng giấy nhám xả phẳng, thổi sạch bụi, có thể lăn sơn lót.
+b/ Lăn phủ lớp chống thấm:
+ + Thi công 2 lớp SikaCoat Plus với định mức ~0.3kg/ m2/ lớp bằng cọ, ru-lô.
+ + Thi công lớp thứ 1 chờ khô trong khoảng 3-4 tiếng
++ Thi công lớp thứ 2
+2.3. Nguyên tắc thực hiện
+Nội dung công việc nêu trên thực hiện trọn gói  được xác định là các hạng mục công việc thuộc cùng một gói thầu dịch vụ thuê đơn vị thi công sửa chữa chống thấm phục vụ công tác chuyên môn của chi nhánh.
+3. Yêu cầu kỹ thuật đối với đơn vị thi công sửa chữa chống thấm
+Đơn vị thi công sửa chữa chống thấm phải đáp ứng các yêu cầu sau:
+Vật tư, vật liệu chống thấm tốt, đúng quy cách, chủng loại đảm bảo hiệu quả.
+Thiết bị, máy móc đầy đủ cho quá trình thi công.
+Nhân lực thi công, giám sát thi công đảm bảo quá trình sửa chữa.
+Trang bị bảo hộ lao động đạt điều kiện an toàn trong suốt quá trình thi công sửa chữa.
+Quy trình, phương pháp thi công sửa chữa hiệu quả.
+Đảm bảo cơ sở vật chất gọn gàng, sạch sẽ, tránh làm mất mát tài liệu của chi nhánh trong quá trình thi công sửa chữa.
+4. Về nội dung chi phí thi công sửa chữa chống thấm trụ sở chi nhánh:
+- Căn cứ các bảng báo giá của 03 công ty.
+III. NỘI DUNG - KHỐI LƯỢNG & QUY TRÌNH THỰC HIỆN
+1. Cơ sở pháp lý
+1.1 Văn bản quy định về công tác đấu thầu
+Căn cứ Luật Đấu thầu số 22/2023/QH15 ngày 23 tháng 6 năm 2023; Luật sửa đổi, bổ sung một số điều của Luật Quy hoạch, Luật Đầu tư, Luật Đầu tư theo phương thức đối tác công tư và Luật Đấu thầu số 57/2024/QH15 ngày 29 tháng 11 năm 2024; Luật sửa đổi, bổ sung một số điều của Luật Đấu thầu, Luật Đầu tư theo phương thức đối tác công tư, Luật hải quan, Luật Thuế giá trị gia tăng, Luật Thuế xuất khẩu, thuế nhập khẩu, Luật Đầu tư, Luật Đầu tư công, Luật Quản lý sử dụng tài sản công số 90/2025/QH15 ngày 25 tháng 6 năm 2025;
+Căn cứ Nghị định số 214/2025/NĐ-CP ngày 04 tháng 8 năm 2025 của Chính phủ quy định chi tiết một số điều và biện pháp thi hành Luật Đấu thầu về lựa chọn nhà thầu;
+- Nghị định số 17/2025/NĐ-CP ngày 06 tháng 02 năm 2025 của Chính phủ sửa đổi, bổ sung một số điều của các nghị định quy định chi tiết một số điều và biện pháp thi hành;
+Căn cứ Thông tư 79/2025/TT-BTC ngày 04 tháng 8 năm 2025 của Bộ trưởng Bộ Tài chính hướng dẫn việc cung cấp, đăng tải thông tin về đấu thầu và mẫu hồ sơ đấu thầu trên Hệ thống mạng đấu thầu quốc gia.
+Căn cứ pháp lý để lựa chọn nhà thầu.
+- Căn cứ khoản 4 Điều 78 Nghị định số 214/2025/NĐ-CP ngày 04 tháng 8 năm 2025 của Chính phủ quy định chi tiết một số điều và biện pháp thi hành Luật Đấu thầu về lựa chọn nhà thầu.
+“Điều 78. Các trường hợp chỉ định thầu…
+- Gói thầu thuộc dự toán mua sắm không hình thành dự án có giá gói thầu không quá 500 triệu đồng; gói thầu dịch vụ tư vấn thuộc dự án có giá gói thầu không quá 800 triệu đồng, gói thầu dịch vụ phi tư vấn, hàng hóa, xây lắp, hỗn hợp thuộc dự án có giá gói thầu không quá 02 tỷ đồng;”
+- Căn cứ tổng giá trị gói thầu thuê sửa chữa chống thấm, dột phục vụ công tác của Chi nhánh Văn phòng Đăng ký đất đai  số 34 là: 188.874.923 đồng, thuộc loại dịch vụ phi tư vấn và nằm trong hạn mức không quá 02 tỷ đồng, do đó đủ điều kiện áp dụng hình thức chỉ định thầu rút gọn theo quy định hiện hành
+- Do đó, hình thức lựa chọn nhà thầu được xác định là chỉ định thầu rút gọn theo quy định hiện hành.
+- Loại hợp đồng: Hợp đồng trọn gói.
+1.2 Văn bản quy định về Luật quản lý, sử dụng tài sản công
+Căn cứ Luật Quản lý, sử dụng tài sản công số 15/2017/QH14 ngày 21 tháng 06 năm 2017 của Quốc hội;
+-  Căn cứ Thông tư số 65/2021/TT-BTC quy định về lập dự toán, quản lý sử dụng và quyết toán kinh phí bảo dưỡng, sửa chữa tài sản công.
+1.3 Văn bản quy định về thuế suất
+Căn cứ Nghị định số 174/2025/NĐ-CP ngày 30 tháng 6 năm 2025 của Chính phủ quy định chính sách giảm thuế giá trị gia tăng theo Nghị quyết số 204/2025/QH15 ngày 17 tháng 6 năm 2025 của Quốc hội; trong đó, áp dụng thuế suất 8% cho một số hàng hóa dịch vụ đang chịu thuế suất 10%.
+ Các mẫu biểu sử dụng:
+Mẫu biểu trong công tác đấu thầu: theo mẫu quy định tại Nghị định số 214/2025/NĐ-CP ngày 04 tháng 8 năm 2025 của Chính phủ và Thông tư 79/2025/TT-BTC ngày 04 tháng 8 năm 2025 của Bộ trưởng Bộ Tài chính.
+Mẫu biểu trong công tác thanh toán: theo mẫu quy định tại Nghị định số 11/2020/NĐ-CP ngày 20 tháng 01 năm 2020 của Chính phủ và Thông tư số 24/2024/TT-BTC ngày 17 tháng 4 năm 2024 của Bộ Tài chính.
+Ghi chú: Trường hợp Chính phủ, Bộ Tài chính ban hành qui định mới tại thời điểm thực hiện đấu thầu, thời kiểm thanh toán, mẫu biểu sử dụng theo qui định có hiệu lực tại thời điểm.
+Nội dung và khối lượng.
+3. Quy trình thực hiện (sắp xếp theo thứ tự thực hiện)
+3.1 Quy trình thực hiện:
+Bước1 : Khảo sát và thu thập báo giá:
+- Khảo sát và thu thập các báo giá của đơn vị thực hiện: Chi nhánh Văn phòng Đăng ký đất đai số 34.
+Bước 2: Lập, Thẩm định và trình duyệt Thủ trưởng phương án dự toán sửa chữa:
+- Lập: Chi nhánh Văn phòng Đăng ký đất đai số 34.
+- Thẩm định và trình duyệt Thủ trưởng: Phòng Kế hoạch - Tài chính Cơ sở.
+Bước 3: Lập, thẩm định và trình duyệt kế hoạch lựa chọn nhà thầu:
+- Lập Tờ trình kế hoạch lựa chọn nhà thầu: Chi nhánh Văn phòng Đăng ký đất đai số 34.
+- Thẩm định và trình duyệt Thủ trưởng: Phòng Kế hoạch - Tài chính.
+Bước 4: Lập, thẩm định và trình duyệt kết quả lựa chọn nhà thầu:
+a. Các thủ tục đăng tải trên mạng đấu thầu: Phòng Hành chính Tổng hợp.
+b. Thương thảo hợp đồng: Chi nhánh Văn phòng Đăng ký đất đai số 34.
+c. Lập Tờ trình kết quả lựa chọn nhà thầu: Chi nhánh Văn phòng Đăng ký đất đai số 34.
+d. Thẩm định, trình Giám đốc ban hành Quyết định kết quả lựa chọn nhà thầu: Phòng Hành chính Tổng hợp.
+Bước 5: Trình duyệt, tổ chức thực hiện Hợp đồng : 
+a.Trình duyệt hợp đồng: Chi nhánh Văn phòng Đăng ký đất đai số 34
+b. Kiểm tra nghiệm thu:  Chi nhánh Văn phòng Đăng ký đất đai số 34, Tổ Hành chính – Tổng Hợp.
+c.Thanh lý: Chi nhánh Văn phòng Đăng ký đất đai số 34.
+Bước 6: Thanh quyết toán :
+- Lập thủ tục và đề nghị : Chi nhánh Văn phòng Đăng ký đất đai số 34.
+- Kiểm soát chi , trình thủ tục giải ngân : Phòng Kế hoạch - Tài chính.
+3.2. Trách nhiệm trong công tác kiểm tra nghiệm thu:
+a) Các bước kiểm tra nghiệm thu:
+- Chi nhánh Văn phòng Đăng ký đất đai số 34, Tổ Hành chính – Tổng Hợp: Chịu trách nhiệm về tính chính xác của các chỉ tiêu số lượng, chất lượng trên biên bản kiểm tra nghiệm thu.
+b) Thành phần bộ hồ sơ kiểm tra nghiệm thu làm căn cứ thanh toán chi phí thuê đơn vị thi công sửa chữa được lập đầy đủ, hợp lệ theo quy định của pháp luật hiện hành, bao gồm các tài liệu sau:
+Hợp đồng thuê đơn vị thi công sửa chữa đã được ký kết giữa Chi nhánh Văn phòng đăng ký đất đai số 34 và đơn vị cung cấp dịch vụ.
+- Biên bản kiểm tra nghiệm thu: Giám đốc Chi nhánh Văn phòng Đăng ký đất đai số 34 ký duyệt.
+- Hóa đơn điện tử hợp đồng trọn gói thi công sửa chữa chống thấm đúng quy định pháp luật về thuế.
+- Các tài liệu, chứng từ hợp pháp khác có liên quan theo yêu cầu của cơ quan tài chính, cơ quan kiểm toán hoặc cơ quan có thẩm quyền (nếu có).
+IV. DỰ TOÁN KINH PHÍ
+1. Dự toán kinh phí
+Căn cứ 03 bảng báo giá đã bao gồm VAT của 03 đơn vị cung cấp dịch vụ (đính kèm):
+- Công ty TNHH Đầu tư Phát triển Toàn Đạt.
+- Công ty TNHH Chống thấm và Xây dựng Kim Bảo Phát.
+- Công ty TNHH Xây dựng Vạn Đạt.								                                                               Đơn vị tính: đồng
+Như vậy, dự toán tính theo báo giá đã bao gồm VAT thấp là báo giá của: Công ty TNHH Đầu tư Phát triển Toàn Đạt số tiền: 188.834.923 đồng (Số tiền bằng chữ: Một trăm tám mươi tám triệu, tám trăm ba mươi bốn nghìn chín trăm hai mươi ba đồng./), trong đó:
++ Giá dịch vụ chưa thuế: 174.844.188 đồng;
++ Thuế GTGT (8%): 13.990.735 đồng;
+Trong đó dự toán đề nghị bổ sung chi không thường xuyên cho Chi nhánh số tiền: 188.834.923 đồng (Số tiền bằng chữ: Một trăm tám mươi tám triệu, tám trăm ba mươi bốn nghìn chín trăm hai mươi ba đồng).
+2. Nguồn kinh phí: Quỹ Phát triển hoạt động sự nghiệp.
+IV. HỒ SƠ ĐÍNH KÈM VÀ PHÂN CÔNG LƯU TRỮ HỒ SƠ
+1. Hồ sơ đính kèm:
+03 bảng báo giá thuê đơn vị thi công sửa chữa chống thấm: Bản chính.
+2. Số lượng bản phương án dự toán ký chính: 03 bản.
+Lưu trữ hồ sơ:
+a/ 01 Bản phương án ký chính + Bản chính hồ sơ đính kèm: Lưu tại Phòng Kế hoạch Tài chính kèm Quyết định phê duyệt phương án do bộ phận thẩm định dự toán lưu.
+b/ 02 bản phương án ký chính + Bản chụp hồ sơ đính kèm: Trả về bộ phận thực hiện kèm Quyết định phê duyệt phương án, trong đó 01 bản chính sẽ chuyển kèm về Phòng Kế hoạch-Tài chính trong hồ sơ thanh toán đợt đầu, nếu có nhiều đợt thanh toán thì chuyển về Kế toán trong đợt thanh toán đầu tiên.
+4. Số hóa hồ sơ
+4.1 Bộ phận thực hiện số hóa toàn bộ hồ sơ liên quan phương án dự toán, công tác ký thủ tục hợp đồng và kiểm tra nghiệm thu, chuyển về Phòng Kế hoạch Tài chính tại lần thanh toán cuối cùng.
+Phòng Kế hoạch Tài chính số hóa tiếp tục hồ sơ thanh quyết toán./.
+                                    Thành phố Hồ Chí Minh, ngày 11 tháng 09 năm 2026
+	PHÊ DUYỆT CỦA PHÓ GIÁM ĐỐC PHỤ TRÁCH
+            (CƠ SỞ 3)
+Trần Ngọc Cẩm Tuấn
+ĐƠN VỊ THẨM ĐỊNH: PHÒNG KẾ HOẠCH TÀI CHÍNH THẨM ĐỊNH
+CHUYÊN VIÊN	TRƯỞNG PHÒNG
+Đào Vân Anh
+DUYỆT CỦA GIÁM ĐỐC VĂN PHÒNG ĐĂNG KÝ ĐẤT ĐAI
+THÀNH PHỐ HỒ CHÍ MINH
+Bùi Thị Bích Tuyền
+Phụ lục 1
+Bảng báo giá của 03 công ty thi công sửa chữa chống thấm
+Đơn vị tính: đồng
+Nhận xét:
+Qua khảo sát giá thị trường thông qua 03 báo giá của các đơn vị cung cấp dịch vụ sửa chữa chống thấm, chống dột. Mức giá đề xuất lựa chọn là 188.834.923đồng, là mức giá thấp nhất, phù hợp với khả năng tài chính của đơn vị và đảm bảo  đầy đủ hạng mục thi công và tiết kiệm, hiệu quả theo quy định.
+
+--- TABLE ---
+Stt | Cơ cấu tổ chức | Nhiệm vụ chủ yếu
+ | CHI NHÁNH VĂN PHÒNG ĐĂNG KÝ ĐẤT ĐAI SỐ 34: | CHI NHÁNH VĂN PHÒNG ĐĂNG KÝ ĐẤT ĐAI SỐ 34: | CHI NHÁNH VĂN PHÒNG ĐĂNG KÝ ĐẤT ĐAI SỐ 34:
+1 | Ban Giám đốc | 01 Giám đốc. 02 Phó Giám đốc.
+2 | Tổ Hành chính - Tổng hợp | Hành chính, tổ chức nhân sự; báo cáo, tổng hợp.
+3 | Tổ Kỹ thuật Địa chính và Lưu trữ | Công tác kỹ thuật địa chính, kiểm tra bản vẽ, thống kê kiểm kê đất đai. Quản lý, khai thác kho lưu trữ.
+4 | Tổ Đăng ký và Cấp giấy chứng nhận | Thực hiện công tác đăng ký đất đai cho cá nhân.
+
+--- TABLE ---
+STT | NỘI DUNG CÔNG VIỆC | ĐVT | KHỐI LƯỢNG
+STT | NỘI DUNG CÔNG VIỆC | ĐVT | KHỐI LƯỢNG
+A | Chống thấm sàn mái, sê nô mái, mương đón nước mái tôn bằng màng chống thấm   Bitumode Delta – P 3mm (Mặt trơn) dạng khò nhiệt. | Chống thấm sàn mái, sê nô mái, mương đón nước mái tôn bằng màng chống thấm   Bitumode Delta – P 3mm (Mặt trơn) dạng khò nhiệt. | Chống thấm sàn mái, sê nô mái, mương đón nước mái tôn bằng màng chống thấm   Bitumode Delta – P 3mm (Mặt trơn) dạng khò nhiệt.
+1 |   - Tạo nhám bề mặt bằng máy mài. Vệ sinh sạch bề mặt   - Quét 1 lớp lót hệ nước Nirol – W (định mức 0,2kg/m2).   - Chống thấm mái sử dụng Màng khò nóng Bitumode Delta – P 3mm (Mặt trơn) | m2 | 357.43
+B | Chống thấm tường sàn mái, tường sê nô mái, tường mương đón nước mái tôn bằng SikaCoat Plus. | Chống thấm tường sàn mái, tường sê nô mái, tường mương đón nước mái tôn bằng SikaCoat Plus. | Chống thấm tường sàn mái, tường sê nô mái, tường mương đón nước mái tôn bằng SikaCoat Plus.
+1 |   - Vệ sinh sạch bề mặt, bằng bàn chải sắt.   - Sử dụng MASTIC sửa chữa các vết nứt.   - Lăn phủ 2 lớp chống thấm kháng tia UV SikaCoat Plus. Định mức 0.6kg/m2 | m2 | 285.38
+
+--- TABLE ---
+Nội dung thực hiện theo Tổ Hành Chính – Tổng Hợp đã thẩm định | Nội dung thực hiện theo Tổ Hành Chính – Tổng Hợp đã thẩm định | Công ty TNHH Đầu tư Phát triển Toàn Đạt | Công ty TNHH Đầu tư Phát triển Toàn Đạt | Công ty TNHH Xây dựng Vạn Đạt | Công ty TNHH Xây dựng Vạn Đạt | Công ty TNHH Chống thấm và Xây dựng Kim Bảo Phát | Công ty TNHH Chống thấm và Xây dựng Kim Bảo Phát
+Nội dung thực hiện theo Tổ Hành Chính – Tổng Hợp đã thẩm định | Nội dung thực hiện theo Tổ Hành Chính – Tổng Hợp đã thẩm định | Đơn giá |    Thành tiền | Đơn giá | Thành tiền | Đơn giá | Thành tiền
+A | Chống thấm sàn mái, sê nô mái, mương đón nước mái tôn bằng màng chống thấm  Bitumode Delta – P 3mm (Mặt trơn) dạng khò nhiệt  (357,43m2) | Chống thấm sàn mái, sê nô mái, mương đón nước mái tôn bằng màng chống thấm  Bitumode Delta – P 3mm (Mặt trơn) dạng khò nhiệt  (357,43m2) | Chống thấm sàn mái, sê nô mái, mương đón nước mái tôn bằng màng chống thấm  Bitumode Delta – P 3mm (Mặt trơn) dạng khò nhiệt  (357,43m2) | Chống thấm sàn mái, sê nô mái, mương đón nước mái tôn bằng màng chống thấm  Bitumode Delta – P 3mm (Mặt trơn) dạng khò nhiệt  (357,43m2) | Chống thấm sàn mái, sê nô mái, mương đón nước mái tôn bằng màng chống thấm  Bitumode Delta – P 3mm (Mặt trơn) dạng khò nhiệt  (357,43m2) | Chống thấm sàn mái, sê nô mái, mương đón nước mái tôn bằng màng chống thấm  Bitumode Delta – P 3mm (Mặt trơn) dạng khò nhiệt  (357,43m2) | Chống thấm sàn mái, sê nô mái, mương đón nước mái tôn bằng màng chống thấm  Bitumode Delta – P 3mm (Mặt trơn) dạng khò nhiệt  (357,43m2)
+1 | - Tạo nhám bề mặt bằng máy mài. Vệ sinh sạch bề mặt   - Quét 1 lớp lót hệ nước Nirol – W (định mức 0,2kg/m2).   - Chống thấm mái sử dụng Màng khò nóng Bitumode Delta – P 3mm (Mặt trơn)  | 303.250 |       108.390.648       | 336.640 | 120.325.235 | 357.835 |  127.900.964 
+B | Chống thấm tường sàn mái, tường sê nô mái, tường mương đón nước mái tôn bằng SikaCoat Plus. (285,38m2) | Chống thấm tường sàn mái, tường sê nô mái, tường mương đón nước mái tôn bằng SikaCoat Plus. (285,38m2) | Chống thấm tường sàn mái, tường sê nô mái, tường mương đón nước mái tôn bằng SikaCoat Plus. (285,38m2) | Chống thấm tường sàn mái, tường sê nô mái, tường mương đón nước mái tôn bằng SikaCoat Plus. (285,38m2) | Chống thấm tường sàn mái, tường sê nô mái, tường mương đón nước mái tôn bằng SikaCoat Plus. (285,38m2) | Chống thấm tường sàn mái, tường sê nô mái, tường mương đón nước mái tôn bằng SikaCoat Plus. (285,38m2) | Chống thấm tường sàn mái, tường sê nô mái, tường mương đón nước mái tôn bằng SikaCoat Plus. (285,38m2)
+1 | - Vệ sinh sạch bề mặt, bằng bàn chải sắt.   - Sử dụng MASTIC sửa chữa các vết nứt.   - Lăn phủ 2 lớp chống thấm kháng tia UV SikaCoat Plus. Định mức 0.6kg/m2 | 233.000 |  66.493.540  | 250.960 |  71.618.965  | 274.940 |  78.462.377 
+Tổng cộng trước thuế: | Tổng cộng trước thuế: |  | 174.844.188 |  | 191.944.200 |  | 206.363.341
+Thuế VAT 8% | Thuế VAT 8% |  |   13.990.735 |  |   15.355.536 |  |   16.509.067
+Tổng cộng sau thuế: | Tổng cộng sau thuế: |  | 188.834.923 |  | 207.299.736 |  | 222.872.408
+
+--- TABLE ---
+NGƯỜI LẬP         Lê Thị Ái Nhi | CN VĂN PHÒNG ĐĂNG KÝ ĐẤT ĐAI SỐ 34 LẬP DỰ TOÁN  GIÁM ĐỐC     Nguyễn Hoàng Trung 
+
+--- TABLE ---
+STT | Tên đơn vị cung cấp dịch vụ | Nội dung thực hiện | Nội dung thực hiện | Nội dung thực hiện | Nội dung thực hiện | Nội dung thực hiện | Nội dung thực hiện
+STT | Tên đơn vị cung cấp dịch vụ | Chống thấm sàn mái, sê nô mái, mương đón nước mái tôn bằng màng chống thấm Bitumode Delta – P 3mm (Mặt trơn) dạng khò nhiệt (357,43m2) | Chống thấm sàn mái, sê nô mái, mương đón nước mái tôn bằng màng chống thấm Bitumode Delta – P 3mm (Mặt trơn) dạng khò nhiệt (357,43m2) | Chống thấm tường sàn mái, tường sê nô mái, tường mương đón nước mái tôn bằng SikaCoat Plus. (285,38m2) | Chống thấm tường sàn mái, tường sê nô mái, tường mương đón nước mái tôn bằng SikaCoat Plus. (285,38m2) | Tổng cộng | Tổng cộng  sau thuế (bao gồm thuế VAT 8%)
+STT | Tên đơn vị cung cấp dịch vụ | Đơn giá | Thành tiền | Đơn giá | Thành tiền  | Tổng cộng | Tổng cộng  sau thuế (bao gồm thuế VAT 8%)
+1 |  Công ty TNHH Đầu tư Phát triển Toàn Đạt.   |   303.250 |   108.390.648 |   233.000 |   66.493.540  |   174.844.188 |   188.834.923
+2 |  Công ty TNHH Xây dựng Vạn Đạt  |  336.640 |  120.325.235 |  250.960 |  71.618.965  |  191.944.200 |  207.299.736
+3 | Công ty TNHH Chống thấm và Xây dựng Kim Bảo Phát |  357.835 |  127.900.964 |  274.940 |  78.462.377 |  206.363.341 |  222.872.408

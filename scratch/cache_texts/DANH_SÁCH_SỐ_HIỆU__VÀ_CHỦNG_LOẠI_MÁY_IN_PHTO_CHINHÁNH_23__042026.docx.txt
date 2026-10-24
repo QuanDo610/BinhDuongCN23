@@ -1,0 +1,17 @@
+DANH SÁCH SỐ HIỆU VÀ CHỦNG LOẠI MÁY IN, MÁY PHOTOCOPY CHI NHÁNH 23 – 4/2026
+
+=== [DANH SÁCH BẢNG BIỂU TRONG TÀI LIỆU] ===
+
+--- Bảng số 1 (13 hàng, 7 cột) ---
+STT | Tên thiết bị | Hãng sản Xuất | Chủng loại -Mã mực | Số Lượng máy | Ghi chú
+1 | Máy In A3 | HP | Laser jet pro M706n ( HP 93A (CZ192A)) | 16 | 
+2 | Máy In A4 | HP | Laser jet pro M402d (HP 26A (CF226A)) | 9 | Bộ phận Một cửa phường Chánh Hiệp, Phú An: 01 cái/ phường
+2 | Máy In A4 | HP | Laser jet pro M404dn (HP 76A (CF276A)) | 8 | Một cửa phường TDM: 01 cái
+2 | Máy In A4 | HP | Laser jet P2035 (HP 05A (CE505A)) | 3 | Một cửa phường TDM
+2 | Máy In A4 | HP | Laser jet pro 4003dn (HP 151A (W1510A) | 5 | Một cửa phường TDM: 01 cái
+2 | Máy In A4 | HP | 
+2 | Máy In A4 | Fuji | Xerox  Docuprint P225db (Xerox CT202330) | 1 | 
+2 | Máy In A4 | Brother | HL – 2240D ( TN-2280 ) | 3 | Một cửa phường Phú Lợi: 01 cái
+2 | Máy In A4 | Brother | HL – L2320D (TN-2385) | 1 | Một cửa phường Bình Dương
+3 | Máy photocopy | Ricoh | IM3000 (Ricoh Type IM 2500 Toner ·) | 1 | 
+ | Máy photocopy | Konica  minolta | Bizhub 367 (TN-323) | 2 | 

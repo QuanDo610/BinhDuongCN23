@@ -1,0 +1,6 @@
+Danh sách Sheets: Sheet1
+
+=== SHEET: Sheet1 (Kích thước: 6 hàng x 9 cột) ===
+ | DANH SÁCH SỐ LƯỢNG MÁY TÍNH CẦN THANH LÝ 2026 |  |  |  |  |  |  | 
+ | Stt | Máy tính PC | Máy Laptop | Máy In A4 | Máy In A3 | Máy Photo | Máy Scan A3 | Máy Scan A4
+ | Số lượng | 55 | 2 | 6 | 9 | 7 | 1 | 2

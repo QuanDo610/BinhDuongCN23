@@ -1,0 +1,1729 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Báo cáo Tóm tắt & Tra cứu Quy chế Chi tiêu Nội bộ 2025 - QĐ số 355/QĐ-VPĐK-KHTC</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Mermaid JS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true, theme: 'neutral', securityLevel: 'loose' });
+    </script>
+    <style>
+        :root {
+            --primary: #1e3a8a;
+            --primary-light: #3b82f6;
+            --primary-dark: #172554;
+            --secondary: #0f766e;
+            --accent: #d97706;
+            --bg-body: #f8fafc;
+            --bg-card: #ffffff;
+            --text-main: #0f172a;
+            --text-muted: #64748b;
+            --border-color: #e2e8f0;
+            --tag-bg: #eff6ff;
+            --tag-text: #1d4ed8;
+            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        /* Top Header */
+        header.top-header {
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+            color: #ffffff;
+            padding: 1.75rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: var(--shadow-md);
+        }
+
+        .header-content {
+            max-width: 1500px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .brand-title {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .brand-icon {
+            font-size: 2.2rem;
+            color: #60a5fa;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 0.75rem;
+            border-radius: 12px;
+        }
+
+        .brand-text h1 {
+            font-size: 1.35rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+
+        .brand-text p {
+            font-size: 0.85rem;
+            color: #93c5fd;
+            margin-top: 2px;
+        }
+
+        .header-meta {
+            display: flex;
+            gap: 0.75rem;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .badge-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            padding: 0.35rem 0.85rem;
+            border-radius: 9999px;
+            font-size: 0.78rem;
+            font-weight: 600;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: #f1f5f9;
+        }
+
+        .badge-pill.success {
+            background: rgba(16, 185, 129, 0.2);
+            border-color: rgba(16, 185, 129, 0.4);
+            color: #6ee7b7;
+        }
+
+        /* Layout Structure */
+        .app-container {
+            max-width: 1500px;
+            margin: 1.5rem auto;
+            padding: 0 1.5rem;
+            display: grid;
+            grid-template-columns: 290px 1fr;
+            gap: 1.75rem;
+        }
+
+        /* Navigation Sidebar */
+        aside.sidebar {
+            position: sticky;
+            top: 6.5rem;
+            height: calc(100vh - 8rem);
+            overflow-y: auto;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 1.25rem;
+            box-shadow: var(--shadow-sm);
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+
+        .sidebar-section-title {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-muted);
+            margin-bottom: 0.5rem;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.35rem;
+        }
+
+        .nav-links a {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.65rem 0.85rem;
+            color: var(--text-main);
+            text-decoration: none;
+            font-size: 0.88rem;
+            font-weight: 500;
+            border-radius: 8px;
+            transition: all 0.15s ease-in-out;
+        }
+
+        .nav-links a:hover {
+            background: #f1f5f9;
+            color: var(--primary);
+            transform: translateX(3px);
+        }
+
+        .nav-links a.active {
+            background: #eff6ff;
+            color: var(--primary);
+            font-weight: 600;
+            border-left: 3px solid var(--primary);
+        }
+
+        .nav-page-badge {
+            font-size: 0.7rem;
+            background: #f1f5f9;
+            color: var(--text-muted);
+            padding: 2px 6px;
+            border-radius: 6px;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .sidebar-quick-info {
+            background: #f8fafc;
+            border: 1px dashed var(--border-color);
+            border-radius: 12px;
+            padding: 0.9rem;
+            font-size: 0.8rem;
+        }
+
+        .sidebar-quick-info h4 {
+            font-size: 0.82rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.4rem;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        /* Main Content */
+        main.main-content {
+            display: flex;
+            flex-direction: column;
+            gap: 1.75rem;
+        }
+
+        /* KPI / Stat Cards */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1rem;
+        }
+
+        .stat-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 14px;
+            padding: 1.15rem;
+            box-shadow: var(--shadow-sm);
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .stat-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.35rem;
+            flex-shrink: 0;
+        }
+
+        .stat-icon.blue { background: #dbeafe; color: #1d4ed8; }
+        .stat-icon.green { background: #d1fae5; color: #047857; }
+        .stat-icon.amber { background: #fef3c7; color: #b45309; }
+        .stat-icon.purple { background: #f3e8ff; color: #7e22ce; }
+        .stat-icon.red { background: #fee2e2; color: #b91c1c; }
+
+        .stat-info .stat-label {
+            font-size: 0.78rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 0.03em;
+        }
+
+        .stat-info .stat-value {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-top: 2px;
+        }
+
+        .stat-info .stat-cite {
+            font-size: 0.72rem;
+            color: #2563eb;
+            font-family: 'JetBrains Mono', monospace;
+            margin-top: 4px;
+            display: inline-block;
+        }
+
+        /* Search & Filter Toolbar */
+        .toolbar-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 14px;
+            padding: 1rem 1.25rem;
+            box-shadow: var(--shadow-sm);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .search-box {
+            position: relative;
+            flex: 1;
+            min-width: 280px;
+        }
+
+        .search-box i {
+            position: absolute;
+            left: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 0.65rem 1rem 0.65rem 2.4rem;
+            border-radius: 10px;
+            border: 1px solid var(--border-color);
+            font-size: 0.88rem;
+            font-family: inherit;
+            outline: none;
+            transition: all 0.2s;
+            background: #f8fafc;
+        }
+
+        .search-box input:focus {
+            border-color: var(--primary-light);
+            background: #fff;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+        }
+
+        .filter-tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            background: #f1f5f9;
+            border: 1px solid var(--border-color);
+            padding: 0.45rem 0.85rem;
+            border-radius: 8px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.15s;
+            color: var(--text-main);
+        }
+
+        .filter-btn:hover, .filter-btn.active {
+            background: var(--primary);
+            color: #fff;
+            border-color: var(--primary);
+        }
+
+        /* Content Sections */
+        .content-section {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 1.75rem;
+            box-shadow: var(--shadow-sm);
+            scroll-margin-top: 6.5rem;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            border-bottom: 2px solid #f1f5f9;
+            padding-bottom: 1rem;
+            margin-bottom: 1.25rem;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .section-title-wrap {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .section-number {
+            background: #eff6ff;
+            color: var(--primary);
+            font-weight: 800;
+            font-size: 1rem;
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+        }
+
+        .section-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
+        .section-subtitle {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            margin-top: 2px;
+        }
+
+        .doc-citation {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            background: #f1f5f9;
+            color: #1e40af;
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 0.3rem 0.75rem;
+            border-radius: 6px;
+            font-family: 'JetBrains Mono', monospace;
+            border: 1px solid #dbeafe;
+        }
+
+        /* Callout Boxes */
+        .callout {
+            border-radius: 12px;
+            padding: 1rem 1.25rem;
+            margin-bottom: 1.25rem;
+            display: flex;
+            gap: 0.85rem;
+            align-items: flex-start;
+            font-size: 0.88rem;
+        }
+
+        .callout.info {
+            background: #eff6ff;
+            border-left: 4px solid #3b82f6;
+            color: #1e3a8a;
+        }
+
+        .callout.warning {
+            background: #fffbeb;
+            border-left: 4px solid #f59e0b;
+            color: #78350f;
+        }
+
+        .callout.success {
+            background: #ecfdf5;
+            border-left: 4px solid #10b981;
+            color: #064e3b;
+        }
+
+        .callout-icon {
+            font-size: 1.15rem;
+            margin-top: 2px;
+            flex-shrink: 0;
+        }
+
+        /* Tables */
+        .table-responsive {
+            overflow-x: auto;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            margin: 1rem 0;
+        }
+
+        table.data-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.86rem;
+            text-align: left;
+        }
+
+        table.data-table thead {
+            background: #f8fafc;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        table.data-table th {
+            padding: 0.75rem 1rem;
+            font-weight: 600;
+            color: #334155;
+            white-space: nowrap;
+        }
+
+        table.data-table td {
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid var(--border-color);
+            vertical-align: top;
+        }
+
+        table.data-table tbody tr:hover {
+            background: #f8fafc;
+        }
+
+        .amount-highlight {
+            font-weight: 700;
+            color: #047857;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .tag {
+            display: inline-block;
+            font-size: 0.72rem;
+            font-weight: 600;
+            padding: 2px 7px;
+            border-radius: 4px;
+            background: var(--tag-bg);
+            color: var(--tag-text);
+        }
+
+        .tag.warning { background: #fef3c7; color: #b45309; }
+        .tag.gray { background: #f1f5f9; color: #475569; }
+
+        /* Formula Card */
+        .formula-box {
+            background: #0f172a;
+            color: #f8fafc;
+            border-radius: 12px;
+            padding: 1.25rem;
+            margin: 1rem 0;
+            font-family: 'JetBrains Mono', monospace;
+            border: 1px solid #334155;
+        }
+
+        .formula-title {
+            color: #38bdf8;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+        }
+
+        .formula-code {
+            font-size: 0.95rem;
+            color: #34d399;
+            background: #1e293b;
+            padding: 0.75rem;
+            border-radius: 8px;
+            margin-bottom: 0.75rem;
+            overflow-x: auto;
+        }
+
+        .formula-desc {
+            font-size: 0.82rem;
+            color: #94a3b8;
+            line-height: 1.5;
+        }
+
+        /* Mermaid Box */
+        .diagram-container {
+            background: #ffffff;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 1.25rem 0;
+            text-align: center;
+        }
+
+        .diagram-caption {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            margin-top: 0.75rem;
+            font-style: italic;
+        }
+
+        /* 2-Column Grid */
+        .grid-2col {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1.25rem;
+            margin: 1rem 0;
+        }
+
+        .subcard {
+            background: #f8fafc;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.25rem;
+        }
+
+        .subcard h4 {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .subcard ul {
+            padding-left: 1.25rem;
+            font-size: 0.85rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.35rem;
+        }
+
+        /* Footer */
+        footer.app-footer {
+            background: #0f172a;
+            color: #94a3b8;
+            padding: 2rem;
+            text-align: center;
+            font-size: 0.82rem;
+            margin-top: 3rem;
+            border-top: 1px solid #1e293b;
+        }
+
+        footer.app-footer a {
+            color: #38bdf8;
+            text-decoration: none;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .app-container {
+                grid-template-columns: 1fr;
+            }
+            aside.sidebar {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="top-header">
+        <div class="header-content">
+            <div class="brand-title">
+                <div class="brand-icon">
+                    <i class="fa-solid fa-file-invoice-dollar"></i>
+                </div>
+                <div class="brand-text">
+                    <h1>QUY CHẾ CHI TIÊU NỘI BỘ NĂM 2025 - QĐ SỐ 355/QĐ-VPĐK-KHTC</h1>
+                    <p>Văn phòng Đăng ký đất đai Thành phố Hồ Chí Minh (Sáp nhập TP.HCM - Bình Dương - Bà Rịa Vũng Tàu)</p>
+                </div>
+            </div>
+            <div class="header-meta">
+                <span class="badge-pill"><i class="fa-solid fa-calendar-check"></i> Ban hành: 31/12/2025</span>
+                <span class="badge-pill success"><i class="fa-solid fa-signature"></i> Người ký: GĐ. Bùi Thị Bích Tuyền</span>
+                <span class="badge-pill"><i class="fa-solid fa-book-open"></i> Quy mô: 72 Trang / 6 Phụ lục</span>
+                <span class="badge-pill"><i class="fa-solid fa-shield-halved"></i> 100% Trích dẫn tài liệu gốc</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- App Container -->
+    <div class="app-container">
+
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div>
+                <div class="sidebar-section-title">Mục lục chuyển nhanh</div>
+                <ul class="nav-links">
+                    <li><a href="#tong-quan" class="active"><i class="fa-solid fa-compass"></i> Tổng quan & Cơ sở pháp lý <span class="nav-page-badge">Tr.1-2</span></a></li>
+                    <li><a href="#phu-luc-1"><i class="fa-solid fa-money-bill-wave"></i> PL1: Phương án tiền lương <span class="nav-page-badge">Tr.3-5</span></a></li>
+                    <li><a href="#phu-luc-2"><i class="fa-solid fa-award"></i> PL2: Tiền thưởng (NĐ 73) <span class="nav-page-badge">Tr.6-9</span></a></li>
+                    <li><a href="#phu-luc-3"><i class="fa-solid fa-calculator"></i> PL3: Định mức chi thường xuyên <span class="nav-page-badge">Tr.10-29</span></a></li>
+                    <li><a href="#phu-luc-4"><i class="fa-solid fa-briefcase"></i> PL4: Chi kinh doanh dịch vụ <span class="nav-page-badge">Tr.30-31</span></a></li>
+                    <li><a href="#phu-luc-5"><i class="fa-solid fa-gift"></i> PL5: Phúc lợi & Bổ sung thu nhập <span class="nav-page-badge">Tr.32-35</span></a></li>
+                    <li><a href="#phu-luc-6"><i class="fa-solid fa-boxes-stacked"></i> PL6: Quy chế Quản lý tài sản <span class="nav-page-badge">Tr.36-60</span></a></li>
+                    <li><a href="#dinh-muc-tai-san"><i class="fa-solid fa-table-list"></i> Bảng định mức máy móc, trụ sở <span class="nav-page-badge">Tr.61-72</span></a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-quick-info">
+                <h4><i class="fa-solid fa-circle-info"></i> Ghi chú nguyên tắc</h4>
+                <p>Quy chế này áp dụng cho giai đoạn hợp nhất từ ngày <strong>01/10/2025</strong> cho niên độ tài chính năm 2025. Giai đoạn trước đó áp dụng theo Quy chế riêng của từng tỉnh cũ.</p>
+                <div style="margin-top: 6px; font-size: 0.75rem; color: #2563eb; font-weight: 600;">[Dẫn chứng: Điều 2 & Trang 14]</div>
+            </div>
+        </aside>
+
+        <!-- Main Body -->
+        <main class="main-content">
+
+            <!-- Stat Cards -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon blue"><i class="fa-solid fa-coins"></i></div>
+                    <div class="stat-info">
+                        <div class="stat-label">Lương cơ sở áp dụng</div>
+                        <div class="stat-value">2.340.000 đ</div>
+                        <div class="stat-cite">Nghị định 73/2024 (Trang 4)</div>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon green"><i class="fa-solid fa-trophy"></i></div>
+                    <div class="stat-info">
+                        <div class="stat-label">Thưởng xuất sắc năm (Tối đa)</div>
+                        <div class="stat-value">5,0 lần Lương CS</div>
+                        <div class="stat-cite">11.700.000 đ (Trang 8)</div>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon amber"><i class="fa-solid fa-heart-pulse"></i></div>
+                    <div class="stat-info">
+                        <div class="stat-label">Tổng chi Lễ Tết bình quân</div>
+                        <div class="stat-value">9.700.000 đ/người</div>
+                        <div class="stat-cite">Quỹ phúc lợi (Trang 32)</div>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon purple"><i class="fa-solid fa-users-gear"></i></div>
+                    <div class="stat-info">
+                        <div class="stat-label">Biên chế KD dịch vụ</div>
+                        <div class="stat-value">356 người</div>
+                        <div class="stat-cite">PL1 & PL4 (Trang 3, 30)</div>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon red"><i class="fa-solid fa-gavel"></i></div>
+                    <div class="stat-info">
+                        <div class="stat-label">Ngưỡng đấu thầu tài sản</div>
+                        <div class="stat-value">≥ 100.000.000 đ</div>
+                        <div class="stat-cite">Máy tính, in, photo (Trang 63)</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Toolbar & Search -->
+            <div class="toolbar-card">
+                <div class="search-box">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" id="searchInput" placeholder="Tra cứu nhanh định mức (VD: công tác phí, lưu trú, điện thoại, máy scan, 356, máy tính...)" onkeyup="filterTables()">
+                </div>
+                <div class="filter-tags">
+                    <button class="filter-btn active" onclick="filterCategory('all')">Tất cả</button>
+                    <button class="filter-btn" onclick="filterCategory('luong')">Lương & Thưởng</button>
+                    <button class="filter-btn" onclick="filterCategory('dinh-muc')">Định mức chi</button>
+                    <button class="filter-btn" onclick="filterCategory('phuc-loi')">Phúc lợi</button>
+                    <button class="filter-btn" onclick="filterCategory('tai-san')">Tài sản & Thiết bị</button>
+                </div>
+            </div>
+
+            <!-- SECTION 1: TỔNG QUAN & CĂN CỨ -->
+            <section id="tong-quan" class="content-section" data-category="luong dinh-muc tai-san">
+                <div class="section-header">
+                    <div class="section-title-wrap">
+                        <div class="section-number">01</div>
+                        <div>
+                            <h2 class="section-title">Tổng quan Quyết định số 355/QĐ-VPĐK-KHTC</h2>
+                            <p class="section-subtitle">Về ban hành Quy chế chi tiêu nội bộ năm 2025 của Văn phòng Đăng ký đất đai TP.HCM</p>
+                        </div>
+                    </div>
+                    <span class="doc-citation"><i class="fa-solid fa-bookmark"></i> Dẫn chứng: Trang 1 - Trang 2</span>
+                </div>
+
+                <div class="callout info">
+                    <div class="callout-icon"><i class="fa-solid fa-circle-info"></i></div>
+                    <div>
+                        <strong>Bối cảnh tổ chức đặc biệt:</strong> Văn phòng Đăng ký đất đai Thành phố Hồ Chí Minh được tổ chức lại từ ngày <strong>01/10/2025</strong> trên cơ sở hợp nhất 03 đơn vị: VPĐKĐĐ TP.HCM, VPĐKĐĐ tỉnh Bình Dương và VPĐKĐĐ tỉnh Bà Rịa - Vũng Tàu (theo Quyết định số 1886/QĐ-UBND ngày 01/10/2025 của UBND TP). Do đó, Quy chế chi tiêu nội bộ này ban hành để thống nhất toàn bộ cơ chế tài chính trên toàn địa bàn hợp nhất.
+                    </div>
+                </div>
+
+                <!-- Diagram Mermaid -->
+                <div class="diagram-container">
+                    <div class="mermaid">
+                    graph TD
+                        QD["<b>Quyết định số 355/QĐ-VPĐK-KHTC</b><br>(Ngày 31/12/2025 - GĐ Bùi Thị Bích Tuyền)"]
+                        
+                        PL1["<b>Phụ lục 1</b><br>Phương án tiền lương<br>(Tr. 3 - 5)"]
+                        PL2["<b>Phụ lục 2</b><br>Quy chế tiền thưởng NĐ 73<br>(Tr. 6 - 9)"]
+                        PL3["<b>Phụ lục 3</b><br>Định mức chi thường xuyên<br>(Tr. 10 - 29)"]
+                        PL4["<b>Phụ lục 4</b><br>Định mức chi KD dịch vụ<br>(Tr. 30 - 31)"]
+                        PL5["<b>Phụ lục 5</b><br>Quỹ khen thưởng, phúc lợi, TNTT<br>(Tr. 32 - 35)"]
+                        PL6["<b>Phụ lục 6</b><br>Quy chế quản lý sử dụng tài sản<br>(Tr. 36 - 72)"]
+
+                        QD --> PL1
+                        QD --> PL2
+                        QD --> PL3
+                        QD --> PL4
+                        QD --> PL5
+                        QD --> PL6
+
+                        classDef qd fill:#1e3a8a,stroke:#1e293b,stroke-width:2px,color:#fff;
+                        classDef pl fill:#eff6ff,stroke:#3b82f6,stroke-width:1.5px,color:#1e3a8a;
+                        class QD qd;
+                        class PL1,PL2,PL3,PL4,PL5,PL6 pl;
+                    </div>
+                    <div class="diagram-caption">Sơ đồ Cấu trúc Quyết định số 355/QĐ-VPĐK-KHTC và 06 Phụ lục thành phần đính kèm</div>
+                </div>
+
+                <div class="grid-2col">
+                    <div class="subcard">
+                        <h4><i class="fa-solid fa-scale-balanced"></i> 05 Căn cứ Pháp lý Trực tiếp (Trang 1)</h4>
+                        <ul>
+                            <li><strong>Quyết định số 1886/QĐ-UBND (01/10/2025):</strong> Tái lập VPĐKĐĐ TP.HCM trên cơ sở sáp nhập TP.HCM, Bình Dương và BR-VT.</li>
+                            <li><strong>Quyết định số 1551/QĐ-SNNMT-VP (02/10/2025):</strong> Quy định chức năng, nhiệm vụ, quyền hạn và cơ cấu tổ chức.</li>
+                            <li><strong>Quyết định số 3700/QĐ-UBND (31/12/2025):</strong> Giao quyền tự chủ tài chính năm 2025 cho VPĐKĐĐ TP.HCM.</li>
+                            <li><strong>Tờ trình số 17114/TTr-SNNMT-KHTC (26/12/2025):</strong> Phương án tự chủ tài chính do Sở NN&MT trình UBND TP.</li>
+                            <li><strong>Công văn số 17427/STC-HCSN (25/12/2025):</strong> Ý kiến thẩm định của Sở Tài chính TP.HCM.</li>
+                        </ul>
+                    </div>
+
+                    <div class="subcard">
+                        <h4><i class="fa-solid fa-list-check"></i> Phạm vi & Hiệu lực thi hành (Trang 2)</h4>
+                        <ul>
+                            <li><strong>Điều 1:</strong> Ban hành đồng bộ Quy chế chi tiêu nội bộ kèm 6 Phụ lục chi tiết.</li>
+                            <li><strong>Điều 2:</strong> Áp dụng cho các khoản chi thuộc <em>niên độ tài chính năm 2025</em>.</li>
+                            <li><strong>Điều 3:</strong> Thủ trưởng các Phòng chuyên môn và Giám đốc các Chi nhánh trực thuộc chịu trách nhiệm tổ chức thực hiện.</li>
+                            <li><strong>Nơi nhận:</strong> Sở NN&MT, Sở Tài chính (P.HCSN), KBNN KV II, Ban Giám đốc VPĐKĐĐ, Đảng bộ, Công đoàn, Đoàn Thanh niên, Thanh tra ND.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 2: PHỤ LỤC 1 -->
+            <section id="phu-luc-1" class="content-section" data-category="luong">
+                <div class="section-header">
+                    <div class="section-title-wrap">
+                        <div class="section-number">02</div>
+                        <div>
+                            <h2 class="section-title">Phụ lục 1: Phương án Tiền lương</h2>
+                            <p class="section-subtitle">Chế độ tiền lương trong thời gian Chính phủ chưa ban hành NQ 27-NQ/TW</p>
+                        </div>
+                    </div>
+                    <span class="doc-citation"><i class="fa-solid fa-bookmark"></i> Dẫn chứng: Trang 3 - Trang 5</span>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 25%;">Khối / Nhóm đối tượng</th>
+                                <th style="width: 35%;">Chính sách & Căn cứ pháp lý</th>
+                                <th style="width: 25%;">Mức chi / Nguyên tắc áp dụng</th>
+                                <th style="width: 15%;">Trang Doc</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>1. Hoạt động kinh doanh dịch vụ</strong><br><span class="tag">356 người</span></td>
+                                <td>Thực hiện theo Nghị định 248/2025/NĐ-CP (15/09/2025) sửa đổi NĐ 60/2021/NĐ-CP.</td>
+                                <td>Tự chủ tiền lương theo kết quả hoạt động như doanh nghiệp Nhà nước nắm giữ 100% vốn điều lệ.</td>
+                                <td><span class="doc-citation">Trang 3</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>2. Hoạt động cung ứng dịch vụ công</strong><br><span class="tag gray">Viên chức & NLĐ chuyên môn</span></td>
+                                <td>Thang bảng lương kèm Nghị định 204/2004/NĐ-CP; Mức lương cơ sở Nghị định 73/2024/NĐ-CP.</td>
+                                <td><span class="amount-highlight">2.340.000 đ/tháng</span> + Phụ cấp chức vụ, thâm niên vượt khung, trách nhiệm.</td>
+                                <td><span class="doc-citation">Trang 4</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>3. Tiền thưởng Nghị định 73</strong></td>
+                                <td>Nghị định 73/2024/NĐ-CP của Chính phủ.</td>
+                                <td>Trích <strong>10%</strong> quỹ lương cơ bản và phụ cấp vượt khung.</td>
+                                <td><span class="doc-citation">Trang 4</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>4. Làm thêm giờ, độc hại</strong></td>
+                                <td>Nghị định 145/2020/NĐ-CP, Thông tư 11/2020/TT-BLĐTBXH, Thông tư 24/2022/TT-BLĐTBXH.</td>
+                                <td>Chi làm thêm giờ đúng luật; Bồi dưỡng hiện vật theo định suất hàng ngày (Mức 1 thấp nhất 13.000 đ/ngày).</td>
+                                <td><span class="doc-citation">Trang 4, 12</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>5. Thu nhập tăng thêm đặc thù</strong></td>
+                                <td>Nghị quyết 27/2025/NQ-HĐND và NQ 70/2025/NQ-HĐND theo cơ chế Nghị quyết 98/2023/QH15.</td>
+                                <td>Chi theo đánh giá hiệu quả công việc hàng quý theo quy chế TP.HCM.</td>
+                                <td><span class="doc-citation">Trang 4-5</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="callout warning">
+                    <div class="callout-icon"><i class="fa-solid fa-comments"></i></div>
+                    <div>
+                        <strong>Nội dung xây dựng riêng cần lấy ý kiến tập thể (Trang 5):</strong>
+                        <ul style="margin-top: 5px; padding-left: 1.25rem;">
+                            <li><strong>Thang bảng lương kinh doanh dịch vụ:</strong> Tham khảo PA1 (Bảo lưu lương cơ bản các HĐ ký trước 01/10/2025, quỹ lương dôi dư chia tỷ lệ) hoặc PA2 (Xếp lại lương từ tháng 11/2025 do Kỹ thuật trưởng Đo đạc đề xuất).</li>
+                            <li><strong>Phân phối quỹ Bổ sung thu nhập:</strong> Tham khảo PA1 (Chia bình quân), PA2 (Chia theo hệ số lương), PA3 (Ưu tiên bù chi cho HĐLĐ nghiệp vụ chuyên môn do HĐND TP khống chế thu nhập tăng thêm đặc thù của HĐLĐ tối đa 3 triệu đồng/tháng, còn viên chức tối đa hệ số 1,5; sau khi bù bằng nhau mới chia tiếp cho viên chức).</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 3: PHỤ LỤC 2 -->
+            <section id="phu-luc-2" class="content-section" data-category="luong">
+                <div class="section-header">
+                    <div class="section-title-wrap">
+                        <div class="section-number">03</div>
+                        <div>
+                            <h2 class="section-title">Phụ lục 2: Quy chế Tiền thưởng Nghị định 73/2024/NĐ-CP</h2>
+                            <p class="section-subtitle">Chế độ thưởng đột xuất & thưởng định kỳ đánh giá xếp loại cuối năm / quý</p>
+                        </div>
+                    </div>
+                    <span class="doc-citation"><i class="fa-solid fa-bookmark"></i> Dẫn chứng: Trang 6 - Trang 9 (5 Chương, 9 Điều)</span>
+                </div>
+
+                <div class="grid-2col">
+                    <div class="subcard">
+                        <h4><i class="fa-solid fa-bolt"></i> Thưởng Thành tích Đột xuất (Điều 6 - Trang 8)</h4>
+                        <p style="font-size: 0.83rem; margin-bottom: 0.75rem;">(Quỹ thưởng đột xuất trích từ Quỹ tiền thưởng nhưng không quá 10%)</p>
+                        <div class="table-responsive" style="margin: 0;">
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>Cấp quyết định khen thưởng</th>
+                                        <th>Hệ số / Mức lương cơ sở</th>
+                                        <th>Số tiền quy đổi (VNĐ)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>GĐ Văn phòng ĐKĐĐ TP</strong> (Điểm a Khoản 3 Điều 4)</td>
+                                        <td><span class="amount-highlight">Hệ số 1,5 - 2,0</span></td>
+                                        <td>3.510.000 - 4.680.000 đ</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Giám đốc Sở NN&MT</strong> (Điểm b Khoản 3 Điều 4)</td>
+                                        <td><span class="amount-highlight">Hệ số 2,0 - 3,0</span></td>
+                                        <td>4.680.000 - 7.020.000 đ</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>UBND TP / Bộ ngành / Chủ tịch nước</strong> (Điểm c Khoản 3 Điều 4)</td>
+                                        <td><span class="amount-highlight">Hệ số 3,0 - 4,0</span></td>
+                                        <td>7.020.000 - 9.360.000 đ</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="subcard">
+                        <h4><i class="fa-solid fa-calendar-check"></i> Thưởng Đánh giá Xếp loại Cuối năm/Quý (Điều 7 - Trang 8)</h4>
+                        <p style="font-size: 0.83rem; margin-bottom: 0.75rem;">Cân đối trên cơ sở quỹ tiền thưởng còn lại sau khi trừ thưởng đột xuất:</p>
+                        <div class="table-responsive" style="margin: 0;">
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>Mức độ Hoàn thành nhiệm vụ</th>
+                                        <th>Hệ số thưởng tối đa</th>
+                                        <th>Số tiền tối đa (VNĐ)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong style="color: #047857;">Hoàn thành xuất sắc nhiệm vụ</strong></td>
+                                        <td><span class="amount-highlight">Tối đa ≤ 5,0 lần</span></td>
+                                        <td>11.700.000 đ</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong style="color: #1d4ed8;">Hoàn thành tốt nhiệm vụ</strong></td>
+                                        <td><span class="amount-highlight">Tối đa ≤ 3,75 lần</span><br><span style="font-size: 0.72rem; color: #64748b;">(= 75% mức xuất sắc)</span></td>
+                                        <td>8.775.000 đ</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Hoàn thành / Không hoàn thành</strong></td>
+                                        <td><span class="tag gray">Không hưởng</span></td>
+                                        <td>0 đ</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="subcard" style="margin-top: 1rem;">
+                    <h4><i class="fa-solid fa-diagram-project"></i> Quy trình & Hồ sơ xét thưởng (Điều 8 & 9 - Trang 8, 9)</h4>
+                    <p style="font-size: 0.85rem;">
+                        <strong>1. Đối với thưởng đột xuất:</strong> Hội đồng Thi đua - Khen thưởng VPĐKĐĐ TP xem xét trình Giám đốc VPĐKĐĐ TP quyết định khen thưởng hoặc đề xuất cấp trên. Phòng Hành chính - Tổng hợp lập thủ tục đề nghị chi thưởng.<br>
+                        <strong>2. Đối với thưởng xếp loại hằng năm (hoặc quý):</strong> Căn cứ Quyết định kết quả đánh giá xếp loại viên chức, NLĐ, Phòng Kế hoạch - Tài chính đề xuất Giám đốc duyệt mức tiền thưởng và lập thủ tục chi thưởng.
+                    </p>
+                </div>
+            </section>
+
+            <!-- SECTION 4: PHỤ LỤC 3 -->
+            <section id="phu-luc-3" class="content-section" data-category="dinh-muc">
+                <div class="section-header">
+                    <div class="section-title-wrap">
+                        <div class="section-number">04</div>
+                        <div>
+                            <h2 class="section-title">Phụ lục 3: Định mức Chi thường xuyên</h2>
+                            <p class="section-subtitle">Hệ thống định mức cơ bản chi tiết áp dụng trong toàn hệ thống Văn phòng</p>
+                        </div>
+                    </div>
+                    <span class="doc-citation"><i class="fa-solid fa-bookmark"></i> Dẫn chứng: Trang 10 - Trang 29</span>
+                </div>
+
+                <div class="callout success">
+                    <div class="callout-icon"><i class="fa-solid fa-percent"></i></div>
+                    <div>
+                        <strong>Định mức trích tỷ lệ trong Đề án Thu phí (Trang 12 - 13):</strong> Căn cứ Nghị quyết 01/2023/NQ-HĐND và NQ 02/2023/NQ-HĐND của HĐND TP.HCM:
+                        <br>• Chi phí dịch vụ ngân hàng thu không dùng tiền mặt: <strong>1,5%</strong> x (CP cơ bản + CP quản lý chung + CP kiểm tra nghiệm thu + CP thuê đất).
+                        <br>• Chi phí thuê đất (hoặc dự phòng thuê đất): <strong>2%</strong> x (CP cơ bản + CP quản lý chung).
+                        <br>• Chi phí kiểm tra nghiệm thu: <strong>4%</strong> x (CP cơ bản + CP quản lý chung).
+                        <br>• Dự phòng quỹ tiền lương: Tối đa <strong>17%</strong> quỹ tiền lương thực hiện (nếu sau 6 tháng kết thúc năm chưa dùng hết phải hoàn nhập dự phòng).
+                    </div>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="data-table" id="regularExpenditureTable">
+                        <thead>
+                            <tr>
+                                <th style="width: 20%;">Mục chi</th>
+                                <th style="width: 35%;">Nội dung & Đối tượng áp dụng</th>
+                                <th style="width: 30%;">Mức chi định mức chi tiết</th>
+                                <th style="width: 15%;">Trang Doc</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Công tác phí -->
+                            <tr>
+                                <td><strong>1. Phụ cấp lưu trú công tác</strong></td>
+                                <td>Viên chức, NLĐ được cử đi công tác bằng văn bản (theo NQ 51/2025/NQ-HĐND & TT 40/2017).</td>
+                                <td>• Đất liền: <span class="amount-highlight">300.000 đ/ngày</span><br>• Biển, đảo: <span class="amount-highlight">400.000 đ/ngày</span></td>
+                                <td><span class="doc-citation">Trang 16</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>2. Tiền thuê phòng nghỉ khoán</strong></td>
+                                <td>Thanh toán khoán tiền phòng nghỉ đi công tác không cần hóa đơn khách sạn.</td>
+                                <td>• Tại các TP trực thuộc TW: <span class="amount-highlight">1.000.000 đ/ngày/người</span><br>• Tại các tỉnh còn lại: <span class="amount-highlight">700.000 đ/ngày/người</span></td>
+                                <td><span class="doc-citation">Trang 17</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>3. Tiền phòng nghỉ theo hóa đơn</strong></td>
+                                <td>Thanh toán theo hóa đơn thực tế (đã gồm thuế phí):<br>- Lãnh đạo có PC chức vụ từ 0,8 - 1,2: Tiêu chuẩn 1 người/phòng.<br>- CB, CC, VC, NLĐ còn lại: Tiêu chuẩn 2 người/phòng.</td>
+                                <td>• Lãnh đạo (0,8 - 1,2): TP trực thuộc TW: <span class="amount-highlight">1.200.000 đ/ngày</span>; Tỉnh: <span class="amount-highlight">800.000 đ/ngày</span>.<br>• Viên chức còn lại: TP trực thuộc TW: <span class="amount-highlight">1.400.000 đ/ngày/2 người</span>; Tỉnh: <span class="amount-highlight">1.100.000 đ/ngày/2 người</span>.</td>
+                                <td><span class="doc-citation">Trang 17-18</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>4. Khoán công tác phí tháng</strong></td>
+                                <td>Viên chức, NLĐ thường xuyên đi công tác lưu động trên 10 ngày/tháng.</td>
+                                <td>Khoán hỗ trợ gửi xe, xăng xe: <span class="amount-highlight">700.000 đ/người/tháng</span> (Nếu được cử đi công tác đợt cụ thể vẫn được thanh toán chế độ công tác phí riêng).</td>
+                                <td><span class="doc-citation">Trang 18-19</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>5. Chi hội nghị & Nước uống</strong></td>
+                                <td>Hội nghị sơ kết, tổng kết, chuyên đề, tập huấn (theo NQ 51/2025/NQ-HĐND). Thời gian không quá 2 ngày.</td>
+                                <td>• Nước uống/giải khát: <span class="amount-highlight">50.000 đ/buổi/đại biểu</span>.<br>• Tiền ăn khách mời không hưởng lương: Tại TP trực thuộc TW: <span class="amount-highlight">300.000 đ/ngày</span>; Tại tỉnh: <span class="amount-highlight">200.000 đ/ngày</span>; Tại xã phường: <span class="amount-highlight">150.000 đ/ngày</span>.<br>• Ăn tập trung bù chênh lệch tối đa 130%.</td>
+                                <td><span class="doc-citation">Trang 20-21</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>6. Thù lao giảng viên tự đào tạo</strong></td>
+                                <td>Cơ quan tự tổ chức đào tạo, bồi dưỡng (TT 36/2018, TT 06/2023). 1 buổi giảng tính bằng 4 tiết học (gồm cả soạn giáo án).</td>
+                                <td>• Lãnh đạo cấp TP, Vụ trưởng, GS, PGS, TS: <span class="amount-highlight">≤ 2.000.000 đ/buổi</span>.<br>• Phó Vụ trưởng, Cục trưởng, ThS, GVC: <span class="amount-highlight">≤ 1.500.000 đ/buổi</span>.<br>• CB, CC, VC cấp TW & cấp TP: <span class="amount-highlight">≤ 1.200.000 đ/buổi</span>.<br>• Giảng viên cấp huyện trở xuống / Trợ giảng: <span class="amount-highlight">≤ 600.000 đ/buổi</span>.</td>
+                                <td><span class="doc-citation">Trang 23</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>7. Chi tiếp khách trong nước</strong></td>
+                                <td>Thực hiện theo Thông tư 71/2018/TT-BTC. Ban Giám đốc VP và Giám đốc Chi nhánh duyệt trong dự toán.</td>
+                                <td>• Giải khát tiếp khách: <span class="amount-highlight">30.000 đ/buổi/người</span>.<br>• Mời cơm tiếp khách: <span class="amount-highlight">300.000 đ/suất</span> (đã bao gồm đồ uống, thuế, phí).</td>
+                                <td><span class="doc-citation">Trang 25</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>8. Họp Hội đồng Sáng kiến</strong></td>
+                                <td>Hoạt động của Hội đồng sáng kiến (TT 03/2019/TT-BTC).</td>
+                                <td>• Chủ tịch Hội đồng: <span class="amount-highlight">500.000 đ/buổi</span>.<br>• Thành viên & Thư ký: <span class="amount-highlight">200.000 đ/buổi</span>.<br>• Thành phần khác: <span class="amount-highlight">100.000 đ/buổi</span>.</td>
+                                <td><span class="doc-citation">Trang 26</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>9. Thù lao Thanh tra Nhân dân</strong></td>
+                                <td>Thành viên Ban TTND trực tiếp xác minh, thanh tra theo kế hoạch (TT 63/2017/TT-BTC).</td>
+                                <td><span class="amount-highlight">100.000 đ/người/ngày</span> công tác.</td>
+                                <td><span class="doc-citation">Trang 28</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>10. Chi trang phục, đồng phục</strong></td>
+                                <td>Viên chức, NLĐ tại Bộ phận Một cửa nhận trả hồ sơ, biệt phái Trung tâm Hành chính công, bảo vệ cơ quan (TT 96/2015).</td>
+                                <td>Chi theo hóa đơn thực tế, tối đa không quá: <span class="amount-highlight">5.000.000 đ/người/năm</span>.</td>
+                                <td><span class="doc-citation">Trang 28</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>11. Chi khoán cước điện thoại</strong></td>
+                                <td>Đối tượng do Thủ trưởng VPĐKĐĐ TP quyết định (theo TT 96/2015, TT 25/2018 & QĐ 17/VBHN-BTC).</td>
+                                <td>• Điện thoại cố định: Tối đa <span class="amount-highlight">300.000 đ/người/tháng</span>.<br>• Điện thoại di động: Tối đa <span class="amount-highlight">500.000 đ/người/tháng</span>.</td>
+                                <td><span class="doc-citation">Trang 29</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>12. Tự chủ dự toán Chi nhánh</strong></td>
+                                <td>Thủ trưởng VPĐKĐĐ TP giao 4 nhóm dự toán cho các Chi nhánh trực thuộc.</td>
+                                <td>Chi nhánh được <strong>tự chủ điều hành</strong> dự toán thường xuyên theo khối lượng thực hiện và theo số người làm việc (trừ lương cơ bản và khoản nộp bắt buộc), nhưng phải tuân thủ đúng định mức trần.</td>
+                                <td><span class="doc-citation">Trang 29</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- SECTION 5: PHỤ LỤC 4 & 5 -->
+            <section id="phu-luc-4" class="content-section" data-category="phuc-loi luong">
+                <div class="section-header">
+                    <div class="section-title-wrap">
+                        <div class="section-number">05</div>
+                        <div>
+                            <h2 class="section-title">Phụ lục 4 & 5: Chi Kinh doanh Dịch vụ & Các Quỹ</h2>
+                            <p class="section-subtitle">Chế độ Quỹ Phúc lợi, Quỹ Bổ sung thu nhập và Định mức kinh doanh dịch vụ</p>
+                        </div>
+                    </div>
+                    <span class="doc-citation"><i class="fa-solid fa-bookmark"></i> Dẫn chứng: Trang 30 - Trang 35</span>
+                </div>
+
+                <div class="grid-2col">
+                    <!-- Phụ lục 4 -->
+                    <div class="subcard">
+                        <h4><i class="fa-solid fa-chart-line"></i> Phụ lục 4: Kinh doanh Dịch vụ (Trang 30 - 31)</h4>
+                        <ul>
+                            <li><strong>Nguyên tắc cốt lõi:</strong> Tỷ lệ chi phí / Doanh thu phải đảm bảo hoạt động <em>không được gây lỗ</em>.</li>
+                            <li><strong>Quy mô nhân sự:</strong> 356 người. Quỹ lương, thưởng, phúc lợi, TNTT điều chỉnh theo mức tăng lương tối thiểu vùng của Nhà nước.</li>
+                            <li><strong>Phúc lợi tính vào chi phí KD:</strong> (TT 96/2015, TT 25/2018): Chi hiếu hỷ, nghỉ mát, khó khăn, tai nạn... Tổng các khoản <strong>tối đa không quá 01 tháng lương bình quân</strong> thực hiện của đội ngũ KD dịch vụ.</li>
+                            <li><strong>Chi phí quản lý:</strong> Khống chế tối đa <strong>15%</strong> chi phí trực tiếp (ngoài nhân công, vật liệu, dụng cụ, điện năng, khấu hao).</li>
+                        </ul>
+                    </div>
+
+                    <!-- Phụ lục 5: Công thức TNTT -->
+                    <div class="subcard">
+                        <h4><i class="fa-solid fa-calculator"></i> Phụ lục 5: Công thức Bổ sung Thu nhập (Trang 34 - 35)</h4>
+                        <div class="formula-box">
+                            <div class="formula-title">Công thức tính Thu nhập tăng thêm cá nhân</div>
+                            <div class="formula-code">Mức chi = K1 × K2 × K3 × Hệ số lương cơ bản × Lương cơ sở</div>
+                            <div class="formula-desc">
+                                • <strong>Lương cơ bản cá nhân:</strong> Gồm lương chính + PC chức vụ + vượt khung.<br>
+                                • <strong>Lương cơ sở:</strong> 2.340.000 đồng.<br>
+                                • <strong>K1:</strong> Mức trích lập quỹ Thu nhập bổ sung / Tiền lương cơ bản 1 tháng của cơ quan.<br>
+                                • <strong>K2:</strong> Hệ số thời gian công tác cá nhân (mặc định = 1).<br>
+                                • <strong>K3:</strong> Hệ số hiệu quả công tác cá nhân (mặc định = 1).
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bảng chi tiết Quỹ Phúc lợi -->
+                <h3 style="font-size: 1.05rem; font-weight: 700; margin: 1.5rem 0 0.5rem 0; color: var(--primary);">
+                    <i class="fa-solid fa-gift"></i> Danh mục Chi từ Quỹ Phúc lợi (Trang 32 - 34)
+                </h3>
+                <div class="table-responsive">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 5%;">STT</th>
+                                <th style="width: 35%;">Khoản chi phúc lợi</th>
+                                <th style="width: 25%;">Định mức chi tối đa (VNĐ)</th>
+                                <th style="width: 35%;">Điều kiện & Ghi chú nguyên tắc</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td><strong>Tết Dương lịch</strong></td>
+                                <td><span class="amount-highlight">2.000.000 đ/người</span></td>
+                                <td>Chi bình quân đầu người toàn cơ quan.</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td><strong>Họp mặt đầu năm Tết Nguyên đán</strong></td>
+                                <td><span class="amount-highlight">500.000 đ/người</span></td>
+                                <td>Chi lì xì, họp mặt đầu năm mới.</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td><strong>Lễ Giỗ Tổ Hùng Vương</strong></td>
+                                <td><span class="amount-highlight">500.000 đ/người</span></td>
+                                <td>Chi theo dịp lễ quốc gia.</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td><strong>Ngày Quốc tế Phụ nữ 8/3</strong></td>
+                                <td><span class="amount-highlight">500.000 đ/nữ CBCNV</span><br><span style="font-size: 0.72rem; color: #64748b;">(Bình quân 250.000 đ/người toàn cơ quan)</span></td>
+                                <td>Chi cho 50% lao động nữ.</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td><strong>Lễ 30/4 & Lễ 1/5</strong></td>
+                                <td><span class="amount-highlight">500.000 đ</span> + <span class="amount-highlight">500.000 đ</span></td>
+                                <td>Tổng 2 dịp là 1.000.000 đ/người.</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td><strong>Quốc tế Thiếu nhi 1/6</strong></td>
+                                <td><span class="amount-highlight">400.000 đ/người</span></td>
+                                <td>Tính bình quân mỗi CBCNV có 2 con (200.000 đ/bé).</td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td><strong>Tết Trung thu</strong></td>
+                                <td><span class="amount-highlight">800.000 đ/người</span></td>
+                                <td>Chi quà Trung thu.</td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td><strong>Lễ Quốc khánh 2/9</strong></td>
+                                <td><span class="amount-highlight">1.000.000 đ/người</span></td>
+                                <td>Chi dịp Quốc khánh.</td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td><strong>Ngày Phụ nữ Việt Nam 20/10</strong></td>
+                                <td><span class="amount-highlight">250.000 đ/người</span></td>
+                                <td>Chi dịp 20/10.</td>
+                            </tr>
+                            <tr>
+                                <td>10</td>
+                                <td><strong>Khám sức khỏe định kỳ</strong></td>
+                                <td><span class="amount-highlight">1.000.000 đ/người</span></td>
+                                <td>Tổ chức khám sức khỏe hàng năm.</td>
+                            </tr>
+                            <tr>
+                                <td>11</td>
+                                <td><strong>Chi nghỉ mát hàng năm</strong></td>
+                                <td><span class="amount-highlight">2.000.000 đ/người</span></td>
+                                <td>Tham quan, nghỉ mát tập thể.</td>
+                            </tr>
+                            <tr style="background: #f1f5f9;">
+                                <td colspan="2"><strong>TỔNG CỘNG CÁC DỊP LỄ TẾT TRÊN</strong></td>
+                                <td><span class="amount-highlight" style="font-size: 1rem; color: #b45309;">9.700.000 đ/người/năm</span></td>
+                                <td><em>Áp dụng khi Quỹ phúc lợi trích &lt; 1 tháng lương thực hiện. Nếu trích &gt; 1 tháng lương thì nhân với hệ số k.</em></td>
+                            </tr>
+                            <tr>
+                                <td>12</td>
+                                <td><strong>Hỗ trợ viên chức khi về hưu</strong></td>
+                                <td><span class="amount-highlight">18.000.000 đ/người</span></td>
+                                <td>Áp dụng cả với công chức cơ quan Sở NN&MT có đóng góp cho hệ thống VPĐKĐĐ TP (Trang 33).</td>
+                            </tr>
+                            <tr>
+                                <td>13</td>
+                                <td><strong>Hỗ trợ viện phí khi ốm đau nằm viện</strong></td>
+                                <td><span class="amount-highlight">240.000 đ/ngày</span> (Tối đa 10 ngày/năm)</td>
+                                <td>Tối đa 2.400.000 đ/năm.</td>
+                            </tr>
+                            <tr>
+                                <td>14</td>
+                                <td><strong>Học bổng cho con người làm việc</strong></td>
+                                <td><span class="amount-highlight">Tối đa 500.000.000 đ/năm</span></td>
+                                <td>Tổng quỹ học bổng khuyến học toàn cơ quan.</td>
+                            </tr>
+                            <tr>
+                                <td>15</td>
+                                <td><strong>Viếng đám tang tứ thân phụ mẫu, vợ/chồng, con</strong></td>
+                                <td><span class="amount-highlight">1.500.000 đ/đám</span></td>
+                                <td>Áp dụng cho tứ thân phụ mẫu, vợ chồng, con của NLĐ và công chức trong ngành có quan hệ công tác.</td>
+                            </tr>
+                            <tr>
+                                <td>16</td>
+                                <td><strong>Kinh phí chuyển Công đoàn Cơ quan Sở NN&MT</strong></td>
+                                <td><span class="amount-highlight">7% tổng chi hoặc 7% tổng trích lập</span></td>
+                                <td>Trích chuyển theo quy định (Trang 34).</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- SECTION 6: PHỤ LỤC 6 -->
+            <section id="phu-luc-6" class="content-section" data-category="tai-san">
+                <div class="section-header">
+                    <div class="section-title-wrap">
+                        <div class="section-number">06</div>
+                        <div>
+                            <h2 class="section-title">Phụ lục 6: Quy chế Quản lý & Sử dụng Tài sản</h2>
+                            <p class="section-subtitle">Toàn diện 12 Chương mục về Mua sắm, Thuê, Điều chuyển, Sửa chữa & Xử lý tài sản công</p>
+                        </div>
+                    </div>
+                    <span class="doc-citation"><i class="fa-solid fa-bookmark"></i> Dẫn chứng: Trang 36 - Trang 60</span>
+                </div>
+
+                <div class="grid-2col">
+                    <div class="subcard">
+                        <h4><i class="fa-solid fa-cart-shopping"></i> Phương thức Mua sắm Tài sản (Trang 41 - 42)</h4>
+                        <ul>
+                            <li><strong>Mua sắm qua đấu thầu:</strong> Áp dụng cho các tài sản tập trung hoặc gói thầu có giá trị <strong>≥ 100 triệu đồng</strong> (Máy tính để bàn, laptop, máy in chuyên dùng, máy photo...).</li>
+                            <li><strong>Mua sắm thường xuyên:</strong> Phục vụ hoạt động thường xuyên, không thuộc danh mục đấu thầu tập trung hoặc dự án riêng. Cấp trưởng đơn vị lập dự toán trình Giám đốc VPĐKĐĐ TP duyệt.</li>
+                            <li><strong>Thẩm định & Kiểm soát:</strong> Bộ phận chuyên môn thẩm định dự toán, kế hoạch lựa chọn nhà thầu trước khi trình Giám đốc phê duyệt.</li>
+                        </ul>
+                    </div>
+
+                    <div class="subcard">
+                        <h4><i class="fa-solid fa-wrench"></i> Nâng cấp, Bảo dưỡng & Sửa chữa (Trang 48)</h4>
+                        <ul>
+                            <li><strong>Nâng cấp TSCĐ:</strong> Sử dụng nguồn vốn đầu tư XDCB hoặc Quỹ phát triển sự nghiệp; chi phí nâng cấp được <em>ghi tăng nguyên giá TSCĐ</em> và kéo dài thời gian khấu hao.</li>
+                            <li><strong>Bảo dưỡng, sửa chữa thường xuyên:</strong> Khống chế <em>tối đa không vượt quá giá trị hao mòn</em> của tài sản trong kỳ.</li>
+                            <li><strong>Tiêu chuẩn kỹ thuật:</strong> Phòng Kỹ thuật Địa chính - Lưu trữ ban hành định mức bảo dưỡng chuyên dùng lưu trữ, địa chính; Phòng Hành chính - Tổng hợp ban hành định mức tài sản thông thường.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="grid-2col" style="margin-top: 1rem;">
+                    <div class="subcard">
+                        <h4><i class="fa-solid fa-arrows-split-up-and-left"></i> Điều chuyển Tài sản (Trang 52 - 53)</h4>
+                        <ul>
+                            <li><strong>Nội bộ VPĐKĐĐ TP:</strong> Giám đốc Văn phòng Đăng ký đất đai TP quyết định điều chuyển giữa các Phòng và các Chi nhánh.</li>
+                            <li><strong>Điều chuyển ra ngoài cơ quan:</strong> Phải có Quyết định phê duyệt của <strong>Sở Tài nguyên và Môi trường</strong> (Sở NN&MT).</li>
+                            <li>Hồ sơ: Văn bản đề nghị, danh mục tài sản, biên bản kiểm kê, quyết định điều chuyển và biên bản bàn giao.</li>
+                        </ul>
+                    </div>
+
+                    <div class="subcard">
+                        <h4><i class="fa-solid fa-dumpster-fire"></i> Thanh lý & Bán Tài sản (Trang 54 - 56)</h4>
+                        <ul>
+                            <li><strong>Thành lập Hội đồng thanh lý:</strong> Đơn vị lập Hội đồng xác định tình trạng, giá trị thu hồi và phương thức xử lý (tiêu hủy, bán phế liệu). Bắt buộc có ý kiến bộ phận CNTT khi thanh lý thiết bị máy tính, máy in.</li>
+                            <li><strong>Phương thức bán tài sản:</strong> Gồm 03 hình thức theo quy định Sở: Đấu giá, niêm yết giá, chỉ định.</li>
+                            <li><strong>Tiền thu từ xử lý:</strong> Thực hiện theo Nghị định 186/2025/NĐ-CP và Luật Quản lý sử dụng tài sản công.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 7: ĐỊNH MỨC TÀI SẢN & PHÒNG LÀM VIỆC -->
+            <section id="dinh-muc-tai-san" class="content-section" data-category="tai-san dinh-muc">
+                <div class="section-header">
+                    <div class="section-title-wrap">
+                        <div class="section-number">07</div>
+                        <div>
+                            <h2 class="section-title">Hệ thống Định mức Máy móc, Thiết bị & Trụ sở làm việc</h2>
+                            <p class="section-subtitle">Chi tiết diện tích phòng làm việc (NĐ 155), Máy móc theo chức danh (QĐ 15) và Thiết bị Lưu trữ (QĐ 25)</p>
+                        </div>
+                    </div>
+                    <span class="doc-citation"><i class="fa-solid fa-bookmark"></i> Dẫn chứng: Trang 60 - Trang 72</span>
+                </div>
+
+                <!-- Bảng 1: Diện tích trụ sở -->
+                <h3 style="font-size: 1.05rem; font-weight: 700; margin: 1rem 0 0.5rem 0; color: var(--primary);">
+                    <i class="fa-solid fa-building"></i> 1. Tiêu chuẩn Diện tích Trụ sở Làm việc (Nghị định số 155/2025/NĐ-CP - Trang 63 - 65)
+                </h3>
+                <div class="table-responsive">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Cơ quan / Cấp đơn vị</th>
+                                <th>Chức danh đảm nhiệm</th>
+                                <th>Diện tích làm việc tối đa</th>
+                                <th>Ghi chú / Căn cứ</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td rowspan="5"><strong>Văn phòng Thành phố</strong><br>(Trang 63-64)</td>
+                                <td>Giám đốc Văn phòng Đăng ký đất đai TP</td>
+                                <td><span class="amount-highlight">30 m²/người</span></td>
+                                <td>Tương đương Phó Giám đốc Sở</td>
+                            </tr>
+                            <tr>
+                                <td>Phó Giám đốc Văn phòng Đăng ký đất đai TP</td>
+                                <td><span class="amount-highlight">20 m²/người</span></td>
+                                <td>Tương đương Trưởng phòng thuộc Sở</td>
+                            </tr>
+                            <tr>
+                                <td>Trưởng phòng, Phó Trưởng phòng và tương đương</td>
+                                <td><span class="amount-highlight">18 m²/người</span></td>
+                                <td>Theo Phụ lục II NĐ 155/2025</td>
+                            </tr>
+                            <tr>
+                                <td>Chuyên viên và các chức danh tương đương</td>
+                                <td><span class="amount-highlight">15 m²/người</span></td>
+                                <td>Biên chế chuyên môn</td>
+                            </tr>
+                            <tr>
+                                <td>Hợp đồng lao động theo Nghị định 111/2022/NĐ-CP</td>
+                                <td><span class="amount-highlight">10 m²/người</span></td>
+                                <td>Hợp đồng hỗ trợ, phục vụ</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="3"><strong>Chi nhánh VPĐKĐĐ</strong><br>(Trang 64)</td>
+                                <td>Giám đốc Chi nhánh, Phó Giám đốc Chi nhánh</td>
+                                <td><span class="amount-highlight">18 m²/người</span></td>
+                                <td>Cấp lãnh đạo Chi nhánh</td>
+                            </tr>
+                            <tr>
+                                <td>Chuyên viên và các chức danh tương đương</td>
+                                <td><span class="amount-highlight">15 m²/người</span></td>
+                                <td>Viên chức, NLĐ chuyên môn</td>
+                            </tr>
+                            <tr>
+                                <td>Hợp đồng lao động theo Nghị định 111/2022/NĐ-CP</td>
+                                <td><span class="amount-highlight">10 m²/người</span></td>
+                                <td>Hợp đồng lao động</td>
+                            </tr>
+                            <tr style="background: #f8fafc;">
+                                <td colspan="2"><strong>Diện tích sử dụng chung trong trụ sở</strong> (Bộ phận một cửa, tiếp dân, văn thư, họp...)</td>
+                                <td><span class="amount-highlight">≤ 50%</span></td>
+                                <td>Tối đa bằng 50% tổng diện tích làm việc của các chức danh (Trang 65)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Bảng 2: Máy móc theo chức danh -->
+                <h3 style="font-size: 1.05rem; font-weight: 700; margin: 1.5rem 0 0.5rem 0; color: var(--primary);">
+                    <i class="fa-solid fa-desktop"></i> 2. Định mức Trang bị Máy móc Thiết bị theo Chức danh (Quyết định số 15/2025/QĐ-TTg - Trang 65 - 68)
+                </h3>
+                <div class="table-responsive">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Chức danh</th>
+                                <th>Chủng loại trang thiết bị</th>
+                                <th>Số lượng tối đa</th>
+                                <th>Mức giá tối đa (Triệu VNĐ)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td rowspan="7"><strong>Giám đốc Văn phòng TP</strong><br>(Trang 66)</td>
+                                <td>Bộ bàn ghế ngồi làm việc</td>
+                                <td>01 bộ</td>
+                                <td><span class="amount-highlight">13 triệu đ</span></td>
+                            </tr>
+                            <tr>
+                                <td>Tủ đựng tài liệu</td>
+                                <td>02 chiếc</td>
+                                <td><span class="amount-highlight">7 triệu đ/chiếc</span></td>
+                            </tr>
+                            <tr>
+                                <td>Máy vi tính để bàn</td>
+                                <td>01 bộ</td>
+                                <td><span class="amount-highlight">20 triệu đ</span></td>
+                            </tr>
+                            <tr>
+                                <td>Máy tính xách tay (laptop) hoặc tablet</td>
+                                <td>01 chiếc</td>
+                                <td><span class="amount-highlight">25 triệu đ</span></td>
+                            </tr>
+                            <tr>
+                                <td>Máy in cá nhân</td>
+                                <td>01 chiếc</td>
+                                <td><span class="amount-highlight">13 triệu đ</span></td>
+                            </tr>
+                            <tr>
+                                <td>Điện thoại cố định</td>
+                                <td>01 chiếc</td>
+                                <td><span class="amount-highlight">1,5 triệu đ</span></td>
+                            </tr>
+                            <tr>
+                                <td>Bộ bàn ghế họp, tiếp khách</td>
+                                <td>01 bộ</td>
+                                <td><span class="amount-highlight">15 triệu đ</span></td>
+                            </tr>
+                            <tr>
+                                <td rowspan="6"><strong>Phó Giám đốc Văn phòng TP</strong><br>(Trang 66)</td>
+                                <td>Bộ bàn ghế ngồi làm việc</td>
+                                <td>01 bộ</td>
+                                <td><span class="amount-highlight">10 triệu đ</span></td>
+                            </tr>
+                            <tr>
+                                <td>Tủ đựng tài liệu</td>
+                                <td>02 chiếc</td>
+                                <td><span class="amount-highlight">7 triệu đ/chiếc</span></td>
+                            </tr>
+                            <tr>
+                                <td>Máy vi tính để bàn hoặc laptop</td>
+                                <td>01 bộ/chiếc</td>
+                                <td><span class="amount-highlight">20 triệu đ</span></td>
+                            </tr>
+                            <tr>
+                                <td>Máy in cá nhân</td>
+                                <td>01 chiếc</td>
+                                <td><span class="amount-highlight">13 triệu đ</span></td>
+                            </tr>
+                            <tr>
+                                <td>Điện thoại cố định</td>
+                                <td>01 chiếc</td>
+                                <td><span class="amount-highlight">1 triệu đ</span></td>
+                            </tr>
+                            <tr>
+                                <td>Bộ bàn ghế họp, tiếp khách</td>
+                                <td>01 bộ</td>
+                                <td><span class="amount-highlight">13 triệu đ</span></td>
+                            </tr>
+                            <tr>
+                                <td rowspan="4"><strong>Trưởng/Phó phòng, GĐ/Phó GĐ Chi nhánh, Chuyên viên, HĐLĐ</strong><br>(Trang 66-67)</td>
+                                <td>Bộ bàn ghế ngồi làm việc</td>
+                                <td>01 bộ</td>
+                                <td><span class="amount-highlight">7 triệu đ</span></td>
+                            </tr>
+                            <tr>
+                                <td>Tủ đựng tài liệu</td>
+                                <td>01 chiếc</td>
+                                <td><span class="amount-highlight">7 triệu đ</span></td>
+                            </tr>
+                            <tr>
+                                <td>Máy vi tính để bàn hoặc laptop</td>
+                                <td>01 bộ/chiếc</td>
+                                <td><span class="amount-highlight">20 triệu đ</span></td>
+                            </tr>
+                            <tr>
+                                <td>Điện thoại cố định</td>
+                                <td>01 chiếc</td>
+                                <td><span class="amount-highlight">1 triệu đ</span></td>
+                            </tr>
+                            <tr style="background: #f1f5f9;">
+                                <td rowspan="6"><strong>Trang bị chung tại Phòng làm việc</strong><br>(Trang 67)</td>
+                                <td>Bộ bàn ghế họp, tiếp khách chung</td>
+                                <td>01 bộ / phòng</td>
+                                <td><span class="amount-highlight">13 triệu đ</span></td>
+                            </tr>
+                            <tr style="background: #f1f5f9;">
+                                <td>Máy in dùng chung</td>
+                                <td>01 chiếc / 03 biên chế</td>
+                                <td><span class="amount-highlight">13 triệu đ</span></td>
+                            </tr>
+                            <tr style="background: #f1f5f9;">
+                                <td>Máy scan tài liệu</td>
+                                <td>01 chiếc / 15 biên chế</td>
+                                <td><span class="amount-highlight">22 triệu đ</span></td>
+                            </tr>
+                            <tr style="background: #f1f5f9;">
+                                <td>Máy hủy tài liệu</td>
+                                <td>01 chiếc / 15 biên chế</td>
+                                <td><span class="amount-highlight">10 triệu đ</span></td>
+                            </tr>
+                            <tr style="background: #f1f5f9;">
+                                <td>Máy photocopy</td>
+                                <td>01 chiếc / 15 biên chế</td>
+                                <td><span class="amount-highlight">110 triệu đ</span></td>
+                            </tr>
+                            <tr style="background: #f1f5f9;">
+                                <td>Giá đựng tài liệu</td>
+                                <td>01 chiếc / 10 biên chế</td>
+                                <td><span class="amount-highlight">1,5 triệu đ</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Bảng 3: Máy móc Lưu trữ chuyên dùng -->
+                <h3 style="font-size: 1.05rem; font-weight: 700; margin: 1.5rem 0 0.5rem 0; color: var(--primary);">
+                    <i class="fa-solid fa-box-archive"></i> 3. Tiêu chuẩn Thiết bị Chuyên dùng Lưu trữ Lịch sử (Quyết định số 25/2021/QĐ-UBND - Trang 68 - 72)
+                </h3>
+                <div class="callout info" style="margin-bottom: 0.75rem;">
+                    <div class="callout-icon"><i class="fa-solid fa-stamp"></i></div>
+                    <div>
+                        <strong>Căn cứ xác định vị thế Lưu trữ lịch sử (Trang 68):</strong> Căn cứ Điểm 5 Điều 2 Luật Lưu trữ số 01/2011/QH13 và Thông tư 03/2022/TT-BTNMT quy định danh mục hồ sơ địa chính, đất đai thuộc loại <em>lưu trữ vĩnh viễn</em>. Do đó, Văn phòng Đăng ký đất đai TP.HCM được xếp là đơn vị Lưu trữ lịch sử và được áp dụng tiêu chuẩn thiết bị chuyên dùng chuyên sâu cho 01 Kho lưu trữ.
+                    </div>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>STT</th>
+                                <th>Tên máy móc, thiết bị lưu trữ</th>
+                                <th>Thông số kỹ thuật chủ yếu</th>
+                                <th>Số lượng tối đa / 1 Kho</th>
+                                <th>Trang Doc</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td><strong>Máy Scan tài liệu giấy A4</strong></td>
+                                <td>CCD, ≥ 300 dpi, 16-bit, 1 mặt ≥ 60 trang/phút, 2 mặt ≥ 120 ảnh/phút.</td>
+                                <td><span class="amount-highlight">20 cái</span></td>
+                                <td><span class="doc-citation">Trang 68</span></td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td><strong>Máy Scan tài liệu giấy A3</strong></td>
+                                <td>Scan màu/xám/đơn sắc, ≥ 300 dpi, tốc độ ≥ 3 giây/trang.</td>
+                                <td><span class="amount-highlight">20 cái</span></td>
+                                <td><span class="doc-citation">Trang 68</span></td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td><strong>Máy Scan book (quét sách)</strong></td>
+                                <td>Quét tài liệu đóng quyển dày đến 30mm (1.18 inch), tự nhận dạng khổ.</td>
+                                <td><span class="amount-highlight">05 cái</span></td>
+                                <td><span class="doc-citation">Trang 68</span></td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td><strong>Máy photocopy A0 đa năng</strong></td>
+                                <td>Tốc độ copy/in 3.8 ppm A1 (B&W), 2.1 ppm A1 (Color), scan 80 mm/s.</td>
+                                <td><span class="amount-highlight">02 cái</span></td>
+                                <td><span class="doc-citation">Trang 69</span></td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td><strong>Máy in thẻ độc giả</strong></td>
+                                <td>In thẻ nhựa cho độc giả nghiên cứu hồ sơ địa chính.</td>
+                                <td><span class="amount-highlight">01 cái</span></td>
+                                <td><span class="doc-citation">Trang 69</span></td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td><strong>Máy khử trùng tài liệu</strong></td>
+                                <td>Khí trơ N2, Argon, CO2 diệt côn trùng, nấm mốc trong môi trường thiếu oxy, buồng 6 m³.</td>
+                                <td><span class="amount-highlight">05 cái</span></td>
+                                <td><span class="doc-citation">Trang 69</span></td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td><strong>Máy khử axit bằng nước (ướt)</strong></td>
+                                <td>Nhúng dung dịch kiềm nhẹ, bù sợi xenlulo tăng tuổi thọ giấy gấp 3-4 lần.</td>
+                                <td><span class="amount-highlight">05 cái</span></td>
+                                <td><span class="doc-citation">Trang 69</span></td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td><strong>Máy khử axit bằng phương pháp khô</strong></td>
+                                <td>Phun hóa chất kiềm nhẹ, chuyên dùng cho tài liệu khổ lớn, tài liệu yếu đóng quyển.</td>
+                                <td><span class="amount-highlight">05 cái</span></td>
+                                <td><span class="doc-citation">Trang 70</span></td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td><strong>Tủ hút khí độc kho lưu trữ</strong></td>
+                                <td>Hút khí độc, ngăn hóa chất phát tán vào phòng kho, bảo vệ con người.</td>
+                                <td><span class="amount-highlight">02 cái</span></td>
+                                <td><span class="doc-citation">Trang 70</span></td>
+                            </tr>
+                            <tr>
+                                <td>10</td>
+                                <td><strong>Máy ép nóng phim dán & Filmoplast</strong></td>
+                                <td>Máy dán, vá và ép phẳng tài liệu bằng Filmoplast R và phim dán Polyester chống rách.</td>
+                                <td><span class="amount-highlight">04 cái</span> (mỗi loại 2)</td>
+                                <td><span class="doc-citation">Trang 70</span></td>
+                            </tr>
+                            <tr>
+                                <td>11</td>
+                                <td><strong>Máy vệ sinh tài liệu tự động</strong></td>
+                                <td>Băng tải bàn chải quay kết hợp máy hút bụi làm sạch bụi bẩn tài liệu cũ.</td>
+                                <td><span class="amount-highlight">02 cái</span></td>
+                                <td><span class="doc-citation">Trang 70</span></td>
+                            </tr>
+                            <tr>
+                                <td>12</td>
+                                <td><strong>Máy bồi nền tài liệu</strong></td>
+                                <td>Gia cố tài liệu bị mủn, giòn, rách bằng giấy và hồ dán chuyên dụng tự động.</td>
+                                <td><span class="amount-highlight">02 cái</span></td>
+                                <td><span class="doc-citation">Trang 71</span></td>
+                            </tr>
+                            <tr>
+                                <td>13</td>
+                                <td><strong>Máy hút ẩm chuyên dùng</strong></td>
+                                <td>Duy trì độ ẩm tối ưu chống nấm mốc kho lưu trữ.</td>
+                                <td><span class="amount-highlight">30 cái</span></td>
+                                <td><span class="doc-citation">Trang 71</span></td>
+                            </tr>
+                            <tr>
+                                <td>14</td>
+                                <td><strong>Máy hút bụi tài liệu & Công nghiệp</strong></td>
+                                <td>Máy hút bụi bề mặt tài liệu: 05 cái; Máy hút bụi công nghiệp sàn kho: 05 cái.</td>
+                                <td><span class="amount-highlight">10 cái</span></td>
+                                <td><span class="doc-citation">Trang 71</span></td>
+                            </tr>
+                            <tr>
+                                <td>15</td>
+                                <td><strong>Bàn ủi giấy phẳng</strong></td>
+                                <td>Làm phẳng tài liệu giấy bị nhăn phục vụ ép và số hóa tài liệu.</td>
+                                <td><span class="amount-highlight">05 cái</span></td>
+                                <td><span class="doc-citation">Trang 71</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="app-footer">
+        <p><strong>BÁO CÁO TỔNG HỢP & TRA CỨU QUY CHẾ CHI TIÊU NỘI BỘ NĂM 2025</strong></p>
+        <p>Văn phòng Đăng ký đất đai Thành phố Hồ Chí Minh | Quyết định số 355/QĐ-VPĐK-KHTC ngày 31/12/2025</p>
+        <p style="margin-top: 6px; font-size: 0.75rem; color: #64748b;">Toàn bộ dữ liệu được trích xuất nguyên bản từ tài liệu scan 72 trang (documents/355_0001.pdf). Cam kết không bịa đặt, không suy diễn thông tin.</p>
+    </footer>
+
+    <!-- Interactive Search Script -->
+    <script>
+        function filterTables() {
+            const input = document.getElementById("searchInput");
+            const filter = input.value.toLowerCase().trim();
+            const tables = document.querySelectorAll("table.data-table");
+
+            tables.forEach(table => {
+                const trs = table.querySelectorAll("tbody tr");
+                trs.forEach(tr => {
+                    const text = tr.innerText.toLowerCase();
+                    if (text.includes(filter)) {
+                        tr.style.display = "";
+                    } else {
+                        tr.style.display = "none";
+                    }
+                });
+            });
+        }
+
+        function filterCategory(cat) {
+            const buttons = document.querySelectorAll(".filter-btn");
+            buttons.forEach(btn => btn.classList.remove("active"));
+            event.target.classList.add("active");
+
+            const sections = document.querySelectorAll(".content-section");
+            sections.forEach(sec => {
+                if (cat === "all") {
+                    sec.style.display = "block";
+                } else {
+                    const categories = sec.getAttribute("data-category") || "";
+                    if (categories.includes(cat)) {
+                        sec.style.display = "block";
+                    } else {
+                        sec.style.display = "none";
+                    }
+                }
+            });
+        }
+
+        // Active sidebar link on scroll
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section.content-section');
+            const navLinks = document.querySelectorAll('.nav-links a');
+            let current = '';
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 120;
+                if (pageYOffset >= sectionTop) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+BÁO CÁO ĐỀ XUẤT PHƯƠNG ÁN DI DỜI HỆ THỐNG OERP
+VỀ PHÒNG MÁY CHỦ NỘI BỘ CHI NHÁNH (CHI PHÍ 0 ĐỒNG)
+(Thực hiện mục tiêu cắt giảm chi phí 800k/tháng, tự chủ CSDL đất đai và bảo đảm an toàn thông tin)
+Kính gửi: Chị Nguyễn Thị Bích Tuyền
+Đồng gửi: Chị Bùi Thị Minh Nguyệt (Bộ phận chuyên môn)
+Theo định hướng của đơn vị về việc tăng cường bảo mật dữ liệu chuyên ngành đất đai, không để cơ sở dữ liệu trên máy chủ thuê ngoài và thực hiện tiết kiệm tối đa ngân sách thường xuyên (tiêu chí tận dụng hạ tầng sẵn có, cắt giảm chi phí thuê ngoài 800.000 đ/tháng), tôi xin đề xuất phương án kỹ thuật chi tiết để di dời toàn bộ hệ thống OERP về phòng máy chủ của Chi nhánh như sau:
+I. KHẢ NĂNG TỰ CHỦ HẠ TẦNG VỚI CHI PHÍ ĐẦU TƯ 0 ĐỒNG
+Hiện nay Chi nhánh số 23 đã được trang bị phòng máy chủ đạt chuẩn với các thiết bị vật lý chuyên dụng đang hoạt động:
+Máy chủ chuyên dụng lưu trữ HP StoreEasy 1460 (IP: 10.17.2.100): Đang chứa sẵn folder Dataweb và HSQ-TDM, dung lượng ổ đĩa lớn, rất thích hợp làm nơi lưu trữ các file scan sổ đỏ và bản vẽ trích đo.
+Máy chủ hiệu năng cao HP ProLiant DL360 Gen9 (IP: 10.17.2.125): Cấu hình vi xử lý và RAM rất mạnh, dư thừa công suất để cài đặt máy chủ Web IIS và cơ sở dữ liệu Microsoft SQL Server cho hệ thống OERP.
+Thiết bị lưu trữ mạng NAS Synology DS423+ (IP: 10.17.2.150): Có 4 khay ổ cứng, sẵn sàng thiết lập lịch sao lưu tự động (auto-backup) toàn bộ cơ sở dữ liệu OERP vào 23h00 hàng đêm.
+Đường truyền mạng & An ninh: Có sẵn 02 đường truyền Internet cáp quang VNPT và tường lửa bảo mật phần cứng FortiGate 61F.
+=> Đánh giá tài chính: Đơn vị KHÔNG PHẢI MUA SẮM THÊM BẤT KỲ MÁY CHỦ MỚI NÀO. Khi chuyển về cơ quan, đơn vị sẽ cắt giảm được ngay 9.600.000 đ/năm tiền thuê máy chủ bên ngoài.
+II. ĐÁNH GIÁ YÊU CẦU BÀN GIAO MÃ NGUỒN ĐỂ TỰ SỬA CHỮA KHI CÓ SỰ CỐ
+Về mong muốn tự chủ kỹ thuật để khi có sự cố phần mềm thì cán bộ đơn vị có thể trực tiếp can thiệp, sửa chữa ngay, tôi xin phân tích rõ ranh giới kỹ thuật giữa hai hình thức bàn giao:
+Lưu ý quan trọng về năng lực can thiệp kỹ thuật: Phần mềm này viết bằng ngôn ngữ ASP.NET (C#) và CSDL SQL Server phức tạp. Để trực tiếp sửa chữa code khi có sự cố, đòi hỏi nhân sự phải có chuyên môn về Lập trình phần mềm (Software Developer). Cán bộ chuyên môn đất đai chỉ nên đảm nhận việc phân quyền tài khoản, cấu hình tham số báo cáo; còn các lỗi hệ thống sâu cần có nhân sự IT kỹ thuật chuyên trách để tránh nguy cơ làm gián đoạn dây chuyền tiếp nhận Một Cửa.
+III. KẾ HOẠCH TRIỂN KHAI 4 BƯỚC KHÔNG GIÁN ĐOẠN TIẾP NHẬN HỒ SƠ
+Bước 1: Chuẩn bị máy chủ nội bộ (1-2 ngày): Cài đặt môi trường IIS, ASP.NET 4.8 và Microsoft SQL Server trên Máy chủ HP DL360 Gen9. Đăng ký mở IP tĩnh VNPT và mở cổng mạng an toàn trên Tường lửa FortiGate 61F.
+Bước 2: Yêu cầu bàn giao dữ liệu & Chuyển quyền tên miền: Làm việc với bên ông Trần Hồ Bảo Hoàng bàn giao: (1) File backup vpdkddtdm.bak; (2) Thư mục publish API; (3) Toàn bộ thư mục file scan đính kèm; (4) Chuyển nhượng quyền sở hữu tên miền vpdkddtdm.vn tại GMO-Z.com về Chi nhánh.
+Bước 3: Dựng thử nghiệm (Staging) & Kiểm thử nội bộ: Restore cơ sở dữ liệu lên máy chủ HP cơ quan, chạy thử nghiệm đầy đủ 9 phân hệ (Tiếp nhận -> Xử lý -> In biên nhận -> Trả kết quả) bảo đảm không có lỗi phát sinh.
+Bước 4: Chuyển đổi chính thức vào cuối tuần: Thực hiện trỏ bản ghi DNS tên miền vpdkddtdm.vn sang IP máy chủ Chi nhánh vào chiều thứ Sáu. Đến sáng thứ Hai, toàn bộ cán bộ đăng nhập và làm việc bình thường trên máy chủ mới của đơn vị, hoàn toàn không làm gián đoạn khâu tiếp nhận Một Cửa.
+
+=== [DANH SÁCH BẢNG BIỂU TRONG TÀI LIỆU] ===
+
+--- Bảng số 1 (1 hàng, 2 cột) ---
+VĂN PHÒNG ĐĂNG KÝ ĐẤT ĐAI TP.HCM CHI NHÁNH SỐ 23 Số: ...... /BC-CN23 | CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM Độc lập - Tự do - Hạnh phúc Thủ Dầu Một, ngày 28 tháng 09 năm 2026
+
+--- Bảng số 2 (3 hàng, 3 cột) ---
+Nội dung bàn giao | Khả năng vận hành & Tự sửa lỗi | Khả năng làm việc với đối tác
+Bản Triển Khai (Deploy/Publish) - File .dll đã biên dịch - Thư mục build Angular - File backup CSDL .bak | - Vận hành: Chạy tốt 100% trên máy chủ HP cơ quan, cắt được 800k/tháng. - Sửa chữa: Sửa được cấu hình hệ thống (web.config) và sửa các câu lệnh Stored Procedure trong SQL Server. - Hạn chế: Không sửa được code logic C# gốc nếu chương trình bị lỗi thuật toán. | RẤT DỄ ĐÒI HỎI BÀN GIAO: Đây là sản phẩm tối thiểu bên đối tác buộc phải cung cấp để đưa hệ thống lên máy chủ Chi nhánh.
+Toàn Bộ Mã Nguồn (Source Code) - Project Visual Studio C# - Toàn bộ source Angular gốc | - Vận hành: Hoàn toàn chủ động 100%. - Sửa chữa: Lập trình viên có thể mở Visual Studio để sửa mọi dòng code, viết thêm chức năng mới tùy ý. | CẦN THƯƠNG LƯỢNG: Với giá 800k/tháng, đối tác coi đây là tài sản trí tuệ. Cần kiểm tra lại hợp đồng ban đầu xem có điều khoản sở hữu mã nguồn hay không.
+
+--- Bảng số 3 (1 hàng, 2 cột) ---
+Nơi nhận: - Như trên (báo cáo); - Chị Bùi Thị Minh Nguyệt (phối hợp); - Lưu: Hồ sơ kỹ thuật IT. | NGƯỜI LẬP BÁO CÁO     Đỗ Trọng Minh Quân

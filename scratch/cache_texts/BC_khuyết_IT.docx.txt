@@ -1,0 +1,31 @@
+BÁO CÁO
+Về tình hình khủng hoảng nhân sự Công nghệ thông tin, rủi ro an toàn hệ thống tại Chi nhánh số 23
+Căn cứ tình hình vận hành thực tế và Biên bản bàn giao công việc số 2231/BB-CN23 ngày 16/09/2026 của Chi nhánh số 23; Chi nhánh Văn phòng Đăng ký đất đai số 23 kính báo cáo Văn phòng Đăng ký đất đai Thành phố Hồ Chí Minh (VPĐKĐĐ TP) về nguy cơ gián đoạn hệ thống do khuyết nhân sự Công nghệ thông tin (CNTT) và trình duyệt các giải pháp tháo gỡ khẩn cấp như sau:
+1. Tình hình khủng hoảng nhân sự CNTT tại Chi nhánh số 23
+- Về nhân sự hiện hữu: Ông Lý Minh Tân (Tổ phó Tổ Kỹ thuật địa chính và lưu trữ, kiêm IT cơ quan) – nhân sự IT duy nhất nắm vững toàn bộ hệ thống – đã nộp đơn xin nghỉ việc từ ngày 01/10/2026. Khối lượng công việc vị trí này phải đảm trách là rất lớn (hỗ trợ 80 máy trạm người dùng, quản trị cụm máy chủ, tường lửa và trực ứng cứu sự cố khẩn cấp SLA 30 phút), trong khi mức thu nhập hiện tại dưới 8.000.000 đồng/tháng.
+- Về nhân sự tiếp nhận: Chi nhánh đã tuyển dụng nhân sự thử việc là ông Đỗ Trọng Minh Quân, tuy nhiên nhân sự này có chuyên môn Kỹ thuật phần mềm nên đã kiên quyết từ chối tiếp nhận bàn giao quản trị phần cứng, hệ thống mạng và thiết bị lưu trữ. Lý do từ chối là không đủ năng lực thẩm định kỹ thuật phần cứng, lo ngại nguy cơ hư hỏng và rủi ro trách nhiệm pháp lý khi xảy ra mất mát dữ liệu.
+- Về phương án thuê ngoài (Outsourcing): Việc thuê đơn vị IT bên ngoài để vận hành hệ thống là không khả thi. Chi phí thuê ngoài trọn gói 24/7 cao hơn nhiều so với duy trì nhân sự cơ hữu, đồng thời việc giao tài khoản quản trị (Root/Admin) cho bên thứ ba tiềm ẩn rủi ro nghiêm trọng về bảo mật, lộ lọt dữ liệu đất đai nhạy cảm.
+2. Thực trạng hạ tầng phần mềm và rủi ro an toàn thông tin mạng
+Hệ thống CNTT của Chi nhánh hiện quản lý khối lượng dữ liệu đặc biệt quan trọng (hồ sơ quét, bản vẽ địa chính, hồ sơ giao dịch bảo đảm), được lưu trữ trên 03 máy chủ (HP DL360 Gen8, Gen9, StoreEasy 1460), NAS Synology DS423+ và 08 ổ cứng di động. Tuy nhiên, hạ tầng phần mềm đang vi phạm nghiêm trọng tiêu chuẩn bảo mật, tiềm ẩn nguy cơ bị tấn công mã độc tống tiền (Ransomware), cụ thể:
+- Hệ điều hành Windows và Microsoft Office trên toàn bộ máy tính chuyên môn đều chưa có bản quyền.
+- Phần mềm diệt virus tập trung (Kaspersky Next EDR) bảo vệ 80 máy tính và máy chủ đã hết hạn từ ngày 23/03/2026.
+- Gói bản quyền bảo vệ an ninh mạng UTP của Tường lửa FortiGate 61F sắp hết hạn vào ngày 30/09/2026.
+3. Đề xuất và Kiến nghị
+Để đảm bảo an toàn Cơ sở dữ liệu đất đai và duy trì vận hành ổn định, Chi nhánh số 23 kính đề nghị VPĐKĐĐ TP xem xét, phê duyệt các nội dung cấp bách sau:
+a) Xây dựng cơ chế tài chính nhằm thu hút và giữ chân nhân sự IT: Đề nghị Văn phòng đăng ký đất đai Thành phố chấp thuận cơ chế linh hoạt để Chi nhánh nâng tổng thu nhập thực tế cho vị trí nhân sự chuyên trách CNTT lên mức 15.000.000 đến 20.000.000 đồng/tháng (tiệm cận mức trung bình 20.000.000 - 22.000.000 đồng/tháng của thị trường đối với vị trí quản trị hệ thống có trực 24/7), qua đó giữ chân nhân sự hiện tại và tạo điều kiện thu hút nhân sự mới nếu cần thiết.
+b) Khẩn trương cấp kinh phí trang bị bản quyền phần mềm: Kính đề nghị Văn phòng đăng ký đất đai Thành phố sớm bố trí kinh phí phê duyệt các nội dung theo Tờ trình số 1342/CN23-HCTH ngày 22/06/2026 của Chi nhánh số 23, bao gồm:
+Trang bị bản quyền đồng bộ hệ điều hành Windows và Microsoft Office.
+Gia hạn ngay lập tức phần mềm diệt virus Kaspersky Next EDR và gói bản quyền Tường lửa FortiGate 61F.
+c) Kịp thời cử nhân sự chính thức toàn thời gian, có trình độ chuyên môn tiếp quản vận hành hệ thống máy chủ tại đơn vị hỗ trợ 80 máy trạm người dùng, quản trị cụm máy chủ, tường lửa và trực ứng cứu sự cố khẩn cấp SLA 30 phút
+d) Phương án bảo đảm an toàn thông tin khẩn cấp khi khuyết nhân sự:
+Trong trường hợp đến ngày 01/10/2026, Chi nhánh chính thức khuyết nhân sự IT trong điều kiện các phần mềm bản quyền an toàn nêu trên đã hết hạn; nhằm đảm bảo an toàn tuyệt đối cho cơ sở dữ liệu đất đai và ngăn chặn rủi ro an toàn thông tin mạng, Chi nhánh xin báo cáo phương án: Tắt toàn bộ hệ thống máy chủ và các thiết bị mạng tại đơn vị.
+Kể từ thời điểm tắt hệ thống, Tổ Hành chính - Tổng hợp sẽ chỉ chịu trách nhiệm quản lý, niêm phong hạ tầng vật lý (phần cứng) và sẽ tiến hành bàn giao tài khoản, mở lại hệ thống khi Chi nhánh tuyển dụng được nhân sự chính thức đủ chuyên môn vận hành thay thế.
+Kính trình Ban Giám đốc Văn phòng đăng ký đất đai Thành phố Hồ Chí Minh xem xét, cho ý kiến chỉ đạo./.
+
+=== [DANH SÁCH BẢNG BIỂU TRONG TÀI LIỆU] ===
+
+--- Bảng số 1 (1 hàng, 2 cột) ---
+VĂN PHÒNG ĐĂNG KÝ ĐẤT ĐAI   THÀNH PHỐ HỒ CHÍ MINH   CHI NHÁNH SỐ 23  Số:           /BC-CN23 | CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM Độc lập – Tự do – Hạnh phúc        Thủ Dầu Một, ngày         tháng       năm  2026
+
+--- Bảng số 2 (1 hàng, 2 cột) ---
+Nơi nhận:                                                                                - Văn phòng Đăng ký đất đai TPHCM (bc)                                  - BGĐ CN23;	 - Tổ trưởng các Tổ chuyên môn CN23;                               - Lưu: VT, HCTH, Tuyền | KT.GIÁM ĐỐC PHÓ GIÁM ĐỐC     Đặng Huy Cường

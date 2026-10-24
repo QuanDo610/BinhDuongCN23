@@ -1,0 +1,34 @@
+Đơn vị: CHI NHÁNH VĂN PHÒNG ĐĂNG KÝ ĐẤT ĐAI SỐ 23
+BẢNG ĐỐI CHIẾU
+NHU CẦU DIỆN TÍCH LÀM VĂN PHÒNG LÀM VIỆC VÀ KHO LƯU TRỮ CẦN THIẾT THEO ĐỊNH MỨC NHÀ NƯỚC
+- Căn cứ định mức tại Nghị định số 155/2025/NĐ-CP ngày 16 tháng 6 năm 2025 của Chính phủ quy định tiêu chuẩn, định mức sử dụng trụ sở làm việc, cơ sở hoạt động sự nghiệp;
+- Căn cứ Nghị định số 186/2025/NĐ-CP ngày 01 tháng 7 năm 2025 và Nghị định số 286/2025/NĐ-CP ngày 03 tháng 11 năm 2025 của Chính phủ sửa đổi, bổ sung một số điều của các Nghị định trong lĩnh vực quản lý, sử dụng tài sản công;
+- Căn cứ Thông tư số 09/2007/TT-BNV ngày 26 tháng 11 năm 2007 của Bộ Nội vụ hướng dẫn kho lưu trữ chuyên dùng;
+- Căn cứ Tiêu chuẩn quốc gia TCVN 4319:2012 về Nhà và công trình công cộng - Nguyên tắc cơ bản để thiết kế;
+- Căn cứ Quyết định số 480/QĐ-VPĐK-HC ngày 30 tháng 3 năm 2026 của Giám đốc Văn phòng Đăng ký đất đai Thành phố Hồ Chí Minh.
+Thủ Dầu Một, ngày 01 tháng 10 năm 2026
+
+=== [DANH SÁCH BẢNG BIỂU TRONG TÀI LIỆU] ===
+
+--- Bảng số 1 (18 hàng, 7 cột) ---
+STT | Chỉ tiêu | Hiện trạng diện tích (m²) | Nhu cầu diện tích sàn | So sánh: Hiện trạng - Nhu cầu (m²) | Ghi chú: định mức Nhà nước quy định
+STT | Chỉ tiêu | Hiện trạng diện tích (m²) | Số người hoặc số mét tài liệu | Diện tích cần thiết theo định mức Nhà nước (m²) | So sánh: Hiện trạng - Nhu cầu (m²) | Ghi chú: định mức Nhà nước quy định
+A | HIỆN TRẠNG NHÀ, ĐẤT ĐANG SỬ DỤNG VÀ ĐỀ NGHỊ TIẾP NHẬN | 
+1 | Cơ sở hiện hữu: Số 358 Huỳnh Văn Cù, P. Thủ Dầu Một - Diện tích đất: 1.417,70 m² - Diện tích sàn xây dựng: 835,30 m² - Cấp nhà: Cấp III, kết cấu khung, sàn BTCT, tường gạch | 835,30 | 85 | 2.331,00 | -1.495,70 | Biên bản bàn giao ngày 09/5/2019; thực tế mới đáp ứng 35,83% định mức.
+2 | Cơ sở đề nghị điều chuyển: Điểm trạm y tế 3 (P. Chánh Mỹ cũ) - Vị trí: Đường Huỳnh Văn Cù (liền kề số 358) - Diện tích khuôn viên đất: 1.276,20 m² - Diện tích sàn xây dựng: ... m² (chưa có hồ sơ đo vẽ bóc tách) | 1.276,20 (đất) | - | 1.276,20 | 0,00 | Tờ trình 195, 427 của Trạm Y tế và CV 1136 của UBND phường. Đang bỏ trống.
+B | DIỆN TÍCH SÀN LÀM VIỆC THEO TIÊU CHUẨN ĐỊNH MỨC NGHỊ ĐỊNH 155/2025/NĐ-CP | 835,30 | 85 | 2.331,00 | -1.495,70 | Tổng nhu cầu định mức theo Nghị định số 155/2025/NĐ-CP
+1 | Diện tích làm việc của các chức danh (85 người): | 535,30 | 85 | 1.260,00 | -724,70 | Phụ lục II Nghị định số 155/2025/NĐ-CP ngày 16/6/2025 của Chính phủ
+1.1 | Ban Giám đốc Chi nhánh: 03 người | 60,00 | 03 | 60,00 | 0,00 | Định mức tối đa 20 m²/người
+1.2 | Chuyên viên và các chức danh tương đương: 79 người (Gồm 42 viên chức chuyên ngành + 37 chuyên viên dùng chung) | 445,30 | 79 | 1.185,00 | -739,70 | Định mức tối đa 15 m²/người (Số thứ tự 9, Phụ lục II)
+1.3 | Cá nhân ký hợp đồng lao động phục vụ: 03 người (01 nhân viên phục vụ, 02 nhân viên bảo vệ) | 30,00 | 03 | 30,00 | 0,00 | Định mức tối đa 10 m²/người (Số thứ tự 10, Phụ lục II)
+ | Cộng diện tích làm việc của chức danh: | 535,30 | 85 | 1.260,00 | -724,70 | 1.230 m² + 30 m² = 1.260,00 m²
+2 | Diện tích sử dụng chung toàn trụ sở gồm: - Bộ phận Một cửa tiếp nhận và trả kết quả: 26,00 m² - Phòng họp chuyên môn kết hợp tiếp dân: 26,00 m² - Phòng máy chủ, CNTT: 15,00 m² - Sảnh, hành lang, cầu thang, khu vệ sinh, PCCC: 123,30 m² | 190,30 | - | 1.071,00 | -880,70 | Khoản 2 Điều 6 Nghị định 155: Tối đa không quá 85% diện tích chức danh (1.260 × 85% = 1.071 m²)
+3 | Diện tích nhà để xe (Công trình ngoài nhà): (Đáp ứng nhu cầu cho 85 CBCNV và khách liên hệ giải quyết TTHC) | 200,00 | 85 người + khách | 350,00 | -150,00 | Khoản 3 Điều 3 NĐ 155 và TCVN 4319:2012 (Mô tô 3 m²/xe; ô tô 25 m²/xe). Không tính vào diện tích sàn thông thủy.
+C | DIỆN TÍCH KHO LƯU TRỮ VÀ XỬ LÝ NGHIỆP VỤ HỒ SƠ ĐỊA CHÍNH | 406,00 | >3.000m TL | 1.000,00 | -594,00 | Căn cứ Thông tư số 09/2007/TT-BNV hướng dẫn kho lưu trữ chuyên dùng
+1 | Diện tích sàn kho bảo quản hồ sơ địa chính gốc: - Kho lưu trữ hồ sơ địa chính hiện hữu (2019): 391,00 m² (lấp đầy 100%) - Kho lưu trữ hồ sơ tiếp nhận sau sáp nhập (2025): 15,00 m² (tận dụng góc hành lang, lấp đầy 100%) => Tổng diện tích kho hiện trạng: 406,00 m² (391,00 m² + 15,00 m²) - Nhu cầu kho bảo quản hồ sơ biến động tích lũy và phát sinh: 600,00 m² | 406,00 | >3.000m giá tài liệu | 600,00 | -194,00 | Thông tư 09/2007/TT-BNV: Kho lưu trữ loại 3 và loại 4 diện tích 500 - 936 m². Hiện trạng gồm kho 391,00 m² (năm 2019) và kho 15,00 m² sau sáp nhập (năm 2025).
+2 | Khu vực xử lý nghiệp vụ lưu trữ: (Tiếp nhận, phân loại, bóc tách, chỉnh lý, khử trùng, số hóa hồ sơ) | 0,00 | - | 300,00 | -300,00 | Thông tư 09/2007/TT-BNV: Bố trí bằng 50% diện tích sàn kho bảo quản tài liệu.
+3 | Cơ sở đề xuất giải quyết kho lưu trữ: Tiếp nhận điều chuyển Điểm trạm y tế 3 dôi dư liền kề (1.276,20 m² đất) | 1.276,20 (đất) | - | 1.276,20 | Đạt | Tối ưu hóa tài sản công dôi dư theo NĐ 186/2025/NĐ-CP và NĐ 286/2025/NĐ-CP.
+ | TỔNG CỘNG ĐỐI CHIẾU TOÀN TRỤ SỞ (B + C) | 835,30 | 85 người | 2.331,00 | -1.495,70 | Hiện trạng mới chỉ đáp ứng 35,83% nhu cầu định mức. Căn cứ bắt buộc phải bổ sung kho Điểm trạm y tế 3.
+
+--- Bảng số 2 (1 hàng, 2 cột) ---
+NGƯỜI LẬP PHƯƠNG ÁN     Nguyễn Thị Bích Tuyền | KT. GIÁM ĐỐC PHÓ GIÁM ĐỐC     Đặng Huy Cường

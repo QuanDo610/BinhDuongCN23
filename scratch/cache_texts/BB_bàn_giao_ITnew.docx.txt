@@ -1,0 +1,100 @@
+BIÊN BẢN BÀN GIAO CÔNG VIỆC QUẢN TRỊ MẠNG VÀ
+HỆ THỐNG CÔNG NGHỆ THÔNG TIN
+Hôm nay, ngày ...... tháng ...... năm 2026, tại đơn vị tiến hành lập biên bản bàn giao công việc và thiết bị công nghệ thông tin (IT) giữa các bên gồm:
+I. THÀNH PHẦN THAM GIA
+Bên giao: Ông: Lý Minh Tân
+Chức danh: Tổ phó Tổ Kỹ thuật địa chính và lưu trữ, kiêm IT cơ quan
+Bên nhận: Ông: Đỗ Trọng Minh Quân
+Hợp đồng lao động thử việc tiếp nhận công việc IT
+Người hướng dẫn:
+Ông: Phùng Vương Quốc
+Đại diện Lãnh đạo đơn vị:
+Bà: Nguyễn Thị Lệ Hằng
+Chức vụ: Lãnh đạo Chi nhánh
+II. NỘI DUNG BÀN GIAO
+1. Thiết bị và Dữ liệu Phòng máy chủ (Server)
+Tổng số lượng phần cứng tại phòng Server gồm: 03 máy chủ (Server), 01 thiết bị NAS Synology DS423+, 01 tường lửa phần cứng, 02 modem mạng VNPT
+Chi tiết từng thiết bị như sau:
+(Lưu ý: Toàn bộ thông tin tài khoản và mật khẩu đăng nhập của các thiết bị nêu trên được bàn giao bằng kênh bảo mật/danh sách riêng).
+2. Danh mục Thiết bị văn phòng (Máy tính, máy in, máy scan, photocopy)
+Số lượng, hiện trạng và vị trí bố trí máy trạm, máy in, máy quét (scan), máy photocopy được lập thành bảng thống kê chi tiết theo file đính kèm biên bản này.
+3. Thiết bị, linh kiện dự phòng mới
+4. Thiết bị lưu trữ ngoài (Ổ cứng di động lưu trữ dữ liệu qua các năm)
+III. Ý KIẾN CỦA ÔNG ĐỖ TRỌNG MINH QUÂN (BÊN TIẾP NHẬN BÀN GIAO)
+1. Về phạm vi chuyên môn và trách nhiệm tiếp nhận bàn giao
+Về năng lực chuyên môn: Chuyên môn nghiệp vụ đào tạo và kinh nghiệm công tác chính của tôi là Kỹ thuật phần mềm (Software Engineering), chuyên về phát triển ứng dụng phần mềm và quản trị dữ liệu số; hoàn toàn không được đào tạo chuyên sâu và không có chuyên môn về kỹ thuật phần cứng, quản trị hạ tầng mạng vật lý, bảo trì máy chủ và thiết bị viễn thông chuyên dụng.
+* Tuyên bố về việc tiếp nhận bàn giao phần cứng:
+TÔI XIN TUYÊN BỐ TỪ CHỐI TIẾP NHẬN BÀN GIAO ĐỐI VỚI TOÀN BỘ CÁC HẠNG MỤC THIẾT BỊ PHẦN CỨNG, HẠ TẦNG MẠNG VÀ THIẾT BỊ LƯU TRỮ.
+Cụ thể danh mục các hạng mục từ chối nhận bàn giao bao gồm:
+Toàn bộ hệ thống máy chủ vật lý (03 Server HP DL360 Gen8, Gen9, StoreEasy 1460);
+Thiết bị lưu trữ NAS Synology DS423+ và toàn bộ các ổ cứng di động lưu trữ ngoài (08 ổ cứng dung lượng 8TB, 4TB, 2TB);
+Hạ tầng mạng viễn thông, hệ thống chia mạng (Switch, Hub, Modem cáp quang);
+Thiết bị tường lửa phần cứng (Firewall FortiGate 61F);
+Toàn bộ các linh kiện phần cứng dự phòng thay thế và trách nhiệm bảo dưỡng, sửa chữa phần cứng máy tính/máy in/máy scan.
+* Lý do từ chối nhận bàn giao phần cứng:
+Do không có chuyên môn về kỹ thuật phần cứng, tôi không đủ năng lực để thẩm định, đo kiểm tình trạng kỹ thuật thực tế, độ hao mòn linh kiện, nguy cơ chập cháy/hư hỏng bo mạch, các cấu hình mảng đĩa RAID của hệ thống máy chủ và thiết bị lưu trữ.
+Nếu ký nhận bàn giao, tôi không thể chịu trách nhiệm pháp lý cũng như trách nhiệm bồi thường vật chất khi xảy ra sự cố hỏng hóc phần cứng ngoài ý muốn, mất mát dữ liệu do ổ đĩa xuống cấp hoặc gián đoạn mạng diện rộng của Chi nhánh.
+Việc bàn giao hệ thống hạ tầng CNTT phức tạp của một cơ quan nhà nước cho người không đúng chuyên môn phần cứng sẽ tạo ra rủi ro pháp lý và kỹ thuật rất lớn cho toàn thể hoạt động của Chi nhánh.
+2. Ý kiến phản biện và kiến nghị giải pháp đối với hoạt động CNTT của Chi nhánh
+Trong buổi làm việc, tôi có ghi nhận ý kiến trao đổi từ ông Phùng Vương Quốc (Đại diện Văn phòng Đăng ký Đất đai TP.HCM – Cơ sở 2) về định hướng phương án thuê đơn vị IT bên ngoài (Outsourcing) để phụ trách, hỗ trợ hệ thống cho Chi nhánh. Về vấn đề này, tôi xin phân tích và kiến nghị 02 phương án như sau:
+a) Đánh giá đối với Phương án thuê đơn vị IT hỗ trợ bên ngoài:
+Theo ý kiến chuyên môn cá nhân của tôi, phương án thuê đơn vị IT ngoài là KHÔNG TỐI ƯU và KHÔNG KHẢ THI, cụ thể:
+Về chi phí ngân sách: Chi phí hợp đồng thuê dịch vụ IT ngoài trọn gói (đáp ứng tiêu chuẩn quản trị Server, xử lý sự cố hạ tầng mạng 24/7 và túc trực hỗ trợ khoảng 80 máy trạm người dùng) thực tế sẽ cao hơn đáng kể so với chi phí chi trả lương và chế độ đãi ngộ để giữ chân nhân sự tại chỗ là ông Lý Minh Tân.
+Về nguy cơ bảo mật và an toàn thông tin: Chi nhánh số 23 quản lý khối lượng rất lớn dữ liệu đất đai số hóa, bản đồ địa chính, hồ sơ quét và hồ sơ giao dịch bảo đảm nhạy cảm. Việc cung cấp tài khoản quản trị hệ thống nội bộ (Root/Administrator, Firewall FortiGate, NAS, DNS Server) cho đơn vị dịch vụ bên ngoài là không khả thi và không phù hợp với tiêu chí bảo mật, quy chế an toàn thông tin nội bộ của cơ quan. Khi có sự cố rò rỉ hoặc thất thoát dữ liệu, việc quy định trách nhiệm pháp lý với bên thứ ba sẽ vô cùng phức tạp và tiềm ẩn rủi ro cao cho cơ quan.
+b) Đề xuất Phương án 2 (Kiến nghị xem xét giữ ông Lý Minh Tân tiếp tục công tác):
+Để đảm bảo tính liên tục, an toàn dữ liệu và tối ưu hóa ngân sách của cơ quan, tôi trân trọng đề xuất Lãnh đạo Chi nhánh báo cáo Lãnh đạo Văn phòng Đăng ký Đất đai Thành phố xem xét phương án động viên, tạo điều kiện để ông Lý Minh Tân tiếp tục ở lại công tác, thông qua việc giải quyết đồng bộ 02 nội dung sau:
+Về chế độ đãi ngộ:
+Xem xét tăng lương và áp dụng mức phụ cấp trách nhiệm công nghệ thông tin phù hợp với khối lượng công việc, tính chất đặc thù và áp lực quản trị toàn bộ hệ thống CNTT của Chi nhánh số 23.
+Về tháo gỡ khó khăn kỹ thuật và giải quyết các đề xuất trang bị bản quyền phần mềm:
+Đề nghị Lãnh đạo các cấp khẩn trương xem xét, bố trí kinh phí phê duyệt các nội dung cấp bách theo đúng Tờ trình số 1342/CN23-HCTH ngày 22/06/2026 của Chi nhánh, gồm:
+Bản quyền hệ điều hành Windows và Microsoft Office: Trang bị bản quyền đồng bộ cho toàn bộ máy tính phục vụ công tác chuyên môn, chấm dứt việc dùng phần mềm không bản quyền gây mất an toàn thông tin;
+Phần mềm diệt virus tập trung (Kaspersky Next EDR): Gia hạn bản quyền ngay lập tức (đã hết hạn từ ngày 23/03/2026) để bảo vệ 80 máy tính và hệ thống máy chủ trước nguy cơ mã độc tống tiền (Ransomware);
+Gói bản quyền Tường lửa FortiGate 61F: Khẩn trương gia hạn gói bảo vệ an ninh mạng UTP (hết hạn ngày 30/09/2026);
+Cấp kinh phí và hỗ trợ đầy đủ các phần mềm chuyên dụng phục vụ công tác kết nối Cơ sở dữ liệu đất đai.
+Ghi chú giải trình: Việc thiếu thốn bản quyền và hạ tầng tiềm ẩn nguy cơ rủi ro cao là gánh nặng trách nhiệm rất lớn đối với nhân sự IT. Khi Lãnh đạo giải quyết được bài toán bản quyền kết hợp cải thiện đãi ngộ, ông Lý Minh Tân – với kinh nghiệm nhiều năm nắm vững từng ngóc ngách của hệ thống Chi nhánh – sẽ tiếp tục đảm nhiệm công việc một cách hiệu quả và trơn tru nhất, không gây xáo trộn cho đơn vị.
+IV. KẾT THÚC VÀ XÁC NHẬN
+Biên bản này được lập xong vào hồi ...... giờ ...... phút, ngày ...... tháng ...... năm 2026.
+Hai bên đã tiến hành kiểm tra, xác nhận tình trạng thực tế và đồng ý ký tên dưới đây. Biên bản được lập thành các bản có giá trị pháp lý như nhau, mỗi bên giữ một bản để theo dõi, thực hiện./.
+
+=== [DANH SÁCH BẢNG BIỂU TRONG TÀI LIỆU] ===
+
+--- Bảng số 1 (3 hàng, 3 cột) ---
+VĂN PHÒNG ĐĂNG KÝ ĐẤT ĐAI THÀNH PHỐ HỒ CHÍ MINH CHI NHÁNH SỐ 23 |  | CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM Độc lập - Tự do - Hạnh phúc
+Số:           /CN23-HCTH |  | Thủ Dầu Một, ngày    tháng 09 năm 2026
+
+
+--- Bảng số 2 (7 hàng, 5 cột) ---
+STT | Thiết bị / Model | Địa chỉ IP | Chức năng / Nội dung dữ liệu lưu trữ | Ghi chú
+1 | Máy chủ 1 (HP DL360 Gen8) | 10.17.2.252 | Ứng dụng DNS; chứa dữ liệu hồ sơ quét cũ; hồ sơ giao dịch bảo đảm. | Đang hoạt động
+2 | Máy chủ 2 (HP DL360 Gen9) | 10.17.2.125 | Chứa folder Chung (ổ đĩa F); folder HSQ-TDM (ổ đĩa G); folder Banve DD (ổ đĩa H) và các dữ liệu khác. | Đang hoạt động
+3 | Máy chủ 3 (StoreEasy 1460) | 10.17.2.100 | Chứa folder Dataweb (gồm Banve DD và HSQ-TDM); folder HSQ-TDM chứa dữ liệu file Giấy chứng nhận của phần mềm Hồ sơ quét. | Đang hoạt động
+4 | Tường lửa FortiGate 61F | 192.168.1.254 | Quản trị an ninh mạng. | Đang hoạt động
+5 | NAS Backup (NAS423+) | 10.17.2.150:65001 | Sao lưu dữ liệu dự phòng. | Đang hoạt động
+6 | Modem VNPT (02 cái) | Theo cấu hình mạng | Đường truyền kết nối Internet. | Đang hoạt động
+
+--- Bảng số 3 (8 hàng, 5 cột) ---
+STT | Tên thiết bị / Linh kiện | Quy cách / Chủng loại | Số lượng | Tình trạng
+1 | Nguồn máy chủ (Server Power Supply) | Dành cho máy chủ | 02 cái | Mới
+2 | Quạt tản nhiệt máy chủ (Server Fan) | Dành cho máy chủ | 07 cái | Mới
+3 | Quạt tản nhiệt máy trạm | Dành cho PC | 07 cái | Mới
+4 | Nguồn máy trạm (PC Power Supply) | Dành cho PC | 05 cái | Mới
+5 | Chuột máy tính | Chuột cắm ngoài | 04 cái | Mới
+6 | Bộ lưu điện (UPS) | UPS 750VA | 01 cái | Mới
+7 | Máy in khổ A3 | HP LaserJet Pro M706n | 01 cái | Mới
+
+--- Bảng số 4 (4 hàng, 4 cột) ---
+STT | Loại dung lượng | Số lượng bàn giao | Hiện trạng lưu giữ / Ghi chú
+1 | Ổ 8TB | 03 ổ | Đầy đủ, lưu tại đơn vị
+2 | Ổ 4TB | 04 ổ | Trong đó: 03 ổ lưu tại đơn vị, 01 ổ hiện đơn vị triển khai phần mềm VBDLIS đang tạm giữ
+3 | Ổ 2TB | 01 ổ | Đầy đủ, lưu tại đơn vị
+
+--- Bảng số 5 (4 hàng, 2 cột) ---
+BÊN NHẬN | BÊN GIAO
+(Ký và ghi rõ họ tên)
+Đỗ Trọng Minh Quân | Lý Minh Tân
+
+
+--- Bảng số 6 (3 hàng, 2 cột) ---
+GIÁM SÁT | LÃNH ĐẠO CHI NHÁNH
+(Ký và ghi rõ họ tên) | (Ký, ghi rõ họ tên và đóng dấu)
+.................................................... | Nguyễn Thị Lệ Hằng

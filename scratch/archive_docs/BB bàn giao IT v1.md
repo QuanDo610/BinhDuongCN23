@@ -1,0 +1,205 @@
+# VĂN PHÒNG ĐĂNG KÝ ĐẤT ĐAI THÀNH PHỐ HỒ CHÍ MINH  
+## CHI NHÁNH SỐ 23
+
+---
+
+**CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM**  
+**Độc lập - Tự do - Hạnh phúc**  
+
+*Số: ............ /CN23-HCTH*  
+*Thủ Dầu Một, ngày 16 tháng 09 năm 2026*  
+
+---
+
+# BIÊN BẢN BÀN GIAO CÔNG VIỆC QUẢN TRỊ MẠNG VÀ HỆ THỐNG CÔNG NGHỆ THÔNG TIN
+
+Hôm nay, vào lúc 08 giờ 30 phút, ngày 16 tháng 09 năm 2026, tại trụ sở Chi nhánh Văn phòng Đăng ký Đất đai số 23 (Địa chỉ: Số 358 Huỳnh Văn Cù, phường Chánh Mỹ, thành phố Thủ Dầu Một), tiến hành cuộc họp lập biên bản bàn giao công việc và hệ thống thiết bị công nghệ thông tin (IT) giữa các bên liên quan, bao gồm:
+
+---
+
+## I. THÀNH PHẦN THAM GIA
+
+1. **Bên bàn giao:**
+   - **Ông: Lý Minh Tân**
+   - Chức danh / Bộ phận: Nhân viên IT phụ trách Quản trị mạng và Hệ thống CNTT Chi nhánh.
+
+2. **Bên tiếp nhận:**
+   - **Ông: Đỗ Trọng Minh Quân**
+   - Chức danh / Bộ phận: Tiếp nhận công việc IT.
+
+3. **Người giám sát / Đại diện cấp trên:**
+   - **Ông: Phùng Vương Quốc**
+   - Chức vụ / Đơn vị: Đại diện Văn phòng Đăng ký Đất đai Thành phố Hồ Chí Minh – Cơ sở 2.
+
+4. **Đại diện Lãnh đạo đơn vị:**
+   - **Bà: Nguyễn Thị Lệ Hằng**
+   - Chức vụ: Phó Giám đốc Chi nhánh Văn phòng Đăng ký Đất đai số 23.
+
+5. **Thành phần cùng tham dự (theo Thư mời số .../CN23 ngày 16/09/2026):**
+   - **Ông: Nguyễn Tiến Thịnh**
+   - **Ông: Nguyễn Hoàng Tiến**
+
+---
+
+## II. NỘI DUNG BÀN GIAO
+
+### 1. Thiết bị và Dữ liệu Phòng máy chủ (Server)
+Tổng số lượng thiết bị phần cứng tại phòng Server gồm: **03 máy chủ (Server), 01 thiết bị lưu trữ NAS Synology DS423+, 01 thiết bị tường lửa phần cứng FortiGate 61F, 02 modem mạng VNPT**.
+
+Chi tiết từng thiết bị như sau:
+
+| STT | Thiết bị / Model | Địa chỉ IP | Chức năng / Nội dung dữ liệu lưu trữ | Hiện trạng hoạt động | Ghi chú |
+| :---: | :--- | :--- | :--- | :---: | :--- |
+| 1 | **Máy chủ 1**<br>(HP DL360 Gen8) | 10.17.2.252 | Ứng dụng DNS; lưu trữ dữ liệu hồ sơ quét cũ; hồ sơ giao dịch bảo đảm. | Đang hoạt động | |
+| 2 | **Máy chủ 2**<br>(HP DL360 Gen9) | 10.17.2.125 | Chứa thư mục Chung (ổ F); thư mục HSQ-TDM (ổ G); thư mục Banve DD (ổ H) và các dữ liệu liên quan khác. | Đang hoạt động | |
+| 3 | **Máy chủ 3**<br>(StoreEasy 1460) | 10.17.2.100 | Chứa thư mục Dataweb (gồm Banve DD và HSQ-TDM); thư mục HSQ-TDM chứa dữ liệu file Giấy chứng nhận của phần mềm Hồ sơ quét. | Đang hoạt động | |
+| 4 | **Tường lửa**<br>(FortiGate 61F) | 192.168.1.254 | Quản trị an ninh mạng, kiểm soát truy cập và bảo mật hệ thống. | Đang hoạt động | Hạn license: 30/09/2026 *(Cần gia hạn)* |
+| 5 | **Thiết bị NAS Backup**<br>(Synology DS423+) | 10.17.2.150:65001 | Sao lưu dữ liệu dự phòng hệ thống. | Đang hoạt động | |
+| 6 | **Modem mạng**<br>(02 thiết bị) | Cấu hình mạng nội bộ | Cung cấp đường truyền kết nối Internet và mạng chuyên dùng của VNPT. | Đang hoạt động | 02 đường truyền |
+
+*(Ghi chú: Toàn bộ thông tin tài khoản quản trị và mật khẩu đăng nhập của các thiết bị nêu trên được bàn giao bằng biên bản/danh sách niêm phong bảo mật riêng).*
+
+---
+
+### 2. Danh mục Thiết bị văn phòng (Máy tính, máy in, máy scan, photocopy)
+Toàn bộ số lượng, hiện trạng kỹ thuật và vị trí bố trí thực tế của các máy trạm (PC), máy in, máy quét (scanner), máy photocopy tại các tổ chuyên môn trực thuộc Chi nhánh được thống kê chi tiết theo danh mục file đính kèm biên bản này.
+
+---
+
+### 3. Thiết bị, linh kiện dự phòng mới
+
+| STT | Tên thiết bị / Linh kiện | Quy cách / Chủng loại kỹ thuật | Số lượng | Tình trạng thực tế |
+| :---: | :--- | :--- | :---: | :---: |
+| 1 | Nguồn máy chủ (Server Power Supply) | Dành cho hệ thống Server HP | 02 cái | Mới 100% |
+| 2 | Quạt tản nhiệt máy chủ (Server Fan) | Dành cho hệ thống Server HP | 07 cái | Mới 100% |
+| 3 | Quạt tản nhiệt máy trạm | Dành cho thùng máy PC | 07 cái | Mới 100% |
+| 4 | Nguồn máy trạm (PC Power Supply) | Nguồn công suất tiêu chuẩn cho PC | 05 cái | Mới 100% |
+| 5 | Chuột máy tính | Chuột quang cắm cổng USB | 04 cái | Mới 100% |
+| 6 | Bộ lưu điện (UPS) | Công suất 750VA | 01 cái | Mới 100% |
+| 7 | Máy in khổ A3 | HP LaserJet Pro M706n | 01 cái | Mới 100% |
+
+---
+
+### 4. Thiết bị lưu trữ ngoài (Ổ cứng di động lưu trữ dữ liệu qua các năm)
+
+| STT | Dung lượng ổ cứng | Số lượng | Hiện trạng bàn giao / Vị trí lưu giữ |
+| :---: | :---: | :---: | :--- |
+| 1 | **Ổ cứng 8TB** | 03 ổ | Đầy đủ hiện trạng, đang lưu giữ tại đơn vị. |
+| 2 | **Ổ cứng 4TB** | 04 ổ | Trong đó: **03 ổ** lưu giữ tại đơn vị; **01 ổ** do đơn vị triển khai phần mềm cơ sở dữ liệu VBDLIS đang tạm giữ phục vụ công tác kết nối, chuyển giao dữ liệu. |
+| 3 | **Ổ cứng 2TB** | 01 ổ | Đầy đủ hiện trạng, đang lưu giữ tại đơn vị. |
+
+---
+
+## III. Ý KIẾN CỦA ÔNG ĐỖ TRỌNG MINH QUÂN (BÊN TIẾP NHẬN BÀN GIAO)
+
+Căn cứ vào buổi làm việc, khảo sát thực tế tình trạng hệ thống và nội dung bàn giao từ ông Lý Minh Tân, tôi là **Đỗ Trọng Minh Quân** có ý kiến chính thức, cụ thể như sau:
+
+### 1. Về phạm vi chuyên môn và trách nhiệm tiếp nhận bàn giao:
+- **Về năng lực chuyên môn:** Chuyên môn đào tạo và kinh nghiệm công tác chính của tôi là **Kỹ thuật phần mềm (Software Engineering)**, chuyên về phát triển ứng dụng phần mềm và quản lý dữ liệu số. Tôi hoàn toàn **không được đào tạo chuyên sâu và không có chuyên môn về kỹ thuật phần cứng, quản trị hạ tầng mạng vật lý, bảo trì máy chủ và thiết bị viễn thông chuyên dụng**.
+- **Tuyên bố về việc tiếp nhận bàn giao phần cứng:** 
+  > **TÔI XIN TUYÊN BỐ TỪ CHỐI TIẾP NHẬN BÀN GIAO ĐỐI VỚI TOÀN BỘ CÁC HẠNG MỤC THIẾT BỊ PHẦN CỨNG, HẠ TẦNG MẠNG VÀ THIẾT BỊ LƯU TRỮ.**
+  
+  Cụ thể danh mục các hạng mục **từ chối nhận bàn giao** bao gồm:
+  1. Toàn bộ hệ thống máy chủ vật lý (**03 Server** HP DL360 Gen8, Gen9, StoreEasy 1460);
+  2. Thiết bị lưu trữ **NAS Synology DS423+** và toàn bộ **08 ổ cứng di động** lưu trữ ngoài (loại 8TB, 4TB, 2TB);
+  3. Hạ tầng mạng nội bộ, thiết bị chia mạng (**Switch, Hub**, Modem cáp quang viễn thông);
+  4. Thiết bị tường lửa phần cứng (**Firewall FortiGate 61F**);
+  5. Toàn bộ các linh kiện phần cứng dự phòng mới và trách nhiệm sửa chữa phần cứng máy tính/máy in/máy scan.
+- **Lý do từ chối nhận bàn giao phần cứng:**
+  - Do không có chuyên môn kỹ thuật phần cứng, tôi không đủ năng lực thẩm định chính xác tình trạng kỹ thuật, mức độ hao mòn linh kiện, nguy cơ lỗi bo mạch, rủi ro chập cháy hoặc lỗi tiềm ẩn của hệ thống mảng đĩa RAID trên các máy chủ và thiết bị lưu trữ.
+  - Nếu ký nhận bàn giao, tôi không thể chịu trách nhiệm pháp lý cũng như trách nhiệm bồi thường vật chất khi xảy ra sự cố hư hỏng phần cứng đột xuất hoặc mất mát dữ liệu do thiết bị lưu trữ vật lý xuống cấp.
+  - Việc bàn giao hạ tầng CNTT phức tạp của đơn vị cho nhân sự không đúng chuyên môn phần cứng sẽ tạo ra rủi ro rất lớn đối với tính ổn định và an toàn hệ thống của Chi nhánh.
+
+---
+
+### 2. Ý kiến phản biện và kiến nghị giải pháp đối với hoạt động CNTT của Chi nhánh:
+
+Trong buổi làm việc, tôi có ghi nhận ý kiến trao đổi từ **ông Phùng Vương Quốc** (Đại diện Văn phòng Đăng ký Đất đai TP.HCM – Cơ sở 2) về định hướng thuê đơn vị IT hỗ trợ bên ngoài (Outsourcing). Sau khi cân nhắc kỹ lưỡng, tôi xin đóng góp ý kiến phân tích và đề xuất giải pháp như sau:
+
+#### a) Đánh giá đối với Phương án thuê đơn vị IT hỗ trợ bên ngoài:
+Theo đánh giá chuyên môn cá nhân của tôi, **phương án thuê đơn vị IT ngoài là KHÔNG TỐI ƯU VÀ KHÔNG KHẢ THI**, xuất phát từ các lý do:
+- **Vấn đề chi phí ngân sách:** Chi phí hợp đồng thuê dịch vụ IT ngoài trọn gói (đáp ứng tiêu chuẩn quản trị Server, xử lý sự cố hạ tầng mạng 24/7 và túc trực hỗ trợ khoảng 80 máy trạm người dùng) thực tế sẽ **cao hơn rất nhiều** so với chi phí chi trả lương và chế độ đãi ngộ để giữ chân nhân sự tại chỗ là ông Lý Minh Tân.
+- **Vấn đề bảo mật và an toàn thông tin:** Chi nhánh số 23 quản lý khối lượng dữ liệu đất đai, bản đồ địa chính, hồ sơ quét số hóa và hồ sơ giao dịch bảo đảm cực kỳ quan trọng và nhạy cảm. Việc giao quyền quản trị hệ thống nội bộ (Root/Administrator, Firewall, NAS, DNS) cho đơn vị bên ngoài là **không khả thi đối với các tiêu chí bảo mật, quy chế an toàn thông tin nội bộ của cơ quan**; đồng thời rất khó kiểm soát và quy kết trách nhiệm khi xảy ra sự cố lộ lọt dữ liệu.
+
+#### b) Đề xuất Phương án 2 (Kiến nghị xem xét giữ ông Lý Minh Tân tiếp tục công tác):
+Để đảm bảo tính liên tục, an toàn hệ thống và tiết kiệm tối đa ngân sách đơn vị, tôi trân trọng kiến nghị Lãnh đạo Chi nhánh báo cáo Lãnh đạo Văn phòng Đăng ký Đất đai Thành phố xem xét phương án **động viên, hỗ trợ để ông Lý Minh Tân tiếp tục ở lại công tác**, thông qua việc giải quyết đồng bộ 02 nội dung cấp bách sau:
+1. **Về chế độ đãi ngộ:** Xem xét tăng lương và áp dụng mức phụ cấp trách nhiệm CNTT phù hợp với khối lượng công việc, tính chất đặc thù và áp lực quản trị toàn bộ hạ tầng phần cứng của Chi nhánh *(chi tiết cơ sở mức lương thị trường được trình bày cụ thể tại Mục IV biên bản này)*.
+2. **Về giải quyết khó khăn kỹ thuật và kiến nghị bản quyền phần mềm:** Đề nghị Lãnh đạo các cấp khẩn trương xem xét, phê duyệt bố trí kinh phí trang bị bản quyền theo đúng Tờ trình số 1342/CN23-HCTH ngày 22/06/2026 của Chi nhánh, gồm:
+   - **Bản quyền Windows và Microsoft Office:** Trang bị đồng bộ cho máy trạm chuyên môn, chấm dứt việc dùng phần mềm không bản quyền;
+   - **Phần mềm diệt virus tập trung (Kaspersky Next EDR):** Gia hạn bản quyền ngay lập tức (đã hết hạn từ ngày 23/03/2026) để bảo vệ 80 máy tính và máy chủ trước nguy cơ mã độc tống tiền (Ransomware);
+   - **Gói bản quyền Tường lửa FortiGate 61F:** Kịp thời gia hạn gói dịch vụ bảo mật UTP (sắp hết hạn vào ngày 30/09/2026);
+   - Cấp kinh phí và hỗ trợ các phần mềm chuyên dụng phục vụ kết nối Cơ sở dữ liệu đất đai.
+- *Đánh giá:* Việc thiếu thốn bản quyền và công cụ bảo vệ là nguyên nhân chính tạo nên áp lực rủi ro đè nặng lên nhân sự IT. Khi Lãnh đạo tháo gỡ được bài toán bản quyền kết hợp nâng cao đãi ngộ, ông Lý Minh Tân – người đã nắm vững toàn bộ hệ thống qua nhiều năm – sẽ yên tâm tiếp tục công tác, giúp đơn vị duy trì vận hành ổn định và hiệu quả nhất.
+
+---
+
+## IV. CƠ SỞ KHẢO SÁT MỨC LƯƠNG THỊ TRƯỜNG VÀ ĐỀ XUẤT CHẾ ĐỘ ĐÃI NGỘ ĐỐI VỚI VỊ TRÍ IT CHI NHÁNH
+
+Để giúp Lãnh đạo Chi nhánh và Lãnh đạo Văn phòng Đăng ký Đất đai Thành phố có căn cứ khách quan, thực tiễn trong việc xem xét điều chỉnh chế độ đãi ngộ nhằm giữ chân nhân sự IT cơ hữu tại chỗ, tôi xin báo cáo tổng hợp kết quả đối chiếu khối lượng công việc thực tế với mặt bằng mức lương thị trường hiện nay như sau:
+
+### 1. Đánh giá thực trạng mức thu nhập và tính chất công việc thực tế của ông Lý Minh Tân:
+- **Thực trạng thu nhập hiện tại:** Mức lương hiện nay của ông Lý Minh Tân là **dưới 8.000.000 đồng/tháng** (chi trả theo hệ số lương nhà nước / hợp đồng đơn vị sự nghiệp).
+- **Khối lượng và áp lực công việc thực tế:** Tại Chi nhánh số 23, một nhân sự IT duy nhất là ông Tân đang phải đảm trách cùng lúc **03 nhóm vai trò độc lập** với áp lực và trách nhiệm pháp lý rất nặng nề:
+  1. *Vận hành, bảo trì máy trạm người dùng (IT Helpdesk):* Thường trực hỗ trợ phần cứng, mạng, cài đặt phần mềm, máy in, máy quét, máy photo cho gần 80 cán bộ, nhân viên chuyên môn của toàn Chi nhánh;
+  2. *Quản trị hạ tầng máy chủ và an ninh mạng (System & Network Administrator):* Quản trị vận hành cụm 03 máy chủ vật lý HP DL360 Gen8, Gen9, StoreEasy 1460 (chứa toàn bộ cơ sở dữ liệu hồ sơ quét, bản vẽ địa chính, giao dịch bảo đảm); quản trị thiết bị tường lửa FortiGate 61F; quản trị thiết bị lưu trữ NAS Synology DS423+ và trực tiếp quản lý sao lưu an toàn 08 ổ cứng ngoài dung lượng lớn (8TB, 4TB, 2TB);
+  3. *Trực kỹ thuật và ứng cứu sự cố khẩn cấp (SLA On-call 30 phút & Backup điện):* Thường trực sẵn sàng có mặt xử lý sự cố trong vòng 30 phút bất kể ngày đêm; chịu trách nhiệm vận hành an toàn hệ thống lưu điện (UPS 750VA) và quy trình đóng cắt máy chủ khi mất điện đột ngột để bảo vệ toàn vẹn dữ liệu đất đai của nhà nước.
+
+---
+
+### 2. Đối chiếu mức lương thị trường lao động theo các nguồn khảo sát uy tín:
+Căn cứ vào dữ liệu công bố chính thức từ các tổ chức nhân sự và nền tảng tuyển dụng CNTT hàng đầu tại Việt Nam (ITviec, Adecco Vietnam, TopCV, VietnamWorks), khung lương thị trường cho các vị trí tương ứng tại khu vực TP.HCM và Bình Dương như sau:
+
+| STT | Vị trí / Vai trò chuyên môn trên thị trường | Khung lương thị trường (Gross / tháng) | Mức trung vị (Median) hoặc phổ biến | Nguồn khảo sát uy tín |
+| :---: | :--- | :---: | :---: | :--- |
+| 1 | **IT Support / Helpdesk On-site**<br>*(Hỗ trợ người dùng, máy tính, máy in)* | 12.000.000 – 16.000.000 đ | **17.300.000 đ/tháng**<br>*(Theo ITviec)* | Báo cáo lương ITviec;<br>TopCV Salary Report |
+| 2 | **System Administrator (Quản trị hệ thống)**<br>*(Vận hành Server, Mạng, Firewall, Backup)* | 16.000.000 – 25.000.000 đ | **28.100.000 đ/tháng**<br>*(Theo ITviec)* | Báo cáo Hướng dẫn lương Adecco;<br>Báo cáo tuyển dụng TopCV |
+| 3 | **IT All-in-One kiêm Quản trị hệ thống**<br>+ Cam kết trực On-call khẩn cấp (SLA 30 phút) | 18.000.000 – 26.000.000 đ<br>*(Gồm lương + phụ cấp on-call)* | **20.000.000 – 22.000.000 đ** | Navigos Group / VietnamWorks;<br>Thị trường tuyển dụng DN/Nhà máy |
+
+**Danh mục nguồn tham khảo đối chiếu công khai, độ tin cậy cao:**
+- *Báo cáo Lương và Thị trường tuyển dụng IT của ITviec (Chuyên trang việc làm CNTT hàng đầu Việt Nam):* [https://itviec.com/blog/bao-cao-luong-it/](https://itviec.com/blog/bao-cao-luong-it/)
+- *Báo cáo Hướng dẫn Lương (Salary Guide 2025 - 2026) của Adecco Vietnam (Tập đoàn nhân sự quốc tế):* [https://www.adecco.com.vn/salary-guide](https://www.adecco.com.vn/salary-guide)
+- *Báo cáo thị trường tuyển dụng và Công cụ tra cứu lương theo vị trí của TopCV:* [https://www.topcv.vn](https://www.topcv.vn) và [https://www.topcv.vn/tinh-luong-gross-net](https://www.topcv.vn/tinh-luong-gross-net)
+- *Dữ liệu tuyển dụng Chuyên viên Quản trị Hệ thống (System Admin / IT Support) tại TP.HCM & Bình Dương trên VietnamWorks:* [https://www.vietnamworks.com](https://www.vietnamworks.com)
+
+---
+
+### 3. Đề xuất cơ chế tài chính nhằm nâng mức thu nhập, giữ chân nhân sự IT:
+Do Chi nhánh là đơn vị sự nghiệp công lập thực hiện cơ chế tự chủ tài chính theo Nghị định 60/2021/NĐ-CP, việc chi trả lương cứng theo ngạch bậc nhà nước có khung giới hạn. Để nâng tổng thu nhập thực tế của ông Tân tiệm cận mức thị trường (mục tiêu từ **14.000.000 đến 18.000.000 đồng/tháng**) nhằm giữ chân nhân sự giàu kinh nghiệm, trân trọng kiến nghị Lãnh đạo xem xét áp dụng linh hoạt các giải pháp sau:
+1. **Bổ sung Phụ cấp trách nhiệm công nghệ thông tin & an toàn thông tin:** Đưa vào Quy chế chi tiêu nội bộ của đơn vị mức phụ cấp trách nhiệm chuyên trách hạ tầng mạng và an ninh dữ liệu tương xứng với rủi ro quản lý hệ thống máy chủ CSDL đất đai;
+2. **Chi trả Chế độ trực ứng cứu khẩn cấp ngoài giờ (SLA 30 phút) và trực phòng ngừa sự cố điện:** Thanh toán chế độ làm thêm giờ, phụ cấp thường trực kỹ thuật theo đúng quy định của Bộ luật Lao động;
+3. **Ưu tiên phân loại đánh giá hoàn thành xuất sắc nhiệm vụ:** Tạo điều kiện để nhân sự IT được hưởng mức chi thu nhập tăng thêm tối đa hàng quý/năm từ nguồn thu sự nghiệp của Chi nhánh.
+
+---
+
+## V. KẾT THÚC VÀ XÁC NHẬN
+
+1. Biên bản này được lập xong vào hồi ...... giờ ...... phút, ngày 16 tháng 09 năm 2026 tại Chi nhánh Văn phòng Đăng ký Đất đai số 23.
+2. Toàn bộ thành phần tham gia đã nghe đọc lại toàn bộ biên bản, thống nhất với các nội dung ghi nhận, bảo lưu đầy đủ ý kiến chuyên môn của từng cá nhân và cùng ký tên xác nhận dưới đây.
+3. Biên bản được lập thành 04 (bốn) bản có giá trị pháp lý như nhau:
+   - 01 bản lưu tại Lãnh đạo Chi nhánh Văn phòng Đăng ký Đất đai số 23;
+   - 01 bản gửi Văn phòng Đăng ký Đất đai Thành phố Hồ Chí Minh (Cơ sở 2);
+   - 01 bản giao Bên bàn giao (ông Lý Minh Tân);
+   - 01 bản giao Bên tiếp nhận (ông Đỗ Trọng Minh Quân).
+
+---
+
+### CHỮ KÝ CÁC BÊN LIÊN QUAN
+
+| BÊN TIẾP NHẬN BÀN GIAO | BÊN BÀN GIAO |
+| :---: | :---: |
+| *(Ký và ghi rõ họ tên)* | *(Ký và ghi rõ họ tên)* |
+| <br><br><br><br>**Đỗ Trọng Minh Quân** | <br><br><br><br>**Lý Minh Tân** |
+
+<br>
+
+| NGƯỜI GIÁM SÁT / ĐẠI DIỆN VPĐKĐĐ TP.HCM (CƠ SỞ 2) | ĐẠI DIỆN LÃNH ĐẠO CHI NHÁNH SỐ 23 |
+| :---: | :---: |
+| *(Ký và ghi rõ họ tên)* | *(Ký, ghi rõ họ tên và đóng dấu)* |
+| <br><br><br><br>**Phùng Vương Quốc** | <br><br><br><br>**Nguyễn Thị Lệ Hằng**<br>*Phó Giám đốc* |
+
+<br>
+
+| CÁC THÀNH PHẦN THAM DỰ |
+| :---: |
+| *(Ký và ghi rõ họ tên)* |
+| <br><br><br>**Nguyễn Tiến Thịnh** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **Nguyễn Hoàng Tiến** |

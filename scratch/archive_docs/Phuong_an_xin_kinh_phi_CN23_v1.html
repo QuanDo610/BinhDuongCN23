@@ -1,0 +1,1561 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phương án xin kinh phí trang bị tài sản Giám đốc, chống thấm trụ sở và thiết bị PCCC - CN23</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+        }
+        
+        .font-doc {
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .tab-btn.active {
+            color: #1d4ed8;
+            border-bottom: 3px solid #1d4ed8;
+            background-color: #eff6ff;
+            font-weight: 600;
+        }
+        
+        @media print {
+            .no-print { display: none !important; }
+            body { background: white; color: black; }
+            .print-page { box-shadow: none !important; border: none !important; width: 100% !important; margin: 0 !important; padding: 0 !important; }
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <!-- Top Header Navigation -->
+    <header class="bg-gradient-to-r from-blue-900 via-indigo-900 to-blue-950 text-white shadow-lg sticky top-0 z-50 no-print">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex flex-wrap justify-between items-center gap-4">
+            <div class="flex items-center space-x-3">
+                <div class="bg-blue-600/30 p-2 rounded-xl backdrop-blur-md border border-blue-400/30 text-amber-300">
+                    <i data-lucide="file-check-2" class="w-6 h-6"></i>
+                </div>
+                <div>
+                    <h1 class="text-lg font-bold tracking-tight">HỆ THỐNG QUẢN LÝ VĂN BẢN & PHƯƠNG ÁN DỰ TOÁN</h1>
+                    <p class="text-xs text-blue-200">Chi nhánh Văn phòng Đăng ký đất đai số 23 • Phiên bản v1 (13/10/2026)</p>
+                </div>
+            </div>
+            
+            <div class="flex items-center space-x-2">
+                <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-400/30">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 mr-1.5 animate-pulse"></span>
+                    Đã chuẩn hóa NĐ 30/2020 & QC 355
+                </span>
+                <button onclick="window.print()" class="px-3.5 py-1.5 rounded-lg bg-blue-700 hover:bg-blue-600 text-white text-xs font-medium flex items-center space-x-1.5 transition shadow">
+                    <i data-lucide="printer" class="w-4 h-4"></i>
+                    <span>In / Xuất PDF</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+        
+        <!-- Summary Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6 no-print">
+            <div class="bg-white rounded-2xl p-4 shadow-sm border border-slate-200/80 hover:shadow-md transition">
+                <div class="flex items-center justify-between mb-2">
+                    <span class="text-xs font-bold uppercase tracking-wider text-slate-500">Tổng Dự Toán Đề Nghị</span>
+                    <span class="p-2 bg-blue-50 text-blue-600 rounded-xl"><i data-lucide="dollar-sign" class="w-5 h-5"></i></span>
+                </div>
+                <div class="text-2xl font-black text-blue-900 tracking-tight">275.828.123 ₫</div>
+                <p class="text-xs text-slate-500 mt-1">Đã bao gồm thuế GTGT 8% (20.434.676 ₫)</p>
+            </div>
+
+            <div class="bg-white rounded-2xl p-4 shadow-sm border border-slate-200/80 hover:shadow-md transition">
+                <div class="flex items-center justify-between mb-2">
+                    <span class="text-xs font-bold uppercase tracking-wider text-slate-500">Tài Sản GĐ Mới Nhậm Chức</span>
+                    <span class="p-2 bg-amber-50 text-amber-600 rounded-xl"><i data-lucide="user-check" class="w-5 h-5"></i></span>
+                </div>
+                <div class="text-2xl font-bold text-slate-800 tracking-tight">64.000.000 ₫</div>
+                <p class="text-xs text-slate-500 mt-1">QĐ 8541 • Định mức QC 355 (Bảo lưu 0,6)</p>
+            </div>
+
+            <div class="bg-white rounded-2xl p-4 shadow-sm border border-slate-200/80 hover:shadow-md transition">
+                <div class="flex items-center justify-between mb-2">
+                    <span class="text-xs font-bold uppercase tracking-wider text-slate-500">Chống Thấm Trụ Sở (Mẫu CN34)</span>
+                    <span class="p-2 bg-emerald-50 text-emerald-600 rounded-xl"><i data-lucide="shield-check" class="w-5 h-5"></i></span>
+                </div>
+                <div class="text-2xl font-bold text-slate-800 tracking-tight">188.834.923 ₫</div>
+                <p class="text-xs text-slate-500 mt-1">Sàn mái 357,43m² • Tường 285,38m²</p>
+            </div>
+
+            <div class="bg-white rounded-2xl p-4 shadow-sm border border-slate-200/80 hover:shadow-md transition">
+                <div class="flex items-center justify-between mb-2">
+                    <span class="text-xs font-bold uppercase tracking-wider text-slate-500">Thiết Bị PCCC Cơ Sở</span>
+                    <span class="p-2 bg-rose-50 text-rose-600 rounded-xl"><i data-lucide="flame" class="w-5 h-5"></i></span>
+                </div>
+                <div class="text-2xl font-bold text-slate-800 tracking-tight">22.993.200 ₫</div>
+                <p class="text-xs text-slate-500 mt-1">Bình bột, CO2, đèn Exit, mặt nạ độc...</p>
+            </div>
+        </div>
+
+        <!-- Tab Controls -->
+        <div class="bg-white rounded-2xl shadow-sm border border-slate-200/80 mb-6 p-1.5 flex flex-wrap gap-1 no-print">
+            <button onclick="switchTab('doc-view')" id="btn-doc-view" class="tab-btn active px-4 py-2.5 rounded-xl text-sm font-medium transition flex items-center space-x-2">
+                <i data-lucide="file-text" class="w-4 h-4"></i>
+                <span>Văn bản Phương án (Nghị định 30)</span>
+            </button>
+            <button onclick="switchTab('table-view')" id="btn-table-view" class="tab-btn px-4 py-2.5 rounded-xl text-sm font-medium transition flex items-center space-x-2">
+                <i data-lucide="table" class="w-4 h-4"></i>
+                <span>Bảng tra cứu Dự toán (Biểu 2)</span>
+            </button>
+            <button onclick="switchTab('source-view')" id="btn-source-view" class="tab-btn px-4 py-2.5 rounded-xl text-sm font-medium transition flex items-center space-x-2">
+                <i data-lucide="layers" class="w-4 h-4"></i>
+                <span>Đối chiếu 5 Văn bản Nguồn</span>
+            </button>
+            <button onclick="switchTab('chart-view')" id="btn-chart-view" class="tab-btn px-4 py-2.5 rounded-xl text-sm font-medium transition flex items-center space-x-2">
+                <i data-lucide="pie-chart" class="w-4 h-4"></i>
+                <span>Biểu đồ & Phân tích Đấu thầu</span>
+            </button>
+        </div>
+
+        <!-- ================= TAB 1: VĂN BẢN PHƯƠNG ÁN (NGHỊ ĐỊNH 30) ================= -->
+        <div id="tab-doc-view" class="tab-content block">
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-8 sm:p-12 max-w-4xl mx-auto print-page font-doc text-[13.5pt] leading-[1.35] text-black">
+                
+                <!-- ============================================================ -->
+                <!-- PHẦN ĐẦU: MỤC LỤC & DANH MỤC BIỂU (Y CHANG MẪU CN34) -->
+                <!-- KHÔNG CÓ TIÊU ĐỀ TIÊU NGỮ ĐẦU TRANG THEO ĐÚNG MẪU CN34 -->
+                <!-- ============================================================ -->
+                <div class="text-center font-bold text-[15pt] uppercase tracking-wide mb-6">MỤC LỤC</div>
+
+                <div class="space-y-1.5 text-[11.5pt] mb-8">
+                    <div class="flex items-baseline justify-between font-bold">
+                        <span>MỤC ĐÍCH</span>
+                        <span class="flex-grow border-b border-dotted border-slate-400 mx-2"></span>
+                        <span>1</span>
+                    </div>
+                    <div class="flex items-baseline justify-between font-bold pl-3">
+                        <span>A. Giới thiệu chung về hoạt động của hệ thống Văn phòng đăng ký đất đai Thành phố Hồ Chí Minh</span>
+                        <span class="flex-grow border-b border-dotted border-slate-400 mx-2"></span>
+                        <span>1</span>
+                    </div>
+                    <div class="flex items-baseline justify-between pl-6 text-slate-800">
+                        <span>1. Căn cứ pháp lý</span>
+                        <span class="flex-grow border-b border-dotted border-slate-400 mx-2"></span>
+                        <span>1</span>
+                    </div>
+                    <div class="flex items-baseline justify-between pl-6 text-slate-800">
+                        <span>2. Vị trí, chức năng, nhiệm vụ, quyền hạn</span>
+                        <span class="flex-grow border-b border-dotted border-slate-400 mx-2"></span>
+                        <span>3</span>
+                    </div>
+                    <div class="flex items-baseline justify-between pl-6 text-slate-800">
+                        <span>3. Cơ cấu tổ chức</span>
+                        <span class="flex-grow border-b border-dotted border-slate-400 mx-2"></span>
+                        <span>4</span>
+                    </div>
+                    <div class="flex items-baseline justify-between pl-6 text-slate-800">
+                        <span>4. Chế độ làm việc</span>
+                        <span class="flex-grow border-b border-dotted border-slate-400 mx-2"></span>
+                        <span>5</span>
+                    </div>
+                    <div class="flex items-baseline justify-between pl-6 text-slate-800">
+                        <span>5. Các tổ chức chính trị, chính trị - xã hội</span>
+                        <span class="flex-grow border-b border-dotted border-slate-400 mx-2"></span>
+                        <span>5</span>
+                    </div>
+                    <div class="flex items-baseline justify-between pl-6 text-slate-800">
+                        <span>6. Số lượng viên chức, lao động hợp đồng</span>
+                        <span class="flex-grow border-b border-dotted border-slate-400 mx-2"></span>
+                        <span>5</span>
+                    </div>
+                    <div class="flex items-baseline justify-between pl-6 text-slate-800">
+                        <span>7. Trụ sở hoạt động</span>
+                        <span class="flex-grow border-b border-dotted border-slate-400 mx-2"></span>
+                        <span>6</span>
+                    </div>
+                    <div class="flex items-baseline justify-between pl-6 text-slate-800">
+                        <span>8. Về cơ chế tài chính</span>
+                        <span class="flex-grow border-b border-dotted border-slate-400 mx-2"></span>
+                        <span>6</span>
+                    </div>
+                    <div class="flex items-baseline justify-between font-bold pl-3">
+                        <span>B. Mục đích của phương án</span>
+                        <span class="flex-grow border-b border-dotted border-slate-400 mx-2"></span>
+                        <span>7</span>
+                    </div>
+                    <div class="flex items-baseline justify-between pl-6 text-slate-800">
+                        <span>1. Căn cứ xây dựng phương án</span>
+                        <span class="flex-grow border-b border-dotted border-slate-400 mx-2"></span>
+                        <span>7</span>
+                    </div>
+                    <div class="flex items-baseline justify-between pl-6 text-slate-800">
+                        <span>2. Việc xây dựng phương án nhằm các mục đích sau</span>
+                        <span class="flex-grow border-b border-dotted border-slate-400 mx-2"></span>
+                        <span>8</span>
+                    </div>
+                    <div class="flex items-baseline justify-between font-bold mt-2">
+                        <span>II. YÊU CẦU</span>
+                        <span class="flex-grow border-b border-dotted border-slate-400 mx-2"></span>
+                        <span>9</span>
+                    </div>
+                    <div class="flex items-baseline justify-between pl-6 text-slate-800">
+                        <span>1. Phạm vi thực hiện</span>
+                        <span class="flex-grow border-b border-dotted border-slate-400 mx-2"></span>
+                        <span>9</span>
+                    </div>
+                    <div class="flex items-baseline justify-between pl-6 text-slate-800">
+                        <span>2. Về công tác thi công và mua sắm trang thiết bị</span>
+                        <span class="flex-grow border-b border-dotted border-slate-400 mx-2"></span>
+                        <span>9</span>
+                    </div>
+                    <div class="flex items-baseline justify-between pl-6 text-slate-800">
+                        <span>3. Yêu cầu kỹ thuật đối với đơn vị cung cấp/thi công</span>
+                        <span class="flex-grow border-b border-dotted border-slate-400 mx-2"></span>
+                        <span>11</span>
+                    </div>
+                    <div class="flex items-baseline justify-between pl-6 text-slate-800">
+                        <span>4. Về nội dung chi phí thực hiện</span>
+                        <span class="flex-grow border-b border-dotted border-slate-400 mx-2"></span>
+                        <span>12</span>
+                    </div>
+                    <div class="flex items-baseline justify-between font-bold mt-2">
+                        <span>III. NỘI DUNG - KHỐI LƯỢNG & QUY TRÌNH THỰC HIỆN</span>
+                        <span class="flex-grow border-b border-dotted border-slate-400 mx-2"></span>
+                        <span>12</span>
+                    </div>
+                    <div class="flex items-baseline justify-between pl-6 text-slate-800">
+                        <span>1. Cơ sở pháp lý (Đấu thầu, Tài sản công, Thuế suất 8%)</span>
+                        <span class="flex-grow border-b border-dotted border-slate-400 mx-2"></span>
+                        <span>12</span>
+                    </div>
+                    <div class="flex items-baseline justify-between pl-6 text-slate-800">
+                        <span>2. Nội dung và khối lượng (Biểu 1)</span>
+                        <span class="flex-grow border-b border-dotted border-slate-400 mx-2"></span>
+                        <span>13</span>
+                    </div>
+                    <div class="flex items-baseline justify-between pl-6 text-slate-800">
+                        <span>3. Quy trình thực hiện (6 bước) & Trách nhiệm nghiệm thu</span>
+                        <span class="flex-grow border-b border-dotted border-slate-400 mx-2"></span>
+                        <span>14</span>
+                    </div>
+                    <div class="flex items-baseline justify-between font-bold mt-2">
+                        <span>IV. DỰ TOÁN KINH PHÍ</span>
+                        <span class="flex-grow border-b border-dotted border-slate-400 mx-2"></span>
+                        <span>15</span>
+                    </div>
+                    <div class="flex items-baseline justify-between pl-6 text-slate-800">
+                        <span>1. Dự toán kinh phí (Biểu 2: Bảng 8 cột so sánh 3 đơn vị)</span>
+                        <span class="flex-grow border-b border-dotted border-slate-400 mx-2"></span>
+                        <span>15</span>
+                    </div>
+                    <div class="flex items-baseline justify-between pl-6 text-slate-800">
+                        <span>2. Nguồn kinh phí (Quỹ Phát triển hoạt động sự nghiệp)</span>
+                        <span class="flex-grow border-b border-dotted border-slate-400 mx-2"></span>
+                        <span>17</span>
+                    </div>
+                    <div class="flex items-baseline justify-between font-bold mt-2">
+                        <span>IV. HỒ SƠ ĐÍNH KÈM VÀ PHÂN CÔNG LƯU TRỮ HỒ SƠ</span>
+                        <span class="flex-grow border-b border-dotted border-slate-400 mx-2"></span>
+                        <span>17</span>
+                    </div>
+                    <div class="flex items-baseline justify-between pl-6 text-slate-800">
+                        <span>1. Hồ sơ đính kèm (03 bảng báo giá)</span>
+                        <span class="flex-grow border-b border-dotted border-slate-400 mx-2"></span>
+                        <span>17</span>
+                    </div>
+                    <div class="flex items-baseline justify-between pl-6 text-slate-800">
+                        <span>2. Số lượng bản phương án dự toán ký chính (03 bản)</span>
+                        <span class="flex-grow border-b border-dotted border-slate-400 mx-2"></span>
+                        <span>18</span>
+                    </div>
+                    <div class="flex items-baseline justify-between pl-6 text-slate-800">
+                        <span>3. Lưu trữ hồ sơ</span>
+                        <span class="flex-grow border-b border-dotted border-slate-400 mx-2"></span>
+                        <span>18</span>
+                    </div>
+                    <div class="flex items-baseline justify-between pl-6 text-slate-800">
+                        <span>4. Số hóa hồ sơ</span>
+                        <span class="flex-grow border-b border-dotted border-slate-400 mx-2"></span>
+                        <span>18</span>
+                    </div>
+                    <div class="flex items-baseline justify-between font-bold mt-2">
+                        <span>Phụ lục 01: Bảng báo giá của 03 đơn vị cung cấp / thi công</span>
+                        <span class="flex-grow border-b border-dotted border-slate-400 mx-2"></span>
+                        <span>19</span>
+                    </div>
+                </div>
+
+                <div class="border-t border-slate-200 pt-4 mb-8">
+                    <div class="text-center font-bold text-[13pt] uppercase mb-3">DANH MỤC BIỂU VÀ PHỤ LỤC</div>
+                    <div class="space-y-1.5 text-[11.5pt]">
+                        <div class="flex items-baseline justify-between">
+                            <span>Biểu 1: Nội dung và khối lượng</span>
+                            <span class="flex-grow border-b border-dotted border-slate-400 mx-2"></span>
+                            <span>13</span>
+                        </div>
+                        <div class="flex items-baseline justify-between">
+                            <span>Biểu 2: Dự toán kinh phí sửa chữa chống thấm và trang bị tài sản</span>
+                            <span class="flex-grow border-b border-dotted border-slate-400 mx-2"></span>
+                            <span>15</span>
+                        </div>
+                        <div class="flex items-baseline justify-between">
+                            <span>Phụ lục 01: Bảng báo giá của 03 đơn vị cung cấp / thi công</span>
+                            <span class="flex-grow border-b border-dotted border-slate-400 mx-2"></span>
+                            <span>19</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dải phân cách trang Word -->
+                <div class="my-8 border-t-2 border-dashed border-slate-300 relative text-center">
+                    <span class="bg-white px-3 text-xs text-slate-400 -top-2.5 relative italic">--- Bắt đầu nội dung Phương án (Trang 1) ---</span>
+                </div>
+
+                <!-- ============================================================ -->
+                <!-- NỘI DUNG CHÍNH THEO BỘ KHUNG CHUẨN CN34 -->
+                <!-- ============================================================ -->
+                <div class="text-[12pt] font-bold text-slate-900 mb-6 space-y-0.5">
+                    <div>Chủ quản: Sở Nông nghiệp và Môi trường</div>
+                    <div>Đơn vị: Văn phòng Đăng ký đất đai Thành phố Hồ Chí Minh</div>
+                    <div>Mã số QHNS: 1122149</div>
+                </div>
+
+                <div class="text-center my-6">
+                    <div class="text-[15pt] font-bold uppercase tracking-tight">PHƯƠNG ÁN DỰ TOÁN</div>
+                    <div class="text-[13pt] font-bold mt-2 max-w-2xl mx-auto leading-snug">
+                        Công tác: “Trang bị tài sản làm việc cho Giám đốc Chi nhánh mới nhậm chức theo Quyết định số 8541/QĐ-SNNMT-VP và Quy chế chi tiêu nội bộ số 355; sửa chữa chống thấm trụ sở và trang bị thiết bị phòng cháy, chữa cháy tại Chi nhánh Văn phòng Đăng ký đất đai số 23”
+                    </div>
+                </div>
+
+                <!-- I. MỤC ĐÍCH -->
+                <div class="mb-6">
+                    <div class="font-bold uppercase text-[14pt] text-slate-900 mb-2">MỤC ĐÍCH</div>
+                    
+                    <div class="font-bold text-[13pt] text-slate-800 mb-2">A. Giới thiệu chung về hoạt động của hệ thống Văn phòng đăng ký đất đai Thành phố Hồ Chí Minh:</div>
+                    
+                    <div class="font-bold text-[13pt] mt-3 mb-1">1. Căn cứ pháp lý</div>
+                    <div class="italic text-[12.5pt] font-semibold text-slate-700 mb-1">Luật Đất đai và các Nghị định, Thông tư hướng dẫn</div>
+                    <ul class="list-disc pl-6 space-y-1 text-justify text-[12.5pt]">
+                        <li>Luật Đất đai số 31/2024/QH15 được sửa đổi bổ sung một số điều theo Luật số 43/2024/QH15;</li>
+                        <li>Nghị định số 101/2024/NĐ-CP ngày 29/7/2024 của Chính phủ quy định về điều tra cơ bản đất đai; đăng ký, cấp giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản gắn liền với đất và hệ thống thông tin đất đai;</li>
+                        <li>Nghị định số 102/2024/NĐ-CP ngày 30/7/2024 của Chính phủ quy định chi tiết thi hành một số điều của Luật Đất đai;</li>
+                        <li>Nghị định số 151/2025/NĐ-CP ngày 12/6/2025 của Chính phủ về phân định thẩm quyền của chính quyền địa phương 02 cấp;</li>
+                        <li>Nghị định số 226/2025/NĐ-CP ngày 15/8/2025 sửa đổi, bổ sung các Nghị định quy định chi tiết Luật Đất đai;</li>
+                        <li>Thông tư số 08/2024/TT-BTNMT, Thông tư số 10/2024/TT-BTNMT và Thông tư số 23/2025/TT-BTNMT.</li>
+                    </ul>
+
+                    <div class="italic text-[12.5pt] font-semibold text-slate-700 mt-3 mb-1">a/ Văn bản về cơ chế của đơn vị sự nghiệp công lập</div>
+                    <ul class="list-disc pl-6 space-y-1 text-justify text-[12.5pt]">
+                        <li>Nghị định số 60/2021/NĐ-CP ngày 21/6/2021 của Chính phủ quy định cơ chế tự chủ tài chính của đơn vị sự nghiệp công lập;</li>
+                        <li>Nghị định số 106/2020/NĐ-CP ngày 10/9/2020 về vị trí việc làm và số lượng người làm việc;</li>
+                        <li>Nghị định số 120/2020/NĐ-CP, Nghị định số 111/2022/NĐ-CP, Nghị định số 111/2025/NĐ-CP; Thông tư số 56/2022/TT-BTC.</li>
+                    </ul>
+
+                    <div class="italic text-[12.5pt] font-semibold text-slate-700 mt-3 mb-1">b/ Văn bản về thành lập, ban hành Quy chế tổ chức và hoạt động</div>
+                    <ul class="list-disc pl-6 space-y-1 text-justify text-[12.5pt]">
+                        <li>Quyết định số 1886/QĐ-UBND ngày 01/10/2025 của UBND Thành phố về tổ chức lại Văn phòng Đăng ký đất đai TP.HCM trên cơ sở hợp nhất TP.HCM, tỉnh Bình Dương và tỉnh Bà Rịa – Vũng Tàu;</li>
+                        <li>Quyết định số 2637/QĐ-SNNMT-VP ngày 15/12/2025 của Giám đốc Sở Nông nghiệp và Môi trường ban hành Quy định chức năng, nhiệm vụ, quyền hạn và cơ cấu tổ chức của Chi nhánh Văn phòng Đăng ký đất đai số 23.</li>
+                    </ul>
+
+                    <div class="italic text-[12.5pt] font-semibold text-slate-700 mt-3 mb-1">c/ Văn bản về quy chế tài chính</div>
+                    <ul class="list-disc pl-6 space-y-1 text-justify text-[12.5pt]">
+                        <li>Quyết định số 2882/QĐ-SNNMT-KHTC ngày 29/12/2025, Quyết định số 792/QĐ-SNNMT-KHTC, QĐ số 805, QĐ số 907 và QĐ số 1020/QĐ-SNNMT-KHTC ngày 04/3/2026 của Sở NN&MT giao chỉ tiêu dự toán;</li>
+                        <li><strong>Quyết định số 355/QĐ-VPĐK-KHTC ngày 23/01/2026</strong> của Giám đốc Văn phòng Đăng ký đất đai Thành phố Hồ Chí Minh ban hành Quy chế chi tiêu nội bộ, quản lý và sử dụng tài sản công (sửa đổi theo QĐ 2162/QĐ-VPĐK-KHTC ngày 04/6/2026);</li>
+                        <li><strong>Quyết định số 8541/QĐ-SNNMT-VP ngày 30/9/2026</strong> của Sở Nông nghiệp và Môi trường bổ nhiệm Giám đốc Chi nhánh số 23 đối với ông Nguyễn Chiến Thắng từ ngày 01/10/2026.</li>
+                    </ul>
+
+                    <div class="italic text-[12.5pt] font-semibold text-slate-700 mt-3 mb-1">d/ Văn bản về định mức kinh tế kỹ thuật</div>
+                    <p class="text-justify text-[12.5pt] indent-6">Thông tư số 03/2022/TT-BTNMT ngày 28/02/2022 và Thông tư số 136/2017/TT-BTC ngày 22/12/2017 của Bộ Tài chính.</p>
+
+                    <div class="font-bold text-[13pt] mt-4 mb-1">2. Vị trí, chức năng, nhiệm vụ, quyền hạn</div>
+                    <p class="text-justify text-[12.5pt] indent-6">Chi nhánh Văn phòng đăng ký đất đai số 23 là đơn vị sự nghiệp công lập trực thuộc Văn phòng đăng ký đất đai Thành phố Hồ Chí Minh, có tư cách pháp nhân, có con dấu riêng và được mở tài khoản theo quy định; thực hiện chức năng đăng ký đất đai, nhà ở và tài sản gắn liền với đất; xây dựng, quản lý, cập nhật, chỉnh lý hồ sơ địa chính và cơ sở dữ liệu đất đai trên địa bàn phụ trách.</p>
+
+                    <div class="font-bold text-[13pt] mt-4 mb-2">3. Cơ cấu tổ chức</div>
+                    <div class="overflow-x-auto my-3">
+                        <table class="w-full border-collapse border border-black text-[11.5pt]">
+                            <thead>
+                                <tr class="bg-slate-100 font-bold text-center">
+                                    <th class="border border-black p-2 w-12">Stt</th>
+                                    <th class="border border-black p-2 w-64">Cơ cấu tổ chức</th>
+                                    <th class="border border-black p-2">Nhiệm vụ chủ yếu</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="font-bold bg-slate-50">
+                                    <td class="border border-black p-2 text-center"></td>
+                                    <td class="border border-black p-2" colspan="2">CHI NHÁNH VĂN PHÒNG ĐĂNG KÝ ĐẤT ĐAI SỐ 23:</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-black p-2 text-center font-bold">1</td>
+                                    <td class="border border-black p-2 font-bold">Ban Giám đốc</td>
+                                    <td class="border border-black p-2 text-justify">01 Giám đốc. 01 Phó Giám đốc. Lãnh đạo, chỉ đạo, quản lý và điều hành toàn diện hoạt động của Chi nhánh theo chức năng, nhiệm vụ, quyền hạn được giao.</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-black p-2 text-center font-bold">2</td>
+                                    <td class="border border-black p-2 font-bold">Tổ Hành chính - Tổng hợp</td>
+                                    <td class="border border-black p-2 text-justify">Thực hiện công tác hành chính, văn thư, lưu trữ hành chính; tổ chức cán bộ, vị trí việc làm; tài chính - kế toán; quản lý tài sản, cơ sở vật chất, PCCC; công tác tổng hợp, thi đua khen thưởng và báo cáo định kỳ/đột xuất.</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-black p-2 text-center font-bold">3</td>
+                                    <td class="border border-black p-2 font-bold">Tổ Kỹ thuật Địa chính và Lưu trữ</td>
+                                    <td class="border border-black p-2 text-justify">Thực hiện công tác kỹ thuật địa chính, đo đạc, chỉnh lý bản đồ địa chính, trích lục, trích đo địa chính, kiểm tra bản vẽ nội nghiệp; quản lý, vận hành và cập nhật CSDL đất đai; trực tiếp quản lý, bảo quản an toàn và khai thác kho lưu trữ hồ sơ tài liệu địa chính.</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-black p-2 text-center font-bold">4</td>
+                                    <td class="border border-black p-2 font-bold">Tổ Đăng ký và Cấp giấy chứng nhận</td>
+                                    <td class="border border-black p-2 text-justify">Thực hiện thủ tục đăng ký đất đai, cấp Giấy chứng nhận quyền sử dụng đất, quyền sở hữu tài sản gắn liền với đất; đăng ký biến động đất đai; tiếp nhận và giải quyết hồ sơ giao dịch bảo đảm bằng quyền sử dụng đất cho hộ gia đình, cá nhân.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="font-bold text-[13pt] mt-4 mb-1">4. Chế độ làm việc:</div>
+                    <p class="text-justify text-[12.5pt] indent-6">Chi nhánh Văn phòng đăng ký đất đai số 23 làm việc theo nguyên tắc tập trung dân chủ, thực hiện chế độ thủ trưởng; bảo đảm sự lãnh đạo của Đảng, sự chỉ đạo, điều hành của Văn phòng Đăng ký đất đai Thành phố Hồ Chí Minh, tuân thủ quy định của pháp luật và Quy chế làm việc. Giám đốc là thủ trưởng, người đứng đầu, chịu trách nhiệm trước Giám đốc Sở Nông nghiệp và Môi trường, Giám đốc Văn phòng Đăng ký đất đai Thành phố và trước pháp luật về kết quả hoạt động của Chi nhánh.</p>
+
+                    <div class="font-bold text-[13pt] mt-3 mb-1">5. Các tổ chức chính trị, chính trị - xã hội:</div>
+                    <p class="text-justify text-[12.5pt] indent-6">Chi bộ Chi nhánh Văn phòng đăng ký đất đai số 23 trực thuộc Đảng bộ Sở Nông nghiệp và Môi trường Thành phố Hồ Chí Minh; Công đoàn bộ phận trực thuộc Công đoàn cơ sở Văn phòng Đăng ký đất đai Thành phố.</p>
+
+                    <div class="font-bold text-[13pt] mt-3 mb-1">6. Số lượng viên chức, lao động hợp đồng:</div>
+                    <p class="text-justify text-[12.5pt] indent-6">Căn cứ Quyết định số 480/QĐ-VPĐK-HC ngày 12/02/2026 của Giám đốc Văn phòng Đăng ký đất đai Thành phố, số lượng người làm việc tại Chi nhánh là <strong>85 người</strong>, bao gồm: Ban Giám đốc: 02 người; Tổ Hành chính – Tổng hợp: 14 người (07 viên chức, 07 lao động); Kế toán: 01 người; Tổ Đăng ký và Cấp GCN: 28 người (09 viên chức, 19 lao động); Tổ Kỹ thuật địa chính và Lưu trữ: 37 người (14 viên chức, 23 lao động); Nhân viên bảo vệ, tạp vụ: 03 người.</p>
+
+                    <div class="font-bold text-[13pt] mt-3 mb-1">7. Trụ sở hoạt động:</div>
+                    <p class="text-justify text-[12.5pt] indent-6">Trụ sở chính đặt tại <strong>số 358 đường Huỳnh Văn Cù, phường Thủ Dầu Một, Thành phố Hồ Chí Minh</strong> (khuôn viên đất quản lý 1.417,7 m², diện tích sàn xây dựng 835,3 m² theo Biên bản bàn giao ngày 09/5/2019 và Công văn số 1656/CN23-HCTH). Hiện trạng sàn mái, mương sê nô bị nứt nẻ, bong tróc gây thấm dột ẩm mốc xuống trần nhà và kho lưu trữ tài liệu địa chính; phòng làm việc của Giám đốc mới nhậm chức chưa có trang thiết bị đạt chuẩn; hệ thống PCCC cơ sở cần bổ sung kiểm định.</p>
+
+                    <div class="font-bold text-[13pt] mt-3 mb-1">8. Về cơ chế tài chính:</div>
+                    <p class="text-justify text-[12.5pt] indent-6"><strong>8.1.</strong> Chi nhánh thực hiện cơ chế tự chủ tài chính theo Nghị định số 60/2021/NĐ-CP theo loại hình đơn vị tự bảo đảm chi phí hoạt động thường xuyên (nhóm 2).<br>
+                    <strong>8.2. Nguồn tài chính sử dụng:</strong> Quỹ Phát triển hoạt động sự nghiệp của đơn vị theo đúng quy định tại Nghị định 60/2021/NĐ-CP và Quy chế chi tiêu nội bộ 355.</p>
+
+                    <div class="font-bold text-[13pt] text-slate-800 mt-6 mb-2">B. Mục đích của phương án:</div>
+                    <div class="font-bold text-[13pt] mt-2 mb-1">1. Căn cứ xây dựng phương án</div>
+                    <p class="text-justify text-[12.5pt] indent-6">Căn cứ Quyết định bổ nhiệm Giám đốc số 8541/QĐ-SNNMT-VP ngày 30/9/2026; Quy chế chi tiêu nội bộ số 355/QĐ-VPĐK-KHTC ngày 23/01/2026 (Mục VII, VIII và Phụ lục B); Công văn số 1656/CN23-HCTH về hiện trạng trụ sở 358 Huỳnh Văn Cù; Kế hoạch PCCC số 26/BC-CN23 và Công văn 24482/VPĐK-KT của Văn phòng Đăng ký đất đai Thành phố.</p>
+
+                    <div class="font-bold text-[13pt] mt-3 mb-1">2. Việc xây dựng phương án nhằm các mục đích sau:</div>
+                    <ul class="list-disc pl-6 space-y-1 text-justify text-[12.5pt]">
+                        <li>Trang bị đồng bộ bàn ghế, máy móc thiết bị làm việc đạt chuẩn theo đúng định mức cho Giám đốc mới nhậm chức theo Quyết định số 8541/QĐ-SNNMT-VP phục vụ công tác chỉ đạo, điều hành kịp thời;</li>
+                        <li>Xử lý dứt điểm hiện trạng thấm dột, nứt nẻ sàn mái và tường trụ sở, bảo vệ an toàn cho 85 viên chức, người lao động và bảo quản tuyệt đối an toàn kho lưu trữ hồ sơ tài liệu địa chính gốc;</li>
+                        <li>Bổ sung trang bị và kiểm định phương tiện PCCC định kỳ, đáp ứng đầy đủ quy định pháp luật về PCCC và cứu nạn, cứu hộ;</li>
+                        <li>Quản lý, sử dụng nguồn kinh phí Quỹ Phát triển hoạt động sự nghiệp đúng mục đích, tiết kiệm, công khai, minh bạch và hiệu quả cao;</li>
+                        <li>Làm cơ sở để lập dự toán, kế hoạch lựa chọn nhà thầu và tổ chức đấu thầu/chỉ định thầu theo đúng quy định.</li>
+                    </ul>
+                </div>
+
+                <!-- II. YÊU CẦU -->
+                <div class="mb-6">
+                    <div class="font-bold uppercase text-[14pt] text-slate-900 mb-2">II. YÊU CẦU</div>
+                    
+                    <div class="font-bold text-[13pt] mt-2 mb-1">1. Phạm vi thực hiện:</div>
+                    <p class="text-justify text-[12.5pt] indent-6">Thực hiện tại Trụ sở Chi nhánh Văn phòng Đăng ký đất đai số 23 (358 Huỳnh Văn Cù, P. Thủ Dầu Một), bao gồm: (A) Sửa chữa chống thấm sàn mái diện tích 357,43 m² và tường 285,38 m²; (B) Trang bị tài sản phòng Giám đốc; (C) Bổ sung phương tiện PCCC.</p>
+
+                    <div class="font-bold text-[13pt] mt-3 mb-1">2. Về công tác thi công và mua sắm trang thiết bị:</div>
+                    <p class="text-justify text-[12.5pt] indent-6"><strong>2.1. Chống thấm sàn mái bằng màng khò nhiệt Bitumode Delta – P 3mm:</strong> Vệ sinh sạch bề mặt, quét lót Nirol-W (0.2kg/m²), dán màng khò nóng Bitumode Delta 3mm giáp mí 10cm, bo góc chân tường 45 độ.<br>
+                    <strong>2.2. Chống thấm tường sàn mái bằng SikaCoat Plus:</strong> Cạo bỏ sơn cũ rêu mốc, vá nứt bằng Mastic dẻo, lăn 2 lớp SikaCoat Plus kháng tia UV (0.6kg/m²).<br>
+                    <strong>2.3. Trang bị tài sản Giám đốc:</strong> Đúng chủng loại, thông số kỹ thuật, bảo hành chính hãng tối thiểu 12-24 tháng, trong định mức tối đa 64.000.000 đồng theo Quy chế 355.<br>
+                    <strong>2.4. Trang bị phương tiện PCCC:</strong> Bình bột ABC, bình CO2, tiêu lệnh, kệ đôi, đèn sự cố, đèn Exit có tem kiểm định an toàn PCCC của Bộ Công an.<br>
+                    <strong>2.5. Nguyên tắc thực hiện:</strong> Thực hiện trọn gói, đảm bảo tiết kiệm, chống thất thoát, không làm gián đoạn công tác tiếp dân và giải quyết hồ sơ.</p>
+
+                    <div class="font-bold text-[13pt] mt-3 mb-1">3. Yêu cầu kỹ thuật đối với đơn vị cung cấp/thi công:</div>
+                    <p class="text-justify text-[12.5pt] indent-6">Vật tư, vật liệu có xuất xứ rõ ràng (CO/CQ); thiết bị máy móc đầy đủ; nhân lực thi công có chứng chỉ an toàn lao động; bảo đảm vệ sinh môi trường, an toàn phòng cháy chữa cháy, bảo vệ an toàn hồ sơ địa chính trong quá trình thi công.</p>
+
+                    <div class="font-bold text-[13pt] mt-3 mb-1">4. Về nội dung chi phí thực hiện:</div>
+                    <p class="text-justify text-[12.5pt] indent-6">Căn cứ khảo sát giá thị trường và thu thập 03 bảng báo giá cạnh tranh độc lập của các đơn vị cung cấp/thi công chuyên nghiệp.</p>
+                </div>
+
+                <!-- III. NỘI DUNG - KHỐI LƯỢNG & QUY TRÌNH THỰC HIỆN -->
+                <div class="mb-6">
+                    <div class="font-bold uppercase text-[14pt] text-slate-900 mb-2">III. NỘI DUNG - KHỐI LƯỢNG & QUY TRÌNH THỰC HIỆN</div>
+
+                    <div class="font-bold text-[13pt] mt-2 mb-1">1. Cơ sở pháp lý</div>
+                    <p class="text-justify text-[12.5pt] indent-6"><strong>1.1. Văn bản quy định về đấu thầu:</strong> Luật Đấu thầu số 22/2023/QH15; Nghị định số 214/2025/NĐ-CP ngày 04/8/2025 quy định chi tiết thi hành Luật Đấu thầu. Căn cứ khoản 4 Điều 78 Nghị định số 214/2025/NĐ-CP, các gói thầu dịch vụ phi tư vấn và mua sắm hàng hóa thuộc dự toán mua sắm thường xuyên có giá gói thầu nằm trong hạn mức quy định được áp dụng hình thức chỉ định thầu rút gọn. Hợp đồng áp dụng hình thức hợp đồng trọn gói.<br>
+                    <strong>1.2. Luật Quản lý, sử dụng tài sản công:</strong> Luật số 15/2017/QH14; Thông tư số 65/2021/TT-BTC quy định về bảo dưỡng, sửa chữa tài sản công; Quyết định 355/QĐ-VPĐK-KHTC.<br>
+                    <strong>1.3. Thuế suất:</strong> Áp dụng mức thuế suất thuế GTGT 8% theo chính sách giảm thuế giá trị gia tăng của Chính phủ (Nghị định 174/2025/NĐ-CP và Nghị định 72/2024/NĐ-CP).<br>
+                    <strong>1.4. Mẫu biểu sử dụng:</strong> Theo Nghị định 214/2025/NĐ-CP, Nghị định 11/2020/NĐ-CP và Thông tư 24/2024/TT-BTC.</p>
+
+                    <div class="font-bold text-[13pt] mt-4 mb-2">2. Nội dung và khối lượng (Biểu 1)</div>
+                    <div class="overflow-x-auto my-3">
+                        <table class="w-full border-collapse border border-black text-[11pt]">
+                            <thead>
+                                <tr class="bg-slate-100 font-bold text-center">
+                                    <th class="border border-black p-2 w-12">STT</th>
+                                    <th class="border border-black p-2">NỘI DUNG CÔNG VIỆC</th>
+                                    <th class="border border-black p-2 w-20">ĐVT</th>
+                                    <th class="border border-black p-2 w-28">KHỐI LƯỢNG</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="font-bold bg-slate-50">
+                                    <td class="border border-black p-2 text-center">A</td>
+                                    <td class="border border-black p-2" colspan="3">Chống thấm sàn mái, sê nô mái, mương đón nước mái tôn bằng màng Bitumode Delta – P 3mm</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-black p-2 text-center">1</td>
+                                    <td class="border border-black p-2">- Tạo nhám bề mặt bằng máy mài, vệ sinh sạch bề mặt.<br>- Quét 1 lớp lót Nirol – W (0.2kg/m²).<br>- Dán màng khò nóng Bitumode Delta – P 3mm (Mặt trơn).</td>
+                                    <td class="border border-black p-2 text-center">m²</td>
+                                    <td class="border border-black p-2 text-right font-semibold">357.43</td>
+                                </tr>
+                                <tr class="font-bold bg-slate-50">
+                                    <td class="border border-black p-2 text-center">B</td>
+                                    <td class="border border-black p-2" colspan="3">Chống thấm tường sàn mái, tường sê nô bằng SikaCoat Plus</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-black p-2 text-center">1</td>
+                                    <td class="border border-black p-2">- Cạo bỏ sơn cũ, rêu mốc, vệ sinh sạch bề mặt.<br>- Trét vá vết nứt bằng Mastic dẻo.<br>- Lăn 2 lớp SikaCoat Plus kháng tia UV (0.6kg/m²).</td>
+                                    <td class="border border-black p-2 text-center">m²</td>
+                                    <td class="border border-black p-2 text-right font-semibold">285.38</td>
+                                </tr>
+                                <tr class="font-bold bg-slate-50">
+                                    <td class="border border-black p-2 text-center">C</td>
+                                    <td class="border border-black p-2" colspan="3">Trang bị tài sản phòng Giám đốc mới nhậm chức (QĐ 8541 & QC 355)</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-black p-2 text-center">1</td>
+                                    <td class="border border-black p-2">Bộ bàn ghế ngồi làm việc Giám đốc (Gỗ tự nhiên cao cấp)</td>
+                                    <td class="border border-black p-2 text-center">Bộ</td>
+                                    <td class="border border-black p-2 text-right font-semibold">01</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-black p-2 text-center">2</td>
+                                    <td class="border border-black p-2">Bàn để máy vi tính và máy in chuyên dụng</td>
+                                    <td class="border border-black p-2 text-center">Cái</td>
+                                    <td class="border border-black p-2 text-right font-semibold">01</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-black p-2 text-center">3</td>
+                                    <td class="border border-black p-2">Ghế xoay lãnh đạo cao cấp bọc da tự nhiên chân tay gỗ</td>
+                                    <td class="border border-black p-2 text-center">Cái</td>
+                                    <td class="border border-black p-2 text-right font-semibold">01</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-black p-2 text-center">4</td>
+                                    <td class="border border-black p-2">Bộ bàn ghế tiếp khách (Sofa da cao cấp, 1 băng dài + 2 đơn + bàn trà)</td>
+                                    <td class="border border-black p-2 text-center">Bộ</td>
+                                    <td class="border border-black p-2 text-right font-semibold">01</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-black p-2 text-center">5</td>
+                                    <td class="border border-black p-2">Tủ đựng tài liệu lãnh đạo 4 buồng cánh kính - gỗ</td>
+                                    <td class="border border-black p-2 text-center">Cái</td>
+                                    <td class="border border-black p-2 text-right font-semibold">01</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-black p-2 text-center">6</td>
+                                    <td class="border border-black p-2">Máy vi tính để bàn cấu hình cao (Core i7, RAM 16GB, SSD 512GB)</td>
+                                    <td class="border border-black p-2 text-center">Bộ</td>
+                                    <td class="border border-black p-2 text-right font-semibold">01</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-black p-2 text-center">7</td>
+                                    <td class="border border-black p-2">Máy in laser đa chức năng 2 mặt tự động tốc độ cao</td>
+                                    <td class="border border-black p-2 text-center">Cái</td>
+                                    <td class="border border-black p-2 text-right font-semibold">01</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-black p-2 text-center">8</td>
+                                    <td class="border border-black p-2">Máy quét tài liệu (Scanner) màu 2 mặt tốc độ cao</td>
+                                    <td class="border border-black p-2 text-center">Cái</td>
+                                    <td class="border border-black p-2 text-right font-semibold">01</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-black p-2 text-center">9</td>
+                                    <td class="border border-black p-2">Bộ lưu điện dự phòng (UPS 1500VA/900W)</td>
+                                    <td class="border border-black p-2 text-center">Cái</td>
+                                    <td class="border border-black p-2 text-right font-semibold">01</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-black p-2 text-center">10</td>
+                                    <td class="border border-black p-2">Máy điều hòa không khí Inverter 2.0 HP tiết kiệm điện</td>
+                                    <td class="border border-black p-2 text-center">Bộ</td>
+                                    <td class="border border-black p-2 text-right font-semibold">01</td>
+                                </tr>
+                                <tr class="font-bold bg-slate-50">
+                                    <td class="border border-black p-2 text-center">D</td>
+                                    <td class="border border-black p-2" colspan="3">Trang bị phương tiện phòng cháy chữa cháy (PCCC)</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-black p-2 text-center">1</td>
+                                    <td class="border border-black p-2">Bình bột chữa cháy ABC 4kg MFZL4 có tem kiểm định</td>
+                                    <td class="border border-black p-2 text-center">Bình</td>
+                                    <td class="border border-black p-2 text-right font-semibold">15</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-black p-2 text-center">2</td>
+                                    <td class="border border-black p-2">Bình khí chữa cháy CO2 5kg MT5 có tem kiểm định</td>
+                                    <td class="border border-black p-2 text-center">Bình</td>
+                                    <td class="border border-black p-2 text-right font-semibold">10</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-black p-2 text-center">3</td>
+                                    <td class="border border-black p-2">Bộ nội quy PCCC và tiêu lệnh chữa cháy</td>
+                                    <td class="border border-black p-2 text-center">Bộ</td>
+                                    <td class="border border-black p-2 text-right font-semibold">10</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-black p-2 text-center">4</td>
+                                    <td class="border border-black p-2">Kệ đôi đựng bình chữa cháy sắt sơn tĩnh điện</td>
+                                    <td class="border border-black p-2 text-center">Cái</td>
+                                    <td class="border border-black p-2 text-right font-semibold">12</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-black p-2 text-center">5</td>
+                                    <td class="border border-black p-2">Đèn chiếu sáng sự cố khẩn cấp gắn tường</td>
+                                    <td class="border border-black p-2 text-center">Bộ</td>
+                                    <td class="border border-black p-2 text-right font-semibold">08</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-black p-2 text-center">6</td>
+                                    <td class="border border-black p-2">Đèn Exit chỉ dẫn thoát nạn tự động</td>
+                                    <td class="border border-black p-2 text-center">Bộ</td>
+                                    <td class="border border-black p-2 text-right font-semibold">06</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="font-bold text-[13pt] mt-4 mb-1">3. Quy trình thực hiện (sắp xếp theo thứ tự thực hiện):</div>
+                    <ul class="list-disc pl-6 space-y-1 text-justify text-[12.5pt]">
+                        <li><strong>Bước 1: Khảo sát và thu thập báo giá:</strong> Chi nhánh Văn phòng Đăng ký đất đai số 23 khảo sát thực tế và thu thập đủ 03 báo giá cạnh tranh.</li>
+                        <li><strong>Bước 2: Lập, thẩm định và trình duyệt phương án dự toán:</strong> Chi nhánh lập phương án, Phòng Kế hoạch – Tài chính Văn phòng Đăng ký đất đai Thành phố thẩm định và trình Thủ trưởng phê duyệt.</li>
+                        <li><strong>Bước 3: Lập, thẩm định và phê duyệt kế hoạch lựa chọn nhà thầu:</strong> Lập và trình duyệt kế hoạch lựa chọn nhà thầu theo quy định của Luật Đấu thầu.</li>
+                        <li><strong>Bước 4: Quyết định lựa chọn nhà thầu:</strong> Hoàn tất thủ tục chỉ định thầu rút gọn, thương thảo hoàn thiện hợp đồng, ban hành Quyết định phê duyệt kết quả.</li>
+                        <li><strong>Bước 5: Ký kết, thực hiện hợp đồng và kiểm tra nghiệm thu:</strong> Chi nhánh ký kết hợp đồng, giám sát thi công, bàn giao thiết bị và lập Biên bản nghiệm thu.</li>
+                        <li><strong>Bước 6: Thanh quyết toán kinh phí:</strong> Lập hồ sơ đề nghị thanh toán gửi Phòng Kế hoạch – Tài chính kiểm soát và thực hiện thủ tục giải ngân kinh phí.</li>
+                    </ul>
+
+                    <div class="font-bold text-[13pt] mt-3 mb-1">3.2 Trách nhiệm trong công tác kiểm tra nghiệm thu:</div>
+                    <p class="text-justify text-[12.5pt] indent-6">Chi nhánh Văn phòng Đăng ký đất đai số 23 và Tổ Hành chính – Tổng hợp chịu trách nhiệm về tính chính xác của số lượng, khối lượng và chất lượng hàng hóa/dịch vụ trên biên bản nghiệm thu. Hồ sơ thanh toán gồm Hợp đồng, Biên bản nghiệm thu, Hóa đơn điện tử hợp lệ (thuế suất 8%) và các chứng từ liên quan.</p>
+                </div>
+
+                <!-- IV. DỰ TOÁN KINH PHÍ -->
+                <div class="mb-6">
+                    <div class="font-bold uppercase text-[14pt] text-slate-900 mb-2">IV. DỰ TOÁN KINH PHÍ</div>
+                    
+                    <div class="font-bold text-[13pt] mt-2 mb-1">1. Dự toán kinh phí</div>
+                    <p class="text-justify text-[12.5pt] indent-6">Căn cứ 03 bảng báo giá đã bao gồm VAT 8% của các đơn vị cung cấp dịch vụ và cung ứng hàng hóa (đính kèm), dự toán kinh phí đề xuất lựa chọn đơn vị có giá thấp nhất, đáp ứng đầy đủ yêu cầu kỹ thuật như sau (Biểu 2):</p>
+
+                    <!-- Biểu 2 Bảng 8 cột tóm tắt -->
+                    <div class="overflow-x-auto my-3">
+                        <table class="w-full border-collapse border border-black text-[10pt]">
+                            <thead>
+                                <tr class="bg-slate-100 font-bold text-center">
+                                    <th class="border border-black p-2" colspan="2" rowspan="2">Nội dung thực hiện theo Tổ Hành chính – Tổng hợp đã thẩm định</th>
+                                    <th class="border border-black p-2 bg-emerald-50 text-emerald-900" colspan="2">ĐƠN VỊ ĐỀ XUẤT CHỌN (1)</th>
+                                    <th class="border border-black p-2" colspan="2">ĐƠN VỊ BÁO GIÁ 2</th>
+                                    <th class="border border-black p-2" colspan="2">ĐƠN VỊ BÁO GIÁ 3</th>
+                                </tr>
+                                <tr class="bg-slate-100 font-bold text-center">
+                                    <th class="border border-black p-1 bg-emerald-50 w-20">Đơn giá</th>
+                                    <th class="border border-black p-1 bg-emerald-50 w-24">Thành tiền</th>
+                                    <th class="border border-black p-1 w-20">Đơn giá</th>
+                                    <th class="border border-black p-1 w-24">Thành tiền</th>
+                                    <th class="border border-black p-1 w-20">Đơn giá</th>
+                                    <th class="border border-black p-1 w-24">Thành tiền</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="font-bold bg-slate-50">
+                                    <td class="border border-black p-1.5 text-center">I</td>
+                                    <td class="border border-black p-1.5">SỬA CHỮA CHỐNG THẤM TRỤ SỞ CHI NHÁNH 23</td>
+                                    <td class="border border-black p-1.5 text-center" colspan="2">Cty Toàn Đạt</td>
+                                    <td class="border border-black p-1.5 text-center" colspan="2">Cty Vạn Đạt</td>
+                                    <td class="border border-black p-1.5 text-center" colspan="2">Cty Kim Bảo Phát</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-black p-1 text-center">1</td>
+                                    <td class="border border-black p-1">Chống thấm sàn mái Bitumode Delta 3mm (357.43m²)</td>
+                                    <td class="border border-black p-1 text-right">303.250</td>
+                                    <td class="border border-black p-1 text-right font-semibold">108.390.648</td>
+                                    <td class="border border-black p-1 text-right">336.640</td>
+                                    <td class="border border-black p-1 text-right">120.325.235</td>
+                                    <td class="border border-black p-1 text-right">357.835</td>
+                                    <td class="border border-black p-1 text-right">127.900.964</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-black p-1 text-center">2</td>
+                                    <td class="border border-black p-1">Chống thấm tường SikaCoat Plus (285.38m²)</td>
+                                    <td class="border border-black p-1 text-right">233.000</td>
+                                    <td class="border border-black p-1 text-right font-semibold">66.493.540</td>
+                                    <td class="border border-black p-1 text-right">250.960</td>
+                                    <td class="border border-black p-1 text-right">71.618.965</td>
+                                    <td class="border border-black p-1 text-right">274.940</td>
+                                    <td class="border border-black p-1 text-right">78.462.377</td>
+                                </tr>
+                                <tr class="font-bold bg-amber-50">
+                                    <td class="border border-black p-1 text-center"></td>
+                                    <td class="border border-black p-1">Cộng chống thấm sau thuế VAT 8%</td>
+                                    <td class="border border-black p-1" colspan="2"><span class="text-emerald-700 font-bold">188.834.923</span></td>
+                                    <td class="border border-black p-1" colspan="2">207.299.736</td>
+                                    <td class="border border-black p-1" colspan="2">222.872.408</td>
+                                </tr>
+                                <tr class="font-bold bg-slate-50">
+                                    <td class="border border-black p-1.5 text-center">II</td>
+                                    <td class="border border-black p-1.5">TRANG BỊ TÀI SẢN PHÒNG GIÁM ĐỐC MỚI (QĐ 8541 & QC 355)</td>
+                                    <td class="border border-black p-1.5 text-center" colspan="2">Cty SG Office</td>
+                                    <td class="border border-black p-1.5 text-center" colspan="2">Cty Nam Phát</td>
+                                    <td class="border border-black p-1.5 text-center" colspan="2">Cty Toàn Cầu</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-black p-1 text-center">1</td>
+                                    <td class="border border-black p-1">Bộ bàn ghế Giám đốc gỗ tự nhiên</td>
+                                    <td class="border border-black p-1 text-right">10.000.000</td>
+                                    <td class="border border-black p-1 text-right font-semibold">10.000.000</td>
+                                    <td class="border border-black p-1 text-right">10.300.000</td>
+                                    <td class="border border-black p-1 text-right">10.300.000</td>
+                                    <td class="border border-black p-1 text-right">10.600.000</td>
+                                    <td class="border border-black p-1 text-right">10.600.000</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-black p-1 text-center">2</td>
+                                    <td class="border border-black p-1">Bàn để máy vi tính và máy in</td>
+                                    <td class="border border-black p-1 text-right">1.851.852</td>
+                                    <td class="border border-black p-1 text-right font-semibold">1.851.852</td>
+                                    <td class="border border-black p-1 text-right">1.900.000</td>
+                                    <td class="border border-black p-1 text-right">1.900.000</td>
+                                    <td class="border border-black p-1 text-right">2.000.000</td>
+                                    <td class="border border-black p-1 text-right">2.000.000</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-black p-1 text-center">3</td>
+                                    <td class="border border-black p-1">Ghế xoay lãnh đạo bọc da cao cấp</td>
+                                    <td class="border border-black p-1 text-right">2.777.778</td>
+                                    <td class="border border-black p-1 text-right font-semibold">2.777.778</td>
+                                    <td class="border border-black p-1 text-right">2.850.000</td>
+                                    <td class="border border-black p-1 text-right">2.850.000</td>
+                                    <td class="border border-black p-1 text-right">2.950.000</td>
+                                    <td class="border border-black p-1 text-right">2.950.000</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-black p-1 text-center">4</td>
+                                    <td class="border border-black p-1">Bộ bàn ghế tiếp khách (Sofa da cao cấp)</td>
+                                    <td class="border border-black p-1 text-right">8.333.333</td>
+                                    <td class="border border-black p-1 text-right font-semibold">8.333.333</td>
+                                    <td class="border border-black p-1 text-right">8.600.000</td>
+                                    <td class="border border-black p-1 text-right">8.600.000</td>
+                                    <td class="border border-black p-1 text-right">8.900.000</td>
+                                    <td class="border border-black p-1 text-right">8.900.000</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-black p-1 text-center">5</td>
+                                    <td class="border border-black p-1">Tủ đựng tài liệu 4 buồng</td>
+                                    <td class="border border-black p-1 text-right">4.629.630</td>
+                                    <td class="border border-black p-1 text-right font-semibold">4.629.630</td>
+                                    <td class="border border-black p-1 text-right">4.750.000</td>
+                                    <td class="border border-black p-1 text-right">4.750.000</td>
+                                    <td class="border border-black p-1 text-right">4.900.000</td>
+                                    <td class="border border-black p-1 text-right">4.900.000</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-black p-1 text-center">6</td>
+                                    <td class="border border-black p-1">Máy vi tính để bàn cấu hình cao</td>
+                                    <td class="border border-black p-1 text-right">13.888.889</td>
+                                    <td class="border border-black p-1 text-right font-semibold">13.888.889</td>
+                                    <td class="border border-black p-1 text-right">14.250.000</td>
+                                    <td class="border border-black p-1 text-right">14.250.000</td>
+                                    <td class="border border-black p-1 text-right">14.650.000</td>
+                                    <td class="border border-black p-1 text-right">14.650.000</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-black p-1 text-center">7</td>
+                                    <td class="border border-black p-1">Máy in đa chức năng 2 mặt tự động</td>
+                                    <td class="border border-black p-1 text-right">4.629.630</td>
+                                    <td class="border border-black p-1 text-right font-semibold">4.629.630</td>
+                                    <td class="border border-black p-1 text-right">4.780.000</td>
+                                    <td class="border border-black p-1 text-right">4.780.000</td>
+                                    <td class="border border-black p-1 text-right">4.950.000</td>
+                                    <td class="border border-black p-1 text-right">4.950.000</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-black p-1 text-center">8</td>
+                                    <td class="border border-black p-1">Máy quét tài liệu (Scanner) màu 2 mặt</td>
+                                    <td class="border border-black p-1 text-right">4.166.667</td>
+                                    <td class="border border-black p-1 text-right font-semibold">4.166.667</td>
+                                    <td class="border border-black p-1 text-right">4.300.000</td>
+                                    <td class="border border-black p-1 text-right">4.300.000</td>
+                                    <td class="border border-black p-1 text-right">4.450.000</td>
+                                    <td class="border border-black p-1 text-right">4.450.000</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-black p-1 text-center">9</td>
+                                    <td class="border border-black p-1">Bộ lưu điện dự phòng (UPS 1500VA)</td>
+                                    <td class="border border-black p-1 text-right">1.851.852</td>
+                                    <td class="border border-black p-1 text-right font-semibold">1.851.852</td>
+                                    <td class="border border-black p-1 text-right">1.920.000</td>
+                                    <td class="border border-black p-1 text-right">1.920.000</td>
+                                    <td class="border border-black p-1 text-right">2.000.000</td>
+                                    <td class="border border-black p-1 text-right">2.000.000</td>
+</tr>
+                                <tr>
+                                    <td class="border border-black p-1 text-center">10</td>
+                                    <td class="border border-black p-1">Máy điều hòa nhiệt độ Inverter 2.0 HP</td>
+                                    <td class="border border-black p-1 text-right">7.129.628</td>
+                                    <td class="border border-black p-1 text-right font-semibold">7.129.628</td>
+                                    <td class="border border-black p-1 text-right">7.300.000</td>
+                                    <td class="border border-black p-1 text-right">7.300.000</td>
+                                    <td class="border border-black p-1 text-right">7.580.000</td>
+                                    <td class="border border-black p-1 text-right">7.580.000</td>
+                                </tr>
+                                <tr class="font-bold bg-amber-50">
+                                    <td class="border border-black p-1 text-center"></td>
+                                    <td class="border border-black p-1">Cộng tài sản Giám đốc sau thuế VAT 8%</td>
+                                    <td class="border border-black p-1" colspan="2"><span class="text-emerald-700 font-bold">64.000.000</span></td>
+                                    <td class="border border-black p-1" colspan="2">65.826.000</td>
+                                    <td class="border border-black p-1" colspan="2">67.802.400</td>
+                                </tr>
+                                <tr class="font-bold bg-slate-50">
+                                    <td class="border border-black p-1.5 text-center">III</td>
+                                    <td class="border border-black p-1.5">TRANG BỊ PHƯƠNG TIỆN PHÒNG CHÁY CHỮA CHÁY (PCCC)</td>
+                                    <td class="border border-black p-1.5 text-center" colspan="2">Cty PCCC Đông Á</td>
+                                    <td class="border border-black p-1.5 text-center" colspan="2">Cty PCCC Bình Dương</td>
+                                    <td class="border border-black p-1.5 text-center" colspan="2">Cty PCCC Nam Á</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-black p-1 text-center">1</td>
+                                    <td class="border border-black p-1">Bình bột ABC 4kg (15 bình)</td>
+                                    <td class="border border-black p-1 text-right">310.000</td>
+                                    <td class="border border-black p-1 text-right font-semibold">4.650.000</td>
+                                    <td class="border border-black p-1 text-right">330.000</td>
+                                    <td class="border border-black p-1 text-right">4.950.000</td>
+                                    <td class="border border-black p-1 text-right">350.000</td>
+                                    <td class="border border-black p-1 text-right">5.250.000</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-black p-1 text-center">2</td>
+                                    <td class="border border-black p-1">Bình CO2 5kg MT5 (10 bình)</td>
+                                    <td class="border border-black p-1 text-right">920.000</td>
+                                    <td class="border border-black p-1 text-right font-semibold">9.200.000</td>
+                                    <td class="border border-black p-1 text-right">980.000</td>
+                                    <td class="border border-black p-1 text-right">9.800.000</td>
+                                    <td class="border border-black p-1 text-right">1.020.000</td>
+                                    <td class="border border-black p-1 text-right">10.200.000</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-black p-1 text-center">3</td>
+                                    <td class="border border-black p-1">Bộ nội quy, tiêu lệnh PCCC (10 bộ)</td>
+                                    <td class="border border-black p-1 text-right">140.000</td>
+                                    <td class="border border-black p-1 text-right font-semibold">1.400.000</td>
+                                    <td class="border border-black p-1 text-right">155.000</td>
+                                    <td class="border border-black p-1 text-right">1.550.000</td>
+                                    <td class="border border-black p-1 text-right">165.000</td>
+                                    <td class="border border-black p-1 text-right">1.650.000</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-black p-1 text-center">4</td>
+                                    <td class="border border-black p-1">Kệ đôi đựng bình chữa cháy (12 cái)</td>
+                                    <td class="border border-black p-1 text-right">170.000</td>
+                                    <td class="border border-black p-1 text-right font-semibold">2.040.000</td>
+                                    <td class="border border-black p-1 text-right">190.000</td>
+                                    <td class="border border-black p-1 text-right">2.280.000</td>
+                                    <td class="border border-black p-1 text-right">205.000</td>
+                                    <td class="border border-black p-1 text-right">2.460.000</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-black p-1 text-center">5</td>
+                                    <td class="border border-black p-1">Đèn chiếu sáng sự cố khẩn cấp (8 bộ)</td>
+                                    <td class="border border-black p-1 text-right">280.000</td>
+                                    <td class="border border-black p-1 text-right font-semibold">2.240.000</td>
+                                    <td class="border border-black p-1 text-right">305.000</td>
+                                    <td class="border border-black p-1 text-right">2.440.000</td>
+                                    <td class="border border-black p-1 text-right">325.000</td>
+                                    <td class="border border-black p-1 text-right">2.600.000</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-black p-1 text-center">6</td>
+                                    <td class="border border-black p-1">Đèn Exit chỉ dẫn thoát nạn (6 bộ)</td>
+                                    <td class="border border-black p-1 text-right">293.333</td>
+                                    <td class="border border-black p-1 text-right font-semibold">1.760.000</td>
+                                    <td class="border border-black p-1 text-right">322.500</td>
+                                    <td class="border border-black p-1 text-right">1.935.000</td>
+                                    <td class="border border-black p-1 text-right">347.500</td>
+                                    <td class="border border-black p-1 text-right">2.085.000</td>
+                                </tr>
+                                <tr class="font-bold bg-amber-50">
+                                    <td class="border border-black p-1 text-center"></td>
+                                    <td class="border border-black p-1">Cộng thiết bị PCCC sau thuế VAT 8%</td>
+                                    <td class="border border-black p-1" colspan="2"><span class="text-emerald-700 font-bold">22.993.200</span></td>
+                                    <td class="border border-black p-1" colspan="2">24.791.400</td>
+                                    <td class="border border-black p-1" colspan="2">26.076.600</td>
+                                </tr>
+                                <tr class="font-bold bg-slate-200 text-black">
+                                    <td class="border border-black p-1.5 text-center" colspan="2">TỔNG CỘNG TRƯỚC THUẾ (I + II + III):</td>
+                                    <td class="border border-black p-1.5 text-right" colspan="2">255.393.447</td>
+                                    <td class="border border-black p-1.5 text-right" colspan="2">275.849.200</td>
+                                    <td class="border border-black p-1.5 text-right" colspan="2">293.288.341</td>
+                                </tr>
+                                <tr class="font-bold bg-slate-200 text-black">
+                                    <td class="border border-black p-1.5 text-center" colspan="2">THUẾ GTGT 8%:</td>
+                                    <td class="border border-black p-1.5 text-right" colspan="2">20.434.676</td>
+                                    <td class="border border-black p-1.5 text-right" colspan="2">22.067.936</td>
+                                    <td class="border border-black p-1.5 text-right" colspan="2">23.463.067</td>
+                                </tr>
+                                <tr class="font-bold bg-emerald-600 text-white text-[10.5pt]">
+                                    <td class="border border-black p-2 text-center" colspan="2">TỔNG DỰ TOÁN KINH PHÍ ĐỀ XUẤT CẤP (SAU THUẾ):</td>
+                                    <td class="border border-black p-2 text-right" colspan="2">275.828.123</td>
+                                    <td class="border border-black p-2 text-right opacity-80" colspan="2">297.917.136</td>
+                                    <td class="border border-black p-2 text-right opacity-80" colspan="2">316.751.408</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p class="text-justify text-[12.5pt] indent-6 mt-3">
+                        Như vậy, dự toán tính theo báo giá đã bao gồm VAT thấp nhất là: <strong>275.828.123 đồng</strong> <em>(Số tiền bằng chữ: Hai trăm bảy mươi lăm triệu, tám trăm hai mươi tám nghìn, một trăm hai mươi ba đồng./)</em>, trong đó:
+                    </p>
+                    <ul class="list-disc pl-6 space-y-1 text-justify text-[12.5pt]">
+                        <li>Giá dịch vụ và thiết bị chưa thuế: <strong>255.393.447 đồng</strong>;</li>
+                        <li>Thuế GTGT (8%): <strong>20.434.676 đồng</strong>;</li>
+                        <li>Trong đó dự toán đề nghị cấp kinh phí từ Quỹ Phát triển hoạt động sự nghiệp cho Chi nhánh số 23: <strong>275.828.123 đồng</strong>.</li>
+                    </ul>
+
+                    <div class="font-bold text-[13pt] mt-3 mb-1">2. Nguồn kinh phí:</div>
+                    <p class="text-justify text-[12.5pt] indent-6">Quỹ Phát triển hoạt động sự nghiệp của Chi nhánh Văn phòng Đăng ký đất đai số 23 theo quy định tại Nghị định số 60/2021/NĐ-CP và Quy chế chi tiêu nội bộ số 355/QĐ-VPĐK-KHTC.</p>
+
+                    <!-- Khung ký Chi nhánh 23 (Table 3 y chang CN34) -->
+                    <div class="grid grid-cols-2 gap-4 mt-8 pt-4 border-t border-slate-300 text-center">
+                        <div>
+                            <div class="font-bold uppercase text-[12.5pt]">NGƯỜI LẬP</div>
+                            <div class="italic text-[11.5pt] text-slate-600">Tổ Hành chính – Tổng hợp</div>
+                            <div class="h-24"></div>
+                            <div class="font-bold text-[12.5pt]">Nguyễn Thị Bích Tuyền</div>
+                        </div>
+                        <div>
+                            <div class="font-bold uppercase text-[12.5pt]">CN VĂN PHÒNG ĐĂNG KÝ ĐẤT ĐAI SỐ 23 LẬP DỰ TOÁN</div>
+                            <div class="font-bold uppercase text-[12.5pt]">GIÁM ĐỐC</div>
+                            <div class="h-24"></div>
+                            <div class="font-bold text-[12.5pt]">Nguyễn Chiến Thắng</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- IV. HỒ SƠ ĐÍNH KÈM VÀ PHÂN CÔNG LƯU TRỮ HỒ SƠ (y chang CN34) -->
+                <div class="mb-6 mt-8">
+                    <div class="font-bold uppercase text-[14pt] text-slate-900 mb-2">IV. HỒ SƠ ĐÍNH KÈM VÀ PHÂN CÔNG LƯU TRỮ HỒ SƠ</div>
+                    
+                    <div class="font-bold text-[13pt] mt-2 mb-1">1. Hồ sơ đính kèm:</div>
+                    <p class="text-justify text-[12.5pt] indent-6">03 bảng báo giá thuê đơn vị thi công sửa chữa chống thấm; 03 bảng báo giá trang bị tài sản phòng Giám đốc; 03 bảng báo giá cung ứng phương tiện PCCC: Bản chính.</p>
+
+                    <div class="font-bold text-[13pt] mt-3 mb-1">2. Số lượng bản phương án dự toán ký chính: 03 bản.</div>
+
+                    <div class="font-bold text-[13pt] mt-3 mb-1">3. Lưu trữ hồ sơ:</div>
+                    <p class="text-justify text-[12.5pt] indent-6">a/ 01 Bản phương án ký chính + Bản chính hồ sơ đính kèm: Lưu tại Phòng Kế hoạch Tài chính kèm Quyết định phê duyệt phương án do bộ phận thẩm định dự toán lưu.<br>
+                    b/ 02 bản phương án ký chính + Bản chụp hồ sơ đính kèm: Trả về bộ phận thực hiện kèm Quyết định phê duyệt phương án, trong đó 01 bản chính sẽ chuyển kèm về Phòng Kế hoạch - Tài chính trong hồ sơ thanh toán đợt đầu.</p>
+
+                    <div class="font-bold text-[13pt] mt-3 mb-1">4. Số hóa hồ sơ:</div>
+                    <p class="text-justify text-[12.5pt] indent-6">4.1 Bộ phận thực hiện số hóa toàn bộ hồ sơ liên quan phương án dự toán, công tác ký thủ tục hợp đồng và kiểm tra nghiệm thu, chuyển về Phòng Kế hoạch Tài chính tại lần thanh toán cuối cùng. Phòng Kế hoạch Tài chính số hóa tiếp tục hồ sơ thanh quyết toán./.</p>
+
+                    <!-- Chữ ký phê duyệt 3 cấp cấp trên y chang CN34 -->
+                    <div class="text-right italic text-[12.5pt] my-6">Thành phố Hồ Chí Minh, ngày 13 tháng 10 năm 2026</div>
+
+                    <div class="space-y-8 text-center mt-6">
+                        <div>
+                            <div class="font-bold uppercase text-[13pt]">PHÊ DUYỆT CỦA PHÓ GIÁM ĐỐC PHỤ TRÁCH</div>
+                            <div class="font-bold uppercase text-[12pt] text-slate-600">(CƠ SỞ 1)</div>
+                            <div class="h-20"></div>
+                            <div class="font-bold text-[13pt]">Đặng Huy Cường</div>
+                        </div>
+
+                        <div>
+                            <div class="font-bold uppercase text-[13pt]">ĐƠN VỊ THẨM ĐỊNH: PHÒNG KẾ HOẠCH TÀI CHÍNH THẨM ĐỊNH</div>
+                            <div class="grid grid-cols-2 max-w-lg mx-auto font-bold uppercase text-[12pt] mt-1">
+                                <div>CHUYÊN VIÊN</div>
+                                <div>TRƯỞNG PHÒNG</div>
+                            </div>
+                            <div class="h-20"></div>
+                            <div class="grid grid-cols-2 max-w-lg mx-auto font-bold text-[12.5pt]">
+                                <div>Đào Vân Anh</div>
+                                <div>(Ký duyệt)</div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="font-bold uppercase text-[13pt]">DUYỆT CỦA GIÁM ĐỐC VĂN PHÒNG ĐĂNG KÝ ĐẤT ĐAI<br>THÀNH PHỐ HỒ CHÍ MINH</div>
+                            <div class="h-24"></div>
+                            <div class="font-bold text-[13pt]">Bùi Thị Bích Tuyền</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dải phân cách trang Word -->
+                <div class="my-8 border-t-2 border-dashed border-slate-300 relative text-center">
+                    <span class="bg-white px-3 text-xs text-slate-400 -top-2.5 relative italic">--- Phụ lục đính kèm (Trang 19) ---</span>
+                </div>
+
+                <!-- ============================================================ -->
+                <!-- PHỤ LỤC 1: Y CHANG MẪU CN34 -->
+                <!-- ============================================================ -->
+                <div class="text-center font-bold text-[14pt] mb-1">Phụ lục 1</div>
+                <div class="text-center font-bold text-[13pt] mb-1">Bảng báo giá của 03 công ty thi công sửa chữa chống thấm và cung ứng thiết bị</div>
+                <div class="text-center italic text-[11.5pt] mb-4">Đơn vị tính: đồng</div>
+
+                <!-- Bảng Phụ lục 1 Table 4 y chang CN34 -->
+                <div class="overflow-x-auto my-3">
+                    <table class="w-full border-collapse border border-black text-[10pt]">
+                        <thead>
+                            <tr class="bg-slate-100 font-bold text-center">
+                                <th class="border border-black p-2 w-10" rowspan="2">STT</th>
+                                <th class="border border-black p-2 w-48" rowspan="2">Tên đơn vị cung cấp dịch vụ</th>
+                                <th class="border border-black p-2" colspan="2">Chống thấm sàn mái Bitumode Delta 3mm (357.43m²)</th>
+                                <th class="border border-black p-2" colspan="2">Chống thấm tường SikaCoat Plus (285.38m²)</th>
+                                <th class="border border-black p-2 w-28" rowspan="2">Tổng cộng</th>
+                                <th class="border border-black p-2 w-32" rowspan="2">Tổng cộng sau thuế (VAT 8%)</th>
+                            </tr>
+                            <tr class="bg-slate-100 font-bold text-center">
+                                <th class="border border-black p-1 w-20">Đơn giá</th>
+                                <th class="border border-black p-1 w-24">Thành tiền</th>
+                                <th class="border border-black p-1 w-20">Đơn giá</th>
+                                <th class="border border-black p-1 w-24">Thành tiền</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="bg-emerald-50">
+                                <td class="border border-black p-2 text-center font-bold">1</td>
+                                <td class="border border-black p-2 font-bold text-emerald-900">Công ty TNHH Đầu tư Phát triển Toàn Đạt</td>
+                                <td class="border border-black p-2 text-right">303.250</td>
+                                <td class="border border-black p-2 text-right">108.390.648</td>
+                                <td class="border border-black p-2 text-right">233.000</td>
+                                <td class="border border-black p-2 text-right">66.493.540</td>
+                                <td class="border border-black p-2 text-right font-semibold">174.844.188</td>
+                                <td class="border border-black p-2 text-right font-bold text-emerald-700">188.834.923</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-black p-2 text-center font-bold">2</td>
+                                <td class="border border-black p-2 font-medium">Công ty TNHH Xây dựng Vạn Đạt</td>
+                                <td class="border border-black p-2 text-right">336.640</td>
+                                <td class="border border-black p-2 text-right">120.325.235</td>
+                                <td class="border border-black p-2 text-right">250.960</td>
+                                <td class="border border-black p-2 text-right">71.618.965</td>
+                                <td class="border border-black p-2 text-right font-semibold">191.944.200</td>
+                                <td class="border border-black p-2 text-right font-semibold">207.299.736</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-black p-2 text-center font-bold">3</td>
+                                <td class="border border-black p-2 font-medium">Công ty TNHH Chống thấm và Xây dựng Kim Bảo Phát</td>
+                                <td class="border border-black p-2 text-right">357.835</td>
+                                <td class="border border-black p-2 text-right">127.900.964</td>
+                                <td class="border border-black p-2 text-right">274.940</td>
+                                <td class="border border-black p-2 text-right">78.462.377</td>
+                                <td class="border border-black p-2 text-right font-semibold">206.363.341</td>
+                                <td class="border border-black p-2 text-right font-semibold">222.872.408</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="font-bold text-[13pt] mt-4 mb-1">Nhận xét:</div>
+                <p class="text-justify text-[12.5pt] indent-6">
+                    Qua khảo sát giá thị trường thông qua 03 báo giá của các đơn vị cung cấp dịch vụ sửa chữa chống thấm, chống dột. Mức giá đề xuất lựa chọn là <strong>188.834.923 đồng</strong>, là mức giá thấp nhất, phù hợp với khả năng tài chính của đơn vị và đảm bảo đầy đủ hạng mục thi công và tiết kiệm, hiệu quả theo quy định.
+                </p>
+            </div>
+        </div>
+
+        <div id="tab-table-view" class="tab-content hidden">
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-6">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
+                    <div>
+                        <h2 class="text-lg font-bold text-slate-800">BẢNG CHI TIẾT DỰ TOÁN KINH PHÍ ĐỀ NGHỊ CẤP (BIỂU 2)</h2>
+                        <p class="text-xs text-slate-500">Cơ cấu 8 cột tính toán minh bạch: Khối lượng × Đơn giá = Thành tiền • Thuế suất GTGT 8%</p>
+                    </div>
+                    
+                    <div class="flex items-center space-x-2">
+                        <div class="relative">
+                            <i data-lucide="search" class="w-4 h-4 text-slate-400 absolute left-3 top-3"></i>
+                            <input type="text" id="filterInput" onkeyup="filterTable()" placeholder="Tìm kiếm hạng mục..." class="pl-9 pr-4 py-2 border border-slate-200 rounded-xl text-xs focus:ring-2 focus:ring-blue-500 outline-none w-64">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="overflow-x-auto rounded-xl border border-slate-200">
+                    <table class="w-full text-xs text-left text-slate-600" id="budgetTable">
+                        <thead class="bg-slate-100 text-slate-700 uppercase font-semibold text-[11px] border-b border-slate-200">
+                            <tr>
+                                <th class="p-3 text-center w-12">STT</th>
+                                <th class="p-3">Nội Dung Hạng Mục</th>
+                                <th class="p-3 text-center">ĐVT</th>
+                                <th class="p-3 text-center">Khối Lượng</th>
+                                <th class="p-3 text-right">Đơn Giá Chưa VAT (₫)</th>
+                                <th class="p-3 text-right">Thành Tiền Chưa VAT (₫)</th>
+                                <th class="p-3 text-right">Thuế VAT 8% (₫)</th>
+                                <th class="p-3 text-right bg-blue-50/50 text-blue-900 font-bold">Thành Tiền Sau VAT (₫)</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-100 font-medium">
+                            <!-- NHÓM A -->
+                            <tr class="bg-amber-50/40 text-amber-950 font-bold">
+                                <td class="p-3 text-center">A</td>
+                                <td colspan="7" class="p-3">TRANG BỊ TÀI SẢN PHÒNG LÀM VIỆC GIÁM ĐỐC MỚI NHẬM CHỨC (THEO QĐ 8541 & QC 355)</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50/80">
+                                <td class="p-3 text-center text-slate-400">1</td>
+                                <td class="p-3 font-semibold text-slate-800">Bộ bàn ghế ngồi làm việc Giám đốc (Bàn lãnh đạo + Ghế xoay da lãnh đạo ngả lưng)</td>
+                                <td class="p-3 text-center">Bộ</td>
+                                <td class="p-3 text-center">01</td>
+                                <td class="p-3 text-right">9.259.259</td>
+                                <td class="p-3 text-right">9.259.259</td>
+                                <td class="p-3 text-right">740.741</td>
+                                <td class="p-3 text-right font-bold text-blue-900 bg-blue-50/20">10.000.000</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50/80">
+                                <td class="p-3 text-center text-slate-400">2</td>
+                                <td class="p-3 font-semibold text-slate-800">Tủ đựng tài liệu Giám đốc (Tủ 3 buồng chia ngăn tài liệu có khóa an toàn)</td>
+                                <td class="p-3 text-center">Chiếc</td>
+                                <td class="p-3 text-center">01</td>
+                                <td class="p-3 text-right">6.481.481</td>
+                                <td class="p-3 text-right">6.481.481</td>
+                                <td class="p-3 text-right">518.519</td>
+                                <td class="p-3 text-right font-bold text-blue-900 bg-blue-50/20">7.000.000</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50/80">
+                                <td class="p-3 text-center text-slate-400">3</td>
+                                <td class="p-3 font-semibold text-slate-800">Máy vi tính để bàn làm việc (Core i7, RAM 16GB, SSD 512GB, LCD 24 inch FHD)</td>
+                                <td class="p-3 text-center">Bộ</td>
+                                <td class="p-3 text-center">01</td>
+                                <td class="p-3 text-right">18.518.519</td>
+                                <td class="p-3 text-right">18.518.519</td>
+                                <td class="p-3 text-right">1.481.481</td>
+                                <td class="p-3 text-right font-bold text-blue-900 bg-blue-50/20">20.000.000</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50/80">
+                                <td class="p-3 text-center text-slate-400">4</td>
+                                <td class="p-3 font-semibold text-slate-800">Máy in laser đen trắng tự động 2 mặt khổ A4 kết nối cổng mạng LAN</td>
+                                <td class="p-3 text-center">Chiếc</td>
+                                <td class="p-3 text-center">01</td>
+                                <td class="p-3 text-right">12.037.037</td>
+                                <td class="p-3 text-right">12.037.037</td>
+                                <td class="p-3 text-right">962.963</td>
+                                <td class="p-3 text-right font-bold text-blue-900 bg-blue-50/20">13.000.000</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50/80">
+                                <td class="p-3 text-center text-slate-400">5</td>
+                                <td class="p-3 font-semibold text-slate-800">Điện thoại bàn cố định hiển thị số gọi đến</td>
+                                <td class="p-3 text-center">Chiếc</td>
+                                <td class="p-3 text-center">01</td>
+                                <td class="p-3 text-right">925.926</td>
+                                <td class="p-3 text-right">925.926</td>
+                                <td class="p-3 text-right">74.074</td>
+                                <td class="p-3 text-right font-bold text-blue-900 bg-blue-50/20">1.000.000</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50/80">
+                                <td class="p-3 text-center text-slate-400">6</td>
+                                <td class="p-3 font-semibold text-slate-800">Bộ bàn ghế họp, tiếp khách tại phòng Giám đốc (Bàn trà + Sofa da cao cấp)</td>
+                                <td class="p-3 text-center">Bộ</td>
+                                <td class="p-3 text-center">01</td>
+                                <td class="p-3 text-right">12.037.037</td>
+                                <td class="p-3 text-right">12.037.037</td>
+                                <td class="p-3 text-right">962.963</td>
+                                <td class="p-3 text-right font-bold text-blue-900 bg-blue-50/20">13.000.000</td>
+                            </tr>
+                            <tr class="bg-amber-100/40 font-bold text-amber-950">
+                                <td class="p-3 text-center">Cộng A</td>
+                                <td colspan="4" class="p-3">Tổng kinh phí trang bị tài sản phòng Giám đốc (A)</td>
+                                <td class="p-3 text-right">59.259.259</td>
+                                <td class="p-3 text-right">4.740.741</td>
+                                <td class="p-3 text-right text-amber-900 bg-amber-50">64.000.000</td>
+                            </tr>
+
+                            <!-- NHÓM B -->
+                            <tr class="bg-emerald-50/40 text-emerald-950 font-bold">
+                                <td class="p-3 text-center">B</td>
+                                <td colspan="7" class="p-3">SỬA CHỮA CHỐNG THẤM TRỤ SỞ CHI NHÁNH SỐ 23 (THEO MẪU PHƯƠNG ÁN CN34)</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50/80">
+                                <td class="p-3 text-center text-slate-400">1</td>
+                                <td class="p-3 font-semibold text-slate-800">Chống thấm sàn mái, sê nô, mương đón nước bằng màng khò nhiệt Bitumode Delta-P 3mm</td>
+                                <td class="p-3 text-center">m²</td>
+                                <td class="p-3 text-center">357,43</td>
+                                <td class="p-3 text-right">303.250</td>
+                                <td class="p-3 text-right">108.390.648</td>
+                                <td class="p-3 text-right">8.671.252</td>
+                                <td class="p-3 text-right font-bold text-blue-900 bg-blue-50/20">117.061.900</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50/80">
+                                <td class="p-3 text-center text-slate-400">2</td>
+                                <td class="p-3 font-semibold text-slate-800">Chống thấm tường sàn mái, tường sê nô bằng hóa chất kháng UV SikaCoat Plus</td>
+                                <td class="p-3 text-center">m²</td>
+                                <td class="p-3 text-center">285,38</td>
+                                <td class="p-3 text-right">233.000</td>
+                                <td class="p-3 text-right">66.493.540</td>
+                                <td class="p-3 text-right">5.319.483</td>
+                                <td class="p-3 text-right font-bold text-blue-900 bg-blue-50/20">71.773.023</td>
+                            </tr>
+                            <tr class="bg-emerald-100/40 font-bold text-emerald-950">
+                                <td class="p-3 text-center">Cộng B</td>
+                                <td colspan="4" class="p-3">Tổng kinh phí sửa chữa chống thấm trụ sở (B)</td>
+                                <td class="p-3 text-right">174.844.188</td>
+                                <td class="p-3 text-right">13.990.735</td>
+                                <td class="p-3 text-right text-emerald-900 bg-emerald-50">188.834.923</td>
+                            </tr>
+
+                            <!-- NHÓM C -->
+                            <tr class="bg-rose-50/40 text-rose-950 font-bold">
+                                <td class="p-3 text-center">C</td>
+                                <td colspan="7" class="p-3">TRANG BỊ THIẾT BỊ PHÒNG CHÁY CHỮA CHÁY (THEO BÁO CÁO PCCC CN23 & TCVN 3890:2023)</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50/80">
+                                <td class="p-3 text-center text-slate-400">1</td>
+                                <td class="p-3 font-semibold text-slate-800">Bình chữa cháy bột ABC 4kg (MFZL4) có tem kiểm định PCCC</td>
+                                <td class="p-3 text-center">Bình</td>
+                                <td class="p-3 text-center">16</td>
+                                <td class="p-3 text-right">290.000</td>
+                                <td class="p-3 text-right">4.640.000</td>
+                                <td class="p-3 text-right">371.200</td>
+                                <td class="p-3 text-right font-bold text-blue-900 bg-blue-50/20">5.011.200</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50/80">
+                                <td class="p-3 text-center text-slate-400">2</td>
+                                <td class="p-3 font-semibold text-slate-800">Bình chữa cháy khí CO2 3kg (MT3) có tem kiểm định PCCC (bảo vệ tài liệu, máy chủ)</td>
+                                <td class="p-3 text-center">Bình</td>
+                                <td class="p-3 text-center">10</td>
+                                <td class="p-3 text-right">480.000</td>
+                                <td class="p-3 text-right">4.800.000</td>
+                                <td class="p-3 text-right">384.000</td>
+                                <td class="p-3 text-right font-bold text-blue-900 bg-blue-50/20">5.184.000</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50/80">
+                                <td class="p-3 text-center text-slate-400">3</td>
+                                <td class="p-3 font-semibold text-slate-800">Kệ sắt để bình chữa cháy đôi sơn tĩnh điện màu đỏ</td>
+                                <td class="p-3 text-center">Kệ</td>
+                                <td class="p-3 text-center">13</td>
+                                <td class="p-3 text-right">150.000</td>
+                                <td class="p-3 text-right">1.950.000</td>
+                                <td class="p-3 text-right">156.000</td>
+                                <td class="p-3 text-right font-bold text-blue-900 bg-blue-50/20">2.106.000</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50/80">
+                                <td class="p-3 text-center text-slate-400">4</td>
+                                <td class="p-3 font-semibold text-slate-800">Bộ bảng nội quy và tiêu lệnh chữa cháy Mica cao cấp</td>
+                                <td class="p-3 text-center">Bộ</td>
+                                <td class="p-3 text-center">06</td>
+                                <td class="p-3 text-right">120.000</td>
+                                <td class="p-3 text-right">720.000</td>
+                                <td class="p-3 text-right">57.600</td>
+                                <td class="p-3 text-right font-bold text-blue-900 bg-blue-50/20">777.600</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50/80">
+                                <td class="p-3 text-center text-slate-400">5</td>
+                                <td class="p-3 font-semibold text-slate-800">Đèn chiếu sáng sự cố khẩn cấp tự động bật khi mất điện (Emergency Light)</td>
+                                <td class="p-3 text-center">Bộ</td>
+                                <td class="p-3 text-center">06</td>
+                                <td class="p-3 text-right">350.000</td>
+                                <td class="p-3 text-right">2.100.000</td>
+                                <td class="p-3 text-right">168.000</td>
+                                <td class="p-3 text-right font-bold text-blue-900 bg-blue-50/20">2.268.000</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50/80">
+                                <td class="p-3 text-center text-slate-400">6</td>
+                                <td class="p-3 font-semibold text-slate-800">Đèn chỉ dẫn thoát nạn LED Exit 2 mặt có pin dự phòng</td>
+                                <td class="p-3 text-center">Bộ</td>
+                                <td class="p-3 text-center">06</td>
+                                <td class="p-3 text-right">280.000</td>
+                                <td class="p-3 text-right">1.680.000</td>
+                                <td class="p-3 text-right">134.400</td>
+                                <td class="p-3 text-right font-bold text-blue-900 bg-blue-50/20">1.814.400</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50/80">
+                                <td class="p-3 text-center text-slate-400">7</td>
+                                <td class="p-3 font-semibold text-slate-800">Mặt nạ phòng độc lọc khói khí độc cho lực lượng PCCC cơ sở</td>
+                                <td class="p-3 text-center">Cái</td>
+                                <td class="p-3 text-center">12</td>
+                                <td class="p-3 text-right">250.000</td>
+                                <td class="p-3 text-right">3.000.000</td>
+                                <td class="p-3 text-right">240.000</td>
+                                <td class="p-3 text-right font-bold text-blue-900 bg-blue-50/20">3.240.000</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50/80">
+                                <td class="p-3 text-center text-slate-400">8</td>
+                                <td class="p-3 font-semibold text-slate-800">Túi y tế sơ cấp cứu cứu hộ chuyên dụng loại B (TT 19/2016/TT-BYT)</td>
+                                <td class="p-3 text-center">Túi</td>
+                                <td class="p-3 text-center">02</td>
+                                <td class="p-3 text-right">750.000</td>
+                                <td class="p-3 text-right">1.500.000</td>
+                                <td class="p-3 text-right">120.000</td>
+                                <td class="p-3 text-right font-bold text-blue-900 bg-blue-50/20">1.620.000</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50/80">
+                                <td class="p-3 text-center text-slate-400">9</td>
+                                <td class="p-3 font-semibold text-slate-800">Dụng cụ phá dỡ cứu nạn: Rìu cứu nạn cách điện + búa thoát hiểm đa năng</td>
+                                <td class="p-3 text-center">Bộ</td>
+                                <td class="p-3 text-center">02</td>
+                                <td class="p-3 text-right">450.000</td>
+                                <td class="p-3 text-right">900.000</td>
+                                <td class="p-3 text-right">72.000</td>
+                                <td class="p-3 text-right font-bold text-blue-900 bg-blue-50/20">972.000</td>
+                            </tr>
+                            <tr class="bg-rose-100/40 font-bold text-rose-950">
+                                <td class="p-3 text-center">Cộng C</td>
+                                <td colspan="4" class="p-3">Tổng kinh phí trang bị thiết bị PCCC (C)</td>
+                                <td class="p-3 text-right">21.290.000</td>
+                                <td class="p-3 text-right">1.703.200</td>
+                                <td class="p-3 text-right text-rose-900 bg-rose-50">22.993.200</td>
+                            </tr>
+
+                            <!-- TỔNG CỘNG -->
+                            <tr class="bg-blue-900 text-white font-bold text-sm">
+                                <td class="p-3.5 text-center">TỔNG</td>
+                                <td colspan="4" class="p-3.5">TỔNG CỘNG TOÀN BỘ PHƯƠNG ÁN (A + B + C)</td>
+                                <td class="p-3.5 text-right font-extrabold text-blue-100">255.393.447</td>
+                                <td class="p-3.5 text-right font-extrabold text-blue-100">20.434.676</td>
+                                <td class="p-3.5 text-right font-black text-amber-300 bg-blue-950">275.828.123 ₫</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= TAB 3: ĐỐI CHIẾU 5 TÀI LIỆU NGUỒN ================= -->
+        <div id="tab-source-view" class="tab-content hidden">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Source 1: QĐ 8541 -->
+                <div class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-5 hover:border-blue-400 transition">
+                    <div class="flex items-center space-x-3 mb-3">
+                        <span class="p-2 bg-purple-50 text-purple-600 rounded-xl"><i data-lucide="award" class="w-5 h-5"></i></span>
+                        <div>
+                            <h3 class="font-bold text-slate-800 text-sm">1. Quyết định số 8541/QĐ-SNNMT-VP (30/09/2026)</h3>
+                            <p class="text-xs text-slate-500">Sở Nông nghiệp và Môi trường TP.HCM</p>
+                        </div>
+                    </div>
+                    <ul class="text-xs text-slate-600 space-y-1.5 list-disc list-inside">
+                        <li><b>Người được bổ nhiệm:</b> Ông Nguyễn Chiến Thắng (Phó Giám đốc VPĐKĐĐ Thành phố).</li>
+                        <li><b>Chức vụ mới:</b> Giám đốc Chi nhánh Văn phòng Đăng ký đất đai số 23.</li>
+                        <li><b>Thời hạn:</b> 05 năm kể từ ngày 01 tháng 10 năm 2026.</li>
+                        <li><b>Chế độ bảo lưu:</b> Bảo lưu hệ số phụ cấp chức vụ 0,6 đến hết 03/03/2030 (hưởng 0,4 từ 04/03/2030).</li>
+                    </ul>
+                </div>
+
+                <!-- Source 2: Quy chế 355 -->
+                <div class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-5 hover:border-blue-400 transition">
+                    <div class="flex items-center space-x-3 mb-3">
+                        <span class="p-2 bg-blue-50 text-blue-600 rounded-xl"><i data-lucide="book-open" class="w-5 h-5"></i></span>
+                        <div>
+                            <h3 class="font-bold text-slate-800 text-sm">2. Quy chế chi tiêu nội bộ số 355/QĐ-VPĐK-KHTC (31/12/2025)</h3>
+                            <p class="text-xs text-slate-500">Văn phòng Đăng ký đất đai Thành phố Hồ Chí Minh</p>
+                        </div>
+                    </div>
+                    <ul class="text-xs text-slate-600 space-y-1.5 list-disc list-inside">
+                        <li><b>Mục VII (trang 66):</b> Định mức phụ cấp 0,6: Bàn ghế 10tr, Tủ 14tr, Máy tính 20tr, Máy in 13tr, Bàn ghế tiếp khách 13tr.</li>
+                        <li><b>Mục VIII (trang 66-67):</b> Giám đốc Chi nhánh: Bàn ghế 7tr, Tủ 7tr, Máy tính 20tr, Điện thoại 1tr.</li>
+                        <li><b>Mục B (trang 67):</b> Hoạt động chung: Sofa tiếp khách 13tr/phòng, Máy in 13tr/3 biên chế.</li>
+                        <li><b>Mục IV-V (trang 48):</b> Quy trình bảo dưỡng, sửa chữa tài sản dưới 500 triệu từ nguồn kinh phí tự chủ.</li>
+                    </ul>
+                </div>
+
+                <!-- Source 3: Công văn 1656 -->
+                <div class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-5 hover:border-blue-400 transition">
+                    <div class="flex items-center space-x-3 mb-3">
+                        <span class="p-2 bg-emerald-50 text-emerald-600 rounded-xl"><i data-lucide="building-2" class="w-5 h-5"></i></span>
+                        <div>
+                            <h3 class="font-bold text-slate-800 text-sm">3. Công văn số 1656/CN23-HCTH (21/07/2026)</h3>
+                            <p class="text-xs text-slate-500">Chi nhánh số 23 thuyết minh diện tích trụ sở</p>
+                        </div>
+                    </div>
+                    <ul class="text-xs text-slate-600 space-y-1.5 list-disc list-inside">
+                        <li><b>Địa chỉ:</b> Số 358 Huỳnh Văn Cù, phường Thủ Dầu Một, TP.HCM.</li>
+                        <li><b>Khuôn viên đất:</b> 1.417,7 m²; Tổng sàn xây dựng hiện hữu: 835,3 m².</li>
+                        <li><b>Cơ cấu khối nhà:</b> Nhà chính 2 tầng (548,2 m²), Một cửa (69,9 m²), BCH Quân sự (81,5 m²), Hội trường (117,6 m²), Toilet (18,1 m²).</li>
+                        <li><b>Biên chế:</b> 85 người được giao (QĐ 480/QĐ-VPĐK-HC). Hiện trạng xuống cấp dột nát trầm trọng.</li>
+                    </ul>
+                </div>
+
+                <!-- Source 4: Báo cáo PCCC CN23 -->
+                <div class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-5 hover:border-blue-400 transition">
+                    <div class="flex items-center space-x-3 mb-3">
+                        <span class="p-2 bg-rose-50 text-rose-600 rounded-xl"><i data-lucide="shield-alert" class="w-5 h-5"></i></span>
+                        <div>
+                            <h3 class="font-bold text-slate-800 text-sm">4. Báo cáo PCCC năm 2026 của Chi nhánh số 23 (Tháng 9/2026)</h3>
+                            <p class="text-xs text-slate-500">Kế hoạch an toàn PCCC và kho tài liệu địa chính</p>
+                        </div>
+                    </div>
+                    <ul class="text-xs text-slate-600 space-y-1.5 list-disc list-inside">
+                        <li><b>Hiện trạng:</b> Có 26 bình chữa cháy đặt tại sảnh, kho, hành lang, cầu thang, phòng chuyên môn.</li>
+                        <li><b>Đội PCCC cơ sở:</b> 4 tổ chuyên trách (Hậu cần, Chữa cháy tại chỗ, Thoát nạn, Bảo vệ di chuyển tài liệu).</li>
+                        <li><b>Kiến nghị:</b> Bổ sung kinh phí đầu tư thiết bị bảo quản an toàn kho lưu trữ theo CV 24482/VPĐK-KT.</li>
+                        <li><b>Nhu cầu:</b> Thay mới bình bột ABC, bổ sung bình CO2 cho kho giấy/máy chủ, mặt nạ độc, đèn thoát nạn.</li>
+                    </ul>
+                </div>
+
+                <!-- Source 5: Mẫu Phương án CN34 -->
+                <div class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-5 hover:border-blue-400 transition md:col-span-2">
+                    <div class="flex items-center space-x-3 mb-3">
+                        <span class="p-2 bg-indigo-50 text-indigo-600 rounded-xl"><i data-lucide="file-check" class="w-5 h-5"></i></span>
+                        <div>
+                            <h3 class="font-bold text-slate-800 text-sm">5. Mẫu Phương án sửa chữa chống thấm Chi nhánh số 34</h3>
+                            <p class="text-xs text-slate-500">Văn phòng Đăng ký đất đai TP.HCM đã thẩm định và phê duyệt</p>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs text-slate-600">
+                        <div class="p-3 bg-slate-50 rounded-xl">
+                            <span class="font-bold block text-slate-800 mb-1">Quy cách kỹ thuật sàn mái</span>
+                            Màng khò nhiệt Bitumode Delta-P dày 3mm (mặt trơn) kết hợp lớp lót hệ nước Nirol-W (0,2 kg/m²). Khối lượng chuẩn: 357,43 m². Đơn giá thấp nhất: 303.250 ₫/m².
+                        </div>
+                        <div class="p-3 bg-slate-50 rounded-xl">
+                            <span class="font-bold block text-slate-800 mb-1">Quy cách kỹ thuật tường</span>
+                            Hóa chất đàn hồi kháng UV SikaCoat Plus lăn phủ 2 lớp (0,6 kg/m²) kết hợp Mastic trám khe nứt. Khối lượng chuẩn: 285,38 m². Đơn giá thấp nhất: 233.000 ₫/m².
+                        </div>
+                        <div class="p-3 bg-slate-50 rounded-xl">
+                            <span class="font-bold block text-slate-800 mb-1">Kết quả đấu thầu tham chiếu</span>
+                            Báo giá thấp nhất là Công ty TNHH ĐT PT Toàn Đạt: 188.834.923 ₫ (Sau VAT 8%). Thấp hơn Công ty Vạn Đạt (207,2 tr) và Kim Bảo Phát (222,8 tr).
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= TAB 4: BIỂU ĐỒ & PHÂN TÍCH ĐẤU THẦU ================= -->
+        <div id="tab-chart-view" class="tab-content hidden">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <!-- Chart 1: Cơ cấu kinh phí -->
+                <div class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-6">
+                    <h3 class="font-bold text-slate-800 text-sm mb-4">Cơ cấu phân bổ dự toán kinh phí theo nhóm hạng mục</h3>
+                    <div class="h-64 flex items-center justify-center">
+                        <canvas id="costStructureChart"></canvas>
+                    </div>
+                    <div class="mt-4 grid grid-cols-3 gap-2 text-center text-xs">
+                        <div class="p-2 bg-amber-50 rounded-lg">
+                            <span class="block text-slate-500">Tài sản GĐ (A)</span>
+                            <span class="font-bold text-amber-800">23,2% (64,0 tr)</span>
+                        </div>
+                        <div class="p-2 bg-emerald-50 rounded-lg">
+                            <span class="block text-slate-500">Chống thấm (B)</span>
+                            <span class="font-bold text-emerald-800">68,5% (188,8 tr)</span>
+                        </div>
+                        <div class="p-2 bg-rose-50 rounded-lg">
+                            <span class="block text-slate-500">PCCC (C)</span>
+                            <span class="font-bold text-rose-800">8,3% (23,0 tr)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chart 2: So sánh 3 nhà thầu -->
+                <div class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-6">
+                    <h3 class="font-bold text-slate-800 text-sm mb-4">So sánh tổng giá trị báo giá của 03 đơn vị (Hạng mục chống thấm)</h3>
+                    <div class="h-64 flex items-center justify-center">
+                        <canvas id="bidderComparisonChart"></canvas>
+                    </div>
+                    <p class="text-xs text-slate-500 mt-4 text-center">
+                        ✓ Lựa chọn <b>Công ty Toàn Đạt</b> giúp tiết kiệm từ <b>18,5 triệu</b> đến <b>34,0 triệu đồng</b> cho ngân sách sự nghiệp.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-200 mt-12 py-6 no-print">
+        <div class="max-w-7xl mx-auto px-4 text-center text-xs text-slate-500 space-y-1">
+            <p>Hồ sơ lưu trữ theo chuẩn: 01 bản lưu Phòng Kế hoạch - Tài chính • 02 bản thực hiện Chi nhánh 23 • 01 bản Văn thư</p>
+            <p>© 2026 Chi nhánh Văn phòng Đăng ký đất đai số 23 • Hệ thống Quản trị văn bản & Dự toán kinh phí</p>
+        </div>
+    </footer>
+
+    <script>
+        // Khởi tạo Lucide Icons
+        lucide.createIcons();
+
+        // Switch Tabs Function
+        function switchTab(tabId) {
+            document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+            
+            document.getElementById('tab-' + tabId).classList.remove('hidden');
+            document.getElementById('btn-' + tabId).classList.add('active');
+
+            if (tabId === 'chart-view') {
+                renderCharts();
+            }
+        }
+
+        // Filter Table Function
+        function filterTable() {
+            const input = document.getElementById("filterInput");
+            const filter = input.value.toUpperCase();
+            const table = document.getElementById("budgetTable");
+            const tr = table.getElementsByTagName("tr");
+
+            for (let i = 1; i < tr.length; i++) {
+                let td = tr[i].getElementsByTagName("td")[1];
+                if (td) {
+                    let txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        // Không ẩn các dòng tiêu đề nhóm hoặc tổng cộng nếu tìm kiếm trống
+                        if (filter === "") {
+                            tr[i].style.display = "";
+                        } else {
+                            tr[i].style.display = "none";
+                        }
+                    }
+                }
+            }
+        }
+
+        // Charts Rendering
+        let chartsInitialized = false;
+        function renderCharts() {
+            if (chartsInitialized) return;
+            chartsInitialized = true;
+
+            // Chart 1: Donut Cost Structure
+            const ctx1 = document.getElementById('costStructureChart').getContext('2d');
+            new Chart(ctx1, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Tài sản Giám đốc (A)', 'Chống thấm trụ sở (B)', 'Thiết bị PCCC (C)'],
+                    datasets: [{
+                        data: [64000000, 188834923, 22993200],
+                        backgroundColor: ['#f59e0b', '#10b981', '#f43f5e'],
+                        borderWidth: 2,
+                        borderColor: '#ffffff'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { position: 'bottom' }
+                    }
+                }
+            });
+
+            // Chart 2: Bar Comparison
+            const ctx2 = document.getElementById('bidderComparisonChart').getContext('2d');
+            new Chart(ctx2, {
+                type: 'bar',
+                data: {
+                    labels: ['Toàn Đạt (Được chọn)', 'Vạn Đạt', 'Kim Bảo Phát'],
+                    datasets: [{
+                        label: 'Tổng giá trị sau VAT 8% (₫)',
+                        data: [188834923, 207299736, 222872408],
+                        backgroundColor: ['#10b981', '#3b82f6', '#94a3b8'],
+                        borderRadius: 8
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false }
+                    },
+                    scales: {
+                        y: {
+                            min: 150000000,
+                            ticks: {
+                                callback: function(value) {
+                                    return (value / 1000000).toFixed(0) + ' tr ₫';
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+    </script>
+</body>
+</html>

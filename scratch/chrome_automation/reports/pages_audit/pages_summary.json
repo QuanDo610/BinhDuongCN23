@@ -1,0 +1,270 @@
+[
+  {
+    "name": "TrangChu",
+    "path": "/vptdm/trangchu",
+    "url": "https://vpdkddtdm.vn/vptdm/trangchu",
+    "title": "Chi nhánh văn phòng Đăng ký đất đai",
+    "headings": [
+      "VĂN PHÒNG ĐĂNG KÝ ĐẤT ĐAI THÀNH PHỐ HỒ CHÍ MINH",
+      "CHI NHÁNH VĂN PHÒNG ĐĂNG KÝ ĐẤT ĐAI SỐ 23",
+      "Chi tiết ×",
+      "Danh sách hồ sơ Tổng số dòng: 1",
+      "Chi tiết ×"
+    ],
+    "buttons": [
+      "×",
+      "×"
+    ],
+    "tables_count": 2,
+    "inputs_sample": [
+      "Nhập mã hồ sơ"
+    ],
+    "screenshot": "TrangChu.png"
+  },
+  {
+    "name": "TiepNhanHoSo",
+    "path": "/vptdm/tiepnhanhoso",
+    "url": "https://vpdkddtdm.vn/vptdm/tiepnhanhoso",
+    "title": "Tiếp nhận hồ sơ",
+    "headings": [
+      "VĂN PHÒNG ĐĂNG KÝ ĐẤT ĐAI THÀNH PHỐ HỒ CHÍ MINH",
+      "CHI NHÁNH VĂN PHÒNG ĐĂNG KÝ ĐẤT ĐAI SỐ 23",
+      "Tổ chức\n Cá nhân",
+      "Giấy tờ \n In danh sách",
+      "Thông tin"
+    ],
+    "buttons": [
+      "In danh sách",
+      "Xuất file word",
+      "Lịch đo đạc",
+      "Cấu hình lịch đạc",
+      "Tra cứu ngăn chặn",
+      "In phiếu theo dõi",
+      "Xuất file word",
+      "In biên nhận",
+      "Xuất file word",
+      "Làm mới",
+      "Gửi lại SMS",
+      "Thành phần hồ sơ",
+      "×",
+      "Lưu thông tin",
+      "Đóng"
+    ],
+    "tables_count": 7,
+    "inputs_sample": [
+      "caps",
+      "caps",
+      "Nhập thông tin tìm kiếm",
+      "Nhập thông tin tìm kiếm",
+      "Nội dung",
+      "Số tờ",
+      "Số thửa",
+      "Nhập thông tin tìm kiếm",
+      "Nhập ",
+      "sonha"
+    ],
+    "screenshot": "TiepNhanHoSo.png"
+  },
+  {
+    "name": "XuLyHoSo",
+    "path": "/vptdm/xulyhoso",
+    "url": "https://vpdkddtdm.vn/vptdm/xulyhoso",
+    "title": "Xử lý hồ sơ",
+    "headings": [
+      "VĂN PHÒNG ĐĂNG KÝ ĐẤT ĐAI THÀNH PHỐ HỒ CHÍ MINH",
+      "CHI NHÁNH VĂN PHÒNG ĐĂNG KÝ ĐẤT ĐAI SỐ 23",
+      "Xử lý hồ sơ\n Lịch đo đạc\n Chức năng thuế\n Quy trình thực hiện\n Thành phần hồ sơ\n Chuyển nội bộ\n Giao hồ sơ\n Giao phiếu nhanh",
+      "Lọc danh sách hồ sơ",
+      "Thông tin hồ sơ"
+    ],
+    "buttons": [
+      "Lịch đo đạc",
+      "Chức năng thuế",
+      "Quy trình thực hiện",
+      "Thành phần hồ sơ",
+      "Chuyển nội bộ",
+      "Giao hồ sơ",
+      "Giao phiếu nhanh",
+      "Xem dữ liệu",
+      "Xóa bộ lọc",
+      "Làm mới",
+      "Xuất excel",
+      "Làm mới",
+      "Làm mới",
+      "Làm mới",
+      "Xuất excel"
+    ],
+    "tables_count": 8,
+    "inputs_sample": [
+      "Nhập thông tin tìm kiếm",
+      "Nhập thông tin tìm kiếm",
+      "Nhập thông tin tìm kiếm",
+      "Nhập thông tin tìm kiếm",
+      "Nhập thông tin tìm kiếm",
+      "Nhập thông tin tìm kiếm",
+      "Cách nhau bằng ký tự space",
+      "xxx/2021/BGVP",
+      "Số lượng hồ sơ",
+      "Nhập số lượng thửa của hồ sơ",
+      "Nhập số tổng diện dích của hồ sơ"
+    ],
+    "screenshot": "XuLyHoSo.png"
+  },
+  {
+    "name": "SuaHoSo",
+    "path": "/vptdm/suahoso",
+    "url": "https://vpdkddtdm.vn/vptdm/suahoso",
+    "title": "Sửa hồ sơ",
+    "headings": [
+      "VĂN PHÒNG ĐĂNG KÝ ĐẤT ĐAI THÀNH PHỐ HỒ CHÍ MINH",
+      "CHI NHÁNH VĂN PHÒNG ĐĂNG KÝ ĐẤT ĐAI SỐ 23",
+      "Danh sách hồ sơ\n Làm mới\nCá nhân\nTổ chức",
+      "Danh sách tài liệu yêu cầu",
+      "Cập nhật thông tin hồ sơ\n\n Cập nhật"
+    ],
+    "buttons": [
+      "Làm mới",
+      "Cập nhật",
+      "×",
+      "×",
+      "×",
+      "Đồng ý"
+    ],
+    "tables_count": 2,
+    "inputs_sample": [
+      "Nhập thông tin tìm kiếm"
+    ],
+    "screenshot": "SuaHoSo.png"
+  },
+  {
+    "name": "TraHoSo",
+    "path": "/vptdm/trahoso",
+    "url": "https://vpdkddtdm.vn/vptdm/trahoso",
+    "title": "Trả hồ sơ",
+    "headings": [
+      "VĂN PHÒNG ĐĂNG KÝ ĐẤT ĐAI THÀNH PHỐ HỒ CHÍ MINH",
+      "CHI NHÁNH VĂN PHÒNG ĐĂNG KÝ ĐẤT ĐAI SỐ 23",
+      "Trả hồ sơ\n Thành phần hồ sơ\n Trả hồ sơ khách hàng",
+      "Lọc danh sách hồ sơ",
+      "Thông tin hồ sơ"
+    ],
+    "buttons": [
+      "Thành phần hồ sơ",
+      "Trả hồ sơ khách hàng",
+      "Xem dữ liệu",
+      "×",
+      "Đóng",
+      "×",
+      "Thêm 1 dòng",
+      "Xuất Excel",
+      "Import Excel",
+      "×",
+      "Đồng ý"
+    ],
+    "tables_count": 2,
+    "inputs_sample": [
+      "Nhập thông tin tìm kiếm"
+    ],
+    "screenshot": "TraHoSo.png"
+  },
+  {
+    "name": "TraCuuHoSo",
+    "path": "/vptdm/tracuuhoso",
+    "url": "https://vpdkddtdm.vn/vptdm/tracuuhoso",
+    "title": "Tra cứu",
+    "headings": [
+      "VĂN PHÒNG ĐĂNG KÝ ĐẤT ĐAI THÀNH PHỐ HỒ CHÍ MINH",
+      "CHI NHÁNH VĂN PHÒNG ĐĂNG KÝ ĐẤT ĐAI SỐ 23",
+      "Tra cứu hồ sơ",
+      "Hình ảnh sản phẩm ×",
+      "Danh sách hình ảnh"
+    ],
+    "buttons": [
+      "Tra cứu",
+      "In biên nhận",
+      "×"
+    ],
+    "tables_count": 0,
+    "inputs_sample": [
+      "Mã biên nhận một cửa hoặc Tên khách hàng(Cty)"
+    ],
+    "screenshot": "TraCuuHoSo.png"
+  },
+  {
+    "name": "QuanLyTrangThai",
+    "path": "/vptdm/quanlytrangthaihoso",
+    "url": "https://vpdkddtdm.vn/vptdm/quanlytrangthaihoso",
+    "title": "Tra cứu - Chuyển đổi trạng thái hồ sơ",
+    "headings": [
+      "VĂN PHÒNG ĐĂNG KÝ ĐẤT ĐAI THÀNH PHỐ HỒ CHÍ MINH",
+      "CHI NHÁNH VĂN PHÒNG ĐĂNG KÝ ĐẤT ĐAI SỐ 23",
+      "Tra cứu hồ sơ",
+      "Hình ảnh sản phẩm ×",
+      "Danh sách hình ảnh"
+    ],
+    "buttons": [
+      "Tra cứu",
+      "Hoàn thành hồ sơ",
+      "Hủy hồ sơ",
+      "Khôi phục hồ sơ",
+      "Hoàn thành hồ sơ",
+      "Hủy hồ sơ",
+      "×"
+    ],
+    "tables_count": 0,
+    "inputs_sample": [
+      "Mã hồ sơ vd : 12000000XD"
+    ],
+    "screenshot": "QuanLyTrangThai.png"
+  },
+  {
+    "name": "DashboardTrichDo",
+    "path": "/vptdm/dashboard-trichdo",
+    "url": "https://vpdkddtdm.vn/vptdm/dashboard-trichdo",
+    "title": "DashBoard trích đo",
+    "headings": [
+      "VĂN PHÒNG ĐĂNG KÝ ĐẤT ĐAI THÀNH PHỐ HỒ CHÍ MINH",
+      "CHI NHÁNH VĂN PHÒNG ĐĂNG KÝ ĐẤT ĐAI SỐ 23",
+      "Biểu đồ xử lý hồ sơ theo điểm quy trình",
+      "Chi tiết ×",
+      "Danh sách hồ sơTổng số dòng: 1"
+    ],
+    "buttons": [
+      "×"
+    ],
+    "tables_count": 1,
+    "inputs_sample": [],
+    "screenshot": "DashboardTrichDo.png"
+  },
+  {
+    "name": "ThongKeTongHop",
+    "path": "/vptdm/thongketonghop",
+    "url": "https://vpdkddtdm.vn/vptdm/thongketonghop",
+    "title": "Thống kê tổng hợp",
+    "headings": [
+      "VĂN PHÒNG ĐĂNG KÝ ĐẤT ĐAI THÀNH PHỐ HỒ CHÍ MINH",
+      "CHI NHÁNH VĂN PHÒNG ĐĂNG KÝ ĐẤT ĐAI SỐ 23",
+      "Tất cả\nThường xem",
+      "Tham số báo cáo",
+      "Dữ liệu thống kê"
+    ],
+    "buttons": [
+      "Thống kê",
+      "Thu gọn",
+      "Xuất Excel",
+      "×",
+      "Chi tiết luồng giao",
+      "Thoát",
+      "×",
+      "×",
+      "Thoát"
+    ],
+    "tables_count": 1,
+    "inputs_sample": [
+      "caps",
+      "caps",
+      "Nhập thông tin tìm kiếm"
+    ],
+    "screenshot": "ThongKeTongHop.png"
+  }
+]

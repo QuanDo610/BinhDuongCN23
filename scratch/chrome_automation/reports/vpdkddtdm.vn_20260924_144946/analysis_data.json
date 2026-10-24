@@ -1,0 +1,132 @@
+{
+  "target_url": "https://vpdkddtdm.vn/vptdm/trangchu",
+  "analyzed_at": "2026-09-24T14:49:55.566092",
+  "title": "Chi nhánh văn phòng Đăng ký đất đai",
+  "description": "",
+  "status_code": 200,
+  "tech_stack": [
+    "Angular",
+    "jQuery 3.5.1",
+    "Bootstrap",
+    "Google Analytics / GTM"
+  ],
+  "api_endpoints": [
+    {
+      "method": "POST",
+      "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-Q2NKVMW4KP&gtm=45je69m1v884363253za200zd884363253xf1&_p=1790236188770&gcd=13l3l3l3l1l1&npa=0&dma=0&cid=1341894831.1790236189&frm=0&pscdl=noapi&rcb=4&sr=1440x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B153.0.8010.12%7CNot_A%2520Brand%3B8.0.0.0%7CChromium%3B153.0.8010.12&uam=&uamb=0&uap=macOS&uapv=10_15_7&uaw=0&ul=en-us&_s=1&tag_exp=115938465~115938468~118897920~118897930~120213116~120385423~120469145~120469153&sid=1790236189&sct=1&seg=0&dl=https%3A%2F%2Fvpdkddtdm.vn%2Fvptdm%2Ftrangchu&dt=H%E1%BB%87%20th%E1%BB%91ng%20OERP&en=page_view&_fv=1&_nsi=1&_ss=1&_ee=1&tfd=1708",
+      "status": 204,
+      "type": "fetch",
+      "content_type": "text/plain"
+    },
+    {
+      "method": "POST",
+      "url": "https://vpdkddtdm.vn/cdn-cgi/rum?",
+      "status": 204,
+      "type": "xhr",
+      "content_type": "text/plain"
+    },
+    {
+      "method": "POST",
+      "url": "https://apisql.vpdkddtdm.vn/api/ChucNang/postA1011SELEDN",
+      "status": 200,
+      "type": "xhr",
+      "content_type": "application/json; charset=utf-8"
+    },
+    {
+      "method": "POST",
+      "url": "https://apisql.vpdkddtdm.vn/api/ChucNang/postA1011SELEDN",
+      "status": 200,
+      "type": "xhr",
+      "content_type": "application/json; charset=utf-8"
+    },
+    {
+      "method": "POST",
+      "url": "https://apisql.vpdkddtdm.vn/api/ChucNang/postA1011SELEDN",
+      "status": 200,
+      "type": "xhr",
+      "content_type": "application/json; charset=utf-8"
+    },
+    {
+      "method": "POST",
+      "url": "https://apisql.vpdkddtdm.vn/api/ChucNang/PostHT2000ThuTucTongHop",
+      "status": 200,
+      "type": "xhr",
+      "content_type": "application/json; charset=utf-8"
+    },
+    {
+      "method": "POST",
+      "url": "https://apisql.vpdkddtdm.vn/api/ChucNang/postA1012DangNhapA",
+      "status": 200,
+      "type": "xhr",
+      "content_type": "application/json; charset=utf-8"
+    },
+    {
+      "method": "POST",
+      "url": "https://apisql.vpdkddtdm.vn/api/ChucNang/postA1012DangNhapA",
+      "status": 200,
+      "type": "xhr",
+      "content_type": "application/json; charset=utf-8"
+    },
+    {
+      "method": "POST",
+      "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-Q2NKVMW4KP&gtm=45je69m1v884363253za200zd884363253xf1&_p=1790236188770&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEAAAAQ&ae=a&cid=1341894831.1790236189&frm=0&pscdl=noapi&rcb=4&sr=1440x900&uaa=x86&uab=64&uafvl=HeadlessChrome%3B153.0.8010.12%7CNot_A%2520Brand%3B8.0.0.0%7CChromium%3B153.0.8010.12&uam=&uamb=0&uap=macOS&uapv=10_15_7&uaw=0&ul=en-us&_s=2&tag_exp=115938465~115938468~118897920~118897930~120213116~120385423~120469145~120469153&sid=1790236189&sct=1&seg=0&dl=https%3A%2F%2Fvpdkddtdm.vn%2Fvptdm%2Ftrangchu&dt=H%E1%BB%87%20th%E1%BB%91ng%20OERP&en=scroll&epn.percent_scrolled=90&_et=4&tfd=6716",
+      "status": 204,
+      "type": "fetch",
+      "content_type": "text/plain"
+    }
+  ],
+  "forms_count": 1,
+  "forms": [
+    {
+      "index": 1,
+      "action": "",
+      "method": "GET",
+      "inputs": [
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "",
+          "placeholder": "Tài khoản",
+          "id": "taikhoan",
+          "text": ""
+        },
+        {
+          "tag": "input",
+          "type": "password",
+          "name": "",
+          "placeholder": "Mật khẩu",
+          "id": "matkhau",
+          "text": ""
+        },
+        {
+          "tag": "button",
+          "type": "submit",
+          "name": "",
+          "placeholder": "",
+          "id": "",
+          "text": "Đăng nhập"
+        }
+      ]
+    }
+  ],
+  "links": {
+    "total": 4,
+    "internal": 3,
+    "external": 0,
+    "samples": [
+      {
+        "text": "TRANG CHỦ",
+        "url": "https://vpdkddtdm.vn/vptdm"
+      },
+      {
+        "text": "Tra cứu hồ sơ",
+        "url": "https://vpdkddtdm.vn/vptdm/tracuuhoso"
+      },
+      {
+        "text": "Tải ứng dụng di động",
+        "url": "https://vpdkddtdm.vn/download"
+      }
+    ]
+  },
+  "screenshot": "/Users/admin/Desktop/BINHDUONG/chrome_automation/reports/vpdkddtdm.vn_20260924_144946/screenshots/fullpage.png"
+}

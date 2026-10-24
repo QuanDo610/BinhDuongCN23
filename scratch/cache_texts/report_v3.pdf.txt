@@ -1,0 +1,207 @@
+=== TRANG 1/5 ===
+V Ă N PHÒNG ĐĂ NG KÝ Đ Ấ T Đ AI TP.HCM
+CHI NHÁNH S Ố  23
+C Ộ NG HÒA XÃ H Ộ I CH Ủ  NGH Ĩ A VI Ệ T NAM
+Đ ộ c l ậ p - T ự  do - H ạ nh phúc
+Th ủ  D ầ u M ộ t, ngày 10 tháng 09 n ă m 2026
+BÁO CÁO TI Ế N Đ Ộ  & HI Ệ N TR Ạ NG QU Ả N TR Ị  H Ệ  TH Ố NG
+CNTT
+H ồ  s ơ  theo dõi ti ế p qu ả n công vi ệ c, ki ể m kê thi ế t b ị , qu ả n tr ị  r ủ i ro & v ă n b ả n pháp lý
+Cán b ộ  ph ụ  trách: Đ Ỗ  TR Ọ NG MINH QUÂN (K ỹ  s ư
+ph ầ n m ề m)
+Lo ạ i h ợ p đ ồ ng: Th ử  vi ệ c 02 tháng (03/09/2026 –
+03/11/2026)
+Đ ị a đ i ể m công tác: S ố  358 Hu ỳ nh V ă n Cù, P. Th ủ  D ầ u
+M ộ t
+Ng ư ờ i bàn giao: Ông LÝ MINH TÂN (Thôi vi ệ c t ừ
+01/10/2026)
+Lãnh đ ạ o phê duy ệ t: Bà NGUY Ễ N TH Ị  L Ệ  H Ằ NG
+(Phó Giám đ ố c)
+Chuyên viên c ấ p trên h ỗ  tr ợ : Ông PHÙNG V ƯƠ NG
+QU Ố C (VP Đ K ĐĐ  TP.HCM - C ơ  s ở  2)
+ S Ự  KI Ệ N QUAN TR Ọ NG: LÀM VI Ệ C V Ớ I CHUYÊN GIA TP.HCM (NGÀY 16/09/2026)
+Theo Th ư  m ờ i ngày 10/09/2026 do Phó Giám đ ố c Nguy ễ n Th ị  L ệ  H ằ ng ký: Vào h ồ i 08h30 sáng th ứ  T ư  (16/09/2026),
+ông Phùng V ươ ng Qu ố c (VP Đ K ĐĐ  TP.HCM – C ơ  s ở  2) s ẽ  tr ự c ti ế p xu ố ng Chi nhánh 23 đ ể  kh ả o sát h ệ  th ố ng m ạ ng,
+máy ch ủ  và h ư ớ ng d ẫ n nh ậ n bàn giao nhi ệ m v ụ  IT c ủ a ông Lý Minh Tân cho Đ ỗ  Tr ọ ng Minh Quân.
+ 1. NH Ậ T KÝ TI Ế N Đ Ộ  CÔNG VI Ệ C (CHRONOLOGICAL LOG)
+03/09/2026: B ắ t đ ầ u làm vi ệ c theo H ợ p đ ồ ng th ử  vi ệ c t ạ i Chi nhánh 23 (S ố  358 đư ờ ng Hu ỳ nh V ă n Cù). Làm quen
+môi tr ư ờ ng, kh ả o sát phòng Server và máy tr ạ m các phòng ban.
+04/09 – 08/09/2026: Kh ả o sát s ơ  b ộ  h ệ  th ố ng m ạ ng LAN, các máy ch ủ  HP, thi ế t b ị  t ư ờ ng l ử a FortiGate 61F và v ị  trí
+phân b ổ  kho ả ng 80 máy tr ạ m.
+09/09/2026:
+Ký Biên b ả n bàn giao IT v ớ i ông Lý Minh Tân (Bàn giao 3 máy ch ủ , 1 NAS DS423+, 1 FortiGate 61F, kho linh
+ki ệ n và 8 ổ  c ứ ng di đ ộ ng).
+Chi nhánh ban hành Công v ă n s ố  2162/CN23-HCTH báo cáo khó kh ă n h ệ  th ố ng thi ế u b ả n quy ề n b ả o m ậ t và xin
+c ấ p trên c ử  nhân s ự  h ỗ  tr ợ  chuyên môn cho Đ ỗ  Tr ọ ng Minh Quân.
+10/09/2026 (Hôm nay):
+Phó Giám đ ố c ký Th ư  m ờ i g ử i VP Đ K TP.HCM C ơ  s ở  2 c ử  anh Phùng V ươ ng Qu ố c xu ố ng h ỗ  tr ợ  bàn giao vào
+sáng 16/09/2026.
+Ti ế p nh ậ n 4 b ộ  h ồ  s ơ  ki ể m kê: Th ố ng kê thi ế t b ị  đ ang dùng vs c ầ n thanh lý 2026, danh m ụ c 67 máy tr ạ m cán b ộ
+H09 và s ổ  tra c ứ u mã m ự c in/photo.
+9/10/26, 2:52 PM Báo Cáo Tiến Độ & Quản Trị Hệ Thống IT - Chi Nhánh 23 Bình Dương
+ﬁle:///Users/admin/Desktop/BINHDUONG/QQ/print_report.html 1/5
+
+=== TRANG 2/5 ===
+16/09/2026 (K ế  ho ạ ch): Bu ổ i làm vi ệ c chính th ứ c gi ữ a Lãnh đ ạ o Chi nhánh, anh Lý Minh Tân, Đ ỗ  Tr ọ ng Minh
+Quân và anh Phùng V ươ ng Qu ố c (TP.HCM).
+ 2. HI Ệ N TR Ạ NG THI Ế T B Ị  & D Ữ  LI Ệ U PHÒNG MÁY CH Ủ  (SERVER ROOM)
+Toàn b ộ  ph ầ n c ứ ng máy ch ủ  trung tâm và đ ị a ch ỉ  IP k ế t n ố i qu ả n tr ị  đư ợ c ti ế p nh ậ n nh ư  sau:
+STT Thi ế t B ị  / Model Đ ị a Ch ỉ  IP Ch ứ c N ă ng & D ữ  Li ệ u L ư u Tr ữ Hi ệ n Tr ạ ng
+1 Server 1 (HP DL360 Gen8) 10.17.2.252 Ứ ng d ụ ng DNS; ch ứ a d ữ  li ệ u h ồ
+s ơ  quét c ũ ; h ồ  s ơ  giao d ị ch b ả o
+đ ả m.
+Đ ang ho ạ t
+độ ng
+2 Server 2 (HP DL360 Gen9) 10.17.2.125 Ch ứ a folder Chung ( ổ  F:); folder
+HSQ-TDM ( ổ  G:); folder Banve
+DD ( ổ  H:) và d ữ  li ệ u khác.
+Đ ang ho ạ t
+độ ng
+3 Server 3 (StoreEasy 1460) 10.17.2.100 Folder Dataweb (Banve DD &
+HSQ-TDM); file Gi ấ y ch ứ ng
+nh ậ n ph ầ n m ề m HSQ.
+Đ ang ho ạ t
+độ ng
+4 T ư ờ ng L ử a (FortiGate
+61F)
+192.168.1.254 Qu ả n tr ị  an ninh m ạ ng toàn đơ n
+v ị . (Gói license b ả o m ậ t h ế t h ạ n
+30/09/2026)
+H ế t h ạ n
+license
+5 NAS Backup (DS423+) 10.17.2.150:65001 Thi ế t b ị  l ư u tr ữ  sao l ư u d ữ  li ệ u d ự
+phòng t ự  đ ộ ng.
+Đ ang ho ạ t
+độ ng
+6 02 Modem VNPT WAN Gateway Đư ờ ng truy ề n cáp quang k ế t n ố i
+Internet 2 line d ự  phòng.
+Đ ang ho ạ t
+độ ng
+ 3. B Ả NG KI Ể M KÊ TÀI S Ả N: Đ ANG S Ử  D Ụ NG VS C Ầ N THANH LÝ 2026
+C ă n c ứ  danh sách ki ể m kê ngày 10/09/2026, phân đ ị nh rõ ph ạ m vi trách nhi ệ m v ậ n hành c ủ a cán b ộ  IT m ớ i:
+9/10/26, 2:52 PM Báo Cáo Tiến Độ & Quản Trị Hệ Thống IT - Chi Nhánh 23 Bình Dương
+ﬁle:///Users/admin/Desktop/BINHDUONG/QQ/print_report.html 2/5
+
+=== TRANG 3/5 ===
+Ch ủ ng Lo ạ i
+Thi ế t B ị
+Đ ang S ử  D ụ ng C ầ n Thanh Lý Tổ ng S ố  Thi ế t
+B ị
+Ghi Chú
+Máy vi tính đ ể
+bàn (PC)
+75 55 130 67 máy đ ã gán mã đ ị nh danh H09.
+55 máy n ằ m trong danh m ụ c c ầ n
+thanh lý 2026.
+Máy tính xách
+tay (Laptop)
+0 2 2 N ằ m trong danh m ụ c s ố  l ư ợ ng c ầ n
+thanh lý 2026.
+Máy ch ủ
+(Server)
+3 0 3 HP DL360 Gen8, Gen9 &
+StoreEasy 1460 (kèm 1 NAS
+Synology DS423+).
+Máy in kh ổ  A3 15 9 24 Dòng HP LaserJet Pro M706n dùng
+m ự c HP 93A (có 1 máy m ớ i d ự
+phòng l ư u kho).
+Máy in kh ổ  A4 23 6 29 HP 402d, 404dn, 4003dn, P2035,
+Brother (có máy b ố  trí t ạ i M ộ t c ử a
+ph ư ờ ng).
+Máy quét
+(Scan) A3
+9 1 10 Ph ụ c v ụ  quét s ố  hóa h ồ  s ơ  đ ị a chính
+và b ả n đ ồ .
+Máy quét
+(Scan) A4
+2 2 4 Ph ụ c v ụ  ti ế p nh ậ n h ồ  s ơ  t ạ i qu ầ y
+m ộ t c ử a.
+Máy Photocopy 3 7 10 01 Ricoh IM3000 + 02 Konica
+Minolta Bizhub 367. 7 máy n ằ m
+trong danh m ụ c thanh lý 2026.
+* Kho linh ki ệ n d ự  phòng m ớ i: 02 ngu ồ n server, 07 qu ạ t t ả n nhi ệ t server, 07 qu ạ t t ả n nhi ệ t PC, 05 ngu ồ n máy
+tr ạ m PC, 04 chu ộ t máy tính, 01 UPS 750VA, 01 máy in A3 m ớ i.
+* Thi ế t b ị  l ư u tr ữ  ngoài: 03 ổ  8TB (l ư u đơ n v ị ), 01 ổ  2TB (l ư u đơ n v ị ), 04 ổ  4TB (03 ổ  l ư u đơ n v ị , 01 ổ  bên
+VBDLIS đ ang t ạ m gi ữ).
+9/10/26, 2:52 PM Báo Cáo Tiến Độ & Quản Trị Hệ Thống IT - Chi Nhánh 23 Bình Dương
+ﬁle:///Users/admin/Desktop/BINHDUONG/QQ/print_report.html 3/5
+
+=== TRANG 4/5 ===
+⎙ 4. S Ổ  TAY TRA C Ứ U MÃ M Ự C IN & MÁY PHOTOCOPY
+Lo ạ i
+Thi ế t B ị
+Model Máy Mã H ộ p M ự c Chính Hãng Số  L ư ợ ng V ị  Trí Phân B ổ  / Ghi Chú
+Máy In
+A3
+HP LaserJet Pro
+M706n
+HP 93A (CZ192A) 16 máy Phòng Đ o đ ạ c, C ấ p gi ấ y, L ư u tr ữ  (có
+1 máy m ớ i l ư u kho)
+Máy In
+A4
+HP LaserJet Pro
+M402d
+HP 26A (CF226A) 9 máy M ộ t c ử a P. Chánh Hi ệ p, Phú An: 1
+máy/ph ư ờ ng
+HP LaserJet Pro
+M404dn
+HP 76A (CF276A) 8 máy M ộ t c ử a P. Th ủ  D ầ u M ộ t: 1 máy
+HP LaserJet Pro
+4003dn
+HP 151A (W1510A) 5 máy M ộ t c ử a P. Th ủ  D ầ u M ộ t: 1 máy
+HP LaserJet P2035 HP 05A (CE505A) 3 máy M ộ t c ử a P. Th ủ  D ầ u M ộ t
+Brother HL –
+2240D
+Brother TN-2280 3 máy M ộ t c ử a P. Phú L ợ i: 1 máy
+Brother HL –
+L2320D
+Brother TN-2385 1 máy M ộ t c ử a P. Bình D ươ ng
+Fuji Xerox P225db Xerox CT202330 1 máy Phòng chuyên môn v ă n phòng
+Máy
+Photo
+Ricoh IM3000 Ricoh Type IM 2500 1 máy Máy photo đ a n ă ng Hành chính
+Konica Minolta
+Bizhub 367
+Konica Minolta TN-323 2 máy Máy photo v ă n phòng
+ 5. QU Ả N TR Ị  R Ủ I RO & C Ă N C Ứ  B Ả O V Ệ  TRÁCH NHI Ệ M (SHIELD MATRIX)
+⚠ C Ả NH BÁO R Ủ I RO B Ả O M Ậ T H Ạ  T Ầ NG (C Ă N C Ứ  CÔNG V Ă N 2162/CN23-HCTH NGÀY
+09/09/2026):
+B ả n quy ề n di ệ t virus Kaspersky: Đ ã h ế t h ạ n b ả n quy ề n t ừ  ngày 23/03/2026 (m ặ c dù trên danh m ụ c 67 máy đ ề u ghi
+nh ậ n có cài). Nguy c ơ  cao b ị  lây lan mã đ ộ c qua USB c ủ a ng ư ờ i dân n ộ p h ồ  s ơ .
+Thi ế t b ị  t ư ờ ng l ử a FortiGate 61F: H ế t h ạ n toàn b ộ  các gói d ị ch v ụ  b ả n quy ề n b ả o m ậ t (license) vào ngày
+30/09/2026. S ẽ  m ấ t các tính n ă ng ch ố ng xâm nh ậ p (IPS), l ọ c web đ ộ c h ạ i và antivirus gateway.
+B ả n quy ề n Windows & Office: Nhi ề u máy tr ạ m ch ư a đư ợ c trang b ị  b ả n quy ề n đ ồ ng b ộ , đơ n v ị  đ ã có v ă n b ả n xin
+ch ủ  tr ươ ng nh ư ng c ấ p trên ch ư a phê duy ệ t kinh phí.
+9/10/26, 2:52 PM Báo Cáo Tiến Độ & Quản Trị Hệ Thống IT - Chi Nhánh 23 Bình Dương
+ﬁle:///Users/admin/Desktop/BINHDUONG/QQ/print_report.html 4/5
+
+=== TRANG 5/5 ===
+H ạ ng M ụ c R ủ i Ro M ứ c Đ ộ C ă n C ứ  V ă n B ả n B ả o V ệ
+Trách Nhi ệ m
+Ph ươ ng Án Ứ ng Phó T ạ m Th ờ i
+Kaspersky h ế t h ạ n (23/03) R ủ i ro cao M ụ c 2 - Công v ă n s ố
+2162/CN23-HCTH
+T ạ m th ờ i kích ho ạ t Windows Defender,
+h ạ n ch ế  c ắ m USB l ạ .
+FortiGate h ế t h ạ n (30/09) R ủ i ro cao M ụ c 2 - Công v ă n s ố
+2162/CN23-HCTH
+Sao l ư u c ấ u hình Firewall, trao đ ổ i v ớ i
+anh Qu ố c ngày 16/09.
+N ă ng l ự c chuyên môn IT Đ ã b ả o v ệ M ụ c 3 & 4 CV 2162 & Th ư
+m ờ i 10/09
+Lãnh đ ạ o xác nh ậ n chuyên môn ph ầ n
+m ề m, xin c ấ p trên h ỗ  tr ợ .
+01 Ổ  c ứ ng 4TB bên ngoài C ầ n đ ố i
+soát
+M ụ c 4 - Biên b ả n bàn giao
+IT
+Yêu c ầ u biên nh ậ n bàn giao c ủ a đơ n v ị
+VBDLIS đ ang gi ữ .
+NG Ư Ờ I L Ậ P BÁO CÁO
+(Ký và ghi rõ h ọ  tên)
+Đ ỗ  Tr ọ ng Minh Quân
+LÃNH Đ Ạ O ĐƠ N V Ị
+(Ký, ghi rõ h ọ  tên và đ óng d ấ u)
+Nguy ễ n Th ị  L ệ  H ằ ng
+9/10/26, 2:52 PM Báo Cáo Tiến Độ & Quản Trị Hệ Thống IT - Chi Nhánh 23 Bình Dương
+ﬁle:///Users/admin/Desktop/BINHDUONG/QQ/print_report.html 5/5

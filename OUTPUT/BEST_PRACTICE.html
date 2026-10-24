@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cẩm Nang Vận Hành - Best Practices</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({ startOnLoad: true, theme: 'base', themeVariables: { primaryColor: '#f0f9ff', primaryTextColor: '#0f172a', primaryBorderColor: '#0284c7', lineType: 'curve' }});
+    </script>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; overflow: hidden; margin: 0; padding: 0; }
+        .slide { display: flex; visibility: hidden; position: absolute; top: 0; left: 0; height: 100vh; width: 100vw; flex-direction: column; justify-content: center; align-items: center; padding: 2rem; opacity: 0; transition: opacity 0.5s ease-out; z-index: 0; }
+        .slide.active { visibility: visible; opacity: 1; z-index: 10; position: relative; }
+        .mermaid { background: white; padding: 20px; border-radius: 12px; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1); width: 100%; max-width: 800px; text-align: center; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 relative">
+
+    <!-- Điều hướng -->
+    <div class="absolute bottom-6 w-full flex justify-center gap-4 z-50">
+        <button onclick="prevSlide()" class="bg-sky-600 hover:bg-sky-700 text-white px-6 py-2 rounded-full shadow-lg font-semibold transition"><i class="fas fa-arrow-left mr-2"></i> Trước</button>
+        <span id="slideCounter" class="bg-white px-4 py-2 rounded-full shadow-lg font-bold text-slate-600 border border-slate-200">1 / 7</span>
+        <button onclick="nextSlide()" class="bg-sky-600 hover:bg-sky-700 text-white px-6 py-2 rounded-full shadow-lg font-semibold transition">Tiếp <i class="fas fa-arrow-right ml-2"></i></button>
+    </div>
+
+    <!-- Slide 1: Bìa -->
+    <div class="slide active bg-gradient-to-br from-sky-50 to-white" id="slide-1">
+        <div class="text-center max-w-4xl">
+            <div class="text-6xl text-sky-600 mb-6"><i class="fas fa-book-open"></i></div>
+            <h1 class="text-5xl font-extrabold text-slate-900 mb-4 leading-tight">CẨM NANG VẬN HÀNH DỰ ÁN</h1>
+            <h2 class="text-2xl text-sky-700 font-semibold mb-8">Best Practices & Quy Trình Văn Thư Tự Động</h2>
+            <p class="text-lg text-slate-500 mb-8">Văn phòng Đăng ký Đất đai - Chi nhánh số 23</p>
+            <div class="inline-block bg-sky-100 text-sky-800 px-4 py-2 rounded-lg text-sm font-semibold shadow-sm border border-sky-200">
+                Nhấn "Tiếp" hoặc dùng phím mũi tên để bắt đầu
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 2: Setup -->
+    <div class="slide bg-white" id="slide-2">
+        <div class="w-full max-w-5xl">
+            <h2 class="text-3xl font-bold text-slate-800 mb-2 border-b-4 border-sky-500 pb-2 inline-block"><i class="fas fa-rocket text-sky-600 mr-2"></i>1. Cài đặt & Khởi tạo (Không cần biết Code)</h2>
+            <p class="text-slate-600 mb-8 text-lg">Hệ thống sẽ tự động cấu hình 100% chỉ với 3 bước đơn giản.</p>
+            
+            <div class="space-y-6">
+                <div class="flex items-start bg-slate-50 p-5 rounded-xl border border-slate-200 shadow-sm">
+                    <div class="bg-sky-100 text-sky-600 font-bold w-12 h-12 flex items-center justify-center rounded-full text-xl flex-shrink-0 mr-4">1</div>
+                    <div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-1">Tải Antigravity & Chọn Model</h3>
+                        <p class="text-slate-600 mb-2">Truy cập <strong><a href="https://antigravity.google" class="text-sky-600 underline" target="_blank">antigravity.google</a></strong> tải ứng dụng Antigravity. Đăng nhập và chọn model <strong>Gemini 3.1 Pro</strong> (Gói Google Pro).</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start bg-slate-50 p-5 rounded-xl border border-slate-200 shadow-sm">
+                    <div class="bg-sky-100 text-sky-600 font-bold w-12 h-12 flex items-center justify-center rounded-full text-xl flex-shrink-0 mr-4">2</div>
+                    <div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-1">Cấp Quyền Tự Động (Full Turbo)</h3>
+                        <p class="text-slate-600 mb-2">Mở Antigravity. Vào <strong>Cài đặt (Settings)</strong>, bật quyền <strong>Auto-approve tool calls</strong> để AI tự do chạy mà không cần hỏi bạn mỗi lệnh.</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start bg-slate-50 p-5 rounded-xl border border-slate-200 shadow-sm">
+                    <div class="bg-sky-100 text-sky-600 font-bold w-12 h-12 flex items-center justify-center rounded-full text-xl flex-shrink-0 mr-4">3</div>
+                    <div class="w-full">
+                        <h3 class="text-xl font-bold text-slate-800 mb-1">Đọc "Câu Thần Chú"</h3>
+                        <p class="text-slate-600 mb-2">Copy đoạn lệnh dưới đây dán vào khung chat của Antigravity và bấm Enter. Xong! Bạn có thể đi pha ly cà phê.</p>
+                        <div class="bg-gradient-to-r from-sky-600 to-indigo-600 p-4 rounded-lg font-mono text-sm overflow-x-auto w-full text-white shadow-lg italic">
+                            "Tôi là nhân viên văn phòng mới. Hãy giúp tôi tải (clone) toàn bộ dự án từ GitHub https://github.com/QuanDo610/BinhDuongCN23 về máy. Sau đó, đọc kỹ file Skill.md trong đó để tự động setup toàn bộ môi trường làm việc: khởi tạo venv, cài đặt các thư viện python cần thiết. Cứ tự động chạy, làm xong thì báo cáo cho tôi."
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 3: Workflow -->
+    <div class="slide bg-slate-50" id="slide-3">
+        <div class="w-full max-w-5xl">
+            <h2 class="text-3xl font-bold text-slate-800 mb-2 border-b-4 border-sky-500 pb-2 inline-block"><i class="fas fa-project-diagram text-sky-600 mr-2"></i>2. Luồng Công Việc (Workflow)</h2>
+            <p class="text-slate-600 mb-6 text-lg">Hệ thống tuân thủ quy trình 1 chiều, bảo vệ dữ liệu gốc tuyệt đối.</p>
+            
+            <div class="flex justify-center w-full">
+                <div class="mermaid">
+flowchart TD
+    A[Nhận Tài Liệu] --> B(Thư mục documents)
+    B --> C{AI Xử Lý}
+    C --> D[Kết quả File DOCX]
+    C --> E[Kết quả File XLSX]
+    C --> F[Cảnh báo Lỗi]
+    D --> G((Trình Ký))
+    E --> G
+                </div>
+            </div>
+            
+            <div class="mt-8 bg-amber-50 border-l-4 border-amber-500 p-4 rounded shadow-sm">
+                <p class="font-bold text-amber-800"><i class="fas fa-exclamation-triangle mr-2"></i>Nguyên tắc "Chỉ Đọc"</p>
+                <p class="text-amber-700 text-sm mt-1">Tuyệt đối không sửa file trong thư mục `documents`. Mọi chỉnh sửa phải do AI thực hiện và xuất ra `OUTPUT`.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 4: Folder Structure -->
+    <div class="slide bg-white" id="slide-4">
+        <div class="w-full max-w-5xl">
+            <h2 class="text-3xl font-bold text-slate-800 mb-2 border-b-4 border-sky-500 pb-2 inline-block"><i class="fas fa-folder-tree text-sky-600 mr-2"></i>3. Quy Chuẩn Thư Mục</h2>
+            <p class="text-slate-600 mb-8 text-lg">Ba không gian làm việc tách biệt hoàn toàn.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Box 1 -->
+                <div class="bg-slate-50 rounded-xl p-6 border border-slate-200 shadow-md transform transition hover:-translate-y-1">
+                    <div class="text-4xl text-amber-500 mb-4"><i class="fas fa-folder-open"></i> /documents</div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-2">Đầu Vào (Input)</h3>
+                    <p class="text-slate-600 text-sm mb-4">Nơi chứa dữ liệu thô (Công văn, PDF, Phụ lục). Đây là "kho chứa nguyên liệu".</p>
+                    <div class="bg-amber-100 text-amber-800 text-xs font-bold px-2 py-1 rounded">Quyền: Bỏ file vào, Không sửa/xóa.</div>
+                </div>
+                <!-- Box 2 -->
+                <div class="bg-slate-50 rounded-xl p-6 border border-slate-200 shadow-md transform transition hover:-translate-y-1">
+                    <div class="text-4xl text-green-500 mb-4"><i class="fas fa-folder-open"></i> /OUTPUT</div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-2">Đầu Ra (Output)</h3>
+                    <p class="text-slate-600 text-sm mb-4">Nơi AI trả kết quả (Quyết định NĐ30, Báo cáo đối chiếu). "Thành phẩm" nằm ở đây.</p>
+                    <div class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">Quyền: Lấy file đem in ấn.</div>
+                </div>
+                <!-- Box 3 -->
+                <div class="bg-slate-50 rounded-xl p-6 border border-slate-200 shadow-md transform transition hover:-translate-y-1">
+                    <div class="text-4xl text-slate-500 mb-4"><i class="fas fa-cogs"></i> /tools</div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-2">Công Cụ (Code)</h3>
+                    <p class="text-slate-600 text-sm mb-4">Bộ não mã nguồn (Python, JS) giúp tự động hóa. Không dành cho User thông thường.</p>
+                    <div class="bg-slate-200 text-slate-700 text-xs font-bold px-2 py-1 rounded">Quyền: KHÔNG đụng vào.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 5: Naming -->
+    <div class="slide bg-slate-50" id="slide-5">
+        <div class="w-full max-w-4xl">
+            <h2 class="text-3xl font-bold text-slate-800 mb-2 border-b-4 border-sky-500 pb-2 inline-block"><i class="fas fa-file-signature text-sky-600 mr-2"></i>4. Quy Chuẩn Đặt Tên File</h2>
+            <p class="text-slate-600 mb-8 text-lg">Giúp hệ thống và AI dễ dàng đọc hiểu và tự động dọn dẹp.</p>
+
+            <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                <table class="w-full text-left">
+                    <thead class="bg-sky-50 border-b border-sky-100">
+                        <tr>
+                            <th class="p-4 font-bold text-slate-700 w-1/3">Quy tắc</th>
+                            <th class="p-4 font-bold text-red-600 w-1/3"><i class="fas fa-times-circle"></i> Sai</th>
+                            <th class="p-4 font-bold text-green-600 w-1/3"><i class="fas fa-check-circle"></i> Đúng</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-100">
+                        <tr>
+                            <td class="p-4 font-medium">Không dùng khoảng trắng/dấu</td>
+                            <td class="p-4 text-slate-500 line-through">Báo cáo tháng 9.docx</td>
+                            <td class="p-4 text-slate-800 font-mono text-sm bg-green-50">Bao_cao_thang_9.docx</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 font-medium">Quản lý File Nháp</td>
+                            <td class="p-4 text-slate-500">Phuong_an_moi_nhat.docx</td>
+                            <td class="p-4 text-slate-800 font-mono text-sm bg-green-50">Phuong_an_CN23_v1.docx</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 font-medium">Đánh dấu File Chốt</td>
+                            <td class="p-4 text-slate-500">Phuong_an_cuoi_cung.docx</td>
+                            <td class="p-4 text-slate-800 font-mono text-sm bg-green-50">Phuong_an_CN23_FINAL.docx</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 font-medium">Quy chuẩn NĐ30 (Mã_Số_Tríchyếu)</td>
+                            <td class="p-4 text-slate-500">QD 45 phan cong nhiem vu.docx</td>
+                            <td class="p-4 text-slate-800 font-mono text-sm bg-green-50">QD_45_CN23_Phan_cong_nhiem_vu.docx</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 6: Prompting -->
+    <div class="slide bg-white" id="slide-6">
+        <div class="w-full max-w-5xl">
+            <h2 class="text-3xl font-bold text-slate-800 mb-2 border-b-4 border-sky-500 pb-2 inline-block"><i class="fas fa-robot text-sky-600 mr-2"></i>5. Kỹ Năng Giao Tiếp Với AI</h2>
+            <p class="text-slate-600 mb-6 text-lg">Cách "ra lệnh" chuẩn xác để AI làm việc hiệu quả nhất.</p>
+
+            <div class="bg-gradient-to-r from-sky-600 to-indigo-600 rounded-xl p-8 text-white shadow-lg mb-8">
+                <h3 class="text-xl font-bold mb-4 opacity-90">Công thức vàng:</h3>
+                <div class="text-2xl font-mono bg-black/20 p-4 rounded-lg text-center">
+                    [Hành động] + [File Nguồn] + [Định dạng Đích]
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="border border-slate-200 rounded-lg p-5 hover:bg-slate-50 transition shadow-sm">
+                    <div class="text-sky-600 font-bold mb-2"><i class="fas fa-comment-dots mr-2"></i>Sinh văn bản NĐ30</div>
+                    <p class="text-slate-700 italic">"Hãy đọc file Bang_doi_chieu.xlsx trong documents và sinh ra Quyết định phân công ra thư mục OUTPUT."</p>
+                </div>
+                <div class="border border-slate-200 rounded-lg p-5 hover:bg-slate-50 transition shadow-sm">
+                    <div class="text-sky-600 font-bold mb-2"><i class="fas fa-search-plus mr-2"></i>Rà soát & Đánh giá (Audit)</div>
+                    <p class="text-slate-700 italic">"Hãy rà soát chéo file Bao_cao.pdf dựa trên Bộ Tiêu Chí Rà Soát, tìm cho tôi các lỗi sai logic và tính toán lại bảng biểu."</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 7: Maintenance -->
+    <div class="slide bg-slate-50" id="slide-7">
+        <div class="w-full max-w-4xl text-center">
+            <div class="text-6xl text-emerald-500 mb-6"><i class="fas fa-broom"></i></div>
+            <h2 class="text-4xl font-bold text-slate-800 mb-4">6. Bảo Trì Hệ Thống Hàng Tuần</h2>
+            <p class="text-xl text-slate-600 mb-8">Vào mỗi chiều thứ Sáu, hãy nhắn cho AI câu lệnh sau:</p>
+            
+            <div class="bg-white border-2 border-emerald-400 rounded-xl p-6 shadow-lg inline-block text-left mb-10">
+                <p class="text-2xl font-bold text-emerald-700">"Hãy chạy quy trình dọn dẹp hệ thống."</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
+                <div class="bg-white p-4 rounded-lg shadow-sm border border-slate-100">
+                    <div class="text-emerald-500 mb-2"><i class="fas fa-clone fa-lg"></i></div>
+                    <h4 class="font-bold text-slate-800">Quét Trùng Lặp</h4>
+                    <p class="text-sm text-slate-500">Xóa các file copy nội dung y hệt nhau để giải phóng ổ cứng.</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-sm border border-slate-100">
+                    <div class="text-emerald-500 mb-2"><i class="fas fa-archive fa-lg"></i></div>
+                    <h4 class="font-bold text-slate-800">Gom File Nháp</h4>
+                    <p class="text-sm text-slate-500">Gom các file _v1, _v2 vào thùng rác nếu đã có bản _FINAL.</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-sm border border-slate-100">
+                    <div class="text-emerald-500 mb-2"><i class="fas fa-clipboard-check fa-lg"></i></div>
+                    <h4 class="font-bold text-slate-800">Chỉnh Đốn Thư Mục</h4>
+                    <p class="text-sm text-slate-500">Sắp xếp lại các file bị lưu lạc lộn xộn về đúng vị trí.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const counter = document.getElementById('slideCounter');
+
+        function updateSlide() {
+            slides.forEach((slide, index) => {
+                if (index === currentSlide) {
+                    slide.classList.add('active');
+                } else {
+                    slide.classList.remove('active');
+                }
+            });
+            counter.innerText = `${currentSlide + 1} / ${slides.length}`;
+        }
+
+        function nextSlide() {
+            if (currentSlide < slides.length - 1) {
+                currentSlide++;
+                updateSlide();
+            }
+        }
+
+        function prevSlide() {
+            if (currentSlide > 0) {
+                currentSlide--;
+                updateSlide();
+            }
+        }
+
+        // Bắt sự kiện bàn phím
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight' || e.key === 'Space') {
+                nextSlide();
+            } else if (e.key === 'ArrowLeft') {
+                prevSlide();
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+Danh sách Sheets: Phụ lục 6 - Cấp bổ sung
+
+=== SHEET: Phụ lục 6 - Cấp bổ sung (Kích thước: 10 hàng x 20 cột) ===
+Tên đơn vị: Sở Nông nghiệp và Môi trường TP. Hồ Chí Minh |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+PHỤ LỤC 6. DANH SÁCH TRỤ SỞ CÁC CƠ QUAN, TỔ CHỨC, ĐƠN VỊ ĐỀ NGHỊ CẤP BỔ SUNG |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+STT
+(0) | Tên đơn vị
+(1) | Địa chỉ nhà, đất
+(2) | Số trụ sở
+(3) | DT đất (m2)
+(5) | Tổng DT sàn (m2)
+(7) | Tổng DT cần bố trí (m2)
+(8) | DT làm việc (m2)
+(9) | DT dùng chung (m2)
+(10) | DT chuyên dùng (m2)
+(11) | Lãnh đạo đơn vị (người)
+(16) | Lãnh đạo đơn vị (m2)
+(17) | Chuyên viên (người)
+(18) | Chuyên viên (m2)
+(19) | HĐLĐ (người)
+(20) | HĐLĐ (m2)
+(21) | Tình trạng sử dụng hiện nay
+(25) | Đã có QĐ giao / duyệt PA
+(26) | Đề xuất Phương án sắp xếp
+(27) | Ghi chú: Lý do & Căn cứ đề nghị cấp bổ sung
+(28)
+1 | CHI CỤC THỦY LỢI | Cơ sở nhà đất tại số 125 Trần Huy Liệu | 1 | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | Nhà đất Số 176 đường Hai Bà Trưng, phường Sài Gòn Thành phố Hồ Chí Minh (nhà đất thuộc sở hữu của Sở Nông nghiệp và Môi trường) Chi cục Thủy lợi: trả lại cho Sở Nông nghiệp và Môi trường.
+2 | CHI CỤC CHĂN NUÔI VÀ THÚ Y | Địa chỉ số 02 đường số 5, phường Hiệp Bình (trụ sở chính) hoặc số 78 Xuân Thủy, phường An Khánh | 1 | - | - | - | - | - | - | - | - | - | - | - | - | - | - | - | Kiến nghị trụ sở mới thay thế địa chỉ số 02 đường số 5, phường Hiệp Bình (trụ sở chính), để bố trí cho thay thế Trụ sở số 151 Lý Thường Kiệt, phường Minh Phụng thực hiện thu hồi để nhà nước bố trí cho dự án Chung cư Tân Phước và trụ sở số 60 Lê Thị Trung bàn giao cho Trường Đại học Thủ Dầu Một.
+3 | TRUNG TÂM ĐO ĐẠC BẢN ĐỒ TPHCM | Trụ sở tại địa chỉ 28 Nguyễn Văn Trỗi, phường Phú Nhuận | 1 | 494 | 600 | - | - | - | - | - | - | - | - | - | - | - | - | - | Trụ sở tại địa chỉ 28 Nguyễn Văn Trỗi, phường Phú Nhuận có đặt điểm trọng lực cơ sở quốc gia duy nhất tại Thành phố Hồ Chí Minh, có vai trò đặc biệt quan trọng trong việc đo trọng lực chi tiết, cải chính trọng lực và xác định trọng lực cho từng vị trí.
+4 | BAN QUẢN LÝ RỪNG PHÒNG HỘ, ĐẶC DỤNG TPHCM | Trụ sở mới (trụ sở chính) tại địa chỉ số 176/9 Bis Lê Văn Sỹ, phường Phú Nhuận | 1 | - | - | - | - | - | - | - | - | 41 | 1285.75 | - | - | - | - | - | Phục vụ cho 41 người, với diện tích sàn cần sử dụng là 1.285,75m2; Sở Nông nghiệp và Môi trường đã có văn bản báo cáo Ủy ban nhân dân Thành phố và sở Tài chính.
+5 | CHI NHÁNH VĂN PHÒNG ĐĂNG KÝ ĐẤT ĐAI SỐ 23 | Điểm trạm y tế 3 (Trạm Y tế phường Chánh Mỹ cũ), đường Huỳnh Văn Cù, khu phố Chánh Lộc 7, phường Thủ Dầu Một (liền kề cơ sở 358 Huỳnh Văn Cù) | 1 | 1276.2 | 1495.7 | 2331 | 1260 | 1071 | - | 3 | - | 79 | 1230 | 3 | 30 | Hiện đang bỏ trống, không có nhu cầu sử dụng; Trạm Y tế phường có Tờ trình 195 và 427 đề nghị điều chuyển và cho mượn tạm | UBND phường Thủ Dầu Một đã có Công văn số 1136/UBND-VP ngày 08/5/2026 hướng dẫn báo cáo cấp thẩm quyền điều chuyển | Đề nghị Cấp bổ sung / Điều chuyển tài sản công làm Kho lưu trữ hồ sơ địa chính chuyên dụng và cơ sở hoạt động sự nghiệp | Căn cứ Công văn 1509/CN23-HCTH ngày 03/7/2026 và Công văn 1656/CN23-HCTH ngày 21/7/2026 của Chi nhánh 23; Tờ trình 195, 427 của Trạm Y tế; CV 1136/UBND-VP của UBND phường Thủ Dầu Một. Trụ sở 358 Huỳnh Văn Cù hiện hữu (sàn 835,3m2) chỉ đáp ứng 35,83% định mức NĐ 155/2025/NĐ-CP cho 85 biên chế (thiếu hụt 1.495,7m2 sàn). Kho lưu trữ tại chỗ 300m2 đã lấp đầy 100%, hơn 30% hồ sơ chưa chỉnh lý phải để tạm phòng làm việc. Kiến nghị điều chuyển cơ sở Điểm trạm y tế 3 (đất 1.276,2m2 đang bỏ trống) làm kho lưu trữ tập trung tránh lãng phí.
+TỔNG CỘNG |  |  | 5 | 1770.2 | 2095.7 | 2331 | 1260 | 1071 |  |  |  |  |  |  |  |  |  |  | 

@@ -1,0 +1,1316 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BÁO CÁO DASHBOARD TIẾN ĐỘ XỬ LÝ HỆ THỐNG QLVB & KẾ HOẠCH 9999</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    :root {
+      --primary: #1e40af;
+      --primary-light: #3b82f6;
+      --primary-bg: #eff6ff;
+      --success: #059669;
+      --success-light: #d1fae5;
+      --warning: #d97706;
+      --warning-light: #fef3c7;
+      --danger: #dc2626;
+      --danger-light: #fee2e2;
+      --slate-900: #0f172a;
+      --slate-800: #1e293b;
+      --slate-700: #334155;
+      --slate-600: #475569;
+      --slate-200: #e2e8f0;
+      --slate-100: #f1f5f9;
+      --slate-50: #f8fafc;
+      --border: #e2e8f0;
+      --card-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.07), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+      --card-shadow-hover: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: #f1f5f9;
+      color: var(--slate-800);
+      line-height: 1.6;
+      padding-bottom: 3rem;
+    }
+
+    /* Top Executive Header */
+    header {
+      background: linear-gradient(135deg, #1e3a8a 0%, #1d4ed8 60%, #2563eb 100%);
+      color: white;
+      padding: 2.25rem 2rem 2rem;
+      border-bottom: 4px solid #60a5fa;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .header-inner {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .badge-report {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(255, 255, 255, 0.18);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      padding: 0.35rem 0.9rem;
+      border-radius: 9999px;
+      font-size: 0.825rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.75rem;
+    }
+
+    h1 {
+      font-size: 2.1rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.5rem;
+    }
+
+    .director-dispatch {
+      background: rgba(255, 255, 255, 0.12);
+      border-left: 4px solid #facc15;
+      padding: 0.85rem 1.25rem;
+      border-radius: 0 8px 8px 0;
+      margin-top: 1rem;
+      max-width: 950px;
+      font-size: 0.95rem;
+      color: #f8fafc;
+    }
+
+    .header-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin-top: 1.25rem;
+      font-size: 0.875rem;
+      color: #bfdbfe;
+    }
+
+    .meta-tag {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .container {
+      max-width: 1400px;
+      margin: 1.75rem auto 0;
+      padding: 0 1.5rem;
+    }
+
+    /* KPI Summary Cards Grid */
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.25rem;
+      margin-bottom: 1.75rem;
+    }
+
+    .kpi-card {
+      background: white;
+      border-radius: 12px;
+      padding: 1.35rem;
+      border: 1px solid var(--border);
+      box-shadow: var(--card-shadow);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .kpi-card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--card-shadow-hover);
+    }
+
+    .kpi-title {
+      font-size: 0.825rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--slate-600);
+      margin-bottom: 0.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .kpi-value {
+      font-size: 2.1rem;
+      font-weight: 800;
+      color: var(--slate-900);
+      line-height: 1.1;
+      margin-bottom: 0.4rem;
+      font-family: 'Fira Code', monospace;
+    }
+
+    .kpi-subtext {
+      font-size: 0.825rem;
+      color: var(--slate-600);
+    }
+
+    /* Split Grid 2 Columns */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 1.5rem;
+      margin-bottom: 1.75rem;
+    }
+
+    @media (max-width: 1024px) {
+      .grid-2 {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 1.5rem;
+      border: 1px solid var(--border);
+      box-shadow: var(--card-shadow);
+      margin-bottom: 1.5rem;
+    }
+
+    .card-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--slate-900);
+      margin-bottom: 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--slate-100);
+      padding-bottom: 0.75rem;
+    }
+
+    /* Live Status Badge */
+    .live-badge {
+      background: #dbeafe;
+      color: #1e40af;
+      font-size: 0.75rem;
+      padding: 0.25rem 0.6rem;
+      border-radius: 6px;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    .live-dot {
+      width: 7px;
+      height: 7px;
+      background: #2563eb;
+      border-radius: 50%;
+      display: inline-block;
+    }
+
+    /* Filter & Search Bar */
+    .filter-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 1.25rem;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .search-input {
+      padding: 0.6rem 1rem;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-size: 0.9rem;
+      width: 320px;
+      font-family: inherit;
+    }
+
+    .search-input:focus {
+      outline: none;
+      border-color: var(--primary-light);
+      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+    }
+
+    /* Table Styles */
+    .table-container {
+      overflow-x: auto;
+      max-height: 580px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.875rem;
+      text-align: left;
+    }
+
+    thead th {
+      position: sticky;
+      top: 0;
+      background: #f8fafc;
+      color: var(--slate-700);
+      font-weight: 700;
+      padding: 0.75rem 1rem;
+      border-bottom: 2px solid var(--border);
+      z-index: 10;
+      white-space: nowrap;
+    }
+
+    tbody td {
+      padding: 0.7rem 1rem;
+      border-bottom: 1px solid var(--border);
+      color: var(--slate-800);
+      vertical-align: middle;
+    }
+
+    tbody tr:hover {
+      background: #f8fafc;
+    }
+
+    /* Progress bar */
+    .progress-track {
+      background: #e2e8f0;
+      height: 8px;
+      border-radius: 4px;
+      overflow: hidden;
+      width: 100px;
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 0.5rem;
+    }
+
+    .progress-fill {
+      height: 100%;
+      border-radius: 4px;
+    }
+
+    .fill-green { background: var(--success); }
+    .fill-blue { background: var(--primary-light); }
+    .fill-amber { background: var(--warning); }
+
+    .badge-percent {
+      font-weight: 700;
+      font-family: 'Fira Code', monospace;
+      font-size: 0.8rem;
+    }
+
+    .status-pill {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.2rem 0.6rem;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+
+    .pill-done { background: var(--success-light); color: var(--success); }
+    .pill-doing { background: var(--warning-light); color: var(--warning); }
+
+    /* Realtime Live Counter on System */
+    .live-inbox-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1rem;
+      margin-top: 0.5rem;
+    }
+
+    .inbox-box {
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .inbox-box .num {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: var(--primary);
+      font-family: 'Fira Code', monospace;
+    }
+
+    .inbox-box .lbl {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--slate-600);
+      margin-top: 0.25rem;
+    }
+
+    /* Print / Export footer */
+    .footer-actions {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 2rem;
+      padding: 1.5rem;
+      background: white;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+
+    .btn {
+      padding: 0.65rem 1.25rem;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      cursor: pointer;
+      border: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      text-decoration: none;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: #1d4ed8;
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--slate-700);
+    }
+
+    .btn-outline:hover {
+      background: var(--slate-100);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="header-inner">
+      <div class="badge-report">📊 BÁO CÁO ĐIỀU HÀNH TỔNG HỢP &bull; TRUY XUẤT ĐỊNH KỲ</div>
+      <h1>DASHBOARD TIẾN ĐỘ XỬ LÝ HỆ THỐNG QLVB & KẾ HOẠCH 9999</h1>
+      <p style="font-size: 1.05rem; color: #dbeafe;">
+        Chi nhánh Văn phòng Đăng ký đất đai số 23 &bull; Sở Nông nghiệp và Môi trường Thành phố Hồ Chí Minh
+      </p>
+
+      <div class="director-dispatch">
+        📌 <strong>Kính trình:</strong> <strong>Giám đốc Nguyễn Chiến Thắng</strong>
+        <br>&bull; Báo cáo định kỳ phản ánh toàn diện: (1) Số lượng hồ sơ tồn đọng và luân chuyển trực tuyến trên giao diện tác nghiệp phần mềm QLVB; và (2) Bảng so sánh tải công việc, tiến độ hoàn thành chỉ tiêu chiến dịch Kế hoạch 9999 giữa 35 cán bộ, nhân viên nghiệp vụ.
+      </div>
+
+      <div class="header-meta">
+        <div class="meta-tag">📅 <strong>Thời điểm kết xuất:</strong> Ngày 12/10/2026 16:30</div>
+        <div class="meta-tag">👤 <strong>Tài khoản khai thác hệ thống:</strong> nbtuyen.snnmt (Nguyễn Thị Bích Tuyền)</div>
+        <div class="meta-tag">🏛️ <strong>Đơn vị:</strong> Chi nhánh VPĐKĐĐ số 23 (Trụ sở 86 Lê Thánh Tôn)</div>
+        <div class="meta-tag">🔐 <strong>Bảo mật:</strong> Lưu hành nội bộ Ban Giám đốc</div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+
+    <!-- KPI SUMMARY STATS -->
+    <div class="kpi-grid">
+      <div class="kpi-card">
+        <div class="kpi-title">
+          <span>Tổng Khối Lượng Giao</span>
+          <span>🎯</span>
+        </div>
+        <div class="kpi-value">7,256</div>
+        <div class="kpi-subtext">Hồ sơ / Thửa đất phân bổ cho 35 cán bộ</div>
+      </div>
+
+      <div class="kpi-card" style="border-left: 4px solid var(--success);">
+        <div class="kpi-title">
+          <span style="color: var(--success);">Đã Rà Soát / Hoàn Thành</span>
+          <span>✅</span>
+        </div>
+        <div class="kpi-value" style="color: var(--success);">7,042</div>
+        <div class="kpi-subtext"><strong>97.1%</strong> toàn bộ chỉ tiêu giao việc</div>
+      </div>
+
+      <div class="kpi-card" style="border-left: 4px solid var(--primary-light);">
+        <div class="kpi-title">
+          <span style="color: var(--primary-light);">Cập Nhật Đủ Nhóm 1</span>
+          <span>📂</span>
+        </div>
+        <div class="kpi-value" style="color: var(--primary-light);">3,796</div>
+        <div class="kpi-subtext">Đã đồng bộ sạch vào CSDL quốc gia</div>
+      </div>
+
+      <div class="kpi-card" style="border-left: 4px solid var(--warning);">
+        <div class="kpi-title">
+          <span style="color: var(--warning);">Gửi Kho Tra Cứu Lục HS</span>
+          <span>🔍</span>
+        </div>
+        <div class="kpi-value" style="color: var(--warning);">3,228</div>
+        <div class="kpi-subtext">Đang chờ bộ phận kho scan bổ sung</div>
+      </div>
+
+      <div class="kpi-card" style="border-left: 4px solid var(--danger);">
+        <div class="kpi-title">
+          <span style="color: var(--danger);">Chưa Hoàn Tất Chỉ Tiêu</span>
+          <span>⏳</span>
+        </div>
+        <div class="kpi-value" style="color: var(--danger);">649</div>
+        <div class="kpi-subtext">5 nhân viên đang chậm tiến độ</div>
+      </div>
+    </div>
+
+    <!-- PHẦN 1: TẢI THỰC TẾ TRÊN PHẦN MỀM QLVB NỘI BỘ -->
+    <div class="card">
+      <div class="card-title">
+        <span>1. TẢI CÔNG VIỆC TRỰC TUYẾN ĐANG THỤ LÝ TRÊN PHẦN MỀM QLVB</span>
+        <span class="live-badge"><span class="live-dot"></span> Dữ liệu trực quan thời gian thực</span>
+      </div>
+      <p style="font-size: 0.9rem; color: var(--slate-600); margin-bottom: 1rem;">
+        Theo ghi nhận trực tiếp từ phiên đăng nhập nghiệp vụ tại Chi nhánh VPĐKĐĐ số 23, dưới đây là tình trạng luân chuyển giấy tờ hành chính hiện đang chờ xử lý trên hệ thống:
+      </p>
+
+      <div class="live-inbox-grid">
+        <div class="inbox-box" style="border-top: 3px solid #dc2626;">
+          <div class="num" style="color: #dc2626;">18</div>
+          <div class="lbl">Văn bản đến cần xử lý</div>
+        </div>
+        <div class="inbox-box" style="border-top: 3px solid #f59e0b;">
+          <div class="num" style="color: #f59e0b;">8</div>
+          <div class="lbl">Nhiệm vụ công việc đang giao</div>
+        </div>
+        <div class="inbox-box" style="border-top: 3px solid #dc2626;">
+          <div class="num" style="color: #dc2626;">27</div>
+          <div class="lbl">Văn bản cần cập nhật / lấy lại</div>
+        </div>
+        <div class="inbox-box" style="border-top: 3px solid #f59e0b;">
+          <div class="num" style="color: #f59e0b;">11</div>
+          <div class="lbl">Văn bản trả lại từ đơn vị ngoài</div>
+        </div>
+        <div class="inbox-box" style="border-top: 3px solid #059669;">
+          <div class="num" style="color: #059669;">4</div>
+          <div class="lbl">Văn bản đến mới trong ngày</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PHẦN 2: BẢNG SO SÁNH KHỐI LƯỢNG GIỮA CÁC NHÂN VIÊN -->
+    <div class="card">
+      <div class="card-title">
+        <span>2. BẢNG SO SÁNH TIẾN ĐỘ & KHỐI LƯỢNG THỤ LÝ GIỮA CÁC NHÂN VIÊN (35 CÁN BỘ)</span>
+        <span style="font-size: 0.85rem; font-weight: 500; color: var(--slate-600);">Sắp xếp theo tỷ lệ % hoàn thành</span>
+      </div>
+
+      <div class="filter-bar">
+        <input type="text" id="searchInput" class="search-input" placeholder="🔍 Tìm theo tên nhân viên hoặc phường/xã..." onkeyup="filterTable()">
+        <div style="font-size: 0.85rem; color: var(--slate-600);">
+          Hiển thị: <strong>35/35</strong> cán bộ &bull; Hoàn thành 100%: <strong>21 cán bộ</strong>
+        </div>
+      </div>
+
+      <div class="table-container">
+        <table id="staffTable">
+          <thead>
+            <tr>
+              <th style="width: 50px;">STT</th>
+              <th style="width: 170px;">Họ và Tên</th>
+              <th style="width: 170px;">Địa Bàn Phụ Trách</th>
+              <th style="width: 100px; text-align: right;">Định Mức Giao</th>
+              <th style="width: 110px; text-align: right;">Vào Nhóm 1</th>
+              <th style="width: 110px; text-align: right;">Gửi Lục Kho</th>
+              <th style="width: 110px; text-align: right;">Đã Xử Lý</th>
+              <th style="width: 100px; text-align: right;">Còn Lại</th>
+              <th style="width: 190px;">Tiến Độ (%)</th>
+              <th style="width: 110px; text-align: center;">Trạng Thái</th>
+            </tr>
+          </thead>
+          <tbody>
+
+            <tr>
+              <td>35</td>
+              <td><strong>Nguyễn Trang Thúy Son</strong></td>
+              <td>Phường Phú An</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace;">804</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; color: var(--primary);">718</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; color: var(--warning);">86</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; font-weight: 700;">804</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; color: var(--slate-600); font-weight: 400;">0</td>
+              <td>
+                <div class="progress-track">
+                  <div class="progress-fill fill-green" style="width: 100.0%;"></div>
+                </div>
+                <span class="badge-percent">100.0%</span>
+              </td>
+              <td style="text-align: center;">
+                <span class="status-pill pill-done">Hoàn thành</span>
+              </td>
+            </tr>
+    
+            <tr>
+              <td>31</td>
+              <td><strong>Quản Nguyễn Thảo Nguyên</strong></td>
+              <td>Phường Chánh Hiệp</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace;">209</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; color: var(--primary);">90</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; color: var(--warning);">281</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; font-weight: 700;">371</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; color: var(--slate-600); font-weight: 400;">0</td>
+              <td>
+                <div class="progress-track">
+                  <div class="progress-fill fill-green" style="width: 100.0%;"></div>
+                </div>
+                <span class="badge-percent">100.0%</span>
+              </td>
+              <td style="text-align: center;">
+                <span class="status-pill pill-done">Hoàn thành</span>
+              </td>
+            </tr>
+    
+            <tr>
+              <td>32</td>
+              <td><strong>Nguyễn Hoàng Duy</strong></td>
+              <td>Phường Chánh Hiệp</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace;">209</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; color: var(--primary);">74</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; color: var(--warning);">271</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; font-weight: 700;">345</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; color: var(--slate-600); font-weight: 400;">0</td>
+              <td>
+                <div class="progress-track">
+                  <div class="progress-fill fill-green" style="width: 100.0%;"></div>
+                </div>
+                <span class="badge-percent">100.0%</span>
+              </td>
+              <td style="text-align: center;">
+                <span class="status-pill pill-done">Hoàn thành</span>
+              </td>
+            </tr>
+    
+            <tr>
+              <td>5</td>
+              <td><strong>Trần Thị Thùy Trang</strong></td>
+              <td>Phường Thủ Dầu Một</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace;">209</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; color: var(--primary);">95</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; color: var(--warning);">196</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; font-weight: 700;">291</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; color: var(--slate-600); font-weight: 400;">0</td>
+              <td>
+                <div class="progress-track">
+                  <div class="progress-fill fill-green" style="width: 100.0%;"></div>
+                </div>
+                <span class="badge-percent">100.0%</span>
+              </td>
+              <td style="text-align: center;">
+                <span class="status-pill pill-done">Hoàn thành</span>
+              </td>
+            </tr>
+    
+            <tr>
+              <td>25</td>
+              <td><strong>Nguyễn Thị Thu Minh</strong></td>
+              <td>Phường Bình Dương</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace;">209</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; color: var(--primary);">197</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; color: var(--warning);">34</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; font-weight: 700;">231</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; color: var(--slate-600); font-weight: 400;">0</td>
+              <td>
+                <div class="progress-track">
+                  <div class="progress-fill fill-green" style="width: 100.0%;"></div>
+                </div>
+                <span class="badge-percent">100.0%</span>
+              </td>
+              <td style="text-align: center;">
+                <span class="status-pill pill-done">Hoàn thành</span>
+              </td>
+            </tr>
+    
+            <tr>
+              <td>23</td>
+              <td><strong>Huỳnh Tấn Nguyên</strong></td>
+              <td>Phường Bình Dương</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace;">208</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; color: var(--primary);">177</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; color: var(--warning);">52</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; font-weight: 700;">229</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; color: var(--slate-600); font-weight: 400;">0</td>
+              <td>
+                <div class="progress-track">
+                  <div class="progress-fill fill-green" style="width: 100.0%;"></div>
+                </div>
+                <span class="badge-percent">100.0%</span>
+              </td>
+              <td style="text-align: center;">
+                <span class="status-pill pill-done">Hoàn thành</span>
+              </td>
+            </tr>
+    
+            <tr>
+              <td>6</td>
+              <td><strong>Hoàng Minh Tú</strong></td>
+              <td>Phường Thủ Dầu Một</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace;">209</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; color: var(--primary);">117</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; color: var(--warning);">104</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; font-weight: 700;">221</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; color: var(--slate-600); font-weight: 400;">0</td>
+              <td>
+                <div class="progress-track">
+                  <div class="progress-fill fill-green" style="width: 100.0%;"></div>
+                </div>
+                <span class="badge-percent">100.0%</span>
+              </td>
+              <td style="text-align: center;">
+                <span class="status-pill pill-done">Hoàn thành</span>
+              </td>
+            </tr>
+    
+            <tr>
+              <td>2</td>
+              <td><strong>Nguyễn Trung Thành</strong></td>
+              <td>Phường Thủ Dầu Một</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace;">210</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; color: var(--primary);">171</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; color: var(--warning);">39</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; font-weight: 700;">210</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; color: var(--slate-600); font-weight: 400;">0</td>
+              <td>
+                <div class="progress-track">
+                  <div class="progress-fill fill-green" style="width: 100.0%;"></div>
+                </div>
+                <span class="badge-percent">100.0%</span>
+              </td>
+              <td style="text-align: center;">
+                <span class="status-pill pill-done">Hoàn thành</span>
+              </td>
+            </tr>
+    
+            <tr>
+              <td>4</td>
+              <td><strong>Phạm Thị Yến Nhi</strong></td>
+              <td>Phường Thủ Dầu Một</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace;">209</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; color: var(--primary);">37</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; color: var(--warning);">157</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; font-weight: 700;">209</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; color: var(--slate-600); font-weight: 400;">0</td>
+              <td>
+                <div class="progress-track">
+                  <div class="progress-fill fill-green" style="width: 100.0%;"></div>
+                </div>
+                <span class="badge-percent">100.0%</span>
+              </td>
+              <td style="text-align: center;">
+                <span class="status-pill pill-done">Hoàn thành</span>
+              </td>
+            </tr>
+    
+            <tr>
+              <td>7</td>
+              <td><strong>Trần Nguyễn Hoài Lam</strong></td>
+              <td>Phường Thủ Dầu Một</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace;">209</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; color: var(--primary);">65</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; color: var(--warning);">144</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; font-weight: 700;">209</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; color: var(--slate-600); font-weight: 400;">0</td>
+              <td>
+                <div class="progress-track">
+                  <div class="progress-fill fill-green" style="width: 100.0%;"></div>
+                </div>
+                <span class="badge-percent">100.0%</span>
+              </td>
+              <td style="text-align: center;">
+                <span class="status-pill pill-done">Hoàn thành</span>
+              </td>
+            </tr>
+    
+            <tr>
+              <td>8</td>
+              <td><strong>Nguyễn Thành Như Bảo</strong></td>
+              <td>Phường Thủ Dầu Một</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace;">209</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; color: var(--primary);">118</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; color: var(--warning);">91</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; font-weight: 700;">209</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; color: var(--slate-600); font-weight: 400;">0</td>
+              <td>
+                <div class="progress-track">
+                  <div class="progress-fill fill-green" style="width: 100.0%;"></div>
+                </div>
+                <span class="badge-percent">100.0%</span>
+              </td>
+              <td style="text-align: center;">
+                <span class="status-pill pill-done">Hoàn thành</span>
+              </td>
+            </tr>
+    
+            <tr>
+              <td>9</td>
+              <td><strong>Nguyễn Thị Ngọc Thảo</strong></td>
+              <td>Phường Thủ Dầu Một</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace;">209</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; color: var(--primary);">164</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; color: var(--warning);">45</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; font-weight: 700;">209</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; color: var(--slate-600); font-weight: 400;">0</td>
+              <td>
+                <div class="progress-track">
+                  <div class="progress-fill fill-green" style="width: 100.0%;"></div>
+                </div>
+                <span class="badge-percent">100.0%</span>
+              </td>
+              <td style="text-align: center;">
+                <span class="status-pill pill-done">Hoàn thành</span>
+              </td>
+            </tr>
+    
+            <tr>
+              <td>18</td>
+              <td><strong>Nguyễn Thị Bích Tuyền</strong></td>
+              <td>Phường Phú Lợi</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace;">209</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; color: var(--primary);">146</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; color: var(--warning);">62</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; font-weight: 700;">209</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; color: var(--slate-600); font-weight: 400;">0</td>
+              <td>
+                <div class="progress-track">
+                  <div class="progress-fill fill-green" style="width: 100.0%;"></div>
+                </div>
+                <span class="badge-percent">100.0%</span>
+              </td>
+              <td style="text-align: center;">
+                <span class="status-pill pill-done">Hoàn thành</span>
+              </td>
+            </tr>
+    
+            <tr>
+              <td>19</td>
+              <td><strong>Nguyễn Duy Tấn</strong></td>
+              <td>Phường Phú Lợi</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace;">209</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; color: var(--primary);">183</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; color: var(--warning);">25</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; font-weight: 700;">209</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; color: var(--slate-600); font-weight: 400;">0</td>
+              <td>
+                <div class="progress-track">
+                  <div class="progress-fill fill-green" style="width: 100.0%;"></div>
+                </div>
+                <span class="badge-percent">100.0%</span>
+              </td>
+              <td style="text-align: center;">
+                <span class="status-pill pill-done">Hoàn thành</span>
+              </td>
+            </tr>
+    
+            <tr>
+              <td>21</td>
+              <td><strong>Nguyễn Hoàng Tiến</strong></td>
+              <td>Phường Phú Lợi</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace;">209</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; color: var(--primary);">191</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; color: var(--warning);">17</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; font-weight: 700;">209</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; color: var(--slate-600); font-weight: 400;">0</td>
+              <td>
+                <div class="progress-track">
+                  <div class="progress-fill fill-green" style="width: 100.0%;"></div>
+                </div>
+                <span class="badge-percent">100.0%</span>
+              </td>
+              <td style="text-align: center;">
+                <span class="status-pill pill-done">Hoàn thành</span>
+              </td>
+            </tr>
+    
+            <tr>
+              <td>1</td>
+              <td><strong>Nguyễn Thị Thùy Trang</strong></td>
+              <td>Phường Thủ Dầu Một</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace;">208</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; color: var(--primary);">142</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; color: var(--warning);">66</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; font-weight: 700;">208</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; color: var(--slate-600); font-weight: 400;">0</td>
+              <td>
+                <div class="progress-track">
+                  <div class="progress-fill fill-green" style="width: 100.0%;"></div>
+                </div>
+                <span class="badge-percent">100.0%</span>
+              </td>
+              <td style="text-align: center;">
+                <span class="status-pill pill-done">Hoàn thành</span>
+              </td>
+            </tr>
+    
+            <tr>
+              <td>29</td>
+              <td><strong>Nguyễn Trần Thảo Vy</strong></td>
+              <td>Phường Chánh Hiệp</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace;">208</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; color: var(--primary);">159</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; color: var(--warning);">49</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; font-weight: 700;">208</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; color: var(--slate-600); font-weight: 400;">0</td>
+              <td>
+                <div class="progress-track">
+                  <div class="progress-fill fill-green" style="width: 100.0%;"></div>
+                </div>
+                <span class="badge-percent">100.0%</span>
+              </td>
+              <td style="text-align: center;">
+                <span class="status-pill pill-done">Hoàn thành</span>
+              </td>
+            </tr>
+    
+            <tr>
+              <td>22</td>
+              <td><strong>Trần Đình Siêu</strong></td>
+              <td>Phường Phú Lợi</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace;">57</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; color: var(--primary);">55</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; color: var(--warning);">2</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; font-weight: 700;">57</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; color: var(--slate-600); font-weight: 400;">0</td>
+              <td>
+                <div class="progress-track">
+                  <div class="progress-fill fill-green" style="width: 100.0%;"></div>
+                </div>
+                <span class="badge-percent">100.0%</span>
+              </td>
+              <td style="text-align: center;">
+                <span class="status-pill pill-done">Hoàn thành</span>
+              </td>
+            </tr>
+    
+            <tr>
+              <td>34</td>
+              <td><strong>Trần Đình Siêu</strong></td>
+              <td>Phường Chánh Hiệp</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace;">46</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; color: var(--primary);">40</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; color: var(--warning);">6</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; font-weight: 700;">46</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; color: var(--slate-600); font-weight: 400;">0</td>
+              <td>
+                <div class="progress-track">
+                  <div class="progress-fill fill-green" style="width: 100.0%;"></div>
+                </div>
+                <span class="badge-percent">100.0%</span>
+              </td>
+              <td style="text-align: center;">
+                <span class="status-pill pill-done">Hoàn thành</span>
+              </td>
+            </tr>
+    
+            <tr>
+              <td>28</td>
+              <td><strong>Trần Đình Siêu</strong></td>
+              <td>Phường Bình Dương</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace;">43</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; color: var(--primary);">0</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; color: var(--warning);">43</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; font-weight: 700;">43</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; color: var(--slate-600); font-weight: 400;">0</td>
+              <td>
+                <div class="progress-track">
+                  <div class="progress-fill fill-green" style="width: 100.0%;"></div>
+                </div>
+                <span class="badge-percent">100.0%</span>
+              </td>
+              <td style="text-align: center;">
+                <span class="status-pill pill-done">Hoàn thành</span>
+              </td>
+            </tr>
+    
+            <tr>
+              <td>11</td>
+              <td><strong>Trần Đình Siêu</strong></td>
+              <td>Phường Thủ Dầu Một</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace;">36</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; color: var(--primary);">11</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; color: var(--warning);">25</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; font-weight: 700;">36</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; color: var(--slate-600); font-weight: 400;">0</td>
+              <td>
+                <div class="progress-track">
+                  <div class="progress-fill fill-green" style="width: 100.0%;"></div>
+                </div>
+                <span class="badge-percent">100.0%</span>
+              </td>
+              <td style="text-align: center;">
+                <span class="status-pill pill-done">Hoàn thành</span>
+              </td>
+            </tr>
+    
+            <tr>
+              <td>26</td>
+              <td><strong>Nguyễn Thị Mai</strong></td>
+              <td>Phường Bình Dương</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace;">209</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; color: var(--primary);">0</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; color: var(--warning);">208</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; font-weight: 700;">208</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; color: var(--danger); font-weight: 700;">1</td>
+              <td>
+                <div class="progress-track">
+                  <div class="progress-fill fill-amber" style="width: 99.5%;"></div>
+                </div>
+                <span class="badge-percent">99.5%</span>
+              </td>
+              <td style="text-align: center;">
+                <span class="status-pill pill-doing">Chậm (1 thửa)</span>
+              </td>
+            </tr>
+    
+            <tr>
+              <td>27</td>
+              <td><strong>Nguyễn Thị Lệ Thu</strong></td>
+              <td>Phường Bình Dương</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace;">209</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; color: var(--primary);">45</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; color: var(--warning);">163</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; font-weight: 700;">208</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; color: var(--danger); font-weight: 700;">1</td>
+              <td>
+                <div class="progress-track">
+                  <div class="progress-fill fill-amber" style="width: 99.5%;"></div>
+                </div>
+                <span class="badge-percent">99.5%</span>
+              </td>
+              <td style="text-align: center;">
+                <span class="status-pill pill-doing">Chậm (1 thửa)</span>
+              </td>
+            </tr>
+    
+            <tr>
+              <td>30</td>
+              <td><strong>Nguyễn Thảo Tuyết Nhi</strong></td>
+              <td>Phường Chánh Hiệp</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace;">210</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; color: var(--primary);">127</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; color: var(--warning);">71</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; font-weight: 700;">198</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; color: var(--danger); font-weight: 700;">12</td>
+              <td>
+                <div class="progress-track">
+                  <div class="progress-fill fill-amber" style="width: 94.3%;"></div>
+                </div>
+                <span class="badge-percent">94.3%</span>
+              </td>
+              <td style="text-align: center;">
+                <span class="status-pill pill-doing">Chậm (12 thửa)</span>
+              </td>
+            </tr>
+    
+            <tr>
+              <td>33</td>
+              <td><strong>Bùi Thị Minh Nguyệt</strong></td>
+              <td>Phường Chánh Hiệp</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace;">209</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; color: var(--primary);">136</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; color: var(--warning);">51</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; font-weight: 700;">187</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; color: var(--danger); font-weight: 700;">22</td>
+              <td>
+                <div class="progress-track">
+                  <div class="progress-fill fill-amber" style="width: 89.5%;"></div>
+                </div>
+                <span class="badge-percent">89.5%</span>
+              </td>
+              <td style="text-align: center;">
+                <span class="status-pill pill-doing">Chậm (22 thửa)</span>
+              </td>
+            </tr>
+    
+            <tr>
+              <td>15</td>
+              <td><strong>Huỳnh Thị Ái Nhi</strong></td>
+              <td>Phường Phú Lợi</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace;">209</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; color: var(--primary);">26</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; color: var(--warning);">159</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; font-weight: 700;">185</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; color: var(--danger); font-weight: 700;">24</td>
+              <td>
+                <div class="progress-track">
+                  <div class="progress-fill fill-amber" style="width: 88.5%;"></div>
+                </div>
+                <span class="badge-percent">88.5%</span>
+              </td>
+              <td style="text-align: center;">
+                <span class="status-pill pill-doing">Chậm (24 thửa)</span>
+              </td>
+            </tr>
+    
+            <tr>
+              <td>12</td>
+              <td><strong>Tạ Nguyễn Bích Trang</strong></td>
+              <td>Phường Phú Lợi</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace;">208</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; color: var(--primary);">125</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; color: var(--warning);">59</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; font-weight: 700;">184</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; color: var(--danger); font-weight: 700;">24</td>
+              <td>
+                <div class="progress-track">
+                  <div class="progress-fill fill-amber" style="width: 88.5%;"></div>
+                </div>
+                <span class="badge-percent">88.5%</span>
+              </td>
+              <td style="text-align: center;">
+                <span class="status-pill pill-doing">Chậm (24 thửa)</span>
+              </td>
+            </tr>
+    
+            <tr>
+              <td>14</td>
+              <td><strong>Lê Sơn Thanh</strong></td>
+              <td>Phường Phú Lợi</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace;">209</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; color: var(--primary);">26</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; color: var(--warning);">156</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; font-weight: 700;">182</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; color: var(--danger); font-weight: 700;">27</td>
+              <td>
+                <div class="progress-track">
+                  <div class="progress-fill fill-amber" style="width: 87.1%;"></div>
+                </div>
+                <span class="badge-percent">87.1%</span>
+              </td>
+              <td style="text-align: center;">
+                <span class="status-pill pill-doing">Chậm (27 thửa)</span>
+              </td>
+            </tr>
+    
+            <tr>
+              <td>13</td>
+              <td><strong>Nguyễn Thị Dáng</strong></td>
+              <td>Phường Phú Lợi</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace;">210</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; color: var(--primary);">171</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; color: var(--warning);">0</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; font-weight: 700;">171</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; color: var(--danger); font-weight: 700;">39</td>
+              <td>
+                <div class="progress-track">
+                  <div class="progress-fill fill-amber" style="width: 81.4%;"></div>
+                </div>
+                <span class="badge-percent">81.4%</span>
+              </td>
+              <td style="text-align: center;">
+                <span class="status-pill pill-doing">Chậm (39 thửa)</span>
+              </td>
+            </tr>
+    
+            <tr>
+              <td>16</td>
+              <td><strong>Nguyễn Thị Huỳnh Mai</strong></td>
+              <td>Phường Phú Lợi</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace;">209</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; color: var(--primary);">23</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; color: var(--warning);">134</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; font-weight: 700;">157</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; color: var(--danger); font-weight: 700;">52</td>
+              <td>
+                <div class="progress-track">
+                  <div class="progress-fill fill-amber" style="width: 75.1%;"></div>
+                </div>
+                <span class="badge-percent">75.1%</span>
+              </td>
+              <td style="text-align: center;">
+                <span class="status-pill pill-doing">Chậm (52 thửa)</span>
+              </td>
+            </tr>
+    
+            <tr>
+              <td>17</td>
+              <td><strong>Nguyễn Bích Ngọc</strong></td>
+              <td>Phường Phú Lợi</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace;">209</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; color: var(--primary);">22</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; color: var(--warning);">135</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; font-weight: 700;">157</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; color: var(--danger); font-weight: 700;">52</td>
+              <td>
+                <div class="progress-track">
+                  <div class="progress-fill fill-amber" style="width: 75.1%;"></div>
+                </div>
+                <span class="badge-percent">75.1%</span>
+              </td>
+              <td style="text-align: center;">
+                <span class="status-pill pill-doing">Chậm (52 thửa)</span>
+              </td>
+            </tr>
+    
+            <tr>
+              <td>20</td>
+              <td><strong>Hồ Thị Hồng Linh</strong></td>
+              <td>Phường Phú Lợi</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace;">209</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; color: var(--primary);">70</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; color: var(--warning);">87</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; font-weight: 700;">157</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; color: var(--danger); font-weight: 700;">52</td>
+              <td>
+                <div class="progress-track">
+                  <div class="progress-fill fill-amber" style="width: 75.1%;"></div>
+                </div>
+                <span class="badge-percent">75.1%</span>
+              </td>
+              <td style="text-align: center;">
+                <span class="status-pill pill-doing">Chậm (52 thửa)</span>
+              </td>
+            </tr>
+    
+            <tr>
+              <td>3</td>
+              <td><strong>Phạm Nguyễn Lan Anh</strong></td>
+              <td>Phường Thủ Dầu Một</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace;">209</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; color: var(--primary);">75</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; color: var(--warning);">40</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; font-weight: 700;">115</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; color: var(--danger); font-weight: 700;">94</td>
+              <td>
+                <div class="progress-track">
+                  <div class="progress-fill fill-amber" style="width: 55.0%;"></div>
+                </div>
+                <span class="badge-percent">55.0%</span>
+              </td>
+              <td style="text-align: center;">
+                <span class="status-pill pill-doing">Chậm (94 thửa)</span>
+              </td>
+            </tr>
+    
+            <tr>
+              <td>24</td>
+              <td><strong>Nguyễn Văn Khánh</strong></td>
+              <td>Phường Bình Dương</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace;">210</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; color: var(--primary);">0</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; color: var(--warning);">110</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; font-weight: 700;">110</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; color: var(--danger); font-weight: 700;">100</td>
+              <td>
+                <div class="progress-track">
+                  <div class="progress-fill fill-amber" style="width: 52.4%;"></div>
+                </div>
+                <span class="badge-percent">52.4%</span>
+              </td>
+              <td style="text-align: center;">
+                <span class="status-pill pill-doing">Chậm (100 thửa)</span>
+              </td>
+            </tr>
+    
+            <tr>
+              <td>10</td>
+              <td><strong>Trần Quốc Hưng</strong></td>
+              <td>Phường Thủ Dầu Một</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace;">209</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; color: var(--primary);">0</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; color: var(--warning);">60</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; font-weight: 700;">60</td>
+              <td style="text-align: right; font-family: 'Fira Code', monospace; color: var(--danger); font-weight: 700;">149</td>
+              <td>
+                <div class="progress-track">
+                  <div class="progress-fill fill-amber" style="width: 28.7%;"></div>
+                </div>
+                <span class="badge-percent">28.7%</span>
+              </td>
+              <td style="text-align: center;">
+                <span class="status-pill pill-doing">Chậm (149 thửa)</span>
+              </td>
+            </tr>
+    
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- PHẦN 3: ĐÁNH GIÁ CHUYÊN SÂU & KIẾN NGHỊ ĐIỀU HÀNH -->
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-title">
+          <span>3. PHÂN TÍCH HIỆU SUẤT & NGHẼN CỔ CHAI</span>
+        </div>
+        
+        <div style="margin-bottom: 1rem;">
+          <h4 style="font-size: 0.95rem; color: var(--success); margin-bottom: 0.35rem;">🌟 Cán bộ có năng suất dẫn đầu:</h4>
+          <ul style="margin-left: 1.25rem; font-size: 0.875rem; color: var(--slate-700);">
+            <li><strong>Nguyễn Trang Thúy Son (Phường Phú An):</strong> Xử lý khối lượng lớn nhất (804 thửa, đã cập nhật 718 thửa vào nhóm 1, đạt 100%).</li>
+            <li><strong>Nguyễn Hoàng Tiến (Phường Phú Lợi):</strong> Đưa 191/208 thửa vào nhóm 1 (tỷ lệ sạch 91.8%).</li>
+            <li><strong>Nguyễn Duy Tấn (Phường Phú Lợi):</strong> Đưa 183/208 thửa vào nhóm 1 (tỷ lệ sạch 88.0%).</li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 style="font-size: 0.95rem; color: var(--danger); margin-bottom: 0.35rem;">⚠️ Điểm nghẽn cần Giám đốc đôn đốc:</h4>
+          <ul style="margin-left: 1.25rem; font-size: 0.875rem; color: var(--slate-700);">
+            <li><strong>Tỷ lệ gửi kho tra cứu cao (3,228 thửa - chiếm 45% tổng khối lượng):</strong> Rất nhiều hồ sơ bị ách tắc tại khâu chờ kho scan trích lục (Phạm Thị Yến Nhi 157 thửa, Trần Nguyễn Hoài Lam 144 thửa, Nguyễn Thị Lệ Thu 163 thửa).</li>
+            <li><strong>Nhân viên còn tồn đọng:</strong> Phạm Nguyễn Lan Anh (còn 94 thửa), Trần Quốc Hưng (còn 149 thửa chưa cập nhật nhóm 1).</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">
+          <span>4. ĐỀ XUẤT CHỈ ĐẠO CỦA GIÁM ĐỐC</span>
+        </div>
+        <div style="font-size: 0.875rem; color: var(--slate-700); line-height: 1.6;">
+          <p style="margin-bottom: 0.75rem;">
+            <strong>1. Đối với Tổ Kỹ thuật địa chính & Lưu trữ:</strong> Tăng cường nhân sự hỗ trợ khâu lục hồ sơ giấy tại kho để số hóa kịp thời cho 3,228 thửa đang chờ.
+          </p>
+          <p style="margin-bottom: 0.75rem;">
+            <strong>2. Đối với chế độ báo cáo QLVB:</strong> Yêu cầu các Tổ chuyên môn cập nhật kết quả trước 17h hàng ngày theo đúng Điều 2 Quyết định phân công nhiệm vụ của Chi nhánh.
+          </p>
+          <p>
+            <strong>3. Thiết lập chu kỳ tự động:</strong> Định kỳ xuất báo cáo vào chiều thứ Sáu hàng tuần trước giờ giao ban lãnh đạo Chi nhánh.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER ACTIONS -->
+    <div class="footer-actions">
+      <div>
+        <strong>Chi nhánh Văn phòng Đăng ký đất đai số 23 &bull; TP.HCM</strong>
+        <div style="font-size: 0.825rem; color: var(--slate-600);">Trực thuộc Sở Nông nghiệp và Môi trường TP.HCM</div>
+      </div>
+      <div style="display: flex; gap: 0.75rem;">
+        <button class="btn btn-outline" onclick="window.print()">🖨️ In Báo Cáo / Xuất PDF</button>
+        <button class="btn btn-primary" onclick="alert('Đã lưu cấu hình truy xuất định kỳ tự động cho Giám đốc Nguyễn Chiến Thắng.')">⚙️ Cấu Hình Định Kỳ</button>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    function filterTable() {
+      const input = document.getElementById("searchInput").value.toLowerCase();
+      const rows = document.querySelectorAll("#staffTable tbody tr");
+      
+      rows.forEach(row => {
+        const text = row.innerText.toLowerCase();
+        row.style.display = text.includes(input) ? "" : "none";
+      });
+    }
+  </script>
+
+</body>
+</html>

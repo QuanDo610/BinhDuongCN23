@@ -1,0 +1,695 @@
+import os
+
+html_content = '''<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Báo cáo Rà soát QĐ 355: Trách nhiệm Tìm nhà cung cấp, Hóa đơn và Thủ tục chi</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+            color: #0f172a;
+        }
+        .font-serif-doc {
+            font-family: 'Merriweather', serif;
+        }
+        .quote-box {
+            border-left: 4px solid #3b82f6;
+            background-color: #eff6ff;
+        }
+        .alert-box {
+            border-left: 4px solid #ef4444;
+            background-color: #fef2f2;
+        }
+        .success-box {
+            border-left: 4px solid #10b981;
+            background-color: #f0fdf4;
+        }
+        @media print {
+            .no-print { display: none !important; }
+            body { background: white; }
+            .print-shadow-none { box-shadow: none !important; border: 1px solid #cbd5e1 !important; }
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+    <!-- Header Banner -->
+    <header class="bg-gradient-to-r from-slate-900 via-indigo-950 to-blue-900 text-white border-b border-slate-800 sticky top-0 z-50 shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                <div class="flex items-center space-x-3">
+                    <div class="p-2.5 bg-blue-600/30 rounded-xl border border-blue-400/30 text-blue-300">
+                        <i data-lucide="scale" class="w-7 h-7"></i>
+                    </div>
+                    <div>
+                        <div class="flex items-center gap-2">
+                            <span class="px-2 py-0.5 text-xs font-bold uppercase tracking-wider bg-blue-500/20 text-blue-300 rounded border border-blue-400/20">VĂN PHÒNG ĐĂNG KÝ ĐẤT ĐAI TP.HCM</span>
+                            <span class="px-2 py-0.5 text-xs font-semibold bg-emerald-500/20 text-emerald-300 rounded border border-emerald-400/20">RÀ SOÁT PHÁP LÝ QĐ 355</span>
+                        </div>
+                        <h1 class="text-lg sm:text-xl font-bold tracking-tight mt-0.5">BÁO CÁO PHÂN ĐỊNH TRÁCH NHIỆM: KẾ TOÁN TRONG TÌM NHÀ CUNG CẤP, HÓA ĐƠN & THỦ TỤC CHI</h1>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-3 no-print">
+                    <button onclick="window.print()" class="inline-flex items-center gap-2 px-3.5 py-2 text-xs font-semibold bg-white/10 hover:bg-white/20 text-white rounded-lg transition-colors border border-white/10">
+                        <i data-lucide="printer" class="w-4 h-4"></i>
+                        In báo cáo / Lưu PDF
+                    </button>
+                    <a href="#trich-dan-nguyen-van" class="inline-flex items-center gap-2 px-3.5 py-2 text-xs font-semibold bg-blue-600 hover:bg-blue-500 text-white rounded-lg transition-colors shadow-sm">
+                        <i data-lucide="file-text" class="w-4 h-4"></i>
+                        Xem trích dẫn văn bản
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
+
+        <!-- Executive Summary Banner -->
+        <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 sm:p-8 relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-96 h-96 bg-blue-50/50 rounded-full blur-3xl -mr-20 -mt-20 pointer-events-none"></div>
+
+            <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-6 border-b border-slate-100">
+                <div>
+                    <span class="text-xs font-bold text-blue-600 uppercase tracking-widest">KẾT LUẬN RÀ SOÁT PHÁP LÝ TOÀN VĂN</span>
+                    <h2 class="text-2xl font-extrabold text-slate-900 mt-1">Văn bản QĐ 355 có quy định Kế toán là người tìm nhà cung cấp, lấy hóa đơn và làm thủ tục chi không?</h2>
+                    <p class="text-slate-600 text-sm mt-2 max-w-3xl leading-relaxed">
+                        Căn cứ rà soát toàn bộ <strong>72 trang</strong> của <span class="font-semibold text-slate-800">Quyết định số 355/QĐ-VPĐK-KHTC ngày 23/01/2026</span> của Giám đốc Văn phòng Đăng ký đất đai Thành phố Hồ Chí Minh (ban hành Quy chế chi tiêu nội bộ và Quy chế quản lý, sử dụng tài sản công):
+                    </p>
+                </div>
+                
+                <div class="flex flex-col sm:flex-row lg:flex-col gap-2 shrink-0">
+                    <div class="px-4 py-2 bg-slate-50 border border-slate-200 rounded-xl text-center">
+                        <div class="text-xs text-slate-500 font-medium">Căn cứ văn bản</div>
+                        <div class="text-sm font-bold text-slate-800">QĐ 355/QĐ-VPĐK-KHTC</div>
+                    </div>
+                    <div class="px-4 py-2 bg-slate-50 border border-slate-200 rounded-xl text-center">
+                        <div class="text-xs text-slate-500 font-medium">Phụ lục rà soát</div>
+                        <div class="text-sm font-bold text-slate-800">Phụ lục 6 (Trang 41 - 49)</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3 Core Answer Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
+                
+                <!-- Card 1: Tìm nhà cung cấp / Báo giá -->
+                <div class="bg-red-50/60 rounded-xl p-5 border border-red-200 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="w-8 h-8 rounded-lg bg-red-100 text-red-700 flex items-center justify-center font-bold text-sm">1</span>
+                            <span class="px-2 py-0.5 text-[11px] font-bold rounded bg-red-600 text-white uppercase tracking-wider">KHÔNG THUỘC KẾ TOÁN</span>
+                        </div>
+                        <h3 class="font-bold text-slate-900 text-base mb-2">Tìm nhà cung cấp & Thu thập 03 báo giá</h3>
+                        <p class="text-xs text-slate-700 leading-relaxed text-justify">
+                            Quy chế 355 <strong>tuyệt đối không quy định</strong> Kế toán phải đi tìm nhà cung cấp hay đi khảo sát giá.
+                        </p>
+                        <div class="mt-3 p-3 bg-white/80 rounded-lg text-xs text-slate-800 border border-red-100">
+                            <strong>Trách nhiệm thực tế:</strong> Thuộc về <strong>Đơn vị có nhu cầu mua sắm / Đơn vị được giao nhiệm vụ thực hiện</strong> (ở cấp Chi nhánh là <em>Tổ Hành chính – Tổng hợp</em> hoặc bộ phận chuyên môn đề xuất). Đơn vị này rà soát nhu cầu, khảo sát thị trường và đính kèm <strong>03 báo giá</strong> khi lập dự toán.
+                        </div>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-red-100 text-[11px] text-red-700 font-semibold flex items-center gap-1">
+                        <i data-lucide="check-circle" class="w-3.5 h-3.5"></i> Căn cứ: Mục III.3.c & III.6 (Trang 42-43)
+                    </div>
+                </div>
+
+                <!-- Card 2: Lấy Hóa đơn tài chính -->
+                <div class="bg-amber-50/60 rounded-xl p-5 border border-amber-200 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="w-8 h-8 rounded-lg bg-amber-100 text-amber-700 flex items-center justify-center font-bold text-sm">2</span>
+                            <span class="px-2 py-0.5 text-[11px] font-bold rounded bg-amber-600 text-white uppercase tracking-wider">BÊN BÁN XUẤT - ĐƠN VỊ THU</span>
+                        </div>
+                        <h3 class="font-bold text-slate-900 text-base mb-2">Hóa đơn tài chính (Hóa đơn VAT)</h3>
+                        <p class="text-xs text-slate-700 leading-relaxed text-justify">
+                            Hóa đơn tài chính do <strong>Nhà cung cấp (Bên bán)</strong> lập và xuất giao cho Đơn vị mua sắm sau khi giao nhận/nghiệm thu.
+                        </p>
+                        <div class="mt-3 p-3 bg-white/80 rounded-lg text-xs text-slate-800 border border-amber-100">
+                            <strong>Trách nhiệm thực tế:</strong> <strong>Đơn vị mua sắm (Tổ HCTH / Chi nhánh)</strong> tiếp nhận hóa đơn từ nhà cung cấp, kiểm tra đối chiếu khối lượng rồi kẹp vào <em>Hồ sơ quyết toán</em> gửi về Kế toán. Kế toán có trách nhiệm <strong>kiểm tra tính hợp pháp, hợp lệ</strong> của hóa đơn trước khi chi.
+                        </div>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-amber-100 text-[11px] text-amber-700 font-semibold flex items-center gap-1">
+                        <i data-lucide="check-circle" class="w-3.5 h-3.5"></i> Căn cứ: Mục III.9.c & III.9.d (Trang 45-46)
+                    </div>
+                </div>
+
+                <!-- Card 3: Thủ tục chi & Thanh toán -->
+                <div class="bg-emerald-50/60 rounded-xl p-5 border border-emerald-200 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-sm">3</span>
+                            <span class="px-2 py-0.5 text-[11px] font-bold rounded bg-emerald-600 text-white uppercase tracking-wider">QUY TRÌNH PHỐI HỢP 4 BƯỚC</span>
+                        </div>
+                        <h3 class="font-bold text-slate-900 text-base mb-2">Thủ tục chi & Thanh toán kinh phí</h3>
+                        <p class="text-xs text-slate-700 leading-relaxed text-justify">
+                            Thủ tục chi là một quy trình khép kín tách bạch giữa <strong>bộ phận đề xuất</strong> và <strong>bộ phận kiểm soát kế toán</strong>.
+                        </p>
+                        <div class="mt-3 p-3 bg-white/80 rounded-lg text-xs text-slate-800 border border-emerald-100">
+                            <strong>Trách nhiệm của Kế toán (Phòng KHTC):</strong> (1) Thẩm định dự toán; (2) Thẩm định hồ sơ quyết toán (hồ sơ kế toán + hóa đơn); (3) Trình Giám đốc duyệt quyết toán; (4) Lập chứng từ thanh toán/Ủy nhiệm chi chuyển tiền cho nhà cung cấp và ghi sổ kế toán.
+                        </div>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-emerald-100 text-[11px] text-emerald-700 font-semibold flex items-center gap-1">
+                        <i data-lucide="check-circle" class="w-3.5 h-3.5"></i> Căn cứ: Mục III.3.b, III.8, III.9 (Trang 42-45)
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Section 1: Detailed Breakdown of 3 Questions -->
+        <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 sm:p-8 space-y-8">
+            <div class="border-b border-slate-200 pb-4">
+                <span class="px-2.5 py-1 text-xs font-bold uppercase tracking-wider bg-indigo-50 text-indigo-700 rounded-md">PHÂN TÍCH CHUYÊN SÂU</span>
+                <h2 class="text-xl font-bold text-slate-900 mt-2">I. RÀ SOÁT CHI TIẾT TỪNG NỘI DUNG THEO QUYẾT ĐỊNH SỐ 355</h2>
+            </div>
+
+            <!-- Content Item 1 -->
+            <div class="space-y-4">
+                <div class="flex items-start gap-3">
+                    <div class="p-2 bg-blue-100 text-blue-700 rounded-lg shrink-0 mt-0.5">
+                        <i data-lucide="search" class="w-5 h-5"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-900">1. Quy định về việc tìm nhà cung cấp, thu thập 03 báo giá và thương thảo hợp đồng</h3>
+                        <p class="text-sm text-slate-600 mt-1">Kế toán có phải là người đi khảo sát thị trường và tìm nhà cung cấp không?</p>
+                    </div>
+                </div>
+
+                <div class="pl-10 space-y-3 text-sm text-slate-700 leading-relaxed text-justify">
+                    <p>
+                        Trong toàn bộ văn bản Quyết định số 355/QĐ-VPĐK-KHTC (bao gồm cả Quy chế chi tiêu nội bộ và Phụ lục 6 - Quy chế quản lý, sử dụng tài sản công), <strong>không có bất kỳ dòng nào quy định Kế toán (hoặc viên chức kế toán) phải đi tìm nhà cung cấp</strong>.
+                    </p>
+                    <p>
+                        Ngược lại, Quy chế 355 phân định rất rõ ràng tại <strong>Phụ lục 6 - Mục III (Mua sắm tài sản)</strong>:
+                    </p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-3">
+                        <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl space-y-2">
+                            <div class="font-bold text-slate-900 flex items-center gap-1.5 text-xs uppercase tracking-wider text-blue-700">
+                                <i data-lucide="briefcase" class="w-4 h-4"></i>
+                                Đơn vị có nhu cầu / Đơn vị thực hiện mua sắm
+                            </div>
+                            <div class="text-xs text-slate-600 space-y-1.5">
+                                <div>• <strong>Rà soát nhu cầu & Lập dự toán:</strong> Căn cứ kế hoạch và nguồn kinh phí, rà soát lại nhu cầu và chỉ lập dự toán đối với tài sản thật sự cần thiết <em>(Mục III.6.1, Trang 43)</em>.</div>
+                                <div>• <strong>Thu thập 03 báo giá:</strong> Nội dung dự toán cần nêu rõ chủng loại, mã hiệu, tiêu chuẩn kỹ thuật kèm <strong>03 (ba) báo giá</strong> trình Giám đốc phê duyệt <em>(Mục III.6.2, Trang 43)</em>.</div>
+                                <div>• <strong>Ký kết hợp đồng:</strong> Trình duyệt các chứng từ thực hiện thuộc phạm vi trách nhiệm của Bên mời thầu (bao gồm việc ký kết hợp đồng với các đơn vị, cá nhân cung cấp hàng hóa) <em>(Mục III.3.c, Trang 42)</em>.</div>
+                            </div>
+                        </div>
+
+                        <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl space-y-2">
+                            <div class="font-bold text-slate-900 flex items-center gap-1.5 text-xs uppercase tracking-wider text-emerald-700">
+                                <i data-lucide="calculator" class="w-4 h-4"></i>
+                                Phòng Kế hoạch - Tài chính (Bộ phận Kế toán)
+                            </div>
+                            <div class="text-xs text-slate-600 space-y-1.5">
+                                <div>• <strong>Thẩm định dự toán:</strong> Thẩm định và báo cáo kết quả thẩm định dự toán, kế hoạch lựa chọn nhà thầu do các đơn vị lập <em>(Mục III.3.b, Trang 42)</em>.</div>
+                                <div>• <strong>Kiểm tra tính hợp lý của báo giá:</strong> Kế toán kiểm tra xem 03 báo giá do đơn vị nộp có độc lập không, có hợp lệ không, có vượt định mức QĐ 355 không.</div>
+                                <div>• <strong>Tuyệt đối không tìm nhà thầu:</strong> Kế toán giữ vai trò cơ quan thẩm định độc lập, không tham gia vào khâu chào hàng/chọn thầu để bảo đảm tính khách quan.</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="quote-box p-4 rounded-xl text-xs space-y-1 text-slate-800 font-serif-doc">
+                        <div class="font-bold text-blue-900 not-italic font-sans">Trích nguyên văn Mục III.6.2 (Trang 43/72):</div>
+                        <p>“Nội dung dự toán mua sắm cần nêu rõ loại tài sản mua sắm; mã hiệu, hãng sản xuất, xuất xứ... các tiêu chuẩn kỹ thuật chủ yếu; địa điểm lắp đặt <strong>kèm 03 (ba) báo giá</strong> trình Giám đốc Văn phòng đăng ký đất đai Thành phố phê duyệt để tổ chức mua sắm.”</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Content Item 2 -->
+            <div class="space-y-4 pt-4 border-t border-slate-100">
+                <div class="flex items-start gap-3">
+                    <div class="p-2 bg-amber-100 text-amber-700 rounded-lg shrink-0 mt-0.5">
+                        <i data-lucide="receipt" class="w-5 h-5"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-900">2. Quy định về Hóa đơn tài chính và trách nhiệm thu thập hóa đơn</h3>
+                        <p class="text-sm text-slate-600 mt-1">Ai là người chịu trách nhiệm lấy hóa đơn và Kế toán làm gì với hóa đơn?</p>
+                    </div>
+                </div>
+
+                <div class="pl-10 space-y-3 text-sm text-slate-700 leading-relaxed text-justify">
+                    <p>
+                        Theo quy định của pháp luật thuế (Nghị định 123/2020/NĐ-CP) và Quyết định 355:
+                    </p>
+                    <ul class="list-disc pl-5 space-y-1.5 text-xs">
+                        <li><strong>Chủ thể phát hành hóa đơn:</strong> Là <strong>Bên cung cấp tài sản/dịch vụ (Bên bán/Nhà thầu)</strong>. Khi hoàn thành bàn giao hàng hóa hoặc dịch vụ, bên bán có nghĩa vụ xuất hóa đơn điện tử hợp pháp cho Văn phòng Đăng ký đất đai TP.HCM (hoặc Chi nhánh).</li>
+                        <li><strong>Chủ thể tiếp nhận và lập hồ sơ:</strong> Là <strong>Đơn vị được giao nhiệm vụ mua sắm (Tổ HCTH / Đơn vị thực hiện)</strong>. Đơn vị này giám sát giao nhận, ký Biên bản nghiệm thu và yêu cầu nhà cung cấp xuất hóa đơn tài chính hợp pháp. Sau đó tập hợp hóa đơn vào bộ <em>Hồ sơ quyết toán</em>.</li>
+                        <li><strong>Trách nhiệm của Kế toán:</strong> Kế toán là người <strong>tiếp nhận bộ hồ sơ quyết toán có chứa hóa đơn</strong> từ đơn vị gửi đến, kiểm tra đối chiếu hóa đơn (mã tra cứu, chữ ký số, thuế suất 8% theo NĐ 174/2025/NĐ-CP hoặc 10%, tên hàng hóa, số tiền khớp đúng hợp đồng và biên bản nghiệm thu).</li>
+                    </ul>
+
+                    <div class="quote-box p-4 rounded-xl text-xs space-y-1 text-slate-800 font-serif-doc">
+                        <div class="font-bold text-blue-900 not-italic font-sans">Trích nguyên văn Mục III.9.c (Trang 45/72) - Thành phần Hồ sơ quyết toán:</div>
+                        <p>“c) Hồ sơ quyết toán bao gồm các tài liệu sau:<br>
+                        - Thông báo phê duyệt chủ trương, kế hoạch, nguồn kinh phí;<br>
+                        - Thông báo duyệt dự toán của cấp có thẩm quyền;<br>
+                        - Hợp đồng kinh tế (nếu có);<br>
+                        - Biên bản nghiệm thu giữa bên mua và bên bán;<br>
+                        - Biên bản bàn giao tài sản cho đơn vị, cá nhân sử dụng (nếu có);<br>
+                        - Chứng nhận xuất xứ hàng hóa (CO), Chứng nhận chất lượng (CQ) (nếu có);<br>
+                        - <strong>Hóa đơn tài chính;</strong><br>
+                        - Biên bản thanh lý hợp đồng (nếu có);<br>
+                        - Phiếu bảo hành, hồ sơ kỹ thuật, hướng dẫn sử dụng (nếu có);<br>
+                        - Các tài liệu có liên quan khác.”</p>
+                    </div>
+
+                    <div class="alert-box p-4 rounded-xl text-xs text-red-900 space-y-1">
+                        <div class="font-bold flex items-center gap-1.5">
+                            <i data-lucide="alert-triangle" class="w-4 h-4 text-red-600"></i>
+                            Quy định xử lý đối với hồ sơ quyết toán không hợp lệ (Mục III.9.d, Trang 45-46):
+                        </div>
+                        <p>“Đối với tài sản đã thực hiện mua sắm và gửi hồ sơ quyết toán, nhưng sau khi kiểm tra hồ sơ quyết toán không đủ điều kiện để duyệt quyết toán thì <strong>hồ sơ quyết toán bị từ chối phê duyệt</strong>. Trong trường hợp lỗi do bên cung cấp tài sản thì đơn vị phải yêu cầu bên cung cấp tài sản thực hiện nghĩa vụ... Trường hợp lỗi do đơn vị mua sắm thì cấp trưởng đơn vị phải xem xét toàn bộ quá trình và quy trách nhiệm để trình Giám đốc xử lý.”</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Content Item 3 -->
+            <div class="space-y-4 pt-4 border-t border-slate-100">
+                <div class="flex items-start gap-3">
+                    <div class="p-2 bg-emerald-100 text-emerald-700 rounded-lg shrink-0 mt-0.5">
+                        <i data-lucide="git-merge" class="w-5 h-5"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-900">3. Quy định về Thủ tục chi, Thẩm quyền phê duyệt và Thanh toán kinh phí</h3>
+                        <p class="text-sm text-slate-600 mt-1">Trình tự chi tiền theo QĐ 355 diễn ra như thế nào và Kế toán làm những công việc gì?</p>
+                    </div>
+                </div>
+
+                <div class="pl-10 space-y-3 text-sm text-slate-700 leading-relaxed text-justify">
+                    <p>
+                        Theo QĐ 355, <strong>thủ tục chi</strong> trong mua sắm, sửa chữa tài sản được chuẩn hóa theo quy trình 4 giai đoạn rõ ràng:
+                    </p>
+
+                    <!-- Flow Steps -->
+                    <div class="space-y-3 my-4">
+                        <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-xl flex items-start gap-3">
+                            <span class="w-6 h-6 rounded-full bg-blue-600 text-white flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">1</span>
+                            <div>
+                                <div class="font-bold text-slate-900 text-xs uppercase">Giai đoạn 1: Lập và Thẩm định Dự toán</div>
+                                <div class="text-xs text-slate-600 mt-0.5">
+                                    • Đơn vị mua sắm (Chi nhánh/Tổ HCTH) khảo sát, thu thập 03 báo giá, lập Phương án dự toán chuyển Phòng KHTC.<br>
+                                    • <strong>Phòng Kế hoạch Tài chính thẩm định</strong> dự toán về nguồn kinh phí, định mức chi, giá trị gói thầu (thời gian thẩm định không quá 20 ngày làm việc hoặc 10 ngày nếu có thẩm định giá) và trình Giám đốc VPĐK TP.HCM phê duyệt.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-xl flex items-start gap-3">
+                            <span class="w-6 h-6 rounded-full bg-blue-600 text-white flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">2</span>
+                            <div>
+                                <div class="font-bold text-slate-900 text-xs uppercase">Giai đoạn 2: Lựa chọn nhà thầu & Ký kết hợp đồng</div>
+                                <div class="text-xs text-slate-600 mt-0.5">
+                                    • Phê duyệt kế hoạch lựa chọn nhà thầu (chỉ định thầu rút gọn hoặc đấu thầu).<br>
+                                    • Cấp trưởng đơn vị mua sắm thương thảo, hoàn thiện và ký kết Hợp đồng kinh tế với nhà thầu được chọn <em>(Mục III.3.c)</em>.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-xl flex items-start gap-3">
+                            <span class="w-6 h-6 rounded-full bg-blue-600 text-white flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">3</span>
+                            <div>
+                                <div class="font-bold text-slate-900 text-xs uppercase">Giai đoạn 3: Nghiệm thu, Thanh lý & Gửi hồ sơ quyết toán</div>
+                                <div class="text-xs text-slate-600 mt-0.5">
+                                    • Đơn vị mua sắm cùng bên bán kiểm tra, nghiệm thu số lượng, chất lượng, lập Biên bản nghiệm thu và bàn giao đưa tài sản vào sử dụng.<br>
+                                    • Nhà cung cấp xuất Hóa đơn tài chính hợp pháp.<br>
+                                    • Đơn vị mua sắm lập công văn đề nghị duyệt quyết toán kèm 9 danh mục tài liệu gửi về Phòng KHTC <em>(Mục III.9.a, Trang 45)</em>.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-xl flex items-start gap-3">
+                            <span class="w-6 h-6 rounded-full bg-emerald-600 text-white flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">4</span>
+                            <div>
+                                <div class="font-bold text-slate-900 text-xs uppercase">Giai đoạn 4: Thẩm định quyết toán, Phê duyệt & Giải ngân chi tiền (Trách nhiệm cốt lõi của Kế toán)</div>
+                                <div class="text-xs text-slate-600 mt-0.5">
+                                    • <strong>Phòng Kế hoạch Tài chính thẩm định hồ sơ quyết toán</strong> (không quá 15 ngày làm việc kể từ khi nhận đủ hồ sơ), trình Giám đốc VPĐK TP.HCM ký Quyết định phê duyệt quyết toán <em>(Mục III.9.a & III.10.2.2, Trang 45-46)</em>.<br>
+                                    • Căn cứ Quyết định phê duyệt quyết toán, <strong>Kế toán thực hiện thủ tục thanh toán</strong>: lập ủy nhiệm chi, chuyển khoản thanh toán số tiền cho nhà cung cấp qua Kho bạc/Ngân hàng.<br>
+                                    • <strong>Kế toán nhập tài sản vào sổ sách kế toán</strong> để theo dõi, quản lý và trích khấu hao tài sản cố định theo quy định <em>(Mục III.8.a, Trang 44)</em>.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 2: RACI Responsibility Matrix Table -->
+        <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 sm:p-8 space-y-6">
+            <div class="border-b border-slate-200 pb-4 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                <div>
+                    <span class="px-2.5 py-1 text-xs font-bold uppercase tracking-wider bg-purple-50 text-purple-700 rounded-md">MA TRẬN TRÁCH NHIỆM RACI</span>
+                    <h2 class="text-xl font-bold text-slate-900 mt-2">II. BẢNG PHÂN CÔNG PHÂN NHIỆM THEO QUY CHẾ 355</h2>
+                    <p class="text-xs text-slate-500 mt-1">Đối chiếu vai trò giữa Đơn vị đề xuất (Chi nhánh/Tổ HCTH), Bộ phận Đấu thầu, Kế toán (Phòng KHTC) và Lãnh đạo VPĐK</p>
+                </div>
+                <div class="flex items-center gap-2 text-xs text-slate-600">
+                    <span class="inline-flex items-center gap-1 font-semibold text-emerald-700"><span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span> Chịu trách nhiệm chính (R/A)</span>
+                    <span class="inline-flex items-center gap-1 font-semibold text-blue-700"><span class="w-2.5 h-2.5 rounded-full bg-blue-500"></span> Phối hợp/Thẩm định (C/S)</span>
+                </div>
+            </div>
+
+            <div class="overflow-x-auto">
+                <table class="w-full border-collapse border border-slate-200 text-xs">
+                    <thead>
+                        <tr class="bg-slate-100 text-slate-700 font-bold uppercase text-[11px]">
+                            <th class="border border-slate-300 p-2.5 text-center w-12">STT</th>
+                            <th class="border border-slate-300 p-2.5 text-left">Nội dung công việc</th>
+                            <th class="border border-slate-300 p-2.5 text-center w-48 bg-blue-50 text-blue-900">Đơn vị có nhu cầu / Chi nhánh / Tổ HCTH</th>
+                            <th class="border border-slate-300 p-2.5 text-center w-40">Bộ phận Đấu thầu (Phòng HCTH)</th>
+                            <th class="border border-slate-300 p-2.5 text-center w-48 bg-emerald-50 text-emerald-900">Phòng Kế hoạch Tài chính (Kế toán)</th>
+                            <th class="border border-slate-300 p-2.5 text-center w-36">Giám đốc VPĐK TP.HCM</th>
+                            <th class="border border-slate-300 p-2.5 text-center w-32">Điều khoản QĐ 355</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-200">
+                        <!-- Row 1 -->
+                        <tr class="hover:bg-slate-50">
+                            <td class="border border-slate-300 p-2 text-center font-bold">1</td>
+                            <td class="border border-slate-300 p-2 font-medium">Khảo sát thị trường, <strong>tìm nhà cung cấp và thu thập 03 báo giá</strong></td>
+                            <td class="border border-slate-300 p-2 text-center bg-blue-50/50 font-bold text-blue-800">
+                                <span class="px-2 py-0.5 bg-blue-100 text-blue-800 rounded font-bold">Thực hiện chính</span>
+                            </td>
+                            <td class="border border-slate-300 p-2 text-center text-slate-400">-</td>
+                            <td class="border border-slate-300 p-2 text-center bg-emerald-50/50 text-slate-500 italic">
+                                Không thực hiện (để bảo đảm độc lập)
+                            </td>
+                            <td class="border border-slate-300 p-2 text-center text-slate-400">-</td>
+                            <td class="border border-slate-300 p-2 text-center font-semibold text-slate-600">Mục III.6.2 (Tr.43)</td>
+                        </tr>
+
+                        <!-- Row 2 -->
+                        <tr class="hover:bg-slate-50">
+                            <td class="border border-slate-300 p-2 text-center font-bold">2</td>
+                            <td class="border border-slate-300 p-2 font-medium">Lập Phương án dự toán mua sắm / sửa chữa tài sản</td>
+                            <td class="border border-slate-300 p-2 text-center bg-blue-50/50 font-bold text-blue-800">
+                                <span class="px-2 py-0.5 bg-blue-100 text-blue-800 rounded font-bold">Lập dự toán</span>
+                            </td>
+                            <td class="border border-slate-300 p-2 text-center text-slate-400">-</td>
+                            <td class="border border-slate-300 p-2 text-center bg-emerald-50/50 text-emerald-800 font-bold">
+                                <span class="px-2 py-0.5 bg-emerald-100 text-emerald-800 rounded font-bold">Thẩm định dự toán</span>
+                            </td>
+                            <td class="border border-slate-300 p-2 text-center font-bold text-slate-800">Phê duyệt</td>
+                            <td class="border border-slate-300 p-2 text-center font-semibold text-slate-600">Mục III.3.b,c (Tr.42)</td>
+                        </tr>
+
+                        <!-- Row 3 -->
+                        <tr class="hover:bg-slate-50">
+                            <td class="border border-slate-300 p-2 text-center font-bold">3</td>
+                            <td class="border border-slate-300 p-2 font-medium">Lập và thẩm định Kế hoạch lựa chọn nhà thầu (KHLCNT)</td>
+                            <td class="border border-slate-300 p-2 text-center bg-blue-50/50 font-semibold text-blue-800">Lập tờ trình KHLCNT</td>
+                            <td class="border border-slate-300 p-2 text-center text-slate-600">Phối hợp (gói thầu tập trung)</td>
+                            <td class="border border-slate-300 p-2 text-center bg-emerald-50/50 font-bold text-emerald-800">
+                                <span class="px-2 py-0.5 bg-emerald-100 text-emerald-800 rounded font-bold">Thẩm định KHLCNT</span>
+                            </td>
+                            <td class="border border-slate-300 p-2 text-center font-bold text-slate-800">Phê duyệt</td>
+                            <td class="border border-slate-300 p-2 text-center font-semibold text-slate-600">Mục III.3.a,b (Tr.42)</td>
+                        </tr>
+
+                        <!-- Row 4 -->
+                        <tr class="hover:bg-slate-50">
+                            <td class="border border-slate-300 p-2 text-center font-bold">4</td>
+                            <td class="border border-slate-300 p-2 font-medium">Thương thảo, hoàn thiện và ký kết Hợp đồng với nhà cung cấp</td>
+                            <td class="border border-slate-300 p-2 text-center bg-blue-50/50 font-bold text-blue-800">
+                                <span class="px-2 py-0.5 bg-blue-100 text-blue-800 rounded font-bold">Ký kết hợp đồng</span>
+                            </td>
+                            <td class="border border-slate-300 p-2 text-center text-slate-400">-</td>
+                            <td class="border border-slate-300 p-2 text-center bg-emerald-50/50 text-slate-400">-</td>
+                            <td class="border border-slate-300 p-2 text-center font-semibold text-slate-700">Ủy quyền / Duyệt</td>
+                            <td class="border border-slate-300 p-2 text-center font-semibold text-slate-600">Mục III.3.c (Tr.42)</td>
+                        </tr>
+
+                        <!-- Row 5 -->
+                        <tr class="hover:bg-slate-50">
+                            <td class="border border-slate-300 p-2 text-center font-bold">5</td>
+                            <td class="border border-slate-300 p-2 font-medium">Giao nhận, kiểm tra nghiệm thu & <strong>tiếp nhận Hóa đơn tài chính từ nhà cung cấp</strong></td>
+                            <td class="border border-slate-300 p-2 text-center bg-blue-50/50 font-bold text-blue-800">
+                                <span class="px-2 py-0.5 bg-blue-100 text-blue-800 rounded font-bold">Nghiệm thu & Nhận HĐ</span>
+                            </td>
+                            <td class="border border-slate-300 p-2 text-center text-slate-400">-</td>
+                            <td class="border border-slate-300 p-2 text-center bg-emerald-50/50 text-slate-500 italic">
+                                Chưa tham gia (chờ hồ sơ)
+                            </td>
+                            <td class="border border-slate-300 p-2 text-center text-slate-400">-</td>
+                            <td class="border border-slate-300 p-2 text-center font-semibold text-slate-600">Mục III.8.a (Tr.44)</td>
+                        </tr>
+
+                        <!-- Row 6 -->
+                        <tr class="hover:bg-slate-50">
+                            <td class="border border-slate-300 p-2 text-center font-bold">6</td>
+                            <td class="border border-slate-300 p-2 font-medium">Tập hợp <strong>Hồ sơ quyết toán</strong> (đầy đủ Hợp đồng, Nghiệm thu, Hóa đơn VAT, Báo giá...)</td>
+                            <td class="border border-slate-300 p-2 text-center bg-blue-50/50 font-bold text-blue-800">
+                                <span class="px-2 py-0.5 bg-blue-100 text-blue-800 rounded font-bold">Tập hợp gửi KHTC</span>
+                            </td>
+                            <td class="border border-slate-300 p-2 text-center text-slate-400">-</td>
+                            <td class="border border-slate-300 p-2 text-center bg-emerald-50/50 text-slate-500 italic">Tiếp nhận hồ sơ</td>
+                            <td class="border border-slate-300 p-2 text-center text-slate-400">-</td>
+                            <td class="border border-slate-300 p-2 text-center font-semibold text-slate-600">Mục III.9.a,b,c (Tr.45)</td>
+                        </tr>
+
+                        <!-- Row 7 -->
+                        <tr class="hover:bg-slate-50">
+                            <td class="border border-slate-300 p-2 text-center font-bold">7</td>
+                            <td class="border border-slate-300 p-2 font-medium"><strong>Thẩm định Hồ sơ quyết toán</strong> (kiểm tra hồ sơ kỹ thuật, hồ sơ đấu thầu và hồ sơ kế toán / Hóa đơn)</td>
+                            <td class="border border-slate-300 p-2 text-center bg-blue-50/50 text-slate-600">Giải trình (nếu có)</td>
+                            <td class="border border-slate-300 p-2 text-center text-slate-400">-</td>
+                            <td class="border border-slate-300 p-2 text-center bg-emerald-50/50 font-bold text-emerald-800">
+                                <span class="px-2 py-0.5 bg-emerald-100 text-emerald-800 rounded font-bold">Thẩm định quyết toán</span>
+                            </td>
+                            <td class="border border-slate-300 p-2 text-center text-slate-400">-</td>
+                            <td class="border border-slate-300 p-2 text-center font-semibold text-slate-600">Mục III.9.a,e (Tr.45-46)</td>
+                        </tr>
+
+                        <!-- Row 8 -->
+                        <tr class="hover:bg-slate-50">
+                            <td class="border border-slate-300 p-2 text-center font-bold">8</td>
+                            <td class="border border-slate-300 p-2 font-medium">Ban hành Quyết định phê duyệt quyết toán mua sắm tài sản</td>
+                            <td class="border border-slate-300 p-2 text-center bg-blue-50/50 text-slate-400">-</td>
+                            <td class="border border-slate-300 p-2 text-center text-slate-400">-</td>
+                            <td class="border border-slate-300 p-2 text-center bg-emerald-50/50 font-semibold text-emerald-800">Lập Tờ trình</td>
+                            <td class="border border-slate-300 p-2 text-center font-bold text-emerald-700">
+                                <span class="px-2 py-0.5 bg-emerald-600 text-white rounded font-bold">Ký Quyết định</span>
+                            </td>
+                            <td class="border border-slate-300 p-2 text-center font-semibold text-slate-600">Mục III.9.a (Tr.45)</td>
+                        </tr>
+
+                        <!-- Row 9 -->
+                        <tr class="hover:bg-slate-50 bg-emerald-50/30">
+                            <td class="border border-slate-300 p-2 text-center font-bold">9</td>
+                            <td class="border border-slate-300 p-2 font-bold text-slate-900"><strong>Thực hiện thủ tục thanh toán / Chuyển khoản chi tiền cho nhà cung cấp</strong></td>
+                            <td class="border border-slate-300 p-2 text-center bg-blue-50/50 text-slate-500">Phối hợp cung cấp TK</td>
+                            <td class="border border-slate-300 p-2 text-center text-slate-400">-</td>
+                            <td class="border border-slate-300 p-2 text-center bg-emerald-50/50 font-bold text-emerald-800">
+                                <span class="px-2 py-0.5 bg-emerald-600 text-white rounded font-bold">Lập UNC & Chi tiền</span>
+                            </td>
+                            <td class="border border-slate-300 p-2 text-center font-bold text-slate-800">Ký duyệt chủ TK</td>
+                            <td class="border border-slate-300 p-2 text-center font-semibold text-slate-600">Mục III.9.a (Tr.45)</td>
+                        </tr>
+
+                        <!-- Row 10 -->
+                        <tr class="hover:bg-slate-50">
+                            <td class="border border-slate-300 p-2 text-center font-bold">10</td>
+                            <td class="border border-slate-300 p-2 font-medium">Hạch toán ghi tăng tài sản vào <strong>sổ kế toán</strong> và trích khấu hao tài sản cố định</td>
+                            <td class="border border-slate-300 p-2 text-center bg-blue-50/50 text-slate-400">-</td>
+                            <td class="border border-slate-300 p-2 text-center text-slate-400">-</td>
+                            <td class="border border-slate-300 p-2 text-center bg-emerald-50/50 font-bold text-emerald-800">
+                                <span class="px-2 py-0.5 bg-emerald-100 text-emerald-800 rounded font-bold">Ghi sổ kế toán</span>
+                            </td>
+                            <td class="border border-slate-300 p-2 text-center text-slate-400">-</td>
+                            <td class="border border-slate-300 p-2 text-center font-semibold text-slate-600">Mục III.8.a (Tr.44)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Section 3: Legal Basis & Internal Control Principles -->
+        <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 sm:p-8 space-y-6">
+            <div class="border-b border-slate-200 pb-4">
+                <span class="px-2.5 py-1 text-xs font-bold uppercase tracking-wider bg-rose-50 text-rose-700 rounded-md">NGUYÊN TẮC BẢO ĐẢM TÍNH KHÁCH QUAN</span>
+                <h2 class="text-xl font-bold text-slate-900 mt-2">III. TẠI SAO KẾ TOÁN KHÔNG THỂ VỪA TÌM NHÀ CUNG CẤP VỪA LÀM THỦ TỤC CHI?</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-xs text-slate-700 leading-relaxed text-justify">
+                <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 space-y-2">
+                    <div class="font-bold text-slate-900 flex items-center gap-1.5 text-sm text-blue-700">
+                        <i data-lucide="shield-alert" class="w-4 h-4"></i>
+                        1. Luật Kế toán số 88/2015/QH13
+                    </div>
+                    <p>
+                        Theo Điều 51 và Điều 52 Luật Kế toán 2015 về các hành vi bị nghiêm cấm và nguyên tắc bất kiêm nhiệm: <strong>Người làm kế toán không được kiêm nhiệm thủ kho, thủ quỹ, người mua sắm tài sản, người giao dịch hợp đồng</strong>.
+                    </p>
+                    <p>
+                        Nếu Kế toán tự đi tìm nhà cung cấp, thỏa thuận giá và tự lấy hóa đơn về để làm thủ tục chi trả tiền thì vi phạm nguyên tắc kiểm soát độc lập, dẫn đến nguy cơ xung đột lợi ích rất lớn.
+                    </p>
+                </div>
+
+                <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 space-y-2">
+                    <div class="font-bold text-slate-900 flex items-center gap-1.5 text-sm text-emerald-700">
+                        <i data-lucide="sliders" class="w-4 h-4"></i>
+                        2. Nguyên tắc Kiểm soát nội bộ (COSO)
+                    </div>
+                    <p>
+                        Trong quản trị tài chính công, nguyên tắc <strong>"Bốn mắt" (Four-eyes principle)</strong> và <strong>"Tách rời trách nhiệm" (Segregation of Duties)</strong> bắt buộc:
+                    </p>
+                    <p>
+                        • <strong>Bộ phận vận hành/chuyên môn:</strong> Có nhu cầu, khảo sát đặc tính kỹ thuật, đề xuất nhà cung cấp phù hợp.<br>
+                        • <strong>Bộ phận kế toán:</strong> Giám sát, thẩm định tính hợp pháp, hợp lệ và thực hiện chi tiền.<br>
+                        Nếu gom hết vào Kế toán sẽ làm mất chức năng giám sát phản biện.
+                    </p>
+                </div>
+
+                <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 space-y-2">
+                    <div class="font-bold text-slate-900 flex items-center gap-1.5 text-sm text-purple-700">
+                        <i data-lucide="award" class="w-4 h-4"></i>
+                        3. Luật Đấu thầu số 22/2023/QH15
+                    </div>
+                    <p>
+                        Căn cứ quy định về lựa chọn nhà thầu và chỉ định thầu rút gọn (Điều 78 Nghị định 214/2025/NĐ-CP): Đơn vị mua sắm là Bên mời thầu chịu trách nhiệm khảo sát giá thị trường, gửi thư mời báo giá, đánh giá năng lực nhà thầu và trình cấp có thẩm quyền phê duyệt.
+                    </p>
+                    <p>
+                        Kế toán (Phòng KHTC) đóng vai trò Tổ thẩm định độc lập đối với dự toán và kết quả lựa chọn nhà thầu.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 4: Exact Verbatim Quotations from Document 355 -->
+        <div id="trich-dan-nguyen-van" class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 sm:p-8 space-y-6">
+            <div class="border-b border-slate-200 pb-4 flex items-center justify-between">
+                <div>
+                    <span class="px-2.5 py-1 text-xs font-bold uppercase tracking-wider bg-slate-100 text-slate-800 rounded-md">BẰNG CHỨNG PHÁP LÝ TỪ VĂN BẢN GỐC</span>
+                    <h2 class="text-xl font-bold text-slate-900 mt-2">IV. TRÍCH DẪN NGUYÊN VĂN CÁC ĐIỀU KHOẢN CỐT LÕI TRONG QĐ 355</h2>
+                </div>
+                <span class="text-xs text-slate-500 font-mono">documents/355_0001.pdf</span>
+            </div>
+
+            <div class="space-y-4 text-xs font-serif-doc leading-relaxed text-slate-800">
+                
+                <!-- Quote 1 -->
+                <div class="p-4 rounded-xl border border-slate-200 bg-slate-50/50 space-y-2">
+                    <div class="flex items-center justify-between font-sans">
+                        <span class="font-bold text-blue-900 text-xs uppercase">Trích đoạn 1: Phân cấp thẩm quyền trình duyệt mua sắm (Mục III.3, Trang 41 - 42)</span>
+                        <span class="px-2 py-0.5 rounded bg-blue-100 text-blue-800 text-[10px] font-bold">TRANG 41 - 42/72</span>
+                    </div>
+                    <p class="italic text-justify">
+                        “b) <strong>Trưởng phòng Kế hoạch Tài chính:</strong><br>
+                        Thẩm định và báo cáo kết quả thẩm định dự toán, kế hoạch lựa chọn nhà thầu, hồ sơ thanh quyết toán các dự toán mua sắm tài sản do các đơn vị thuộc Văn phòng đăng ký đất đai Thành phố Hồ Chí Minh thực hiện.<br><br>
+                        c) <strong>Cấp trưởng đơn vị thực hiện mua sắm:</strong><br>
+                        - Lập phương án dự toán, kế hoạch lựa chọn nhà thầu và hồ sơ thanh quyết toán chuyển bộ phận thẩm định trình Giám đốc Văn phòng đăng ký đất đai Thành phố Hồ Chí Minh phê duyệt đối với các dự toán mua sắm tài sản.<br>
+                        - Lập Hồ sơ mời thầu; hồ sơ yêu cầu; danh sách xếp hạng nhà thầu và kết quả lựa chọn nhà thầu đối với các dự toán/gói thầu mua sắm tài sản, chuyển bộ phận thẩm định trình duyệt Giám đốc...<br>
+                        - Trình duyệt Giám đốc các chứng từ thực hiện các công việc khác thuộc phạm vi trách nhiệm của Bên mời thầu (bao gồm việc ký kết hợp đồng với các cá nhân, đơn vị cung cấp hàng hóa).”
+                    </p>
+                </div>
+
+                <!-- Quote 2 -->
+                <div class="p-4 rounded-xl border border-slate-200 bg-slate-50/50 space-y-2">
+                    <div class="flex items-center justify-between font-sans">
+                        <span class="font-bold text-blue-900 text-xs uppercase">Trích đoạn 2: Lập, phê duyệt dự toán & Thu thập 03 báo giá (Mục III.6, Trang 43)</span>
+                        <span class="px-2 py-0.5 rounded bg-blue-100 text-blue-800 text-[10px] font-bold">TRANG 43/72</span>
+                    </div>
+                    <p class="italic text-justify">
+                        “1. Trên cơ sở kế hoạch mua sắm tài sản và nguồn kinh phí được phê duyệt, <strong>các đơn vị trong hệ thống rà soát lại nhu cầu mua sắm và chỉ lập dự toán mua sắm đối với tài sản thật sự cần thiết</strong>.<br>
+                        2. Nội dung dự toán mua sắm cần nêu rõ loại tài sản mua sắm; mã hiệu, hãng sản xuất, xuất xứ (trừ các tài sản thông dụng, nhiều hãng sản xuất trên thị trường); các tiêu chuẩn kỹ thuật chủ yếu; địa điểm lắp đặt <strong>kèm 03 (ba) báo giá trình Giám đốc Văn phòng đăng ký đất đai Thành phố phê duyệt để tổ chức mua sắm</strong>...”
+                    </p>
+                </div>
+
+                <!-- Quote 3 -->
+                <div class="p-4 rounded-xl border border-slate-200 bg-slate-50/50 space-y-2">
+                    <div class="flex items-center justify-between font-sans">
+                        <span class="font-bold text-blue-900 text-xs uppercase">Trích đoạn 3: Nghiệm thu, bàn giao & Kế toán ghi sổ (Mục III.8, Trang 44 - 45)</span>
+                        <span class="px-2 py-0.5 rounded bg-blue-100 text-blue-800 text-[10px] font-bold">TRANG 44 - 45/72</span>
+                    </div>
+                    <p class="italic text-justify">
+                        “a) Sau khi hoàn thành việc mua sắm tài sản, đơn vị tổ chức nghiệm thu, trình kết quả cho Giám đốc Văn phòng đăng ký đất đai Thành phố Hồ Chí Minh làm cơ sở cho việc thanh lý hợp đồng, thanh toán, quyết toán.<br>
+                        - Đối với mua sắm tài sản cố định:<br>
+                        + Đơn vị lập biên bản nghiệm thu và giao nhận tài sản cố định theo mẫu quy định của Bộ Tài chính...<br>
+                        + <strong>Căn cứ biên bản nghiệm thu và bàn giao đưa tài sản vào sử dụng, kế toán Văn phòng đăng ký đất đai Thành phố nhập tài sản cố định để trích khấu hao tài sản cố định theo quy định</strong>.”
+                    </p>
+                </div>
+
+                <!-- Quote 4 -->
+                <div class="p-4 rounded-xl border border-slate-200 bg-slate-50/50 space-y-2">
+                    <div class="flex items-center justify-between font-sans">
+                        <span class="font-bold text-blue-900 text-xs uppercase">Trích đoạn 4: Quyết toán mua sắm tài sản & Hóa đơn tài chính (Mục III.9, Trang 45 - 46)</span>
+                        <span class="px-2 py-0.5 rounded bg-blue-100 text-blue-800 text-[10px] font-bold">TRANG 45 - 46/72</span>
+                    </div>
+                    <p class="italic text-justify">
+                        “a) Ngay sau khi hoàn thành việc mua sắm tài sản và thanh lý hợp đồng (nếu có), <strong>các đơn vị gửi hồ sơ quyết toán về Phòng Kế hoạch Tài chính để thẩm định và trình Giám đốc Văn phòng đăng ký đất đai Thành phố phê duyệt làm căn cứ để thanh toán số tiền còn lại (nếu có) theo quy định tại hợp đồng cho bên cung cấp tài sản</strong>.<br>
+                        ...<br>
+                        c) Hồ sơ quyết toán bao gồm các tài liệu sau:<br>
+                        - Thông báo phê duyệt chủ trương, kế hoạch, nguồn kinh phí;<br>
+                        - Thông báo duyệt dự toán của cấp có thẩm quyền;<br>
+                        - Hợp đồng kinh tế (nếu có);<br>
+                        - Biên bản nghiệm thu giữa bên mua và bên bán;<br>
+                        - Biên bản bàn giao tài sản cho đơn vị, cá nhân sử dụng (nếu có);<br>
+                        - Chứng nhận xuất xứ hàng hóa, chất lượng hàng hóa (nếu có);<br>
+                        - <strong>Hóa đơn tài chính;</strong><br>
+                        - Biên bản thanh lý hợp đồng (nếu có);<br>
+                        - Phiếu bảo hành, hồ sơ kỹ thuật, hướng dẫn sử dụng (nếu có)...<br><br>
+                        e) <strong>Các đơn vị phải kiểm tra, kiểm soát hồ sơ mua sắm tài sản (gồm hồ sơ kỹ thuật, hồ sơ đấu thầu và hồ sơ kế toán)</strong> đảm bảo hồ sơ đầy đủ theo yêu cầu và lưu trữ theo đúng quy định của chế độ lưu trữ chứng từ hiện hành.”
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Section 5: Conclusion & Operational Recommendations -->
+        <div class="bg-gradient-to-br from-blue-900 via-indigo-950 to-slate-900 text-white rounded-2xl p-6 sm:p-8 space-y-4 shadow-lg">
+            <div class="flex items-center gap-3">
+                <div class="p-2 bg-blue-500/20 text-blue-300 rounded-lg border border-blue-400/30">
+                    <i data-lucide="check-check" class="w-6 h-6"></i>
+                </div>
+                <h3 class="text-lg font-bold">KẾT LUẬN & KHUYẾN NGHỊ THỰC HIỆN TẠI CHI NHÁNH 23</h3>
+            </div>
+            
+            <div class="space-y-3 text-xs text-slate-200 leading-relaxed text-justify">
+                <p>
+                    1. <strong>Đối với việc tìm nhà cung cấp và 03 báo giá:</strong> Giám đốc Chi nhánh 23 giao cho <strong>Tổ Hành chính – Tổng hợp</strong> (Tổ trưởng: bà Nguyễn Thị Bích Tuyền) chủ trì khảo sát thị trường, phát hành thư mời báo giá và thu thập đầy đủ 03 báo giá cạnh tranh độc lập cho các hạng mục (Sửa chữa chống thấm, Trang bị tài sản Giám đốc theo QĐ 8541, Trang bị PCCC theo Báo cáo 26).
+                </p>
+                <p>
+                    2. <strong>Đối với việc ký hợp đồng và nhận hóa đơn:</strong> Sau khi Phương án dự toán được phê duyệt và hoàn tất thủ tục lựa chọn nhà thầu, Tổ HCTH dự thảo Hợp đồng trình Giám đốc Chi nhánh ký kết; sau khi nghiệm thu, Tổ HCTH yêu cầu nhà cung cấp xuất Hóa đơn điện tử hợp pháp (thuế suất 8% theo NĐ 174/2025/NĐ-CP) và tập hợp thành bộ Hồ sơ quyết toán hoàn chỉnh.
+                </p>
+                <p>
+                    3. <strong>Đối với Kế toán Chi nhánh / Phòng Kế hoạch - Tài chính:</strong> Đóng vai trò kiểm tra, kiểm soát tính hợp pháp, hợp lệ của chứng từ, lập báo cáo thẩm định quyết toán trình phê duyệt, và thực hiện thủ tục giải ngân/chuyển tiền thanh toán qua tài khoản ngân hàng của nhà thầu. <strong>Tuyệt đối không để Kế toán kiêm nhiệm việc tìm nhà thầu hay mua sắm tài sản</strong> nhằm bảo đảm an toàn pháp lý cho đơn vị và cán bộ thực hiện.
+                </p>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 border-t border-slate-800 py-6 text-center text-xs mt-auto">
+        <div class="max-w-7xl mx-auto px-4">
+            <p>Báo cáo rà soát pháp lý nội bộ - Văn phòng Đăng ký đất đai Thành phố Hồ Chí Minh (Chi nhánh số 23)</p>
+            <p class="mt-1 text-slate-500">Căn cứ Quyết định số 355/QĐ-VPĐK-KHTC • Biên soạn tự động phục vụ công tác điều hành tài chính công</p>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>
+'''
+
+# Save to OUTPUT/ with auto-versioning v1 and v2
+output_v1 = "/Users/admin/Desktop/BINHDUONG/OUTPUT/Bao_cao_Ra_soat_Trach_nhiem_Ke_toan_Nha_cung_cap_Hoa_don_Thu_tuc_chi_QD355_v1.html"
+output_v2 = "/Users/admin/Desktop/BINHDUONG/OUTPUT/Bao_cao_Ra_soat_Trach_nhiem_Ke_toan_Nha_cung_cap_Hoa_don_Thu_tuc_chi_QD355_v2.html"
+
+with open(output_v1, "w", encoding="utf-8") as f:
+    f.write(html_content)
+
+with open(output_v2, "w", encoding="utf-8") as f:
+    f.write(html_content)
+
+print(f"Generated successfully: {output_v1}")
+print(f"Generated successfully: {output_v2}")

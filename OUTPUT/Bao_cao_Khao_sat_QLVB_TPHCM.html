@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Báo Cáo Khám Phá Hệ Thống QLVB & Điều Hành TP.HCM (qlvb.tphcm.gov.vn)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #1a56db;
+      --primary-dark: #1e429f;
+      --primary-light: #ebf5ff;
+      --accent: #0e9f6e;
+      --warning: #f59e0b;
+      --danger: #e02424;
+      --info: #3f83f8;
+      --slate-900: #0f172a;
+      --slate-800: #1e293b;
+      --slate-700: #334155;
+      --slate-600: #475569;
+      --slate-200: #e2e8f0;
+      --slate-100: #f1f5f9;
+      --slate-50: #f8fafc;
+      --card-bg: #ffffff;
+      --border-color: #e2e8f0;
+      --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+      --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+      --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: #f8fafc;
+      color: var(--slate-800);
+      line-height: 1.6;
+      padding: 0;
+    }
+
+    /* Header Banner */
+    header {
+      background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 50%, #2563eb 100%);
+      color: white;
+      padding: 3rem 2rem 2.5rem;
+      position: relative;
+      overflow: hidden;
+      border-bottom: 4px solid #3b82f6;
+    }
+
+    header::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 400px;
+      height: 100%;
+      background: radial-gradient(circle, rgba(255,255,255,0.12) 0%, rgba(255,255,255,0) 70%);
+      pointer-events: none;
+    }
+
+    .header-content {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .badge-scope {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(8px);
+      padding: 0.35rem 0.85rem;
+      border-radius: 9999px;
+      font-size: 0.825rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      font-weight: 800;
+      line-height: 1.25;
+      margin-bottom: 0.75rem;
+    }
+
+    .subtitle {
+      font-size: 1.05rem;
+      color: #bfdbfe;
+      max-width: 800px;
+    }
+
+    .header-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+      font-size: 0.875rem;
+      color: #e0e7ff;
+    }
+
+    .meta-item {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    /* Container & Layout */
+    .container {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 1.5rem;
+    }
+
+    /* Notice Box: Read-only Guarantee */
+    .readonly-banner {
+      background: #eff6ff;
+      border-left: 5px solid var(--primary);
+      padding: 1.25rem 1.5rem;
+      border-radius: 8px;
+      margin-bottom: 2rem;
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .readonly-banner .icon {
+      font-size: 1.5rem;
+      line-height: 1;
+    }
+
+    .readonly-banner h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--primary-dark);
+      margin-bottom: 0.25rem;
+    }
+
+    .readonly-banner p {
+      font-size: 0.925rem;
+      color: var(--slate-700);
+    }
+
+    /* Grid layout */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.75rem;
+      margin-bottom: 2rem;
+    }
+
+    @media (max-width: 850px) {
+      .grid-2 {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Card styling */
+    .card {
+      background: var(--card-bg);
+      border-radius: 12px;
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow-sm);
+      padding: 1.75rem;
+      transition: box-shadow 0.2s ease;
+      margin-bottom: 2rem;
+    }
+
+    .card:hover {
+      box-shadow: var(--shadow);
+    }
+
+    .card-title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--slate-900);
+      margin-bottom: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      border-bottom: 2px solid var(--slate-100);
+      padding-bottom: 0.75rem;
+    }
+
+    .card-title span.number {
+      background: var(--primary-light);
+      color: var(--primary);
+      font-size: 0.85rem;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+    }
+
+    /* Feature Lists */
+    .feature-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+    }
+
+    .feature-item {
+      display: flex;
+      gap: 0.85rem;
+      align-items: flex-start;
+    }
+
+    .bullet-point {
+      margin-top: 0.35rem;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--primary);
+      flex-shrink: 0;
+    }
+
+    .feature-item strong {
+      color: var(--slate-900);
+      font-size: 0.95rem;
+    }
+
+    .feature-item p {
+      font-size: 0.9rem;
+      color: var(--slate-600);
+      margin-top: 0.15rem;
+    }
+
+    /* Spec Badges */
+    .tag-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin: 1rem 0;
+    }
+
+    .tag {
+      background: var(--slate-100);
+      color: var(--slate-700);
+      font-size: 0.8rem;
+      padding: 0.25rem 0.65rem;
+      border-radius: 6px;
+      font-weight: 600;
+      border: 1px solid var(--slate-200);
+    }
+
+    .tag-blue { background: #dbeafe; color: #1e40af; border-color: #bfdbfe; }
+    .tag-green { background: #d1fae5; color: #065f46; border-color: #a7f3d0; }
+    .tag-purple { background: #f3e8ff; color: #6b21a8; border-color: #e9d5ff; }
+
+    /* Sitemap Tree Visualizer */
+    .tree-view {
+      background: #fafafa;
+      border: 1px solid var(--slate-200);
+      border-radius: 10px;
+      padding: 1.5rem;
+      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    .tree-node {
+      margin-left: 1.25rem;
+      position: relative;
+      padding: 0.4rem 0;
+    }
+
+    .tree-root {
+      margin-left: 0;
+      font-weight: 700;
+      color: var(--primary-dark);
+      font-size: 1.05rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px dashed var(--slate-200);
+      margin-bottom: 0.75rem;
+    }
+
+    .node-header {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: white;
+      padding: 0.35rem 0.75rem;
+      border-radius: 6px;
+      border: 1px solid var(--border-color);
+      font-size: 0.88rem;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.02);
+    }
+
+    .node-header.active-zone {
+      border-left: 4px solid var(--primary);
+      font-weight: 600;
+      color: var(--slate-900);
+    }
+
+    .node-header.locked-zone {
+      border-left: 4px solid var(--warning);
+      color: var(--slate-700);
+    }
+
+    .node-header code {
+      font-family: 'Fira Code', monospace;
+      font-size: 0.78rem;
+      color: #64748b;
+      background: #f1f5f9;
+      padding: 0.1rem 0.4rem;
+      border-radius: 4px;
+    }
+
+    .node-desc {
+      display: inline-block;
+      margin-left: 0.5rem;
+      font-size: 0.8rem;
+      color: #64748b;
+    }
+
+    /* Workflow Stepper */
+    .flow-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      position: relative;
+      margin-top: 1.25rem;
+    }
+
+    .step-box {
+      background: var(--slate-50);
+      border: 1px solid var(--slate-200);
+      border-radius: 8px;
+      padding: 1rem 1.25rem;
+      position: relative;
+    }
+
+    .step-box h4 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--slate-900);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .step-box p {
+      font-size: 0.875rem;
+      color: var(--slate-600);
+    }
+
+    /* Comparison Table */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+      margin-top: 1rem;
+    }
+
+    th {
+      background: var(--slate-100);
+      color: var(--slate-800);
+      text-align: left;
+      padding: 0.75rem 1rem;
+      font-weight: 600;
+      border-bottom: 2px solid var(--border-color);
+    }
+
+    td {
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid var(--border-color);
+      vertical-align: top;
+    }
+
+    tr:hover td {
+      background: #fafafa;
+    }
+
+    /* Code blocks */
+    pre, code {
+      font-family: 'Fira Code', monospace;
+    }
+
+    .tech-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.2rem 0.6rem;
+      background: #e2e8f0;
+      border-radius: 4px;
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+
+    /* Support Details */
+    .support-contact-box {
+      background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+      border: 1px solid #bbf7d0;
+      border-radius: 10px;
+      padding: 1.25rem;
+      margin-top: 1rem;
+    }
+
+    .support-contact-box h4 {
+      color: #166534;
+      font-size: 0.95rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .support-contact-box ul {
+      list-style-type: disc;
+      margin-left: 1.25rem;
+      font-size: 0.875rem;
+      color: #15803d;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2.5rem 1rem;
+      font-size: 0.85rem;
+      color: var(--slate-600);
+      border-top: 1px solid var(--border-color);
+      background: white;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="header-content">
+      <div class="badge-scope">🔍 KHẢO SÁT HỆ THỐNG AN TOÀN (READ-ONLY)</div>
+      <h1>HỆ THỐNG QUẢN LÝ VĂN BẢN VÀ ĐIỀU HÀNH TP. HỒ CHÍ MINH</h1>
+      <p class="subtitle">Báo cáo khảo sát thực địa kiến trúc ngoại vi, tính năng, sơ đồ liên kết (Sitemap) và cơ chế vận hành của cổng điện tử qlvb.tphcm.gov.vn</p>
+      
+      <div class="header-meta">
+        <div class="meta-item">🌐 <strong>Địa chỉ:</strong> https://qlvb.tphcm.gov.vn/</div>
+        <div class="meta-item">🏛️ <strong>Cơ quan chủ quản:</strong> UBND Thành phố Hồ Chí Minh</div>
+        <div class="meta-item">🛠️ <strong>Đơn vị phát triển:</strong> VNPT (VNPT-iOffice / eGov)</div>
+        <div class="meta-item">🛡️ <strong>Chế độ kiểm tra:</strong> Khảo sát thụ động, không gửi form (Zero Mutation)</div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+
+    <!-- READ-ONLY COMPLIANCE BANNER -->
+    <div class="readonly-banner">
+      <div class="icon">🛡️</div>
+      <div>
+        <h3>Cam Kết Khảo Sát Ngoại Vi An Toàn (Zero-Side-Effect Policy)</h3>
+        <p>Tuân thủ tuyệt đối chỉ đạo của bạn: Toàn bộ quá trình thám sát chỉ được thực hiện ở <strong>lớp mặt ngoài (perimeter inspection)</strong>, sử dụng HTTP GET request thụ động và phân tích cú pháp HTML/JS. <strong>Tuyệt đối không gửi form đăng nhập, không kích hoạt POST request, không tương tác với các hàm ghi hay thay đổi dữ liệu/giấy tờ hành chính</strong> của Thành phố.</p>
+      </div>
+    </div>
+
+    <!-- PHẦN 1: TỔNG QUAN HỆ THỐNG & CÔNG DỤNG -->
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-title">
+          <span class="number">1</span> Trang Web Này Để Làm Gì?
+        </div>
+        <p style="margin-bottom: 1rem; font-size: 0.95rem;">
+          Website <strong>https://qlvb.tphcm.gov.vn/</strong> là <strong>Trục nền tảng Quản lý văn bản và Điều hành công việc điện tử dùng chung</strong> của Ủy ban nhân dân Thành phố Hồ Chí Minh, xây dựng trên giải pháp <strong>VNPT-iOffice</strong>.
+        </p>
+        <p style="font-size: 0.925rem; color: var(--slate-600); margin-bottom: 1rem;">
+          Hệ thống được vận hành theo <em>Quyết định số 4556/QĐ-UBND</em> và tuân thủ các quy định về văn thư, lưu trữ, gửi nhận văn bản điện tử giữa các cơ quan hành chính nhà nước (theo Nghị định 30/2020/NĐ-CP và Quyết định 28/2018/QĐ-TTg).
+        </p>
+        <div class="tag-group">
+          <span class="tag tag-blue">UBND TP.HCM</span>
+          <span class="tag tag-blue">VNPT-iOffice</span>
+          <span class="tag tag-green">Chính quyền số</span>
+          <span class="tag tag-purple">Trục liên thông văn bản</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">
+          <span class="number">2</span> Công Dụng & Lợi Ích Cốt Lõi
+        </div>
+        <ul class="feature-list">
+          <li class="feature-item">
+            <div class="bullet-point"></div>
+            <div>
+              <strong>Số hóa 100% quy trình văn thư, giấy tờ:</strong>
+              <p>Tiếp nhận văn bản đến, phát hành văn bản đi, xử lý văn bản nội bộ qua môi trường mạng hoàn toàn thay thế giấy tờ truyền thống.</p>
+            </div>
+          </li>
+          <li class="feature-item">
+            <div class="bullet-point"></div>
+            <div>
+              <strong>Ký số điện tử & Xác thực pháp lý (VNPT-CA):</strong>
+              <p>Tích hợp trực tiếp USB Token, SIM PKI, chứng thư số ban cơ yếu chính phủ và VNPT SmartCA để lãnh đạo phê duyệt văn bản mọi lúc mọi nơi.</p>
+            </div>
+          </li>
+          <li class="feature-item">
+            <div class="bullet-point"></div>
+            <div>
+              <strong>Chỉ đạo, điều hành & Giám sát tiến độ xuyên suốt:</strong>
+              <p>Giao việc, đôn đốc công việc, theo dõi lịch họp, lịch công tác tuần của lãnh đạo UBND TP và các Sở/Ban/Ngành/UBND Quận/Huyện/Phường/Xã.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- PHẦN 2: SITEMAP & BẢN ĐỒ CẤU TRÚC HỆ THỐNG -->
+    <div class="card">
+      <div class="card-title">
+        <span class="number">3</span> Sơ Đồ Kiến Trúc Hệ Thống (Sitemap)
+      </div>
+      <p style="font-size: 0.925rem; color: var(--slate-600); margin-bottom: 1.25rem;">
+        Sitemap được chia làm 2 phân vùng rõ rệt: <strong>(1) Phân vùng mặt ngoài (Public / Auth Gateway)</strong> tiếp cận tự do; và <strong>(2) Phân vùng tác nghiệp nội bộ (Protected App Workspace)</strong> được bảo vệ nghiêm ngặt bằng cơ chế phiên làm việc (Session/Token) và phân quyền chức danh.
+      </p>
+
+      <div class="tree-view">
+        <div class="tree-root">🌐 https://qlvb.tphcm.gov.vn/ (Hệ thống Quản lý văn bản và Điều hành TP.HCM)</div>
+
+        <!-- Cổng Ngoại Vi -->
+        <div class="tree-node">
+          <div class="node-header active-zone">
+            📂 <strong>PHÂN VÙNG NGOẠI VI (Public / Gateway - Tiếp cận hiện tại)</strong>
+          </div>
+
+          <div class="tree-node">
+            <div class="node-header">
+              📄 <code>/</code> hoặc <code>/index.html</code>
+              <span class="node-desc">- Cổng chào, giao diện đăng nhập trung tâm (Login Page)</span>
+            </div>
+          </div>
+
+          <div class="tree-node">
+            <div class="node-header">
+              🔑 <code>/qlvbdh_sso</code>
+              <span class="node-desc">- Cổng xác thực một lần (Single Sign-On TP.HCM) qua định danh cán bộ</span>
+            </div>
+          </div>
+
+          <div class="tree-node">
+            <div class="node-header">
+              🆘 <code>/qlvbdh/public/thongtin_hotro_kythuat.htm</code>
+              <span class="node-desc">- Cổng tra cứu kỹ thuật viên hỗ trợ & quy trình khôi phục tài khoản</span>
+            </div>
+          </div>
+
+          <div class="tree-node">
+            <div class="node-header">
+              📱 <strong>Liên kết ứng dụng di động:</strong>
+              <span class="node-desc">Google Play (VNPT Office) & Apple App Store (VNPT e-Office)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Phân Vùng Nội Bộ -->
+        <div class="tree-node" style="margin-top: 1rem;">
+          <div class="node-header locked-zone">
+            🔒 <strong>PHÂN VÙNG TÁC NGHIỆP NỘI BỘ (Private Modules - Sau khi đăng nhập)</strong>
+          </div>
+
+          <!-- Văn bản đến -->
+          <div class="tree-node">
+            <div class="node-header">
+              📥 <strong>Phân hệ Quản lý Văn bản đến</strong>
+            </div>
+            <div class="tree-node"><div class="node-header"><code>/van-ban-den/tiep-nhan</code> - Vào sổ văn bản đến, đính kèm file scan, bóc tách OCR</div></div>
+            <div class="tree-node"><div class="node-header"><code>/van-ban-den/phan-cong</code> - Trình lãnh đạo xin ý kiến, chuyển phòng ban/chuyên viên</div></div>
+            <div class="tree-node"><div class="node-header"><code>/van-ban-den/theo-doi</code> - Bảng theo dõi hạn xử lý, cảnh báo văn bản quá hạn/gần hạn</div></div>
+          </div>
+
+          <!-- Văn bản đi -->
+          <div class="tree-node">
+            <div class="node-header">
+              📤 <strong>Phân hệ Quản lý Văn bản đi</strong>
+            </div>
+            <div class="tree-node"><div class="node-header"><code>/van-ban-di/du-thao</code> - Soạn thảo hồ sơ dự thảo, trình duyệt cấp phòng & ban giám đốc</div></div>
+            <div class="tree-node"><div class="node-header"><code>/van-ban-di/ky-so</code> - Phê duyệt ký số điện tử (USB Token / Ban Cơ Yếu / SmartCA)</div></div>
+            <div class="tree-node"><div class="node-header"><code>/van-ban-di/phat-hanh</code> - Cấp số hiệu, đóng dấu số, liên thông gửi qua mạng</div></div>
+          </div>
+
+          <!-- Quản lý Công việc & Điều hành -->
+          <div class="tree-node">
+            <div class="node-header">
+              📋 <strong>Phân hệ Điều hành & Giao việc</strong>
+            </div>
+            <div class="tree-node"><div class="node-header"><code>/dieu-hanh/giao-viec</code> - Phân bổ nhiệm vụ trực tiếp từ văn bản chỉ đạo hoặc đột xuất</div></div>
+            <div class="tree-node"><div class="node-header"><code>/dieu-hanh/tien-do</code> - Cây công việc, báo cáo % hoàn thành, lịch sử xử lý</div></div>
+          </div>
+
+          <!-- Lịch công tác & Tiện ích -->
+          <div class="tree-node">
+            <div class="node-header">
+              📅 <strong>Lịch Công tác & Thông tin Điều hành</strong>
+            </div>
+            <div class="tree-node"><div class="node-header"><code>/lich-tuan</code> - Lịch họp Thường trực UBND TP, Lịch công tác lãnh đạo sở/ngành</div></div>
+            <div class="tree-node"><div class="node-header"><code>/thong-bao-noi-bo</code> - Bản tin điều hành nội bộ, thông điệp điều hành khẩn</div></div>
+          </div>
+
+          <!-- Quản trị & Báo cáo thống kê -->
+          <div class="tree-node">
+            <div class="node-header">
+              ⚙️ <strong>Hệ thống Báo cáo & Quản trị Danh mục</strong>
+            </div>
+            <div class="tree-node"><div class="node-header"><code>/bao-cao-thong-ke</code> - Báo cáo số lượng văn bản, tỷ lệ xử lý đúng hạn/trễ hạn</div></div>
+            <div class="tree-node"><div class="node-header"><code>/quan-tri-he-thong</code> - Phân quyền chức danh, danh mục phòng ban, cấu hình luồng duyệt</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PHẦN 3: ĐẶC TẢ GIAO DIỆN MẶT NGOÀI & BẢO MẬT -->
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-title">
+          <span class="number">4</span> Đặc Tả Cổng Đăng Nhập & Bảo Mật
+        </div>
+        <p style="font-size: 0.925rem; color: var(--slate-600); margin-bottom: 1rem;">
+          Khảo sát mã nguồn trang chủ cho thấy hệ thống được trang bị cơ chế bảo vệ đăng nhập đa lớp:
+        </p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Phương thức</th>
+              <th>Mô tả chi tiết</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Tài khoản thường</strong></td>
+              <td>Tên truy cập, mật khẩu có toggle ẩn/hiện, kèm <strong>Mã Captcha xác nhận</strong> chống Brute-force bot.</td>
+            </tr>
+            <tr>
+              <td><strong>Đăng nhập Token</strong></td>
+              <td>Tích hợp thư viện <code>vnpt-plugin.js</code> để xác thực trực tiếp qua chứng thư số USB PKI Token.</td>
+            </tr>
+            <tr>
+              <td><strong>Cổng SSO TP.HCM</strong></td>
+              <td>Chuyển hướng đến cổng định danh tập trung cán bộ công chức (Single Sign-On).</td>
+            </tr>
+            <tr>
+              <td><strong>Đa ngôn ngữ</strong></td>
+              <td>Hỗ trợ 4 ngôn ngữ giao diện: Tiếng Việt (VN), Tiếng Anh (EN), Lào (LA), Campuchia (KH).</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="card">
+        <div class="card-title">
+          <span class="number">5</span> Kênh Hỗ Trợ Kỹ Thuật Đã Xác Minh
+        </div>
+        <p style="font-size: 0.925rem; color: var(--slate-600);">
+          Hệ thống công khai trang hỗ trợ kỹ thuật tại đường dẫn <code>/qlvbdh/public/thongtin_hotro_kythuat.htm</code>:
+        </p>
+
+        <div class="support-contact-box">
+          <h4>Thông tin Đầu mối Hỗ trợ Sự cố:</h4>
+          <ul>
+            <li><strong>Đầu mối tập trung:</strong> Trung tâm Chuyển đổi số TP.HCM (TTCDS)</li>
+            <li><strong>Thư điện tử hỗ trợ:</strong> <code>ttcds@tphcm.gov.vn</code></li>
+            <li><strong>Khung giờ phục vụ:</strong> Thứ Hai – Thứ Sáu, từ 08:00 đến 17:00</li>
+            <li><strong>Quy trình hỗ trợ:</strong> Liên hệ kỹ thuật viên phụ trách địa bàn (Phường/Xã/Quận) &rarr; Tiếp nhận qua email công vụ &rarr; Cấp lại mật khẩu &rarr; Bắt buộc đổi mật khẩu lần đầu.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- PHẦN 4: KHUYẾN NGHỊ BƯỚC TIẾP THEO -->
+    <div class="card">
+      <div class="card-title">
+        <span class="number">6</span> Đề Xuất Phối Hợp & Bước Tiếp Theo
+      </div>
+      
+      <div class="flow-steps">
+        <div class="step-box">
+          <h4>Bước 1: Giữ an toàn tối đa cho hệ thống (ĐÃ HOÀN TẤT)</h4>
+          <p>Không thực hiện bất kỳ hành vi dò quét, brute-force hay gửi biểu mẫu (POST) nào làm phát sinh log cảnh báo bảo mật hoặc ảnh hưởng đến hạ tầng của cơ quan nhà nước.</p>
+        </div>
+
+        <div class="step-box" style="border-left: 4px solid var(--accent); background: #f0fdf4;">
+          <h4>Bước 2: Hỗ trợ người dùng khi cần thao tác tác nghiệp bên trong</h4>
+          <p>
+            Nếu bạn có tài khoản công vụ và cần khám phá sâu vào các phân hệ nghiệp vụ nội bộ:
+            <br>• Bạn có thể chủ động đăng nhập trên trình duyệt cá nhân của bạn để bảo mật tuyệt đối thông tin xác thực.
+            <br>• Khi cần phân tích tài liệu, biểu mẫu, công văn xuất ra từ hệ thống, bạn chỉ cần tải file hoặc chụp màn hình/copy nội dung vào thư mục làm việc để AI hỗ trợ rà soát theo đúng chuẩn hành chính!
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>Báo Cáo Khảo Sát Hệ Thống qlvb.tphcm.gov.vn &bull; Tạo lập bởi Trợ lý Antigravity &bull; Lưu trữ tại thư mục OUTPUT/</p>
+  </footer>
+
+</body>
+</html>

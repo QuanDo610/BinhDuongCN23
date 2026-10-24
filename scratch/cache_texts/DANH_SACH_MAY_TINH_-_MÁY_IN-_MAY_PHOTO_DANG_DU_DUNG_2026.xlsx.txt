@@ -1,0 +1,6 @@
+Danh sách Sheets: Sheet1
+
+=== SHEET: Sheet1 (Kích thước: 6 hàng x 11 cột) ===
+ | DANH SÁCH MÁY TÍNH - MÁY IN- MÁY PHOTO - MÁY SCAN ĐANG SỬ DỤNG NĂM 2026 |  |  |  |  |  |  |  |  | 
+ | Stt | Máy PC | Máy laptop | Máy Server | Máy in A3 | Máy in A4 | Máy Scan A3 | Máy Scan A4 | Máy Photo | Ghi chú
+ | Số lượng | 75 | 0 | 3 | 15 | 23 | 9 | 2 | 3 | P. BD máy scan hư

@@ -1,0 +1,17 @@
+Danh sách Sheets: Sheet1
+
+=== SHEET: Sheet1 (Kích thước: 24 hàng x 26 cột) ===
+BẢNG KPI CÔNG VIỆC – KẾ HOẠCH 9999 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+Đơn vị: Văn phòng Đăng ký đất đai Chi nhánh số 23
+Họ và tên: ....................................................
+Thời gian báo cáo: Từ ....../....../...... đến ....../....../...... |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+STT |  | Nội dung công việc | Đơn vị tính | Chỉ tiêu/KPI | Kết quả thực hiện |  | Ghi chú |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+1 |  | Thửa đủ điều kiện cập nhật vào Nhóm 1 | Thửa | ..... | ..... |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+2 |  | Thửa thiếu hồ sơ quét (Lập danh sách gửi kho tra cứu) | Hồ sơ | ..... | ..... |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+3 |  | Thửa đã bổ sung đầy đủ và cập nhật lại Nhóm 1 | Hồ sơ | ..... | ..... |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+THỐNG KÊ NGUYÊN NHÂN CHƯA ĐƯA ĐƯỢC VỀ NHÓM 1 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+STT |  | Nguyên nhân |  |  |  | Số lượng |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+1 |  | Dính không gian |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+2 |  | Không có CCCD/chưa đồng bộ CCCD |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+3 |  | Không tìm thấy hồ sơ tại kho để scan lên |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+Tổng cộng: |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 

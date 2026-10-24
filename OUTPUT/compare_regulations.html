@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>So Sánh Quy Định: QĐ 2637 (Hiện Hành) vs QĐ 272, QĐ 1368 & QĐ 204</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f8fafc;
+      color: #0f172a;
+    }
+    
+    @media print {
+      body {
+        background-color: #ffffff !important;
+      }
+      .no-print {
+        display: none !important;
+      }
+      .print-break-inside-avoid {
+        break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-slate-50 text-slate-900 flex flex-col antialiased selection:bg-sky-100 selection:text-sky-900">
+
+  <!-- TOP HEADER / BRANDING -->
+  <header class="bg-white border-b border-slate-200 sticky top-0 z-40 shadow-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+      <div class="flex items-center space-x-3.5">
+        <div class="w-11 h-11 rounded-xl bg-gradient-to-tr from-emerald-600 to-sky-600 flex items-center justify-center text-white shadow-sm ring-2 ring-emerald-100 flex-shrink-0">
+          <i class="fa-solid fa-code-compare text-lg"></i>
+        </div>
+        <div>
+          <div class="flex items-center gap-2 flex-wrap">
+            <h1 class="text-base sm:text-lg font-extrabold text-slate-900 tracking-tight">
+              BẢNG SO SÁNH QUY ĐỊNH CƠ CẤU TỔ CHỨC & THẨM QUYỀN (4 THẾ HỆ)
+            </h1>
+            <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-bold bg-emerald-100 text-emerald-800 border border-emerald-200">
+              QĐ 2637 (Hiện hành) vs QĐ 272 vs QĐ 1368 vs QĐ 204
+            </span>
+          </div>
+          <p class="text-xs text-slate-600 font-medium">
+            VĂN PHÒNG ĐĂNG KÝ ĐẤT ĐAI TP.HCM - CHI NHÁNH SỐ 23
+            <span class="text-slate-400 mx-1">•</span>
+            <span class="text-slate-500">Tiến trình 10 năm chuyển đổi thể chế & sáp nhập (2015 – 2023 – 2025)</span>
+          </p>
+        </div>
+      </div>
+
+      <!-- Quick Action Buttons -->
+      <div class="flex items-center space-x-2 no-print self-end md:self-auto flex-wrap">
+        <a href="so_sanh_to_truong.html" class="inline-flex items-center px-3 py-1.5 rounded-lg text-xs font-semibold bg-amber-50 hover:bg-amber-100 text-amber-800 border border-amber-300 transition shadow-2xs">
+          <i class="fa-solid fa-user-shield mr-1.5 text-amber-600"></i> Thẩm Quyền Tổ Trưởng
+        </a>
+        <a href="orgchart.html" class="inline-flex items-center px-3 py-1.5 rounded-lg text-xs font-semibold bg-indigo-50 hover:bg-indigo-100 text-indigo-700 border border-indigo-200 transition shadow-2xs">
+          <i class="fa-solid fa-sitemap mr-1.5 text-indigo-600"></i> Sơ Đồ Cây (QĐ 2637)
+        </a>
+        <a href="document_viewer.html" class="inline-flex items-center px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 border border-slate-300 transition shadow-2xs">
+          <i class="fa-solid fa-folder-open mr-1.5 text-amber-600"></i> Kho Tài Liệu
+        </a>
+        <a href="index.html" class="inline-flex items-center px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 border border-slate-300 transition shadow-2xs">
+          <i class="fa-solid fa-gauge mr-1.5 text-slate-500"></i> Dashboard
+        </a>
+        <button onclick="window.print()" class="inline-flex items-center px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-800 hover:bg-slate-900 text-white shadow-xs transition">
+          <i class="fa-solid fa-print mr-1.5"></i> In / Xuất PDF
+        </button>
+      </div>
+    </div>
+
+    <!-- Quick Filter Category Bar -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-between gap-3 py-2 no-print">
+      <div class="flex items-center space-x-1.5 overflow-x-auto w-full sm:w-auto scrollbar-none">
+        <span class="text-xs font-semibold text-slate-500 mr-1">Lọc tiêu chí:</span>
+        <button onclick="filterCriteria('all')" id="btn-crit-all" class="crit-btn px-2.5 py-1 rounded-md text-xs font-semibold bg-slate-800 text-white transition">
+          Tất Cả Tiêu Chí
+        </button>
+        <button onclick="filterCriteria('co-cau')" id="btn-crit-co-cau" class="crit-btn px-2.5 py-1 rounded-md text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 transition">
+          Cơ Cấu Tổ & Định Mức Cấp Phó
+        </button>
+        <button onclick="filterCriteria('tham-quyen')" id="btn-crit-tham-quyen" class="crit-btn px-2.5 py-1 rounded-md text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 transition">
+          Thẩm Quyền Bổ Nhiệm & Nhân Sự
+        </button>
+        <button onclick="filterCriteria('dia-ban')" id="btn-crit-dia-ban" class="crit-btn px-2.5 py-1 rounded-md text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 transition">
+          Địa Bàn & Tên Gọi Chi Nhánh
+        </button>
+        <button onclick="filterCriteria('phap-ly')" id="btn-crit-phap-ly" class="crit-btn px-2.5 py-1 rounded-md text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 transition">
+          Căn Cứ Pháp Lý & Luật Đất Đai
+        </button>
+      </div>
+
+      <!-- Quick Search -->
+      <div class="relative w-full sm:w-64 flex-shrink-0">
+        <i class="fa-solid fa-magnifying-glass absolute left-3 top-2 text-slate-400 text-xs"></i>
+        <input type="text" id="searchInput" oninput="searchComparison(this.value)" placeholder="Tìm kiếm từ khóa so sánh..." 
+               class="w-full pl-8 pr-3 py-1 text-xs rounded-lg border border-slate-300 bg-white focus:outline-hidden focus:ring-2 focus:ring-emerald-500 text-slate-800">
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTAINER -->
+  <main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-6">
+
+    <!-- EXECUTIVE TIMELINE BANNER (4 GENERATIONS) -->
+    <div class="bg-white border border-slate-200 rounded-2xl p-5 shadow-xs">
+      <div class="flex items-center justify-between pb-3 border-b border-slate-100 mb-4">
+        <h2 class="text-sm font-bold text-slate-900 uppercase tracking-wide flex items-center">
+          <i class="fa-solid fa-timeline text-emerald-600 mr-2"></i>
+          Tiến Trình Phát Triển Thể Chế Qua 4 Cột Mốc Quyết Định
+        </h2>
+        <span class="text-xs text-slate-500 font-medium">Hành trình 10 năm (2015 &rarr; 2025)</span>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5 relative">
+        
+        <!-- Step 1: QĐ 204 (01/04/2015) -->
+        <div class="p-3.5 rounded-xl border border-slate-300 bg-slate-50/60 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-1.5">
+              <span class="px-2 py-0.5 rounded text-[10px] font-bold uppercase bg-slate-200 text-slate-700">Mốc 1: Khai Sinh</span>
+              <span class="text-[11px] font-mono font-bold text-slate-500">01/04/2015</span>
+            </div>
+            <h3 class="text-xs font-bold text-slate-900">Quyết Định 204/QĐ-STNMT</h3>
+            <p class="text-[11px] text-slate-600 mt-0.5">Sở TN&MT Bình Dương (GĐ Phạm Danh)</p>
+            <div class="mt-2 text-xs text-slate-700 leading-snug">
+              • Thành lập 09 Chi nhánh cấp huyện.<br>
+              • Đặt tên: <em>Chi nhánh TP. Thủ Dầu Một</em>.<br>
+              • Chưa quy định cơ cấu tổ chuyên môn.
+            </div>
+          </div>
+          <div class="mt-3 pt-2 border-t border-slate-200 text-[10px] text-slate-500 font-mono">
+            Văn bản thành lập ban đầu
+          </div>
+        </div>
+
+        <!-- Step 2: QĐ 1368 (06/08/2015) -->
+        <div class="p-3.5 rounded-xl border-2 border-amber-200 bg-amber-50/30 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-1.5">
+              <span class="px-2 py-0.5 rounded text-[10px] font-bold uppercase bg-amber-100 text-amber-800">Mốc 2: Khởi Thảo 4 Tổ</span>
+              <span class="text-[11px] font-mono font-bold text-amber-700">06/08/2015</span>
+            </div>
+            <h3 class="text-xs font-bold text-slate-900">Quyết Định 1368/QĐ-VPĐKĐĐ</h3>
+            <p class="text-[11px] text-slate-600 mt-0.5">VPĐKĐĐ Bình Dương (GĐ Phạm Thanh Tùng)</p>
+            <div class="mt-2 text-xs text-slate-700 leading-snug">
+              • Thay thế QĐ 968/2015.<br>
+              • Xác lập lần đầu <strong>04 Tổ chuyên môn</strong> tại Chi nhánh.<br>
+              • Định mức: 01 Trưởng + <strong>không quá 01 Phó</strong>.<br>
+              • Áp dụng hệ thống ISO 9001:2008.
+            </div>
+          </div>
+          <div class="mt-3 pt-2 border-t border-amber-200 text-[10px] text-amber-700 font-mono font-semibold">
+            Bị QĐ 272 thay thế năm 2023
+          </div>
+        </div>
+
+        <!-- Step 3: QĐ 272 (01/08/2023) -->
+        <div class="p-3.5 rounded-xl border-2 border-blue-200 bg-blue-50/30 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-1.5">
+              <span class="px-2 py-0.5 rounded text-[10px] font-bold uppercase bg-blue-100 text-blue-800">Mốc 3: Nâng Chuẩn 4 Tổ</span>
+              <span class="text-[11px] font-mono font-bold text-blue-700">01/08/2023</span>
+            </div>
+            <h3 class="text-xs font-bold text-slate-900">Quyết Định 272/QĐ-VPĐKĐĐ</h3>
+            <p class="text-[11px] text-slate-600 mt-0.5">VPĐKĐĐ Bình Dương (GĐ Phạm Thanh Tùng)</p>
+            <div class="mt-2 text-xs text-slate-700 leading-snug">
+              • Thay thế hoàn toàn QĐ 1368/2015.<br>
+              • Giữ nguyên <strong>04 Tổ chuyên môn</strong>.<br>
+              • Giữ định mức: <strong>không quá 01 cấp phó</strong>.<br>
+              • Nâng chuẩn lên ISO 9001:2015.
+            </div>
+          </div>
+          <div class="mt-3 pt-2 border-t border-blue-200 text-[10px] text-blue-700 font-mono font-semibold">
+            Văn bản tiền đề trước sáp nhập
+          </div>
+        </div>
+
+        <!-- Step 4: QĐ 2637 (Tháng 12/2025 - Hiện Hành) -->
+        <div class="p-3.5 rounded-xl border-2 border-emerald-400 bg-emerald-50/40 flex flex-col justify-between shadow-xs">
+          <div>
+            <div class="flex items-center justify-between mb-1.5">
+              <span class="px-2 py-0.5 rounded text-[10px] font-bold uppercase bg-emerald-600 text-white">Mốc 4: HIỆN HÀNH</span>
+              <span class="text-[11px] font-mono font-bold text-emerald-800">Tháng 12/2025</span>
+            </div>
+            <h3 class="text-xs font-bold text-emerald-950">Quyết Định 2637/QĐ-SNNMT-VP</h3>
+            <p class="text-[11px] text-emerald-800 mt-0.5">Sở NN&MT TP.HCM (GĐ Nguyễn Toàn Thắng)</p>
+            <div class="mt-2 text-xs text-slate-800 leading-snug font-medium">
+              • Hợp nhất 3 tỉnh thành (TP.HCM + BD + BR-VT).<br>
+              • Đổi tên: <strong>Chi nhánh số 23</strong>.<br>
+              • Tinh gọn từ 4 Tổ còn <strong>03 Tổ nghiệp vụ</strong>.<br>
+              • Mở rộng lên <strong>tối đa 03 Tổ phó</strong>.<br>
+              • Căn cứ Luật Đất đai 2024.
+            </div>
+          </div>
+          <div class="mt-3 pt-2 border-t border-emerald-300 text-[10px] text-emerald-800 font-mono font-bold">
+            Quy chuẩn quản lý hiện tại
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 4 KEY TAKEAWAYS -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5">
+      
+      <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-2xs flex flex-col justify-between">
+        <div>
+          <div class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center text-sm mb-2 font-bold">
+            <i class="fa-solid fa-arrows-split-up-and-left"></i>
+          </div>
+          <div class="text-xs font-bold text-slate-900">Tinh Gọn: 4 Tổ &rarr; 3 Tổ Nghiệp Vụ</div>
+          <p class="text-[11px] text-slate-600 mt-1 leading-snug">
+            QĐ 1368 & 272 chia làm 4 tổ. QĐ 2637 <strong>hợp nhất</strong> <em>Tổ Đo đạc bản đồ</em> và <em>Tổ Lưu trữ</em> thành <strong>Tổ Kỹ thuật Địa chính & Lưu trữ</strong>.
+          </p>
+        </div>
+        <span class="mt-3 text-[10px] font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">Giảm đầu mối trung gian</span>
+      </div>
+
+      <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-2xs flex flex-col justify-between">
+        <div>
+          <div class="w-8 h-8 rounded-lg bg-sky-100 text-sky-700 flex items-center justify-center text-sm mb-2 font-bold">
+            <i class="fa-solid fa-users-gear"></i>
+          </div>
+          <div class="text-xs font-bold text-slate-900">Định Mức Tổ Phó: Tối Đa 01 &rarr; 03</div>
+          <p class="text-[11px] text-slate-600 mt-1 leading-snug">
+            QĐ 1368 & 272 quy định không quá 01 cấp phó. QĐ 2637 tăng định mức lên <strong>không quá 03 Tổ phó</strong> để phân quyền xử lý hồ sơ khổng lồ sau sáp nhập.
+          </p>
+        </div>
+        <span class="mt-3 text-[10px] font-semibold text-sky-700 bg-sky-50 px-2 py-0.5 rounded border border-sky-200">Tăng thẩm quyền điều hành</span>
+      </div>
+
+      <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-2xs flex flex-col justify-between">
+        <div>
+          <div class="w-8 h-8 rounded-lg bg-indigo-100 text-indigo-700 flex items-center justify-center text-sm mb-2 font-bold">
+            <i class="fa-solid fa-signature"></i>
+          </div>
+          <div class="text-xs font-bold text-slate-900">Nâng Cấp Thẩm Quyền Bổ Nhiệm BGĐ</div>
+          <p class="text-[11px] text-slate-600 mt-1 leading-snug">
+            QĐ 204, 1368 & 272 do Giám đốc Văn phòng tỉnh bổ nhiệm. QĐ 2637 nâng cấp thẩm quyền lên <strong>Giám đốc Sở Nông nghiệp và Môi trường TP.HCM</strong> quyết định.
+          </p>
+        </div>
+        <span class="mt-3 text-[10px] font-semibold text-indigo-700 bg-indigo-50 px-2 py-0.5 rounded border border-indigo-200">Cơ chế quản lý cấp Sở</span>
+      </div>
+
+      <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-2xs flex flex-col justify-between">
+        <div>
+          <div class="w-8 h-8 rounded-lg bg-amber-100 text-amber-700 flex items-center justify-center text-sm mb-2 font-bold">
+            <i class="fa-solid fa-laptop-code"></i>
+          </div>
+          <div class="text-xs font-bold text-slate-900">Khẳng Định Vị Thế Bộ Phận CNTT</div>
+          <p class="text-[11px] text-slate-600 mt-1 leading-snug">
+            QĐ 2637 (Điều 2 Khoản 5) quy định trực tiếp việc vận hành hệ thống thông tin đất đai, an toàn mạng và cơ sở dữ liệu thuộc <strong>Tổ Hành chính – Tổng hợp</strong>.
+          </p>
+        </div>
+        <span class="mt-3 text-[10px] font-semibold text-amber-800 bg-amber-50 px-2 py-0.5 rounded border border-amber-200">Chức năng pháp lý rõ ràng</span>
+      </div>
+
+    </div>
+
+    <!-- ======================================================== -->
+    <!-- DETAILED 4-COLUMN SIDE-BY-SIDE COMPARATIVE MATRIX TABLE -->
+    <!-- ======================================================== -->
+    <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-xs">
+      <div class="pb-4 border-b border-slate-200 mb-4">
+        <h3 class="text-base font-bold text-slate-900 flex items-center">
+          <i class="fa-solid fa-table-columns text-emerald-600 mr-2"></i>
+          Bảng Ma Trận So Sánh Đối Chiếu Chi Tiết 4 Thế Hệ Quyết Định (2015 – 2025)
+        </h3>
+        <p class="text-xs text-slate-500 mt-1">So sánh song song 12 tiêu chí tổ chức, cơ cấu nhân sự, tiêu chuẩn quản lý và căn cứ pháp lý</p>
+      </div>
+
+      <div class="overflow-x-auto">
+        <table class="w-full text-left text-xs text-slate-800 border-collapse">
+          <thead>
+            <tr class="text-slate-800 uppercase font-bold text-[11px] border-b-2 border-slate-300">
+              <th class="py-3 px-2.5 w-36 bg-slate-100/80">Tiêu Chí So Sánh</th>
+              <th class="py-3 px-2.5 w-[20%] bg-slate-50 border-r border-slate-200 text-slate-700">
+                <span class="px-1.5 py-0.5 bg-slate-200 rounded text-[10px] font-bold text-slate-700 mr-1">1. QĐ 204 (04/2015)</span><br>
+                Sở TN&MT Bình Dương
+              </th>
+              <th class="py-3 px-2.5 w-[22%] bg-amber-50/40 border-r border-slate-200 text-amber-900">
+                <span class="px-1.5 py-0.5 bg-amber-100 rounded text-[10px] font-bold text-amber-800 mr-1">2. QĐ 1368 (08/2015)</span><br>
+                VPĐKĐĐ Bình Dương
+              </th>
+              <th class="py-3 px-2.5 w-[22%] bg-blue-50/40 border-r border-slate-200 text-blue-900">
+                <span class="px-1.5 py-0.5 bg-blue-100 rounded text-[10px] font-bold text-blue-800 mr-1">3. QĐ 272 (08/2023)</span><br>
+                VPĐKĐĐ Bình Dương
+              </th>
+              <th class="py-3 px-2.5 w-[26%] bg-emerald-50/70 text-emerald-950">
+                <span class="px-1.5 py-0.5 bg-emerald-600 text-white rounded text-[10px] font-bold mr-1">4. QĐ 2637 (12/2025)</span><br>
+                ★ Sở NN&MT TP.HCM
+              </th>
+            </tr>
+          </thead>
+          <tbody id="matrixTableBody" class="divide-y divide-slate-200 leading-relaxed">
+
+            <!-- ROW 1: Cơ quan & Người ký -->
+            <tr class="comp-row hover:bg-slate-50/50 transition" data-cat="tham-quyen">
+              <td class="py-3 px-2.5 font-bold text-slate-900 bg-slate-50/80 align-top">
+                <i class="fa-solid fa-landmark text-slate-500 mr-1"></i>
+                1. Cơ quan & người ký ban hành
+              </td>
+              <td class="py-3 px-2.5 bg-slate-50/30 border-r border-slate-200 align-top text-slate-600">
+                <strong>Sở TN&MT Bình Dương</strong><br>
+                • Giám đốc: <em>Phạm Danh</em><br>
+                • Ngày ký: 01/04/2015
+              </td>
+              <td class="py-3 px-2.5 bg-amber-50/20 border-r border-slate-200 align-top text-slate-700">
+                <strong>VPĐKĐĐ tỉnh Bình Dương</strong><br>
+                • Giám đốc: <em>Phạm Thanh Tùng</em><br>
+                • Ngày ký: 06/08/2015
+              </td>
+              <td class="py-3 px-2.5 bg-blue-50/20 border-r border-slate-200 align-top text-slate-700">
+                <strong>VPĐKĐĐ tỉnh Bình Dương</strong><br>
+                • Giám đốc: <em>Phạm Thanh Tùng</em><br>
+                • Ngày ký: 01/08/2023
+              </td>
+              <td class="py-3 px-2.5 bg-emerald-50/30 align-top text-slate-800 font-medium">
+                <strong class="text-emerald-900">Sở NN&MT TP.HCM</strong><br>
+                • Giám đốc: <strong class="text-slate-900">Nguyễn Toàn Thắng</strong><br>
+                • Ký: Tháng 12/2025
+              </td>
+            </tr>
+
+            <!-- ROW 2: Tên gọi Chi nhánh -->
+            <tr class="comp-row hover:bg-slate-50/50 transition" data-cat="dia-ban">
+              <td class="py-3 px-2.5 font-bold text-slate-900 bg-slate-50/80 align-top">
+                <i class="fa-solid fa-tag text-slate-500 mr-1"></i>
+                2. Tên gọi chính thức của Chi nhánh
+              </td>
+              <td class="py-3 px-2.5 bg-slate-50/30 border-r border-slate-200 align-top text-slate-600">
+                Chi nhánh Văn phòng Đăng ký đất đai thành phố Thủ Dầu Một (Khoản 1 Điều 1).
+              </td>
+              <td class="py-3 px-2.5 bg-amber-50/20 border-r border-slate-200 align-top text-slate-700">
+                Chi nhánh Văn phòng Đăng ký đất đai thành phố Thủ Dầu Một (Khoản 3 Điều 4).
+              </td>
+              <td class="py-3 px-2.5 bg-blue-50/20 border-r border-slate-200 align-top text-slate-700">
+                Chi nhánh Văn phòng Đăng ký đất đai thành phố Thủ Dầu Một (Khoản 2 Điều 4).
+              </td>
+              <td class="py-3 px-2.5 bg-emerald-50/30 align-top text-slate-800 font-medium">
+                <strong class="text-emerald-900">Chi nhánh Văn phòng đăng ký đất đai số 23</strong> (gọi tắt là <em>Chi nhánh số 23</em> - Điều 1).
+              </td>
+            </tr>
+
+            <!-- ROW 3: Bối cảnh thành lập / Thay thế -->
+            <tr class="comp-row hover:bg-slate-50/50 transition" data-cat="phap-ly">
+              <td class="py-3.5 px-2.5 font-bold text-slate-900 bg-slate-50/80 align-top">
+                <i class="fa-solid fa-arrows-rotate text-slate-500 mr-1"></i>
+                3. Hiệu lực pháp lý & Mối quan hệ thay thế
+              </td>
+              <td class="py-3 px-2.5 bg-slate-50/30 border-r border-slate-200 align-top text-slate-600">
+                Thành lập mới hệ thống Chi nhánh một cấp theo QĐ 552/QĐ-UBND (09/03/2015) của UBND tỉnh Bình Dương.
+              </td>
+              <td class="py-3 px-2.5 bg-amber-50/20 border-r border-slate-200 align-top text-slate-700">
+                <strong>Bãi bỏ QĐ số 968/QĐ-VPĐKĐĐ</strong> ngày 22/06/2015 của Giám đốc VPĐKĐĐ tỉnh (Điều 2).
+              </td>
+              <td class="py-3 px-2.5 bg-blue-50/20 border-r border-slate-200 align-top text-slate-700">
+                <strong>Thay thế hoàn toàn Quyết định số 1368/QĐ-VPĐKĐĐ</strong> ngày 06/08/2015 (Điều 2).
+              </td>
+              <td class="py-3 px-2.5 bg-emerald-50/30 align-top text-slate-800 font-medium">
+                Ban hành mới trên cơ sở <strong class="text-sky-800">Quyết định số 1886/QĐ-UBND</strong> của UBND TP.HCM về <strong>HỢP NHẤT</strong> 3 VPĐKĐĐ: TP.HCM, Bình Dương và BR-VT.
+              </td>
+            </tr>
+
+            <!-- ROW 4: Cơ cấu Tổ chuyên môn -->
+            <tr class="comp-row hover:bg-slate-50/50 transition" data-cat="co-cau">
+              <td class="py-3 px-2.5 font-bold text-slate-900 bg-slate-50/80 align-top">
+                <i class="fa-solid fa-layer-group text-slate-500 mr-1"></i>
+                4. Cơ cấu các Tổ chuyên môn tại Chi nhánh
+              </td>
+              <td class="py-3 px-2.5 bg-slate-50/30 border-r border-slate-200 align-top text-slate-600">
+                <em>Chưa quy định chi tiết các tổ</em> trong QĐ 204 (chỉ quy định thành lập đơn vị chung).
+              </td>
+              <td class="py-3 px-2.5 bg-amber-50/20 border-r border-slate-200 align-top text-slate-700">
+                Xác lập <strong>04 Tổ chuyên môn</strong> (Khoản 4 Điều 4):<br>
+                1. Tổ Tổng hợp - Hành chính<br>
+                2. Tổ Đăng ký & Cấp GCN<br>
+                3. Tổ Kỹ thuật đo đạc và bản đồ<br>
+                4. Tổ Lưu trữ
+              </td>
+              <td class="py-3 px-2.5 bg-blue-50/20 border-r border-slate-200 align-top text-slate-700">
+                Kế thừa <strong>04 Tổ chuyên môn</strong> (Điểm b Khoản 2 Điều 4):<br>
+                1. Tổ Tổng hợp - Hành chính<br>
+                2. Tổ Đăng ký & Cấp GCN<br>
+                3. Tổ Kỹ thuật đo đạc và bản đồ<br>
+                4. Tổ Lưu trữ
+              </td>
+              <td class="py-3 px-2.5 bg-emerald-50/30 align-top text-slate-800 font-medium">
+                Tinh gọn thành <strong class="text-emerald-900">03 Tổ nghiệp vụ</strong> (Khoản 2 Điều 3):<br>
+                1. <strong>Tổ Hành chính – Tổng hợp</strong> (gồm CNTT, nhân sự, một cửa, kế toán)<br>
+                2. <strong>Tổ Đăng ký và Cấp GCN</strong><br>
+                3. <strong>Tổ Kỹ thuật Địa chính và Lưu trữ</strong> (Hợp nhất Tổ Đo đạc & Tổ Lưu trữ)
+              </td>
+            </tr>
+
+            <!-- ROW 5: Định mức cấp phó của Tổ -->
+            <tr class="comp-row hover:bg-slate-50/50 transition" data-cat="co-cau">
+              <td class="py-3 px-2.5 font-bold text-slate-900 bg-slate-50/80 align-top">
+                <i class="fa-solid fa-user-gear text-slate-500 mr-1"></i>
+                5. Định mức số lượng Tổ phó mỗi tổ
+              </td>
+              <td class="py-3 px-2.5 bg-slate-50/30 border-r border-slate-200 align-top text-slate-600">
+                Chưa có quy định.
+              </td>
+              <td class="py-3 px-2.5 bg-amber-50/20 border-r border-slate-200 align-top text-slate-700">
+                Mỗi Tổ có 01 cấp trưởng và <strong class="text-amber-900 font-semibold">không quá 01 cấp phó</strong> (Điểm b Khoản 4 Điều 4).
+              </td>
+              <td class="py-3 px-2.5 bg-blue-50/20 border-r border-slate-200 align-top text-slate-700">
+                Mỗi Tổ có 01 cấp trưởng và <strong class="text-blue-900 font-semibold">không quá 01 cấp phó</strong> (Khoản 2 Điều 4).
+              </td>
+              <td class="py-3 px-2.5 bg-emerald-50/30 align-top text-slate-800 font-medium">
+                Mỗi Tổ nghiệp vụ có 01 Tổ trưởng và <strong class="text-emerald-900 bg-emerald-100 px-1.5 py-0.5 rounded font-bold">không quá 03 Tổ phó</strong> (Khoản 2 Điều 4).
+              </td>
+            </tr>
+
+            <!-- ROW 6: Thẩm quyền bổ nhiệm Ban Giám đốc Chi nhánh -->
+            <tr class="comp-row hover:bg-slate-50/50 transition" data-cat="tham-quyen">
+              <td class="py-3 px-2.5 font-bold text-slate-900 bg-slate-50/80 align-top">
+                <i class="fa-solid fa-user-check text-slate-500 mr-1"></i>
+                6. Thẩm quyền bổ nhiệm Giám đốc & Phó Giám đốc Chi nhánh
+              </td>
+              <td class="py-3 px-2.5 bg-slate-50/30 border-r border-slate-200 align-top text-slate-600">
+                Do <strong>Giám đốc VPĐKĐĐ tỉnh</strong> bổ nhiệm, miễn nhiệm (Khoản 3 Điều 2).
+              </td>
+              <td class="py-3 px-2.5 bg-amber-50/20 border-r border-slate-200 align-top text-slate-700">
+                Do <strong>Giám đốc VPĐKĐĐ tỉnh</strong> thực hiện theo quy định phân cấp (Khoản 3 Điều 4).
+              </td>
+              <td class="py-3 px-2.5 bg-blue-50/20 border-r border-slate-200 align-top text-slate-700">
+                Do <strong>Giám đốc VPĐKĐĐ tỉnh</strong> thực hiện theo quy định phân cấp (Điểm a Khoản 2 Điều 4).
+              </td>
+              <td class="py-3 px-2.5 bg-emerald-50/30 align-top text-slate-800 font-medium">
+                Do <strong class="text-slate-900">Giám đốc Sở Nông nghiệp và Môi trường TP.HCM</strong> quyết định bổ nhiệm theo phân cấp quản lý cán bộ của UBND TP.HCM (Điểm d Khoản 1 Điều 3).
+              </td>
+            </tr>
+
+            <!-- ROW 7: Thẩm quyền bổ nhiệm Tổ trưởng, Tổ phó -->
+            <tr class="comp-row hover:bg-slate-50/50 transition" data-cat="tham-quyen">
+              <td class="py-3 px-2.5 font-bold text-slate-900 bg-slate-50/80 align-top">
+                <i class="fa-solid fa-users text-slate-500 mr-1"></i>
+                7. Thẩm quyền bổ nhiệm Tổ trưởng, Tổ phó
+              </td>
+              <td class="py-3 px-2.5 bg-slate-50/30 border-r border-slate-200 align-top text-slate-600">
+                Chưa quy định.
+              </td>
+              <td class="py-3 px-2.5 bg-amber-50/20 border-r border-slate-200 align-top text-slate-700">
+                Giám đốc Chi nhánh quyết định trên cơ sở <strong>thống nhất của Giám đốc VPĐKĐĐ tỉnh</strong> (Điểm b Khoản 4 Điều 4).
+              </td>
+              <td class="py-3 px-2.5 bg-blue-50/20 border-r border-slate-200 align-top text-slate-700">
+                Giám đốc Chi nhánh tự quyết định theo phân cấp thẩm quyền được giao (Điểm b Khoản 2 Điều 4).
+              </td>
+              <td class="py-3 px-2.5 bg-emerald-50/30 align-top text-slate-800 font-medium">
+                Giám đốc Chi nhánh quyết định sau khi có <strong>ý kiến thống nhất của Ban Giám đốc VPĐKĐĐ TP.HCM phụ trách đơn vị</strong> (Khoản 3 Điều 4).
+              </td>
+            </tr>
+
+            <!-- ROW 8: Tiêu chuẩn Quản lý chất lượng ISO -->
+            <tr class="comp-row hover:bg-slate-50/50 transition" data-cat="phap-ly">
+              <td class="py-3 px-2.5 font-bold text-slate-900 bg-slate-50/80 align-top">
+                <i class="fa-solid fa-certificate text-slate-500 mr-1"></i>
+                8. Tiêu chuẩn quản lý & chuyển đổi số
+              </td>
+              <td class="py-3 px-2.5 bg-slate-50/30 border-r border-slate-200 align-top text-slate-600">
+                Chưa áp dụng tiêu chuẩn số hóa.
+              </td>
+              <td class="py-3 px-2.5 bg-amber-50/20 border-r border-slate-200 align-top text-slate-700">
+                Áp dụng tiêu chuẩn chất lượng <strong class="text-amber-900">ISO 9001:2008</strong> trong tiếp nhận và trả kết quả TTHC (Điểm a Khoản 1 Điều 12 tại Chi nhánh; Điểm a Khoản 2 Điều 6 tại VP tỉnh).
+              </td>
+              <td class="py-3 px-2.5 bg-blue-50/20 border-r border-slate-200 align-top text-slate-700">
+                Nâng cấp áp dụng tiêu chuẩn chất lượng <strong class="text-blue-900">ISO 9001:2015</strong> đối với tiếp nhận và giải quyết TTHC (Điểm a Khoản 2 Điều 6).
+              </td>
+              <td class="py-3 px-2.5 bg-emerald-50/30 align-top text-slate-800 font-medium">
+                Chuyển đổi số toàn diện: Vận hành hệ thống thông tin đất đai điện tử, đồng bộ CSDL địa chính vào <strong class="text-slate-900">CSDL Quốc gia về đất đai</strong> (Khoản 5, 6 Điều 2).
+              </td>
+            </tr>
+
+            <!-- ROW 9: Vị trí Bộ phận CNTT -->
+            <tr class="comp-row hover:bg-slate-50/50 transition" data-cat="co-cau">
+              <td class="py-3 px-2.5 font-bold text-slate-900 bg-slate-50/80 align-top">
+                <i class="fa-solid fa-server text-slate-500 mr-1"></i>
+                9. Chức năng quản trị mạng & CNTT
+              </td>
+              <td class="py-3 px-2.5 bg-slate-50/30 border-r border-slate-200 align-top text-slate-600">
+                Không quy định.
+              </td>
+              <td class="py-3 px-2.5 bg-amber-50/20 border-r border-slate-200 align-top text-slate-700">
+                Nằm tản mạn trong nhiệm vụ của Tổ Tổng hợp - Hành chính; chưa quy định quản trị mạng LAN/WAN, server.
+              </td>
+              <td class="py-3 px-2.5 bg-blue-50/20 border-r border-slate-200 align-top text-slate-700">
+                Giao nhiệm vụ cập nhật CSDL địa chính chung trong công tác cấp GCN tại Chi nhánh; chưa có bộ phận chuyên trách IT.
+              </td>
+              <td class="py-3 px-2.5 bg-emerald-50/30 align-top text-slate-800 font-medium">
+                Được chuẩn hóa thành nhiệm vụ pháp lý tại <strong class="text-emerald-900">Khoản 5 Điều 2</strong>: Quản lý, vận hành hệ thống thông tin đất đai, an ninh mạng trực thuộc <strong>Tổ Hành chính – Tổng hợp</strong>.
+              </td>
+            </tr>
+
+            <!-- ROW 10: Phạm vi địa bàn -->
+            <tr class="comp-row hover:bg-slate-50/50 transition" data-cat="dia-ban">
+              <td class="py-3 px-2.5 font-bold text-slate-900 bg-slate-50/80 align-top">
+                <i class="fa-solid fa-map-location-dot text-slate-500 mr-1"></i>
+                10. Phạm vi địa bàn giải quyết TTHC
+              </td>
+              <td class="py-3 px-2.5 bg-slate-50/30 border-r border-slate-200 align-top text-slate-600">
+                Toàn bộ TP. Thủ Dầu Một (14 phường trực thuộc tỉnh Bình Dương).
+              </td>
+              <td class="py-3 px-2.5 bg-amber-50/20 border-r border-slate-200 align-top text-slate-700">
+                Toàn bộ TP. Thủ Dầu Một trên địa bàn tỉnh Bình Dương.
+              </td>
+              <td class="py-3 px-2.5 bg-blue-50/20 border-r border-slate-200 align-top text-slate-700">
+                Địa bàn thành phố Thủ Dầu Một theo phân cấp quản lý.
+              </td>
+              <td class="py-3 px-2.5 bg-emerald-50/30 align-top text-slate-800 font-medium">
+                Xác định phạm vi thẩm quyền giải quyết TTHC đất đai trong đơn vị hành chính <strong class="text-slate-900 bg-emerald-100 px-1.5 py-0.5 rounded">05 phường</strong>: Phú Lợi, Phú An, Bình Dương, Chánh Hiệp, Thủ Dầu Một (Điều 2).
+              </td>
+            </tr>
+
+            <!-- ROW 11: Căn cứ Luật Đất đai -->
+            <tr class="comp-row hover:bg-slate-50/50 transition" data-cat="phap-ly">
+              <td class="py-3 px-2.5 font-bold text-slate-900 bg-slate-50/80 align-top">
+                <i class="fa-solid fa-book-bookmark text-slate-500 mr-1"></i>
+                11. Căn cứ Luật Đất đai chủ đạo
+              </td>
+              <td class="py-3 px-2.5 bg-slate-50/30 border-r border-slate-200 align-top text-slate-600">
+                Luật Đất đai năm 2013 và Nghị định 43/2014/NĐ-CP.
+              </td>
+              <td class="py-3 px-2.5 bg-amber-50/20 border-r border-slate-200 align-top text-slate-700">
+                Luật Đất đai năm 2013 và Nghị định 43/2014/NĐ-CP.
+              </td>
+              <td class="py-3 px-2.5 bg-blue-50/20 border-r border-slate-200 align-top text-slate-700">
+                Luật Đất đai năm 2013 và các Nghị định 01/2017/NĐ-CP, 148/2020/NĐ-CP.
+              </td>
+              <td class="py-3 px-2.5 bg-emerald-50/30 align-top text-slate-800 font-medium">
+                <strong class="text-slate-900">Luật Đất đai năm 2024</strong>, Luật sửa đổi số 31/2024/QH15, các Nghị định 101/2024/NĐ-CP, 102/2024/NĐ-CP, 151/2025/NĐ-CP, 183/2025/NĐ-CP.
+              </td>
+            </tr>
+
+            <!-- ROW 12: Thẩm quyền phê duyệt thành lập Tổ mới -->
+            <tr class="comp-row hover:bg-slate-50/50 transition" data-cat="co-cau">
+              <td class="py-3 px-2.5 font-bold text-slate-900 bg-slate-50/80 align-top">
+                <i class="fa-solid fa-building-circle-check text-slate-500 mr-1"></i>
+                12. Thành lập, sáp nhập, giải thể các Tổ
+              </td>
+              <td class="py-3 px-2.5 bg-slate-50/30 border-r border-slate-200 align-top text-slate-600">
+                Chưa quy định.
+              </td>
+              <td class="py-3 px-2.5 bg-amber-50/20 border-r border-slate-200 align-top text-slate-700">
+                Giám đốc Chi nhánh đề nghị, <strong>Giám đốc VPĐKĐĐ tỉnh Bình Dương quyết định</strong> (Khoản 4 Điều 4).
+              </td>
+              <td class="py-3 px-2.5 bg-blue-50/20 border-r border-slate-200 align-top text-slate-700">
+                Do Giám đốc Chi nhánh xây dựng đề án trình cấp có thẩm quyền phê duyệt.
+              </td>
+              <td class="py-3 px-2.5 bg-emerald-50/30 align-top text-slate-800 font-medium">
+                Do <strong>Giám đốc Chi nhánh số 23 quyết định sau khi có ý kiến thống nhất của Ban Giám đốc VPĐKĐĐ TP.HCM</strong> phụ trách đơn vị (Khoản 2 Điều 3).
+              </td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- SUMMARY SECTION: LỢI THẾ & Ý NGHĨA THỰC TIỄN VỚI IT -->
+    <div class="bg-gradient-to-br from-white to-slate-50 border border-slate-200 rounded-2xl p-6 shadow-xs">
+      <h3 class="text-sm font-bold text-slate-900 uppercase tracking-wide mb-3 flex items-center">
+        <i class="fa-solid fa-shield-halved text-emerald-600 mr-2"></i>
+        Ý Nghĩa Pháp Lý Đối Với Đỗ Trọng Minh Quân (Bộ Phận CNTT - Chi Nhánh Số 23)
+      </h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-slate-700 leading-relaxed">
+        <div class="p-4 rounded-xl bg-white border border-slate-200 shadow-2xs">
+          <div class="font-bold text-slate-900 mb-1 flex items-center text-xs">
+            <i class="fa-solid fa-circle-check text-emerald-600 mr-1.5"></i>
+            1. Vị thế phòng ban & thẩm quyền báo cáo chính thức
+          </div>
+          <p>
+            Theo QĐ 2637 hiện hành, bạn trực thuộc <strong>Tổ Hành chính – Tổng hợp</strong> của Chi nhánh số 23. Mọi công văn, tờ trình xin kinh phí (như CV 1342 xin 752 triệu đồng bản quyền) hoặc đề nghị cử chuyên gia hỗ trợ (như CV 2162 gửi TP.HCM) đều được ký ban hành chính thức từ Ban Giám đốc Chi nhánh 23 gửi thẳng lên Văn phòng ĐKĐĐ TP.HCM.
+          </p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-white border border-slate-200 shadow-2xs">
+          <div class="font-bold text-slate-900 mb-1 flex items-center text-xs">
+            <i class="fa-solid fa-circle-check text-emerald-600 mr-1.5"></i>
+            2. Cơ chế phối hợp liên đơn vị trực thuộc (Cơ sở 2)
+          </div>
+          <p>
+            Nhờ có sự hợp nhất theo QĐ 1886 và quy định công tác tại Điều 9 QĐ 2637, Chi nhánh 23 được quyền phối hợp trực tiếp với các đơn vị trực thuộc khác của Văn phòng TP.HCM (như mời anh Phùng Vương Quốc từ Cơ sở 2 sang hướng dẫn nghiệp vụ vào ngày 16/09/2026), tạo hành lang bảo vệ chuyên môn an toàn nhất cho nhân sự thử việc.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-white border-t border-slate-200 py-4 text-center text-xs text-slate-500 no-print">
+    Bảng So Sánh Quyết Định Thể Chế - Căn cứ hồ sơ lưu trữ: QĐ 204/QĐ-STNMT (2015), QĐ 1368/QĐ-VPĐKĐĐ (2015), QĐ 272/QĐ-VPĐKĐĐ (2023) và QĐ 2637/QĐ-SNNMT-VP (2025)
+  </footer>
+
+  <!-- INTERACTIVE SCRIPT -->
+  <script>
+    // Filter criteria
+    function filterCriteria(catName) {
+      document.querySelectorAll('.crit-btn').forEach(b => {
+        b.classList.remove('bg-slate-800', 'text-white');
+        b.classList.add('bg-slate-100', 'text-slate-700');
+      });
+
+      const activeBtn = document.getElementById('btn-crit-' + catName);
+      if (activeBtn) {
+        activeBtn.classList.remove('bg-slate-100', 'text-slate-700');
+        activeBtn.classList.add('bg-slate-800', 'text-white');
+      }
+
+      const rows = document.querySelectorAll('.comp-row');
+      rows.forEach(r => {
+        if (catName === 'all' || r.getAttribute('data-cat') === catName) {
+          r.style.display = '';
+        } else {
+          r.style.display = 'none';
+        }
+      });
+    }
+
+    // Instant search across table rows
+    function searchComparison(val) {
+      const q = val.toLowerCase().trim();
+      const rows = document.querySelectorAll('.comp-row');
+      rows.forEach(r => {
+        if (!q || r.textContent.toLowerCase().includes(q)) {
+          r.style.display = '';
+        } else {
+          r.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

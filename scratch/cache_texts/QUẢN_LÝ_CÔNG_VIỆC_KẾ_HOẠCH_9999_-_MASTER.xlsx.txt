@@ -1,0 +1,24 @@
+Danh sách Sheets: MUC TIEU, NHAT KY, DASHBOARD
+
+=== SHEET: MUC TIEU (Kích thước: 6 hàng x 5 cột) ===
+STT | Họ và Tên | Phường/Xã | Nhiệm vụ | Tổng khối lượng giao (Thửa/Hồ sơ)
+1 | Nguyễn Thị Thùy Trang | Phường Thủ Dầu Một | Rà soát | 2126
+2 | Nguyễn Trung Thành | Phường Thủ Dầu Một | Rà soát | 2126
+3 | Huỳnh Thành Duy | Kho lưu trữ | Lục hồ sơ | 4371
+4 | Nguyễn Nhật Quyền Trinh | Kho lưu trữ | Scan hồ sơ | 4371
+5 | Nguyễn Anh Khôi | Bình Dương | Không gian | 13620
+
+=== SHEET: NHAT KY (Kích thước: 4 hàng x 6 cột) ===
+Ngày thực hiện | Họ và Tên | Loại công việc | Chi tiết công việc | Khối lượng hoàn thành (Số lượng) | Ghi chú
+10/08/2026 | Nguyễn Thị Thùy Trang | Rà soát | Rà gửi lục | 108 | Thử nghiệm
+10/08/2026 | Nguyễn Thị Thùy Trang | Rà soát | Cập nhật lên nhóm 1 | 46 | Thử nghiệm
+10/08/2026 | Huỳnh Thành Duy | Lục hồ sơ | Đã lục giao lên scan | 120 | 
+
+=== SHEET: DASHBOARD (Kích thước: 8 hàng x 6 cột) ===
+BÁO CÁO TỔNG HỢP TIẾN ĐỘ CÔNG VIỆC |  |  |  |  | 
+Họ và Tên | Nhiệm vụ | Tổng khối lượng giao | Khối lượng ĐÃ LÀM | Khối lượng CÒN LẠI | % Hoàn thành
+Nguyễn Thị Thùy Trang | Rà soát | 2126 |  |  | 
+Nguyễn Trung Thành | Rà soát | 2126 |  |  | 
+Huỳnh Thành Duy | Lục hồ sơ | 4371 |  |  | 
+Nguyễn Nhật Quyền Trinh | Scan hồ sơ | 4371 |  |  | 
+Nguyễn Anh Khôi | Không gian | 13620 |  |  | 

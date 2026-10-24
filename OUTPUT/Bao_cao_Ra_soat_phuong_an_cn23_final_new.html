@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Báo Cáo Rà Soát & Đối Chiếu - phuong_an_cn23 final new</title>
+    <style>
+        :root {
+            --primary: #1a56db;
+            --primary-dark: #1e429f;
+            --danger: #e02424;
+            --danger-bg: #fdf2f2;
+            --danger-border: #f8b4b4;
+            --warning: #d97706;
+            --warning-bg: #fffbeb;
+            --warning-border: #fcd34d;
+            --success: #057a55;
+            --success-bg: #f3faf7;
+            --success-border: #84e1bc;
+            --info: #0284c7;
+            --info-bg: #f0f9ff;
+            --info-border: #bae6fd;
+            --text-main: #1f2937;
+            --text-muted: #4b5563;
+            --bg-page: #f8fafc;
+            --bg-card: #ffffff;
+            --border-color: #e5e7eb;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-page);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 30px 15px;
+        }
+
+        .container {
+            max-width: 1050px;
+            margin: 0 auto;
+            background: var(--bg-card);
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+            color: #ffffff;
+            padding: 35px 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 23px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .header p.subtitle {
+            font-size: 14.5px;
+            opacity: 0.9;
+            margin-bottom: 15px;
+        }
+
+        .meta-badges {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            font-size: 13px;
+        }
+
+        .meta-badge {
+            background: rgba(255, 255, 255, 0.18);
+            padding: 5px 14px;
+            border-radius: 20px;
+            backdrop-filter: blur(4px);
+        }
+
+        .content {
+            padding: 35px 30px;
+        }
+
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .summary-card {
+            padding: 16px 20px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            text-align: center;
+        }
+
+        .summary-card.green {
+            background: var(--success-bg);
+            border-color: var(--success-border);
+            color: var(--success);
+        }
+
+        .summary-card.red {
+            background: var(--danger-bg);
+            border-color: var(--danger-border);
+            color: var(--danger);
+        }
+
+        .summary-card.orange {
+            background: var(--warning-bg);
+            border-color: var(--warning-border);
+            color: var(--warning);
+        }
+
+        .summary-card .num {
+            font-size: 28px;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .summary-card .label {
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-top: 4px;
+        }
+
+        .section-title {
+            font-size: 17.5px;
+            font-weight: 700;
+            color: var(--primary-dark);
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 10px;
+            margin: 35px 0 20px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-transform: uppercase;
+        }
+
+        .section-title span.badge-num {
+            background: var(--primary);
+            color: white;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+        }
+
+        .card {
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            margin-bottom: 22px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+        }
+
+        .card-header {
+            padding: 14px 18px;
+            font-weight: 600;
+            font-size: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .card-header.danger {
+            background-color: var(--danger-bg);
+            border-bottom: 1px solid var(--danger-border);
+            color: #991b1b;
+        }
+
+        .card-header.warning {
+            background-color: var(--warning-bg);
+            border-bottom: 1px solid var(--warning-border);
+            color: #92400e;
+        }
+
+        .card-header.success {
+            background-color: var(--success-bg);
+            border-bottom: 1px solid var(--success-border);
+            color: #065f46;
+        }
+
+        .tag {
+            font-size: 11.5px;
+            font-weight: 700;
+            padding: 3px 10px;
+            border-radius: 12px;
+            text-transform: uppercase;
+        }
+
+        .tag-danger {
+            background: #fee2e2;
+            color: #b91c1c;
+            border: 1px solid #fca5a5;
+        }
+
+        .tag-warning {
+            background: #fef3c7;
+            color: #b45309;
+            border: 1px solid #fde68a;
+        }
+
+        .tag-success {
+            background: #d1fae5;
+            color: #065f46;
+            border: 1px solid #84e1bc;
+        }
+
+        .card-body {
+            padding: 18px 20px;
+            font-size: 14.5px;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .grid-2 { grid-template-columns: 1fr; }
+        }
+
+        .box-compare {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            padding: 12px 15px;
+        }
+
+        .box-compare h4 {
+            font-size: 12.5px;
+            text-transform: uppercase;
+            color: #64748b;
+            margin-bottom: 6px;
+            letter-spacing: 0.5px;
+        }
+
+        .highlight-red {
+            background-color: #fee2e2;
+            color: #991b1b;
+            font-weight: 600;
+            padding: 1px 6px;
+            border-radius: 4px;
+        }
+
+        .highlight-green {
+            background-color: #d1fae5;
+            color: #065f46;
+            font-weight: 600;
+            padding: 1px 6px;
+            border-radius: 4px;
+        }
+
+        .fix-guide {
+            background-color: #f0fdf4;
+            border-left: 4px solid var(--success);
+            padding: 12px 16px;
+            border-radius: 0 6px 6px 0;
+            margin-top: 12px;
+            font-size: 14px;
+            color: #166534;
+        }
+
+        .fix-guide strong {
+            color: #14532d;
+        }
+
+        table.custom-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13.5px;
+            margin-top: 12px;
+        }
+
+        table.custom-table th, table.custom-table td {
+            border: 1px solid #cbd5e1;
+            padding: 9px 12px;
+            text-align: left;
+        }
+
+        table.custom-table th {
+            background-color: #f1f5f9;
+            color: #334155;
+            font-weight: 600;
+        }
+
+        table.custom-table tr:nth-child(even) {
+            background-color: #f8fafc;
+        }
+
+        .footer {
+            background: #f1f5f9;
+            border-top: 1px solid var(--border-color);
+            padding: 20px 30px;
+            font-size: 13px;
+            color: var(--text-muted);
+            text-align: center;
+        }
+
+        @media print {
+            body { padding: 0; background: white; }
+            .container { box-shadow: none; border: none; }
+            .card { break-inside: avoid; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <h1>BÁO CÁO RÀ SOÁT & ĐỐI CHIẾU HỒ SƠ PHƯƠNG ÁN</h1>
+        <p class="subtitle">Đánh giá tính chuẩn xác, logic số liệu và thể thức văn bản hành chính theo Nghị định 30/2020/NĐ-CP</p>
+        <div class="meta-badges">
+            <span class="meta-badge">📁 File kiểm tra: documents/phuong_an_cn23 final new.docx</span>
+            <span class="meta-badge">📅 Cập nhật lúc: 14:10 - 02/10/2026</span>
+            <span class="meta-badge">⚖️ Thể thức: Nghị định 30/2020/NĐ-CP & Nghị định 155/2025/NĐ-CP</span>
+            <span class="meta-badge">📊 Trạng thái: Đã sửa 13 lỗi chính tả, còn 5 lỗi số liệu & 5 lỗi thể thức</span>
+        </div>
+    </div>
+
+    <div class="content">
+
+        <!-- TỔNG QUAN RÀ SOÁT -->
+        <div class="summary-grid">
+            <div class="summary-card green">
+                <div class="num">13/13</div>
+                <div class="label">Lỗi chính tả đã được sửa</div>
+            </div>
+            <div class="summary-card red">
+                <div class="num">05</div>
+                <div class="label">Mâu thuẫn số liệu còn tồn tại</div>
+            </div>
+            <div class="summary-card orange">
+                <div class="num">05</div>
+                <div class="label">Lỗi thể thức Nghị định 30</div>
+            </div>
+            <div class="summary-card red">
+                <div class="num">01</div>
+                <div class="label">Thiếu Bảng đối chiếu định mức</div>
+            </div>
+        </div>
+
+        <!-- PHẦN 1 -->
+        <div class="section-title">
+            <span class="badge-num">1</span>
+            Ghi nhận các điểm bên soạn thảo đã khắc phục tốt
+        </div>
+
+        <div class="card">
+            <div class="card-header success">
+                <span>1.1. Các lỗi chính tả và ngắt dòng đã được tiếp thu hoàn thiện 100%</span>
+                <span class="tag tag-success">Đã khắc phục</span>
+            </div>
+            <div class="card-body">
+                <table class="custom-table">
+                    <thead>
+                        <tr>
+                            <th style="width: 30%;">Vấn đề trước đây</th>
+                            <th style="width: 40%;">Hiện trạng trong file "final new"</th>
+                            <th style="width: 30%;">Đánh giá</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Sai chính tả từ ngữ <em>(tài sản cộng, Nộng nghiệp, bao đám, dúng mục dích...)</em></td>
+                            <td>Đã sửa thành: <strong>tài sản công, Nông nghiệp, bảo đảm, đúng mục đích...</strong></td>
+                            <td><span class="highlight-green">Đạt chuẩn chính tả</span></td>
+                        </tr>
+                        <tr>
+                            <td>Ký hiệu cơ quan <em>(SNNMI-VP)</em></td>
+                            <td>Đã sửa thành: <strong>SNNMT-VP</strong> tại Quyết định 1551 và 2637</td>
+                            <td><span class="highlight-green">Đúng ký hiệu Sở</span></td>
+                        </tr>
+                        <tr>
+                            <td>Đứt đoạn câu ở Căn cứ Trang 2</td>
+                            <td>Đã bổ sung đầy đủ: <strong>Chi nhánh số 23</strong> và <strong>Điểm trạm y tế 3</strong></td>
+                            <td><span class="highlight-green">Đầy đủ câu chữ</span></td>
+                        </tr>
+                        <tr>
+                            <td>Kiểu chữ căn cứ pháp lý</td>
+                            <td>Đã chuyển sang toàn bộ kiểu chữ <em>Nghiêng</em> theo đúng quy chuẩn</td>
+                            <td><span class="highlight-green">Đúng thể thức</span></td>
+                        </tr>
+                        <tr>
+                            <td>Định lề trang văn bản (Margins)</td>
+                            <td>Đã đặt chuẩn A4: Trên 2.0cm, Dưới 2.0cm, Trái 3.0cm, Phải 2.0cm</td>
+                            <td><span class="highlight-green">Chuẩn Nghị định 30</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- PHẦN 2 -->
+        <div class="section-title">
+            <span class="badge-num">2</span>
+            Các mâu thuẫn số liệu & nội dung còn tồn tại (Cần sửa ngay)
+        </div>
+
+        <!-- Vấn đề 2.1 -->
+        <div class="card">
+            <div class="card-header danger">
+                <span>2.1. Mâu thuẫn phép tính "85% diện tích sử dụng chung" (Đoạn 45 - Mục II.3)</span>
+                <span class="tag tag-danger">Sai logic số học</span>
+            </div>
+            <div class="card-body">
+                <div class="grid-2">
+                    <div class="box-compare">
+                        <h4>Đoạn 44 (Dòng trên)</h4>
+                        <p>Tổng diện tích làm việc định mức của 85 người:</p>
+                        <p>• 3  lãnh đạo} × 20 = 60 m²</p>
+                        <p>• 79  chuyên viên} × 15 = 1.185 m²</p>
+                        <p>• 3  HĐLĐ phục vụ} × 10 = 30 m²</p>
+                        <p>➔ Tổng cộng: <span class="highlight-green">1.275,00 m²</span></p>
+                    </div>
+                    <div class="box-compare">
+                        <h4>Đoạn 45 (Dòng ngay dưới)</h4>
+                        <p>Tính diện tích sử dụng chung (tối đa 85% diện tích chức danh theo K2 Đ6 NĐ 155):</p>
+                        <p>• Văn bản lại viết: <br><span class="highlight-red">1.260 m² × 85% = 1.071,00 m²</span></p>
+                        <p><em>(Con số 1.260 m² không ăn khớp với 1.275 m² ở dòng trên)</em></p>
+                    </div>
+                </div>
+                <p><strong>Hậu quả:</strong> Người đọc hoặc cơ quan thẩm định sẽ nhận thấy ngay phép tính bị "đá nhau" giữa hai đoạn văn liền kề.</p>
+                <div class="fix-guide">
+                    <strong>Cách sửa:</strong> Sửa đoạn 45 thành: <em>"...tối đa theo quy định (không quá 85% diện tích chức danh theo Khoản 2 Điều 6 NĐ 155) là: <strong>1.275 m² × 85% = 1.083,75 m²</strong>; cùng với diện tích nhà để xe đáp ứng nhu cầu là 505,00 m² (theo Khoản 3 Điều 3 NĐ 155), nâng tổng nhu cầu diện tích sử dụng chung lên <strong>1.588,75 m²</strong>."</em> Đồng thời tổng nhu cầu toàn trụ sở (Đoạn 46) là 1.275 + 1.588,75 + 900 = <strong>3.763,75 m²</strong>.
+                </div>
+            </div>
+        </div>
+
+        <!-- Vấn đề 2.2 -->
+        <div class="card">
+            <div class="card-header danger">
+                <span>2.2. Bất hợp lý tại Bảng phòng ốc: "Phòng Phó Giám đốc" vẫn ghi 07 người (Bảng 2, STT 3)</span>
+                <span class="tag tag-danger">Vi phạm tiêu chuẩn phòng lãnh đạo</span>
+            </div>
+            <div class="card-body">
+                <p>Tại Bảng 2 (Hàng STT 3):</p>
+                <ul style="margin: 8px 0 10px 25px;">
+                    <li>Hạng mục: <em>Phòng làm việc Phó Giám đốc Chi nhánh</em> | Diện tích: 20,00 m²</li>
+                    <li><strong>Số người bố trí: <span class="highlight-red">07</span></strong> | Ghi chú: <em>Kiêm phòng kiểm tra kỹ thuật Tổ Kỹ thuật địa chính và Lưu trữ</em></li>
+                </ul>
+                <p><strong>Bất hợp lý:</strong> Việc đề chức danh lãnh đạo "Phòng làm việc Phó Giám đốc" mà cột số người bố trí ghi "07 người" trong phòng 20 m² là hoàn toàn sai quy chuẩn phòng làm việc cán bộ quản lý (tiêu chuẩn chức danh lãnh đạo tối đa 1 người/phòng). Thực chất đây là phòng PGĐ ngồi chung với cán bộ kiểm tra kỹ thuật bản đồ.</p>
+                <div class="fix-guide">
+                    <strong>Cách sửa:</strong> Đổi tên phòng STT 3 thành: <em>"Phòng làm việc Phó Giám đốc kết hợp bộ phận kiểm tra kỹ thuật bản đồ"</em> và cột số người bố trí ghi rõ: <em>"07 (01 Phó Giám đốc + 06 chuyên viên)"</em>.
+                </div>
+            </div>
+        </div>
+
+        <!-- Vấn đề 2.3 -->
+        <div class="card">
+            <div class="card-header warning">
+                <span>2.3. Lỗi logic cộng diện tích sàn xây dựng khối nhà (Đoạn 47)</span>
+                <span class="tag tag-warning">Cộng sai nhóm diện tích</span>
+            </div>
+            <div class="card-body">
+                <p>Đoạn 47 viết: <em>"Trong khi đó, tổng diện tích sàn xây dựng thực tế của công trình hiện hữu tại số 358 Huỳnh Văn Cù là 835,30 m²... Trong đó phân bổ 280,00 m² làm việc, 349,30 m² sử dụng chung và 406,00 m² kho."</em></p>
+                <p>❌ <strong>Sai sót:</strong> Tổng 280,00 + 349,30 + 406,00 = <strong>1.035,30 m²</strong> chứ không phải 835,30 m². Bởi vì con số 349,30 m² đã bị gộp cả 200 m² nhà xe ngoài sân vào. Trong khối nhà 835,30 m², diện tích dùng chung trong nhà chỉ có 149,30 m².</p>
+                <div class="fix-guide">
+                    <strong>Cách sửa:</strong> Diễn đạt lại cho chuẩn xác: <em>"Trong khi đó, tổng diện tích sàn xây dựng khối nhà làm việc hiện hữu tại số 358 Huỳnh Văn Cù là 835,30 m² (gồm 280,00 m² làm việc, 149,30 m² sử dụng chung trong nhà và 406,00 m² kho lưu trữ), cùng với 200,00 m² nhà để xe ngoài nhà đưa tổng diện tích mặt bằng sử dụng lên 1.035,30 m²."</em>
+                </div>
+            </div>
+        </div>
+
+        <!-- Vấn đề 2.4 -->
+        <div class="card">
+            <div class="card-header warning">
+                <span>2.4. Chưa bổ sung giải trình khớp nối với Công văn 1136 của Phường & Mảnh trích đo 69-2015</span>
+                <span class="tag tag-warning">Hồ sơ đính kèm không khớp</span>
+            </div>
+            <div class="card-body">
+                <ul style="margin: 0 0 10px 20px;">
+                    <li><strong>Khớp nối với Công văn 1136/UBND-VP của Phường:</strong> Phường ghi diện tích đất số 358 Huỳnh Văn Cù là 8.849,9 m² và sàn 1.763,25 m². Cần bổ sung thêm 1 câu: <em>"Khuôn viên đất 1.417,70 m² và sàn 835,30 m² Chi nhánh đang quản lý sử dụng độc lập nằm trong tổng thể khu đất công 8.849,9 m² của trụ sở UBND phường Chánh Mỹ cũ nêu tại Công văn số 1136/UBND-VP."</em></li>
+                    <li><strong>Khớp nối diện tích đất Trạm Y tế 3:</strong> Mảnh trích đo 69-2015 ghi 1.281,3 m², Phương án ghi 1.276,20 m². Cần chú thích rõ: <em>"Diện tích theo trích đo là 1.281,3 m²; diện tích khuôn viên đất thực tế bàn giao đề nghị điều chuyển sau khi trừ hành lang an toàn mương là 1.276,20 m²."</em></li>
+                    <li><strong>Năm của Tờ trình số 195/TTr-TYT:</strong> Tại Đoạn 21 và Đoạn 34 vẫn ghi *"ngày 04/3/2026"*, trong khi hồ sơ của UBND Phường ghi *"ngày 04/3/2023"*.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Vấn đề 2.5 -->
+        <div class="card">
+            <div class="card-header danger">
+                <span>2.5. BỊ THIẾU HOÀN TOÀN Bảng đối chiếu định mức toàn diện (Phần Phụ lục Mục A, B, C)</span>
+                <span class="tag tag-danger">Thiếu tài liệu cốt lõi</span>
+            </div>
+            <div class="card-body">
+                <p>File <code>phuong_an_cn23 final new.docx</code> chỉ có phần Thuyết minh và Bảng phân bổ phòng ốc nội bộ (Bảng 2). File này <strong>hoàn toàn thiếu mất Bảng đối chiếu định mức diện tích toàn trụ sở theo Nghị định 155/2025/NĐ-CP</strong> (trước đó nằm ở Trang 11 - 13 của bản PDF).</p>
+                <div class="fix-guide">
+                    <strong>Đề xuất:</strong> Bắt buộc phải tích hợp Bảng đối chiếu định mức chuẩn hóa vào cuối văn bản Phương án hoặc đính kèm thành Phụ lục riêng để hồ sơ đầy đủ cơ sở pháp lý trình Sở Tài chính thẩm định.
+                </div>
+            </div>
+        </div>
+
+        <!-- PHẦN 3 -->
+        <div class="section-title">
+            <span class="badge-num">3</span>
+            Các lỗi thể thức theo Nghị định 30/2020/NĐ-CP trong file .docx
+        </div>
+
+        <table class="custom-table">
+            <thead>
+                <tr>
+                    <th style="width: 18%;">Thành phần thể thức</th>
+                    <th style="width: 38%;">Hiện trạng trong file .docx</th>
+                    <th style="width: 44%;">Quy chuẩn bắt buộc theo Nghị định 30</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>1. Đầu trang (Header Table 1)</strong></td>
+                    <td>Ô bên phải <span class="highlight-red">trống rỗng hoàn toàn</span>. Không có Quốc hiệu, Tiêu ngữ, Số ký hiệu, Ngày tháng.</td>
+                    <td>Bắt buộc phải có: <br>
+                    • Ô trái: Tên cơ quan chủ quản, Tên đơn vị, <strong>Số: .../PA-CN23</strong>.<br>
+                    • Ô phải: <strong>CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM</strong> / <strong>Độc lập - Tự do - Hạnh phúc</strong> (có gạch chân) + <em>Thủ Dầu Một, ngày 01 tháng 10 năm 2026</em>.</td>
+                </tr>
+                <tr>
+                    <td><strong>2. Tiêu đề Phương án</strong></td>
+                    <td>Đoạn văn căn giữa nhưng bị cài đặt <span class="highlight-red">first_line_indent = 1.25 cm</span>, làm tiêu đề bị lệch hẳn sang phải tâm trang giấy.</td>
+                    <td>Đặt <code>first_line_indent = 0</code>, căn giữa chính xác tâm trang giấy. Bổ sung đường nét liền gạch chân trích yếu tên loại.</td>
+                </tr>
+                <tr>
+                    <td><strong>3. Tiêu đề Mục La Mã (I., II., III...)</strong></td>
+                    <td>Đang để Căn đều 2 lề (Justify) và thụt lề 1.25 cm.</td>
+                    <td>Phải là một dòng riêng, <strong>căn giữa (Center)</strong>, in hoa, đậm, không thụt đầu dòng.</td>
+                </tr>
+                <tr>
+                    <td><strong>4. Phần Chữ ký & Nơi nhận (Table 3)</strong></td>
+                    <td>Vẫn bỏ trống ngày tháng <em>("ngày    tháng    năm 2026")</em> và <span class="highlight-red">thiếu hoàn toàn ô Nơi nhận</span> ở góc dưới bên trái.</td>
+                    <td>Điền ngày cụ thể <strong>01/10/2026</strong>. Bổ sung khối <strong>Nơi nhận:</strong> ở góc dưới bên trái (Sở NN&MT, VPĐKĐĐ TP, UBND phường Thủ Dầu Một, BGĐ Chi nhánh, Lưu VT, HCTH).</td>
+                </tr>
+                <tr>
+                    <td><strong>5. Lỗi chính tả & số liệu bảng</strong></td>
+                    <td>Tại Bảng 2: STT 7 ghi <em>"Nghiep vụ bản đồ"</em> (thiếu dấu ê); STT 4 ghi số người là <code>4</code> (không đồng bộ 2 chữ số).</td>
+                    <td>Sửa thành: <strong>"Nghiệp vụ bản đồ"</strong>; đồng bộ số người thành <strong>04</strong>.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- PHẦN 4 -->
+        <div class="section-title">
+            <span class="badge-num">4</span>
+            Bảng số liệu chuẩn hóa khuyến nghị đưa vào Bảng đối chiếu
+        </div>
+
+        <table class="custom-table" style="font-size: 13px;">
+            <thead>
+                <tr style="background: #e2e8f0;">
+                    <th>Hạng mục diện tích</th>
+                    <th>Hiện trạng Chi nhánh đang quản lý</th>
+                    <th>Nhu cầu định mức theo NĐ 155 & TT 09</th>
+                    <th>Chênh lệch (Thiếu hụt)</th>
+                    <th>Tỷ lệ đáp ứng</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>1. Đất khuôn viên trụ sở</strong></td>
+                    <td>1.417,70 m² (số 358) + 1.276,20 m² (xin nhận)</td>
+                    <td>2.693,90 m²</td>
+                    <td>0,00 m²</td>
+                    <td>100% khi tiếp nhận xong</td>
+                </tr>
+                <tr>
+                    <td><strong>2. Diện tích phòng làm việc chức danh (85 người)</strong></td>
+                    <td>280,00 m²</td>
+                    <td>1.275,00 m² (60 lãnh đạo + 1.185 CV + 30 HĐLĐ)</td>
+                    <td><span class="highlight-red">-995,00 m²</span></td>
+                    <td>21,96%</td>
+                </tr>
+                <tr>
+                    <td><strong>3. Diện tích sử dụng chung toàn trụ sở</strong></td>
+                    <td>149,30 m² (nhà) + 200,00 m² (xe) = 349,30 m²</td>
+                    <td>1.083,75 m² (nhà) + 505,00 m² (xe) = 1.588,75 m²</td>
+                    <td><span class="highlight-red">-1.239,45 m²</span></td>
+                    <td>21,99%</td>
+                </tr>
+                <tr>
+                    <td><strong>4. Kho lưu trữ chuyên dùng địa chính</strong></td>
+                    <td>406,00 m² (lấp đầy 100%)</td>
+                    <td>900,00 m² (600 kho + 300 xử lý)</td>
+                    <td><span class="highlight-red">-494,00 m²</span></td>
+                    <td>45,11%</td>
+                </tr>
+                <tr style="background: #eff6ff; font-weight: 600;">
+                    <td>TỔNG CỘNG TOÀN TRỤ SỞ</td>
+                    <td>1.035,30 m² sàn hiện hữu</td>
+                    <td>3.763,75 m² sàn định mức</td>
+                    <td><span class="highlight-red">-2.728,45 m²</span></td>
+                    <td>27,51% định mức</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+    <div class="footer">
+        Báo cáo rà soát kỹ thuật được khởi tạo tự động phục vụ công tác hoàn thiện hồ sơ phương án sử dụng tài sản công — Chi nhánh Văn phòng Đăng ký đất đai số 23.
+    </div>
+</div>
+
+</body>
+</html>

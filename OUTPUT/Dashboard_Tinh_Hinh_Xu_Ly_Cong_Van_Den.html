@@ -1,0 +1,1773 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Tình Hình Xử Lý Công Văn Đến (05/10/2026 - 15/10/2026) - Chi Nhánh 23</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    :root {
+      --bg-page: #f8fafc;
+      --bg-card: #ffffff;
+      --bg-subtle: #f1f5f9;
+      --text-primary: #0f172a;
+      --text-secondary: #334155;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+      --border-strong: #cbd5e1;
+      --primary: #1d4ed8;
+      --primary-light: #3b82f6;
+      --primary-soft: #eff6ff;
+      --success: #059669;
+      --success-soft: #ecfdf5;
+      --success-border: #a7f3d0;
+      --warning: #d97706;
+      --warning-soft: #fffbeb;
+      --warning-border: #fde68a;
+      --danger: #dc2626;
+      --danger-soft: #fef2f2;
+      --danger-border: #fecaca;
+      --purple: #7c3aed;
+      --purple-soft: #f5f3ff;
+      --shadow-sm: 0 1px 2px 0 rgba(15, 23, 42, 0.05);
+      --shadow: 0 4px 6px -1px rgba(15, 23, 42, 0.06), 0 2px 4px -2px rgba(15, 23, 42, 0.04);
+      --shadow-md: 0 10px 15px -3px rgba(15, 23, 42, 0.08), 0 4px 6px -4px rgba(15, 23, 42, 0.04);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-page);
+      color: var(--text-primary);
+      line-height: 1.55;
+      padding-bottom: 3.5rem;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .mono {
+      font-family: "Fira Code", monospace;
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* Top Executive Header */
+    header {
+      background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 55%, #1d4ed8 100%);
+      color: #ffffff;
+      padding: 2rem 1.5rem 1.75rem;
+      border-bottom: 4px solid #38bdf8;
+      box-shadow: 0 4px 20px rgba(15, 23, 42, 0.15);
+    }
+
+    .container {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 0 1.25rem;
+    }
+
+    .header-top {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
+    .org-hierarchy {
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: #93c5fd;
+      margin-bottom: 0.45rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .badge-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      background: rgba(255, 255, 255, 0.14);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      padding: 0.2rem 0.65rem;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #e0f2fe;
+    }
+
+    h1 {
+      font-size: 1.85rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1.25;
+      margin-bottom: 0.4rem;
+    }
+
+    .header-subtitle {
+      font-size: 0.95rem;
+      color: #dbeafe;
+      max-width: 900px;
+    }
+
+    .header-actions {
+      display: flex;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0.55rem 1rem;
+      border-radius: 8px;
+      font-size: 0.825rem;
+      font-weight: 600;
+      cursor: pointer;
+      border: 1px solid transparent;
+      transition: all 0.15s ease;
+      text-decoration: none;
+      font-family: inherit;
+    }
+
+    .btn-glass {
+      background: rgba(255, 255, 255, 0.12);
+      border-color: rgba(255, 255, 255, 0.25);
+      color: #ffffff;
+    }
+    .btn-glass:hover {
+      background: rgba(255, 255, 255, 0.22);
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: #ffffff;
+    }
+    .btn-primary:hover {
+      background: #1e40af;
+    }
+
+    .btn-outline {
+      background: #ffffff;
+      border-color: var(--border-strong);
+      color: var(--text-secondary);
+    }
+    .btn-outline:hover {
+      background: var(--bg-subtle);
+    }
+
+    .header-meta-bar {
+      margin-top: 1.25rem;
+      padding-top: 1rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.15);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      font-size: 0.82rem;
+      color: #bfdbfe;
+    }
+
+    .meta-items {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.25rem;
+    }
+
+    .meta-item {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    /* Scope Mode Switcher */
+    .scope-switcher-wrap {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 0.85rem 1.25rem;
+      margin-top: 1.25rem;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .scope-label {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 0.875rem;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+
+    .scope-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      background: var(--bg-subtle);
+      padding: 0.3rem;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+    }
+
+    .scope-tab {
+      padding: 0.45rem 0.9rem;
+      border-radius: 7px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .scope-tab.active {
+      background: var(--primary);
+      color: #ffffff;
+      box-shadow: var(--shadow-sm);
+    }
+
+    /* KPI Summary Cards */
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(215px, 1fr));
+      gap: 1rem;
+      margin-top: 1.25rem;
+    }
+
+    .kpi-card {
+      background: var(--bg-card);
+      border-radius: 12px;
+      padding: 1.15rem 1.25rem;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .kpi-card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .kpi-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.76rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
+    }
+
+    .kpi-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+    }
+
+    .kpi-value {
+      font-size: 1.95rem;
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 0.35rem;
+    }
+
+    .kpi-sub {
+      font-size: 0.78rem;
+      color: var(--text-secondary);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.4rem;
+      flex-wrap: wrap;
+    }
+
+    /* Dual Macro Banner (Unit vs Van Thu vs Staff) */
+    .macro-overview-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin-top: 1.25rem;
+    }
+
+    @media (max-width: 1024px) {
+      .macro-overview-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .macro-card {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.1rem 1.25rem;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 0.75rem;
+    }
+
+    .macro-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+
+    .macro-title {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+
+    .macro-subtitle {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-top: 0.15rem;
+    }
+
+    .macro-stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.5rem;
+      background: var(--bg-page);
+      padding: 0.65rem;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      text-align: center;
+    }
+
+    .macro-stat-val {
+      font-size: 1.05rem;
+      font-weight: 800;
+    }
+
+    .macro-stat-lbl {
+      font-size: 0.68rem;
+      color: var(--text-muted);
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    /* Section Cards */
+    .section-title-bar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.75rem;
+      margin: 1.75rem 0 1rem;
+    }
+
+    .section-title {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--text-primary);
+      display: flex;
+      align-items: center;
+      gap: 0.55rem;
+    }
+
+    /* 3-Column Spotlight: Trễ - Chậm - Đúng Tiến Độ */
+    .spotlight-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+    }
+
+    @media (max-width: 1150px) {
+      .spotlight-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .spotlight-card {
+      background: #ffffff;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .spotlight-head {
+      padding: 1rem 1.25rem;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .spotlight-head h3 {
+      font-size: 0.95rem;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .spotlight-body {
+      padding: 1rem 1.25rem;
+      flex: 1;
+      max-height: 520px;
+      overflow-y: auto;
+    }
+
+    .person-item {
+      padding: 0.75rem;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      margin-bottom: 0.65rem;
+      background: #ffffff;
+      transition: background 0.15s;
+    }
+    .person-item:last-child {
+      margin-bottom: 0;
+    }
+    .person-item:hover {
+      background: var(--bg-page);
+    }
+
+    .person-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 0.5rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .person-name {
+      font-weight: 700;
+      font-size: 0.86rem;
+      color: var(--text-primary);
+    }
+
+    .person-metrics {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      font-size: 0.76rem;
+      color: var(--text-secondary);
+      margin-top: 0.35rem;
+    }
+
+    .metric-chip {
+      background: var(--bg-subtle);
+      padding: 0.15rem 0.5rem;
+      border-radius: 5px;
+      font-weight: 600;
+    }
+
+    /* Charts Grid */
+    .charts-grid {
+      display: grid;
+      grid-template-columns: 1.55fr 1fr;
+      gap: 1.25rem;
+      margin-top: 1.25rem;
+    }
+
+    @media (max-width: 1024px) {
+      .charts-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      padding: 1.25rem;
+    }
+
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.5rem;
+      padding-bottom: 0.85rem;
+      margin-bottom: 1rem;
+      border-bottom: 1px solid var(--bg-subtle);
+    }
+
+    .card-title {
+      font-size: 0.98rem;
+      font-weight: 800;
+      color: var(--text-primary);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    /* Filter & Table Controls */
+    .table-controls {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.85rem;
+      margin-bottom: 1rem;
+    }
+
+    .filter-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    .filter-pill {
+      padding: 0.4rem 0.75rem;
+      border-radius: 9999px;
+      font-size: 0.76rem;
+      font-weight: 600;
+      border: 1px solid var(--border-strong);
+      background: #ffffff;
+      color: var(--text-secondary);
+      cursor: pointer;
+      transition: all 0.15s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    .filter-pill:hover {
+      background: var(--bg-subtle);
+    }
+
+    .filter-pill.active {
+      background: var(--text-primary);
+      color: #ffffff;
+      border-color: var(--text-primary);
+    }
+
+    .search-sort-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      align-items: center;
+    }
+
+    .input-box {
+      padding: 0.48rem 0.85rem;
+      border: 1px solid var(--border-strong);
+      border-radius: 8px;
+      font-size: 0.82rem;
+      font-family: inherit;
+      background: #ffffff;
+      color: var(--text-primary);
+    }
+
+    .input-box:focus {
+      outline: none;
+      border-color: var(--primary-light);
+      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+    }
+
+    /* Main Data Table */
+    .table-wrapper {
+      overflow-x: auto;
+      max-height: 680px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.82rem;
+      text-align: left;
+    }
+
+    thead th {
+      position: sticky;
+      top: 0;
+      background: #f1f5f9;
+      color: var(--text-primary);
+      font-weight: 700;
+      padding: 0.65rem 0.75rem;
+      border-bottom: 1px solid var(--border-strong);
+      border-right: 1px solid var(--border);
+      z-index: 15;
+      white-space: nowrap;
+      user-select: none;
+    }
+
+    thead tr:nth-child(2) th {
+      top: 37px;
+      background: #f8fafc;
+      font-size: 0.74rem;
+      color: var(--text-secondary);
+      border-bottom: 2px solid var(--border-strong);
+    }
+
+    th.sortable {
+      cursor: pointer;
+    }
+    th.sortable:hover {
+      background: #e2e8f0;
+    }
+
+    tbody td {
+      padding: 0.6rem 0.75rem;
+      border-bottom: 1px solid var(--border);
+      border-right: 1px solid #f1f5f9;
+      vertical-align: middle;
+    }
+
+    tbody tr:hover {
+      background-color: #f0f9ff !important;
+    }
+
+    tr.row-unit {
+      background-color: #eff6ff;
+      font-weight: 700;
+    }
+
+    tr.row-vanthu {
+      background-color: #f0fdf4;
+    }
+
+    tr.row-overdue {
+      background-color: #fff1f2;
+    }
+
+    tfoot td {
+      position: sticky;
+      bottom: 0;
+      background: #0f172a;
+      color: #ffffff;
+      font-weight: 700;
+      padding: 0.75rem;
+      border-top: 2px solid #334155;
+      z-index: 15;
+    }
+
+    /* Multi-segment Progress Bar */
+    .multi-progress {
+      height: 8px;
+      width: 110px;
+      background: #e2e8f0;
+      border-radius: 999px;
+      overflow: hidden;
+      display: inline-flex;
+      vertical-align: middle;
+      margin-right: 0.45rem;
+    }
+
+    .mp-done { background: #10b981; height: 100%; }
+    .mp-doing { background: #3b82f6; height: 100%; }
+    .mp-unproc { background: #f59e0b; height: 100%; }
+    .mp-overdue { background: #ef4444; height: 100%; }
+
+    /* Status Badges */
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      padding: 0.22rem 0.6rem;
+      border-radius: 9999px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .badge-overdue {
+      background: var(--danger-soft);
+      color: var(--danger);
+      border: 1px solid var(--danger-border);
+    }
+
+    .badge-done100 {
+      background: var(--success-soft);
+      color: var(--success);
+      border: 1px solid var(--success-border);
+    }
+
+    .badge-good {
+      background: #eff6ff;
+      color: #1d4ed8;
+      border: 1px solid #bfdbfe;
+    }
+
+    .badge-slow {
+      background: var(--warning-soft);
+      color: var(--warning);
+      border: 1px solid var(--warning-border);
+    }
+
+    .badge-zero {
+      background: #f1f5f9;
+      color: #475569;
+      border: 1px solid #cbd5e1;
+    }
+
+    /* Audit Alert Box */
+    .audit-box {
+      background: #fffbeb;
+      border: 1px solid #fde68a;
+      border-left: 5px solid #d97706;
+      border-radius: 10px;
+      padding: 1rem 1.25rem;
+      margin-top: 1.5rem;
+      font-size: 0.84rem;
+      color: #78350f;
+    }
+
+    .audit-box h4 {
+      font-size: 0.92rem;
+      font-weight: 800;
+      color: #92400e;
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+    }
+
+    .audit-list {
+      margin-left: 1.25rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+      gap: 0.4rem 1.5rem;
+    }
+
+    @media print {
+      .no-print { display: none !important; }
+      .table-wrapper, .spotlight-body { max-height: none !important; overflow: visible !important; }
+      body { background: #ffffff; padding-bottom: 0; }
+      .card, .kpi-card, .spotlight-card { box-shadow: none !important; break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="container">
+      <div class="header-top">
+        <div>
+          <div class="org-hierarchy">
+            <span><i class="fa-solid fa-building-shield"></i> SỞ NÔNG NGHIỆP VÀ MÔI TRƯỜNG TP. HỒ CHÍ MINH</span>
+            <span>&bull;</span>
+            <span>CHI NHÁNH VĂN PHÒNG ĐĂNG KÝ ĐẤT ĐAI SỐ 23</span>
+            <span class="badge-pill"><i class="fa-solid fa-file-excel"></i> TINHHINHXULYCONGVANDEN_20261015112745.xlsx</span>
+          </div>
+          <h1>DASHBOARD TÌNH HÌNH XỬ LÝ CÔNG VĂN ĐẾN</h1>
+          <p class="header-subtitle">
+            Phân tích trực quan tiến độ thụ lý, cảnh báo hồ sơ quá hạn, điểm nghẽn tồn đọng và xếp hạng hiệu suất thực thi của 75 cán bộ, nhân viên cùng Bộ phận Văn thư &amp; Cấp Đơn vị.
+          </p>
+        </div>
+        <div class="header-actions no-print">
+          <button class="btn btn-glass" onclick="window.print()">
+            <i class="fa-solid fa-print"></i> In / Xuất PDF
+          </button>
+          <a href="Dashboard_TienDo_QLVB_GiamDoc_Thang.html" class="btn btn-glass">
+            <i class="fa-solid fa-chart-line"></i> Dashboard KH 9999
+          </a>
+          <a href="index.html" class="btn btn-glass">
+            <i class="fa-solid fa-house"></i> Trang Chủ IT
+          </a>
+        </div>
+      </div>
+
+      <div class="header-meta-bar">
+        <div class="meta-items">
+          <div class="meta-item"><i class="fa-regular fa-calendar-check"></i> <strong>Kỳ thống kê:</strong> Từ ngày 05/10/2026 đến ngày 15/10/2026 (10 ngày)</div>
+          <div class="meta-item"><i class="fa-regular fa-clock"></i> <strong>Thời điểm trích xuất:</strong> 15/10/2026 11:27:45</div>
+          <div class="meta-item"><i class="fa-solid fa-users-viewfinder"></i> <strong>Quy mô dữ liệu:</strong> 77 dòng (01 Đơn vị + 01 Văn thư + 75 Cán bộ)</div>
+        </div>
+        <div>
+          <span class="badge-pill" style="background: rgba(16, 185, 129, 0.2); border-color: rgba(16, 185, 129, 0.4); color: #a7f3d0;">
+            <i class="fa-solid fa-check-double"></i> Đã kiểm tra chéo Toán học 100% (77/77 dòng khớp tuyệt đối)
+          </span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+
+    <!-- 3-LEVEL MACRO OVERVIEW BANNER -->
+    <div class="macro-overview-grid">
+      <!-- Level 1: Cấp Đơn Vị -->
+      <div class="macro-card" style="border-top: 4px solid #1d4ed8;">
+        <div class="macro-header">
+          <div>
+            <div class="macro-title"><i class="fa-solid fa-building-columns" style="color: #1d4ed8;"></i> 1. CẤP ĐƠN VỊ (Dòng 10 Excel)</div>
+            <div class="macro-subtitle">CHI NHÁNH VĂN PHÒNG ĐĂNG KÝ ĐẤT ĐAI SỐ 23</div>
+          </div>
+          <span class="status-badge badge-overdue">2 CV Quá hạn</span>
+        </div>
+        <div class="macro-stats">
+          <div>
+            <div class="macro-stat-val mono" style="color: #0f172a;">636</div>
+            <div class="macro-stat-lbl">Tổng CV</div>
+          </div>
+          <div>
+            <div class="macro-stat-val mono" style="color: #059669;">333</div>
+            <div class="macro-stat-lbl">Hoàn tất (52.4%)</div>
+          </div>
+          <div>
+            <div class="macro-stat-val mono" style="color: #2563eb;">140</div>
+            <div class="macro-stat-lbl">Đang XL (22.0%)</div>
+          </div>
+          <div>
+            <div class="macro-stat-val mono" style="color: #d97706;">163</div>
+            <div class="macro-stat-lbl">Chưa XL (25.6%)</div>
+          </div>
+        </div>
+        <div style="font-size: 0.75rem; color: var(--text-secondary);">
+          <i class="fa-solid fa-circle-info" style="color: #1d4ed8;"></i> Trong hạn: <strong>634</strong> CV (99.69%) &bull; Quá hạn: <strong>02</strong> CV (01 Chưa XL quá hạn, 01 Đã hoàn tất quá hạn).
+        </div>
+      </div>
+
+      <!-- Level 2: Bộ phận Văn thư -->
+      <div class="macro-card" style="border-top: 4px solid #059669;">
+        <div class="macro-header">
+          <div>
+            <div class="macro-title"><i class="fa-solid fa-inbox" style="color: #059669;"></i> 2. BỘ PHẬN VĂN THƯ (Dòng 76 Excel)</div>
+            <div class="macro-subtitle">Tiếp nhận, vào sổ &amp; phân chuyển công văn đến</div>
+          </div>
+          <span class="status-badge badge-done100">100% Đúng hạn</span>
+        </div>
+        <div class="macro-stats">
+          <div>
+            <div class="macro-stat-val mono" style="color: #0f172a;">647</div>
+            <div class="macro-stat-lbl">Tổng CV</div>
+          </div>
+          <div>
+            <div class="macro-stat-val mono" style="color: #059669;">647</div>
+            <div class="macro-stat-lbl">Hoàn tất (100%)</div>
+          </div>
+          <div>
+            <div class="macro-stat-val mono" style="color: #64748b;">0</div>
+            <div class="macro-stat-lbl">Đang XL (0%)</div>
+          </div>
+          <div>
+            <div class="macro-stat-val mono" style="color: #64748b;">0</div>
+            <div class="macro-stat-lbl">Chưa XL (0%)</div>
+          </div>
+        </div>
+        <div style="font-size: 0.75rem; color: var(--text-secondary);">
+          <i class="fa-solid fa-circle-check" style="color: #059669;"></i> Đã phân chuyển hoàn tất <strong>647/647</strong> công văn trong hạn, không để tồn đọng tại khâu Văn thư.
+        </div>
+      </div>
+
+      <!-- Level 3: Khối 75 Cán bộ cá nhân -->
+      <div class="macro-card" style="border-top: 4px solid #7c3aed;">
+        <div class="macro-header">
+          <div>
+            <div class="macro-title"><i class="fa-solid fa-users-gear" style="color: #7c3aed;"></i> 3. KHỐI 75 CÁN BỘ THỤ LÝ (75 Dòng cá nhân)</div>
+            <div class="macro-subtitle">Tổng lượt công văn phân công qua các cấp Lãnh đạo &amp; Chuyên viên</div>
+          </div>
+          <span class="status-badge badge-overdue">4 Lượt Quá hạn</span>
+        </div>
+        <div class="macro-stats">
+          <div>
+            <div class="macro-stat-val mono" style="color: #0f172a;">1,963</div>
+            <div class="macro-stat-lbl">Tổng Lượt CV</div>
+          </div>
+          <div>
+            <div class="macro-stat-val mono" style="color: #059669;">1,195</div>
+            <div class="macro-stat-lbl">Hoàn tất (60.9%)</div>
+          </div>
+          <div>
+            <div class="macro-stat-val mono" style="color: #2563eb;">155</div>
+            <div class="macro-stat-lbl">Đang XL (7.9%)</div>
+          </div>
+          <div>
+            <div class="macro-stat-val mono" style="color: #d97706;">613</div>
+            <div class="macro-stat-lbl">Chưa XL (31.2%)</div>
+          </div>
+        </div>
+        <div style="font-size: 0.75rem; color: var(--text-secondary);">
+          <i class="fa-solid fa-triangle-exclamation" style="color: #d97706;"></i> Tổng tồn đọng (Chưa XL + Đang XL): <strong>768 lượt CV</strong> &bull; Có <strong>30/75</strong> cá nhân chưa hoàn tất CV nào (0%).
+        </div>
+      </div>
+    </div>
+
+    <!-- SCOPE SWITCHER FOR KPI CARDS -->
+    <div class="scope-switcher-wrap no-print">
+      <div class="scope-label">
+        <i class="fa-solid fa-sliders" style="color: var(--primary);"></i>
+        <span>CHẾ ĐỘ HIỂN THỊ CHỈ SỐ KPI TỔNG HỢP:</span>
+      </div>
+      <div class="scope-tabs">
+        <button class="scope-tab active" id="scope-staff" onclick="setScope('staff')">
+          <i class="fa-solid fa-user-check"></i> 75 Cán bộ Cá nhân (1.963 lượt CV)
+        </button>
+        <button class="scope-tab" id="scope-unit" onclick="setScope('unit')">
+          <i class="fa-solid fa-building"></i> Cấp Đơn vị Chi nhánh 23 (636 CV)
+        </button>
+        <button class="scope-tab" id="scope-all" onclick="setScope('all')">
+          <i class="fa-solid fa-table-list"></i> Toàn bộ 77 dòng Excel (3.246 lượt CV)
+        </button>
+      </div>
+    </div>
+
+    <!-- DYNAMIC KPI SUMMARY GRID -->
+    <div class="kpi-grid">
+      <div class="kpi-card" style="border-left: 4px solid #1d4ed8;">
+        <div class="kpi-top">
+          <span id="kpi-lbl-total">TỔNG LƯỢT CÔNG VĂN (75 CB)</span>
+          <div class="kpi-icon" style="background: #eff6ff; color: #1d4ed8;"><i class="fa-solid fa-file-signature"></i></div>
+        </div>
+        <div class="kpi-value mono" id="kpi-val-total">1,963</div>
+        <div class="kpi-sub">
+          <span id="kpi-sub-total">Trong hạn: <strong>1,959</strong> (99.80%)</span>
+        </div>
+      </div>
+
+      <div class="kpi-card" style="border-left: 4px solid #059669;">
+        <div class="kpi-top">
+          <span>ĐÃ HOÀN TẤT</span>
+          <div class="kpi-icon" style="background: #ecfdf5; color: #059669;"><i class="fa-solid fa-circle-check"></i></div>
+        </div>
+        <div class="kpi-value mono" style="color: #059669;" id="kpi-val-done">1,195</div>
+        <div class="kpi-sub">
+          <span id="kpi-sub-done">Tỷ lệ: <strong>60.88%</strong> (Đúng hạn: 1,193 | Trễ: 2)</span>
+        </div>
+      </div>
+
+      <div class="kpi-card" style="border-left: 4px solid #2563eb;">
+        <div class="kpi-top">
+          <span>ĐANG XỬ LÝ</span>
+          <div class="kpi-icon" style="background: #eff6ff; color: #2563eb;"><i class="fa-solid fa-spinner"></i></div>
+        </div>
+        <div class="kpi-value mono" style="color: #2563eb;" id="kpi-val-doing">155</div>
+        <div class="kpi-sub">
+          <span id="kpi-sub-doing">Tỷ lệ: <strong>7.90%</strong> (Trong hạn: 154 | Quá hạn: 1)</span>
+        </div>
+      </div>
+
+      <div class="kpi-card" style="border-left: 4px solid #d97706;">
+        <div class="kpi-top">
+          <span>CHƯA XỬ LÝ (TỒN CHỜ)</span>
+          <div class="kpi-icon" style="background: #fffbeb; color: #d97706;"><i class="fa-solid fa-hourglass-half"></i></div>
+        </div>
+        <div class="kpi-value mono" style="color: #d97706;" id="kpi-val-unproc">613</div>
+        <div class="kpi-sub">
+          <span id="kpi-sub-unproc">Tỷ lệ: <strong>31.23%</strong> (Trong hạn: 612 | Quá hạn: 1)</span>
+        </div>
+      </div>
+
+      <div class="kpi-card" style="border-left: 4px solid #dc2626;">
+        <div class="kpi-top">
+          <span>CÔNG VĂN QUÁ HẠN (TRỄ)</span>
+          <div class="kpi-icon" style="background: #fef2f2; color: #dc2626;"><i class="fa-solid fa-bell"></i></div>
+        </div>
+        <div class="kpi-value mono" style="color: #dc2626;" id="kpi-val-overdue">4</div>
+        <div class="kpi-sub">
+          <span id="kpi-sub-overdue"><strong>4 cá nhân</strong> có CV quá hạn (1 Chưa XL, 1 Đang XL, 2 Đã HT)</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================================================================= -->
+    <!-- SPOTLIGHT 3 COLUMNS: AI TRỄ - AI CHẬM - AI HOÀN THÀNH ĐÚNG TIẾN ĐỘ -->
+    <!-- ================================================================= -->
+    <div class="section-title-bar">
+      <div class="section-title">
+        <i class="fa-solid fa-bullseye" style="color: var(--danger);"></i>
+        <span>PHÂN TÍCH TRỌNG TÂM: AI TRỄ HẠN &bull; AI CHẬM / TỒN ĐỌNG &bull; AI ĐÚNG TIẾN ĐỘ</span>
+      </div>
+      <div style="font-size: 0.8rem; color: var(--text-muted);">
+        Bấm vào từng thẻ hoặc sử dụng bộ lọc bên dưới để xem chi tiết từng cán bộ
+      </div>
+    </div>
+
+    <div class="spotlight-grid">
+      
+      <!-- CỘT 1: AI TRỄ (QUÁ HẠN > 0) -->
+      <div class="spotlight-card" style="border-top: 4px solid var(--danger);">
+        <div class="spotlight-head" style="background: #fef2f2;">
+          <h3 style="color: #991b1b;">
+            <i class="fa-solid fa-triangle-exclamation" style="color: var(--danger);"></i>
+            1. AI TRỄ HẠN? (CÓ CÔNG VĂN QUÁ HẠN)
+          </h3>
+          <span class="status-badge badge-overdue">04 Cá nhân + 01 Đơn vị</span>
+        </div>
+        <div class="spotlight-body">
+          <p style="font-size: 0.78rem; color: #7f1d1d; background: #fee2e2; padding: 0.6rem 0.75rem; border-radius: 6px; margin-bottom: 0.75rem;">
+            <strong>Cảnh báo đỏ:</strong> Toàn bảng có <strong>06 lượt quá hạn</strong> (02 ở dòng Cấp Đơn vị và 04 ở 4 cá nhân). Trong đó nguy cấp nhất là <strong>Chưa xử lý - Quá hạn</strong> và <strong>Đang xử lý - Quá hạn</strong>:
+          </p>
+
+          <!-- 1. Nguyễn Chiến Thắng -->
+          <div class="person-item" style="border-left: 4px solid #dc2626; background: #fff5f5;">
+            <div class="person-top">
+              <div>
+                <div class="person-name">1. Nguyễn Chiến Thắng <span style="font-size:0.72rem; color:#64748b; font-weight:500;">(Dòng 52)</span></div>
+                <div style="font-size: 0.74rem; color: #b91c1c; font-weight: 700; margin-top: 2px;">
+                  🔴 Có 01 CV "Chưa xử lý - Quá hạn" (Chưa chạm tới &amp; đã trễ!)
+                </div>
+              </div>
+              <span class="status-badge badge-overdue">Quá hạn: 1 CV</span>
+            </div>
+            <div class="person-metrics">
+              <span class="metric-chip">Tổng: <strong class="mono">189</strong></span>
+              <span class="metric-chip" style="color:#dc2626; background:#fee2e2;">Chưa XL: <strong class="mono">48</strong> (1 QH)</span>
+              <span class="metric-chip">Đang XL: <strong class="mono">1</strong></span>
+              <span class="metric-chip" style="color:#059669;">Đã HT: <strong class="mono">140</strong> (74.1%)</span>
+            </div>
+          </div>
+
+          <!-- 2. NGUYỄN TIẾN THỊNH -->
+          <div class="person-item" style="border-left: 4px solid #dc2626; background: #fff5f5;">
+            <div class="person-top">
+              <div>
+                <div class="person-name">2. NGUYỄN TIẾN THỊNH <span style="font-size:0.72rem; color:#64748b; font-weight:500;">(Dòng 46)</span></div>
+                <div style="font-size: 0.74rem; color: #b91c1c; font-weight: 700; margin-top: 2px;">
+                  🔴 Có 01 CV "Đang xử lý - Quá hạn" + Tồn 35 CV chưa xử lý (62.5%)
+                </div>
+              </div>
+              <span class="status-badge badge-overdue">Quá hạn: 1 CV</span>
+            </div>
+            <div class="person-metrics">
+              <span class="metric-chip">Tổng: <strong class="mono">56</strong></span>
+              <span class="metric-chip" style="color:#d97706;">Chưa XL: <strong class="mono">35</strong></span>
+              <span class="metric-chip" style="color:#dc2626; background:#fee2e2;">Đang XL: <strong class="mono">1</strong> (1 QH)</span>
+              <span class="metric-chip" style="color:#059669;">Đã HT: <strong class="mono">20</strong> (35.7%)</span>
+            </div>
+          </div>
+
+          <!-- 3. Nguyễn Tuấn Kiệt -->
+          <div class="person-item" style="border-left: 4px solid #f59e0b;">
+            <div class="person-top">
+              <div>
+                <div class="person-name">3. Nguyễn Tuấn Kiệt <span style="font-size:0.72rem; color:#64748b; font-weight:500;">(Dòng 56)</span></div>
+                <div style="font-size: 0.74rem; color: #b45309; font-weight: 700; margin-top: 2px;">
+                  🟠 Có 01 CV "Đã hoàn tất - Quá hạn" + Ôm tồn đọng lớn nhất (168 CV)
+                </div>
+              </div>
+              <span class="status-badge badge-overdue">HT trễ: 1 CV</span>
+            </div>
+            <div class="person-metrics">
+              <span class="metric-chip">Tổng: <strong class="mono">259</strong></span>
+              <span class="metric-chip" style="color:#d97706;">Chưa XL: <strong class="mono">46</strong></span>
+              <span class="metric-chip" style="color:#2563eb;">Đang XL: <strong class="mono">122</strong></span>
+              <span class="metric-chip" style="color:#059669;">Đã HT: <strong class="mono">91</strong> (1 QH &bull; 35.1%)</span>
+            </div>
+          </div>
+
+          <!-- 4. TRẦN THANH TRIẾT -->
+          <div class="person-item" style="border-left: 4px solid #f59e0b;">
+            <div class="person-top">
+              <div>
+                <div class="person-name">4. TRẦN THANH TRIẾT <span style="font-size:0.72rem; color:#64748b; font-weight:500;">(Dòng 69)</span></div>
+                <div style="font-size: 0.74rem; color: #b45309; font-weight: 700; margin-top: 2px;">
+                  🟠 Có 01 CV "Đã hoàn tất - Quá hạn" (Tỷ lệ hoàn tất đạt 88.9%)
+                </div>
+              </div>
+              <span class="status-badge badge-overdue">HT trễ: 1 CV</span>
+            </div>
+            <div class="person-metrics">
+              <span class="metric-chip">Tổng: <strong class="mono">27</strong></span>
+              <span class="metric-chip">Chưa XL: <strong class="mono">2</strong></span>
+              <span class="metric-chip">Đang XL: <strong class="mono">1</strong></span>
+              <span class="metric-chip" style="color:#059669;">Đã HT: <strong class="mono">24</strong> (1 QH &bull; 88.9%)</span>
+            </div>
+          </div>
+
+          <!-- 5. Cấp Đơn vị Chi nhánh 23 -->
+          <div class="person-item" style="border-left: 4px solid #1d4ed8; background: #eff6ff;">
+            <div class="person-top">
+              <div>
+                <div class="person-name">5. CHI NHÁNH VPĐKĐĐ SỐ 23 <span style="font-size:0.72rem; color:#1e40af; font-weight:600;">(Dòng 10 - Đơn vị)</span></div>
+                <div style="font-size: 0.74rem; color: #1e40af; font-weight: 600; margin-top: 2px;">
+                  🏛️ Tổng hợp cấp đơn vị: 01 Chưa XL quá hạn + 01 Đã HT quá hạn
+                </div>
+              </div>
+              <span class="status-badge badge-overdue">Quá hạn: 2 CV</span>
+            </div>
+            <div class="person-metrics">
+              <span class="metric-chip">Tổng: <strong class="mono">636</strong></span>
+              <span class="metric-chip">Chưa XL: <strong class="mono">163</strong> (1 QH)</span>
+              <span class="metric-chip">Đang XL: <strong class="mono">140</strong></span>
+              <span class="metric-chip">Đã HT: <strong class="mono">333</strong> (1 QH &bull; 52.4%)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CỘT 2: AI CHẬM / TỒN ĐỌNG NHIỀU / 0% HOÀN THÀNH -->
+      <div class="spotlight-card" style="border-top: 4px solid var(--warning);">
+        <div class="spotlight-head" style="background: #fffbeb;">
+          <h3 style="color: #92400e;">
+            <i class="fa-solid fa-hourglass-end" style="color: var(--warning);"></i>
+            2. AI CHẬM? (TỒN ĐỌNG LỚN &amp; 0% HOÀN TẤT)
+          </h3>
+          <span class="status-badge badge-slow">16 Chậm + 30 Chưa làm (0%)</span>
+        </div>
+        <div class="spotlight-body">
+          <p style="font-size: 0.78rem; color: #92400e; background: #fef3c7; padding: 0.6rem 0.75rem; border-radius: 6px; margin-bottom: 0.75rem;">
+            <strong>Điểm nghẽn tồn đọng:</strong> Dù hệ thống ghi nhận "Trong hạn", nhưng nhiều cá nhân đang ứ đọng số lượng lớn công văn <strong>Chưa xử lý / Đang xử lý</strong> hoặc <strong>0% hoàn thành</strong>:
+          </p>
+
+          <div class="person-item" style="border-left: 4px solid #d97706;">
+            <div class="person-top">
+              <div class="person-name">1. Nguyễn Tuấn Kiệt <span style="font-size:0.72rem; color:#64748b;">(Tồn 168/259 CV)</span></div>
+              <span class="status-badge badge-slow">HT: 35.14%</span>
+            </div>
+            <div class="person-metrics">
+              <span class="metric-chip" style="color:#d97706;">Chưa XL: <strong class="mono">46</strong></span>
+              <span class="metric-chip" style="color:#2563eb;">Đang XL: <strong class="mono">122</strong></span>
+              <span class="metric-chip">Đã HT: <strong class="mono">91/259</strong></span>
+            </div>
+          </div>
+
+          <div class="person-item" style="border-left: 4px solid #d97706;">
+            <div class="person-top">
+              <div class="person-name">2. HỒ LÊ THANH VŨ <span style="font-size:0.72rem; color:#64748b;">(Tồn 91/123 CV)</span></div>
+              <span class="status-badge badge-slow">HT: 26.02%</span>
+            </div>
+            <div class="person-metrics">
+              <span class="metric-chip" style="color:#dc2626; background:#fee2e2;">Chưa XL: <strong class="mono">91</strong> (74% chưa mở!)</span>
+              <span class="metric-chip">Đang XL: <strong class="mono">0</strong></span>
+              <span class="metric-chip">Đã HT: <strong class="mono">32/123</strong></span>
+            </div>
+          </div>
+
+          <div class="person-item" style="border-left: 4px solid #dc2626;">
+            <div class="person-top">
+              <div class="person-name">3. NGUYỄN TRẦN THẢO VY <span style="font-size:0.72rem; color:#64748b;">(Tồn 68/68 CV)</span></div>
+              <span class="status-badge badge-overdue">HT: 0.00%</span>
+            </div>
+            <div class="person-metrics">
+              <span class="metric-chip" style="color:#dc2626; background:#fee2e2;">Chưa XL: <strong class="mono">68/68</strong> (100% chưa xử lý!)</span>
+              <span class="metric-chip">Đã HT: <strong class="mono">0</strong></span>
+            </div>
+          </div>
+
+          <div class="person-item" style="border-left: 4px solid #d97706;">
+            <div class="person-top">
+              <div class="person-name">4. HUỲNH THỊ ÁI NHI <span style="font-size:0.72rem; color:#64748b;">(Tồn 43/69 CV)</span></div>
+              <span class="status-badge badge-slow">HT: 37.68%</span>
+            </div>
+            <div class="person-metrics">
+              <span class="metric-chip" style="color:#d97706;">Chưa XL: <strong class="mono">41</strong></span>
+              <span class="metric-chip">Đang XL: <strong class="mono">2</strong></span>
+              <span class="metric-chip">Đã HT: <strong class="mono">26/69</strong></span>
+            </div>
+          </div>
+
+          <div class="person-item" style="border-left: 4px solid #d97706;">
+            <div class="person-top">
+              <div class="person-name">5. LÊ SƠN THANH <span style="font-size:0.72rem; color:#64748b;">(Tồn 37/60 CV)</span></div>
+              <span class="status-badge badge-slow">HT: 38.33%</span>
+            </div>
+            <div class="person-metrics">
+              <span class="metric-chip" style="color:#d97706;">Chưa XL: <strong class="mono">30</strong></span>
+              <span class="metric-chip">Đang XL: <strong class="mono">7</strong></span>
+              <span class="metric-chip">Đã HT: <strong class="mono">23/60</strong></span>
+            </div>
+          </div>
+
+          <div class="person-item" style="border-left: 4px solid #d97706;">
+            <div class="person-top">
+              <div class="person-name">6. NGUYỄN VĂN KHÁNH <span style="font-size:0.72rem; color:#64748b;">(Tồn 35/58 CV)</span></div>
+              <span class="status-badge badge-slow">HT: 39.66%</span>
+            </div>
+            <div class="person-metrics">
+              <span class="metric-chip" style="color:#d97706;">Chưa XL: <strong class="mono">35</strong></span>
+              <span class="metric-chip">Đang XL: <strong class="mono">0</strong></span>
+              <span class="metric-chip">Đã HT: <strong class="mono">23/58</strong></span>
+            </div>
+          </div>
+
+          <div class="person-item" style="border-left: 4px solid #64748b; background: #f8fafc;">
+            <div class="person-top">
+              <div class="person-name">7. Nhóm 29 cá nhân khác có Đã hoàn tất = 0 (0%)</div>
+              <span class="status-badge badge-zero">0% Hoàn tất</span>
+            </div>
+            <div style="font-size: 0.74rem; color: var(--text-secondary); margin-top: 4px; line-height: 1.45;">
+              &bull; <strong>Mức tồn 6 CV (04 người):</strong> Nguyễn Anh Khôi, Nguyễn Thị Dáng, Nguyễn Thị Lệ Thu, Trần Nguyễn Hoài Lam.<br>
+              &bull; <strong>Mức tồn 4 CV (05 người):</strong> Nguyễn Hoàng Duy, Nguyễn Thị Trúc Phương, Quản Nguyễn Thảo Nguyên (2 Đang XL), Trương Ngô Hồng Duyên, Trần Quốc Hưng.<br>
+              &bull; <strong>Mức tồn 3 CV (20 người):</strong> Lê Thanh Vũ, Lê Thế Duy, Lưu Văn Tuấn, Nguyên Hoàng Xuân, Nguyễn Thanh Sang, Nguyễn Duy Tấn, Nguyễn Quốc Danh, Ngô Thị Cẩm Thúy, Phạm Hoàng Oanh, Phạm Thành Vũ, Phạm Trần Hồng Như, Trần Minh Dũng, Trần Văn Đông, Võ Văn Tình, Vương Ánh Xuân, Ân Văn Tuấn, Đoàn Văn Sang, Đoàn Thanh Phong, Đỗ Hoàng Tài, Đỗ Văn Đông.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CỘT 3: AI HOÀN THÀNH ĐÚNG TIẾN ĐỘ / NĂNG SUẤT CAO -->
+      <div class="spotlight-card" style="border-top: 4px solid var(--success);">
+        <div class="spotlight-head" style="background: #ecfdf5;">
+          <h3 style="color: #065f46;">
+            <i class="fa-solid fa-trophy" style="color: var(--success);"></i>
+            3. AI ĐÚNG TIẾN ĐỘ &amp; NĂNG SUẤT CAO?
+          </h3>
+          <span class="status-badge badge-done100">19 Đạt 100% + 07 Khá/Tốt</span>
+        </div>
+        <div class="spotlight-body">
+          <p style="font-size: 0.78rem; color: #065f46; background: #d1fae5; padding: 0.6rem 0.75rem; border-radius: 6px; margin-bottom: 0.75rem;">
+            <strong>Điểm sáng thực thi:</strong> Có <strong>19 tập thể/cá nhân hoàn thành tuyệt đối 100% đúng hạn</strong> (0 tồn đọng) và <strong>07 cá nhân thụ lý khối lượng lớn đạt tiến độ cao (&ge;70%)</strong>:
+          </p>
+
+          <!-- Top High Volume & High Rate -->
+          <div class="person-item" style="border-left: 4px solid #059669; background: #f0fdf4;">
+            <div class="person-top">
+              <div>
+                <div class="person-name">1. Bộ phận Văn thư &amp; ĐẶNG HUY CƯỜNG</div>
+                <div style="font-size: 0.74rem; color: #047857; font-weight: 600; margin-top: 2px;">
+                  🌟 Xử lý khối lượng cực lớn với tỷ lệ hoàn tất 99.3% – 100% đúng hạn
+                </div>
+              </div>
+              <span class="status-badge badge-done100">99.3% - 100%</span>
+            </div>
+            <div class="person-metrics">
+              <span class="metric-chip" style="color:#059669;">Văn thư: <strong class="mono">647/647</strong> (100%)</span>
+              <span class="metric-chip" style="color:#059669;">Đặng Huy Cường: <strong class="mono">135/136</strong> (99.26% &bull; 1 Đang XL)</span>
+            </div>
+          </div>
+
+          <div class="person-item" style="border-left: 4px solid #059669;">
+            <div class="person-top">
+              <div>
+                <div class="person-name">2. HUỲNH TẤN NGUYÊN &amp; Nguyễn Ngọc Quế Trân</div>
+                <div style="font-size: 0.74rem; color: #047857; font-weight: 600; margin-top: 2px;">
+                  🌟 2 cá nhân có số lượng CV hoàn tất đúng hạn cao nhất đơn vị
+                </div>
+              </div>
+              <span class="status-badge badge-good">&gt; 80% Đúng hạn</span>
+            </div>
+            <div class="person-metrics">
+              <span class="metric-chip" style="color:#059669;">Huỳnh Tấn Nguyên: <strong class="mono">181/214</strong> (84.58%)</span>
+              <span class="metric-chip" style="color:#059669;">Quế Trân: <strong class="mono">164/203</strong> (80.79%)</span>
+            </div>
+          </div>
+
+          <div class="person-item" style="border-left: 4px solid #10b981;">
+            <div class="person-top">
+              <div class="person-name">3. Top Hoàn thành Tuyệt đối 100% (Khối lượng từ 11 – 49 CV)</div>
+              <span class="status-badge badge-done100">100% Đúng hạn</span>
+            </div>
+            <div class="person-metrics">
+              <span class="metric-chip">Nguyễn Thành Như Bảo: <strong class="mono">49/49</strong></span>
+              <span class="metric-chip">Nguyễn Thị Lệ Hằng: <strong class="mono">39/39</strong></span>
+              <span class="metric-chip">Lê Ngọc Bảo Ngân: <strong class="mono">37/37</strong></span>
+              <span class="metric-chip">Nguyên Thị Huỳnh Mai: <strong class="mono">34/34</strong></span>
+              <span class="metric-chip">Nguyễn Thị Bích Tuyền: <strong class="mono">16/16</strong></span>
+              <span class="metric-chip">Nguyễn Thị Thu Minh: <strong class="mono">11/11</strong></span>
+            </div>
+          </div>
+
+          <div class="person-item" style="border-left: 4px solid #10b981;">
+            <div class="person-top">
+              <div class="person-name">4. Nhóm 12 cá nhân Hoàn thành 100% Đúng hạn (Từ 3 – 9 CV)</div>
+              <span class="status-badge badge-done100">100% Đúng hạn</span>
+            </div>
+            <div style="font-size: 0.74rem; color: var(--text-secondary); margin-top: 4px; line-height: 1.45;">
+              &bull; <strong>Võ Phi Trúc</strong> (9/9), <strong>Nguyễn Thanh Điền</strong> (7/7).<br>
+              &bull; <strong>Mức 6/6 CV (5 người):</strong> Nguyễn Bích Ngọc, Nguyễn Nhật Quyền Trinh, Nguyễn Thị Ngọc Thảo, Nguyễn Trung Thành, Phạm Thị Yến Nhi.<br>
+              &bull; <strong>Mức 4/4 &amp; 3/3 CV (5 người):</strong> Hồ Thị Hồng Linh (4/4), Nguyễn Khánh Duy (4/4), Đặng Thị Tuyết Trinh (4/4), Lê Quang Khoa (3/3), Nguyễn Tuấn Anh (3/3).
+            </div>
+          </div>
+
+          <div class="person-item" style="border-left: 4px solid #3b82f6;">
+            <div class="person-top">
+              <div class="person-name">5. Nhóm Tiến độ Tốt (&ge; 70% hoàn thành, 0 quá hạn)</div>
+              <span class="status-badge badge-good">71% - 83%</span>
+            </div>
+            <div class="person-metrics">
+              <span class="metric-chip">Nguyễn Thị Thùy Trang: <strong class="mono">24/30</strong> (80.0%)</span>
+              <span class="metric-chip">Trần Thị Thùy Trang: <strong class="mono">5/6</strong> (83.3%)</span>
+              <span class="metric-chip">Đỗ Thị Yến: <strong class="mono">5/6</strong> (83.3%)</span>
+              <span class="metric-chip">Nguyễn Thảo Tuyết Nhi: <strong class="mono">5/7</strong> (71.4%)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ================================================================= -->
+    <!-- VISUAL CHARTS SECTION -->
+    <!-- ================================================================= -->
+    <div class="charts-grid">
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">
+            <i class="fa-solid fa-chart-bar" style="color: var(--primary);"></i>
+            <span>TOP 15 CÁN BỘ CÓ KHỐI LƯỢNG CÔNG VĂN LỚN NHẤT (PHÂN TÁCH TRẠNG THÁI)</span>
+          </div>
+          <span style="font-size: 0.75rem; color: var(--text-muted);">Đơn vị: Số công văn</span>
+        </div>
+        <div style="height: 410px; position: relative;">
+          <canvas id="topVolumeChart"></canvas>
+        </div>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+        <div class="card" style="flex: 1;">
+          <div class="card-header">
+            <div class="card-title">
+              <i class="fa-solid fa-chart-pie" style="color: var(--purple);"></i>
+              <span>PHÂN NHÓM 75 CÁN BỘ THEO TIẾN ĐỘ THỰC THI</span>
+            </div>
+            <span style="font-size: 0.75rem; color: var(--text-muted);">75 Cá nhân</span>
+          </div>
+          <div style="height: 180px; position: relative;">
+            <canvas id="tierDistributionChart"></canvas>
+          </div>
+        </div>
+
+        <div class="card" style="flex: 1;">
+          <div class="card-header">
+            <div class="card-title">
+              <i class="fa-solid fa-fire-flame-curved" style="color: var(--danger);"></i>
+              <span>TOP 10 ĐIỂM NGHẼN TỒN ĐỌNG (CHƯA XL + ĐANG XL)</span>
+            </div>
+            <span style="font-size: 0.75rem; color: var(--text-muted);">Số CV chưa hoàn tất</span>
+          </div>
+          <div style="height: 185px; position: relative;">
+            <canvas id="backlogChart"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================================================================= -->
+    <!-- INTERACTIVE FULL DATA TABLE (77 ROWS) -->
+    <!-- ================================================================= -->
+    <div class="card" style="margin-top: 1.5rem;">
+      <div class="card-header">
+        <div class="card-title">
+          <i class="fa-solid fa-table" style="color: var(--primary);"></i>
+          <span>BẢNG DỮ LIỆU CHI TIẾT TOÀN BỘ 77 DÒNG (TRÍCH XUẤT NGUYÊN BẢN TỪ EXCEL)</span>
+        </div>
+        <div style="font-size: 0.8rem; color: var(--text-secondary);" id="tableCounterText">
+          Đang hiển thị: <strong>77 / 77</strong> dòng
+        </div>
+      </div>
+
+      <div class="table-controls no-print">
+        <div class="filter-pills">
+          <button class="filter-pill active" data-filter="all" onclick="applyFilter('all')">
+            Tất cả (77)
+          </button>
+          <button class="filter-pill" data-filter="staff" onclick="applyFilter('staff')">
+            👤 75 Cá nhân
+          </button>
+          <button class="filter-pill" data-filter="overdue" onclick="applyFilter('overdue')" style="border-color:#fecaca; color:#b91c1c;">
+            🔴 Có Quá hạn (5)
+          </button>
+          <button class="filter-pill" data-filter="high_backlog" onclick="applyFilter('high_backlog')" style="border-color:#fde68a; color:#b45309;">
+            🟠 Tồn đọng &ge; 10 CV (13)
+          </button>
+          <button class="filter-pill" data-filter="slow_backlog" onclick="applyFilter('slow_backlog')">
+            ⏳ Đang XL nhưng &lt; 70% (16)
+          </button>
+          <button class="filter-pill" data-filter="zero_done" onclick="applyFilter('zero_done')">
+            ⚪ Chưa hoàn thành 0% (30)
+          </button>
+          <button class="filter-pill" data-filter="good_progress" onclick="applyFilter('good_progress')" style="border-color:#bfdbfe; color:#1d4ed8;">
+            🔵 Tiến độ tốt &ge; 70% (7)
+          </button>
+          <button class="filter-pill" data-filter="done_100" onclick="applyFilter('done_100')" style="border-color:#a7f3d0; color:#047857;">
+            🟢 Hoàn thành 100% (19)
+          </button>
+        </div>
+
+        <div class="search-sort-group">
+          <input type="text" id="searchInput" class="input-box" style="width: 250px;" placeholder="🔍 Tìm tên cán bộ (có/không dấu)..." oninput="renderTable()">
+          <select id="sortSelect" class="input-box" onchange="renderTable()">
+            <option value="excel_row_asc">Sắp xếp: Thứ tự gốc Excel (Dòng 10 &rarr; 86)</option>
+            <option value="overdue_desc">Sắp xếp: Quá hạn (Cao &rarr; Thấp)</option>
+            <option value="backlog_desc">Sắp xếp: Tồn đọng Chưa+Đang XL (Cao &rarr; Thấp)</option>
+            <option value="cxl_desc">Sắp xếp: Chưa xử lý (Cao &rarr; Thấp)</option>
+            <option value="total_desc">Sắp xếp: Tổng số công văn (Cao &rarr; Thấp)</option>
+            <option value="dht_desc">Sắp xếp: Đã hoàn tất (Cao &rarr; Thấp)</option>
+            <option value="rate_desc">Sắp xếp: Tỷ lệ % Hoàn thành (Cao &rarr; Thấp)</option>
+            <option value="rate_asc">Sắp xếp: Tỷ lệ % Hoàn thành (Thấp &rarr; Cao)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th rowspan="2" style="width: 52px; text-align: center;">Dòng<br>Excel</th>
+              <th rowspan="2" style="min-width: 220px;">Tên Cán bộ / Phòng</th>
+              <th rowspan="2" style="width: 90px; text-align: right;">Số công<br>văn</th>
+              <th colspan="2" style="text-align: center; background: #fffbeb; color: #92400e;">Chưa xử lý</th>
+              <th colspan="2" style="text-align: center; background: #eff6ff; color: #1e40af;">Đang xử lý</th>
+              <th colspan="2" style="text-align: center; background: #ecfdf5; color: #065f46;">Đã hoàn tất</th>
+              <th colspan="2" style="text-align: center; background: #f1f5f9;">Hạn xử lý</th>
+              <th rowspan="2" style="width: 85px; text-align: right; background: #fff7ed; color: #9a3412;">Tổng Tồn<br>(Chưa+Đang)</th>
+              <th rowspan="2" style="width: 195px;">Cơ cấu &amp; Tỷ lệ Hoàn tất</th>
+              <th rowspan="2" style="width: 175px; text-align: center;">Đánh giá Tiến độ</th>
+            </tr>
+            <tr>
+              <th style="text-align: right; background: #fef3c7;">Trong hạn</th>
+              <th style="text-align: right; background: #fee2e2; color: #b91c1c;">Quá hạn</th>
+              <th style="text-align: right; background: #dbeafe;">Trong hạn</th>
+              <th style="text-align: right; background: #fee2e2; color: #b91c1c;">Quá hạn</th>
+              <th style="text-align: right; background: #d1fae5;">Trong hạn</th>
+              <th style="text-align: right; background: #fee2e2; color: #b91c1c;">Quá hạn</th>
+              <th style="text-align: right;">Trong hạn</th>
+              <th style="text-align: right; background: #fee2e2; color: #b91c1c;">Quá hạn</th>
+            </tr>
+          </thead>
+          <tbody id="tableBody">
+          </tbody>
+          <tfoot id="tableFoot">
+          </tfoot>
+        </table>
+      </div>
+    </div>
+
+    <!-- ================================================================= -->
+    <!-- AUDIT & MISSING DATA REPORT BOX (RULE 2, 5, 7 COMPLIANCE) -->
+    <!-- ================================================================= -->
+    <div class="audit-box">
+      <h4><i class="fa-solid fa-magnifying-glass-chart"></i> BÁO CÁO RÀ SOÁT DỮ LIỆU GỐC &amp; CẢNH BÁO KHUYẾT THIẾU (THEO QUY TẮC KIỂM TOÁN)</h4>
+      <ul class="audit-list">
+        <li><strong>1. Thiếu tên đơn vị trực thuộc tại Ô A2:</strong> Trong file gốc <code>TINHHINHXULYCONGVANDEN_20261015112745.xlsx</code>, ô <code>A1</code> ghi <em>"SỞ NÔNG NGHIỆP VÀ MÔI TRƯỜNG THÀNH PHỐ HỒ CHÍ MINH"</em> nhưng ô <code>A2</code> (tên đơn vị cấp dưới) bị <strong>để trống <code>[Trống]</code></strong> (dữ liệu tên đơn vị nằm ở dòng 10 của bảng là <em>"CHI NHÁNH VĂN PHÒNG ĐĂNG KÝ ĐẤT ĐAI SỐ 23"</em>).</li>
+        <li><strong>2. Thiếu địa danh hành chính tại Ô F3:</strong> Ô <code>F3</code> ghi <em>"..., ngày 15 tháng 10 năm 2026"</em> — phần địa danh đang để dấu ba chấm <code>...</code> <strong>[Thiếu địa danh]</strong>.</li>
+        <li><strong>3. Thiếu hàng "Tổng cộng" cuối bảng:</strong> Bảng dữ liệu kết thúc ở dòng 86 (cá nhân <code>ĐỖ VĂN ĐÔNG</code>) mà không có dòng cộng dồn tổng cột. Dashboard đã tự động tính toán và bổ sung hàng <strong>TỔNG CỘNG</strong> chính xác tuyệt đối ở chân bảng.</li>
+        <li><strong>4. Lưu ý cấu trúc 3 cấp trong cùng 1 bảng:</strong> File gốc xếp chung dòng 10 (<em>CHI NHÁNH VPĐKĐĐ SỐ 23</em>: 636 CV), dòng 76 (<em>Văn thư</em>: 647 CV) và 75 cá nhân (1.963 lượt CV) vào cùng 1 bảng mà không tách nhóm. Dashboard đã bóc tách rõ 3 chế độ xem để tránh cộng trùng số liệu.</li>
+        <li><strong>5. Giữ nguyên 100% danh tính nguyên bản:</strong> Toàn bộ họ tên của 75 cán bộ, nhân viên được hiển thị nguyên văn theo bản gốc từ hệ thống xuất ra (như <code>NGUYÊN HOÀNG XUÂN</code>, <code>NGUYỄN THANH SANG</code>, <code>NGUYỄN THỊ NGỌC TRẢN</code>...), đồng thời Dashboard tích hợp bộ chuẩn hóa Unicode ngầm để người dùng tìm kiếm theo bất kỳ kiểu gõ nào cũng đều chính xác.</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <script>
+    const RAW_DATA = [{"excel_row": 10, "stt": 1, "name": "CHI NHÁNH VĂN PHÒNG ĐĂNG KÝ ĐẤT ĐAI SỐ 23", "name_nfc": "CHI NHÁNH VĂN PHÒNG ĐĂNG KÝ ĐẤT ĐAI SỐ 23", "row_type": "unit", "role_hint": "Cấp Đơn vị (Toàn Chi nhánh)", "total": 636, "cxl_th": 162, "cxl_qh": 1, "cxl_tot": 163, "dxl_th": 140, "dxl_qh": 0, "dxl_tot": 140, "dht_th": 332, "dht_qh": 1, "dht_tot": 333, "hxl_th": 634, "hxl_qh": 2, "backlog": 303, "rate_done": 52.36, "rate_dxl": 22.01, "rate_cxl": 25.63, "status_code": "overdue_unprocessed", "status_label": "Quá hạn 2 CV (1 Chưa XL, 1 Đã HT)", "tier": "overdue"}, {"excel_row": 11, "stt": 2, "name": "BÙI THỊ MINH NGUYỆT", "name_nfc": "BÙI THỊ MINH NGUYỆT", "row_type": "staff", "role_hint": "Cán bộ / Chuyên viên", "total": 5, "cxl_th": 3, "cxl_qh": 0, "cxl_tot": 3, "dxl_th": 0, "dxl_qh": 0, "dxl_tot": 0, "dht_th": 2, "dht_qh": 0, "dht_tot": 2, "hxl_th": 5, "hxl_qh": 0, "backlog": 3, "rate_done": 40.0, "rate_dxl": 0.0, "rate_cxl": 60.0, "status_code": "slow_backlog", "status_label": "Chậm tiến độ (40.0% • Tồn 3 CV)", "tier": "slow_backlog"}, {"excel_row": 12, "stt": 3, "name": "HOÀNG MINH TÚ", "name_nfc": "HOÀNG MINH TÚ", "row_type": "staff", "role_hint": "Cán bộ / Chuyên viên", "total": 6, "cxl_th": 4, "cxl_qh": 0, "cxl_tot": 4, "dxl_th": 0, "dxl_qh": 0, "dxl_tot": 0, "dht_th": 2, "dht_qh": 0, "dht_tot": 2, "hxl_th": 6, "hxl_qh": 0, "backlog": 4, "rate_done": 33.33, "rate_dxl": 0.0, "rate_cxl": 66.67, "status_code": "slow_backlog", "status_label": "Chậm tiến độ (33.3% • Tồn 4 CV)", "tier": "slow_backlog"}, {"excel_row": 13, "stt": 4, "name": "HUỲNH THỊ ÁI NHI", "name_nfc": "HUỲNH THỊ ÁI NHI", "row_type": "staff", "role_hint": "Cán bộ / Chuyên viên", "total": 69, "cxl_th": 41, "cxl_qh": 0, "cxl_tot": 41, "dxl_th": 2, "dxl_qh": 0, "dxl_tot": 2, "dht_th": 26, "dht_qh": 0, "dht_tot": 26, "hxl_th": 69, "hxl_qh": 0, "backlog": 43, "rate_done": 37.68, "rate_dxl": 2.9, "rate_cxl": 59.42, "status_code": "slow_backlog", "status_label": "Chậm tiến độ (37.7% • Tồn 43 CV)", "tier": "slow_backlog"}, {"excel_row": 14, "stt": 5, "name": "HUỲNH TẤN NGUYÊN", "name_nfc": "HUỲNH TẤN NGUYÊN", "row_type": "staff", "role_hint": "Cán bộ / Chuyên viên", "total": 214, "cxl_th": 32, "cxl_qh": 0, "cxl_tot": 32, "dxl_th": 1, "dxl_qh": 0, "dxl_tot": 1, "dht_th": 181, "dht_qh": 0, "dht_tot": 181, "hxl_th": 214, "hxl_qh": 0, "backlog": 33, "rate_done": 84.58, "rate_dxl": 0.47, "rate_cxl": 14.95, "status_code": "good_progress", "status_label": "Tiến độ tốt (84.6% • Tồn 33 CV)", "tier": "good_progress"}, {"excel_row": 15, "stt": 6, "name": "HỒ LÊ THANH VŨ", "name_nfc": "HỒ LÊ THANH VŨ", "row_type": "staff", "role_hint": "Cán bộ / Chuyên viên", "total": 123, "cxl_th": 91, "cxl_qh": 0, "cxl_tot": 91, "dxl_th": 0, "dxl_qh": 0, "dxl_tot": 0, "dht_th": 32, "dht_qh": 0, "dht_tot": 32, "hxl_th": 123, "hxl_qh": 0, "backlog": 91, "rate_done": 26.02, "rate_dxl": 0.0, "rate_cxl": 73.98, "status_code": "slow_backlog", "status_label": "Chậm tiến độ (26.0% • Tồn 91 CV)", "tier": "slow_backlog"}, {"excel_row": 16, "stt": 7, "name": "HỒ THỊ HỒNG LINH", "name_nfc": "HỒ THỊ HỒNG LINH", "row_type": "staff", "role_hint": "Cán bộ / Chuyên viên", "total": 4, "cxl_th": 0, "cxl_qh": 0, "cxl_tot": 0, "dxl_th": 0, "dxl_qh": 0, "dxl_tot": 0, "dht_th": 4, "dht_qh": 0, "dht_tot": 4, "hxl_th": 4, "hxl_qh": 0, "backlog": 0, "rate_done": 100.0, "rate_dxl": 0.0, "rate_cxl": 0.0, "status_code": "done_100", "status_label": "Hoàn thành 100% đúng hạn", "tier": "done_100"}, {"excel_row": 17, "stt": 8, "name": "LÊ NGỌC BẢO NGÂN", "name_nfc": "LÊ NGỌC BẢO NGÂN", "row_type": "staff", "role_hint": "Cán bộ / Chuyên viên", "total": 37, "cxl_th": 0, "cxl_qh": 0, "cxl_tot": 0, "dxl_th": 0, "dxl_qh": 0, "dxl_tot": 0, "dht_th": 37, "dht_qh": 0, "dht_tot": 37, "hxl_th": 37, "hxl_qh": 0, "backlog": 0, "rate_done": 100.0, "rate_dxl": 0.0, "rate_cxl": 0.0, "status_code": "done_100", "status_label": "Hoàn thành 100% đúng hạn", "tier": "done_100"}, {"excel_row": 18, "stt": 9, "name": "LÊ QUANG KHOA", "name_nfc": "LÊ QUANG KHOA", "row_type": "staff", "role_hint": "Cán bộ / Chuyên viên", "total": 3, "cxl_th": 0, "cxl_qh": 0, "cxl_tot": 0, "dxl_th": 0, "dxl_qh": 0, "dxl_tot": 0, "dht_th": 3, "dht_qh": 0, "dht_tot": 3, "hxl_th": 3, "hxl_qh": 0, "backlog": 0, "rate_done": 100.0, "rate_dxl": 0.0, "rate_cxl": 0.0, "status_code": "done_100", "status_label": "Hoàn thành 100% đúng hạn", "tier": "done_100"}, {"excel_row": 19, "stt": 10, "name": "LÊ SƠN THANH", "name_nfc": "LÊ SƠN THANH", "row_type": "staff", "role_hint": "Cán bộ / Chuyên viên", "total": 60, "cxl_th": 30, "cxl_qh": 0, "cxl_tot": 30, "dxl_th": 7, "dxl_qh": 0, "dxl_tot": 7, "dht_th": 23, "dht_qh": 0, "dht_tot": 23, "hxl_th": 60, "hxl_qh": 0, "backlog": 37, "rate_done": 38.33, "rate_dxl": 11.67, "rate_cxl": 50.0, "status_code": "slow_backlog", "status_label": "Chậm tiến độ (38.3% • Tồn 37 CV)", "tier": "slow_backlog"}, {"excel_row": 20, "stt": 11, "name": "LÊ THANH VŨ", "name_nfc": "LÊ THANH VŨ", "row_type": "staff", "role_hint": "Cán bộ / Chuyên viên", "total": 3, "cxl_th": 3, "cxl_qh": 0, "cxl_tot": 3, "dxl_th": 0, "dxl_qh": 0, "dxl_tot": 0, "dht_th": 0, "dht_qh": 0, "dht_tot": 0, "hxl_th": 3, "hxl_qh": 0, "backlog": 3, "rate_done": 0.0, "rate_dxl": 0.0, "rate_cxl": 100.0, "status_code": "zero_done", "status_label": "Chưa hoàn thành (0% • Tồn 3 CV)", "tier": "zero_done"}, {"excel_row": 21, "stt": 12, "name": "LÊ THẾ DUY", "name_nfc": "LÊ THẾ DUY", "row_type": "staff", "role_hint": "Cán bộ / Chuyên viên", "total": 3, "cxl_th": 3, "cxl_qh": 0, "cxl_tot": 3, "dxl_th": 0, "dxl_qh": 0, "dxl_tot": 0, "dht_th": 0, "dht_qh": 0, "dht_tot": 0, "hxl_th": 3, "hxl_qh": 0, "backlog": 3, "rate_done": 0.0, "rate_dxl": 0.0, "rate_cxl": 100.0, "status_code": "zero_done", "status_label": "Chưa hoàn thành (0% • Tồn 3 CV)", "tier": "zero_done"}, {"excel_row": 22, "stt": 13, "name": "LÊ THỊ PHƯƠNG MAI", "name_nfc": "LÊ THỊ PHƯƠNG MAI", "row_type": "staff", "role_hint": "Cán bộ / Chuyên viên", "total": 3, "cxl_th": 1, "cxl_qh": 0, "cxl_tot": 1, "dxl_th": 0, "dxl_qh": 0, "dxl_tot": 0, "dht_th": 2, "dht_qh": 0, "dht_tot": 2, "hxl_th": 3, "hxl_qh": 0, "backlog": 1, "rate_done": 66.67, "rate_dxl": 0.0, "rate_cxl": 33.33, "status_code": "slow_backlog", "status_label": "Chậm tiến độ (66.7% • Tồn 1 CV)", "tier": "slow_backlog"}, {"excel_row": 23, "stt": 14, "name": "LÊ THỊ THÙY DUYÊN", "name_nfc": "LÊ THỊ THÙY DUYÊN", "row_type": "staff", "role_hint": "Cán bộ / Chuyên viên", "total": 16, "cxl_th": 5, "cxl_qh": 0, "cxl_tot": 5, "dxl_th": 5, "dxl_qh": 0, "dxl_tot": 5, "dht_th": 6, "dht_qh": 0, "dht_tot": 6, "hxl_th": 16, "hxl_qh": 0, "backlog": 10, "rate_done": 37.5, "rate_dxl": 31.25, "rate_cxl": 31.25, "status_code": "slow_backlog", "status_label": "Chậm tiến độ (37.5% • Tồn 10 CV)", "tier": "slow_backlog"}, {"excel_row": 24, "stt": 15, "name": "LƯU VĂN TUẤN", "name_nfc": "LƯU VĂN TUẤN", "row_type": "staff", "role_hint": "Cán bộ / Chuyên viên", "total": 3, "cxl_th": 3, "cxl_qh": 0, "cxl_tot": 3, "dxl_th": 0, "dxl_qh": 0, "dxl_tot": 0, "dht_th": 0, "dht_qh": 0, "dht_tot": 0, "hxl_th": 3, "hxl_qh": 0, "backlog": 3, "rate_done": 0.0, "rate_dxl": 0.0, "rate_cxl": 100.0, "status_code": "zero_done", "status_label": "Chưa hoàn thành (0% • Tồn 3 CV)", "tier": "zero_done"}, {"excel_row": 25, "stt": 16, "name": "NGUYÊN HOÀNG XUÂN", "name_nfc": "NGUYÊN HOÀNG XUÂN", "row_type": "staff", "role_hint": "Cán bộ / Chuyên viên", "total": 3, "cxl_th": 3, "cxl_qh": 0, "cxl_tot": 3, "dxl_th": 0, "dxl_qh": 0, "dxl_tot": 0, "dht_th": 0, "dht_qh": 0, "dht_tot": 0, "hxl_th": 3, "hxl_qh": 0, "backlog": 3, "rate_done": 0.0, "rate_dxl": 0.0, "rate_cxl": 100.0, "status_code": "zero_done", "status_label": "Chưa hoàn thành (0% • Tồn 3 CV)", "tier": "zero_done"}, {"excel_row": 26, "stt": 17, "name": "NGUYÊN THỊ HUỲNH MAI", "name_nfc": "NGUYÊN THỊ HUỲNH MAI", "row_type": "staff", "role_hint": "Cán bộ / Chuyên viên", "total": 34, "cxl_th": 0, "cxl_qh": 0, "cxl_tot": 0, "dxl_th": 0, "dxl_qh": 0, "dxl_tot": 0, "dht_th": 34, "dht_qh": 0, "dht_tot": 34, "hxl_th": 34, "hxl_qh": 0, "backlog": 0, "rate_done": 100.0, "rate_dxl": 0.0, "rate_cxl": 0.0, "status_code": "done_100", "status_label": "Hoàn thành 100% đúng hạn", "tier": "done_100"}, {"excel_row": 27, "stt": 18, "name": "NGUYỄN THANH SANG", "name_nfc": "NGUYỄN THANH SANG", "row_type": "staff", "role_hint": "Cán bộ / Chuyên viên", "total": 3, "cxl_th": 3, "cxl_qh": 0, "cxl_tot": 3, "dxl_th": 0, "dxl_qh": 0, "dxl_tot": 0, "dht_th": 0, "dht_qh": 0, "dht_tot": 0, "hxl_th": 3, "hxl_qh": 0, "backlog": 3, "rate_done": 0.0, "rate_dxl": 0.0, "rate_cxl": 100.0, "status_code": "zero_done", "status_label": "Chưa hoàn thành (0% • Tồn 3 CV)", "tier": "zero_done"}, {"excel_row": 28, "stt": 19, "name": "NGUYỄN THỊ NGỌC TRẢN", "name_nfc": "NGUYỄN THỊ NGỌC TRẢN", "row_type": "staff", "role_hint": "Cán bộ / Chuyên viên", "total": 3, "cxl_th": 1, "cxl_qh": 0, "cxl_tot": 1, "dxl_th": 0, "dxl_qh": 0, "dxl_tot": 0, "dht_th": 2, "dht_qh": 0, "dht_tot": 2, "hxl_th": 3, "hxl_qh": 0, "backlog": 1, "rate_done": 66.67, "rate_dxl": 0.0, "rate_cxl": 33.33, "status_code": "slow_backlog", "status_label": "Chậm tiến độ (66.7% • Tồn 1 CV)", "tier": "slow_backlog"}, {"excel_row": 29, "stt": 20, "name": "NGUYỄN ANH KHÔI", "name_nfc": "NGUYỄN ANH KHÔI", "row_type": "staff", "role_hint": "Cán bộ / Chuyên viên", "total": 6, "cxl_th": 6, "cxl_qh": 0, "cxl_tot": 6, "dxl_th": 0, "dxl_qh": 0, "dxl_tot": 0, "dht_th": 0, "dht_qh": 0, "dht_tot": 0, "hxl_th": 6, "hxl_qh": 0, "backlog": 6, "rate_done": 0.0, "rate_dxl": 0.0, "rate_cxl": 100.0, "status_code": "zero_done", "status_label": "Chưa hoàn thành (0% • Tồn 6 CV)", "tier": "zero_done"}, {"excel_row": 30, "stt": 21, "name": "NGUYỄN BÍCH NGỌC", "name_nfc": "NGUYỄN BÍCH NGỌC", "row_type": "staff", "role_hint": "Cán bộ / Chuyên viên", "total": 6, "cxl_th": 0, "cxl_qh": 0, "cxl_tot": 0, "dxl_th": 0, "dxl_qh": 0, "dxl_tot": 0, "dht_th": 6, "dht_qh": 0, "dht_tot": 6, "hxl_th": 6, "hxl_qh": 0, "backlog": 0, "rate_done": 100.0, "rate_dxl": 0.0, "rate_cxl": 0.0, "status_code": "done_100", "status_label": "Hoàn thành 100% đúng hạn", "tier": "done_100"}, {"excel_row": 31, "stt": 22, "name": "NGUYỄN DUY TẤN", "name_nfc": "NGUYỄN DUY TẤN", "row_type": "staff", "role_hint": "Cán bộ / Chuyên viên", "total": 3, "cxl_th": 3, "cxl_qh": 0, "cxl_tot": 3, "dxl_th": 0, "dxl_qh": 0, "dxl_tot": 0, "dht_th": 0, "dht_qh": 0, "dht_tot": 0, "hxl_th": 3, "hxl_qh": 0, "backlog": 3, "rate_done": 0.0, "rate_dxl": 0.0, "rate_cxl": 100.0, "status_code": "zero_done", "status_label": "Chưa hoàn thành (0% • Tồn 3 CV)", "tier": "zero_done"}, {"excel_row": 32, "stt": 23, "name": "NGUYỄN HOÀNG DUY", "name_nfc": "NGUYỄN HOÀNG DUY", "row_type": "staff", "role_hint": "Cán bộ / Chuyên viên", "total": 4, "cxl_th": 4, "cxl_qh": 0, "cxl_tot": 4, "dxl_th": 0, "dxl_qh": 0, "dxl_tot": 0, "dht_th": 0, "dht_qh": 0, "dht_tot": 0, "hxl_th": 4, "hxl_qh": 0, "backlog": 4, "rate_done": 0.0, "rate_dxl": 0.0, "rate_cxl": 100.0, "status_code": "zero_done", "status_label": "Chưa hoàn thành (0% • Tồn 4 CV)", "tier": "zero_done"}, {"excel_row": 33, "stt": 24, "name": "NGUYỄN KHÁNH DUY", "name_nfc": "NGUYỄN KHÁNH DUY", "row_type": "staff", "role_hint": "Cán bộ / Chuyên viên", "total": 4, "cxl_th": 0, "cxl_qh": 0, "cxl_tot": 0, "dxl_th": 0, "dxl_qh": 0, "dxl_tot": 0, "dht_th": 4, "dht_qh": 0, "dht_tot": 4, "hxl_th": 4, "hxl_qh": 0, "backlog": 0, "rate_done": 100.0, "rate_dxl": 0.0, "rate_cxl": 0.0, "status_code": "done_100", "status_label": "Hoàn thành 100% đúng hạn", "tier": "done_100"}, {"excel_row": 34, "stt": 25, "name": "NGUYỄN NHẬT QUYỀN TRINH", "name_nfc": "NGUYỄN NHẬT QUYỀN TRINH", "row_type": "staff", "role_hint": "Cán bộ / Chuyên viên", "total": 6, "cxl_th": 0, "cxl_qh": 0, "cxl_tot": 0, "dxl_th": 0, "dxl_qh": 0, "dxl_tot": 0, "dht_th": 6, "dht_qh": 0, "dht_tot": 6, "hxl_th": 6, "hxl_qh": 0, "backlog": 0, "rate_done": 100.0, "rate_dxl": 0.0, "rate_cxl": 0.0, "status_code": "done_100", "status_label": "Hoàn thành 100% đúng hạn", "tier": "done_100"}, {"excel_row": 35, "stt": 26, "name": "NGUYỄN QUỐC DANH", "name_nfc": "NGUYỄN QUỐC DANH", "row_type": "staff", "role_hint": "Cán bộ / Chuyên viên", "total": 3, "cxl_th": 3, "cxl_qh": 0, "cxl_tot": 3, "dxl_th": 0, "dxl_qh": 0, "dxl_tot": 0, "dht_th": 0, "dht_qh": 0, "dht_tot": 0, "hxl_th": 3, "hxl_qh": 0, "backlog": 3, "rate_done": 0.0, "rate_dxl": 0.0, "rate_cxl": 100.0, "status_code": "zero_done", "status_label": "Chưa hoàn thành (0% • Tồn 3 CV)", "tier": "zero_done"}, {"excel_row": 36, "stt": 27, "name": "NGUYỄN THÀNH NHƯ BẢO", "name_nfc": "NGUYỄN THÀNH NHƯ BẢO", "row_type": "staff", "role_hint": "Cán bộ / Chuyên viên", "total": 49, "cxl_th": 0, "cxl_qh": 0, "cxl_tot": 0, "dxl_th": 0, "dxl_qh": 0, "dxl_tot": 0, "dht_th": 49, "dht_qh": 0, "dht_tot": 49, "hxl_th": 49, "hxl_qh": 0, "backlog": 0, "rate_done": 100.0, "rate_dxl": 0.0, "rate_cxl": 0.0, "status_code": "done_100", "status_label": "Hoàn thành 100% đúng hạn", "tier": "done_100"}, {"excel_row": 37, "stt": 28, "name": "NGUYỄN THẢO TUYẾT NHI", "name_nfc": "NGUYỄN THẢO TUYẾT NHI", "row_type": "staff", "role_hint": "Cán bộ / Chuyên viên", "total": 7, "cxl_th": 2, "cxl_qh": 0, "cxl_tot": 2, "dxl_th": 0, "dxl_qh": 0, "dxl_tot": 0, "dht_th": 5, "dht_qh": 0, "dht_tot": 5, "hxl_th": 7, "hxl_qh": 0, "backlog": 2, "rate_done": 71.43, "rate_dxl": 0.0, "rate_cxl": 28.57, "status_code": "good_progress", "status_label": "Tiến độ tốt (71.4% • Tồn 2 CV)", "tier": "good_progress"}, {"excel_row": 38, "stt": 29, "name": "NGUYỄN THỊ BÍCH TUYỀN", "name_nfc": "NGUYỄN THỊ BÍCH TUYỀN", "row_type": "staff", "role_hint": "Cán bộ / Chuyên viên", "total": 16, "cxl_th": 0, "cxl_qh": 0, "cxl_tot": 0, "dxl_th": 0, "dxl_qh": 0, "dxl_tot": 0, "dht_th": 16, "dht_qh": 0, "dht_tot": 16, "hxl_th": 16, "hxl_qh": 0, "backlog": 0, "rate_done": 100.0, "rate_dxl": 0.0, "rate_cxl": 0.0, "status_code": "done_100", "status_label": "Hoàn thành 100% đúng hạn", "tier": "done_100"}, {"excel_row": 39, "stt": 30, "name": "NGUYỄN THỊ DÁNG", "name_nfc": "NGUYỄN THỊ DÁNG", "row_type": "staff", "role_hint": "Cán bộ / Chuyên viên", "total": 6, "cxl_th": 6, "cxl_qh": 0, "cxl_tot": 6, "dxl_th": 0, "dxl_qh": 0, "dxl_tot": 0, "dht_th": 0, "dht_qh": 0, "dht_tot": 0, "hxl_th": 6, "hxl_qh": 0, "backlog": 6, "rate_done": 0.0, "rate_dxl": 0.0, "rate_cxl": 100.0, "status_code": "zero_done", "status_label": "Chưa hoàn thành (0% • Tồn 6 CV)", "tier": "zero_done"}, {"excel_row": 40, "stt": 31, "name": "NGUYỄN THỊ LỆ HẰNG", "name_nfc": "NGUYỄN THỊ LỆ HẰNG", "row_type": "staff", "role_hint": "Cán bộ / Chuyên viên", "total": 39, "cxl_th": 0, "cxl_qh": 0, "cxl_tot": 0, "dxl_th": 0, "dxl_qh": 0, "dxl_tot": 0, "dht_th": 39, "dht_qh": 0, "dht_tot": 39, "hxl_th": 39, "hxl_qh": 0, "backlog": 0, "rate_done": 100.0, "rate_dxl": 0.0, "rate_cxl": 0.0, "status_code": "done_100", "status_label": "Hoàn thành 100% đúng hạn", "tier": "done_100"}, {"excel_row": 41, "stt": 32, "name": "NGUYỄN THỊ LỆ THU", "name_nfc": "NGUYỄN THỊ LỆ THU", "row_type": "staff", "role_hint": "Cán bộ / Chuyên viên", "total": 6, "cxl_th": 6, "cxl_qh": 0, "cxl_tot": 6, "dxl_th": 0, "dxl_qh": 0, "dxl_tot": 0, "dht_th": 0, "dht_qh": 0, "dht_tot": 0, "hxl_th": 6, "hxl_qh": 0, "backlog": 6, "rate_done": 0.0, "rate_dxl": 0.0, "rate_cxl": 100.0, "status_code": "zero_done", "status_label": "Chưa hoàn thành (0% • Tồn 6 CV)", "tier": "zero_done"}, {"excel_row": 42, "stt": 33, "name": "NGUYỄN THỊ NGỌC THẢO", "name_nfc": "NGUYỄN THỊ NGỌC THẢO", "row_type": "staff", "role_hint": "Cán bộ / Chuyên viên", "total": 6, "cxl_th": 0, "cxl_qh": 0, "cxl_tot": 0, "dxl_th": 0, "dxl_qh": 0, "dxl_tot": 0, "dht_th": 6, "dht_qh": 0, "dht_tot": 6, "hxl_th": 6, "hxl_qh": 0, "backlog": 0, "rate_done": 100.0, "rate_dxl": 0.0, "rate_cxl": 0.0, "status_code": "done_100", "status_label": "Hoàn thành 100% đúng hạn", "tier": "done_100"}, {"excel_row": 43, "stt": 34, "name": "NGUYỄN THỊ THU MINH", "name_nfc": "NGUYỄN THỊ THU MINH", "row_type": "staff", "role_hint": "Cán bộ / Chuyên viên", "total": 11, "cxl_th": 0, "cxl_qh": 0, "cxl_tot": 0, "dxl_th": 0, "dxl_qh": 0, "dxl_tot": 0, "dht_th": 11, "dht_qh": 0, "dht_tot": 11, "hxl_th": 11, "hxl_qh": 0, "backlog": 0, "rate_done": 100.0, "rate_dxl": 0.0, "rate_cxl": 0.0, "status_code": "done_100", "status_label": "Hoàn thành 100% đúng hạn", "tier": "done_100"}, {"excel_row": 44, "stt": 35, "name": "NGUYỄN THỊ THÙY TRANG", "name_nfc": "NGUYỄN THỊ THÙY TRANG", "row_type": "staff", "role_hint": "Cán bộ / Chuyên viên", "total": 30, "cxl_th": 5, "cxl_qh": 0, "cxl_tot": 5, "dxl_th": 1, "dxl_qh": 0, "dxl_tot": 1, "dht_th": 24, "dht_qh": 0, "dht_tot": 24, "hxl_th": 30, "hxl_qh": 0, "backlog": 6, "rate_done": 80.0, "rate_dxl": 3.33, "rate_cxl": 16.67, "status_code": "good_progress", "status_label": "Tiến độ tốt (80.0% • Tồn 6 CV)", "tier": "good_progress"}, {"excel_row": 45, "stt": 36, "name": "NGUYỄN THỊ TRÚC PHƯƠNG", "name_nfc": "NGUYỄN THỊ TRÚC PHƯƠNG", "row_type": "staff", "role_hint": "Cán bộ / Chuyên viên", "total": 4, "cxl_th": 4, "cxl_qh": 0, "cxl_tot": 4, "dxl_th": 0, "dxl_qh": 0, "dxl_tot": 0, "dht_th": 0, "dht_qh": 0, "dht_tot": 0, "hxl_th": 4, "hxl_qh": 0, "backlog": 4, "rate_done": 0.0, "rate_dxl": 0.0, "rate_cxl": 100.0, "status_code": "zero_done", "status_label": "Chưa hoàn thành (0% • Tồn 4 CV)", "tier": "zero_done"}, {"excel_row": 46, "stt": 37, "name": "NGUYỄN TIẾN THỊNH", "name_nfc": "NGUYỄN TIẾN THỊNH", "row_type": "staff", "role_hint": "Cán bộ / Chuyên viên", "total": 56, "cxl_th": 35, "cxl_qh": 0, "cxl_tot": 35, "dxl_th": 0, "dxl_qh": 1, "dxl_tot": 1, "dht_th": 20, "dht_qh": 0, "dht_tot": 20, "hxl_th": 55, "hxl_qh": 1, "backlog": 36, "rate_done": 35.71, "rate_dxl": 1.79, "rate_cxl": 62.5, "status_code": "overdue_processing", "status_label": "Trễ hạn Đang xử lý (1 CV)", "tier": "overdue"}, {"excel_row": 47, "stt": 38, "name": "NGUYỄN TRUNG THÀNH", "name_nfc": "NGUYỄN TRUNG THÀNH", "row_type": "staff", "role_hint": "Cán bộ / Chuyên viên", "total": 6, "cxl_th": 0, "cxl_qh": 0, "cxl_tot": 0, "dxl_th": 0, "dxl_qh": 0, "dxl_tot": 0, "dht_th": 6, "dht_qh": 0, "dht_tot": 6, "hxl_th": 6, "hxl_qh": 0, "backlog": 0, "rate_done": 100.0, "rate_dxl": 0.0, "rate_cxl": 0.0, "status_code": "done_100", "status_label": "Hoàn thành 100% đúng hạn", "tier": "done_100"}, {"excel_row": 48, "stt": 39, "name": "NGUYỄN TRẦN THẢO VY", "name_nfc": "NGUYỄN TRẦN THẢO VY", "row_type": "staff", "role_hint": "Cán bộ / Chuyên viên", "total": 68, "cxl_th": 68, "cxl_qh": 0, "cxl_tot": 68, "dxl_th": 0, "dxl_qh": 0, "dxl_tot": 0, "dht_th": 0, "dht_qh": 0, "dht_tot": 0, "hxl_th": 68, "hxl_qh": 0, "backlog": 68, "rate_done": 0.0, "rate_dxl": 0.0, "rate_cxl": 100.0, "status_code": "zero_done", "status_label": "Chưa hoàn thành (0% • Tồn 68 CV)", "tier": "zero_done"}, {"excel_row": 49, "stt": 40, "name": "NGUYỄN TUẤN ANH", "name_nfc": "NGUYỄN TUẤN ANH", "row_type": "staff", "role_hint": "Cán bộ / Chuyên viên", "total": 3, "cxl_th": 0, "cxl_qh": 0, "cxl_tot": 0, "dxl_th": 0, "dxl_qh": 0, "dxl_tot": 0, "dht_th": 3, "dht_qh": 0, "dht_tot": 3, "hxl_th": 3, "hxl_qh": 0, "backlog": 0, "rate_done": 100.0, "rate_dxl": 0.0, "rate_cxl": 0.0, "status_code": "done_100", "status_label": "Hoàn thành 100% đúng hạn", "tier": "done_100"}, {"excel_row": 50, "stt": 41, "name": "NGUYỄN VĂN KHÁNH", "name_nfc": "NGUYỄN VĂN KHÁNH", "row_type": "staff", "role_hint": "Cán bộ / Chuyên viên", "total": 58, "cxl_th": 35, "cxl_qh": 0, "cxl_tot": 35, "dxl_th": 0, "dxl_qh": 0, "dxl_tot": 0, "dht_th": 23, "dht_qh": 0, "dht_tot": 23, "hxl_th": 58, "hxl_qh": 0, "backlog": 35, "rate_done": 39.66, "rate_dxl": 0.0, "rate_cxl": 60.34, "status_code": "slow_backlog", "status_label": "Chậm tiến độ (39.7% • Tồn 35 CV)", "tier": "slow_backlog"}, {"excel_row": 51, "stt": 42, "name": "NGÔ THỊ CẨM THÚY", "name_nfc": "NGÔ THỊ CẨM THÚY", "row_type": "staff", "role_hint": "Cán bộ / Chuyên viên", "total": 3, "cxl_th": 3, "cxl_qh": 0, "cxl_tot": 3, "dxl_th": 0, "dxl_qh": 0, "dxl_tot": 0, "dht_th": 0, "dht_qh": 0, "dht_tot": 0, "hxl_th": 3, "hxl_qh": 0, "backlog": 3, "rate_done": 0.0, "rate_dxl": 0.0, "rate_cxl": 100.0, "status_code": "zero_done", "status_label": "Chưa hoàn thành (0% • Tồn 3 CV)", "tier": "zero_done"}, {"excel_row": 52, "stt": 43, "name": "Nguyễn Chiến Thắng", "name_nfc": "Nguyễn Chiến Thắng", "row_type": "staff", "role_hint": "Cán bộ / Chuyên viên", "total": 189, "cxl_th": 47, "cxl_qh": 1, "cxl_tot": 48, "dxl_th": 1, "dxl_qh": 0, "dxl_tot": 1, "dht_th": 140, "dht_qh": 0, "dht_tot": 140, "hxl_th": 188, "hxl_qh": 1, "backlog": 49, "rate_done": 74.07, "rate_dxl": 0.53, "rate_cxl": 25.4, "status_code": "overdue_unprocessed", "status_label": "Trễ hạn Chưa xử lý (1 CV)", "tier": "overdue"}, {"excel_row": 53, "stt": 44, "name": "Nguyễn Hoàng Tiến", "name_nfc": "Nguyễn Hoàng Tiến", "row_type": "staff", "role_hint": "Cán bộ / Chuyên viên", "total": 7, "cxl_th": 0, "cxl_qh": 0, "cxl_tot": 0, "dxl_th": 4, "dxl_qh": 0, "dxl_tot": 4, "dht_th": 3, "dht_qh": 0, "dht_tot": 3, "hxl_th": 7, "hxl_qh": 0, "backlog": 4, "rate_done": 42.86, "rate_dxl": 57.14, "rate_cxl": 0.0, "status_code": "slow_backlog", "status_label": "Chậm tiến độ (42.9% • Tồn 4 CV)", "tier": "slow_backlog"}, {"excel_row": 54, "stt": 45, "name": "Nguyễn Ngọc Quế Trân", "name_nfc": "Nguyễn Ngọc Quế Trân", "row_type": "staff", "role_hint": "Cán bộ / Chuyên viên", "total": 203, "cxl_th": 37, "cxl_qh": 0, "cxl_tot": 37, "dxl_th": 2, "dxl_qh": 0, "dxl_tot": 2, "dht_th": 164, "dht_qh": 0, "dht_tot": 164, "hxl_th": 203, "hxl_qh": 0, "backlog": 39, "rate_done": 80.79, "rate_dxl": 0.99, "rate_cxl": 18.23, "status_code": "good_progress", "status_label": "Tiến độ tốt (80.8% • Tồn 39 CV)", "tier": "good_progress"}, {"excel_row": 55, "stt": 46, "name": "Nguyễn Thanh Điền", "name_nfc": "Nguyễn Thanh Điền", "row_type": "staff", "role_hint": "Cán bộ / Chuyên viên", "total": 7, "cxl_th": 0, "cxl_qh": 0, "cxl_tot": 0, "dxl_th": 0, "dxl_qh": 0, "dxl_tot": 0, "dht_th": 7, "dht_qh": 0, "dht_tot": 7, "hxl_th": 7, "hxl_qh": 0, "backlog": 0, "rate_done": 100.0, "rate_dxl": 0.0, "rate_cxl": 0.0, "status_code": "done_100", "status_label": "Hoàn thành 100% đúng hạn", "tier": "done_100"}, {"excel_row": 56, "stt": 47, "name": "Nguyễn Tuấn Kiệt", "name_nfc": "Nguyễn Tuấn Kiệt", "row_type": "staff", "role_hint": "Cán bộ / Chuyên viên", "total": 259, "cxl_th": 46, "cxl_qh": 0, "cxl_tot": 46, "dxl_th": 122, "dxl_qh": 0, "dxl_tot": 122, "dht_th": 90, "dht_qh": 1, "dht_tot": 91, "hxl_th": 258, "hxl_qh": 1, "backlog": 168, "rate_done": 35.14, "rate_dxl": 47.1, "rate_cxl": 17.76, "status_code": "overdue_completed", "status_label": "Hoàn tất trễ hạn (1 CV)", "tier": "overdue"}, {"excel_row": 57, "stt": 48, "name": "PHAN TRỌNG HIỆP", "name_nfc": "PHAN TRỌNG HIỆP", "row_type": "staff", "role_hint": "Cán bộ / Chuyên viên", "total": 3, "cxl_th": 2, "cxl_qh": 0, "cxl_tot": 2, "dxl_th": 0, "dxl_qh": 0, "dxl_tot": 0, "dht_th": 1, "dht_qh": 0, "dht_tot": 1, "hxl_th": 3, "hxl_qh": 0, "backlog": 2, "rate_done": 33.33, "rate_dxl": 0.0, "rate_cxl": 66.67, "status_code": "slow_backlog", "status_label": "Chậm tiến độ (33.3% • Tồn 2 CV)", "tier": "slow_backlog"}, {"excel_row": 58, "stt": 49, "name": "PHẠM HOÀNG OANH", "name_nfc": "PHẠM HOÀNG OANH", "row_type": "staff", "role_hint": "Cán bộ / Chuyên viên", "total": 3, "cxl_th": 3, "cxl_qh": 0, "cxl_tot": 3, "dxl_th": 0, "dxl_qh": 0, "dxl_tot": 0, "dht_th": 0, "dht_qh": 0, "dht_tot": 0, "hxl_th": 3, "hxl_qh": 0, "backlog": 3, "rate_done": 0.0, "rate_dxl": 0.0, "rate_cxl": 100.0, "status_code": "zero_done", "status_label": "Chưa hoàn thành (0% • Tồn 3 CV)", "tier": "zero_done"}, {"excel_row": 59, "stt": 50, "name": "PHẠM MINH TRÍ", "name_nfc": "PHẠM MINH TRÍ", "row_type": "staff", "role_hint": "Cán bộ / Chuyên viên", "total": 3, "cxl_th": 0, "cxl_qh": 0, "cxl_tot": 0, "dxl_th": 2, "dxl_qh": 0, "dxl_tot": 2, "dht_th": 1, "dht_qh": 0, "dht_tot": 1, "hxl_th": 3, "hxl_qh": 0, "backlog": 2, "rate_done": 33.33, "rate_dxl": 66.67, "rate_cxl": 0.0, "status_code": "slow_backlog", "status_label": "Chậm tiến độ (33.3% • Tồn 2 CV)", "tier": "slow_backlog"}, {"excel_row": 60, "stt": 51, "name": "PHẠM NGUYỄN LAN ANH", "name_nfc": "PHẠM NGUYỄN LAN ANH", "row_type": "staff", "role_hint": "Cán bộ / Chuyên viên", "total": 39, "cxl_th": 13, "cxl_qh": 0, "cxl_tot": 13, "dxl_th": 2, "dxl_qh": 0, "dxl_tot": 2, "dht_th": 24, "dht_qh": 0, "dht_tot": 24, "hxl_th": 39, "hxl_qh": 0, "backlog": 15, "rate_done": 61.54, "rate_dxl": 5.13, "rate_cxl": 33.33, "status_code": "slow_backlog", "status_label": "Chậm tiến độ (61.5% • Tồn 15 CV)", "tier": "slow_backlog"}, {"excel_row": 61, "stt": 52, "name": "PHẠM THÀNH VŨ", "name_nfc": "PHẠM THÀNH VŨ", "row_type": "staff", "role_hint": "Cán bộ / Chuyên viên", "total": 3, "cxl_th": 3, "cxl_qh": 0, "cxl_tot": 3, "dxl_th": 0, "dxl_qh": 0, "dxl_tot": 0, "dht_th": 0, "dht_qh": 0, "dht_tot": 0, "hxl_th": 3, "hxl_qh": 0, "backlog": 3, "rate_done": 0.0, "rate_dxl": 0.0, "rate_cxl": 100.0, "status_code": "zero_done", "status_label": "Chưa hoàn thành (0% • Tồn 3 CV)", "tier": "zero_done"}, {"excel_row": 62, "stt": 53, "name": "PHẠM THỊ YẾN NHI", "name_nfc": "PHẠM THỊ YẾN NHI", "row_type": "staff", "role_hint": "Cán bộ / Chuyên viên", "total": 6, "cxl_th": 0, "cxl_qh": 0, "cxl_tot": 0, "dxl_th": 0, "dxl_qh": 0, "dxl_tot": 0, "dht_th": 6, "dht_qh": 0, "dht_tot": 6, "hxl_th": 6, "hxl_qh": 0, "backlog": 0, "rate_done": 100.0, "rate_dxl": 0.0, "rate_cxl": 0.0, "status_code": "done_100", "status_label": "Hoàn thành 100% đúng hạn", "tier": "done_100"}, {"excel_row": 63, "stt": 54, "name": "PHẠM TRẦN HỒNG NHƯ", "name_nfc": "PHẠM TRẦN HỒNG NHƯ", "row_type": "staff", "role_hint": "Cán bộ / Chuyên viên", "total": 3, "cxl_th": 3, "cxl_qh": 0, "cxl_tot": 3, "dxl_th": 0, "dxl_qh": 0, "dxl_tot": 0, "dht_th": 0, "dht_qh": 0, "dht_tot": 0, "hxl_th": 3, "hxl_qh": 0, "backlog": 3, "rate_done": 0.0, "rate_dxl": 0.0, "rate_cxl": 100.0, "status_code": "zero_done", "status_label": "Chưa hoàn thành (0% • Tồn 3 CV)", "tier": "zero_done"}, {"excel_row": 64, "stt": 55, "name": "QUẢN NGUYỄN THẢO NGUYÊN", "name_nfc": "QUẢN NGUYỄN THẢO NGUYÊN", "row_type": "staff", "role_hint": "Cán bộ / Chuyên viên", "total": 4, "cxl_th": 2, "cxl_qh": 0, "cxl_tot": 2, "dxl_th": 2, "dxl_qh": 0, "dxl_tot": 2, "dht_th": 0, "dht_qh": 0, "dht_tot": 0, "hxl_th": 4, "hxl_qh": 0, "backlog": 4, "rate_done": 0.0, "rate_dxl": 50.0, "rate_cxl": 50.0, "status_code": "zero_done", "status_label": "Chưa hoàn thành (0% • Tồn 4 CV)", "tier": "zero_done"}, {"excel_row": 65, "stt": 56, "name": "TRƯƠNG NGÔ HỒNG DUYÊN", "name_nfc": "TRƯƠNG NGÔ HỒNG DUYÊN", "row_type": "staff", "role_hint": "Cán bộ / Chuyên viên", "total": 4, "cxl_th": 4, "cxl_qh": 0, "cxl_tot": 4, "dxl_th": 0, "dxl_qh": 0, "dxl_tot": 0, "dht_th": 0, "dht_qh": 0, "dht_tot": 0, "hxl_th": 4, "hxl_qh": 0, "backlog": 4, "rate_done": 0.0, "rate_dxl": 0.0, "rate_cxl": 100.0, "status_code": "zero_done", "status_label": "Chưa hoàn thành (0% • Tồn 4 CV)", "tier": "zero_done"}, {"excel_row": 66, "stt": 57, "name": "TRẦN MINH DŨNG", "name_nfc": "TRẦN MINH DŨNG", "row_type": "staff", "role_hint": "Cán bộ / Chuyên viên", "total": 3, "cxl_th": 3, "cxl_qh": 0, "cxl_tot": 3, "dxl_th": 0, "dxl_qh": 0, "dxl_tot": 0, "dht_th": 0, "dht_qh": 0, "dht_tot": 0, "hxl_th": 3, "hxl_qh": 0, "backlog": 3, "rate_done": 0.0, "rate_dxl": 0.0, "rate_cxl": 100.0, "status_code": "zero_done", "status_label": "Chưa hoàn thành (0% • Tồn 3 CV)", "tier": "zero_done"}, {"excel_row": 67, "stt": 58, "name": "TRẦN NGUYỄN HOÀI LAM", "name_nfc": "TRẦN NGUYỄN HOÀI LAM", "row_type": "staff", "role_hint": "Cán bộ / Chuyên viên", "total": 6, "cxl_th": 6, "cxl_qh": 0, "cxl_tot": 6, "dxl_th": 0, "dxl_qh": 0, "dxl_tot": 0, "dht_th": 0, "dht_qh": 0, "dht_tot": 0, "hxl_th": 6, "hxl_qh": 0, "backlog": 6, "rate_done": 0.0, "rate_dxl": 0.0, "rate_cxl": 100.0, "status_code": "zero_done", "status_label": "Chưa hoàn thành (0% • Tồn 6 CV)", "tier": "zero_done"}, {"excel_row": 68, "stt": 59, "name": "TRẦN QUỐC HƯNG", "name_nfc": "TRẦN QUỐC HƯNG", "row_type": "staff", "role_hint": "Cán bộ / Chuyên viên", "total": 4, "cxl_th": 4, "cxl_qh": 0, "cxl_tot": 4, "dxl_th": 0, "dxl_qh": 0, "dxl_tot": 0, "dht_th": 0, "dht_qh": 0, "dht_tot": 0, "hxl_th": 4, "hxl_qh": 0, "backlog": 4, "rate_done": 0.0, "rate_dxl": 0.0, "rate_cxl": 100.0, "status_code": "zero_done", "status_label": "Chưa hoàn thành (0% • Tồn 4 CV)", "tier": "zero_done"}, {"excel_row": 69, "stt": 60, "name": "TRẦN THANH TRIẾT", "name_nfc": "TRẦN THANH TRIẾT", "row_type": "staff", "role_hint": "Cán bộ / Chuyên viên", "total": 27, "cxl_th": 2, "cxl_qh": 0, "cxl_tot": 2, "dxl_th": 1, "dxl_qh": 0, "dxl_tot": 1, "dht_th": 23, "dht_qh": 1, "dht_tot": 24, "hxl_th": 26, "hxl_qh": 1, "backlog": 3, "rate_done": 88.89, "rate_dxl": 3.7, "rate_cxl": 7.41, "status_code": "overdue_completed", "status_label": "Hoàn tất trễ hạn (1 CV)", "tier": "overdue"}, {"excel_row": 70, "stt": 61, "name": "TRẦN THỊ THÙY TRANG", "name_nfc": "TRẦN THỊ THÙY TRANG", "row_type": "staff", "role_hint": "Cán bộ / Chuyên viên", "total": 6, "cxl_th": 1, "cxl_qh": 0, "cxl_tot": 1, "dxl_th": 0, "dxl_qh": 0, "dxl_tot": 0, "dht_th": 5, "dht_qh": 0, "dht_tot": 5, "hxl_th": 6, "hxl_qh": 0, "backlog": 1, "rate_done": 83.33, "rate_dxl": 0.0, "rate_cxl": 16.67, "status_code": "good_progress", "status_label": "Tiến độ tốt (83.3% • Tồn 1 CV)", "tier": "good_progress"}, {"excel_row": 71, "stt": 62, "name": "TRẦN VĂN ĐÔNG", "name_nfc": "TRẦN VĂN ĐÔNG", "row_type": "staff", "role_hint": "Cán bộ / Chuyên viên", "total": 3, "cxl_th": 3, "cxl_qh": 0, "cxl_tot": 3, "dxl_th": 0, "dxl_qh": 0, "dxl_tot": 0, "dht_th": 0, "dht_qh": 0, "dht_tot": 0, "hxl_th": 3, "hxl_qh": 0, "backlog": 3, "rate_done": 0.0, "rate_dxl": 0.0, "rate_cxl": 100.0, "status_code": "zero_done", "status_label": "Chưa hoàn thành (0% • Tồn 3 CV)", "tier": "zero_done"}, {"excel_row": 72, "stt": 63, "name": "Trần Đình Siêu", "name_nfc": "Trần Đình Siêu", "row_type": "staff", "role_hint": "Cán bộ / Chuyên viên", "total": 3, "cxl_th": 2, "cxl_qh": 0, "cxl_tot": 2, "dxl_th": 0, "dxl_qh": 0, "dxl_tot": 0, "dht_th": 1, "dht_qh": 0, "dht_tot": 1, "hxl_th": 3, "hxl_qh": 0, "backlog": 2, "rate_done": 33.33, "rate_dxl": 0.0, "rate_cxl": 66.67, "status_code": "slow_backlog", "status_label": "Chậm tiến độ (33.3% • Tồn 2 CV)", "tier": "slow_backlog"}, {"excel_row": 73, "stt": 64, "name": "TẠ NGUYỄN BÍCH TRANG", "name_nfc": "TẠ NGUYỄN BÍCH TRANG", "row_type": "staff", "role_hint": "Cán bộ / Chuyên viên", "total": 6, "cxl_th": 4, "cxl_qh": 0, "cxl_tot": 4, "dxl_th": 0, "dxl_qh": 0, "dxl_tot": 0, "dht_th": 2, "dht_qh": 0, "dht_tot": 2, "hxl_th": 6, "hxl_qh": 0, "backlog": 4, "rate_done": 33.33, "rate_dxl": 0.0, "rate_cxl": 66.67, "status_code": "slow_backlog", "status_label": "Chậm tiến độ (33.3% • Tồn 4 CV)", "tier": "slow_backlog"}, {"excel_row": 74, "stt": 65, "name": "VÕ PHI TRÚC", "name_nfc": "VÕ PHI TRÚC", "row_type": "staff", "role_hint": "Cán bộ / Chuyên viên", "total": 9, "cxl_th": 0, "cxl_qh": 0, "cxl_tot": 0, "dxl_th": 0, "dxl_qh": 0, "dxl_tot": 0, "dht_th": 9, "dht_qh": 0, "dht_tot": 9, "hxl_th": 9, "hxl_qh": 0, "backlog": 0, "rate_done": 100.0, "rate_dxl": 0.0, "rate_cxl": 0.0, "status_code": "done_100", "status_label": "Hoàn thành 100% đúng hạn", "tier": "done_100"}, {"excel_row": 75, "stt": 66, "name": "VÕ VĂN TÌNH", "name_nfc": "VÕ VĂN TÌNH", "row_type": "staff", "role_hint": "Cán bộ / Chuyên viên", "total": 3, "cxl_th": 3, "cxl_qh": 0, "cxl_tot": 3, "dxl_th": 0, "dxl_qh": 0, "dxl_tot": 0, "dht_th": 0, "dht_qh": 0, "dht_tot": 0, "hxl_th": 3, "hxl_qh": 0, "backlog": 3, "rate_done": 0.0, "rate_dxl": 0.0, "rate_cxl": 100.0, "status_code": "zero_done", "status_label": "Chưa hoàn thành (0% • Tồn 3 CV)", "tier": "zero_done"}, {"excel_row": 76, "stt": 67, "name": "Văn thư", "name_nfc": "Văn thư", "row_type": "vanthu", "role_hint": "Bộ phận Văn thư tiếp nhận", "total": 647, "cxl_th": 0, "cxl_qh": 0, "cxl_tot": 0, "dxl_th": 0, "dxl_qh": 0, "dxl_tot": 0, "dht_th": 647, "dht_qh": 0, "dht_tot": 647, "hxl_th": 647, "hxl_qh": 0, "backlog": 0, "rate_done": 100.0, "rate_dxl": 0.0, "rate_cxl": 0.0, "status_code": "done_100", "status_label": "Hoàn thành 100% đúng hạn", "tier": "done_100"}, {"excel_row": 77, "stt": 68, "name": "VƯƠNG ÁNH XUÂN", "name_nfc": "VƯƠNG ÁNH XUÂN", "row_type": "staff", "role_hint": "Cán bộ / Chuyên viên", "total": 3, "cxl_th": 3, "cxl_qh": 0, "cxl_tot": 3, "dxl_th": 0, "dxl_qh": 0, "dxl_tot": 0, "dht_th": 0, "dht_qh": 0, "dht_tot": 0, "hxl_th": 3, "hxl_qh": 0, "backlog": 3, "rate_done": 0.0, "rate_dxl": 0.0, "rate_cxl": 100.0, "status_code": "zero_done", "status_label": "Chưa hoàn thành (0% • Tồn 3 CV)", "tier": "zero_done"}, {"excel_row": 78, "stt": 69, "name": "ÂN VĂN TUẤN", "name_nfc": "ÂN VĂN TUẤN", "row_type": "staff", "role_hint": "Cán bộ / Chuyên viên", "total": 3, "cxl_th": 3, "cxl_qh": 0, "cxl_tot": 3, "dxl_th": 0, "dxl_qh": 0, "dxl_tot": 0, "dht_th": 0, "dht_qh": 0, "dht_tot": 0, "hxl_th": 3, "hxl_qh": 0, "backlog": 3, "rate_done": 0.0, "rate_dxl": 0.0, "rate_cxl": 100.0, "status_code": "zero_done", "status_label": "Chưa hoàn thành (0% • Tồn 3 CV)", "tier": "zero_done"}, {"excel_row": 79, "stt": 70, "name": "ĐOÀN THỊ HOÀNG AN", "name_nfc": "ĐOÀN THỊ HOÀNG AN", "row_type": "staff", "role_hint": "Cán bộ / Chuyên viên", "total": 4, "cxl_th": 2, "cxl_qh": 0, "cxl_tot": 2, "dxl_th": 1, "dxl_qh": 0, "dxl_tot": 1, "dht_th": 1, "dht_qh": 0, "dht_tot": 1, "hxl_th": 4, "hxl_qh": 0, "backlog": 3, "rate_done": 25.0, "rate_dxl": 25.0, "rate_cxl": 50.0, "status_code": "slow_backlog", "status_label": "Chậm tiến độ (25.0% • Tồn 3 CV)", "tier": "slow_backlog"}, {"excel_row": 80, "stt": 71, "name": "ĐOÀN VĂN SANG", "name_nfc": "ĐOÀN VĂN SANG", "row_type": "staff", "role_hint": "Cán bộ / Chuyên viên", "total": 3, "cxl_th": 3, "cxl_qh": 0, "cxl_tot": 3, "dxl_th": 0, "dxl_qh": 0, "dxl_tot": 0, "dht_th": 0, "dht_qh": 0, "dht_tot": 0, "hxl_th": 3, "hxl_qh": 0, "backlog": 3, "rate_done": 0.0, "rate_dxl": 0.0, "rate_cxl": 100.0, "status_code": "zero_done", "status_label": "Chưa hoàn thành (0% • Tồn 3 CV)", "tier": "zero_done"}, {"excel_row": 81, "stt": 72, "name": "Đoàn Thanh Phong", "name_nfc": "Đoàn Thanh Phong", "row_type": "staff", "role_hint": "Cán bộ / Chuyên viên", "total": 3, "cxl_th": 3, "cxl_qh": 0, "cxl_tot": 3, "dxl_th": 0, "dxl_qh": 0, "dxl_tot": 0, "dht_th": 0, "dht_qh": 0, "dht_tot": 0, "hxl_th": 3, "hxl_qh": 0, "backlog": 3, "rate_done": 0.0, "rate_dxl": 0.0, "rate_cxl": 100.0, "status_code": "zero_done", "status_label": "Chưa hoàn thành (0% • Tồn 3 CV)", "tier": "zero_done"}, {"excel_row": 82, "stt": 73, "name": "ĐẶNG HUY CƯỜNG", "name_nfc": "ĐẶNG HUY CƯỜNG", "row_type": "staff", "role_hint": "Cán bộ / Chuyên viên", "total": 136, "cxl_th": 0, "cxl_qh": 0, "cxl_tot": 0, "dxl_th": 1, "dxl_qh": 0, "dxl_tot": 1, "dht_th": 135, "dht_qh": 0, "dht_tot": 135, "hxl_th": 136, "hxl_qh": 0, "backlog": 1, "rate_done": 99.26, "rate_dxl": 0.74, "rate_cxl": 0.0, "status_code": "good_progress", "status_label": "Tiến độ tốt (99.3% • Tồn 1 CV)", "tier": "good_progress"}, {"excel_row": 83, "stt": 74, "name": "ĐẶNG THỊ TUYẾT TRINH", "name_nfc": "ĐẶNG THỊ TUYẾT TRINH", "row_type": "staff", "role_hint": "Cán bộ / Chuyên viên", "total": 4, "cxl_th": 0, "cxl_qh": 0, "cxl_tot": 0, "dxl_th": 0, "dxl_qh": 0, "dxl_tot": 0, "dht_th": 4, "dht_qh": 0, "dht_tot": 4, "hxl_th": 4, "hxl_qh": 0, "backlog": 0, "rate_done": 100.0, "rate_dxl": 0.0, "rate_cxl": 0.0, "status_code": "done_100", "status_label": "Hoàn thành 100% đúng hạn", "tier": "done_100"}, {"excel_row": 84, "stt": 75, "name": "ĐỖ HOÀNG TÀI", "name_nfc": "ĐỖ HOÀNG TÀI", "row_type": "staff", "role_hint": "Cán bộ / Chuyên viên", "total": 3, "cxl_th": 3, "cxl_qh": 0, "cxl_tot": 3, "dxl_th": 0, "dxl_qh": 0, "dxl_tot": 0, "dht_th": 0, "dht_qh": 0, "dht_tot": 0, "hxl_th": 3, "hxl_qh": 0, "backlog": 3, "rate_done": 0.0, "rate_dxl": 0.0, "rate_cxl": 100.0, "status_code": "zero_done", "status_label": "Chưa hoàn thành (0% • Tồn 3 CV)", "tier": "zero_done"}, {"excel_row": 85, "stt": 76, "name": "ĐỖ THỊ YẾN", "name_nfc": "ĐỖ THỊ YẾN", "row_type": "staff", "role_hint": "Cán bộ / Chuyên viên", "total": 6, "cxl_th": 1, "cxl_qh": 0, "cxl_tot": 1, "dxl_th": 0, "dxl_qh": 0, "dxl_tot": 0, "dht_th": 5, "dht_qh": 0, "dht_tot": 5, "hxl_th": 6, "hxl_qh": 0, "backlog": 1, "rate_done": 83.33, "rate_dxl": 0.0, "rate_cxl": 16.67, "status_code": "good_progress", "status_label": "Tiến độ tốt (83.3% • Tồn 1 CV)", "tier": "good_progress"}, {"excel_row": 86, "stt": 77, "name": "ĐỖ VĂN ĐÔNG", "name_nfc": "ĐỖ VĂN ĐÔNG", "row_type": "staff", "role_hint": "Cán bộ / Chuyên viên", "total": 3, "cxl_th": 3, "cxl_qh": 0, "cxl_tot": 3, "dxl_th": 0, "dxl_qh": 0, "dxl_tot": 0, "dht_th": 0, "dht_qh": 0, "dht_tot": 0, "hxl_th": 3, "hxl_qh": 0, "backlog": 3, "rate_done": 0.0, "rate_dxl": 0.0, "rate_cxl": 100.0, "status_code": "zero_done", "status_label": "Chưa hoàn thành (0% • Tồn 3 CV)", "tier": "zero_done"}];
+    let currentFilter = "all";
+    let currentScope = "staff";
+
+    function removeAccents(str) {
+      return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/đ/g, "d").replace(/Đ/g, "D").toLowerCase();
+    }
+
+    function fmtNum(n) {
+      return Number(n).toLocaleString("en-US");
+    }
+
+    function setScope(scope) {
+      currentScope = scope;
+      document.querySelectorAll(".scope-tab").forEach(btn => btn.classList.remove("active"));
+      document.getElementById("scope-" + scope).classList.add("active");
+
+      let subset = [];
+      let titleLbl = "";
+      if (scope === "staff") {
+        subset = RAW_DATA.filter(d => d.row_type === "staff");
+        titleLbl = "TỔNG LƯỢT CÔNG VĂN (75 CB)";
+      } else if (scope === "unit") {
+        subset = RAW_DATA.filter(d => d.row_type === "unit");
+        titleLbl = "TỔNG CÔNG VĂN ĐƠN VỊ (DÒNG 10)";
+      } else {
+        subset = RAW_DATA;
+        titleLbl = "TỔNG LƯỢT CV TOÀN BẢNG (77 DÒNG)";
+      }
+
+      const tot = subset.reduce((s, x) => s + x.total, 0);
+      const cxl_th = subset.reduce((s, x) => s + x.cxl_th, 0);
+      const cxl_qh = subset.reduce((s, x) => s + x.cxl_qh, 0);
+      const cxl_tot = cxl_th + cxl_qh;
+
+      const dxl_th = subset.reduce((s, x) => s + x.dxl_th, 0);
+      const dxl_qh = subset.reduce((s, x) => s + x.dxl_qh, 0);
+      const dxl_tot = dxl_th + dxl_qh;
+
+      const dht_th = subset.reduce((s, x) => s + x.dht_th, 0);
+      const dht_qh = subset.reduce((s, x) => s + x.dht_qh, 0);
+      const dht_tot = dht_th + dht_qh;
+
+      const hxl_th = subset.reduce((s, x) => s + x.hxl_th, 0);
+      const hxl_qh = subset.reduce((s, x) => s + x.hxl_qh, 0);
+      const overdueEntities = subset.filter(x => x.hxl_qh > 0).length;
+
+      const r_th = tot ? ((hxl_th / tot) * 100).toFixed(2) : "0.00";
+      const r_done = tot ? ((dht_tot / tot) * 100).toFixed(2) : "0.00";
+      const r_doing = tot ? ((dxl_tot / tot) * 100).toFixed(2) : "0.00";
+      const r_unproc = tot ? ((cxl_tot / tot) * 100).toFixed(2) : "0.00";
+
+      document.getElementById("kpi-lbl-total").innerText = titleLbl;
+      document.getElementById("kpi-val-total").innerText = fmtNum(tot);
+      document.getElementById("kpi-sub-total").innerHTML = `Trong hạn: <strong>${fmtNum(hxl_th)}</strong> (${r_th}%)`;
+
+      document.getElementById("kpi-val-done").innerText = fmtNum(dht_tot);
+      document.getElementById("kpi-sub-done").innerHTML = `Tỷ lệ: <strong>${r_done}%</strong> (Đúng hạn: ${fmtNum(dht_th)} | Trễ: ${fmtNum(dht_qh)})`;
+
+      document.getElementById("kpi-val-doing").innerText = fmtNum(dxl_tot);
+      document.getElementById("kpi-sub-doing").innerHTML = `Tỷ lệ: <strong>${r_doing}%</strong> (Trong hạn: ${fmtNum(dxl_th)} | Quá hạn: ${fmtNum(dxl_qh)})`;
+
+      document.getElementById("kpi-val-unproc").innerText = fmtNum(cxl_tot);
+      document.getElementById("kpi-sub-unproc").innerHTML = `Tỷ lệ: <strong>${r_unproc}%</strong> (Trong hạn: ${fmtNum(cxl_th)} | Quá hạn: ${fmtNum(cxl_qh)})`;
+
+      document.getElementById("kpi-val-overdue").innerText = fmtNum(hxl_qh);
+      document.getElementById("kpi-sub-overdue").innerHTML = `<strong>${overdueEntities} đối tượng</strong> có CV quá hạn (${cxl_qh} Chưa XL, ${dxl_qh} Đang XL, ${dht_qh} Đã HT)`;
+    }
+
+    function applyFilter(filterKey) {
+      currentFilter = filterKey;
+      document.querySelectorAll(".filter-pill").forEach(btn => {
+        btn.classList.toggle("active", btn.getAttribute("data-filter") === filterKey);
+      });
+      renderTable();
+    }
+
+    function getBadgeHTML(d) {
+      if (d.tier === "overdue") {
+        return `<span class="status-badge badge-overdue"><i class="fa-solid fa-triangle-exclamation"></i> ${d.status_label}</span>`;
+      }
+      if (d.tier === "done_100") {
+        return `<span class="status-badge badge-done100"><i class="fa-solid fa-check"></i> Hoàn thành 100%</span>`;
+      }
+      if (d.tier === "good_progress") {
+        return `<span class="status-badge badge-good"><i class="fa-solid fa-thumbs-up"></i> Tốt (${d.rate_done.toFixed(1)}%)</span>`;
+      }
+      if (d.tier === "slow_backlog") {
+        return `<span class="status-badge badge-slow"><i class="fa-solid fa-clock"></i> Chậm (${d.rate_done.toFixed(1)}%)</span>`;
+      }
+      return `<span class="status-badge badge-zero"><i class="fa-regular fa-circle"></i> Chưa HT (0%)</span>`;
+    }
+
+    function renderTable() {
+      const query = removeAccents(document.getElementById("searchInput").value.trim());
+      const sortMode = document.getElementById("sortSelect").value;
+
+      let filtered = RAW_DATA.filter(d => {
+        if (query && !removeAccents(d.name_nfc).includes(query)) return false;
+        if (currentFilter === "staff") return d.row_type === "staff";
+        if (currentFilter === "overdue") return d.hxl_qh > 0;
+        if (currentFilter === "high_backlog") return d.backlog >= 10 && d.row_type === "staff";
+        if (currentFilter === "slow_backlog") return d.tier === "slow_backlog" && d.row_type === "staff";
+        if (currentFilter === "zero_done") return d.tier === "zero_done" && d.row_type === "staff";
+        if (currentFilter === "good_progress") return d.tier === "good_progress" && d.row_type === "staff";
+        if (currentFilter === "done_100") return d.tier === "done_100";
+        return true;
+      });
+
+      filtered.sort((a, b) => {
+        if (sortMode === "excel_row_asc") return a.excel_row - b.excel_row;
+        if (sortMode === "overdue_desc") return (b.hxl_qh - a.hxl_qh) || (b.backlog - a.backlog);
+        if (sortMode === "backlog_desc") return (b.backlog - a.backlog) || (b.total - a.total);
+        if (sortMode === "cxl_desc") return (b.cxl_tot - a.cxl_tot) || (b.total - a.total);
+        if (sortMode === "total_desc") return (b.total - a.total) || (b.dht_tot - a.dht_tot);
+        if (sortMode === "dht_desc") return (b.dht_tot - a.dht_tot) || (b.rate_done - a.rate_done);
+        if (sortMode === "rate_desc") return (b.rate_done - a.rate_done) || (b.total - a.total);
+        if (sortMode === "rate_asc") return (a.rate_done - b.rate_done) || (b.backlog - a.backlog);
+        return a.excel_row - b.excel_row;
+      });
+
+      document.getElementById("tableCounterText").innerHTML = `Đang hiển thị: <strong>${filtered.length} / 77</strong> dòng`;
+
+      const tbody = document.getElementById("tableBody");
+      tbody.innerHTML = filtered.map(d => {
+        let rowClass = "";
+        if (d.row_type === "unit") rowClass = "row-unit";
+        else if (d.row_type === "vanthu") rowClass = "row-vanthu";
+        else if (d.hxl_qh > 0) rowClass = "row-overdue";
+
+        const roleTag = d.row_type === "unit"
+          ? `<span style="font-size:0.68rem; background:#1d4ed8; color:#fff; padding:1px 6px; border-radius:4px; margin-left:6px;">CẤP ĐƠN VỊ</span>`
+          : (d.row_type === "vanthu" ? `<span style="font-size:0.68rem; background:#059669; color:#fff; padding:1px 6px; border-radius:4px; margin-left:6px;">BỘ PHẬN</span>` : "");
+
+        return `<tr class="${rowClass}">
+          <td class="mono" style="text-align: center; color: var(--text-muted);">#${d.excel_row}</td>
+          <td>
+            <div style="font-weight: 700; color: var(--text-primary);">${d.name}${roleTag}</div>
+          </td>
+          <td class="mono" style="text-align: right; font-weight: 700;">${fmtNum(d.total)}</td>
+          <td class="mono" style="text-align: right; color: ${d.cxl_th > 0 ? "#b45309" : "#94a3b8"}; font-weight: ${d.cxl_th >= 10 ? 700 : 400};">${d.cxl_th}</td>
+          <td class="mono" style="text-align: right; color: ${d.cxl_qh > 0 ? "#dc2626" : "#cbd5e1"}; font-weight: ${d.cxl_qh > 0 ? 800 : 400}; background: ${d.cxl_qh > 0 ? "#fee2e2" : "transparent"};">${d.cxl_qh}</td>
+          <td class="mono" style="text-align: right; color: ${d.dxl_th > 0 ? "#1d4ed8" : "#94a3b8"}; font-weight: ${d.dxl_th >= 10 ? 700 : 400};">${d.dxl_th}</td>
+          <td class="mono" style="text-align: right; color: ${d.dxl_qh > 0 ? "#dc2626" : "#cbd5e1"}; font-weight: ${d.dxl_qh > 0 ? 800 : 400}; background: ${d.dxl_qh > 0 ? "#fee2e2" : "transparent"};">${d.dxl_qh}</td>
+          <td class="mono" style="text-align: right; color: ${d.dht_th > 0 ? "#059669" : "#94a3b8"}; font-weight: 600;">${fmtNum(d.dht_th)}</td>
+          <td class="mono" style="text-align: right; color: ${d.dht_qh > 0 ? "#dc2626" : "#cbd5e1"}; font-weight: ${d.dht_qh > 0 ? 800 : 400}; background: ${d.dht_qh > 0 ? "#fee2e2" : "transparent"};">${d.dht_qh}</td>
+          <td class="mono" style="text-align: right; font-weight: 600;">${fmtNum(d.hxl_th)}</td>
+          <td class="mono" style="text-align: right; color: ${d.hxl_qh > 0 ? "#dc2626" : "#cbd5e1"}; font-weight: ${d.hxl_qh > 0 ? 800 : 400}; background: ${d.hxl_qh > 0 ? "#fee2e2" : "transparent"};">${d.hxl_qh}</td>
+          <td class="mono" style="text-align: right; font-weight: 700; color: ${d.backlog >= 10 ? "#c2410c" : (d.backlog > 0 ? "#475569" : "#10b981")};">${fmtNum(d.backlog)}</td>
+          <td>
+            <div class="multi-progress" title="Đã hoàn tất: ${d.rate_done}% | Đang XL: ${d.rate_dxl}% | Chưa XL: ${d.rate_cxl}%">
+              <div class="mp-done" style="width: ${d.rate_done}%;"></div>
+              <div class="mp-doing" style="width: ${d.rate_dxl}%;"></div>
+              <div class="mp-unproc" style="width: ${d.rate_cxl}%;"></div>
+            </div>
+            <span class="mono" style="font-size: 0.76rem; font-weight: 700; color: ${d.rate_done === 100 ? "#059669" : (d.rate_done === 0 ? "#64748b" : "#0f172a")};">${d.rate_done.toFixed(1)}%</span>
+          </td>
+          <td style="text-align: center;">
+            ${getBadgeHTML(d)}
+          </td>
+        </tr>`;
+      }).join("");
+
+      // Calculate Footer Totals for current filtered rows
+      const sumTot = filtered.reduce((s, x) => s + x.total, 0);
+      const sumCxlTh = filtered.reduce((s, x) => s + x.cxl_th, 0);
+      const sumCxlQh = filtered.reduce((s, x) => s + x.cxl_qh, 0);
+      const sumDxlTh = filtered.reduce((s, x) => s + x.dxl_th, 0);
+      const sumDxlQh = filtered.reduce((s, x) => s + x.dxl_qh, 0);
+      const sumDhtTh = filtered.reduce((s, x) => s + x.dht_th, 0);
+      const sumDhtQh = filtered.reduce((s, x) => s + x.dht_qh, 0);
+      const sumHxlTh = filtered.reduce((s, x) => s + x.hxl_th, 0);
+      const sumHxlQh = filtered.reduce((s, x) => s + x.hxl_qh, 0);
+      const sumBacklog = filtered.reduce((s, x) => s + x.backlog, 0);
+      const sumRate = sumTot ? (((sumDhtTh + sumDhtQh) / sumTot) * 100).toFixed(2) : "0.00";
+
+      document.getElementById("tableFoot").innerHTML = `<tr>
+        <td colspan="2">TỔNG CỘNG (${filtered.length} DÒNG ĐANG HIỂN THỊ)</td>
+        <td class="mono" style="text-align: right;">${fmtNum(sumTot)}</td>
+        <td class="mono" style="text-align: right; color: #fde68a;">${fmtNum(sumCxlTh)}</td>
+        <td class="mono" style="text-align: right; color: #fca5a5;">${fmtNum(sumCxlQh)}</td>
+        <td class="mono" style="text-align: right; color: #93c5fd;">${fmtNum(sumDxlTh)}</td>
+        <td class="mono" style="text-align: right; color: #fca5a5;">${fmtNum(sumDxlQh)}</td>
+        <td class="mono" style="text-align: right; color: #6ee7b7;">${fmtNum(sumDhtTh)}</td>
+        <td class="mono" style="text-align: right; color: #fca5a5;">${fmtNum(sumDhtQh)}</td>
+        <td class="mono" style="text-align: right;">${fmtNum(sumHxlTh)}</td>
+        <td class="mono" style="text-align: right; color: #fca5a5;">${fmtNum(sumHxlQh)}</td>
+        <td class="mono" style="text-align: right; color: #fdba74;">${fmtNum(sumBacklog)}</td>
+        <td class="mono" colspan="2" style="text-align: center; color: #6ee7b7;">Tỷ lệ Hoàn tất TB: ${sumRate}%</td>
+      </tr>`;
+    }
+
+    function initCharts() {
+      const staffData = RAW_DATA.filter(d => d.row_type === "staff");
+
+      // Chart 1: Top 15 Staff by Total Volume
+      const top15 = [...staffData].sort((a, b) => b.total - a.total).slice(0, 15);
+      new Chart(document.getElementById("topVolumeChart"), {
+        type: "bar",
+        data: {
+          labels: top15.map(d => d.name_nfc),
+          datasets: [
+            {
+              label: "Đã hoàn tất",
+              data: top15.map(d => d.dht_tot),
+              backgroundColor: "#10b981",
+              borderRadius: 3
+            },
+            {
+              label: "Đang xử lý",
+              data: top15.map(d => d.dxl_tot),
+              backgroundColor: "#3b82f6",
+              borderRadius: 3
+            },
+            {
+              label: "Chưa xử lý",
+              data: top15.map(d => d.cxl_tot),
+              backgroundColor: "#f59e0b",
+              borderRadius: 3
+            }
+          ]
+        },
+        options: {
+          indexAxis: "y",
+          responsive: true,
+          maintainAspectRatio: false,
+          scales: {
+            x: { stacked: true, grid: { color: "#f1f5f9" } },
+            y: { stacked: true, grid: { display: false }, ticks: { font: { size: 11, weight: "600" } } }
+          },
+          plugins: {
+            legend: { position: "top", labels: { boxWidth: 12, font: { size: 11, weight: "600" } } }
+          }
+        }
+      });
+
+      // Chart 2: 75 Staff Performance Tier Distribution
+      new Chart(document.getElementById("tierDistributionChart"), {
+        type: "doughnut",
+        data: {
+          labels: [
+            "Hoàn thành 100% đúng hạn (18 CB)",
+            "Tiến độ tốt >=70% (7 CB)",
+            "Chậm / Đang xử lý <70% (16 CB)",
+            "Chưa hoàn thành 0% (30 CB)",
+            "Có công văn Quá hạn (4 CB)"
+          ],
+          datasets: [{
+            data: [18, 7, 16, 30, 4],
+            backgroundColor: ["#10b981", "#3b82f6", "#f59e0b", "#94a3b8", "#ef4444"],
+            borderWidth: 2,
+            borderColor: "#ffffff"
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: {
+              position: "right",
+              labels: { boxWidth: 12, font: { size: 11, weight: "600" } }
+            }
+          }
+        }
+      });
+
+      // Chart 3: Top 10 Backlog Staff
+      const topBacklog = [...staffData].sort((a, b) => b.backlog - a.backlog).slice(0, 10);
+      new Chart(document.getElementById("backlogChart"), {
+        type: "bar",
+        data: {
+          labels: topBacklog.map(d => d.name_nfc.split(" ").slice(-2).join(" ")),
+          datasets: [
+            {
+              label: "Chưa xử lý",
+              data: topBacklog.map(d => d.cxl_tot),
+              backgroundColor: "#f59e0b"
+            },
+            {
+              label: "Đang xử lý",
+              data: topBacklog.map(d => d.dxl_tot),
+              backgroundColor: "#3b82f6"
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          scales: {
+            x: { stacked: true, ticks: { font: { size: 10, weight: "600" } }, grid: { display: false } },
+            y: { stacked: true, grid: { color: "#f1f5f9" } }
+          },
+          plugins: {
+            legend: { position: "top", labels: { boxWidth: 10, font: { size: 10 } } }
+          }
+        }
+      });
+    }
+
+    window.addEventListener("DOMContentLoaded", () => {
+      setScope("staff");
+      renderTable();
+      initCharts();
+    });
+  </script>
+</body>
+</html>

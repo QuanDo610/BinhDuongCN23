@@ -1,0 +1,37 @@
+Danh sách Sheets: hãy tạo 1 biểu excel từ các thô, Trang tính1
+
+=== SHEET: hãy tạo 1 biểu excel từ các thô (Kích thước: 1000 hàng x 25 cột) ===
+28+14+6 | Sô tồn kỳ trước | Số hồ sơ tiếp nhận | Số hồ sơ đã giải quyết | Số hồ sơ chưa giải quyết |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+Công tác cấp GCN và GDBĐ |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+1. Công tác đăng ký biến động nhà đất | 22 | 0 | 0 | 0 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+a) Cấp GCN cho người nhận chuyển nhượng tại các dự án | 0 | 0 | 0 | 0 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+b) Cấp GCN mới + Trình cấp GCN | 22 | 932 | 697 | 257 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+c) Đăng ký xác nhận thay đổi chủ sở hữu (Xác nhận trên GCN) | 0 | 12 | 11 | 1 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+Đơn xin rút hoặc trả hồ sơ (mục 1b, 1c) | 0 | 0 | 0 | 0 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+2. Đăng ký Giao dịch Bảo đảm (Mẫu 01) |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+Tổng số | 191 | 856 | 766 | 281 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+Thế chấp | 46 | 418 | 331 | 133 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+Xóa Thế chấp | 139 | 396 | 396 | 139 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+Văn bản thông báo | 4 | 13 | 10 | 7 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+Đăng ký thay đổi | 2 | 29 | 29 | 2 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+Loại khác | 0 | 0 | 0 | 0 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+3. Các loại đăng ký biến động khác |  |  |  | 0 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+Tổng số | 16 | 83 |  | 99 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+Cập nhật số nhà, CCCD mới, thay đổi họ tên, năm sinh, v.v. | 4 | 64 | 45 | 23 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+Xóa nợ tiền sử dụng đất | 12 | 19 | 28 | 3 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+Đơn xin rút hoặc trả hồ sơ | 0 |  |  | 0 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+Hồ sơ kỹ thuật địa chính |  |  |  | 0 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+Tổng số |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+1. Công tác đo vẽ hiện trạng | 799 | 739 | 773 | 765 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+2. Xác nhận hồ sơ vị trí đất, cho thửa chính thức | 0 | 75 | 75 | 0 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+3. Kiểm tra bản vẽ (của các Công ty đo vẽ) | 0 | 88 | 51 | 37 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+Đạt yêu cầu | 0 | 51 | 51 | 0 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+Không đạt | 0 | 37 | 0 | 37 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+4. Xác minh hiện trạng | 40 | 7 | 21 | 26 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+5. Đã trích lục | 225 | 959 | 1070 | 114 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+Tổng hợp cung cấp thông tin |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+Tổng số hồ sơ | 63 | 672 | 652 | 83 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+Cung cấp thông tin cho hộ gia đình, cá nhân | 10 | 377 | 367 | 20 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+Cung cấp thông tin hỗ trợ tư pháp và các cơ quan ban ngành khác (Tòa án, Thi hành án, Công an, Chi cục Thuế…) | 53 | 295 | 285 | 63 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+
+=== SHEET: Trang tính1 (Kích thước: 1 hàng x 1 cột) ===
