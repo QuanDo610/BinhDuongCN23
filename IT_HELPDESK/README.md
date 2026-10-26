@@ -28,6 +28,12 @@ Trang web hoạt động theo mô hình **Serverless** (không cần máy chủ,
 5. **Bảo mật & Kết nối ngầm:**
    - URL Google Apps Script được tích hợp ngầm và mã hóa trong mã nguồn, không để lộ trên giao diện người dùng.
 
+6. **Kho Phần Mềm Cài Đặt (Google Drive):**
+   - Tích hợp sẵn nút mở nhanh Kho bộ cài đặt (Unikey, Driver máy in, Acrobat, Office, Driver Token...): [Mở Kho Phần Mềm](https://drive.google.com/drive/folders/1T2LVJKymM-52KBLNeabYxtAT4zfXneND)
+
+7. **Bong Bóng Chat Zalo Trực Tiếp:**
+   - Bong bóng chat nổi góc dưới màn hình kết nối trực tiếp đến kênh hỗ trợ của IT Chi nhánh 23.
+
 ---
 
 ## 🚀 Cấu Trúc Thư Mục

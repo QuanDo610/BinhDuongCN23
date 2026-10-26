@@ -87,9 +87,17 @@
         </div>
       </div>
 
-      <!-- Quick Action: Status Badge -->
-      <div class="flex items-center space-x-3">
-        <div class="flex items-center space-x-2 text-xs bg-white/10 px-3 py-1.5 rounded-xl border border-white/15">
+      <!-- Quick Action: Kho Phần Mềm & Status Badge -->
+      <div class="flex items-center space-x-2.5">
+        <!-- Nút Kho Phần Mềm Cài Đặt -->
+        <a href="https://drive.google.com/drive/folders/1T2LVJKymM-52KBLNeabYxtAT4zfXneND" target="_blank" rel="noopener noreferrer"
+          class="flex items-center space-x-1.5 text-xs bg-amber-400 hover:bg-amber-300 text-blue-950 font-bold px-3 py-1.5 rounded-xl border border-amber-300 shadow-sm transition group">
+          <i class="fa-solid fa-cloud-arrow-down text-sm"></i>
+          <span>Kho Phần Mềm Cài Đặt</span>
+          <i class="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-70 group-hover:translate-x-0.5 transition-transform"></i>
+        </a>
+
+        <div class="hidden sm:flex items-center space-x-2 text-xs bg-white/10 px-3 py-1.5 rounded-xl border border-white/15">
           <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
           <span>Hệ thống: <strong class="text-white">Sẵn sàng tiếp nhận</strong></span>
         </div>
@@ -105,6 +113,26 @@
       <!-- ================= CỘT TRÁI: FORM GỬI TICKET (TỐI GIẢN & TỰ ĐỘNG) ================= -->
       <section class="bg-white rounded-3xl border border-slate-200 shadow-sm p-5 sm:p-6 sticky top-4">
         
+        <!-- Khối Liên Kết Nhanh: Kho Phần Mềm Cài Đặt -->
+        <a href="https://drive.google.com/drive/folders/1T2LVJKymM-52KBLNeabYxtAT4zfXneND" target="_blank" rel="noopener noreferrer"
+          class="mb-4 p-3 rounded-2xl bg-gradient-to-r from-amber-50 via-orange-50 to-amber-50 border border-amber-200 hover:border-amber-300 flex items-center justify-between group transition shadow-xs">
+          <div class="flex items-center space-x-2.5">
+            <div class="w-9 h-9 rounded-xl bg-amber-500 text-white flex items-center justify-center text-base shadow-sm">
+              <i class="fa-solid fa-folder-open"></i>
+            </div>
+            <div>
+              <div class="text-xs font-bold text-amber-950 flex items-center gap-1.5">
+                Kho Phần Mềm Cài Đặt Máy Tính
+                <i class="fa-solid fa-arrow-up-right-from-square text-[9px] text-amber-600"></i>
+              </div>
+              <div class="text-[10px] text-amber-800">Unikey, Driver máy in, Acrobat, Office, Driver Token...</div>
+            </div>
+          </div>
+          <span class="text-[11px] font-bold text-amber-900 bg-white px-2.5 py-1 rounded-xl border border-amber-200 group-hover:bg-amber-100 transition whitespace-nowrap">
+            Mở Drive
+          </span>
+        </a>
+
         <div class="flex items-center justify-between pb-3.5 border-b border-slate-100 mb-4">
           <div>
             <h2 class="text-base font-extrabold text-slate-900 flex items-center gap-2">
@@ -520,6 +548,34 @@
       </button>
     </div>
   </div>
+
+  <!-- ================= BONG BÓNG HỖ TRỢ IT TRỰC TIẾP ================= -->
+  <aside class="fixed bottom-6 right-6 z-40 flex items-center group" aria-label="Liên hệ IT">
+    <!-- Hộp thông tin (Hiện trên máy tính) -->
+    <a href="#ticket-form"
+      class="hidden sm:flex items-center space-x-2.5 mr-3 px-3.5 py-2 bg-white/95 backdrop-blur-sm text-slate-800 rounded-2xl shadow-xl border border-slate-200 hover:border-blue-300 transition-all hover:bg-slate-50 group-hover:scale-105 select-none">
+      <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+      <div class="text-left">
+        <div class="text-[11px] font-bold text-slate-900 leading-tight">Tổ CNTT Chi Nhánh 23</div>
+        <div class="text-[11px] text-[#0068FF] font-bold">Hỗ Trợ Trực Tuyến</div>
+      </div>
+    </a>
+
+    <!-- Nút bong bóng tròn chính -->
+    <a href="#ticket-form"
+      class="relative w-14 h-14 rounded-full bg-[#0068FF] text-white flex items-center justify-center shadow-2xl shadow-blue-500/50 hover:scale-110 active:scale-95 transition-all"
+      title="Gửi yêu cầu hỗ trợ kỹ thuật">
+      <!-- Vòng sóng hiệu ứng ping -->
+      <span class="absolute -inset-1 rounded-full bg-[#0068FF] opacity-40 animate-ping pointer-events-none"></span>
+      
+      <!-- Logo Zalo SVG chính xác -->
+      <svg class="w-8 h-8 relative z-10" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M24 4C12.954 4 4 12.059 4 22C4 25.867 4.967 29.431 6.644 32.503L4.248 41.246C4.019 42.083 4.794 42.858 5.631 42.629L14.374 40.233C17.248 41.692 20.528 42.5 24 42.5C35.046 42.5 44 34.441 44 24.5C44 14.559 35.046 4 24 4Z" fill="white"/>
+        <path d="M14 17H25L14 30H27V33H12V30L23 17H14V17Z" fill="#0068FF"/>
+        <circle cx="34" cy="25" r="3.2" fill="#0068FF"/>
+      </svg>
+    </a>
+  </aside>
 
   <!-- ================= JAVASCRIPT XỬ LÝ TOÀN DIỆN ================= -->
   <script>
