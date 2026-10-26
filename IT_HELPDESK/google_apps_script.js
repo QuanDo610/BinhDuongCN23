@@ -180,8 +180,30 @@ function doGet(e) {
       });
     }
 
-    // Ticket mới nhất đưa lên đầu
-    tickets.reverse();
+    // Sắp xếp thứ tự ưu tiên: "Đang xử lý" (1) > "Chờ xử lý" (2) > "Đã hoàn thành" (3 - dưới cùng)
+    // Trong mỗi nhóm: tự sort từ mới nhất tới cũ nhất
+    function getStatusRank(status) {
+      const s = (status || "").trim().toLowerCase();
+      if (s.indexOf("đang") !== -1 || s.indexOf("progress") !== -1) return 1;
+      if (s.indexOf("hoàn thành") !== -1 || s.indexOf("xong") !== -1 || s.indexOf("done") !== -1) return 3;
+      return 2;
+    }
+
+    function parseTimeStr(ts) {
+      if (!ts) return 0;
+      const m = ts.match(/^(\d{1,2})\/(\d{1,2})\/(\d{4})\s+(\d{1,2}):(\d{1,2})(?::(\d{1,2}))?/);
+      if (m) {
+        return new Date(m[3], m[2] - 1, m[1], m[4], m[5], m[6] || 0).getTime();
+      }
+      return 0;
+    }
+
+    tickets.sort(function(a, b) {
+      const rankA = getStatusRank(a.status);
+      const rankB = getStatusRank(b.status);
+      if (rankA !== rankB) return rankA - rankB;
+      return parseTimeStr(b.timestamp) - parseTimeStr(a.timestamp);
+    });
 
     return jsonResponse({
       success: true,

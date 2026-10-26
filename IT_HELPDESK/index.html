@@ -899,6 +899,47 @@
       ];
     }
 
+    // Helper xác định thứ tự ưu tiên trạng thái: Đang xử lý (1) > Chờ xử lý (2) > Đã hoàn thành (3 - dưới cùng)
+    function getStatusRank(status) {
+      const s = (status || "").trim().toLowerCase();
+      if (s.includes("đang") || s.includes("progress")) return 1;
+      if (s.includes("hoàn thành") || s.includes("xong") || s.includes("done")) return 3;
+      return 2; // Chờ xử lý hoặc trạng thái khác
+    }
+
+    // Helper phân tích thời gian để sort từ mới nhất đến cũ nhất
+    function parseTicketTime(item) {
+      if (!item) return 0;
+      const ts = (item.timestamp || "").trim();
+      if (ts) {
+        // Dạng: "DD/MM/YYYY HH:mm:ss"
+        const m1 = ts.match(/^(\d{1,2})\/(\d{1,2})\/(\d{4})\s+(\d{1,2}):(\d{1,2})(?::(\d{1,2}))?/);
+        if (m1) {
+          return new Date(m1[3], m1[2] - 1, m1[1], m1[4], m1[5], m1[6] || 0).getTime();
+        }
+        // Dạng: "HH:mm - DD/MM/YYYY"
+        const m2 = ts.match(/^(\d{1,2}):(\d{1,2})\s*-\s*(\d{1,2})\/(\d{1,2})\/(\d{4})/);
+        if (m2) {
+          return new Date(m2[5], m2[4] - 1, m2[3], m2[1], m2[2], 0).getTime();
+        }
+        // Dạng: "HH:mm - DD/MM" (năm hiện tại)
+        const m3 = ts.match(/^(\d{1,2}):(\d{1,2})\s*-\s*(\d{1,2})\/(\d{1,2})/);
+        if (m3) {
+          return new Date(new Date().getFullYear(), m3[4] - 1, m3[3], m3[1], m3[2], 0).getTime();
+        }
+      }
+      // Dựa vào mã Ticket: TK-YYMMDD-XXX
+      const idMatch = (item.id || "").match(/TK-(\d{2})(\d{2})(\d{2})-(\d+)/);
+      if (idMatch) {
+        const yr = 2000 + parseInt(idMatch[1], 10);
+        const mo = parseInt(idMatch[2], 10) - 1;
+        const da = parseInt(idMatch[3], 10);
+        const seq = parseInt(idMatch[4], 10);
+        return new Date(yr, mo, da).getTime() + seq * 1000;
+      }
+      return 0;
+    }
+
     // 8. RENDER BẢNG MONITORING
     function renderTickets() {
       const tbody = document.getElementById("ticketTableBody");
@@ -916,6 +957,17 @@
           if (!text.includes(searchQuery)) return false;
         }
         return true;
+      });
+
+      // Sắp xếp ưu tiên: "Đang xử lý" (1) > "Chờ xử lý" (2) > "Đã hoàn thành" (3 - dưới cùng)
+      // Trong mỗi nhóm: tự sort từ mới nhất tới cũ nhất
+      filtered.sort((a, b) => {
+        const rankA = getStatusRank(a.status);
+        const rankB = getStatusRank(b.status);
+        if (rankA !== rankB) {
+          return rankA - rankB;
+        }
+        return parseTicketTime(b) - parseTicketTime(a);
       });
 
       if (filtered.length === 0) {
