@@ -63,3 +63,18 @@ Toàn bộ chi tiết kỹ thuật được quy định tại [QUY_CHUAN_DOCX_ND
 5. **Ký hiệu viết tắt tên loại văn bản (Phụ lục III):**
    - Áp dụng đúng chuẩn viết tắt 27 loại văn bản hành chính (NQ, QĐ, CT, KH, BC, BB, TTr, HĐ...) và bản sao (SY, TrS, SL).
 
+## 9. Quy tắc Phông chữ Duy nhất & Tuyệt đối CẤM KaTeX / MathJax (Single Font & Anti-KaTeX Rule)
+> **NGUYÊN TẮC BẤT DI BẤT DỊCH CHO MỌI FILE HTML / WEB:**
+> 1. **Duy nhất 1 phông chữ hệ thống gốc (Browser-supported System Font):**
+>    - Toàn bộ giao diện HTML/Web BẮT BUỘC chỉ sử dụng duy nhất một họ phông hệ thống có sẵn trên máy:
+>      `font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;`
+>    - (Đối với bản in PDF print_report: sử dụng duy nhất font `Times New Roman, Times, serif`).
+>    - **TUYỆT ĐỐI CẤM** gọi `@import` hoặc `<link>` đến Google Fonts bên ngoài (Inter, Roboto, Plus Jakarta Sans...) vì gây trễ mạng, thiếu bộ ký tự tiếng Việt, dẫn đến vỡ chữ và nhảy font nham nhở.
+>    - **TUYỆT ĐỐI CẤM** pha trộn nhiều font khác nhau trong cùng 1 trang. Mọi thẻ `html, body, p, span, div, h1-h6, table, th, td, button, input, select, textarea` phải dùng chung 1 font duy nhất.
+>
+> 2. **TUYỆT ĐỐI CẤM NHÚNG KATEX / MATHJAX / LATEX AUTO-RENDER:**
+>    - Tuyệt đối **KHÔNG nhúng thư viện KaTeX hay MathJax** vào các trang HTML quản trị, hành chính, báo cáo, dashboard.
+>    - Tuyệt đối **KHÔNG chạy auto-render KaTeX (`renderMathInElement`) trên `document.body`**.
+>    - *Lý do:* KaTeX sẽ tự động hiểu sai các dấu ngoặc đơn `(...)`, ngoặc vuông `[...]` hoặc ký tự `$` trong tiếng Việt thành công thức toán học, dẫn đến việc nuốt khoảng trắng và phân rã các chữ cái tiếng Việt có dấu (như `Huỳnh Văn Cù` bị phân rã thành `Hu y ˋ nh V a ˘ n C u ˋ`). Mọi công thức nếu có chỉ trình bày dạng text hoặc KaTeX cục bộ trong thẻ riêng biệt.
+
+

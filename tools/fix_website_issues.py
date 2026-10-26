@@ -116,7 +116,7 @@ proposal_inner = extract_section_inner('tab-proposal')
 risk_inner = extract_section_inner('tab-risk')
 event_inner = extract_section_inner('tab-event')
 
-# Build the complete new index.html
+# Build the complete new index.html with ZERO KaTeX and STRICT SINGLE SYSTEM FONT
 new_index_html = f'''<!DOCTYPE html>
 <html lang="vi" class="h-full bg-slate-50">
 <head>
@@ -130,27 +130,19 @@ new_index_html = f'''<!DOCTYPE html>
   <!-- Font Awesome CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   
-  <!-- KaTeX CSS & JS for LaTeX Math Rendering -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
-  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
-  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"></script>
-  
-  <!-- Marked.js for Markdown Parsing -->
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-  
   <style>
-    /* ================= SYSTEM SAFE FONTS ================= */
+    /* ================= 1 FONT DUY NHẤT TOÀN DIỆN CHO WEBSITE (BROWSER SUPPORTED) ================= */
+    *, html, body, button, input, select, textarea, table, th, td, p, span, h1, h2, h3, h4, h5, h6, a, div {{
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }}
+
     html {{
       background-color: #f8fafc;
       min-height: 100%;
       overscroll-behavior-y: none;
       -webkit-text-size-adjust: 100%;
-    }}
-    
-    body, button, input, select, textarea, table, th, td {{
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
     }}
     
     body {{
@@ -329,7 +321,7 @@ new_index_html = f'''<!DOCTYPE html>
             </button>
 
             <button onclick="switchTab('tab-markdown')" id="btn-tab-markdown" class="nav-item w-full flex items-center px-3 py-2.5 rounded-xl text-xs font-semibold text-slate-700 hover:bg-slate-100 transition">
-              <i class="fa-brands fa-markdown w-5 text-sky-600 mr-2.5 text-sm"></i>
+              <i class="fa-solid fa-file-lines w-5 text-sky-600 mr-2.5 text-sm"></i>
               <span>Báo Cáo Markdown Chi Tiết</span>
               <span class="ml-auto px-1.5 py-0.5 rounded text-[10px] font-bold bg-sky-100 text-sky-800">3 File</span>
             </button>
@@ -344,7 +336,7 @@ new_index_html = f'''<!DOCTYPE html>
           <div class="space-y-1">
             <a href="../documents/index.html" class="w-full flex items-center px-3 py-2.5 rounded-xl text-xs font-semibold text-slate-600 hover:bg-sky-50 hover:text-sky-700 transition">
               <i class="fa-solid fa-folder-open w-5 text-amber-500 mr-2.5 text-sm"></i>
-              <span>Kho 65 Tài Liệu Gốc</span>
+              <span>Kho 66 Tài Liệu Gốc</span>
               <i class="fa-solid fa-arrow-up-right-from-square ml-auto text-[10px] text-slate-400"></i>
             </a>
 
@@ -381,7 +373,7 @@ new_index_html = f'''<!DOCTYPE html>
       <!-- Sidebar Footer -->
       <div class="p-4 border-t border-slate-200 bg-slate-50 text-[11px] text-slate-500 flex items-center justify-between">
         <span>Tổ CNTT - CN23</span>
-        <span class="font-mono text-slate-400">v2.5.2</span>
+        <span class="font-mono text-slate-400">v2.5.3</span>
       </div>
     </aside>
 
@@ -410,7 +402,7 @@ new_index_html = f'''<!DOCTYPE html>
         <!-- Quick Action Buttons -->
         <div class="flex items-center space-x-2 shrink-0 text-xs">
           <a href="../documents/index.html" class="hidden sm:inline-flex items-center px-3 py-1.5 rounded-xl font-semibold bg-amber-50 hover:bg-amber-100 text-amber-800 border border-amber-200 transition shadow-2xs">
-            <i class="fa-solid fa-folder-open mr-1.5 text-amber-600"></i> Kho 65 Văn Bản
+            <i class="fa-solid fa-folder-open mr-1.5 text-amber-600"></i> Kho 66 Văn Bản
           </a>
           <a href="../IT_HELPDESK/index.html" class="hidden md:inline-flex items-center px-3 py-1.5 rounded-xl font-semibold bg-blue-50 hover:bg-blue-100 text-blue-800 border border-blue-200 transition shadow-2xs">
             <i class="fa-solid fa-headset mr-1.5 text-blue-600"></i> IT Helpdesk
@@ -480,7 +472,7 @@ new_index_html = f'''<!DOCTYPE html>
             <div class="flex flex-col sm:flex-row sm:items-center justify-between pb-4 border-b border-slate-200 gap-3">
               <div>
                 <h3 class="text-base sm:text-lg font-bold text-slate-900 flex items-center gap-2">
-                  <i class="fa-brands fa-markdown text-sky-600 text-xl"></i>
+                  <i class="fa-solid fa-file-lines text-sky-600 text-xl"></i>
                   <span>Báo Cáo Kỹ Thuật & Tài Liệu Toàn Văn Markdown</span>
                 </h3>
                 <p class="text-xs text-slate-500 mt-0.5">Hiển thị nội dung đầy đủ các tài liệu tiến độ, bảng nhiệm vụ và lịch sử hệ thống</p>
@@ -523,7 +515,7 @@ new_index_html = f'''<!DOCTYPE html>
       <footer class="w-full bg-white border-t border-slate-200 py-4 px-6 text-center text-xs text-slate-500 shrink-0 mt-auto">
         <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
           <span>Hệ Thống Quản Trị Dữ Liệu IT & Điều Hành Tác Vụ - Chi Nhánh Số 23 (VPĐKĐĐ TP.HCM)</span>
-          <span class="text-slate-400 font-mono">Phiên bản 2.5.2 &bull; Thiết kế chuẩn Responsive</span>
+          <span class="text-slate-400 font-mono">Phiên bản 2.5.3 &bull; Chuẩn 1 Font Hệ Thống Gốc</span>
         </div>
       </footer>
 
@@ -626,21 +618,6 @@ new_index_html = f'''<!DOCTYPE html>
         targetBtn.className = 'doc-btn px-3 py-1.5 rounded-xl text-xs font-semibold bg-sky-600 text-white shadow-2xs transition';
       }}
     }}
-
-    // Auto-render KaTeX math after load
-    document.addEventListener("DOMContentLoaded", function() {{
-      if (typeof renderMathInElement === 'function') {{
-        renderMathInElement(document.body, {{
-          delimiters: [
-            {{left: '$$', right: '$$', display: true}},
-            {{left: '$', right: '$', display: false}},
-            {{left: '\\(', right: '\\)', display: false}},
-            {{left: '\\[', right: '\\]', display: true}}
-          ],
-          throwOnError : false
-        }});
-      }}
-    }});
   </script>
 </body>
 </html>
@@ -649,4 +626,4 @@ new_index_html = f'''<!DOCTYPE html>
 with open('OUTPUT/index.html', 'w', encoding='utf-8') as f:
     f.write(new_index_html)
 
-print("SUCCESS: OUTPUT/index.html updated with system fonts, markdown rendering, and fixed footer!")
+print("SUCCESS: OUTPUT/index.html updated with ZERO KaTeX and STRICT SINGLE SYSTEM FONT!")

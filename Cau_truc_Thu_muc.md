@@ -20,6 +20,7 @@ BINHDUONG/
 ├── Rule.md             # Quy tắc nghiêm ngặt mà AI phải tuân theo.
 ├── Skill.md            # Các kỹ năng và nghiệp vụ khả dụng.
 ├── QUY_CHUAN_DOCX_ND30.md # Tiêu chuẩn kỹ thuật định dạng văn bản (NĐ 30).
+├── QUY_CHUAN_TIEP_CONG_DAN_ND154.md # Quy chuẩn nghiệp vụ tiếp công dân & biểu mẫu (NĐ 154).
 ├── Cau_truc_Thu_muc.md # Cấu trúc dự án (File này).
 └── Quy_trinh_Don_dep.md# Quy trình dọn dẹp và bảo trì hệ thống.
 ```

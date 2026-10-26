@@ -61,3 +61,17 @@
 4. **Khi bạn cần bảng Excel hoặc Báo cáo HTML:**
    - Bạn chỉ cần nhắn: *"Lập bảng Excel thống kê tài sản..."* hoặc *"Xuất báo cáo HTML đối chiếu số liệu..."*
    - AI sẽ tự động tạo file và đặt vào `OUTPUT/`.
+
+---
+
+## 3. Nhật ký cập nhật nhiệm vụ mới (26/10/2026)
+- [x] **Nghiên cứu & Bóc tách toàn diện Nghị định số 154/2026/NĐ-CP:**
+  - File gốc: `documents/154-ndcp.signed.pdf` (35 trang văn bản ký số của Chính phủ, có hiệu lực 01/07/2026).
+  - Đã OCR trọn vẹn toàn bộ 35 trang, phân tích chi tiết 10 chương, 45 điều và 03 biểu mẫu chuẩn (Mẫu 01/TCD, Mẫu 02/TCD, Mẫu 03/TCD).
+- [x] **Xây dựng Quy chuẩn Nghiệp vụ Tiếp công dân & Biểu mẫu:**
+  - Ban hành tài liệu khung chuẩn mực: `QUY_CHUAN_TIEP_CONG_DAN_ND154.md` tại thư mục gốc.
+  - Hệ thống hóa toàn diện các quy định về từ chối tiếp dân (Điều 4), tiếp dân trực tuyến (Chương V), trách nhiệm tiếp dân của Người đứng đầu (Điều 25-27), chế độ bồi dưỡng và kỷ luật nghiêm minh (Điều 35-43).
+- [x] **Xuất bản trọn bộ Sổ theo dõi tiếp công dân vào thư mục `OUTPUT/`:**
+  - `OUTPUT/SO_THEO_DOI_TIEP_CONG_DAN_ND154_ND30.docx`: Sổ theo dõi mở rộng nghiệp vụ thực tế chuẩn Nghị định 30/2020/NĐ-CP, khổ A4 Landscape, lặp Header trên từng trang (`w:tblHeader` theo chuẩn `PL2_final_da_nhap_bac_luong.docx`), chống đứt dòng `w:cantSplit`, đầy đủ thông tin: Ngày tiếp, Lãnh đạo chủ trì tiếp, Nội dung trao đổi, Quá trình xử lý, Kết quả giải quyết.
+  - `OUTPUT/MAU_03_TCD_SO_TIEP_CONG_DAN_NGUYEN_BAN_ND154.docx`: Biểu mẫu nguyên văn 13 cột Mẫu số 03/TCD theo Nghị định số 154/2026/NĐ-CP, chuẩn thể thức văn bản hành chính.
+  - `OUTPUT/SO_THEO_DOI_TIEP_CONG_DAN_ND154.xlsx`: Bản điện tử trên Excel tối ưu bộ lọc, phân loại dữ liệu, sẵn sàng tích hợp Cơ sở dữ liệu quốc gia về tiếp công dân.
