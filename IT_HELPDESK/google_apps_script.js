@@ -117,7 +117,8 @@ function saveImageToDrive(base64Data, filename) {
       file.setSharing(DriveApp.Access.ANYONE_WITH_LINK, DriveApp.Permission.VIEW);
     } catch (e) {}
 
-    return file.getUrl();
+    const fileId = file.getId();
+    return `https://drive.google.com/file/d/${fileId}/view`;
   } catch (err) {
     return "Lỗi upload ảnh: " + err.toString();
   }
@@ -139,8 +140,10 @@ function doGet(e) {
       return jsonResponse(result);
     }
 
-    // Mặc định: Trả về danh sách Ticket
-    const values = sheet.getDataRange().getDisplayValues();
+    // Mặc định: Trả về danh sách Ticket (Lấy cả giá trị hiển thị và công thức để bóc tách URL)
+    const dataRange = sheet.getDataRange();
+    const values = dataRange.getDisplayValues();
+    const formulas = dataRange.getFormulas();
 
     if (values.length <= 1) {
       return jsonResponse({ success: true, tickets: [] });
@@ -150,6 +153,15 @@ function doGet(e) {
     for (let i = 1; i < values.length; i++) {
       const row = values[i];
       if (!row[0] && !row[2]) continue;
+
+      // Xử lý link ảnh: Nếu là công thức HYPERLINK thì bóc tách URL thật ra
+      let imgLink = row[9] || "";
+      if (formulas[i] && formulas[i][9]) {
+        const match = formulas[i][9].match(/=HYPERLINK\("([^"]+)"/i);
+        if (match && match[1]) {
+          imgLink = match[1];
+        }
+      }
 
       tickets.push({
         id: row[0],
@@ -161,7 +173,7 @@ function doGet(e) {
         category: row[6],
         errorMessage: row[7] || "",
         description: row[8] || "",
-        imageUrl: row[9] || "",
+        imageUrl: imgLink,
         status: row[10] || "Chờ xử lý",
         itNote: row[11] || "",
         clientSpecs: row[12] || ""
@@ -266,10 +278,10 @@ function createTicketRow(sheet, data) {
   statusCell.setFontWeight("bold");
   statusCell.setBackground("#fef3c7").setFontColor("#b45309");
 
-  // Nếu có link ảnh thì tạo Hyperlink đẹp
+  // Lưu link ảnh trực tiếp vào ô, Google Sheets sẽ tự hiển thị link bấm được
   if (imageUrl && imageUrl.indexOf("http") === 0) {
     const imgCell = sheet.getRange(newRowIndex, 10);
-    imgCell.setFormula(`=HYPERLINK("${imageUrl}", "Xem ảnh chụp lỗi")`);
+    imgCell.setValue(imageUrl);
     imgCell.setFontColor("#2563eb").setFontUnderline(true);
   }
 
