@@ -1,0 +1,49 @@
+16
+
+Điều 23. Phối hợp chuẩn bị tiếp công dân trực tuyến
+
+1. Chậm nhất là 05 ngày làm việc, trước ngày tiếp công dân trực tuyến, điểm
+cầu trung tâm tổ chức tiếp công dân thông báo cho người khiếu nại, tố cáo, kiến
+nghị, phản ánh; các cơ quan tham gia tiếp công dân; chuẩn bị hệ thống, thiết lập
+các điểm cầu tham gia.
+
+Chậm nhất 01 ngày làm việc trước ngày tiếp công dân trực tuyến, điểm
+cầu trung tâm phải kiểm tra, chuẩn bị điều kiện về hoạt động kết nối thử thành
+công giữa điểm cầu trung tâm với các điểm cầu thành phần.
+
+Chậm nhất 01 giờ trước khi diễn ra + hoạt động tiếp công dân trực tuyến,
+điểm cầu trung tâm phải tổ chức kết nối xong với các điểm cầu thành phần,
+đảm bảo các điểm cầu đều nhìn thấy hình ảnh và nghe rõ âm thanh của nhau;
+các chức năng bật/tắt âm thanh đặt ở chế độ sẵn sàng hoạt động.
+
+2. Các điểm cầu thành phần chủ động phối hợp với điểm cầu trung tâm
+trong việc cung cấp tài khoản, mật khẩu để kết nối với hệ thống trực tuyến tại
+điểm cầu trung tâm.
+
+Điều 24. Lưu trữ dữ liệu tiếp công dân trực tuyến
+
+1. Hoạt động tiếp công dân trực tuyến phải được ghi âm, ghi hình có âm
+thanh dưới dạng dữ liệu điện tử. Dữ liệu tiếp công dân trực tuyến được lưu trữ
+trên hệ thống máy chủ, nền tảng điện toán đám mây của cơ quan nhà nước
+theo quy định về lưu trữ điện tử.
+
+2. Dữ liệu điện tử về tiếp công dân trực tuyến có giá trị pháp lý như hồ
+sơ giấy khi được ký số hoặc xác thực theo quy định của pháp luật về giao dịch
+điện tử và chữ ký số.
+
+3. Thời hạn lưu trữ đữ liệu điện tử về tiếp công dân trực tuyến thực hiện
+theo quy định của pháp luật về lưu trữ.
+
+Chương VI
+TRÁCH NHIỆM TRỰC TIẾP TIẾP CÔNG DÂN CỦA NGƯỜI ĐỨNG
+ĐẦU CƠ QUAN, ĐƠN VỊ VÀ QUẢN LÝ, THEO DÕI VIỆC TIẾP
+CÔNG DÂN CỦA NGƯỜI ĐỨNG ĐẦU CƠ QUAN, ĐƠN VỊ
+
+Điều 25. Trách nhiệm của người đứng đầu cơ quan, đơn vị trong
+việc trực tiếp tiếp công dân
+
+1. Người đứng đầu cơ quan, đơn vị phải trực tiếp tiếp công dân đễ lắng
+nghe, xem xét, giải quyết và chỉ đạo việc giải quyết các khiếu nại, tố cáo, kiến
+nghị, phản ánh thuộc thâm quyền của mình hoặc thuộc thâm quyền của người
+đứng đầu cơ quan, đơn vị cập dưới trong công tác tiếp công dân, xử lý đơn và
+giải quyết khiếu nại, tố cáo, kiến nghị, phản ánh.
