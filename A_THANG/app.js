@@ -506,7 +506,7 @@ function bindEvents() {
     });
   }
 
-  // Modal Quên Mật Khẩu (Liên hệ Quản trị viên Đỗ Trọng Minh Quân qua Zalo 0973807027)
+  // Modal Quên Mật Khẩu (Liên hệ Quản trị viên IT Chi nhánh 23)
   const btnForgotPassword = document.getElementById("btnForgotPassword");
   const forgotPasswordModal = document.getElementById("forgotPasswordModal");
   const btnCloseForgotModal = document.getElementById("btnCloseForgotModal");

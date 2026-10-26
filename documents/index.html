@@ -3,62 +3,65 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Thư Viện Tài Liệu Gốc - Chi Nhánh Số 23 (documents/)</title>
+  <title>Kho Văn Bản & Tài Liệu Gốc - Chi Nhánh Số 23 (documents/)</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
     body { font-family: 'Inter', sans-serif; background-color: #f8fafc; color: #0f172a; }
   </style>
 </head>
-<body class="min-h-screen flex flex-col antialiased">
+<body class="min-h-screen flex flex-col antialiased bg-slate-50 text-slate-900">
 
   <!-- Header -->
-  <header class="bg-white border-b border-slate-200 sticky top-0 z-50 shadow-xs">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+  <header class="bg-white border-b border-slate-200 sticky top-0 z-50 shadow-2xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
       <div class="flex items-center space-x-3">
-        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-sky-500 to-indigo-600 flex items-center justify-center text-white shadow-lg shadow-sky-500/20">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-sky-500 to-indigo-600 flex items-center justify-center text-white shadow-md shadow-sky-500/20 shrink-0">
           <i class="fa-solid fa-folder-open text-lg"></i>
         </div>
-        <div>
-          <h1 class="text-base font-bold text-slate-900 leading-tight">Kho Tài Liệu Gốc (documents/)</h1>
-          <p class="text-xs text-slate-500">Văn phòng Đăng ký Đất đai TP.HCM - Chi nhánh số 23</p>
+        <div class="min-w-0">
+          <h1 class="text-sm sm:text-base font-bold text-slate-900 leading-tight truncate">Kho Văn Bản & Dữ Liệu Gốc (documents/)</h1>
+          <p class="text-xs text-slate-500 truncate">Văn phòng Đăng ký Đất đai TP.HCM - Chi nhánh số 23</p>
         </div>
       </div>
-      <div class="flex items-center space-x-2 text-xs font-medium">
-        <a href="../OUTPUT/index.html" class="px-3 py-2 rounded-lg bg-sky-50 hover:bg-sky-100 text-sky-700 transition flex items-center gap-1.5">
-          <i class="fa-solid fa-chart-line"></i> Dashboard Quản Trị
+      <div class="flex items-center space-x-2 text-xs font-medium shrink-0">
+        <a href="../OUTPUT/index.html" class="px-3 py-2 rounded-xl bg-sky-50 hover:bg-sky-100 text-sky-700 transition flex items-center gap-1.5 shadow-2xs">
+          <i class="fa-solid fa-chart-line"></i> <span class="hidden sm:inline">Dashboard Quản Trị</span>
         </a>
-        <a href="../OUTPUT/document_viewer.html" class="px-3 py-2 rounded-lg bg-indigo-50 hover:bg-indigo-100 text-indigo-700 transition flex items-center gap-1.5">
-          <i class="fa-solid fa-book-open"></i> Viewer 11 Hồ Sơ Gốc
+        <a href="../IT_HELPDESK/index.html" class="px-3 py-2 rounded-xl bg-blue-50 hover:bg-blue-100 text-blue-700 transition flex items-center gap-1.5 shadow-2xs">
+          <i class="fa-solid fa-headset"></i> <span class="hidden sm:inline">IT Helpdesk</span>
         </a>
-        <a href="../A_THANG/index.html" class="px-3 py-2 rounded-lg bg-emerald-50 hover:bg-emerald-100 text-emerald-700 transition flex items-center gap-1.5">
-          <i class="fa-solid fa-calendar-check"></i> Lịch Tuần
+        <a href="../A_THANG/index.html" class="px-3 py-2 rounded-xl bg-emerald-50 hover:bg-emerald-100 text-emerald-700 transition flex items-center gap-1.5 shadow-2xs">
+          <i class="fa-solid fa-calendar-check"></i> <span class="hidden sm:inline">Lịch Tuần</span>
         </a>
-        <a href="../index.html" class="px-3 py-2 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 transition flex items-center gap-1.5">
-          <i class="fa-solid fa-house"></i> Trang Chủ
+        <a href="../index.html" class="px-3 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 transition flex items-center gap-1.5 shadow-2xs">
+          <i class="fa-solid fa-house"></i>
         </a>
       </div>
     </div>
   </header>
 
   <!-- Main Container -->
-  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-1 w-full">
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 flex-1 w-full">
     
     <!-- Hero / Stats Bar -->
     <div class="bg-white border border-slate-200 rounded-2xl p-6 mb-6 shadow-xs flex flex-col md:flex-row md:items-center justify-between gap-4">
       <div>
-        <h2 class="text-lg font-bold text-slate-900 mb-1">Tổng hợp 58 Văn Bản & Dữ Liệu Lưu Trữ</h2>
-        <p class="text-xs text-slate-500">Các tệp tin gốc gồm Quyết định, Báo cáo, Phương án, Danh mục máy tính IT, Kế hoạch 9999, Phụ lục lương...</p>
+        <h2 class="text-base sm:text-lg font-bold text-slate-900 mb-1 flex items-center gap-2">
+          <span>Thư Viện 65 Văn Bản & Dữ Liệu Pháp Lý</span>
+          <span class="px-2.5 py-0.5 rounded text-[11px] font-bold bg-emerald-100 text-emerald-800">Cập nhật 10/2026</span>
+        </h2>
+        <p class="text-xs text-slate-500">Các tệp tin gốc gồm Quyết định 78 (TNTT), QĐ 9326 (Kiểm tra công vụ), Phương án NĐ 155, Báo cáo, Kế hoạch 9999, Kiểm kê máy tính...</p>
       </div>
       
       <!-- Filter & Search -->
       <div class="flex flex-wrap items-center gap-2">
         <div class="relative">
-          <input type="text" id="searchBox" placeholder="Tìm kiếm tên văn bản..." onkeyup="filterDocs()" class="w-64 pl-9 pr-3 py-2 rounded-xl text-xs border border-slate-200 focus:outline-hidden focus:ring-2 focus:ring-sky-500 bg-slate-50 focus:bg-white transition">
+          <input type="text" id="searchBox" placeholder="Tìm kiếm tên văn bản..." onkeyup="filterDocs()" class="w-60 sm:w-64 pl-9 pr-3 py-2 rounded-xl text-xs border border-slate-200 focus:outline-hidden focus:ring-2 focus:ring-sky-500 bg-slate-50 focus:bg-white transition">
           <i class="fa-solid fa-magnifying-glass absolute left-3 top-2.5 text-slate-400 text-xs"></i>
         </div>
-        <button onclick="filterType('all')" class="filter-btn px-3 py-2 rounded-xl text-xs font-semibold bg-sky-600 text-white shadow-xs" data-type="all">Tất cả (58)</button>
+        <button onclick="filterType('all')" class="filter-btn px-3 py-2 rounded-xl text-xs font-semibold bg-sky-600 text-white shadow-xs" data-type="all">Tất cả (65)</button>
         <button onclick="filterType('pdf')" class="filter-btn px-3 py-2 rounded-xl text-xs font-semibold bg-slate-100 text-slate-600 hover:bg-slate-200 transition" data-type="pdf">PDF</button>
         <button onclick="filterType('docx')" class="filter-btn px-3 py-2 rounded-xl text-xs font-semibold bg-slate-100 text-slate-600 hover:bg-slate-200 transition" data-type="docx">Word</button>
         <button onclick="filterType('xlsx')" class="filter-btn px-3 py-2 rounded-xl text-xs font-semibold bg-slate-100 text-slate-600 hover:bg-slate-200 transition" data-type="xlsx">Excel</button>
@@ -67,16 +70,16 @@
 
     <!-- Documents Grid -->
     <div id="docsList" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-      <div class="doc-card bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="pdf" data-name="01qđ.signed.pdf">
+      <div class="doc-card bg-white border border-slate-200 rounded-2xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="pdf" data-name="01qđ.signed.pdf">
         <div class="flex items-start gap-3 mb-3">
-          <div class="w-10 h-10 rounded-lg bg-slate-50 flex items-center justify-center text-xl shrink-0">
+          <div class="w-10 h-10 rounded-xl bg-slate-50 flex items-center justify-center text-xl shrink-0">
             <i class="fa-solid fa-file-pdf text-rose-600"></i>
           </div>
           <div class="min-w-0 flex-1">
             <h3 class="text-xs font-semibold text-slate-900 leading-snug break-words" title="01QĐ.signed.pdf">01QĐ.signed.pdf</h3>
             <div class="flex items-center gap-2 mt-1.5">
               <span class="px-2 py-0.5 rounded text-[10px] font-medium border bg-rose-50 text-rose-700 border-rose-200">PDF</span>
-              <span class="text-[11px] text-slate-400">14.1 MB</span>
+              <span class="text-[11px] text-slate-400 font-mono">14.1 MB</span>
             </div>
           </div>
         </div>
@@ -90,16 +93,16 @@
           </div>
         </div>
       </div>
-      <div class="doc-card bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="pdf" data-name="02102026_vpđkbd_phancongnvbgđ_230725pdf.pdf">
+      <div class="doc-card bg-white border border-slate-200 rounded-2xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="pdf" data-name="02102026_vpđkbd_phancongnvbgđ_230725pdf.pdf">
         <div class="flex items-start gap-3 mb-3">
-          <div class="w-10 h-10 rounded-lg bg-slate-50 flex items-center justify-center text-xl shrink-0">
+          <div class="w-10 h-10 rounded-xl bg-slate-50 flex items-center justify-center text-xl shrink-0">
             <i class="fa-solid fa-file-pdf text-rose-600"></i>
           </div>
           <div class="min-w-0 flex-1">
             <h3 class="text-xs font-semibold text-slate-900 leading-snug break-words" title="02102026_vpđkBD_phancongnvBGĐ_230725pdf.pdf">02102026_vpđkBD_phancongnvBGĐ_230725pdf.pdf</h3>
             <div class="flex items-center gap-2 mt-1.5">
               <span class="px-2 py-0.5 rounded text-[10px] font-medium border bg-rose-50 text-rose-700 border-rose-200">PDF</span>
-              <span class="text-[11px] text-slate-400">1.1 MB</span>
+              <span class="text-[11px] text-slate-400 font-mono">1.1 MB</span>
             </div>
           </div>
         </div>
@@ -113,16 +116,16 @@
           </div>
         </div>
       </div>
-      <div class="doc-card bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="pdf" data-name="02_1.pdf">
+      <div class="doc-card bg-white border border-slate-200 rounded-2xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="pdf" data-name="02_1.pdf">
         <div class="flex items-start gap-3 mb-3">
-          <div class="w-10 h-10 rounded-lg bg-slate-50 flex items-center justify-center text-xl shrink-0">
+          <div class="w-10 h-10 rounded-xl bg-slate-50 flex items-center justify-center text-xl shrink-0">
             <i class="fa-solid fa-file-pdf text-rose-600"></i>
           </div>
           <div class="min-w-0 flex-1">
             <h3 class="text-xs font-semibold text-slate-900 leading-snug break-words" title="02_1.PDF">02_1.PDF</h3>
             <div class="flex items-center gap-2 mt-1.5">
               <span class="px-2 py-0.5 rounded text-[10px] font-medium border bg-rose-50 text-rose-700 border-rose-200">PDF</span>
-              <span class="text-[11px] text-slate-400">1.0 MB</span>
+              <span class="text-[11px] text-slate-400 font-mono">1.0 MB</span>
             </div>
           </div>
         </div>
@@ -136,16 +139,16 @@
           </div>
         </div>
       </div>
-      <div class="doc-card bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="docx" data-name="09.10    cq trinh tp.docx">
+      <div class="doc-card bg-white border border-slate-200 rounded-2xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="docx" data-name="09.10    cq trinh tp.docx">
         <div class="flex items-start gap-3 mb-3">
-          <div class="w-10 h-10 rounded-lg bg-slate-50 flex items-center justify-center text-xl shrink-0">
+          <div class="w-10 h-10 rounded-xl bg-slate-50 flex items-center justify-center text-xl shrink-0">
             <i class="fa-solid fa-file-word text-blue-600"></i>
           </div>
           <div class="min-w-0 flex-1">
             <h3 class="text-xs font-semibold text-slate-900 leading-snug break-words" title="09.10    CQ trinh TP.docx">09.10    CQ trinh TP.docx</h3>
             <div class="flex items-center gap-2 mt-1.5">
               <span class="px-2 py-0.5 rounded text-[10px] font-medium border bg-blue-50 text-blue-700 border-blue-200">DOCX</span>
-              <span class="text-[11px] text-slate-400">35.4 KB</span>
+              <span class="text-[11px] text-slate-400 font-mono">35.4 KB</span>
             </div>
           </div>
         </div>
@@ -159,16 +162,16 @@
           </div>
         </div>
       </div>
-      <div class="doc-card bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="pdf" data-name="1368_1.pdf">
+      <div class="doc-card bg-white border border-slate-200 rounded-2xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="pdf" data-name="1368_1.pdf">
         <div class="flex items-start gap-3 mb-3">
-          <div class="w-10 h-10 rounded-lg bg-slate-50 flex items-center justify-center text-xl shrink-0">
+          <div class="w-10 h-10 rounded-xl bg-slate-50 flex items-center justify-center text-xl shrink-0">
             <i class="fa-solid fa-file-pdf text-rose-600"></i>
           </div>
           <div class="min-w-0 flex-1">
             <h3 class="text-xs font-semibold text-slate-900 leading-snug break-words" title="1368_1.PDF">1368_1.PDF</h3>
             <div class="flex items-center gap-2 mt-1.5">
               <span class="px-2 py-0.5 rounded text-[10px] font-medium border bg-rose-50 text-rose-700 border-rose-200">PDF</span>
-              <span class="text-[11px] text-slate-400">3.2 MB</span>
+              <span class="text-[11px] text-slate-400 font-mono">3.2 MB</span>
             </div>
           </div>
         </div>
@@ -182,16 +185,16 @@
           </div>
         </div>
       </div>
-      <div class="doc-card bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="pdf" data-name="1509_0002.signed (3).pdf">
+      <div class="doc-card bg-white border border-slate-200 rounded-2xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="pdf" data-name="1509_0002.signed (3).pdf">
         <div class="flex items-start gap-3 mb-3">
-          <div class="w-10 h-10 rounded-lg bg-slate-50 flex items-center justify-center text-xl shrink-0">
+          <div class="w-10 h-10 rounded-xl bg-slate-50 flex items-center justify-center text-xl shrink-0">
             <i class="fa-solid fa-file-pdf text-rose-600"></i>
           </div>
           <div class="min-w-0 flex-1">
             <h3 class="text-xs font-semibold text-slate-900 leading-snug break-words" title="1509_0002.signed (3).pdf">1509_0002.signed (3).pdf</h3>
             <div class="flex items-center gap-2 mt-1.5">
               <span class="px-2 py-0.5 rounded text-[10px] font-medium border bg-rose-50 text-rose-700 border-rose-200">PDF</span>
-              <span class="text-[11px] text-slate-400">6.8 MB</span>
+              <span class="text-[11px] text-slate-400 font-mono">6.8 MB</span>
             </div>
           </div>
         </div>
@@ -205,16 +208,16 @@
           </div>
         </div>
       </div>
-      <div class="doc-card bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="pdf" data-name="155-cp.signed.pdf">
+      <div class="doc-card bg-white border border-slate-200 rounded-2xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="pdf" data-name="155-cp.signed.pdf">
         <div class="flex items-start gap-3 mb-3">
-          <div class="w-10 h-10 rounded-lg bg-slate-50 flex items-center justify-center text-xl shrink-0">
+          <div class="w-10 h-10 rounded-xl bg-slate-50 flex items-center justify-center text-xl shrink-0">
             <i class="fa-solid fa-file-pdf text-rose-600"></i>
           </div>
           <div class="min-w-0 flex-1">
             <h3 class="text-xs font-semibold text-slate-900 leading-snug break-words" title="155-cp.signed.pdf">155-cp.signed.pdf</h3>
             <div class="flex items-center gap-2 mt-1.5">
               <span class="px-2 py-0.5 rounded text-[10px] font-medium border bg-rose-50 text-rose-700 border-rose-200">PDF</span>
-              <span class="text-[11px] text-slate-400">763.8 KB</span>
+              <span class="text-[11px] text-slate-400 font-mono">763.8 KB</span>
             </div>
           </div>
         </div>
@@ -228,16 +231,16 @@
           </div>
         </div>
       </div>
-      <div class="doc-card bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="pdf" data-name="1656_0001.signed.pdf">
+      <div class="doc-card bg-white border border-slate-200 rounded-2xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="pdf" data-name="1656_0001.signed.pdf">
         <div class="flex items-start gap-3 mb-3">
-          <div class="w-10 h-10 rounded-lg bg-slate-50 flex items-center justify-center text-xl shrink-0">
+          <div class="w-10 h-10 rounded-xl bg-slate-50 flex items-center justify-center text-xl shrink-0">
             <i class="fa-solid fa-file-pdf text-rose-600"></i>
           </div>
           <div class="min-w-0 flex-1">
             <h3 class="text-xs font-semibold text-slate-900 leading-snug break-words" title="1656_0001.signed.pdf">1656_0001.signed.pdf</h3>
             <div class="flex items-center gap-2 mt-1.5">
               <span class="px-2 py-0.5 rounded text-[10px] font-medium border bg-rose-50 text-rose-700 border-rose-200">PDF</span>
-              <span class="text-[11px] text-slate-400">3.3 MB</span>
+              <span class="text-[11px] text-slate-400 font-mono">3.3 MB</span>
             </div>
           </div>
         </div>
@@ -251,16 +254,16 @@
           </div>
         </div>
       </div>
-      <div class="doc-card bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="pdf" data-name="186-ndcp.signed.pdf">
+      <div class="doc-card bg-white border border-slate-200 rounded-2xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="pdf" data-name="186-ndcp.signed.pdf">
         <div class="flex items-start gap-3 mb-3">
-          <div class="w-10 h-10 rounded-lg bg-slate-50 flex items-center justify-center text-xl shrink-0">
+          <div class="w-10 h-10 rounded-xl bg-slate-50 flex items-center justify-center text-xl shrink-0">
             <i class="fa-solid fa-file-pdf text-rose-600"></i>
           </div>
           <div class="min-w-0 flex-1">
             <h3 class="text-xs font-semibold text-slate-900 leading-snug break-words" title="186-ndcp.signed.pdf">186-ndcp.signed.pdf</h3>
             <div class="flex items-center gap-2 mt-1.5">
               <span class="px-2 py-0.5 rounded text-[10px] font-medium border bg-rose-50 text-rose-700 border-rose-200">PDF</span>
-              <span class="text-[11px] text-slate-400">5.9 MB</span>
+              <span class="text-[11px] text-slate-400 font-mono">5.9 MB</span>
             </div>
           </div>
         </div>
@@ -274,16 +277,16 @@
           </div>
         </div>
       </div>
-      <div class="doc-card bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="pdf" data-name="204_0001.pdf">
+      <div class="doc-card bg-white border border-slate-200 rounded-2xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="pdf" data-name="204_0001.pdf">
         <div class="flex items-start gap-3 mb-3">
-          <div class="w-10 h-10 rounded-lg bg-slate-50 flex items-center justify-center text-xl shrink-0">
+          <div class="w-10 h-10 rounded-xl bg-slate-50 flex items-center justify-center text-xl shrink-0">
             <i class="fa-solid fa-file-pdf text-rose-600"></i>
           </div>
           <div class="min-w-0 flex-1">
             <h3 class="text-xs font-semibold text-slate-900 leading-snug break-words" title="204_0001.pdf">204_0001.pdf</h3>
             <div class="flex items-center gap-2 mt-1.5">
               <span class="px-2 py-0.5 rounded text-[10px] font-medium border bg-rose-50 text-rose-700 border-rose-200">PDF</span>
-              <span class="text-[11px] text-slate-400">690.8 KB</span>
+              <span class="text-[11px] text-slate-400 font-mono">690.8 KB</span>
             </div>
           </div>
         </div>
@@ -297,16 +300,16 @@
           </div>
         </div>
       </div>
-      <div class="doc-card bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="pdf" data-name="2162_0001.signed.pdf">
+      <div class="doc-card bg-white border border-slate-200 rounded-2xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="pdf" data-name="2162_0001.signed.pdf">
         <div class="flex items-start gap-3 mb-3">
-          <div class="w-10 h-10 rounded-lg bg-slate-50 flex items-center justify-center text-xl shrink-0">
+          <div class="w-10 h-10 rounded-xl bg-slate-50 flex items-center justify-center text-xl shrink-0">
             <i class="fa-solid fa-file-pdf text-rose-600"></i>
           </div>
           <div class="min-w-0 flex-1">
             <h3 class="text-xs font-semibold text-slate-900 leading-snug break-words" title="2162_0001.signed.pdf">2162_0001.signed.pdf</h3>
             <div class="flex items-center gap-2 mt-1.5">
               <span class="px-2 py-0.5 rounded text-[10px] font-medium border bg-rose-50 text-rose-700 border-rose-200">PDF</span>
-              <span class="text-[11px] text-slate-400">911.3 KB</span>
+              <span class="text-[11px] text-slate-400 font-mono">911.3 KB</span>
             </div>
           </div>
         </div>
@@ -320,16 +323,16 @@
           </div>
         </div>
       </div>
-      <div class="doc-card bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="pdf" data-name="272- thay the 1368.pdf">
+      <div class="doc-card bg-white border border-slate-200 rounded-2xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="pdf" data-name="272- thay the 1368.pdf">
         <div class="flex items-start gap-3 mb-3">
-          <div class="w-10 h-10 rounded-lg bg-slate-50 flex items-center justify-center text-xl shrink-0">
+          <div class="w-10 h-10 rounded-xl bg-slate-50 flex items-center justify-center text-xl shrink-0">
             <i class="fa-solid fa-file-pdf text-rose-600"></i>
           </div>
           <div class="min-w-0 flex-1">
             <h3 class="text-xs font-semibold text-slate-900 leading-snug break-words" title="272- thay the 1368.pdf">272- thay the 1368.pdf</h3>
             <div class="flex items-center gap-2 mt-1.5">
               <span class="px-2 py-0.5 rounded text-[10px] font-medium border bg-rose-50 text-rose-700 border-rose-200">PDF</span>
-              <span class="text-[11px] text-slate-400">4.1 MB</span>
+              <span class="text-[11px] text-slate-400 font-mono">4.1 MB</span>
             </div>
           </div>
         </div>
@@ -343,16 +346,16 @@
           </div>
         </div>
       </div>
-      <div class="doc-card bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="pdf" data-name="286-nd.signed.pdf">
+      <div class="doc-card bg-white border border-slate-200 rounded-2xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="pdf" data-name="286-nd.signed.pdf">
         <div class="flex items-start gap-3 mb-3">
-          <div class="w-10 h-10 rounded-lg bg-slate-50 flex items-center justify-center text-xl shrink-0">
+          <div class="w-10 h-10 rounded-xl bg-slate-50 flex items-center justify-center text-xl shrink-0">
             <i class="fa-solid fa-file-pdf text-rose-600"></i>
           </div>
           <div class="min-w-0 flex-1">
             <h3 class="text-xs font-semibold text-slate-900 leading-snug break-words" title="286-nd.signed.pdf">286-nd.signed.pdf</h3>
             <div class="flex items-center gap-2 mt-1.5">
               <span class="px-2 py-0.5 rounded text-[10px] font-medium border bg-rose-50 text-rose-700 border-rose-200">PDF</span>
-              <span class="text-[11px] text-slate-400">2.0 MB</span>
+              <span class="text-[11px] text-slate-400 font-mono">2.0 MB</span>
             </div>
           </div>
         </div>
@@ -366,16 +369,16 @@
           </div>
         </div>
       </div>
-      <div class="doc-card bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="pdf" data-name="30.signed.pdf">
+      <div class="doc-card bg-white border border-slate-200 rounded-2xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="pdf" data-name="30.signed.pdf">
         <div class="flex items-start gap-3 mb-3">
-          <div class="w-10 h-10 rounded-lg bg-slate-50 flex items-center justify-center text-xl shrink-0">
+          <div class="w-10 h-10 rounded-xl bg-slate-50 flex items-center justify-center text-xl shrink-0">
             <i class="fa-solid fa-file-pdf text-rose-600"></i>
           </div>
           <div class="min-w-0 flex-1">
             <h3 class="text-xs font-semibold text-slate-900 leading-snug break-words" title="30.signed.pdf">30.signed.pdf</h3>
             <div class="flex items-center gap-2 mt-1.5">
               <span class="px-2 py-0.5 rounded text-[10px] font-medium border bg-rose-50 text-rose-700 border-rose-200">PDF</span>
-              <span class="text-[11px] text-slate-400">2.9 MB</span>
+              <span class="text-[11px] text-slate-400 font-mono">2.9 MB</span>
             </div>
           </div>
         </div>
@@ -389,16 +392,16 @@
           </div>
         </div>
       </div>
-      <div class="doc-card bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="pdf" data-name="355_0001.pdf">
+      <div class="doc-card bg-white border border-slate-200 rounded-2xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="pdf" data-name="355_0001.pdf">
         <div class="flex items-start gap-3 mb-3">
-          <div class="w-10 h-10 rounded-lg bg-slate-50 flex items-center justify-center text-xl shrink-0">
+          <div class="w-10 h-10 rounded-xl bg-slate-50 flex items-center justify-center text-xl shrink-0">
             <i class="fa-solid fa-file-pdf text-rose-600"></i>
           </div>
           <div class="min-w-0 flex-1">
             <h3 class="text-xs font-semibold text-slate-900 leading-snug break-words" title="355_0001.pdf">355_0001.pdf</h3>
             <div class="flex items-center gap-2 mt-1.5">
               <span class="px-2 py-0.5 rounded text-[10px] font-medium border bg-rose-50 text-rose-700 border-rose-200">PDF</span>
-              <span class="text-[11px] text-slate-400">27.4 MB</span>
+              <span class="text-[11px] text-slate-400 font-mono">27.4 MB</span>
             </div>
           </div>
         </div>
@@ -412,16 +415,62 @@
           </div>
         </div>
       </div>
-      <div class="doc-card bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="docx" data-name="bb bàn giao it.docx">
+      <div class="doc-card bg-white border border-slate-200 rounded-2xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="pdf" data-name="78_quydinh_xeploaivachitntt__kemqd_signed (1).pdf">
         <div class="flex items-start gap-3 mb-3">
-          <div class="w-10 h-10 rounded-lg bg-slate-50 flex items-center justify-center text-xl shrink-0">
+          <div class="w-10 h-10 rounded-xl bg-slate-50 flex items-center justify-center text-xl shrink-0">
+            <i class="fa-solid fa-file-pdf text-rose-600"></i>
+          </div>
+          <div class="min-w-0 flex-1">
+            <h3 class="text-xs font-semibold text-slate-900 leading-snug break-words" title="78_Quydinh_xeploaivachiTNTT__kemQD_signed (1).pdf">78_Quydinh_xeploaivachiTNTT__kemQD_signed (1).pdf</h3>
+            <div class="flex items-center gap-2 mt-1.5">
+              <span class="px-2 py-0.5 rounded text-[10px] font-medium border bg-rose-50 text-rose-700 border-rose-200">PDF</span>
+              <span class="text-[11px] text-slate-400 font-mono">367.5 KB</span>
+            </div>
+          </div>
+        </div>
+        <div class="pt-3 border-t border-slate-100 flex items-center justify-between text-xs">
+          <span class="text-[11px] text-slate-400"><i class="fa-solid fa-hard-drive"></i> documents/</span>
+          <div class="flex items-center gap-1.5">
+            <a href="78_Quydinh_xeploaivachiTNTT__kemQD_signed%20%281%29.pdf" target="_blank" class="px-2.5 py-1.5 rounded-lg text-xs font-semibold bg-rose-50 hover:bg-rose-100 text-rose-700 transition inline-flex items-center gap-1"><i class="fa-solid fa-arrow-up-right-from-square"></i> Mở Xem</a>
+            <a href="78_Quydinh_xeploaivachiTNTT__kemQD_signed%20%281%29.pdf" download class="p-1.5 rounded-lg text-slate-400 hover:text-slate-600 hover:bg-slate-100 transition" title="Tải tệp tin">
+              <i class="fa-solid fa-cloud-arrow-down"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="doc-card bg-white border border-slate-200 rounded-2xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="pdf" data-name="9326-q_signed.pdf">
+        <div class="flex items-start gap-3 mb-3">
+          <div class="w-10 h-10 rounded-xl bg-slate-50 flex items-center justify-center text-xl shrink-0">
+            <i class="fa-solid fa-file-pdf text-rose-600"></i>
+          </div>
+          <div class="min-w-0 flex-1">
+            <h3 class="text-xs font-semibold text-slate-900 leading-snug break-words" title="9326-Q_signed.pdf">9326-Q_signed.pdf</h3>
+            <div class="flex items-center gap-2 mt-1.5">
+              <span class="px-2 py-0.5 rounded text-[10px] font-medium border bg-rose-50 text-rose-700 border-rose-200">PDF</span>
+              <span class="text-[11px] text-slate-400 font-mono">1.1 MB</span>
+            </div>
+          </div>
+        </div>
+        <div class="pt-3 border-t border-slate-100 flex items-center justify-between text-xs">
+          <span class="text-[11px] text-slate-400"><i class="fa-solid fa-hard-drive"></i> documents/</span>
+          <div class="flex items-center gap-1.5">
+            <a href="9326-Q_signed.pdf" target="_blank" class="px-2.5 py-1.5 rounded-lg text-xs font-semibold bg-rose-50 hover:bg-rose-100 text-rose-700 transition inline-flex items-center gap-1"><i class="fa-solid fa-arrow-up-right-from-square"></i> Mở Xem</a>
+            <a href="9326-Q_signed.pdf" download class="p-1.5 rounded-lg text-slate-400 hover:text-slate-600 hover:bg-slate-100 transition" title="Tải tệp tin">
+              <i class="fa-solid fa-cloud-arrow-down"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="doc-card bg-white border border-slate-200 rounded-2xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="docx" data-name="bb bàn giao it.docx">
+        <div class="flex items-start gap-3 mb-3">
+          <div class="w-10 h-10 rounded-xl bg-slate-50 flex items-center justify-center text-xl shrink-0">
             <i class="fa-solid fa-file-word text-blue-600"></i>
           </div>
           <div class="min-w-0 flex-1">
             <h3 class="text-xs font-semibold text-slate-900 leading-snug break-words" title="BB bàn giao IT.docx">BB bàn giao IT.docx</h3>
             <div class="flex items-center gap-2 mt-1.5">
               <span class="px-2 py-0.5 rounded text-[10px] font-medium border bg-blue-50 text-blue-700 border-blue-200">DOCX</span>
-              <span class="text-[11px] text-slate-400">38.8 KB</span>
+              <span class="text-[11px] text-slate-400 font-mono">38.8 KB</span>
             </div>
           </div>
         </div>
@@ -435,16 +484,16 @@
           </div>
         </div>
       </div>
-      <div class="doc-card bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="docx" data-name="bb phân công lãnh đạo 01102026.doc">
+      <div class="doc-card bg-white border border-slate-200 rounded-2xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="docx" data-name="bb phân công lãnh đạo 01102026.doc">
         <div class="flex items-start gap-3 mb-3">
-          <div class="w-10 h-10 rounded-lg bg-slate-50 flex items-center justify-center text-xl shrink-0">
+          <div class="w-10 h-10 rounded-xl bg-slate-50 flex items-center justify-center text-xl shrink-0">
             <i class="fa-solid fa-file-word text-blue-600"></i>
           </div>
           <div class="min-w-0 flex-1">
             <h3 class="text-xs font-semibold text-slate-900 leading-snug break-words" title="BB phân công lãnh đạo 01102026.doc">BB phân công lãnh đạo 01102026.doc</h3>
             <div class="flex items-center gap-2 mt-1.5">
               <span class="px-2 py-0.5 rounded text-[10px] font-medium border bg-blue-50 text-blue-700 border-blue-200">DOC</span>
-              <span class="text-[11px] text-slate-400">94.5 KB</span>
+              <span class="text-[11px] text-slate-400 font-mono">94.5 KB</span>
             </div>
           </div>
         </div>
@@ -458,16 +507,16 @@
           </div>
         </div>
       </div>
-      <div class="doc-card bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="docx" data-name="bc khuyết it.docx">
+      <div class="doc-card bg-white border border-slate-200 rounded-2xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="docx" data-name="bc khuyết it.docx">
         <div class="flex items-start gap-3 mb-3">
-          <div class="w-10 h-10 rounded-lg bg-slate-50 flex items-center justify-center text-xl shrink-0">
+          <div class="w-10 h-10 rounded-xl bg-slate-50 flex items-center justify-center text-xl shrink-0">
             <i class="fa-solid fa-file-word text-blue-600"></i>
           </div>
           <div class="min-w-0 flex-1">
             <h3 class="text-xs font-semibold text-slate-900 leading-snug break-words" title="BC khuyết IT.docx">BC khuyết IT.docx</h3>
             <div class="flex items-center gap-2 mt-1.5">
               <span class="px-2 py-0.5 rounded text-[10px] font-medium border bg-blue-50 text-blue-700 border-blue-200">DOCX</span>
-              <span class="text-[11px] text-slate-400">41.0 KB</span>
+              <span class="text-[11px] text-slate-400 font-mono">41.0 KB</span>
             </div>
           </div>
         </div>
@@ -481,16 +530,39 @@
           </div>
         </div>
       </div>
-      <div class="doc-card bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="docx" data-name="bang_bao_gia_du_an_oerp_software.docx">
+      <div class="doc-card bg-white border border-slate-200 rounded-2xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="docx" data-name="bc kq thử việc tiến.docx">
         <div class="flex items-start gap-3 mb-3">
-          <div class="w-10 h-10 rounded-lg bg-slate-50 flex items-center justify-center text-xl shrink-0">
+          <div class="w-10 h-10 rounded-xl bg-slate-50 flex items-center justify-center text-xl shrink-0">
+            <i class="fa-solid fa-file-word text-blue-600"></i>
+          </div>
+          <div class="min-w-0 flex-1">
+            <h3 class="text-xs font-semibold text-slate-900 leading-snug break-words" title="BC kq thử việc Tiến.docx">BC kq thử việc Tiến.docx</h3>
+            <div class="flex items-center gap-2 mt-1.5">
+              <span class="px-2 py-0.5 rounded text-[10px] font-medium border bg-blue-50 text-blue-700 border-blue-200">DOCX</span>
+              <span class="text-[11px] text-slate-400 font-mono">62.5 KB</span>
+            </div>
+          </div>
+        </div>
+        <div class="pt-3 border-t border-slate-100 flex items-center justify-between text-xs">
+          <span class="text-[11px] text-slate-400"><i class="fa-solid fa-hard-drive"></i> documents/</span>
+          <div class="flex items-center gap-1.5">
+            <a href="BC%20kq%20th%E1%BB%AD%20vi%E1%BB%87c%20Ti%E1%BA%BFn.docx" download class="px-2.5 py-1.5 rounded-lg text-xs font-semibold bg-blue-50 hover:bg-blue-100 text-blue-700 transition inline-flex items-center gap-1"><i class="fa-solid fa-download"></i> Tải Về</a>
+            <a href="BC%20kq%20th%E1%BB%AD%20vi%E1%BB%87c%20Ti%E1%BA%BFn.docx" download class="p-1.5 rounded-lg text-slate-400 hover:text-slate-600 hover:bg-slate-100 transition" title="Tải tệp tin">
+              <i class="fa-solid fa-cloud-arrow-down"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="doc-card bg-white border border-slate-200 rounded-2xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="docx" data-name="bang_bao_gia_du_an_oerp_software.docx">
+        <div class="flex items-start gap-3 mb-3">
+          <div class="w-10 h-10 rounded-xl bg-slate-50 flex items-center justify-center text-xl shrink-0">
             <i class="fa-solid fa-file-word text-blue-600"></i>
           </div>
           <div class="min-w-0 flex-1">
             <h3 class="text-xs font-semibold text-slate-900 leading-snug break-words" title="Bang_bao_gia_du_an_OERP_software.docx">Bang_bao_gia_du_an_OERP_software.docx</h3>
             <div class="flex items-center gap-2 mt-1.5">
               <span class="px-2 py-0.5 rounded text-[10px] font-medium border bg-blue-50 text-blue-700 border-blue-200">DOCX</span>
-              <span class="text-[11px] text-slate-400">42.6 KB</span>
+              <span class="text-[11px] text-slate-400 font-mono">42.6 KB</span>
             </div>
           </div>
         </div>
@@ -504,16 +576,16 @@
           </div>
         </div>
       </div>
-      <div class="doc-card bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="docx" data-name="bao_cao_khao_sat_he_thong_oerp_vpdkddtdm.docx">
+      <div class="doc-card bg-white border border-slate-200 rounded-2xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="docx" data-name="bao_cao_khao_sat_he_thong_oerp_vpdkddtdm.docx">
         <div class="flex items-start gap-3 mb-3">
-          <div class="w-10 h-10 rounded-lg bg-slate-50 flex items-center justify-center text-xl shrink-0">
+          <div class="w-10 h-10 rounded-xl bg-slate-50 flex items-center justify-center text-xl shrink-0">
             <i class="fa-solid fa-file-word text-blue-600"></i>
           </div>
           <div class="min-w-0 flex-1">
             <h3 class="text-xs font-semibold text-slate-900 leading-snug break-words" title="Bao_cao_khao_sat_he_thong_OERP_vpdkddtdm.docx">Bao_cao_khao_sat_he_thong_OERP_vpdkddtdm.docx</h3>
             <div class="flex items-center gap-2 mt-1.5">
               <span class="px-2 py-0.5 rounded text-[10px] font-medium border bg-blue-50 text-blue-700 border-blue-200">DOCX</span>
-              <span class="text-[11px] text-slate-400">39.8 KB</span>
+              <span class="text-[11px] text-slate-400 font-mono">39.8 KB</span>
             </div>
           </div>
         </div>
@@ -527,16 +599,16 @@
           </div>
         </div>
       </div>
-      <div class="doc-card bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="docx" data-name="bao_cao_phuong_an_di_doi_server_oerp_0_dong.docx">
+      <div class="doc-card bg-white border border-slate-200 rounded-2xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="docx" data-name="bao_cao_phuong_an_di_doi_server_oerp_0_dong.docx">
         <div class="flex items-start gap-3 mb-3">
-          <div class="w-10 h-10 rounded-lg bg-slate-50 flex items-center justify-center text-xl shrink-0">
+          <div class="w-10 h-10 rounded-xl bg-slate-50 flex items-center justify-center text-xl shrink-0">
             <i class="fa-solid fa-file-word text-blue-600"></i>
           </div>
           <div class="min-w-0 flex-1">
             <h3 class="text-xs font-semibold text-slate-900 leading-snug break-words" title="Bao_cao_phuong_an_di_doi_server_OERP_0_dong.docx">Bao_cao_phuong_an_di_doi_server_OERP_0_dong.docx</h3>
             <div class="flex items-center gap-2 mt-1.5">
               <span class="px-2 py-0.5 rounded text-[10px] font-medium border bg-blue-50 text-blue-700 border-blue-200">DOCX</span>
-              <span class="text-[11px] text-slate-400">39.7 KB</span>
+              <span class="text-[11px] text-slate-400 font-mono">39.7 KB</span>
             </div>
           </div>
         </div>
@@ -550,16 +622,16 @@
           </div>
         </div>
       </div>
-      <div class="doc-card bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="docx" data-name="báo cáo pccc 2026 - chi nhánh 23.docx">
+      <div class="doc-card bg-white border border-slate-200 rounded-2xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="docx" data-name="báo cáo pccc 2026 - chi nhánh 23.docx">
         <div class="flex items-start gap-3 mb-3">
-          <div class="w-10 h-10 rounded-lg bg-slate-50 flex items-center justify-center text-xl shrink-0">
+          <div class="w-10 h-10 rounded-xl bg-slate-50 flex items-center justify-center text-xl shrink-0">
             <i class="fa-solid fa-file-word text-blue-600"></i>
           </div>
           <div class="min-w-0 flex-1">
             <h3 class="text-xs font-semibold text-slate-900 leading-snug break-words" title="Báo cáo PCCC 2026 - Chi nhánh 23.docx">Báo cáo PCCC 2026 - Chi nhánh 23.docx</h3>
             <div class="flex items-center gap-2 mt-1.5">
               <span class="px-2 py-0.5 rounded text-[10px] font-medium border bg-blue-50 text-blue-700 border-blue-200">DOCX</span>
-              <span class="text-[11px] text-slate-400">1.9 MB</span>
+              <span class="text-[11px] text-slate-400 font-mono">1.9 MB</span>
             </div>
           </div>
         </div>
@@ -573,16 +645,16 @@
           </div>
         </div>
       </div>
-      <div class="doc-card bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="xlsx" data-name="bảng kpi công việc - kế hoạch 9999 mới.xlsx">
+      <div class="doc-card bg-white border border-slate-200 rounded-2xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="xlsx" data-name="bảng kpi công việc - kế hoạch 9999 mới.xlsx">
         <div class="flex items-start gap-3 mb-3">
-          <div class="w-10 h-10 rounded-lg bg-slate-50 flex items-center justify-center text-xl shrink-0">
+          <div class="w-10 h-10 rounded-xl bg-slate-50 flex items-center justify-center text-xl shrink-0">
             <i class="fa-solid fa-file-excel text-emerald-600"></i>
           </div>
           <div class="min-w-0 flex-1">
             <h3 class="text-xs font-semibold text-slate-900 leading-snug break-words" title="BẢNG KPI CÔNG VIỆC - KẾ HOẠCH 9999 mới.xlsx">BẢNG KPI CÔNG VIỆC - KẾ HOẠCH 9999 mới.xlsx</h3>
             <div class="flex items-center gap-2 mt-1.5">
               <span class="px-2 py-0.5 rounded text-[10px] font-medium border bg-emerald-50 text-emerald-700 border-emerald-200">XLSX</span>
-              <span class="text-[11px] text-slate-400">10.5 KB</span>
+              <span class="text-[11px] text-slate-400 font-mono">10.5 KB</span>
             </div>
           </div>
         </div>
@@ -596,16 +668,16 @@
           </div>
         </div>
       </div>
-      <div class="doc-card bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="docx" data-name="bảng đối chiếu định mức cn23.docx">
+      <div class="doc-card bg-white border border-slate-200 rounded-2xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="docx" data-name="bảng đối chiếu định mức cn23.docx">
         <div class="flex items-start gap-3 mb-3">
-          <div class="w-10 h-10 rounded-lg bg-slate-50 flex items-center justify-center text-xl shrink-0">
+          <div class="w-10 h-10 rounded-xl bg-slate-50 flex items-center justify-center text-xl shrink-0">
             <i class="fa-solid fa-file-word text-blue-600"></i>
           </div>
           <div class="min-w-0 flex-1">
             <h3 class="text-xs font-semibold text-slate-900 leading-snug break-words" title="Bảng đối chiếu định mức CN23.docx">Bảng đối chiếu định mức CN23.docx</h3>
             <div class="flex items-center gap-2 mt-1.5">
               <span class="px-2 py-0.5 rounded text-[10px] font-medium border bg-blue-50 text-blue-700 border-blue-200">DOCX</span>
-              <span class="text-[11px] text-slate-400">54.3 KB</span>
+              <span class="text-[11px] text-slate-400 font-mono">54.3 KB</span>
             </div>
           </div>
         </div>
@@ -619,16 +691,16 @@
           </div>
         </div>
       </div>
-      <div class="doc-card bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="pdf" data-name="cn27.pdf">
+      <div class="doc-card bg-white border border-slate-200 rounded-2xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="pdf" data-name="cn27.pdf">
         <div class="flex items-start gap-3 mb-3">
-          <div class="w-10 h-10 rounded-lg bg-slate-50 flex items-center justify-center text-xl shrink-0">
+          <div class="w-10 h-10 rounded-xl bg-slate-50 flex items-center justify-center text-xl shrink-0">
             <i class="fa-solid fa-file-pdf text-rose-600"></i>
           </div>
           <div class="min-w-0 flex-1">
             <h3 class="text-xs font-semibold text-slate-900 leading-snug break-words" title="CN27.pdf">CN27.pdf</h3>
             <div class="flex items-center gap-2 mt-1.5">
               <span class="px-2 py-0.5 rounded text-[10px] font-medium border bg-rose-50 text-rose-700 border-rose-200">PDF</span>
-              <span class="text-[11px] text-slate-400">699.6 KB</span>
+              <span class="text-[11px] text-slate-400 font-mono">699.6 KB</span>
             </div>
           </div>
         </div>
@@ -642,16 +714,16 @@
           </div>
         </div>
       </div>
-      <div class="doc-card bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="pdf" data-name="công văn số 18146 vpdk cs3 cn32.pdf">
+      <div class="doc-card bg-white border border-slate-200 rounded-2xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="pdf" data-name="công văn số 18146 vpdk cs3 cn32.pdf">
         <div class="flex items-start gap-3 mb-3">
-          <div class="w-10 h-10 rounded-lg bg-slate-50 flex items-center justify-center text-xl shrink-0">
+          <div class="w-10 h-10 rounded-xl bg-slate-50 flex items-center justify-center text-xl shrink-0">
             <i class="fa-solid fa-file-pdf text-rose-600"></i>
           </div>
           <div class="min-w-0 flex-1">
             <h3 class="text-xs font-semibold text-slate-900 leading-snug break-words" title="Công văn số 18146 VPDK CS3 CN32.pdf">Công văn số 18146 VPDK CS3 CN32.pdf</h3>
             <div class="flex items-center gap-2 mt-1.5">
               <span class="px-2 py-0.5 rounded text-[10px] font-medium border bg-rose-50 text-rose-700 border-rose-200">PDF</span>
-              <span class="text-[11px] text-slate-400">2.8 MB</span>
+              <span class="text-[11px] text-slate-400 font-mono">2.8 MB</span>
             </div>
           </div>
         </div>
@@ -665,16 +737,16 @@
           </div>
         </div>
       </div>
-      <div class="doc-card bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="pdf" data-name="công văn số 2154 ubnd vp của ubnd phường bà rịa.pdf">
+      <div class="doc-card bg-white border border-slate-200 rounded-2xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="pdf" data-name="công văn số 2154 ubnd vp của ubnd phường bà rịa.pdf">
         <div class="flex items-start gap-3 mb-3">
-          <div class="w-10 h-10 rounded-lg bg-slate-50 flex items-center justify-center text-xl shrink-0">
+          <div class="w-10 h-10 rounded-xl bg-slate-50 flex items-center justify-center text-xl shrink-0">
             <i class="fa-solid fa-file-pdf text-rose-600"></i>
           </div>
           <div class="min-w-0 flex-1">
             <h3 class="text-xs font-semibold text-slate-900 leading-snug break-words" title="Công văn số 2154 UBND VP của UBND Phường Bà rịa.pdf">Công văn số 2154 UBND VP của UBND Phường Bà rịa.pdf</h3>
             <div class="flex items-center gap-2 mt-1.5">
               <span class="px-2 py-0.5 rounded text-[10px] font-medium border bg-rose-50 text-rose-700 border-rose-200">PDF</span>
-              <span class="text-[11px] text-slate-400">996.6 KB</span>
+              <span class="text-[11px] text-slate-400 font-mono">996.6 KB</span>
             </div>
           </div>
         </div>
@@ -688,16 +760,16 @@
           </div>
         </div>
       </div>
-      <div class="doc-card bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="xlsx" data-name="danh sach may tinh - máy in- may photo can thanh ly 2026 (1).xlsx">
+      <div class="doc-card bg-white border border-slate-200 rounded-2xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="xlsx" data-name="danh sach may tinh - máy in- may photo can thanh ly 2026 (1).xlsx">
         <div class="flex items-start gap-3 mb-3">
-          <div class="w-10 h-10 rounded-lg bg-slate-50 flex items-center justify-center text-xl shrink-0">
+          <div class="w-10 h-10 rounded-xl bg-slate-50 flex items-center justify-center text-xl shrink-0">
             <i class="fa-solid fa-file-excel text-emerald-600"></i>
           </div>
           <div class="min-w-0 flex-1">
             <h3 class="text-xs font-semibold text-slate-900 leading-snug break-words" title="DANH SACH MAY TINH - MÁY IN- MAY PHOTO CAN THANH LY 2026 (1).xlsx">DANH SACH MAY TINH - MÁY IN- MAY PHOTO CAN THANH LY 2026 (1).xlsx</h3>
             <div class="flex items-center gap-2 mt-1.5">
               <span class="px-2 py-0.5 rounded text-[10px] font-medium border bg-emerald-50 text-emerald-700 border-emerald-200">XLSX</span>
-              <span class="text-[11px] text-slate-400">9.1 KB</span>
+              <span class="text-[11px] text-slate-400 font-mono">9.1 KB</span>
             </div>
           </div>
         </div>
@@ -711,16 +783,16 @@
           </div>
         </div>
       </div>
-      <div class="doc-card bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="xlsx" data-name="danh sach may tinh - máy in- may photo dang du dung 2026.xlsx">
+      <div class="doc-card bg-white border border-slate-200 rounded-2xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="xlsx" data-name="danh sach may tinh - máy in- may photo dang du dung 2026.xlsx">
         <div class="flex items-start gap-3 mb-3">
-          <div class="w-10 h-10 rounded-lg bg-slate-50 flex items-center justify-center text-xl shrink-0">
+          <div class="w-10 h-10 rounded-xl bg-slate-50 flex items-center justify-center text-xl shrink-0">
             <i class="fa-solid fa-file-excel text-emerald-600"></i>
           </div>
           <div class="min-w-0 flex-1">
             <h3 class="text-xs font-semibold text-slate-900 leading-snug break-words" title="DANH SACH MAY TINH - MÁY IN- MAY PHOTO DANG DU DUNG 2026.xlsx">DANH SACH MAY TINH - MÁY IN- MAY PHOTO DANG DU DUNG 2026.xlsx</h3>
             <div class="flex items-center gap-2 mt-1.5">
               <span class="px-2 py-0.5 rounded text-[10px] font-medium border bg-emerald-50 text-emerald-700 border-emerald-200">XLSX</span>
-              <span class="text-[11px] text-slate-400">9.2 KB</span>
+              <span class="text-[11px] text-slate-400 font-mono">9.2 KB</span>
             </div>
           </div>
         </div>
@@ -734,16 +806,16 @@
           </div>
         </div>
       </div>
-      <div class="doc-card bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="docx" data-name="danh sách số hiệu  và chủng loại máy in phto chinhánh 23  042026.docx">
+      <div class="doc-card bg-white border border-slate-200 rounded-2xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="docx" data-name="danh sách số hiệu  và chủng loại máy in phto chinhánh 23  042026.docx">
         <div class="flex items-start gap-3 mb-3">
-          <div class="w-10 h-10 rounded-lg bg-slate-50 flex items-center justify-center text-xl shrink-0">
+          <div class="w-10 h-10 rounded-xl bg-slate-50 flex items-center justify-center text-xl shrink-0">
             <i class="fa-solid fa-file-word text-blue-600"></i>
           </div>
           <div class="min-w-0 flex-1">
             <h3 class="text-xs font-semibold text-slate-900 leading-snug break-words" title="DANH SÁCH SỐ HIỆU  VÀ CHỦNG LOẠI MÁY IN PHTO CHINHÁNH 23  042026.docx">DANH SÁCH SỐ HIỆU  VÀ CHỦNG LOẠI MÁY IN PHTO CHINHÁNH 23  042026.docx</h3>
             <div class="flex items-center gap-2 mt-1.5">
               <span class="px-2 py-0.5 rounded text-[10px] font-medium border bg-blue-50 text-blue-700 border-blue-200">DOCX</span>
-              <span class="text-[11px] text-slate-400">17.7 KB</span>
+              <span class="text-[11px] text-slate-400 font-mono">17.7 KB</span>
             </div>
           </div>
         </div>
@@ -757,16 +829,16 @@
           </div>
         </div>
       </div>
-      <div class="doc-card bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="xlsx" data-name="ds bao cao 9999 theo ngay.xlsx">
+      <div class="doc-card bg-white border border-slate-200 rounded-2xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="xlsx" data-name="ds bao cao 9999 theo ngay.xlsx">
         <div class="flex items-start gap-3 mb-3">
-          <div class="w-10 h-10 rounded-lg bg-slate-50 flex items-center justify-center text-xl shrink-0">
+          <div class="w-10 h-10 rounded-xl bg-slate-50 flex items-center justify-center text-xl shrink-0">
             <i class="fa-solid fa-file-excel text-emerald-600"></i>
           </div>
           <div class="min-w-0 flex-1">
             <h3 class="text-xs font-semibold text-slate-900 leading-snug break-words" title="DS BAO CAO 9999 THEO NGAY.xlsx">DS BAO CAO 9999 THEO NGAY.xlsx</h3>
             <div class="flex items-center gap-2 mt-1.5">
               <span class="px-2 py-0.5 rounded text-[10px] font-medium border bg-emerald-50 text-emerald-700 border-emerald-200">XLSX</span>
-              <span class="text-[11px] text-slate-400">29.0 KB</span>
+              <span class="text-[11px] text-slate-400 font-mono">29.0 KB</span>
             </div>
           </div>
         </div>
@@ -780,16 +852,16 @@
           </div>
         </div>
       </div>
-      <div class="doc-card bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="xlsx" data-name="ds máy tính cơ quan them r - khbq.xlsx">
+      <div class="doc-card bg-white border border-slate-200 rounded-2xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="xlsx" data-name="ds máy tính cơ quan them r - khbq.xlsx">
         <div class="flex items-start gap-3 mb-3">
-          <div class="w-10 h-10 rounded-lg bg-slate-50 flex items-center justify-center text-xl shrink-0">
+          <div class="w-10 h-10 rounded-xl bg-slate-50 flex items-center justify-center text-xl shrink-0">
             <i class="fa-solid fa-file-excel text-emerald-600"></i>
           </div>
           <div class="min-w-0 flex-1">
             <h3 class="text-xs font-semibold text-slate-900 leading-snug break-words" title="DS máy tính cơ quan THEM R - KHBQ.xlsx">DS máy tính cơ quan THEM R - KHBQ.xlsx</h3>
             <div class="flex items-center gap-2 mt-1.5">
               <span class="px-2 py-0.5 rounded text-[10px] font-medium border bg-emerald-50 text-emerald-700 border-emerald-200">XLSX</span>
-              <span class="text-[11px] text-slate-400">19.5 KB</span>
+              <span class="text-[11px] text-slate-400 font-mono">19.5 KB</span>
             </div>
           </div>
         </div>
@@ -803,16 +875,16 @@
           </div>
         </div>
       </div>
-      <div class="doc-card bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="docx" data-name="kết quả thực hiện việc tiếp tục nâng cao chất lượng thực hiện dân chủ ở cơ sở gắn với trách nhiệm của người đứng đầu.docx">
+      <div class="doc-card bg-white border border-slate-200 rounded-2xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="docx" data-name="kết quả thực hiện việc tiếp tục nâng cao chất lượng thực hiện dân chủ ở cơ sở gắn với trách nhiệm của người đứng đầu.docx">
         <div class="flex items-start gap-3 mb-3">
-          <div class="w-10 h-10 rounded-lg bg-slate-50 flex items-center justify-center text-xl shrink-0">
+          <div class="w-10 h-10 rounded-xl bg-slate-50 flex items-center justify-center text-xl shrink-0">
             <i class="fa-solid fa-file-word text-blue-600"></i>
           </div>
           <div class="min-w-0 flex-1">
             <h3 class="text-xs font-semibold text-slate-900 leading-snug break-words" title="Kết quả thực hiện việc tiếp tục nâng cao chất lượng thực hiện dân chủ ở cơ sở gắn với trách nhiệm của người đứng đầu.docx">Kết quả thực hiện việc tiếp tục nâng cao chất lượng thực hiện dân chủ ở cơ sở gắn với trách nhiệm của người đứng đầu.docx</h3>
             <div class="flex items-center gap-2 mt-1.5">
               <span class="px-2 py-0.5 rounded text-[10px] font-medium border bg-blue-50 text-blue-700 border-blue-200">DOCX</span>
-              <span class="text-[11px] text-slate-400">23.8 KB</span>
+              <span class="text-[11px] text-slate-400 font-mono">23.8 KB</span>
             </div>
           </div>
         </div>
@@ -826,16 +898,16 @@
           </div>
         </div>
       </div>
-      <div class="doc-card bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="xlsx" data-name="mẫu báo cáo tuần mới theo 603.xlsx">
+      <div class="doc-card bg-white border border-slate-200 rounded-2xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="xlsx" data-name="mẫu báo cáo tuần mới theo 603.xlsx">
         <div class="flex items-start gap-3 mb-3">
-          <div class="w-10 h-10 rounded-lg bg-slate-50 flex items-center justify-center text-xl shrink-0">
+          <div class="w-10 h-10 rounded-xl bg-slate-50 flex items-center justify-center text-xl shrink-0">
             <i class="fa-solid fa-file-excel text-emerald-600"></i>
           </div>
           <div class="min-w-0 flex-1">
             <h3 class="text-xs font-semibold text-slate-900 leading-snug break-words" title="Mẫu báo cáo tuần mới theo 603.xlsx">Mẫu báo cáo tuần mới theo 603.xlsx</h3>
             <div class="flex items-center gap-2 mt-1.5">
               <span class="px-2 py-0.5 rounded text-[10px] font-medium border bg-emerald-50 text-emerald-700 border-emerald-200">XLSX</span>
-              <span class="text-[11px] text-slate-400">76.2 KB</span>
+              <span class="text-[11px] text-slate-400 font-mono">76.2 KB</span>
             </div>
           </div>
         </div>
@@ -849,16 +921,16 @@
           </div>
         </div>
       </div>
-      <div class="doc-card bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="pdf" data-name="pa23r_1.pdf">
+      <div class="doc-card bg-white border border-slate-200 rounded-2xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="pdf" data-name="pa23r_1.pdf">
         <div class="flex items-start gap-3 mb-3">
-          <div class="w-10 h-10 rounded-lg bg-slate-50 flex items-center justify-center text-xl shrink-0">
+          <div class="w-10 h-10 rounded-xl bg-slate-50 flex items-center justify-center text-xl shrink-0">
             <i class="fa-solid fa-file-pdf text-rose-600"></i>
           </div>
           <div class="min-w-0 flex-1">
             <h3 class="text-xs font-semibold text-slate-900 leading-snug break-words" title="PA23r_1.PDF">PA23r_1.PDF</h3>
             <div class="flex items-center gap-2 mt-1.5">
               <span class="px-2 py-0.5 rounded text-[10px] font-medium border bg-rose-50 text-rose-700 border-rose-200">PDF</span>
-              <span class="text-[11px] text-slate-400">2.9 MB</span>
+              <span class="text-[11px] text-slate-400 font-mono">2.9 MB</span>
             </div>
           </div>
         </div>
@@ -872,16 +944,16 @@
           </div>
         </div>
       </div>
-      <div class="doc-card bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="docx" data-name="pl2_final_da_nhap_bac_luong.docx">
+      <div class="doc-card bg-white border border-slate-200 rounded-2xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="docx" data-name="pl2_final_da_nhap_bac_luong.docx">
         <div class="flex items-start gap-3 mb-3">
-          <div class="w-10 h-10 rounded-lg bg-slate-50 flex items-center justify-center text-xl shrink-0">
+          <div class="w-10 h-10 rounded-xl bg-slate-50 flex items-center justify-center text-xl shrink-0">
             <i class="fa-solid fa-file-word text-blue-600"></i>
           </div>
           <div class="min-w-0 flex-1">
             <h3 class="text-xs font-semibold text-slate-900 leading-snug break-words" title="PL2_final_da_nhap_bac_luong.docx">PL2_final_da_nhap_bac_luong.docx</h3>
             <div class="flex items-center gap-2 mt-1.5">
               <span class="px-2 py-0.5 rounded text-[10px] font-medium border bg-blue-50 text-blue-700 border-blue-200">DOCX</span>
-              <span class="text-[11px] text-slate-400">68.3 KB</span>
+              <span class="text-[11px] text-slate-400 font-mono">68.3 KB</span>
             </div>
           </div>
         </div>
@@ -895,16 +967,16 @@
           </div>
         </div>
       </div>
-      <div class="doc-card bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="docx" data-name="phieu trinh_to_hanh_chinh_tong_hop_cn23.docx">
+      <div class="doc-card bg-white border border-slate-200 rounded-2xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="docx" data-name="phieu trinh_to_hanh_chinh_tong_hop_cn23.docx">
         <div class="flex items-start gap-3 mb-3">
-          <div class="w-10 h-10 rounded-lg bg-slate-50 flex items-center justify-center text-xl shrink-0">
+          <div class="w-10 h-10 rounded-xl bg-slate-50 flex items-center justify-center text-xl shrink-0">
             <i class="fa-solid fa-file-word text-blue-600"></i>
           </div>
           <div class="min-w-0 flex-1">
             <h3 class="text-xs font-semibold text-slate-900 leading-snug break-words" title="Phieu Trinh_To_Hanh_chinh_Tong_hop_CN23.docx">Phieu Trinh_To_Hanh_chinh_Tong_hop_CN23.docx</h3>
             <div class="flex items-center gap-2 mt-1.5">
               <span class="px-2 py-0.5 rounded text-[10px] font-medium border bg-blue-50 text-blue-700 border-blue-200">DOCX</span>
-              <span class="text-[11px] text-slate-400">62.7 KB</span>
+              <span class="text-[11px] text-slate-400 font-mono">62.7 KB</span>
             </div>
           </div>
         </div>
@@ -918,16 +990,16 @@
           </div>
         </div>
       </div>
-      <div class="doc-card bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="pdf" data-name="phieu trinh p.kt + bb + don nghi viec.pdf">
+      <div class="doc-card bg-white border border-slate-200 rounded-2xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="pdf" data-name="phieu trinh p.kt + bb + don nghi viec.pdf">
         <div class="flex items-start gap-3 mb-3">
-          <div class="w-10 h-10 rounded-lg bg-slate-50 flex items-center justify-center text-xl shrink-0">
+          <div class="w-10 h-10 rounded-xl bg-slate-50 flex items-center justify-center text-xl shrink-0">
             <i class="fa-solid fa-file-pdf text-rose-600"></i>
           </div>
           <div class="min-w-0 flex-1">
             <h3 class="text-xs font-semibold text-slate-900 leading-snug break-words" title="Phieu trinh P.KT + BB + Don nghi viec.pdf">Phieu trinh P.KT + BB + Don nghi viec.pdf</h3>
             <div class="flex items-center gap-2 mt-1.5">
               <span class="px-2 py-0.5 rounded text-[10px] font-medium border bg-rose-50 text-rose-700 border-rose-200">PDF</span>
-              <span class="text-[11px] text-slate-400">1.1 MB</span>
+              <span class="text-[11px] text-slate-400 font-mono">1.1 MB</span>
             </div>
           </div>
         </div>
@@ -941,16 +1013,16 @@
           </div>
         </div>
       </div>
-      <div class="doc-card bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="pdf" data-name="phuong an cn33.pdf">
+      <div class="doc-card bg-white border border-slate-200 rounded-2xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="pdf" data-name="phuong an cn33.pdf">
         <div class="flex items-start gap-3 mb-3">
-          <div class="w-10 h-10 rounded-lg bg-slate-50 flex items-center justify-center text-xl shrink-0">
+          <div class="w-10 h-10 rounded-xl bg-slate-50 flex items-center justify-center text-xl shrink-0">
             <i class="fa-solid fa-file-pdf text-rose-600"></i>
           </div>
           <div class="min-w-0 flex-1">
             <h3 class="text-xs font-semibold text-slate-900 leading-snug break-words" title="Phuong an CN33.pdf">Phuong an CN33.pdf</h3>
             <div class="flex items-center gap-2 mt-1.5">
               <span class="px-2 py-0.5 rounded text-[10px] font-medium border bg-rose-50 text-rose-700 border-rose-200">PDF</span>
-              <span class="text-[11px] text-slate-400">2.8 MB</span>
+              <span class="text-[11px] text-slate-400 font-mono">2.8 MB</span>
             </div>
           </div>
         </div>
@@ -964,16 +1036,16 @@
           </div>
         </div>
       </div>
-      <div class="doc-card bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="pdf" data-name="phương án cn23_1.pdf">
+      <div class="doc-card bg-white border border-slate-200 rounded-2xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="pdf" data-name="phương án cn23_1.pdf">
         <div class="flex items-start gap-3 mb-3">
-          <div class="w-10 h-10 rounded-lg bg-slate-50 flex items-center justify-center text-xl shrink-0">
+          <div class="w-10 h-10 rounded-xl bg-slate-50 flex items-center justify-center text-xl shrink-0">
             <i class="fa-solid fa-file-pdf text-rose-600"></i>
           </div>
           <div class="min-w-0 flex-1">
             <h3 class="text-xs font-semibold text-slate-900 leading-snug break-words" title="Phương án CN23_1.PDF">Phương án CN23_1.PDF</h3>
             <div class="flex items-center gap-2 mt-1.5">
               <span class="px-2 py-0.5 rounded text-[10px] font-medium border bg-rose-50 text-rose-700 border-rose-200">PDF</span>
-              <span class="text-[11px] text-slate-400">3.1 MB</span>
+              <span class="text-[11px] text-slate-400 font-mono">3.1 MB</span>
             </div>
           </div>
         </div>
@@ -987,16 +1059,16 @@
           </div>
         </div>
       </div>
-      <div class="doc-card bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="pdf" data-name="phương án sd phục vụ viên chức và người lđ.pdf">
+      <div class="doc-card bg-white border border-slate-200 rounded-2xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="pdf" data-name="phương án sd phục vụ viên chức và người lđ.pdf">
         <div class="flex items-start gap-3 mb-3">
-          <div class="w-10 h-10 rounded-lg bg-slate-50 flex items-center justify-center text-xl shrink-0">
+          <div class="w-10 h-10 rounded-xl bg-slate-50 flex items-center justify-center text-xl shrink-0">
             <i class="fa-solid fa-file-pdf text-rose-600"></i>
           </div>
           <div class="min-w-0 flex-1">
             <h3 class="text-xs font-semibold text-slate-900 leading-snug break-words" title="Phương án sd phục vụ viên chức và người lđ.pdf">Phương án sd phục vụ viên chức và người lđ.pdf</h3>
             <div class="flex items-center gap-2 mt-1.5">
               <span class="px-2 py-0.5 rounded text-[10px] font-medium border bg-rose-50 text-rose-700 border-rose-200">PDF</span>
-              <span class="text-[11px] text-slate-400">5.7 MB</span>
+              <span class="text-[11px] text-slate-400 font-mono">5.7 MB</span>
             </div>
           </div>
         </div>
@@ -1010,16 +1082,16 @@
           </div>
         </div>
       </div>
-      <div class="doc-card bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="docx" data-name="phương án sữa chữa chống thấm trụ sở cn 34 (sửa).docx">
+      <div class="doc-card bg-white border border-slate-200 rounded-2xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="docx" data-name="phương án sữa chữa chống thấm trụ sở cn 34 (sửa).docx">
         <div class="flex items-start gap-3 mb-3">
-          <div class="w-10 h-10 rounded-lg bg-slate-50 flex items-center justify-center text-xl shrink-0">
+          <div class="w-10 h-10 rounded-xl bg-slate-50 flex items-center justify-center text-xl shrink-0">
             <i class="fa-solid fa-file-word text-blue-600"></i>
           </div>
           <div class="min-w-0 flex-1">
             <h3 class="text-xs font-semibold text-slate-900 leading-snug break-words" title="Phương án sữa chữa chống thấm trụ sở CN 34 (sửa).docx">Phương án sữa chữa chống thấm trụ sở CN 34 (sửa).docx</h3>
             <div class="flex items-center gap-2 mt-1.5">
               <span class="px-2 py-0.5 rounded text-[10px] font-medium border bg-blue-50 text-blue-700 border-blue-200">DOCX</span>
-              <span class="text-[11px] text-slate-400">67.1 KB</span>
+              <span class="text-[11px] text-slate-400 font-mono">67.1 KB</span>
             </div>
           </div>
         </div>
@@ -1033,16 +1105,16 @@
           </div>
         </div>
       </div>
-      <div class="doc-card bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="pdf" data-name="pixscan oct 01 2026_1.pdf">
+      <div class="doc-card bg-white border border-slate-200 rounded-2xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="pdf" data-name="pixscan oct 01 2026_1.pdf">
         <div class="flex items-start gap-3 mb-3">
-          <div class="w-10 h-10 rounded-lg bg-slate-50 flex items-center justify-center text-xl shrink-0">
+          <div class="w-10 h-10 rounded-xl bg-slate-50 flex items-center justify-center text-xl shrink-0">
             <i class="fa-solid fa-file-pdf text-rose-600"></i>
           </div>
           <div class="min-w-0 flex-1">
             <h3 class="text-xs font-semibold text-slate-900 leading-snug break-words" title="PixScan Oct 01 2026_1.pdf">PixScan Oct 01 2026_1.pdf</h3>
             <div class="flex items-center gap-2 mt-1.5">
               <span class="px-2 py-0.5 rounded text-[10px] font-medium border bg-rose-50 text-rose-700 border-rose-200">PDF</span>
-              <span class="text-[11px] text-slate-400">2.0 MB</span>
+              <span class="text-[11px] text-slate-400 font-mono">2.0 MB</span>
             </div>
           </div>
         </div>
@@ -1056,16 +1128,62 @@
           </div>
         </div>
       </div>
-      <div class="doc-card bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="xlsx" data-name="quản lý công việc kế hoạch 9999 - master.xlsx">
+      <div class="doc-card bg-white border border-slate-200 rounded-2xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="pdf" data-name="qd 1326 dhfpt ban hanh nguyen tac chung ve thuc hien va cong bo cac san pham hoc thuat, nghien cuu lien quan den fpt education.pdf">
         <div class="flex items-start gap-3 mb-3">
-          <div class="w-10 h-10 rounded-lg bg-slate-50 flex items-center justify-center text-xl shrink-0">
+          <div class="w-10 h-10 rounded-xl bg-slate-50 flex items-center justify-center text-xl shrink-0">
+            <i class="fa-solid fa-file-pdf text-rose-600"></i>
+          </div>
+          <div class="min-w-0 flex-1">
+            <h3 class="text-xs font-semibold text-slate-900 leading-snug break-words" title="QD 1326 DHFPT Ban hanh Nguyen tac chung ve thuc hien va cong bo cac san pham hoc thuat, nghien cuu lien quan den FPT Education.pdf">QD 1326 DHFPT Ban hanh Nguyen tac chung ve thuc hien va cong bo cac san pham hoc thuat, nghien cuu lien quan den FPT Education.pdf</h3>
+            <div class="flex items-center gap-2 mt-1.5">
+              <span class="px-2 py-0.5 rounded text-[10px] font-medium border bg-rose-50 text-rose-700 border-rose-200">PDF</span>
+              <span class="text-[11px] text-slate-400 font-mono">4.1 MB</span>
+            </div>
+          </div>
+        </div>
+        <div class="pt-3 border-t border-slate-100 flex items-center justify-between text-xs">
+          <span class="text-[11px] text-slate-400"><i class="fa-solid fa-hard-drive"></i> documents/</span>
+          <div class="flex items-center gap-1.5">
+            <a href="QD%201326%20DHFPT%20Ban%20hanh%20Nguyen%20tac%20chung%20ve%20thuc%20hien%20va%20cong%20bo%20cac%20san%20pham%20hoc%20thuat%2C%20nghien%20cuu%20lien%20quan%20den%20FPT%20Education.pdf" target="_blank" class="px-2.5 py-1.5 rounded-lg text-xs font-semibold bg-rose-50 hover:bg-rose-100 text-rose-700 transition inline-flex items-center gap-1"><i class="fa-solid fa-arrow-up-right-from-square"></i> Mở Xem</a>
+            <a href="QD%201326%20DHFPT%20Ban%20hanh%20Nguyen%20tac%20chung%20ve%20thuc%20hien%20va%20cong%20bo%20cac%20san%20pham%20hoc%20thuat%2C%20nghien%20cuu%20lien%20quan%20den%20FPT%20Education.pdf" download class="p-1.5 rounded-lg text-slate-400 hover:text-slate-600 hover:bg-slate-100 transition" title="Tải tệp tin">
+              <i class="fa-solid fa-cloud-arrow-down"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="doc-card bg-white border border-slate-200 rounded-2xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="pdf" data-name="qd 542 dhfpt chinh sach ho tro can bo, giang vien va nguoi hoc cua to chuc giao duc fpt tham du hoi nghi, hoi thao khoa hoc (1) (1).pdf">
+        <div class="flex items-start gap-3 mb-3">
+          <div class="w-10 h-10 rounded-xl bg-slate-50 flex items-center justify-center text-xl shrink-0">
+            <i class="fa-solid fa-file-pdf text-rose-600"></i>
+          </div>
+          <div class="min-w-0 flex-1">
+            <h3 class="text-xs font-semibold text-slate-900 leading-snug break-words" title="QD 542 DHFPT Chinh sach ho tro can bo, giang vien va nguoi hoc cua To chuc giao duc FPT tham du hoi nghi, hoi thao khoa hoc (1) (1).pdf">QD 542 DHFPT Chinh sach ho tro can bo, giang vien va nguoi hoc cua To chuc giao duc FPT tham du hoi nghi, hoi thao khoa hoc (1) (1).pdf</h3>
+            <div class="flex items-center gap-2 mt-1.5">
+              <span class="px-2 py-0.5 rounded text-[10px] font-medium border bg-rose-50 text-rose-700 border-rose-200">PDF</span>
+              <span class="text-[11px] text-slate-400 font-mono">5.9 MB</span>
+            </div>
+          </div>
+        </div>
+        <div class="pt-3 border-t border-slate-100 flex items-center justify-between text-xs">
+          <span class="text-[11px] text-slate-400"><i class="fa-solid fa-hard-drive"></i> documents/</span>
+          <div class="flex items-center gap-1.5">
+            <a href="QD%20542%20DHFPT%20Chinh%20sach%20ho%20tro%20can%20bo%2C%20giang%20vien%20va%20nguoi%20hoc%20cua%20To%20chuc%20giao%20duc%20FPT%20tham%20du%20hoi%20nghi%2C%20hoi%20thao%20khoa%20hoc%20%281%29%20%281%29.pdf" target="_blank" class="px-2.5 py-1.5 rounded-lg text-xs font-semibold bg-rose-50 hover:bg-rose-100 text-rose-700 transition inline-flex items-center gap-1"><i class="fa-solid fa-arrow-up-right-from-square"></i> Mở Xem</a>
+            <a href="QD%20542%20DHFPT%20Chinh%20sach%20ho%20tro%20can%20bo%2C%20giang%20vien%20va%20nguoi%20hoc%20cua%20To%20chuc%20giao%20duc%20FPT%20tham%20du%20hoi%20nghi%2C%20hoi%20thao%20khoa%20hoc%20%281%29%20%281%29.pdf" download class="p-1.5 rounded-lg text-slate-400 hover:text-slate-600 hover:bg-slate-100 transition" title="Tải tệp tin">
+              <i class="fa-solid fa-cloud-arrow-down"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="doc-card bg-white border border-slate-200 rounded-2xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="xlsx" data-name="quản lý công việc kế hoạch 9999 - master.xlsx">
+        <div class="flex items-start gap-3 mb-3">
+          <div class="w-10 h-10 rounded-xl bg-slate-50 flex items-center justify-center text-xl shrink-0">
             <i class="fa-solid fa-file-excel text-emerald-600"></i>
           </div>
           <div class="min-w-0 flex-1">
             <h3 class="text-xs font-semibold text-slate-900 leading-snug break-words" title="QUẢN LÝ CÔNG VIỆC KẾ HOẠCH 9999 - MASTER.xlsx">QUẢN LÝ CÔNG VIỆC KẾ HOẠCH 9999 - MASTER.xlsx</h3>
             <div class="flex items-center gap-2 mt-1.5">
               <span class="px-2 py-0.5 rounded text-[10px] font-medium border bg-emerald-50 text-emerald-700 border-emerald-200">XLSX</span>
-              <span class="text-[11px] text-slate-400">7.5 KB</span>
+              <span class="text-[11px] text-slate-400 font-mono">7.5 KB</span>
             </div>
           </div>
         </div>
@@ -1079,16 +1197,16 @@
           </div>
         </div>
       </div>
-      <div class="doc-card bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="xlsx" data-name="tinhhinhxulycongvanden_20261015112745.xlsx">
+      <div class="doc-card bg-white border border-slate-200 rounded-2xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="xlsx" data-name="tinhhinhxulycongvanden_20261015112745.xlsx">
         <div class="flex items-start gap-3 mb-3">
-          <div class="w-10 h-10 rounded-lg bg-slate-50 flex items-center justify-center text-xl shrink-0">
+          <div class="w-10 h-10 rounded-xl bg-slate-50 flex items-center justify-center text-xl shrink-0">
             <i class="fa-solid fa-file-excel text-emerald-600"></i>
           </div>
           <div class="min-w-0 flex-1">
             <h3 class="text-xs font-semibold text-slate-900 leading-snug break-words" title="TINHHINHXULYCONGVANDEN_20261015112745.xlsx">TINHHINHXULYCONGVANDEN_20261015112745.xlsx</h3>
             <div class="flex items-center gap-2 mt-1.5">
               <span class="px-2 py-0.5 rounded text-[10px] font-medium border bg-emerald-50 text-emerald-700 border-emerald-200">XLSX</span>
-              <span class="text-[11px] text-slate-400">16.7 KB</span>
+              <span class="text-[11px] text-slate-400 font-mono">16.7 KB</span>
             </div>
           </div>
         </div>
@@ -1102,16 +1220,16 @@
           </div>
         </div>
       </div>
-      <div class="doc-card bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="pdf" data-name="tm bàn giao it_1.pdf">
+      <div class="doc-card bg-white border border-slate-200 rounded-2xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="pdf" data-name="tm bàn giao it_1.pdf">
         <div class="flex items-start gap-3 mb-3">
-          <div class="w-10 h-10 rounded-lg bg-slate-50 flex items-center justify-center text-xl shrink-0">
+          <div class="w-10 h-10 rounded-xl bg-slate-50 flex items-center justify-center text-xl shrink-0">
             <i class="fa-solid fa-file-pdf text-rose-600"></i>
           </div>
           <div class="min-w-0 flex-1">
             <h3 class="text-xs font-semibold text-slate-900 leading-snug break-words" title="TM bàn giao IT_1.PDF">TM bàn giao IT_1.PDF</h3>
             <div class="flex items-center gap-2 mt-1.5">
               <span class="px-2 py-0.5 rounded text-[10px] font-medium border bg-rose-50 text-rose-700 border-rose-200">PDF</span>
-              <span class="text-[11px] text-slate-400">138.7 KB</span>
+              <span class="text-[11px] text-slate-400 font-mono">138.7 KB</span>
             </div>
           </div>
         </div>
@@ -1125,16 +1243,39 @@
           </div>
         </div>
       </div>
-      <div class="doc-card bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="xlsx" data-name="bcthang092026.xlsx">
+      <div class="doc-card bg-white border border-slate-200 rounded-2xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="docx" data-name="bc kq thử việc siêufinal.docx">
         <div class="flex items-start gap-3 mb-3">
-          <div class="w-10 h-10 rounded-lg bg-slate-50 flex items-center justify-center text-xl shrink-0">
+          <div class="w-10 h-10 rounded-xl bg-slate-50 flex items-center justify-center text-xl shrink-0">
+            <i class="fa-solid fa-file-word text-blue-600"></i>
+          </div>
+          <div class="min-w-0 flex-1">
+            <h3 class="text-xs font-semibold text-slate-900 leading-snug break-words" title="bc KQ thử việc Siêufinal.docx">bc KQ thử việc Siêufinal.docx</h3>
+            <div class="flex items-center gap-2 mt-1.5">
+              <span class="px-2 py-0.5 rounded text-[10px] font-medium border bg-blue-50 text-blue-700 border-blue-200">DOCX</span>
+              <span class="text-[11px] text-slate-400 font-mono">2.3 MB</span>
+            </div>
+          </div>
+        </div>
+        <div class="pt-3 border-t border-slate-100 flex items-center justify-between text-xs">
+          <span class="text-[11px] text-slate-400"><i class="fa-solid fa-hard-drive"></i> documents/</span>
+          <div class="flex items-center gap-1.5">
+            <a href="bc%20KQ%20th%E1%BB%AD%20vi%E1%BB%87c%20Si%C3%AAufinal.docx" download class="px-2.5 py-1.5 rounded-lg text-xs font-semibold bg-blue-50 hover:bg-blue-100 text-blue-700 transition inline-flex items-center gap-1"><i class="fa-solid fa-download"></i> Tải Về</a>
+            <a href="bc%20KQ%20th%E1%BB%AD%20vi%E1%BB%87c%20Si%C3%AAufinal.docx" download class="p-1.5 rounded-lg text-slate-400 hover:text-slate-600 hover:bg-slate-100 transition" title="Tải tệp tin">
+              <i class="fa-solid fa-cloud-arrow-down"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="doc-card bg-white border border-slate-200 rounded-2xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="xlsx" data-name="bcthang092026.xlsx">
+        <div class="flex items-start gap-3 mb-3">
+          <div class="w-10 h-10 rounded-xl bg-slate-50 flex items-center justify-center text-xl shrink-0">
             <i class="fa-solid fa-file-excel text-emerald-600"></i>
           </div>
           <div class="min-w-0 flex-1">
             <h3 class="text-xs font-semibold text-slate-900 leading-snug break-words" title="bcthang092026.xlsx">bcthang092026.xlsx</h3>
             <div class="flex items-center gap-2 mt-1.5">
               <span class="px-2 py-0.5 rounded text-[10px] font-medium border bg-emerald-50 text-emerald-700 border-emerald-200">XLSX</span>
-              <span class="text-[11px] text-slate-400">74.4 KB</span>
+              <span class="text-[11px] text-slate-400 font-mono">74.4 KB</span>
             </div>
           </div>
         </div>
@@ -1148,16 +1289,16 @@
           </div>
         </div>
       </div>
-      <div class="doc-card bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="pdf" data-name="báo cáo 9 tháng.pdf">
+      <div class="doc-card bg-white border border-slate-200 rounded-2xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="pdf" data-name="báo cáo 9 tháng.pdf">
         <div class="flex items-start gap-3 mb-3">
-          <div class="w-10 h-10 rounded-lg bg-slate-50 flex items-center justify-center text-xl shrink-0">
+          <div class="w-10 h-10 rounded-xl bg-slate-50 flex items-center justify-center text-xl shrink-0">
             <i class="fa-solid fa-file-pdf text-rose-600"></i>
           </div>
           <div class="min-w-0 flex-1">
             <h3 class="text-xs font-semibold text-slate-900 leading-snug break-words" title="báo cáo 9 tháng.pdf">báo cáo 9 tháng.pdf</h3>
             <div class="flex items-center gap-2 mt-1.5">
               <span class="px-2 py-0.5 rounded text-[10px] font-medium border bg-rose-50 text-rose-700 border-rose-200">PDF</span>
-              <span class="text-[11px] text-slate-400">1.1 MB</span>
+              <span class="text-[11px] text-slate-400 font-mono">1.1 MB</span>
             </div>
           </div>
         </div>
@@ -1171,16 +1312,16 @@
           </div>
         </div>
       </div>
-      <div class="doc-card bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="pdf" data-name="dexuat.pdf">
+      <div class="doc-card bg-white border border-slate-200 rounded-2xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="pdf" data-name="dexuat.pdf">
         <div class="flex items-start gap-3 mb-3">
-          <div class="w-10 h-10 rounded-lg bg-slate-50 flex items-center justify-center text-xl shrink-0">
+          <div class="w-10 h-10 rounded-xl bg-slate-50 flex items-center justify-center text-xl shrink-0">
             <i class="fa-solid fa-file-pdf text-rose-600"></i>
           </div>
           <div class="min-w-0 flex-1">
             <h3 class="text-xs font-semibold text-slate-900 leading-snug break-words" title="dexuat.pdf">dexuat.pdf</h3>
             <div class="flex items-center gap-2 mt-1.5">
               <span class="px-2 py-0.5 rounded text-[10px] font-medium border bg-rose-50 text-rose-700 border-rose-200">PDF</span>
-              <span class="text-[11px] text-slate-400">3.7 MB</span>
+              <span class="text-[11px] text-slate-400 font-mono">3.7 MB</span>
             </div>
           </div>
         </div>
@@ -1194,39 +1335,62 @@
           </div>
         </div>
       </div>
-      <div class="doc-card bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="docx" data-name="mau hđtv 02 tháng (1).docx">
+      <div class="doc-card bg-white border border-slate-200 rounded-2xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="docx" data-name="mau hđ12- siêu ct.docx">
         <div class="flex items-start gap-3 mb-3">
-          <div class="w-10 h-10 rounded-lg bg-slate-50 flex items-center justify-center text-xl shrink-0">
+          <div class="w-10 h-10 rounded-xl bg-slate-50 flex items-center justify-center text-xl shrink-0">
             <i class="fa-solid fa-file-word text-blue-600"></i>
           </div>
           <div class="min-w-0 flex-1">
-            <h3 class="text-xs font-semibold text-slate-900 leading-snug break-words" title="mau HĐTV 02 tháng (1).docx">mau HĐTV 02 tháng (1).docx</h3>
+            <h3 class="text-xs font-semibold text-slate-900 leading-snug break-words" title="mau HĐ12- Siêu CT.docx">mau HĐ12- Siêu CT.docx</h3>
             <div class="flex items-center gap-2 mt-1.5">
               <span class="px-2 py-0.5 rounded text-[10px] font-medium border bg-blue-50 text-blue-700 border-blue-200">DOCX</span>
-              <span class="text-[11px] text-slate-400">15.9 KB</span>
+              <span class="text-[11px] text-slate-400 font-mono">45.7 KB</span>
             </div>
           </div>
         </div>
         <div class="pt-3 border-t border-slate-100 flex items-center justify-between text-xs">
           <span class="text-[11px] text-slate-400"><i class="fa-solid fa-hard-drive"></i> documents/</span>
           <div class="flex items-center gap-1.5">
-            <a href="mau%20H%C4%90TV%2002%20th%C3%A1ng%20%281%29.docx" download class="px-2.5 py-1.5 rounded-lg text-xs font-semibold bg-blue-50 hover:bg-blue-100 text-blue-700 transition inline-flex items-center gap-1"><i class="fa-solid fa-download"></i> Tải Về</a>
-            <a href="mau%20H%C4%90TV%2002%20th%C3%A1ng%20%281%29.docx" download class="p-1.5 rounded-lg text-slate-400 hover:text-slate-600 hover:bg-slate-100 transition" title="Tải tệp tin">
+            <a href="mau%20H%C4%9012-%20Si%C3%AAu%20CT.docx" download class="px-2.5 py-1.5 rounded-lg text-xs font-semibold bg-blue-50 hover:bg-blue-100 text-blue-700 transition inline-flex items-center gap-1"><i class="fa-solid fa-download"></i> Tải Về</a>
+            <a href="mau%20H%C4%9012-%20Si%C3%AAu%20CT.docx" download class="p-1.5 rounded-lg text-slate-400 hover:text-slate-600 hover:bg-slate-100 transition" title="Tải tệp tin">
               <i class="fa-solid fa-cloud-arrow-down"></i>
             </a>
           </div>
         </div>
       </div>
-      <div class="doc-card bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="pdf" data-name="phu lục lấy ý kiến.signed.pdf">
+      <div class="doc-card bg-white border border-slate-200 rounded-2xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="docx" data-name="mau hđ12- tiến.docx">
         <div class="flex items-start gap-3 mb-3">
-          <div class="w-10 h-10 rounded-lg bg-slate-50 flex items-center justify-center text-xl shrink-0">
+          <div class="w-10 h-10 rounded-xl bg-slate-50 flex items-center justify-center text-xl shrink-0">
+            <i class="fa-solid fa-file-word text-blue-600"></i>
+          </div>
+          <div class="min-w-0 flex-1">
+            <h3 class="text-xs font-semibold text-slate-900 leading-snug break-words" title="mau HĐ12- Tiến.docx">mau HĐ12- Tiến.docx</h3>
+            <div class="flex items-center gap-2 mt-1.5">
+              <span class="px-2 py-0.5 rounded text-[10px] font-medium border bg-blue-50 text-blue-700 border-blue-200">DOCX</span>
+              <span class="text-[11px] text-slate-400 font-mono">45.5 KB</span>
+            </div>
+          </div>
+        </div>
+        <div class="pt-3 border-t border-slate-100 flex items-center justify-between text-xs">
+          <span class="text-[11px] text-slate-400"><i class="fa-solid fa-hard-drive"></i> documents/</span>
+          <div class="flex items-center gap-1.5">
+            <a href="mau%20H%C4%9012-%20Ti%E1%BA%BFn.docx" download class="px-2.5 py-1.5 rounded-lg text-xs font-semibold bg-blue-50 hover:bg-blue-100 text-blue-700 transition inline-flex items-center gap-1"><i class="fa-solid fa-download"></i> Tải Về</a>
+            <a href="mau%20H%C4%9012-%20Ti%E1%BA%BFn.docx" download class="p-1.5 rounded-lg text-slate-400 hover:text-slate-600 hover:bg-slate-100 transition" title="Tải tệp tin">
+              <i class="fa-solid fa-cloud-arrow-down"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="doc-card bg-white border border-slate-200 rounded-2xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="pdf" data-name="phu lục lấy ý kiến.signed.pdf">
+        <div class="flex items-start gap-3 mb-3">
+          <div class="w-10 h-10 rounded-xl bg-slate-50 flex items-center justify-center text-xl shrink-0">
             <i class="fa-solid fa-file-pdf text-rose-600"></i>
           </div>
           <div class="min-w-0 flex-1">
             <h3 class="text-xs font-semibold text-slate-900 leading-snug break-words" title="phu lục Lấy Ý kiến.signed.pdf">phu lục Lấy Ý kiến.signed.pdf</h3>
             <div class="flex items-center gap-2 mt-1.5">
               <span class="px-2 py-0.5 rounded text-[10px] font-medium border bg-rose-50 text-rose-700 border-rose-200">PDF</span>
-              <span class="text-[11px] text-slate-400">1.3 MB</span>
+              <span class="text-[11px] text-slate-400 font-mono">1.3 MB</span>
             </div>
           </div>
         </div>
@@ -1240,16 +1404,16 @@
           </div>
         </div>
       </div>
-      <div class="doc-card bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="docx" data-name="phuluc 01102026.docx">
+      <div class="doc-card bg-white border border-slate-200 rounded-2xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="docx" data-name="phuluc 01102026.docx">
         <div class="flex items-start gap-3 mb-3">
-          <div class="w-10 h-10 rounded-lg bg-slate-50 flex items-center justify-center text-xl shrink-0">
+          <div class="w-10 h-10 rounded-xl bg-slate-50 flex items-center justify-center text-xl shrink-0">
             <i class="fa-solid fa-file-word text-blue-600"></i>
           </div>
           <div class="min-w-0 flex-1">
             <h3 class="text-xs font-semibold text-slate-900 leading-snug break-words" title="phuluc 01102026.docx">phuluc 01102026.docx</h3>
             <div class="flex items-center gap-2 mt-1.5">
               <span class="px-2 py-0.5 rounded text-[10px] font-medium border bg-blue-50 text-blue-700 border-blue-200">DOCX</span>
-              <span class="text-[11px] text-slate-400">40.2 KB</span>
+              <span class="text-[11px] text-slate-400 font-mono">40.2 KB</span>
             </div>
           </div>
         </div>
@@ -1263,16 +1427,16 @@
           </div>
         </div>
       </div>
-      <div class="doc-card bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="xlsx" data-name="phuluc_lay_y_kien_new.xlsx">
+      <div class="doc-card bg-white border border-slate-200 rounded-2xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="xlsx" data-name="phuluc_lay_y_kien_new.xlsx">
         <div class="flex items-start gap-3 mb-3">
-          <div class="w-10 h-10 rounded-lg bg-slate-50 flex items-center justify-center text-xl shrink-0">
+          <div class="w-10 h-10 rounded-xl bg-slate-50 flex items-center justify-center text-xl shrink-0">
             <i class="fa-solid fa-file-excel text-emerald-600"></i>
           </div>
           <div class="min-w-0 flex-1">
             <h3 class="text-xs font-semibold text-slate-900 leading-snug break-words" title="phuluc_lay_y_kien_new.xlsx">phuluc_lay_y_kien_new.xlsx</h3>
             <div class="flex items-center gap-2 mt-1.5">
               <span class="px-2 py-0.5 rounded text-[10px] font-medium border bg-emerald-50 text-emerald-700 border-emerald-200">XLSX</span>
-              <span class="text-[11px] text-slate-400">7.7 KB</span>
+              <span class="text-[11px] text-slate-400 font-mono">7.7 KB</span>
             </div>
           </div>
         </div>
@@ -1286,16 +1450,16 @@
           </div>
         </div>
       </div>
-      <div class="doc-card bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="xlsx" data-name="phulucnew1.xlsx">
+      <div class="doc-card bg-white border border-slate-200 rounded-2xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="xlsx" data-name="phulucnew1.xlsx">
         <div class="flex items-start gap-3 mb-3">
-          <div class="w-10 h-10 rounded-lg bg-slate-50 flex items-center justify-center text-xl shrink-0">
+          <div class="w-10 h-10 rounded-xl bg-slate-50 flex items-center justify-center text-xl shrink-0">
             <i class="fa-solid fa-file-excel text-emerald-600"></i>
           </div>
           <div class="min-w-0 flex-1">
             <h3 class="text-xs font-semibold text-slate-900 leading-snug break-words" title="phulucnew1.xlsx">phulucnew1.xlsx</h3>
             <div class="flex items-center gap-2 mt-1.5">
               <span class="px-2 py-0.5 rounded text-[10px] font-medium border bg-emerald-50 text-emerald-700 border-emerald-200">XLSX</span>
-              <span class="text-[11px] text-slate-400">146.5 KB</span>
+              <span class="text-[11px] text-slate-400 font-mono">146.5 KB</span>
             </div>
           </div>
         </div>
@@ -1309,16 +1473,16 @@
           </div>
         </div>
       </div>
-      <div class="doc-card bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="docx" data-name="phuong an cn23.docx">
+      <div class="doc-card bg-white border border-slate-200 rounded-2xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="docx" data-name="phuong an cn23.docx">
         <div class="flex items-start gap-3 mb-3">
-          <div class="w-10 h-10 rounded-lg bg-slate-50 flex items-center justify-center text-xl shrink-0">
+          <div class="w-10 h-10 rounded-xl bg-slate-50 flex items-center justify-center text-xl shrink-0">
             <i class="fa-solid fa-file-word text-blue-600"></i>
           </div>
           <div class="min-w-0 flex-1">
             <h3 class="text-xs font-semibold text-slate-900 leading-snug break-words" title="phuong an CN23.docx">phuong an CN23.docx</h3>
             <div class="flex items-center gap-2 mt-1.5">
               <span class="px-2 py-0.5 rounded text-[10px] font-medium border bg-blue-50 text-blue-700 border-blue-200">DOCX</span>
-              <span class="text-[11px] text-slate-400">75.8 KB</span>
+              <span class="text-[11px] text-slate-400 font-mono">75.8 KB</span>
             </div>
           </div>
         </div>
@@ -1332,16 +1496,16 @@
           </div>
         </div>
       </div>
-      <div class="doc-card bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="docx" data-name="to trinh dang ky su dung thong tin do dac cn23_07_10_2026.docx">
+      <div class="doc-card bg-white border border-slate-200 rounded-2xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="docx" data-name="to trinh dang ky su dung thong tin do dac cn23_07_10_2026.docx">
         <div class="flex items-start gap-3 mb-3">
-          <div class="w-10 h-10 rounded-lg bg-slate-50 flex items-center justify-center text-xl shrink-0">
+          <div class="w-10 h-10 rounded-xl bg-slate-50 flex items-center justify-center text-xl shrink-0">
             <i class="fa-solid fa-file-word text-blue-600"></i>
           </div>
           <div class="min-w-0 flex-1">
             <h3 class="text-xs font-semibold text-slate-900 leading-snug break-words" title="to trinh dang ky su dung thong tin do dac CN23_07_10_2026.docx">to trinh dang ky su dung thong tin do dac CN23_07_10_2026.docx</h3>
             <div class="flex items-center gap-2 mt-1.5">
               <span class="px-2 py-0.5 rounded text-[10px] font-medium border bg-blue-50 text-blue-700 border-blue-200">DOCX</span>
-              <span class="text-[11px] text-slate-400">32.8 KB</span>
+              <span class="text-[11px] text-slate-400 font-mono">32.8 KB</span>
             </div>
           </div>
         </div>
@@ -1355,16 +1519,16 @@
           </div>
         </div>
       </div>
-      <div class="doc-card bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="docx" data-name="tình hình thực hiện tthc quý 3 năm 2026 của chi nhánh 23.docx">
+      <div class="doc-card bg-white border border-slate-200 rounded-2xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="docx" data-name="tình hình thực hiện tthc quý 3 năm 2026 của chi nhánh 23.docx">
         <div class="flex items-start gap-3 mb-3">
-          <div class="w-10 h-10 rounded-lg bg-slate-50 flex items-center justify-center text-xl shrink-0">
+          <div class="w-10 h-10 rounded-xl bg-slate-50 flex items-center justify-center text-xl shrink-0">
             <i class="fa-solid fa-file-word text-blue-600"></i>
           </div>
           <div class="min-w-0 flex-1">
             <h3 class="text-xs font-semibold text-slate-900 leading-snug break-words" title="tình hình thực hiện TTHC Quý 3 năm 2026 của Chi nhánh 23.docx">tình hình thực hiện TTHC Quý 3 năm 2026 của Chi nhánh 23.docx</h3>
             <div class="flex items-center gap-2 mt-1.5">
               <span class="px-2 py-0.5 rounded text-[10px] font-medium border bg-blue-50 text-blue-700 border-blue-200">DOCX</span>
-              <span class="text-[11px] text-slate-400">102.0 KB</span>
+              <span class="text-[11px] text-slate-400 font-mono">102.0 KB</span>
             </div>
           </div>
         </div>
@@ -1378,16 +1542,16 @@
           </div>
         </div>
       </div>
-      <div class="doc-card bg-white border border-slate-200 rounded-xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="docx" data-name="đề xuất kế hoạch năm 2027 cn23 ct.docx">
+      <div class="doc-card bg-white border border-slate-200 rounded-2xl p-4 shadow-2xs hover:shadow-md transition flex flex-col justify-between" data-type="docx" data-name="đề xuất kế hoạch năm 2027 cn23 ct.docx">
         <div class="flex items-start gap-3 mb-3">
-          <div class="w-10 h-10 rounded-lg bg-slate-50 flex items-center justify-center text-xl shrink-0">
+          <div class="w-10 h-10 rounded-xl bg-slate-50 flex items-center justify-center text-xl shrink-0">
             <i class="fa-solid fa-file-word text-blue-600"></i>
           </div>
           <div class="min-w-0 flex-1">
             <h3 class="text-xs font-semibold text-slate-900 leading-snug break-words" title="đề xuất kế hoạch năm 2027 CN23 cT.docx">đề xuất kế hoạch năm 2027 CN23 cT.docx</h3>
             <div class="flex items-center gap-2 mt-1.5">
               <span class="px-2 py-0.5 rounded text-[10px] font-medium border bg-blue-50 text-blue-700 border-blue-200">DOCX</span>
-              <span class="text-[11px] text-slate-400">62.6 KB</span>
+              <span class="text-[11px] text-slate-400 font-mono">62.6 KB</span>
             </div>
           </div>
         </div>

@@ -40,7 +40,33 @@ class ND30Document:
         self.current_section = self.doc.sections[0]
 
     def _configure_default_styles(self):
-        """Thiết lập style Normal mặc định chuẩn NĐ 30."""
+        """Thiết lập docDefaults và style Normal mặc định chuẩn NĐ 30."""
+        # Cấu hình triệt để docDefaults trong styles XML
+        styles_el = self.doc.styles.element
+        old_docDefaults = styles_el.find('{http://schemas.openxmlformats.org/wordprocessingml/2006/main}docDefaults')
+        if old_docDefaults is not None:
+            styles_el.remove(old_docDefaults)
+        sz_val = str(int(self.font_size_body * 2))
+        new_docDefaults = parse_xml(
+            f'<w:docDefaults {nsdecls("w")}>'
+            f'  <w:rPrDefault>'
+            f'    <w:rPr>'
+            f'      <w:rFonts w:ascii="{self.font_name}" w:eastAsia="{self.font_name}" w:hAnsi="{self.font_name}" w:cs="{self.font_name}"/>'
+            f'      <w:sz w:val="{sz_val}"/>'
+            f'      <w:szCs w:val="{sz_val}"/>'
+            f'      <w:color w:val="000000"/>'
+            f'      <w:lang w:val="vi-VN"/>'
+            f'    </w:rPr>'
+            f'  </w:rPrDefault>'
+            f'  <w:pPrDefault>'
+            f'    <w:pPr>'
+            f'      <w:spacing w:before="0" w:after="80" w:line="276" w:lineRule="auto"/>'
+            f'    </w:pPr>'
+            f'  </w:pPrDefault>'
+            f'</w:docDefaults>'
+        )
+        styles_el.insert(0, new_docDefaults)
+
         style_normal = self.doc.styles['Normal']
         style_normal.font.name = self.font_name
         style_normal.font.size = Pt(self.font_size_body)
