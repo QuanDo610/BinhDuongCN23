@@ -74,6 +74,9 @@ function initSheet() {
     sheet.setColumnWidth(11, 140); // Trạng thái
     sheet.setColumnWidth(12, 220); // Ghi chú IT
     sheet.setColumnWidth(13, 220); // IP & Cấu hình
+
+    // Định dạng cột Số ĐT (Cột D) là Text thuần để không bao giờ bị mất số 0
+    sheet.getRange("D:D").setNumberFormat("@");
   }
   return sheet;
 }
@@ -167,7 +170,7 @@ function doGet(e) {
         id: row[0],
         timestamp: row[1],
         fullname: row[2],
-        phone: row[3],
+        phone: (row[3] || "").toString().replace(/^'+/, ""),
         department: row[4],
         machineName: row[5],
         category: row[6],
@@ -269,11 +272,18 @@ function createTicketRow(sheet, data) {
     imageUrl = saveImageToDrive(data.imageBase64, imgName);
   }
 
+  // Xử lý số điện thoại để luôn lưu dưới dạng VĂN BẢN (Text), không bao giờ bị mất số 0 trong Excel/Sheets
+  let phoneStr = String(data.phone || "").trim();
+  if (phoneStr) {
+    phoneStr = phoneStr.replace(/^'+/, "");
+    phoneStr = "'" + phoneStr;
+  }
+
   const rowData = [
     ticketId,                                      // 1. Mã Ticket
     timeStr,                                       // 2. Thời gian gửi
     data.fullname || "Không tên",                  // 3. Họ và tên
-    data.phone || "",                              // 4. Số ĐT / Zalo
+    phoneStr,                                      // 4. Số ĐT / Zalo (dạng Text giữ nguyên số 0)
     data.department || "Khác",                     // 5. Phòng ban
     data.machineName || "Tự động (Chưa rõ)",       // 6. Tên máy / Mã thiết bị
     data.category || "Sự cố chung",                // 7. Loại sự cố
@@ -288,10 +298,10 @@ function createTicketRow(sheet, data) {
   sheet.appendRow(rowData);
   
   const newRowIndex = sheet.getLastRow();
-  // Căn giữa các cột Mã, Ngày, SĐT, Trạng thái
+  // Căn giữa các cột Mã, Ngày, SĐT, Trạng thái & Định dạng SĐT là Plain Text
   sheet.getRange(newRowIndex, 1).setHorizontalAlignment("center").setFontWeight("bold");
   sheet.getRange(newRowIndex, 2).setHorizontalAlignment("center");
-  sheet.getRange(newRowIndex, 4).setHorizontalAlignment("center");
+  sheet.getRange(newRowIndex, 4).setNumberFormat("@").setHorizontalAlignment("center");
   
   // Format ô Trạng thái ban đầu: Màu vàng cam (Chờ xử lý)
   const statusCell = sheet.getRange(newRowIndex, 11);

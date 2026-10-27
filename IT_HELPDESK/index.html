@@ -40,16 +40,24 @@
     ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 9999px; }
     ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
     
-    /* Workspace 2-Column Grid (Kế nhau giống A_THANG) */
+    /* Ngăn trình duyệt iOS (iPhone) tự động zoom khi bấm vào ô nhập */
+    @media screen and (max-width: 768px) {
+      input, select, textarea {
+        font-size: 16px !important;
+      }
+    }
+
+    /* Workspace 2-Column Grid (Kế nhau trên PC, xếp dọc trên điện thoại) */
     .workspace-grid {
       display: grid;
-      grid-template-columns: 430px 1fr;
+      grid-template-columns: 440px 1fr;
       gap: 24px;
       align-items: start;
     }
     @media (max-width: 1080px) {
       .workspace-grid {
         grid-template-columns: 1fr;
+        gap: 20px;
       }
     }
 
@@ -68,38 +76,39 @@
 
   <!-- ================= HEADER CHUẨN CƠ QUAN VPĐK ================= -->
   <header class="bg-gradient-to-r from-blue-950 via-blue-900 to-indigo-950 text-white shadow-md border-b-4 border-amber-500">
-    <div class="max-w-[1720px] w-[96%] mx-auto py-3.5 px-4 flex flex-wrap items-center justify-between gap-4">
+    <div class="max-w-[1720px] w-full px-3 sm:px-6 py-2.5 sm:py-3.5 mx-auto flex flex-wrap items-center justify-between gap-2.5 sm:gap-4">
       
       <!-- Logo & Title -->
-      <div class="flex items-center space-x-3.5">
-        <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-amber-400 to-amber-600 text-blue-950 flex items-center justify-center text-2xl shadow-lg shadow-amber-500/20 font-black">
+      <div class="flex items-center space-x-2.5 sm:space-x-3.5">
+        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-gradient-to-tr from-amber-400 to-amber-600 text-blue-950 flex items-center justify-center text-xl sm:text-2xl shadow-lg shadow-amber-500/20 font-black shrink-0">
           <i class="fa-solid fa-headset"></i>
         </div>
         <div>
-          <div class="text-[11px] font-bold tracking-widest text-blue-200 uppercase">VĂN PHÒNG ĐĂNG KÝ ĐẤT ĐAI TP. HỒ CHÍ MINH</div>
-          <h1 class="text-lg sm:text-xl font-extrabold text-white tracking-wide flex items-center gap-2">
-            HỆ THỐNG TIẾP NHẬN SỰ CỐ IT & HELPDESK
-            <span class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-400/30">
-              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 mr-1 animate-pulse"></span> Trực Tuyến
+          <div class="text-[9px] sm:text-[11px] font-bold tracking-wider text-blue-200 uppercase truncate max-w-[200px] sm:max-w-none">VP ĐĂNG KÝ ĐẤT ĐAI TP. HỒ CHÍ MINH</div>
+          <h1 class="text-sm sm:text-lg md:text-xl font-extrabold text-white tracking-tight flex items-center gap-1.5 sm:gap-2">
+            <span>IT HELPDESK SỰ CỐ</span>
+            <span class="inline-flex items-center px-1.5 py-0.2 rounded text-[9px] sm:text-[10px] font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-400/30">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 mr-1 animate-pulse"></span> Online
             </span>
           </h1>
-          <div class="text-xs text-amber-300 font-medium">CHI NHÁNH 23</div>
+          <div class="text-[10px] sm:text-xs text-amber-300 font-bold">CHI NHÁNH 23</div>
         </div>
       </div>
 
       <!-- Quick Action: Kho Phần Mềm & Status Badge -->
-      <div class="flex items-center space-x-2.5">
+      <div class="flex items-center space-x-2 shrink-0">
         <!-- Nút Kho Phần Mềm Cài Đặt -->
         <a href="https://drive.google.com/drive/folders/1T2LVJKymM-52KBLNeabYxtAT4zfXneND" target="_blank" rel="noopener noreferrer"
-          class="flex items-center space-x-1.5 text-xs bg-amber-400 hover:bg-amber-300 text-blue-950 font-bold px-3 py-1.5 rounded-xl border border-amber-300 shadow-sm transition group">
-          <i class="fa-solid fa-cloud-arrow-down text-sm"></i>
-          <span>Kho Phần Mềm Cài Đặt</span>
-          <i class="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-70 group-hover:translate-x-0.5 transition-transform"></i>
+          class="flex items-center space-x-1.5 text-[11px] sm:text-xs bg-amber-400 hover:bg-amber-300 text-blue-950 font-bold px-2.5 sm:px-3 py-1.5 rounded-xl border border-amber-300 shadow-sm transition group">
+          <i class="fa-solid fa-cloud-arrow-down text-xs sm:text-sm"></i>
+          <span class="hidden sm:inline">Kho Phần Mềm Cài Đặt</span>
+          <span class="inline sm:hidden">Kho Cài Đặt</span>
+          <i class="fa-solid fa-arrow-up-right-from-square text-[9px] opacity-70 group-hover:translate-x-0.5 transition-transform"></i>
         </a>
 
-        <div class="hidden sm:flex items-center space-x-2 text-xs bg-white/10 px-3 py-1.5 rounded-xl border border-white/15">
+        <div class="hidden md:flex items-center space-x-2 text-xs bg-white/10 px-3 py-1.5 rounded-xl border border-white/15">
           <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
-          <span>Hệ thống: <strong class="text-white">Sẵn sàng tiếp nhận</strong></span>
+          <span>Hệ thống: <strong class="text-white">Sẵn sàng</strong></span>
         </div>
       </div>
 
@@ -107,43 +116,43 @@
   </header>
 
   <!-- ================= WORKSPACE CHÍNH (2 CỘT KẾ NHAU GIỐNG A_THANG) ================= -->
-  <main class="max-w-[1720px] w-[96%] mx-auto my-6 flex-1">
+  <main class="max-w-[1720px] w-full px-2.5 sm:px-6 mx-auto my-3 sm:my-6 flex-1">
     <div class="workspace-grid">
 
       <!-- ================= CỘT TRÁI: FORM GỬI TICKET (TỐI GIẢN & TỰ ĐỘNG) ================= -->
-      <section class="bg-white rounded-3xl border border-slate-200 shadow-sm p-5 sm:p-6 sticky top-4">
+      <section class="bg-white rounded-3xl border border-slate-200 shadow-sm p-4 sm:p-6 lg:sticky lg:top-4">
         
         <!-- Khối Liên Kết Nhanh: Kho Phần Mềm Cài Đặt -->
         <a href="https://drive.google.com/drive/folders/1T2LVJKymM-52KBLNeabYxtAT4zfXneND" target="_blank" rel="noopener noreferrer"
-          class="mb-4 p-3 rounded-2xl bg-gradient-to-r from-amber-50 via-orange-50 to-amber-50 border border-amber-200 hover:border-amber-300 flex items-center justify-between group transition shadow-xs">
+          class="mb-3 sm:mb-4 p-2.5 sm:p-3 rounded-2xl bg-gradient-to-r from-amber-50 via-orange-50 to-amber-50 border border-amber-200 hover:border-amber-300 flex items-center justify-between group transition shadow-xs">
           <div class="flex items-center space-x-2.5">
-            <div class="w-9 h-9 rounded-xl bg-amber-500 text-white flex items-center justify-center text-base shadow-sm">
+            <div class="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-amber-500 text-white flex items-center justify-center text-sm sm:text-base shadow-sm shrink-0">
               <i class="fa-solid fa-folder-open"></i>
             </div>
             <div>
-              <div class="text-xs font-bold text-amber-950 flex items-center gap-1.5">
+              <div class="text-[11px] sm:text-xs font-bold text-amber-950 flex items-center gap-1.5">
                 Kho Phần Mềm Cài Đặt Máy Tính
                 <i class="fa-solid fa-arrow-up-right-from-square text-[9px] text-amber-600"></i>
               </div>
-              <div class="text-[10px] text-amber-800">Unikey, Driver máy in, Acrobat, Office, Driver Token...</div>
+              <div class="text-[10px] text-amber-800 line-clamp-1">Unikey, Driver máy in, Acrobat, Office, Driver Token...</div>
             </div>
           </div>
-          <span class="text-[11px] font-bold text-amber-900 bg-white px-2.5 py-1 rounded-xl border border-amber-200 group-hover:bg-amber-100 transition whitespace-nowrap">
+          <span class="text-[10px] sm:text-[11px] font-bold text-amber-900 bg-white px-2 py-1 rounded-xl border border-amber-200 group-hover:bg-amber-100 transition whitespace-nowrap ml-2">
             Mở Drive
           </span>
         </a>
 
-        <div class="flex items-center justify-between pb-3.5 border-b border-slate-100 mb-4">
+        <div class="flex items-center justify-between pb-3 border-b border-slate-100 mb-3.5">
           <div>
-            <h2 class="text-base font-extrabold text-slate-900 flex items-center gap-2">
-              <span class="w-7 h-7 rounded-lg bg-blue-50 text-blue-700 flex items-center justify-center text-xs font-bold">
+            <h2 class="text-sm sm:text-base font-extrabold text-slate-900 flex items-center gap-2">
+              <span class="w-6 h-6 sm:w-7 sm:h-7 rounded-lg bg-blue-50 text-blue-700 flex items-center justify-center text-xs font-bold">
                 <i class="fa-solid fa-plus"></i>
               </span>
               Tạo Ticket Yêu Cầu Sửa Máy
             </h2>
-            <p class="text-xs text-slate-500 mt-0.5">Điền nhanh để IT đến tận bàn kiểm tra cho bạn</p>
+            <p class="text-[11px] sm:text-xs text-slate-500 mt-0.5">Điền nhanh để IT đến tận bàn kiểm tra cho bạn</p>
           </div>
-          <span class="px-2 py-0.5 bg-blue-50 text-blue-700 text-[11px] font-bold rounded-lg border border-blue-200">
+          <span class="px-2 py-0.5 bg-blue-50 text-blue-700 text-[10px] sm:text-[11px] font-bold rounded-lg border border-blue-200">
             Nhanh 5s
           </span>
         </div>
@@ -173,7 +182,7 @@
                 <div class="absolute inset-y-0 left-0 pl-2.5 flex items-center pointer-events-none text-slate-400">
                   <i class="fa-solid fa-phone text-xs"></i>
                 </div>
-                <input type="text" id="phone" required placeholder="0908.xxx.xxx hoặc Ext 104"
+                <input type="tel" id="phone" inputmode="tel" required placeholder="0908.xxx.xxx hoặc Ext: 104"
                   class="w-full pl-8 pr-3 py-2 rounded-xl border border-slate-200 text-xs focus:border-blue-600 focus:ring-2 focus:ring-blue-600/20 font-medium">
               </div>
             </div>
@@ -221,7 +230,7 @@
           <!-- Hàng 3: Loại sự cố -->
           <div>
             <label class="block text-xs font-bold text-slate-700 mb-1.5">Loại sự cố gặp phải <span class="text-rose-500">*</span></label>
-            <div class="grid grid-cols-3 gap-2">
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-2">
               <label class="flex items-center p-2 rounded-xl border border-slate-200 cursor-pointer text-[11px] font-semibold hover:bg-slate-50 has-[:checked]:border-blue-600 has-[:checked]:bg-blue-50/60 has-[:checked]:text-blue-900 transition">
                 <input type="radio" name="category" value="Máy tính / Cây PC" checked class="sr-only">
                 <i class="fa-solid fa-computer text-blue-600 mr-1.5 text-xs"></i> Máy tính / PC
@@ -430,8 +439,8 @@
           </select>
         </div>
 
-        <!-- BẢNG DANH SÁCH TICKET THỜI GIAN THỰC -->
-        <div class="flex-1 overflow-x-auto rounded-2xl border border-slate-200">
+        <!-- BẢNG DANH SÁCH TICKET (CHẾ ĐỘ MÁY TÍNH / TABLET >= 768px) -->
+        <div class="hidden md:block flex-1 overflow-x-auto rounded-2xl border border-slate-200">
           <table class="w-full text-left border-collapse text-xs">
             <thead class="bg-slate-50 text-slate-700 uppercase font-bold text-[10px] tracking-wider border-b border-slate-200">
               <tr>
@@ -447,12 +456,20 @@
             <tbody id="ticketTableBody" class="divide-y divide-slate-100">
               <tr>
                 <td colspan="7" class="text-center py-10 text-slate-400">
-                  <i class="fa-solid fa-spinner fa-spin text-lg mb-2"></i>
+                  <i class="fa-solid fa-spinner fa-spin text-lg mb-2 text-blue-600"></i>
                   <div>Đang tải dữ liệu từ Google Sheets...</div>
                 </td>
               </tr>
             </tbody>
           </table>
+        </div>
+
+        <!-- DANH SÁCH THẺ DỌC TỐI ƯU CHO ĐIỆN THOẠI (< 768px) -->
+        <div id="ticketCardsMobile" class="block md:hidden space-y-3">
+          <div class="text-center py-8 text-slate-400 bg-slate-50 rounded-2xl border border-slate-200">
+            <i class="fa-solid fa-spinner fa-spin text-lg mb-2 text-blue-600"></i>
+            <div class="text-xs font-medium">Đang tải dữ liệu từ Google Sheets...</div>
+          </div>
         </div>
 
         <!-- Empty State khi không có kết quả -->
@@ -996,9 +1013,26 @@
       return 0;
     }
 
-    // 8. RENDER BẢNG MONITORING
+    // 8. RENDER BẢNG MONITORING & DANH SÁCH THẺ MOBILE
+    function getStatusBadgeHtml(status) {
+      const st = (status || "Chờ xử lý").trim();
+      if (st === "Đã hoàn thành" || st === "Đã xong" || st === "Done") {
+        return `<span class="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-emerald-800 border border-emerald-300 whitespace-nowrap">
+          <i class="fa-solid fa-check mr-1 text-emerald-600"></i> Đã hoàn thành
+        </span>`;
+      } else if (st === "Đang xử lý") {
+        return `<span class="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-bold bg-sky-100 text-sky-800 border border-sky-300 whitespace-nowrap">
+          <i class="fa-solid fa-spinner fa-spin mr-1 text-sky-600"></i> Đang xử lý
+        </span>`;
+      }
+      return `<span class="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-bold bg-amber-100 text-amber-800 border border-amber-300 whitespace-nowrap">
+        <i class="fa-regular fa-clock mr-1 text-amber-600"></i> Chờ xử lý
+      </span>`;
+    }
+
     function renderTickets() {
       const tbody = document.getElementById("ticketTableBody");
+      const mobileContainer = document.getElementById("ticketCardsMobile");
       const emptyState = document.getElementById("emptyTableState");
       const searchQuery = (document.getElementById("filterSearch").value || "").toLowerCase().trim();
       const statusFilter = document.getElementById("filterStatus").value;
@@ -1027,97 +1061,153 @@
       });
 
       if (filtered.length === 0) {
-        tbody.innerHTML = "";
+        if (tbody) tbody.innerHTML = "";
+        if (mobileContainer) mobileContainer.innerHTML = "";
         emptyState.classList.remove("hidden");
         return;
       }
 
       emptyState.classList.add("hidden");
 
-      tbody.innerHTML = filtered.map(item => {
-        // Status Badge
-        let statusBadge = '';
-        const st = (item.status || "Chờ xử lý").trim();
-        if (st === "Đã hoàn thành" || st === "Đã xong" || st === "Done") {
-          statusBadge = `<span class="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-emerald-800 border border-emerald-300">
-            <i class="fa-solid fa-check mr-1 text-emerald-600"></i> Đã hoàn thành
-          </span>`;
-        } else if (st === "Đang xử lý") {
-          statusBadge = `<span class="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-bold bg-sky-100 text-sky-800 border border-sky-300">
-            <i class="fa-solid fa-spinner fa-spin mr-1 text-sky-600"></i> Đang xử lý
-          </span>`;
-        } else {
-          statusBadge = `<span class="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-bold bg-amber-100 text-amber-800 border border-amber-300">
-            <i class="fa-regular fa-clock mr-1 text-amber-600"></i> Chờ xử lý
-          </span>`;
-        }
+      // 1. RENDER CHẾ ĐỘ MÁY TÍNH / TABLET (TABLE)
+      if (tbody) {
+        tbody.innerHTML = filtered.map(item => {
+          const statusBadge = getStatusBadgeHtml(item.status);
+          const cleanPhone = String(item.phone || '').trim().replace(/^'+/, '');
 
-        // Image Column Button
-        let imageCell = '<span class="text-slate-300 text-[10px]">—</span>';
-        if (item.imageUrl && item.imageUrl.trim() !== "") {
-          imageCell = `
-            <button type="button" onclick="openImageViewer('${encodeURIComponent(item.imageUrl)}', '${encodeURIComponent(item.id)}')"
-              class="px-2 py-1 rounded-lg bg-blue-50 hover:bg-blue-100 text-blue-700 text-[10px] font-bold border border-blue-200 transition inline-flex items-center">
-              <i class="fa-solid fa-image mr-1"></i> Xem ảnh
-            </button>
+          let imageCell = '<span class="text-slate-300 text-[10px]">—</span>';
+          if (item.imageUrl && item.imageUrl.trim() !== "") {
+            imageCell = `
+              <button type="button" onclick="openImageViewer('${encodeURIComponent(item.imageUrl)}', '${encodeURIComponent(item.id)}')"
+                class="px-2 py-1 rounded-lg bg-blue-50 hover:bg-blue-100 text-blue-700 text-[10px] font-bold border border-blue-200 transition inline-flex items-center">
+                <i class="fa-solid fa-image mr-1"></i> Xem ảnh
+              </button>
+            `;
+          }
+
+          return `
+            <tr class="hover:bg-slate-50/80 transition">
+              <!-- Mã Ticket & Thời gian -->
+              <td class="py-3 px-3 align-top whitespace-nowrap">
+                <div class="font-mono font-bold text-blue-900">${item.id}</div>
+                <div class="text-[10px] text-slate-400 mt-0.5">${item.timestamp}</div>
+              </td>
+
+              <!-- Người gửi & Phòng ban -->
+              <td class="py-3 px-3 align-top">
+                <div class="font-bold text-slate-900">${item.fullname}</div>
+                <div class="text-[11px] text-slate-500">${item.department}</div>
+                ${cleanPhone ? `<div class="text-[10px] text-blue-700 font-medium mt-0.5"><a href="tel:${cleanPhone}" class="hover:underline inline-flex items-center"><i class="fa-solid fa-phone text-[9px] mr-1"></i> ${cleanPhone}</a></div>` : ''}
+              </td>
+
+              <!-- Tên máy & Thiết bị -->
+              <td class="py-3 px-3 align-top">
+                <div class="font-semibold text-slate-800 text-[11px]">${item.machineName || 'Chưa rõ'}</div>
+                <span class="inline-block mt-0.5 px-1.5 py-0.2 rounded bg-slate-100 text-slate-600 text-[10px] border border-slate-200">
+                  ${item.category}
+                </span>
+              </td>
+
+              <!-- Nội dung & Câu thông báo lỗi tiếng Anh -->
+              <td class="py-3 px-3 align-top">
+                ${item.errorMessage ? `
+                  <div class="mb-1 p-1.5 rounded-lg bg-rose-50 border border-rose-200 text-rose-800 font-mono text-[11px] font-semibold flex items-start gap-1">
+                    <i class="fa-solid fa-triangle-exclamation text-rose-500 mt-0.5 text-[10px]"></i>
+                    <span>${item.errorMessage}</span>
+                  </div>
+                ` : ''}
+                <div class="text-slate-700 leading-relaxed text-[11px]">${item.description}</div>
+              </td>
+
+              <!-- Ảnh chụp lỗi -->
+              <td class="py-3 px-3 align-top text-center">
+                ${imageCell}
+              </td>
+
+              <!-- Trạng thái -->
+              <td class="py-3 px-3 align-top text-center whitespace-nowrap">
+                ${statusBadge}
+              </td>
+
+              <!-- Ghi chú IT -->
+              <td class="py-3 px-3 align-top text-[11px]">
+                ${item.itNote ? `
+                  <div class="p-1.5 rounded-lg bg-sky-50 border border-sky-200 text-sky-900">
+                    <span class="font-bold">IT:</span> ${item.itNote}
+                  </div>
+                ` : '<span class="text-slate-400 italic text-[10px]">Chưa có ghi chú</span>'}
+              </td>
+            </tr>
           `;
-        }
+        }).join('');
+      }
 
-        return `
-          <tr class="hover:bg-slate-50/80 transition">
-            <!-- Mã Ticket & Thời gian -->
-            <td class="py-3 px-3 align-top whitespace-nowrap">
-              <div class="font-mono font-bold text-blue-900">${item.id}</div>
-              <div class="text-[10px] text-slate-400 mt-0.5">${item.timestamp}</div>
-            </td>
+      // 2. RENDER CHẾ ĐỘ ĐIỆN THOẠI (DANH SÁCH THẺ DỌC - MOBILE NATIVE FEEL)
+      if (mobileContainer) {
+        mobileContainer.innerHTML = filtered.map(item => {
+          const statusBadge = getStatusBadgeHtml(item.status);
+          const cleanPhone = String(item.phone || '').trim().replace(/^'+/, '');
 
-            <!-- Người gửi & Phòng ban -->
-            <td class="py-3 px-3 align-top">
-              <div class="font-bold text-slate-900">${item.fullname}</div>
-              <div class="text-[11px] text-slate-500">${item.department}</div>
-              ${item.phone ? `<div class="text-[10px] text-blue-700 font-medium"><i class="fa-solid fa-phone text-[9px] mr-0.5"></i> ${item.phone}</div>` : ''}
-            </td>
+          let imageButtonMobile = '';
+          if (item.imageUrl && item.imageUrl.trim() !== '') {
+            imageButtonMobile = `
+              <button type="button" onclick="openImageViewer('${encodeURIComponent(item.imageUrl)}', '${encodeURIComponent(item.id)}')"
+                class="px-2.5 py-1 rounded-xl bg-blue-50 active:bg-blue-100 text-blue-700 text-[11px] font-bold border border-blue-200 transition inline-flex items-center gap-1">
+                <i class="fa-solid fa-image text-xs"></i> Xem ảnh
+              </button>
+            `;
+          }
 
-            <!-- Tên máy & Thiết bị -->
-            <td class="py-3 px-3 align-top">
-              <div class="font-semibold text-slate-800 text-[11px]">${item.machineName || 'Chưa rõ'}</div>
-              <span class="inline-block mt-0.5 px-1.5 py-0.2 rounded bg-slate-100 text-slate-600 text-[10px] border border-slate-200">
-                ${item.category}
-              </span>
-            </td>
+          return `
+            <div class="bg-slate-50/90 rounded-2xl border border-slate-200 p-3 space-y-2 shadow-xs">
+              <div class="flex items-center justify-between pb-2 border-b border-slate-200/60 gap-1.5">
+                <div class="flex items-center space-x-1.5">
+                  <span class="font-mono font-bold text-xs bg-white text-blue-900 px-2 py-0.5 rounded border border-slate-200">${item.id}</span>
+                  <span class="text-[10px] text-slate-400 font-medium">${item.timestamp}</span>
+                </div>
+                <div>${statusBadge}</div>
+              </div>
 
-            <!-- Nội dung & Câu thông báo lỗi tiếng Anh -->
-            <td class="py-3 px-3 align-top">
+              <div class="flex items-start justify-between gap-2">
+                <div>
+                  <div class="font-bold text-slate-900 text-xs">${item.fullname}</div>
+                  <div class="text-[11px] text-slate-500">${item.department}</div>
+                </div>
+                ${cleanPhone ? `
+                  <a href="tel:${cleanPhone}" class="inline-flex items-center gap-1 text-[11px] font-bold text-blue-700 bg-blue-50 px-2 py-1 rounded-xl border border-blue-200 shrink-0 active:scale-95 transition">
+                    <i class="fa-solid fa-phone text-[9px]"></i> ${cleanPhone}
+                  </a>` : ''}
+              </div>
+
+              <div class="flex flex-wrap items-center gap-1 text-[10px]">
+                <span class="px-2 py-0.5 bg-white text-slate-700 rounded-md border border-slate-200 font-semibold truncate max-w-[190px]">
+                  <i class="fa-solid fa-desktop text-blue-600 mr-1"></i> ${item.machineName || 'Chưa rõ máy'}
+                </span>
+                <span class="px-2 py-0.5 bg-white text-slate-600 rounded-md border border-slate-200 font-medium">
+                  ${item.category}
+                </span>
+              </div>
+
               ${item.errorMessage ? `
-                <div class="mb-1 p-1.5 rounded-lg bg-rose-50 border border-rose-200 text-rose-800 font-mono text-[11px] font-semibold flex items-start gap-1">
-                  <i class="fa-solid fa-triangle-exclamation text-rose-500 mt-0.5 text-[10px]"></i>
-                  <span>${item.errorMessage}</span>
+                <div class="p-2 rounded-xl bg-rose-50 border border-rose-200 text-rose-800 font-mono text-[11px] font-semibold flex items-start gap-1.5">
+                  <i class="fa-solid fa-triangle-exclamation text-rose-500 mt-0.5 text-[10px] shrink-0"></i>
+                  <span class="break-words">${item.errorMessage}</span>
                 </div>
               ` : ''}
-              <div class="text-slate-700 leading-relaxed text-[11px]">${item.description}</div>
-            </td>
 
-            <!-- Ảnh chụp lỗi -->
-            <td class="py-3 px-3 align-top text-center">
-              ${imageCell}
-            </td>
+              <div class="text-xs text-slate-700 leading-relaxed font-normal">${item.description}</div>
 
-            <!-- Trạng thái -->
-            <td class="py-3 px-3 align-top text-center whitespace-nowrap">
-              ${statusBadge}
-            </td>
-
-            <!-- Ghi chú IT -->
-            <td class="py-3 px-3 align-top text-[11px]">
-              ${item.itNote ? `
-                <div class="p-1.5 rounded-lg bg-sky-50 border border-sky-200 text-sky-900">
-                  <span class="font-bold">IT:</span> ${item.itNote}
-                </div>
-              ` : '<span class="text-slate-400 italic text-[10px]">Chưa có ghi chú</span>'}
-            </td>
-          </tr>
-        `;
-      }).join('');
+              <div class="flex items-center justify-between gap-2 pt-1 border-t border-slate-100">
+                ${imageButtonMobile}
+                ${item.itNote ? `
+                  <div class="text-[11px] text-sky-900 bg-sky-50 px-2 py-0.5 rounded-lg border border-sky-200 flex-1 truncate">
+                    <span class="font-bold text-sky-700">IT:</span> ${item.itNote}
+                  </div>` : '<div class="text-[10px] text-slate-400 italic">Chưa có ghi chú IT</div>'}
+              </div>
+            </div>
+          `;
+        }).join('');
+      }
     }
 
     // 9. CẬP NHẬT SỐ LIỆU THỐNG KÊ
