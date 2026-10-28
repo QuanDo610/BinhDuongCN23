@@ -1,0 +1,847 @@
+import json
+
+with open('A_THANG/danh_sach_tai_khoan_cn23.json') as f:
+    accounts = json.load(f)
+
+js_acc_rows = []
+for acc in accounts:
+    role = "admin" if any(k in acc['ho_ten'].lower() for k in ['quân', 'tuyền']) else "user"
+    js_acc_rows.append([
+        acc['so_dien_thoai'],
+        acc['mat_khau'],
+        acc['ho_ten'],
+        acc['chuc_vu'],
+        acc['don_vi'],
+        acc['cccd'],
+        acc['trang_thai'],
+        role,
+        "10/09/2026"
+    ])
+
+# 4 tickets from old IT Helpdesk
+js_tickets = [
+    [
+        "TK-261027-004",
+        "27/10/2026 15:41:51",
+        "Phan Trọng Hiệp",
+        "0949309399",
+        "Tổ Đăng ký và Cấp GCN",
+        "macOS (pc-kcq70e7",
+        "Máy in / Scan",
+        "",
+        "Chưa cài máy in",
+        "",
+        "Đã hoàn thành",
+        "",
+        "IP: 113.185.75.145 | macOS • 4 Cores • 390x844"
+    ],
+    [
+        "TK-261027-006",
+        "27/10/2026 09:44:35",
+        "Nguyễn Thị Ngọc Thảo",
+        "0903523534",
+        "Tổ Đăng ký và Cấp GCN",
+        "Win 10/11 (PC-60208D)",
+        "Máy in / Scan",
+        "",
+        "k kết nối dc máy in",
+        "",
+        "Đã hoàn thành",
+        "",
+        "IP: 14.191.68.193 | Win 10/11 • 8GB RAM • 4 Cores • 1600x1200"
+    ],
+    [
+        "TK-261026-005",
+        "26/10/2026 16:26:00",
+        "PHẠM THỊ YẾN NHI",
+        "0918047179",
+        "Tổ Đăng ký và Cấp GCN",
+        "Tổ Đăng ký và Cấp GCN",
+        "Máy in / Scan",
+        "",
+        "KẾT NÓI MÁY TÍNH VÔ MÁY IN",
+        "",
+        "Chờ xử lý",
+        "",
+        "IP: 14.191.68.189 | Win 10/11 • 8GB RAM • 4 Cores • 1280x1024"
+    ],
+    [
+        "TK-261026-004",
+        "26/10/2026 10:56:47",
+        "ĐỖ THỊ YẾN",
+        "0387805470",
+        "Tổ Đăng ký và Cấp GCN",
+        "Win 10/11 (PC-73F50E)",
+        "Khác / Cần hỗ trợ",
+        "",
+        "không vào được ổ chung",
+        "https://drive.google.com/file/d/1-hyuXZ-Bh1NvdfyR_AN1DubsBjz6j6ko/view",
+        "Đang xử lý",
+        "",
+        "IP: 14.191.68.189 | Win 10/11 • 8GB RAM • 4 Cores • 1920x1080"
+    ]
+]
+
+gas_content = f"""/**
+ * =========================================================================
+ * GOOGLE APPS SCRIPT: HỆ THỐNG BINHDUONG23 HỢP NHẤT
+ * (ĐĂNG KÝ LỊCH CÔNG TÁC TUẦN + IT HELPDESK TIẾP NHẬN SỰ CỐ)
+ * =========================================================================
+ * Sử dụng trực tiếp trên Google Sheet hiện tại của Lịch Tuần.
+ * Quản lý 3 Sheet (Tabs):
+ *   1. "LichTuan"   : Giữ nguyên 100% dữ liệu lịch đã đăng ký từ trước tới nay.
+ *   2. "TaiKhoan"   : Quản lý 70 tài khoản cán bộ Chi nhánh 23 (Đăng nhập bằng SĐT).
+ *   3. "Tickets"    : Quản lý tiếp nhận sự cố tin học IT + Tự lưu ảnh lên Google Drive.
+ * =========================================================================
+ */
+
+// Tên các Sheet
+const SHEET_SCHEDULE_NAME = "LichTuan";
+const SHEET_USERS_NAME = "TaiKhoan";
+const SHEET_SUPPORT_NAME = "Tickets";
+const DRIVE_FOLDER_NAME = "IT_Helpdesk_Uploads";
+
+// Danh sách 70 tài khoản cán bộ Chi nhánh 23 nạp sẵn
+const INITIAL_ACCOUNTS = {json.dumps(js_acc_rows, ensure_ascii=False, indent=2)};
+
+// Danh sách 4 ticket sự cố từ IT Helpdesk cũ chuyển sang
+const INITIAL_TICKETS = {json.dumps(js_tickets, ensure_ascii=False, indent=2)};
+
+/**
+ * Tự động tạo menu tiện ích "⭐ BINHDUONG23" trên thanh công cụ của Google Sheet
+ */
+function onOpen() {{
+  try {{
+    SpreadsheetApp.getUi()
+      .createMenu("⭐ BINHDUONG23")
+      .addItem("▶️ 1-Click: Nạp 70 Tài Khoản CN23 + Chuyển 4 Ticket IT Sang", "setupBinhDuong23")
+      .addSeparator()
+      .addItem("👥 Chỉ nạp lại 70 Tài Khoản vào sheet TaiKhoan", "seedAccountsOnly")
+      .addItem("🎫 Chỉ chuyển các Ticket IT vào sheet Tickets", "seedTicketsOnly")
+      .addToUi();
+  }} catch (e) {{}}
+}}
+
+/**
+ * Hàm 1-Click: Tự động nâng cấp và đồng bộ toàn diện vào Google Sheet
+ */
+function setupBinhDuong23() {{
+  const ss = SpreadsheetApp.getActiveSpreadsheet();
+  
+  // 1. Đảm bảo tab Lịch Tuần an toàn
+  getScheduleSheet(ss);
+
+  // 2. Nạp 70 tài khoản vào tab TaiKhoan
+  seedAccountsOnly();
+
+  // 3. Khởi tạo tab Tickets & nạp 4 ticket cũ sang
+  seedTicketsOnly();
+
+  SpreadsheetApp.getUi().alert(
+    "✅ ĐỒNG BỘ THÀNH CÔNG!\\n\\n" +
+    "1. Sheet 'LichTuan': Giữ nguyên toàn bộ dữ liệu lịch tuần cũ.\\n" +
+    "2. Sheet 'TaiKhoan': Đã nạp đủ 70 cán bộ Chi nhánh 23.\\n" +
+    "3. Sheet 'Tickets': Đã chuyển 4 ticket sự cố từ IT Helpdesk cũ sang!\\n\\n" +
+    "Hệ thống đã sẵn sàng 100%!"
+  );
+}}
+
+/**
+ * Nạp danh sách 70 tài khoản vào sheet TaiKhoan
+ */
+function seedAccountsOnly() {{
+  const ss = SpreadsheetApp.getActiveSpreadsheet();
+  let sheetUsers = ss.getSheetByName(SHEET_USERS_NAME);
+  
+  if (!sheetUsers) {{
+    sheetUsers = ss.insertSheet(SHEET_USERS_NAME);
+  }} else {{
+    sheetUsers.clear();
+  }}
+
+  const headers = [
+    "Số ĐT (Username)",
+    "Mật khẩu",
+    "Họ và tên",
+    "Chức danh / Chức vụ",
+    "Đơn vị / Bộ phận",
+    "Số CCCD",
+    "Trạng thái",
+    "Vai trò",
+    "Ngày tạo"
+  ];
+  sheetUsers.appendRow(headers);
+
+  const headerRange = sheetUsers.getRange(1, 1, 1, headers.length);
+  headerRange.setFontWeight("bold").setBackground("#1e40af").setFontColor("#ffffff");
+  headerRange.setHorizontalAlignment("center");
+  sheetUsers.setRowHeight(1, 35);
+  sheetUsers.setFrozenRows(1);
+
+  sheetUsers.getRange("A:A").setNumberFormat("@");
+  sheetUsers.getRange("F:F").setNumberFormat("@");
+
+  for (let i = 0; i < INITIAL_ACCOUNTS.length; i++) {{
+    const acc = INITIAL_ACCOUNTS[i];
+    sheetUsers.appendRow([
+      "'" + acc[0],
+      acc[1],
+      acc[2],
+      acc[3],
+      acc[4],
+      "'" + acc[5],
+      acc[6],
+      acc[7],
+      acc[8]
+    ]);
+  }}
+
+  sheetUsers.autoResizeColumns(1, 9);
+}}
+
+/**
+ * Khởi tạo tab Tickets & chuyển các ticket IT sang
+ */
+function seedTicketsOnly() {{
+  const ss = SpreadsheetApp.getActiveSpreadsheet();
+  let sheetSupport = ss.getSheetByName(SHEET_SUPPORT_NAME) || ss.getSheetByName("DangKySupport");
+  
+  if (!sheetSupport) {{
+    sheetSupport = ss.insertSheet(SHEET_SUPPORT_NAME);
+  }} else {{
+    sheetSupport.clear();
+  }}
+
+  const headers = [
+    "Mã Ticket",
+    "Thời gian gửi",
+    "Họ và tên",
+    "Số ĐT / Zalo",
+    "Phòng ban",
+    "Tên máy / Thiết bị",
+    "Loại sự cố",
+    "Thông báo lỗi (Tiếng Anh)",
+    "Mô tả hiện tượng",
+    "Ảnh chụp lỗi (Link)",
+    "Trạng thái",
+    "Ghi chú IT",
+    "IP & Cấu hình máy"
+  ];
+  sheetSupport.appendRow(headers);
+  const headerRange = sheetSupport.getRange(1, 1, 1, headers.length);
+  headerRange.setFontWeight("bold").setBackground("#b45309").setFontColor("#ffffff");
+  headerRange.setHorizontalAlignment("center");
+  sheetSupport.setRowHeight(1, 35);
+  sheetSupport.setFrozenRows(1);
+  sheetSupport.getRange("D:D").setNumberFormat("@");
+
+  // Nạp 4 tickets cũ
+  for (let i = 0; i < INITIAL_TICKETS.length; i++) {{
+    const t = INITIAL_TICKETS[i];
+    sheetSupport.appendRow([
+      t[0],
+      t[1],
+      t[2],
+      "'" + t[3],
+      t[4],
+      t[5],
+      t[6],
+      t[7],
+      t[8],
+      t[9],
+      t[10],
+      t[11],
+      t[12]
+    ]);
+
+    const rIdx = sheetSupport.getLastRow();
+    sheetSupport.getRange(rIdx, 1).setHorizontalAlignment("center").setFontWeight("bold");
+    sheetSupport.getRange(rIdx, 2).setHorizontalAlignment("center");
+    sheetSupport.getRange(rIdx, 4).setNumberFormat("@").setHorizontalAlignment("center");
+
+    const stCell = sheetSupport.getRange(rIdx, 11);
+    stCell.setHorizontalAlignment("center").setFontWeight("bold");
+    if (t[10] === "Đã hoàn thành") {{
+      stCell.setBackground("#dcfce7").setFontColor("#15803d");
+    }} else if (t[10] === "Đang xử lý") {{
+      stCell.setBackground("#e0f2fe").setFontColor("#0369a1");
+    }} else {{
+      stCell.setBackground("#fef3c7").setFontColor("#b45309");
+    }}
+
+    if (t[9] && t[9].indexOf("http") === 0) {{
+      sheetSupport.getRange(rIdx, 10).setValue(t[9]).setFontColor("#1d4ed8").setFontUnderline(true);
+    }}
+  }}
+
+  sheetSupport.autoResizeColumns(1, 13);
+}}
+
+/**
+ * Lấy sheet Lịch Tuần
+ */
+function getScheduleSheet(ss) {{
+  ss = ss || SpreadsheetApp.getActiveSpreadsheet();
+  let sheet = ss.getSheetByName(SHEET_SCHEDULE_NAME) || ss.getSheetByName("DangKyLichTuan");
+  if (!sheet) {{
+    sheet = ss.insertSheet(SHEET_SCHEDULE_NAME);
+    const headers = [
+      "ID",
+      "Thời điểm gửi",
+      "Số ĐT / Email",
+      "Họ và tên",
+      "Ngày (DD/MM/YYYY)",
+      "Thứ",
+      "Thời điểm làm việc",
+      "Nội dung làm việc",
+      "Thành phần",
+      "Địa điểm"
+    ];
+    sheet.appendRow(headers);
+    sheet.getRange(1, 1, 1, headers.length).setFontWeight("bold").setBackground("#15803d").setFontColor("#ffffff");
+    sheet.setFrozenRows(1);
+    sheet.getRange("C:C").setNumberFormat("@");
+    sheet.autoResizeColumns(1, 10);
+  }}
+  return sheet;
+}}
+
+/**
+ * Lấy sheet Tài Khoản
+ */
+function getUsersSheet(ss) {{
+  ss = ss || SpreadsheetApp.getActiveSpreadsheet();
+  let sheet = ss.getSheetByName(SHEET_USERS_NAME);
+  if (!sheet) {{
+    seedAccountsOnly();
+    sheet = ss.getSheetByName(SHEET_USERS_NAME);
+  }}
+  return sheet;
+}}
+
+/**
+ * Lấy sheet IT Support / Tickets
+ */
+function getSupportSheet(ss) {{
+  ss = ss || SpreadsheetApp.getActiveSpreadsheet();
+  let sheet = ss.getSheetByName(SHEET_SUPPORT_NAME) || ss.getSheetByName("DangKySupport");
+  if (!sheet) {{
+    seedTicketsOnly();
+    sheet = ss.getSheetByName(SHEET_SUPPORT_NAME);
+  }}
+  return sheet;
+}}
+
+/**
+ * Xử lý lưu ảnh Base64 lên Google Drive thư mục IT_Helpdesk_Uploads
+ */
+function saveImageToDrive(base64Data, filename) {{
+  if (!base64Data || base64Data.trim() === "") return "";
+  try {{
+    const folders = DriveApp.getFoldersByName(DRIVE_FOLDER_NAME);
+    let folder;
+    if (folders.hasNext()) {{
+      folder = folders.next();
+    }} else {{
+      folder = DriveApp.createFolder(DRIVE_FOLDER_NAME);
+      folder.setSharing(DriveApp.Access.ANYONE_WITH_LINK, DriveApp.Permission.VIEW);
+    }}
+
+    let contentType = "image/jpeg";
+    let base64String = base64Data;
+    if (base64Data.indexOf("data:") === 0) {{
+      const parts = base64Data.split(",");
+      const mimeMatch = parts[0].match(/:(.*?);/);
+      if (mimeMatch) contentType = mimeMatch[1];
+      base64String = parts[1];
+    }}
+
+    const decodedBlob = Utilities.newBlob(
+      Utilities.base64Decode(base64String),
+      contentType,
+      filename || ("ticket_img_" + new Date().getTime() + ".jpg")
+    );
+
+    const file = folder.createFile(decodedBlob);
+    try {{
+      file.setSharing(DriveApp.Access.ANYONE_WITH_LINK, DriveApp.Permission.VIEW);
+    }} catch (e) {{}}
+
+    return "https://drive.google.com/file/d/" + file.getId() + "/view";
+  }} catch (err) {{
+    return "Lỗi upload ảnh: " + err.toString();
+  }}
+}}
+
+/**
+ * Xử lý yêu cầu GET
+ */
+function doGet(e) {{
+  try {{
+    const ss = SpreadsheetApp.getActiveSpreadsheet();
+    const params = (e && e.parameter) ? e.parameter : {{}};
+    const action = params.action || "getSchedule";
+
+    // 0. ĐỒNG BỘ 1-CLICK TỪ XA QUA API (SYNC ALL DATA)
+    if (action === "syncAllData" || action === "seedSystem") {{
+      seedAccountsOnly();
+      seedTicketsOnly();
+      return jsonResponse({{
+        success: true,
+        message: "Đã đồng bộ thành công 70 tài khoản CN23 và 4 tickets sự cố sang Google Sheet!",
+        totalAccounts: 70,
+        totalTickets: 4
+      }});
+    }}
+
+    // 1. LẤY DANH SÁCH LỊCH TUẦN
+    if (action === "getSchedule") {{
+      const sheet = getScheduleSheet(ss);
+      const data = sheet.getDataRange().getDisplayValues();
+      if (data.length <= 1) {{
+        return jsonResponse({{ success: true, data: [] }});
+      }}
+
+      const userMap = {{}};
+      const sheetUsers = ss.getSheetByName(SHEET_USERS_NAME);
+      if (sheetUsers) {{
+        const uData = sheetUsers.getDataRange().getDisplayValues();
+        for (let u = 1; u < uData.length; u++) {{
+          const p = (uData[u][0] || "").replace(/^'+/, "").toLowerCase().trim();
+          const n = (uData[u][2] || "").trim();
+          if (p && n) userMap[p] = n;
+        }}
+      }}
+
+      const rows = [];
+      const hasNameCol = data[0].length >= 10;
+
+      for (let i = 1; i < data.length; i++) {{
+        const r = data[i];
+        if (!r[0] && !r[2]) continue;
+
+        let phoneOrEmail = (r[2] || "").replace(/^'+/, "").trim();
+        let name = "";
+        let dateVal = "", dayVal = "", timeVal = "", contentVal = "", attVal = "", locVal = "";
+
+        if (hasNameCol) {{
+          name = r[3] || userMap[phoneOrEmail.toLowerCase()] || "";
+          dateVal = r[4] || "";
+          dayVal = r[5] || "";
+          timeVal = r[6] || "";
+          contentVal = r[7] || "";
+          attVal = r[8] || "";
+          locVal = r[9] || "";
+        }} else {{
+          name = userMap[phoneOrEmail.toLowerCase()] || "";
+          dateVal = r[3] || "";
+          dayVal = r[4] || "";
+          timeVal = r[5] || "";
+          contentVal = r[6] || "";
+          attVal = r[7] || "";
+          locVal = r[8] || "";
+        }}
+
+        rows.push({{
+          id: r[0],
+          timestamp: r[1],
+          phone: phoneOrEmail,
+          name: name,
+          date: dateVal,
+          dayOfWeek: dayVal,
+          time: timeVal,
+          content: contentVal,
+          attendees: attVal,
+          location: locVal
+        }});
+      }}
+      return jsonResponse({{ success: true, data: rows }});
+    }}
+
+    // 2. LẤY DANH SÁCH TICKET IT HELPDESK
+    if (action === "getTickets") {{
+      const sheet = getSupportSheet(ss);
+      const data = sheet.getDataRange().getDisplayValues();
+      const formulas = sheet.getDataRange().getFormulas();
+
+      if (data.length <= 1) {{
+        return jsonResponse({{ success: true, total: 0, tickets: [] }});
+      }}
+
+      const tickets = [];
+      for (let i = 1; i < data.length; i++) {{
+        const r = data[i];
+        if (!r[0] && !r[2]) continue;
+
+        let imgLink = r[9] || "";
+        if (formulas[i] && formulas[i][9]) {{
+          const match = formulas[i][9].match(/=HYPERLINK\\("([^"]+)"/i);
+          if (match && match[1]) imgLink = match[1];
+        }}
+
+        tickets.push({{
+          id: r[0],
+          timestamp: r[1],
+          fullname: r[2],
+          phone: (r[3] || "").replace(/^'+/, ""),
+          department: r[4],
+          machineName: r[5],
+          category: r[6],
+          errorMessage: r[7] || "",
+          description: r[8] || "",
+          imageUrl: imgLink,
+          status: r[10] || "Chờ xử lý",
+          itNote: r[11] || "",
+          clientSpecs: r[12] || ""
+        }});
+      }}
+
+      function getStatusRank(st) {{
+        const s = (st || "").trim().toLowerCase();
+        if (s.indexOf("đang") !== -1 || s.indexOf("progress") !== -1) return 1;
+        if (s.indexOf("hoàn thành") !== -1 || s.indexOf("xong") !== -1 || s.indexOf("done") !== -1) return 3;
+        return 2;
+      }}
+      tickets.sort((a, b) => getStatusRank(a.status) - getStatusRank(b.status));
+
+      return jsonResponse({{ success: true, total: tickets.length, tickets: tickets }});
+    }}
+
+    // 3. LẤY DANH SÁCH TÀI KHOẢN
+    if (action === "getUsers") {{
+      const sheet = getUsersSheet(ss);
+      const data = sheet.getDataRange().getDisplayValues();
+      const users = [];
+      for (let i = 1; i < data.length; i++) {{
+        const r = data[i];
+        if (!r[0] && !r[2]) continue;
+        users.push({{
+          phone: (r[0] || "").replace(/^'+/, ""),
+          fullname: r[2],
+          position: r[3],
+          department: r[4],
+          cccd: (r[5] || "").replace(/^'+/, ""),
+          status: r[6] || "Đang làm việc",
+          role: r[7] || "user"
+        }});
+      }}
+      return jsonResponse({{ success: true, data: users }});
+    }}
+
+    // 4. FALLBACK GET
+    if (action === "createTicket" && params.data) {{
+      const ticketData = JSON.parse(decodeURIComponent(params.data));
+      return jsonResponse(handleCreateTicket(ticketData, ss));
+    }}
+
+    if (action === "addSchedule" || action === "register") {{
+      return jsonResponse(handleAddSchedule(params, ss));
+    }}
+
+    return jsonResponse({{
+      success: true,
+      system: "BINHDUONG23",
+      message: "Hệ thống BinhDuong23 (Lịch Tuần & IT Helpdesk) đang hoạt động bình thường!"
+    }});
+  }} catch (err) {{
+    return jsonResponse({{ success: false, error: err.toString() }});
+  }}
+}}
+
+/**
+ * Xử lý yêu cầu POST
+ */
+function doPost(e) {{
+  try {{
+    let body = {{}};
+    if (e && e.postData && e.postData.contents) {{
+      try {{
+        body = JSON.parse(e.postData.contents);
+      }} catch (err) {{
+        body = e.parameter || {{}};
+      }}
+    }} else if (e && e.parameter) {{
+      body = e.parameter;
+    }}
+
+    const action = body.action || "login";
+    const ss = SpreadsheetApp.getActiveSpreadsheet();
+
+    // 0. ĐỒNG BỘ 1-CLICK TỪ XA
+    if (action === "syncAllData" || action === "seedSystem") {{
+      seedAccountsOnly();
+      seedTicketsOnly();
+      return jsonResponse({{
+        success: true,
+        message: "Đã đồng bộ thành công 70 tài khoản CN23 và 4 tickets sự cố sang Google Sheet!",
+        totalAccounts: 70,
+        totalTickets: 4
+      }});
+    }}
+
+    // 1. XÁC THỰC ĐĂNG NHẬP
+    if (action === "login") {{
+      let phone = (body.phone || body.username || body.email || "").toString().trim().replace(/^'+/, "");
+      const password = (body.password || "").toString().trim();
+
+      if (!phone || !password) {{
+        return jsonResponse({{ success: false, message: "Vui lòng nhập đầy đủ Số điện thoại/Tài khoản và Mật khẩu!" }});
+      }}
+
+      if (phone.length === 9 && !phone.startsWith("0")) phone = "0" + phone;
+
+      const sheetUsers = getUsersSheet(ss);
+      const data = sheetUsers.getDataRange().getDisplayValues();
+      let matchedUser = null;
+
+      for (let i = 1; i < data.length; i++) {{
+        let rowIdentifier = (data[i][0] || "").toString().trim().replace(/^'+/, "");
+        if (rowIdentifier.length === 9 && !rowIdentifier.startsWith("0")) rowIdentifier = "0" + rowIdentifier;
+        const rowPass = (data[i][1] || "").toString().trim();
+
+        if (rowIdentifier.toLowerCase() === phone.toLowerCase() && rowPass === password) {{
+          matchedUser = {{
+            phone: rowIdentifier,
+            fullname: data[i][2],
+            position: data[i][3] || "",
+            department: data[i][4] || "Chi nhánh số 23",
+            cccd: (data[i][5] || "").replace(/^'+/, ""),
+            status: data[i][6] || "Đang làm việc",
+            role: (data[i][7] && data[i][7].toLowerCase().includes("admin")) ? "admin" : "user"
+          }};
+          break;
+        }}
+      }}
+
+      if (!matchedUser) {{
+        return jsonResponse({{ success: false, message: "Số điện thoại hoặc mật khẩu không chính xác!" }});
+      }}
+
+      if (matchedUser.status === "Đã nghỉ") {{
+        return jsonResponse({{
+          success: false,
+          isRetired: true,
+          message: "Tài khoản của cán bộ (" + matchedUser.fullname + ") đã được ghi nhận trạng thái ĐÃ NGHỈ LÀM VIỆC tại Chi nhánh. Vui lòng liên hệ Tổ CNTT/HCTH nếu cần hỗ trợ!"
+        }});
+      }}
+
+      return jsonResponse({{
+        success: true,
+        message: "Đăng nhập thành công!",
+        user: matchedUser
+      }});
+    }}
+
+    // 2. ĐĂNG KÝ TÀI KHOẢN MỚI
+    if (action === "registerUser") {{
+      let phone = (body.phone || "").toString().trim().replace(/^'+/, "");
+      const password = (body.password || "").toString().trim();
+      const fullname = (body.fullname || "").toString().trim();
+      const position = (body.position || "").toString().trim();
+      const department = (body.department || "Chi nhánh số 23").toString().trim();
+      const cccd = (body.cccd || "").toString().trim();
+
+      if (!phone || !password || !fullname) {{
+        return jsonResponse({{ success: false, message: "Vui lòng điền đủ Họ tên, Số điện thoại và Mật khẩu!" }});
+      }}
+
+      if (phone.length === 9 && !phone.startsWith("0")) phone = "0" + phone;
+
+      const sheetUsers = getUsersSheet(ss);
+      const data = sheetUsers.getDataRange().getDisplayValues();
+      for (let i = 1; i < data.length; i++) {{
+        let rowPhone = (data[i][0] || "").toString().trim().replace(/^'+/, "");
+        if (rowPhone.length === 9 && !rowPhone.startsWith("0")) rowPhone = "0" + rowPhone;
+        if (rowPhone === phone) {{
+          return jsonResponse({{ success: false, message: "Số điện thoại này đã được đăng ký tài khoản trên hệ thống!" }});
+        }}
+      }}
+
+      const now = new Date();
+      const dateStr = Utilities.formatDate(now, "Asia/Ho_Chi_Minh", "dd/MM/yyyy");
+      sheetUsers.appendRow([
+        "'" + phone,
+        password,
+        fullname,
+        position,
+        department,
+        "'" + cccd,
+        "Đang làm việc",
+        "user",
+        dateStr
+      ]);
+
+      return jsonResponse({{
+        success: true,
+        message: "Tạo tài khoản thành công!",
+        user: {{
+          phone: phone,
+          fullname: fullname,
+          position: position,
+          department: department,
+          cccd: cccd,
+          status: "Đang làm việc",
+          role: "user"
+        }}
+      }});
+    }}
+
+    // 3. ĐĂNG KÝ LỊCH TUẦN
+    if (action === "addSchedule" || action === "register") {{
+      return jsonResponse(handleAddSchedule(body, ss));
+    }}
+
+    // 4. TIẾP NHẬN SỰ CỐ IT
+    if (action === "createTicket") {{
+      return jsonResponse(handleCreateTicket(body, ss));
+    }}
+
+    return jsonResponse({{ success: false, message: "Hành động (action) không hợp lệ!" }});
+  }} catch (err) {{
+    return jsonResponse({{ success: false, error: err.toString() }});
+  }}
+}}
+
+/**
+ * Xử lý thêm 1 mục Lịch Tuần
+ */
+function handleAddSchedule(data, ss) {{
+  const phone = (data.phone || "").toString().trim();
+  const name = (data.name || data.fullname || "").toString().trim();
+  const date = (data.date || "").toString().trim();
+  const dayOfWeek = (data.dayOfWeek || "").toString().trim();
+  const time = (data.time || "").toString().trim();
+  const content = (data.content || "").toString().trim();
+  const attendees = (data.attendees || "").toString().trim();
+  const location = (data.location || "").toString().trim();
+
+  if (!date || !time || !content || !attendees || !location) {{
+    return {{ success: false, message: "Vui lòng điền đầy đủ các thông tin lịch công tác!" }};
+  }}
+
+  if (content.length > 500 || attendees.length > 500 || location.length > 500) {{
+    return {{ success: false, message: "Nội dung, thành phần, địa điểm không được vượt quá 500 ký tự!" }};
+  }}
+
+  const sheet = getScheduleSheet(ss);
+  const now = new Date();
+  const id = "LT-" + now.getTime();
+  const timestamp = Utilities.formatDate(now, "Asia/Ho_Chi_Minh", "dd/MM/yyyy HH:mm:ss");
+
+  const hasNameCol = sheet.getLastColumn() >= 10;
+  if (hasNameCol) {{
+    sheet.appendRow([
+      id,
+      timestamp,
+      "'" + phone,
+      name,
+      "'" + date,
+      dayOfWeek,
+      "'" + time,
+      content,
+      attendees,
+      location
+    ]);
+  }} else {{
+    sheet.appendRow([
+      id,
+      timestamp,
+      "'" + phone,
+      "'" + date,
+      dayOfWeek,
+      "'" + time,
+      content,
+      attendees,
+      location
+    ]);
+  }}
+
+  return {{
+    success: true,
+    message: "Đăng ký lịch công tác thành công!",
+    id: id
+  }};
+}}
+
+/**
+ * Xử lý tiếp nhận 1 Ticket IT Support & Upload ảnh Drive
+ */
+function handleCreateTicket(data, ss) {{
+  const sheet = getSupportSheet(ss);
+  const now = new Date();
+
+  const yyyy = now.getFullYear();
+  const mm = String(now.getMonth() + 1).padStart(2, '0');
+  const dd = String(now.getDate()).padStart(2, '0');
+  const hh = String(now.getHours()).padStart(2, '0');
+  const min = String(now.getMinutes()).padStart(2, '0');
+  const sec = String(now.getSeconds()).padStart(2, '0');
+
+  const timeStr = `${{dd}}/${{mm}}/${{yyyy}} ${{hh}}:${{min}}:${{sec}}`;
+  const dateCode = `${{String(yyyy).slice(2)}}${{mm}}${{dd}}`;
+
+  const lastRow = sheet.getLastRow();
+  const nextSeq = lastRow > 1 ? lastRow : 1;
+  const ticketId = `TK-${{dateCode}}-${{String(nextSeq).padStart(3, '0')}}`;
+
+  let imageUrl = "";
+  if (data.imageBase64) {{
+    const imgName = `${{ticketId}}_${{dd}}${{mm}}${{yyyy}}.jpg`;
+    imageUrl = saveImageToDrive(data.imageBase64, imgName);
+  }}
+
+  let phoneStr = String(data.phone || "").trim().replace(/^'+/, "");
+  if (phoneStr && phoneStr.length === 9 && !phoneStr.startsWith("0")) phoneStr = "0" + phoneStr;
+
+  sheet.appendRow([
+    ticketId,
+    timeStr,
+    data.fullname || "Không tên",
+    "'" + phoneStr,
+    data.department || "Chi nhánh số 23",
+    data.machineName || "Tự động (Chưa rõ)",
+    data.category || "Sự cố chung",
+    data.errorMessage || "",
+    data.description || "Không có mô tả",
+    imageUrl,
+    "Chờ xử lý",
+    "",
+    data.clientSpecs || (data.ip ? ("IP: " + data.ip) : "")
+  ]);
+
+  const newRow = sheet.getLastRow();
+  sheet.getRange(newRow, 1).setHorizontalAlignment("center").setFontWeight("bold");
+  sheet.getRange(newRow, 2).setHorizontalAlignment("center");
+  sheet.getRange(newRow, 4).setNumberFormat("@").setHorizontalAlignment("center");
+
+  const statusCell = sheet.getRange(newRow, 11);
+  statusCell.setValue("Chờ xử lý").setHorizontalAlignment("center").setFontWeight("bold")
+            .setBackground("#fef3c7").setFontColor("#b45309");
+
+  if (imageUrl && imageUrl.indexOf("http") === 0) {{
+    const imgCell = sheet.getRange(newRow, 10);
+    imgCell.setValue(imageUrl).setFontColor("#1d4ed8").setFontUnderline(true);
+  }}
+
+  return {{
+    success: true,
+    message: "Tạo ticket thành công!",
+    ticketId: ticketId,
+    timestamp: timeStr,
+    imageUrl: imageUrl
+  }};
+}}
+
+/**
+ * Trả về JSON Response chuẩn CORS
+ */
+function jsonResponse(data) {{
+  return ContentService.createTextOutput(JSON.stringify(data))
+    .setMimeType(ContentService.MimeType.JSON);
+}}
+"""
+
+with open('A_THANG/google_apps_script.js', 'w', encoding='utf-8') as f:
+    f.write(gas_content)
+
+print("Generated A_THANG/google_apps_script.js with INITIAL_TICKETS and syncAllData successfully!")

@@ -1,0 +1,420 @@
+# -*- coding: utf-8 -*-
+import json
+
+with open("A_THANG/danh_sach_tai_khoan_cn23.json", "r", encoding="utf-8") as f:
+    accounts = json.load(f)
+
+html_content = '''<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cổng Dịch Vụ Nội Bộ - VPĐK Chi Nhánh 23</title>
+  
+  <!-- FontAwesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Giao diện chuẩn hệ thống -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ==================== HEADER HỆ THỐNG ==================== -->
+  <header class="app-header">
+    <div class="header-container">
+      <div class="header-title-box">
+        <span class="agency-name">VĂN PHÒNG ĐĂNG KÝ ĐẤT ĐAI THÀNH PHỐ HỒ CHÍ MINH</span>
+        <h1 class="system-title">CỔNG DỊCH VỤ NỘI BỘ</h1>
+        <span class="sub-agency">CHI NHÁNH SỐ 23</span>
+      </div>
+
+      <!-- Khu vực thông tin cán bộ đăng nhập (Chỉ hiện khi đã đăng nhập) -->
+      <div class="header-action-box" id="headerUserArea" style="display: none;">
+        <div class="user-badge">
+          <span class="user-icon-svg-box">
+            <svg class="user-avatar-svg" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </span>
+          <div class="user-info-text">
+            <strong id="displayUserName">Cán bộ</strong>
+            <small id="displayUserRole">Chi nhánh 23</small>
+          </div>
+        </div>
+        <button id="btnLogout" class="btn btn-header-logout btn-sm">
+          <i class="fa-solid fa-arrow-right-from-bracket mr-1"></i> Đăng xuất
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Thông báo Toast Notification -->
+  <div id="toastContainer" class="toast-container"></div>
+
+  <!-- ==================== NỘI DUNG CHÍNH ==================== -->
+  <main class="main-content">
+
+    <!-- ==================== 1. MÀN HÌNH ĐĂNG NHẬP ==================== -->
+    <section id="loginSection" class="card login-card">
+      <div class="card-header text-center">
+        <div style="font-size: 2.2rem; color: #1e40af; margin-bottom: 6px;">
+          <i class="fa-solid fa-shield-halved"></i>
+        </div>
+        <h2>ĐĂNG NHẬP HỆ THỐNG NỘI BỘ</h2>
+        <p class="text-muted">Cổng dịch vụ cán bộ - Chi nhánh số 23</p>
+      </div>
+      <div class="card-body">
+        <form id="loginForm" autocomplete="on">
+          <div class="form-group">
+            <label for="loginPhone">Số điện thoại (Tên đăng nhập): <span class="required">*</span></label>
+            <div class="password-input-group">
+              <input type="tel" id="loginPhone" class="form-control" placeholder="Nhập 10 chữ số điện thoại cán bộ" required autocomplete="username">
+            </div>
+            <small class="field-hint">Ví dụ: 0907259775 hoặc 0909736435</small>
+          </div>
+
+          <div class="form-group">
+            <label for="loginPassword">Mật khẩu: <span class="required">*</span></label>
+            <div class="password-input-group">
+              <input type="password" id="loginPassword" class="form-control" placeholder="Nhập mật khẩu (8 ký tự)" required autocomplete="current-password">
+              <button type="button" class="btn-toggle-password" id="btnToggleLoginPassword" title="Hiện/ẩn mật khẩu">
+                <i class="fa-regular fa-eye"></i>
+              </button>
+            </div>
+            <small class="field-hint">Mật khẩu gồm 8 ký tự (chữ hoa, chữ thường, số, ký tự đặc biệt)</small>
+          </div>
+
+          <div class="form-check-group login-options-row">
+            <label class="checkbox-label">
+              <input type="checkbox" id="rememberMe" checked>
+              <span>Ghi nhớ đăng nhập</span>
+            </label>
+            <button type="button" id="btnForgotPassword" class="btn-forgot-password">Quên mật khẩu?</button>
+          </div>
+
+          <button type="submit" id="btnLogin" class="btn btn-primary btn-block">
+            <i class="fa-solid fa-arrow-right-to-bracket mr-1"></i>
+            <span class="btn-text">Đăng Nhập Vào Hệ Thống</span>
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- ==================== 2. TRANG CHỦ / PORTAL HUB ==================== -->
+    <section id="portalHubSection" class="hub-section" style="display: none;">
+      <!-- Hero Banner -->
+      <div class="hub-hero-banner">
+        <div class="hub-hero-content">
+          <h2>Xin chào, <span id="hubGreetingName">Đồng chí</span>!</h2>
+          <p>Chào mừng bạn đến với Cổng Dịch Vụ Nội Bộ Chi nhánh số 23. Vui lòng lựa chọn phân hệ làm việc bên dưới:</p>
+          <div class="hub-hero-meta">
+            <div class="hub-hero-meta-item">
+              <i class="fa-solid fa-building-user"></i>
+              <span>Đơn vị: <strong>Chi nhánh số 23</strong></span>
+            </div>
+            <div class="hub-hero-meta-item">
+              <i class="fa-solid fa-id-badge"></i>
+              <span id="hubUserRole">Chức vụ: <strong>Cán bộ</strong></span>
+            </div>
+            <div class="hub-hero-meta-item">
+              <i class="fa-solid fa-phone"></i>
+              <span id="hubUserPhone">SĐT: <strong>090xxxxxxx</strong></span>
+            </div>
+            <div class="hub-hero-meta-item">
+              <i class="fa-solid fa-calendar-day"></i>
+              <span id="hubCurrentDate">Hôm nay</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Grid 2 Card Phân Hệ -->
+      <div class="hub-cards-grid">
+        <!-- Phân hệ 1: Lịch Công Tác Tuần -->
+        <div class="hub-selection-card card-schedule" id="cardSelectSchedule">
+          <div class="hub-card-header">
+            <div class="hub-card-icon">
+              <i class="fa-solid fa-calendar-days"></i>
+            </div>
+            <div class="hub-card-titles">
+              <span class="hub-card-subtitle">Hành chính & Quản lý điều hành</span>
+              <h3>ĐĂNG KÝ LỊCH CÔNG TÁC TUẦN</h3>
+            </div>
+          </div>
+          <div class="hub-card-desc">
+            Quản lý, đăng ký và tổng hợp lịch họp giao ban, tiếp công dân, kiểm tra hiện trạng thực địa và các cuộc họp tuần của Ban Giám đốc và các Tổ chuyên môn. Xuất văn bản Word (.docx) chuẩn thể thức Nghị định 30/2020/NĐ-CP.
+          </div>
+          <div class="hub-card-tags">
+            <span class="hub-card-tag"><i class="fa-solid fa-file-word text-blue-600 mr-1"></i> Chuẩn NĐ 30/2020</span>
+            <span class="hub-card-tag"><i class="fa-solid fa-clock mr-1"></i> Tự động tính Thứ</span>
+            <span class="hub-card-tag"><i class="fa-solid fa-cloud mr-1"></i> Google Sheets</span>
+          </div>
+          <div class="hub-card-footer">
+            <a href="lich_tuan.html" class="btn-enter-system" id="btnHubGoSchedule">
+              <span>Vào Phân Hệ Lịch Tuần</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Phân hệ 2: IT Helpdesk Sự Cố Máy Tính -->
+        <div class="hub-selection-card card-it" id="cardSelectHelpdesk">
+          <div class="hub-card-header">
+            <div class="hub-card-icon">
+              <i class="fa-solid fa-headset"></i>
+            </div>
+            <div class="hub-card-titles">
+              <span class="hub-card-subtitle">Công nghệ thông tin & Thiết bị</span>
+              <h3>IT HELPDESK & BÁO SỰ CỐ MÁY TÍNH</h3>
+            </div>
+          </div>
+          <div class="hub-card-desc">
+            Tiếp nhận và chẩn đoán nhanh sự cố thiết bị tin học (máy tính, máy in, mạng LAN/Internet, phần mềm nghiệp vụ, chữ ký số). Tự động nhận diện cấu hình máy, dán ảnh chụp màn hình phím tắt Ctrl+V và theo dõi hàng đợi xử lý trực tiếp.
+          </div>
+          <div class="hub-card-tags">
+            <span class="hub-card-tag"><i class="fa-solid fa-microchip text-amber-600 mr-1"></i> Tự nhận diện cấu hình</span>
+            <span class="hub-card-tag"><i class="fa-solid fa-paste mr-1"></i> Dán ảnh Ctrl + V</span>
+            <span class="hub-card-tag"><i class="fa-solid fa-satellite-dish mr-1"></i> Monitoring Live</span>
+          </div>
+          <div class="hub-card-footer">
+            <a href="it_helpdesk.html" class="btn-enter-system" id="btnHubGoHelpdesk">
+              <span>Vào Phân Hệ IT Helpdesk</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Thanh Tiện Ích Phụ -->
+      <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 15px;">
+        <a href="https://drive.google.com/drive/folders/1T2LVJKymM-52KBLNeabYxtAT4zfXneND" target="_blank" class="btn btn-secondary btn-sm" style="text-decoration: none;">
+          <i class="fa-solid fa-folder-open text-amber-500 mr-1"></i> Mở Kho Phần Mềm Cài Đặt (Google Drive)
+        </a>
+        <a href="DANH_SACH_TAI_KHOAN_CN23.md" target="_blank" class="btn btn-secondary btn-sm" style="text-decoration: none;">
+          <i class="fa-solid fa-address-book text-blue-500 mr-1"></i> Xem Danh Sách 70 Tài Khoản CN23 (MD)
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== SCRIPT XỬ LÝ ĐĂNG NHẬP & HUB ==================== -->
+  <script>
+    const INITIAL_ACCOUNTS = ''' + json.dumps(accounts, ensure_ascii=False) + ''';
+    const DEFAULT_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxLjARkYWp2TegCCdMcfVc3W6qQm6PmhFz71-y8zB_xFXxXbRXpsUhk6aPbJtqVqUHE/exec";
+    
+    // Toast Notification
+    function showToast(message, type = "info") {
+      const container = document.getElementById("toastContainer");
+      if (!container) return;
+      const toast = document.createElement("div");
+      toast.className = `toast toast-${type}`;
+      toast.innerHTML = `<span class="toast-icon">${type === "success" ? "✓" : (type === "error" ? "✗" : "ℹ")}</span><span class="toast-message">${message}</span>`;
+      container.appendChild(toast);
+      setTimeout(() => {
+        toast.style.opacity = "0";
+        setTimeout(() => toast.remove(), 300);
+      }, 4000);
+    }
+
+    // Toggle Password Visibility
+    const btnToggle = document.getElementById("btnToggleLoginPassword");
+    const passInput = document.getElementById("loginPassword");
+    if (btnToggle && passInput) {
+      btnToggle.addEventListener("click", () => {
+        const isPass = passInput.type === "password";
+        passInput.type = isPass ? "text" : "password";
+        btnToggle.innerHTML = isPass ? '<i class="fa-regular fa-eye-slash"></i>' : '<i class="fa-regular fa-eye"></i>';
+      });
+    }
+
+    // Forgot Password
+    const btnForgot = document.getElementById("btnForgotPassword");
+    if (btnForgot) {
+      btnForgot.addEventListener("click", () => {
+        alert("THÔNG BÁO QUÊN MẬT KHẨU:\n\nVui lòng liên hệ Tổ Hành chính - Tổng hợp (Đ/c Tuyền - SĐT: 0909736435) hoặc Quản trị viên để được kiểm tra và cấp lại mật khẩu đăng nhập.");
+      });
+    }
+
+    // Cập nhật ngày hôm nay
+    function updateCurrentDate() {
+      const now = new Date();
+      const days = ["Chủ Nhật", "Thứ Hai", "Thứ Ba", "Thứ Tư", "Thứ Năm", "Thứ Sáu", "Thứ Bảy"];
+      const dd = String(now.getDate()).padStart(2, "0");
+      const mm = String(now.getMonth() + 1).padStart(2, "0");
+      const yyyy = now.getFullYear();
+      const el = document.getElementById("hubCurrentDate");
+      if (el) el.textContent = `${days[now.getDay()]}, ${dd}/${mm}/${yyyy}`;
+    }
+
+    // Hiển thị giao diện Hub
+    function showHub(user) {
+      document.getElementById("loginSection").style.display = "none";
+      document.getElementById("portalHubSection").style.display = "block";
+      document.getElementById("headerUserArea").style.display = "flex";
+
+      const name = user.fullname || user.ho_ten || user.name || "Cán bộ";
+      const phone = user.phone || user.so_dien_thoai || "";
+      const role = user.position || user.chuc_vu || "Cán bộ";
+
+      document.getElementById("displayUserName").textContent = name;
+      document.getElementById("displayUserRole").textContent = role;
+      document.getElementById("hubGreetingName").textContent = name;
+      document.getElementById("hubUserRole").innerHTML = `Chức vụ: <strong>${role}</strong>`;
+      document.getElementById("hubUserPhone").innerHTML = `SĐT: <strong>${phone}</strong>`;
+      updateCurrentDate();
+    }
+
+    // Hiển thị giao diện Đăng nhập
+    function showLogin() {
+      document.getElementById("loginSection").style.display = "block";
+      document.getElementById("portalHubSection").style.display = "none";
+      document.getElementById("headerUserArea").style.display = "none";
+    }
+
+    // Kiểm tra phiên đăng nhập đã lưu
+    function checkSession() {
+      const raw = localStorage.getItem("binhduong_user") || sessionStorage.getItem("binhduong_user") || localStorage.getItem("vpdk_current_user");
+      if (raw) {
+        try {
+          const user = JSON.parse(raw);
+          showHub(user);
+          return true;
+        } catch (e) {
+          localStorage.removeItem("binhduong_user");
+        }
+      }
+      showLogin();
+      return false;
+    }
+
+    // Xử lý Đăng xuất
+    const btnLogout = document.getElementById("btnLogout");
+    if (btnLogout) {
+      btnLogout.addEventListener("click", () => {
+        localStorage.removeItem("binhduong_user");
+        sessionStorage.removeItem("binhduong_user");
+        localStorage.removeItem("vpdk_current_user");
+        sessionStorage.removeItem("vpdk_current_user");
+        showToast("Đã đăng xuất khỏi hệ thống thành công.", "info");
+        showLogin();
+      });
+    }
+
+    // Xử lý Đăng nhập
+    const loginForm = document.getElementById("loginForm");
+    if (loginForm) {
+      loginForm.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        let phone = (document.getElementById("loginPhone").value || "").trim().replace(/^'+/, "");
+        const password = (document.getElementById("loginPassword").value || "").trim();
+        const remember = document.getElementById("rememberMe").checked;
+
+        if (!phone || !password) {
+          showToast("Vui lòng nhập đầy đủ Số điện thoại và Mật khẩu!", "error");
+          return;
+        }
+
+        if (phone.length === 9 && !phone.startsWith("0")) phone = "0" + phone;
+
+        // 1. Kiểm tra tài khoản trong danh sách 70 cán bộ CN23
+        const acc = INITIAL_ACCOUNTS.find(a => {
+          let p = (a.so_dien_thoai || "").toString().trim().replace(/^'+/, "");
+          if (p.length === 9 && !p.startsWith("0")) p = "0" + p;
+          return p === phone;
+        });
+
+        if (acc) {
+          // Kiểm tra cán bộ đã nghỉ
+          if (acc.trang_thai === "Đã nghỉ") {
+            alert(`❌ CẢNH BÁO TRUY CẬP:\n\nCán bộ ${acc.ho_ten} đã nghỉ việc tại đơn vị Chi nhánh số 23.\nTài khoản đã được thu hồi và không thể đăng nhập hệ thống.`);
+            return;
+          }
+
+          if (acc.mat_khau !== password) {
+            showToast("Mật khẩu không chính xác! Vui lòng kiểm tra lại.", "error");
+            return;
+          }
+
+          const userObj = {
+            fullname: acc.ho_ten,
+            name: acc.ho_ten,
+            phone: phone,
+            email: phone,
+            position: acc.chuc_vu || "Cán bộ",
+            department: acc.don_vi || "Chi nhánh số 23",
+            role: "user",
+            status: acc.trang_thai || "Đang làm việc"
+          };
+
+          if (remember) {
+            localStorage.setItem("binhduong_user", JSON.stringify(userObj));
+            localStorage.setItem("vpdk_current_user", JSON.stringify(userObj));
+          } else {
+            sessionStorage.setItem("binhduong_user", JSON.stringify(userObj));
+            sessionStorage.setItem("vpdk_current_user", JSON.stringify(userObj));
+          }
+
+          showToast(`Xin chào ${acc.ho_ten}! Đăng nhập thành công.`, "success");
+          showHub(userObj);
+          return;
+        }
+
+        // 2. Fallback gọi online lên Google Apps Script nếu tài khoản mới
+        const btnLogin = document.getElementById("btnLogin");
+        btnLogin.disabled = true;
+        btnLogin.innerHTML = '<i class="fa-solid fa-spinner fa-spin mr-1"></i> Đang xác thực...';
+
+        try {
+          const res = await fetch(DEFAULT_SCRIPT_URL, {
+            method: "POST",
+            body: JSON.stringify({ action: "login", phone: phone, password: password })
+          });
+          const result = await res.json();
+          if (result && result.success && result.user) {
+            const u = result.user;
+            if (u.status === "Đã nghỉ") {
+              alert(`❌ CẢNH BÁO TRUY CẬP:\n\nCán bộ ${u.fullname} đã nghỉ việc tại đơn vị Chi nhánh số 23.\nKhông thể đăng nhập hệ thống.`);
+              return;
+            }
+            const userObj = {
+              fullname: u.fullname,
+              name: u.fullname,
+              phone: u.phone,
+              email: u.phone,
+              position: u.position,
+              department: u.department,
+              role: u.role || "user",
+              status: u.status
+            };
+            if (remember) {
+              localStorage.setItem("binhduong_user", JSON.stringify(userObj));
+              localStorage.setItem("vpdk_current_user", JSON.stringify(userObj));
+            } else {
+              sessionStorage.setItem("binhduong_user", JSON.stringify(userObj));
+              sessionStorage.setItem("vpdk_current_user", JSON.stringify(userObj));
+            }
+            showToast(`Xin chào ${u.fullname}! Đăng nhập thành công.`, "success");
+            showHub(userObj);
+          } else {
+            showToast(result.message || "Số điện thoại hoặc Mật khẩu không đúng!", "error");
+          }
+        } catch (err) {
+          showToast("Số điện thoại hoặc Mật khẩu không đúng!", "error");
+        } finally {
+          btnLogin.disabled = false;
+          btnLogin.innerHTML = '<i class="fa-solid fa-arrow-right-to-bracket mr-1"></i> <span class="btn-text">Đăng Nhập Vào Hệ Thống</span>';
+        }
+      });
+    }
+
+    // Khởi chạy khi load trang
+    document.addEventListener("DOMContentLoaded", () => {
+      checkSession();
+    });
+  </script>
+</body>
+</html>'''
+
+with open("A_THANG/index.html", "w", encoding="utf-8") as f:
+    f.write(html_content)
+
+print("Generated A_THANG/index.html successfully!")
