@@ -1679,3 +1679,671 @@ span.flatpickr-weekday {
   font-weight: 700;
 }
 
+
+/* =========================================================================
+   BỔ SUNG CHO HỆ THỐNG HỢP NHẤT (PORTAL HUB, REGISTER & IT HELPDESK)
+   ========================================================================= */
+
+/* --- Navigation Tabs trên Header --- */
+.header-nav-tabs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: 20px;
+}
+
+.nav-tab-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 0.86rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.nav-tab-btn:hover {
+  background-color: rgba(255, 255, 255, 0.24);
+  transform: translateY(-1px);
+}
+
+.nav-tab-btn.active {
+  background-color: #f59e0b;
+  color: #1e3a8a;
+  border-color: #fbbf24;
+  box-shadow: 0 2px 8px rgba(245, 158, 11, 0.4);
+}
+
+.user-badge-role {
+  display: inline-block;
+  font-size: 0.72rem;
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.2);
+  margin-top: 2px;
+}
+
+/* --- Password Toggle & Helpers --- */
+.password-input-group {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-input-group input {
+  padding-right: 42px !important;
+}
+
+.btn-toggle-password {
+  position: absolute;
+  right: 10px;
+  background: none;
+  border: none;
+  color: #64748b;
+  cursor: pointer;
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+}
+
+.btn-toggle-password:hover {
+  color: #1e40af;
+}
+
+.quick-accounts-box {
+  margin-top: 18px;
+  padding: 12px;
+  background-color: #f1f5f9;
+  border-radius: 8px;
+  border: 1px dashed #cbd5e1;
+  font-size: 0.82rem;
+}
+
+.quick-accounts-title {
+  font-weight: 700;
+  color: #334155;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.quick-accounts-select {
+  width: 100%;
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #cbd5e1;
+  font-size: 0.82rem;
+  background: #ffffff;
+}
+
+/* --- Màn hình Đăng Ký --- */
+.register-card {
+  max-width: 680px;
+  margin: 20px auto;
+}
+
+.password-rules-note {
+  font-size: 0.78rem;
+  color: #64748b;
+  margin-top: 4px;
+  line-height: 1.4;
+}
+
+.switch-auth-link {
+  text-align: center;
+  margin-top: 16px;
+  font-size: 0.88rem;
+  color: #475569;
+}
+
+.switch-auth-link button {
+  background: none;
+  border: none;
+  color: #1e40af;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 0 4px;
+}
+
+/* --- Màn hình Portal Hub (Dashboard chọn 2 phân hệ) --- */
+.hub-section {
+  max-width: 1200px;
+  margin: 24px auto;
+  padding: 0 20px;
+  width: 100%;
+}
+
+.hub-hero-banner {
+  background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 60%, #3b82f6 100%);
+  color: #ffffff;
+  padding: 28px 32px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px -4px rgba(30, 58, 138, 0.25);
+  margin-bottom: 30px;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 4px solid #f59e0b;
+}
+
+.hub-hero-content h2 {
+  font-size: 1.7rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+  letter-spacing: -0.02em;
+}
+
+.hub-hero-content p {
+  font-size: 0.95rem;
+  color: #e0e7ff;
+  max-width: 750px;
+  line-height: 1.5;
+}
+
+.hub-hero-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 0.85rem;
+}
+
+.hub-hero-meta-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 4px 12px;
+  border-radius: 20px;
+}
+
+/* Grid 2 Card lớn */
+.hub-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 24px;
+  margin-bottom: 30px;
+}
+
+.hub-selection-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06);
+  transition: all 0.25s ease;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.hub-selection-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: #cbd5e1;
+  transition: all 0.25s ease;
+}
+
+.hub-selection-card.card-schedule::before {
+  background: linear-gradient(90deg, #15803d, #22c55e);
+}
+
+.hub-selection-card.card-it::before {
+  background: linear-gradient(90deg, #1e40af, #3b82f6);
+}
+
+.hub-selection-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 32px -6px rgba(15, 23, 42, 0.14);
+  border-color: #cbd5e1;
+}
+
+.hub-card-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  margin-bottom: 16px;
+}
+
+.hub-card-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  flex-shrink: 0;
+}
+
+.card-schedule .hub-card-icon {
+  background: linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%);
+  color: #15803d;
+}
+
+.card-it .hub-card-icon {
+  background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+  color: #1e40af;
+}
+
+.hub-card-titles h3 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 4px;
+}
+
+.hub-card-subtitle {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.hub-card-desc {
+  color: #475569;
+  font-size: 0.92rem;
+  line-height: 1.55;
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+.hub-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.hub-card-tag {
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 6px;
+  background-color: #f1f5f9;
+  color: #334155;
+  border: 1px solid #e2e8f0;
+}
+
+.hub-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 18px;
+  border-top: 1px solid #f1f5f9;
+}
+
+.hub-card-stat {
+  font-size: 0.85rem;
+  color: #64748b;
+}
+
+.hub-card-stat strong {
+  color: #0f172a;
+  font-size: 1.1rem;
+}
+
+.btn-enter-system {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 0.92rem;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.card-schedule .btn-enter-system {
+  background: #15803d;
+}
+.card-schedule .btn-enter-system:hover {
+  background: #166534;
+}
+
+.card-it .btn-enter-system {
+  background: #1e40af;
+}
+.card-it .btn-enter-system:hover {
+  background: #1d4ed8;
+}
+
+/* --- Khung Bar Điều Hướng Lùi về Hub --- */
+.subsystem-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+  padding: 12px 20px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  margin-bottom: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.btn-back-hub {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #1e40af;
+  background: #eff6ff;
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: 1px solid #bfdbfe;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-decoration: none;
+}
+
+.btn-back-hub:hover {
+  background: #dbeafe;
+}
+
+.subsystem-breadcrumb {
+  font-size: 0.88rem;
+  color: #64748b;
+}
+
+.subsystem-breadcrumb strong {
+  color: #0f172a;
+}
+
+/* =========================================================================
+   GIAO DIỆN PHÂN HỆ IT HELPDESK
+   ========================================================================= */
+
+.it-grid-container {
+  display: grid;
+  grid-template-columns: 440px 1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+@media (max-width: 1080px) {
+  .it-grid-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Thẻ thông số máy nhận diện tự động */
+.specs-detection-box {
+  background: #f8fafc;
+  border: 1px dashed #cbd5e1;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 0.78rem;
+  color: #475569;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.specs-detection-box i {
+  color: #2563eb;
+  font-size: 1rem;
+}
+
+/* Phân loại sự cố dạng Chips */
+.issue-category-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.category-radio-chip {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background: #ffffff;
+  cursor: pointer;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #334155;
+  transition: all 0.2s;
+}
+
+.category-radio-chip input {
+  accent-color: #2563eb;
+}
+
+.category-radio-chip:hover {
+  border-color: #3b82f6;
+  background: #f8fafc;
+}
+
+.category-radio-chip.selected {
+  border-color: #2563eb;
+  background: #eff6ff;
+  color: #1e40af;
+}
+
+/* Vùng Kéo Thả / Dán Ảnh Clipboard */
+.it-dropzone {
+  border: 2px dashed #94a3b8;
+  border-radius: 12px;
+  padding: 16px;
+  text-align: center;
+  background: #f8fafc;
+  cursor: pointer;
+  transition: all 0.2s;
+  position: relative;
+}
+
+.it-dropzone:hover, .it-dropzone.dragover {
+  border-color: #2563eb;
+  background: #eff6ff;
+}
+
+.dropzone-prompt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  color: #64748b;
+  font-size: 0.84rem;
+}
+
+.dropzone-prompt i {
+  font-size: 1.8rem;
+  color: #3b82f6;
+}
+
+.dropzone-prompt kbd {
+  background: #e2e8f0;
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+  padding: 1px 5px;
+  font-size: 0.75rem;
+  font-family: monospace;
+  font-weight: bold;
+  color: #0f172a;
+}
+
+.it-image-preview-box {
+  position: relative;
+  display: inline-block;
+  margin-top: 8px;
+}
+
+.it-image-preview-box img {
+  max-height: 180px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+}
+
+.btn-remove-preview-img {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #e11d48;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+}
+
+/* Thẻ Thống Kê 4 Ô */
+.it-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+@media (max-width: 768px) {
+  .it-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.it-stat-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 12px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.it-stat-label {
+  font-size: 0.76rem;
+  color: #64748b;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.it-stat-value {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.it-stat-card.stat-total { border-left: 4px solid #3b82f6; }
+.it-stat-card.stat-pending { border-left: 4px solid #f59e0b; }
+.it-stat-card.stat-processing { border-left: 4px solid #0284c7; }
+.it-stat-card.stat-completed { border-left: 4px solid #10b981; }
+
+/* Bảng Monitoring Ticket */
+.ticket-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.84rem;
+}
+
+.ticket-table th {
+  background: #f1f5f9;
+  color: #334155;
+  font-weight: 700;
+  padding: 10px 12px;
+  border-bottom: 2px solid #cbd5e1;
+  text-align: left;
+}
+
+.ticket-table td {
+  padding: 10px 12px;
+  border-bottom: 1px solid #e2e8f0;
+  vertical-align: top;
+}
+
+.ticket-table tr:hover {
+  background-color: #f8fafc;
+}
+
+.badge-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.badge-status.status-pending {
+  background: #fef3c7;
+  color: #b45309;
+  border: 1px solid #fde68a;
+}
+
+.badge-status.status-processing {
+  background: #e0f2fe;
+  color: #0369a1;
+  border: 1px solid #bae6fd;
+}
+
+.badge-status.status-completed {
+  background: #dcfce7;
+  color: #15803d;
+  border: 1px solid #bbf7d0;
+}
+
+.error-tag-box {
+  background: #ffe4e6;
+  border: 1px solid #fecdd3;
+  color: #be123c;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-family: monospace;
+  font-size: 0.78rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+/* Modal Xem Ảnh Phóng To */
+.img-viewer-card {
+  max-width: 900px !important;
+  width: 90% !important;
+}
+
+.img-viewer-body {
+  max-height: 75vh;
+  overflow: auto;
+  text-align: center;
+  background: #0f172a;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.img-viewer-body img {
+  max-width: 100%;
+  max-height: 70vh;
+  object-fit: contain;
+  border-radius: 4px;
+}
