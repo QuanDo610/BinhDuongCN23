@@ -60,11 +60,11 @@
       <div class="card-body">
         <form id="loginForm" autocomplete="on">
           <div class="form-group">
-            <label for="loginCccd">Tên đăng nhập (Username) hoặc Số CCCD: <span class="required">*</span></label>
+            <label for="loginUsername">Người dùng: <span class="required">*</span></label>
             <div class="password-input-group">
-              <input type="text" id="loginCccd" class="form-control" placeholder="Nhập Username (ví dụ: Quân ĐTM) hoặc Số CCCD" required autocomplete="username">
+              <input type="text" id="loginUsername" class="form-control" placeholder="Nhập người dùng (ví dụ: Quân ĐTM)" required autocomplete="username">
             </div>
-            <small class="field-hint">Nhập Username dạng Tên + Họ lót viết tắt (VD: Quân ĐTM) hoặc Số CCCD</small>
+            <small class="field-hint">Nhập tên dạng Tên + Họ lót viết tắt (VD: Quân ĐTM)</small>
           </div>
 
           <div class="form-group">
@@ -81,7 +81,7 @@
           <div class="form-check-group login-options-row">
             <label class="checkbox-label">
               <input type="checkbox" id="rememberMe" checked>
-              <span>Ghi nhớ tên đăng nhập</span>
+              <span>Ghi nhớ đăng nhập</span>
             </label>
             <button type="button" id="btnForgotPassword" class="btn-forgot-password">Quên mật khẩu?</button>
           </div>
@@ -112,7 +112,7 @@
             </div>
             <div class="hub-hero-meta-item">
               <i class="fa-solid fa-address-card"></i>
-              <span id="hubUserCccd">Tài khoản: <strong>Đang tải...</strong></span>
+              <span id="hubUserAccount">Người dùng: <strong>Đang tải...</strong></span>
             </div>
             <div class="hub-hero-meta-item">
               <i class="fa-solid fa-calendar-day"></i>
@@ -300,7 +300,6 @@
 
       const name = user.fullname || user.ho_ten || user.name || "Cán bộ";
       const username = user.username || "";
-      const cccd = user.cccd || "";
       const phone = user.phone || user.so_dien_thoai || "";
       const role = user.position || user.chuc_vu || "Cán bộ";
 
@@ -308,11 +307,11 @@
       document.getElementById("displayUserRole").textContent = role;
       document.getElementById("hubGreetingName").textContent = name;
       document.getElementById("hubUserRole").innerHTML = `Chức vụ: <strong>${role}</strong>`;
-      const cccdEl = document.getElementById("hubUserCccd");
-      if (cccdEl) {
-        let displayStr = username || cccd;
+      const accountEl = document.getElementById("hubUserAccount") || document.getElementById("hubUserCccd");
+      if (accountEl) {
+        let displayStr = username || name;
         if (phone) displayStr += ` • SĐT: ${phone}`;
-        cccdEl.innerHTML = `Tài khoản: <strong>${displayStr || "Đã xác thực"}</strong>`;
+        accountEl.innerHTML = `Người dùng: <strong>${displayStr || "Đã xác thực"}</strong>`;
       }
       updateCurrentDate();
     }
@@ -331,11 +330,11 @@
       sessionStorage.removeItem("vpdk_current_user");
       localStorage.removeItem("binhduong_user");
 
-      // Khôi phục Username / số CCCD đã ghi nhớ (nếu có) để người dùng đỡ phải gõ lại
+      // Khôi phục Người dùng đã ghi nhớ (nếu có) để người dùng đỡ phải gõ lại
       const rememberedAccount = localStorage.getItem("vpdk_remembered_username") || localStorage.getItem("vpdk_remembered_cccd");
-      const cccdInput = document.getElementById("loginCccd");
-      if (rememberedAccount && cccdInput) {
-        cccdInput.value = rememberedAccount;
+      const usernameInput = document.getElementById("loginUsername") || document.getElementById("loginCccd");
+      if (rememberedAccount && usernameInput) {
+        usernameInput.value = rememberedAccount;
       }
 
       // Chỉ duy trì đăng nhập nếu người dùng đang trong cùng một phiên duyệt web (sessionStorage)
@@ -368,17 +367,18 @@
       });
     }
 
-    // XỬ LÝ ĐĂNG NHẬP: HỖ TRỢ USERNAME (Quân ĐTM) HOẶC CCCD - KIỂM TRA TRỰC TIẾP TỪ GOOGLE SHEET
+    // XỬ LÝ ĐĂNG NHẬP: HỖ TRỢ USERNAME (Quân ĐTM) - KIỂM TRA TRỰC TIẾP TỪ GOOGLE SHEET
     const loginForm = document.getElementById("loginForm");
     if (loginForm) {
       loginForm.addEventListener("submit", async (e) => {
         e.preventDefault();
-        let identifier = (document.getElementById("loginCccd").value || "").trim().replace(/^'+/, "");
+        const inputEl = document.getElementById("loginUsername") || document.getElementById("loginCccd");
+        let identifier = (inputEl ? inputEl.value : "").trim().replace(/^'+/, "");
         const password = (document.getElementById("loginPassword").value || "").trim();
         const remember = document.getElementById("rememberMe").checked;
 
         if (!identifier || !password) {
-          showToast("Vui lòng nhập đầy đủ Tên đăng nhập (Username) / Số CCCD và Mật khẩu!", "error");
+          showToast("Vui lòng nhập đầy đủ Người dùng và Mật khẩu!", "error");
           return;
         }
 
@@ -424,11 +424,11 @@
 
             const userObj = {
               username: u.username || identifier,
-              fullname: u.fullname || ("Cán bộ " + (u.username || u.cccd || identifier)),
-              name: u.fullname || ("Cán bộ " + (u.username || u.cccd || identifier)),
+              fullname: u.fullname || ("Cán bộ " + (u.username || identifier)),
+              name: u.fullname || ("Cán bộ " + (u.username || identifier)),
               cccd: u.cccd || "",
               phone: u.phone || "",
-              email: u.email || u.username || u.cccd || identifier,
+              email: u.email || u.username || identifier,
               position: u.position || "Cán bộ",
               department: u.department || "Chi nhánh số 23",
               role: u.role || "user",
@@ -438,7 +438,6 @@
             // Ghi nhớ tài khoản nếu người dùng tích chọn
             if (remember) {
               localStorage.setItem("vpdk_remembered_username", userObj.username || identifier);
-              localStorage.setItem("vpdk_remembered_cccd", userObj.cccd || identifier);
             } else {
               localStorage.removeItem("vpdk_remembered_username");
               localStorage.removeItem("vpdk_remembered_cccd");
@@ -456,7 +455,7 @@
             if (result.isRetired) {
               alert(`❌ CẢNH BÁO TRUY CẬP:\n\n${result.message}`);
             } else {
-              showToast(result.message || "Tên đăng nhập hoặc Mật khẩu không chính xác!", "error");
+              showToast(result.message || "Tên người dùng hoặc Mật khẩu không chính xác!", "error");
             }
             return;
           }

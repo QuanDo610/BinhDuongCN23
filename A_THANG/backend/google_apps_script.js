@@ -901,7 +901,7 @@ function handleLogin(identifier, password, ss) {
     password = (password || "").toString().trim();
 
     if (!rawIdentifier || !password) {
-      return { success: false, message: "Vui lòng nhập đầy đủ Tên đăng nhập (Username) / Số CCCD và Mật khẩu!" };
+      return { success: false, message: "Vui lòng nhập đầy đủ Người dùng và Mật khẩu!" };
     }
 
     const sheetUsers = getUsersSheet(ss);
@@ -1025,7 +1025,7 @@ function handleLogin(identifier, password, ss) {
     if (!identifierFound) {
       return {
         success: false,
-        message: "Tên đăng nhập (Username: " + rawIdentifier + ") hoặc Số CCCD chưa được đăng ký trong danh sách trên hệ thống!"
+        message: "Người dùng (" + rawIdentifier + ") chưa được đăng ký trong danh sách trên hệ thống!"
       };
     }
 
