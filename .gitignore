@@ -15,14 +15,14 @@ user_credentials.json
 
 # BẢO VỆ DỮ LIỆU CÁ NHÂN NHẠY CẢM (CCCD, SĐT ĐỖ TRỌNG MINH QUÂN) - GIỮ LOCAL TUYỆT ĐỐI
 documents/*Quân*
-documents/*Quan*
+documents/*Do_Trong_Minh_Quan*
 documents/mau HĐTV 02 tháng (1).docx
 tools/*quan*
 OUTPUT/*Do_Trong_Minh_Quan*
-OUTPUT/*quan*
+OUTPUT/*Quân*
 scratch/cache_texts/*mau_HĐTV*
 scratch/cache_texts/*Quân*
-scratch/cache_texts/*Quan*
+scratch/cache_texts/*Do_Trong_Minh_Quan*
 
 # Hệ điều hành
 .DS_Store

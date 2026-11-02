@@ -1,0 +1,194 @@
+/* =========================================================================
+   LICH_TUAN.CSS: GIAO DIỆN CHUYÊN BIỆT CHO PHÂN HỆ ĐĂNG KÝ LỊCH TUẦN
+   Hệ Thống Web Portal - Văn Phòng Đăng Ký Đất Đai Chi Nhánh Số 23
+   ========================================================================= */
+
+@import url("base.css");
+
+/* ==================== 1. THANH CHUYỂN TAB (BẢNG LỊCH vs FORM ĐĂNG KÝ) ==================== */
+.schedule-tab-nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.schedule-tab-group {
+  display: inline-flex;
+  background: #e2e8f0;
+  padding: 4px;
+  border-radius: var(--radius-md);
+  gap: 4px;
+}
+
+.schedule-tab-btn {
+  padding: 8px 18px;
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all var(--transition-fast);
+}
+
+.schedule-tab-btn:hover:not(.active) {
+  color: var(--color-text-main);
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.schedule-tab-btn.active {
+  background: #ffffff;
+  color: var(--color-primary);
+  font-weight: 700;
+  box-shadow: var(--shadow-sm);
+}
+
+/* ==================== 2. BẢNG DỮ LIỆU LỊCH TUẦN (FULL-WIDTH & KHÔNG BỊ VỠ) ==================== */
+.table-responsive {
+  overflow-x: auto;
+  width: 100%;
+}
+
+.schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--font-size-sm);
+  text-align: left;
+  table-layout: fixed;
+  min-width: 1100px;
+}
+
+.schedule-table th {
+  background-color: var(--color-bg-subtle);
+  color: var(--color-text-secondary);
+  font-weight: 700;
+  padding: 12px 14px;
+  border-bottom: 2px solid var(--color-border-active);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.schedule-table td {
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--color-border-subtle);
+  vertical-align: top;
+  line-height: 1.45;
+}
+
+.schedule-row-clickable {
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+}
+
+.schedule-row-clickable:hover td {
+  background-color: #f8fafc;
+}
+
+/* Ngày trong tuần badge */
+.day-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  background: #e2e8f0;
+  color: #334155;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  font-size: 0.76rem;
+  margin-bottom: 2px;
+}
+
+.date-text {
+  font-weight: 700;
+  color: var(--color-primary);
+  display: block;
+  font-size: 0.88rem;
+}
+
+/* Cột Thời gian & Trạng thái cuộc họp */
+.time-status-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: flex-start;
+  white-space: nowrap;
+}
+
+.meeting-time-value {
+  color: #0369a1;
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 8px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  border-radius: var(--radius-full);
+  line-height: 1.25;
+}
+
+.status-upcoming {
+  background-color: var(--color-info-bg);
+  color: var(--color-info);
+  border: 1px solid var(--color-info-border);
+}
+
+.status-ongoing {
+  background-color: var(--color-success-bg);
+  color: var(--color-success);
+  border: 1px solid var(--color-success-border);
+}
+
+.status-past {
+  background-color: #f1f5f9;
+  color: #64748b;
+  border: 1px solid #cbd5e1;
+}
+
+/* Ô rút gọn văn bản */
+.table-filter-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.total-count-badge {
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+  color: #475569;
+  background: #f1f5f9;
+  padding: 5px 12px;
+  border-radius: var(--radius-full);
+  border: 1px solid #cbd5e1;
+}
+
+/* ==================== 3. BIỂU MẪU ĐĂNG KÝ (FORM 2 CỘT RỘNG RÃI) ==================== */
+.form-row {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 14px;
+}
+
+.col-half {
+  flex: 1;
+}
+
+@media (max-width: 640px) {
+  .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+}

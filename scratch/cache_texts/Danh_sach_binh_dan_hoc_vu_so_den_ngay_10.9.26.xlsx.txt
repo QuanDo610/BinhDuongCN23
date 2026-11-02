@@ -1,0 +1,870 @@
+Danh sách Sheets: CS2 + CN23-31, CS2, CN23, CN24, CN25, CN26, CN27, CN28, CN29, CN30, CN31, Bao ve
+
+=== SHEET: CS2 + CN23-31 (Kích thước: 1000 hàng x 10 cột) ===
+SỞ NÔNG NGHIỆP VÀ MÔI TRƯỜNG |  |  | CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM |  |  |  |  |  | 
+THÀNH PHỐ HỒ CHÍ MINH |  |  |  | Độc lập - Tự do - Hạnh phúc |  |  |  |  | 
+VĂN PHÒNG ĐĂNG KÝ ĐẤT ĐAI |  |  |  |  |  |  |  |  | 
+BÁO CÁO SỐ LIỆU VIÊN CHỨC, NGƯỜI LAO ĐỘNG  
+ĐÃ HOÀN THÀNH "CHƯƠNG TRÌNH PHỔ CẬP KỸ NĂNG SỐ DÀNH CHO VIÊN CHỨC VÀ NGƯỜI LAO ĐỘNG " TRÊN NỀN TẢNG BÌNH DÂN HỌC VỤ SỐ |  |  |  |  |  |  |  |  | 
+Stt | Tên đơn vị | Trụ sở chính | Cơ sở 2 | Cơ sở 3 | Tổng số người tại thời điểm có mặt báo cáo không tính lao động phục vụ |  | Số viên chức, người lao động đã hoàn thành khóa học |  | Ghi chú
+ |  |  |  |  | Viên chức | Người lao động | Viên chức | Người lao động | 
+1 | Phòng Hành chính - Tổng hợp |  | 11 |  | 4 | 7 | 4 | 7 | 
+2 | Phòng Kế hoạch Tài chính |  | 6 |  | 3 | 3 | 3 | 3 | 
+3 | Phòng Pháp chế và kiểm soát CCHC |  | 5 |  | 2 | 3 | 2 | 3 | 
+4 | Phòng Đăng ký và Cấp giấy chứng nhận |  | 29 |  | 11 | 18 | 11 | 18 | 
+5 | Phòng Kỹ thuật Địa chính và Lưu trữ |  | 63 |  | 30 | 33 | 30 | 33 | 
+6 | Chi nhánh số 23 |  | 73 |  | 7 | 66 | 7 | 63 | Nguyễn Văn Tiến (sắp Nghỉ hưu), Huỳnh Quốc Nam, Lê Anh Tuấn (sắp nộp đơn nghỉ)
+7 | Chi nhánh số 24 |  | 64 |  | 5 | 59 | 5 | 59 | 
+8 | Chi nhánh số 25 |  | 50 |  | 5 | 45 | 5 | 45 | 
+9 | Chi nhánh số 26 |  | 75 |  | 7 | 68 | 7 | 68 | 
+10 | Chi nhánh số 27 |  | 60 |  | 7 | 53 | 7 | 53 | 
+11 | Chi nhánh số 28 |  | 53 |  | 7 | 46 | 7 | 46 | 
+12 | Chi nhánh số 29 |  | 89 |  | 4 | 85 | 3 | 84 | 01 viên chức tạm ngưng công  tác, 01 lao động tạm ngưng công tác
+13 | Chi nhánh số 30 |  | 45 |  | 7 | 38 | 7 | 37 | 01 nhân viên chưa làm
+14 | Chi nhánh số 31 |  | 52 |  | 5 | 47 | 5 | 47 | 
+
+=== SHEET: CS2 (Kích thước: 334 hàng x 26 cột) ===
+SỞ NÔNG NGHIỆP VÀ MÔI TRƯỜNG |  |  |  |  | CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+THÀNH PHỐ HỒ CHÍ MINH |  |  |  |  | Độ lập - Tự do - Hạnh phúc |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+VĂN PHÒNG ĐĂNG KÝ ĐẤT ĐAI |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+ | DANH SÁCH VIÊN CHỨC, NGƯỜI LAO ĐỘNG ĐÃ HOÀN THÀNH 
+"CHƯƠNG TRÌNH PHỔ CẬP KỸ NĂNG SỐ DÀNH CHO VIÊN CHỨC VÀ NGƯỜI LAO ĐỘNG " 
+TRÊN NỀN TẢNG BÌNH DÂN HỌC VỤ SỐ |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+(Đính kèm Công văn số          /VPĐK-HC ngày     tháng    năm 2026 của Văn phòng đăng ký đất đai Thành phố) |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+STT | Tên đơn vị | Họ và tên | Nhóm đối tượng | Chức vụ | Năm sinh | CCCD | Số điện thoại | Ngày hoàn thành khóa học |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+ |  | Ví dụ: Nguyễn Văn A | Chỉ nhập một trong 4 giá trị: Cán bộ, Công chức, Viên chức, Người lao động | Ví dụ: Chuyên viên | 4 chữ số, ví dụ 1988 | 12 chữ số | 10 chữ số | Định dạng ngày: dd/mm/yyyy hoặc yyyy-mm-dd |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+ | Ban Giám đốc |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+1 |  | Phạm Thanh Tùng | Viên chức | Phó Giám đốc | 1976 | 052076003403 | 0909250637 | 06/07/2026 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+2 |  | Võ Đức Hiến Minh | Viên chức | Phó Giám đốc | 1980 | 079080001455 | 0941561368 | 11/08/2026 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+3 |  | Nguyễn Chiến Thắng | Viên chức | Phó Giám đốc | 1975 | 034075009869 | 0903363029 | 10/7/2026 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+4 |  | Võ Thanh Vân | Viên chức | Phó Giám đốc | 1982 | 074182009423 | 0932004048 | 17/7/2026 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+ | Phòng Hành chính - Tổng hợp |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+5 |  | Võ Thị Thu Hương | Viên chức | Phó Trưởng phòng | 1977 | 074177004994 | 0962901766 | 06/07/2026 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+6 |  | Nguyễn Thành Công | Viên chức | Phó Trưởng phòng | 1983 | 072083002024 | 0908283382 | 06/07/2026 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+7 |  | Nguyễn Thị Lâm Duyên | Viên chức | Địa chính viên hạng III | 1986 | 074186008876 | 0937227739 | 06/07/2026 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+8 |  | Lê Ngọc Mai | Viên chức | Chuyên viên | 1978 | 074178007742 | 0937024288 | 06/07/2026 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+9 |  | Trương Thị Mỹ Hưng | Người lao động | Nhân viên | 1990 | 074190001857 | 0973729630 | 06/07/2026 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+10 |  | Hồ Thị An | Người lao động | Nhân viên | 1986 | 079186027549 | 0937461109 | 06/07/2026 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+11 |  | Lê Triều Châu | Người lao động | Nhân viên | 2002 | 074202002777 | 0378860101 | 06/07/2026 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+12 |  | Lâm Minh Hòa | Người lao động | Nhân viên | 2001 | 074201004925 | 0913129488 | 04/08/2026 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+13 |  | Đinh Minh Thông | Người lao động | Nhân viên | 1997 | 074097000753 | 0981235433 | 46245 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+14 |  | Nguyễn Toàn Nhân | Người lao động | Nhân viên | 1992 | 074092004355 | 0914949531 | 07/08/2026 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+15 |  | Nguyễn Thị Thanh Tuyền | Người lao động | Nhân viên | 1996 | 054196009276 | 0971462978 | 06/08/2026 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+ | Phòng Kế hoạch - Tài chính |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+16 |  | Lê Thị Hồng Vân | Viên chức | Phó trưởng phòng | 1979 | 074179001935 | 0918180828 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+17 |  | Lê Thị Bích Ngọc | Viên chức | Phó trưởng phòng | 1979 | 075179001820 | 0907112789 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+18 |  | Lê Thị Quỳnh Nga | Viên chức | Kế toán viên | 1983 | 074183002225 | 0978375152 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+19 |  | Nguyễn Thị Hiền Lương | Người lao động | Nhân viên | 1985 | 042185003940 | 0985920009 | 06/7/2026 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+20 |  | Nguyễn Thị Hoà An | Người lao động | Nhân viên | 1985 | 042185003936 | 0971283939 | 06/07/2026 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+21 |  | Lê Hoàng Thảo Nguyên | Người lao động | Nhân viên | 1994 | 074194001362 | 0979585402 | 07/07/2026 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+ | Phòng Đăng ký và cấp Giấy chứng nhận |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+22 |  | Nguyễn Thị Mai Phương | Viên chức | Phó trưởng phòng | 1977 | 001177027578 | 0918159536 | 09/07/2026 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+23 |  | Nguyễn Thị Bình Minh | Viên chức | Phó trưởng phòng | 1987 | 074187009332 | 0917718239 | 09/07/2026 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+24 |  | Nguyễn Thu Thảo | Viên chức | Địa chính viên hạng III | 1987 | 074187008645 | 0938072666 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+25 |  | Ngô Quang Tiến | Viên chức | Địa chính viên hạng III | 1988 | 074088001377 | 0911027879 | 06/07/2026 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+26 |  | Đinh Thị Hồng | Viên chức | Địa chính viên hạng III | 1986 | 042186005459 | 0943023862 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+27 |  | Nguyễn Thuý Nga | Viên chức | Địa chính viên hạng III | 1985 | 074185005081 | 0907053322 | 09/07/2026 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+28 |  | Nguyễn Thị Cẩm Hồng | Viên chức | Địa chính viên hạng III | 1986 | 072186007558 | 0349763682 | 09/07/2026 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+29 |  | Trần Thị Kim Dung | Viên chức | Địa chính viên hạng III | 1984 | 025184007322 | 0979737643 | 46212 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+30 |  | Đỗ Thanh Trí | Viên chức | Địa chính viên hạng III | 1978 | 095078004875 | 0902522814 | 08/07/2026 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+31 |  | Phạm Thanh Phong | Viên chức | Địa chính viên hạng III | 1992 | 052092000210 | 0938242222 | 09/07/2026 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+32 |  | Nguyễn Anh Phúc | Viên chức | Chuyên viên | 1976 | 079076023549 | 0903920559 | 08/07/2026 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+33 |  | Phạm Thị Cẩm Nhung | Người lao động | Nhân viên | 1990 | 070190011937 | 0972432779 | 06/07/2026 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+34 |  | Đặng Thị Thúy | Người lao động | Nhân viên | 1973 | 030173009963 | 0976988673 | 46211 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+35 |  | Phạm Nguyễn Hoài Nam | Người lao động | Nhân viên | 1992 | 074092000591 | 0933285361 | 09/07/2026 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+36 |  | Nguyễn Hoàng Anh (nhỏ) | Người lao động | Nhân viên | 1987 | 074087001022 | 0986605789 | 06/07/2026 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+37 |  | Thượng Hồng Thái | Người lao động | Nhân viên | 1997 | 074097008010 | 0354733505 | 06/07/2026 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+38 |  | Nguyễn Thị Hương Giang | Người lao động | Nhân viên | 1990 | 07419001133 | 0902477947 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+39 |  | Kiều Thị Oanh | Người lao động | Nhân viên | 1994 | 001194020733 | 0976356068 | 06/07/2026 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+40 |  | Phạm Thị Linh Chi | Người lao động | Nhân viên | 1992 | 040192022685 | 0912500768 | 06/07/2026 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+41 |  | Vũ Long Hải | Người lao động | Nhân viên | 1993 | 079093019441 | 0789672867 | 06/07/2026 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+42 |  | Nguyễn Thị Lợi | Người lao động | Nhân viên | 1985 | 074185001389 | 0916696919 | 06/07/2026 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+43 |  | Đỗ Thị Thúy | Người lao động | Nhân viên | 1995 | 068195001444 | 0985905747 | 06/07/2026 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+44 |  | Phan Thị Như Khánh | Người lao động | Nhân viên | 1989 | 042189005372 | 0984639662 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+45 |  | Phan Thị Phương Thảo | Người lao động | Nhân viên | 1983 | 074183001331 | 0909022655 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+46 |  | Nguyễn Ngọc Quế Trân | Người lao động | Nhân viên | 2002 | 074302006996 | 0584817982 | 06/07/2026 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+47 |  | Phùng Vương Quốc | Người lao động | Nhân viên | 1985 | 074085008569 | 0982994801 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+48 |  | Lê Thị Thu Nhi | Người lao động | Nhân viên | 2000 | 074300005908 | 0984238130 | 06/07/2026 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+49 |  | Nguyễn Trường Khang | Người lao động | Nhân viên | 1990 | 040090028372 | 0938665776 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+50 |  | Phan Tấn Đạt | Người lao động | Biệt phái | 1986 | 074086005730 | 0945784734 | 14/08/2026 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+ | Phòng Kỹ thuật Địa chính và Lưu trữ |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+51 |  | Đặng Tấn Lực | Viên chức | Phó trưởng phòng | 1981 | 074081001720 | 0909681700 | 06/07/2026 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+52 |  | Nguyễn Hoàng Anh | Viên chức | Phó trưởng phòng | 1975 | 001075037581 | 0886989878 | 06/07/2026 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+53 |  | Đinh Công Cường | Viên chức | Phó trưởng phòng | 1980 | 082080007569 | 0931547779 | 07/07/2026 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+54 |  | Hồ Hữu Nam | Viên chức | Phó trưởng phòng | 1986 | 074086005193 | 0919887087 | 46234 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+55 |  | Trần Quang Sơn | Viên chức | Phó trưởng phòng | 1982 | 040082004293 | 0977299236 | 31/07/2026 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+56 |  | Bùi Quyết Thắng | Viên chức | Chuyên viên | 1972 | 040072002051 | 0983509226 | 06/07/2026 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+57 |  | Mai Hương Ly | Viên chức | Chuyên viên | 1984 | 025184005372 | 09319164757 | 07/07/2026 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+58 |  | Nguyễn Duy Tân | Viên chức | Đo đạc bản đồ viên hạng III | 1983 | 074083001915 | 0918139157 | 06/07/2026 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+59 |  | Nguyễn Thành Chương | Viên chức | Đo đạc bản đồ viên hạng III | 1983 | 079083001462 | 0937691023 | 07/07/2026 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+60 |  | Bùi Văn Tuyển | Viên chức | Đo đạc bản đồ viên hạng III | 1983 | 036083028054 | 0948025825 | 07/07/2026 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+61 |  | Nguyễn Thanh Hùng | Viên chức | Đo đạc bản đồ viên hạng III | 1981 | 074081005321 | 0989996086 | 10/07/2026 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+62 |  | Nguyễn Minh Khánh | Viên chức | Đo đạc bản đồ viên hạng III | 1985 | 074085001967 | 0937295222 | 06/07/2026 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+63 |  | Đào Văn Ba | Viên chức | Đo đạc bản đồ viên hạng III | 1986 | 038086023635 | 0903654013 | 06/07/2026 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+64 |  | Nguyễn Thiện Nhơn | Viên chức | Địa chính viên hạng III | 1986 | 052086009600 | 0935603668 | 06/07/2026 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+65 |  | Nguyễn Phong Lưu | Viên chức | Đo đạc bản đồ viên hạng III | 1981 | 086081001287 | 0907467676 | 08/07/2026 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+66 |  | Đinh Văn Trung | Viên chức | Đo đạc bản đồ viên hạng III | 1985 | 040085005985 | 0987660335 | 46220 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+67 |  | Trần Quốc Trung | Viên chức | Đo đạc bản đồ viên hạng III | 1973 | 040073001964 | 0986252679 | 06/08/2026 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+68 |  | Thái Thị Hồng | Viên chức | Địa chính viên hạng III | 1985 | 042185006183 | 0947998502 | 07/07/2026 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+69 |  | Huỳnh Thị Thãi | Viên chức | Đo đạc bản đồ viên hạng III | 1987 | 052187002290 | 0937172116 | 06/07/2026 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+70 |  | Trần Thị Kiều Trang | Viên chức | Đo đạc bản đồ viên hạng III | 1982 | 074182001858 | 090681984 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+71 |  | Tạ Lê Uyên | Viên chức | Đo đạc bản đồ viên hạng III | 1984 | 074184001033 | 0367749133 | 46212 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+72 |  | Nguyễn Ngọc Lâm | Viên chức | Đo đạc bản đồ viên hạng III | 1978 | 045078000786 | 0909690122 | 06/07/2026 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+73 |  | Nguyễn Thành Phúc | Viên chức | Đo đạc bản đồ viên hạng III | 1987 | 074087008605 | 0938999619 | 07/08/2026 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+74 |  | Nguyễn Minh Thành (làm việc tại CS1) | Viên chức | Đo đạc bản đồ viên hạng III | 1975 | 033075011960 | 0869542668 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+75 |  | Trần Lý Hoàng (làm việc tại CS1) | Viên chức | Đo đạc bản đồ viên hạng III | 1978 | 036078005319 | 0908802908 | 31/07/2026 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+76 |  | Nguyễn Văn Hạnh | Viên chức | Đo đạc bản đồ viên hạng III | 1990 | 042090019625 | 0961661561 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+77 |  | Hoàng Văn Bắc | Viên chức | Đo đạc bản đồ viên hạng III | 1983 | 040083013960 | 0937339114 | 06/7/2026 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+78 |  | Trần Như Ý | Viên chức | Đo đạc bản đồ viên hạng III | 1983 | 040083008683 | 0985308947 | 07/07/2026 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+79 |  | Châu Nhật Thái | Viên chức | Địa chính viên hạng III | 1982 | 086082015255 | 0988229525 | 31/07/2026 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+80 |  | Lê Đình Việt | Viên chức | Địa chính viên hạng III | 1986 | 044086009877 | 0973342342 | 06/07/2026 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+81 |  | Đặng Ngọc Trang | Viên chức | Chuyên viên | 1988 | 074188000808 | 0938384842 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+82 |  | Trần Thanh Hải | Người lao động | Nhân viên | 1992 | 042092012072 | 0987537439 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+83 |  | Mai Công Danh | Người lao động | Nhân viên | 2002 | 074202002401 | 0926875787 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+84 |  | Liễu Thị Thu Đào | Người lao động | Nhân viên | 1986 | 074186001885 | 0919910272 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+85 |  | Đào Văn Năm | Người lao động | Nhân viên | 1991 | 038091028942 | 0978348319 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+86 |  | Nguyễn Hải Đăng | Người lao động | Nhân viên | 1988 | 042088003492 | 0935355135 | 08/07/2026 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+87 |  | Hoàng Minh Hải | Người lao động | Nhân viên | 1993 | 042093007421 | 0914254346 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+88 |  | Trần Thị Kim Dung | Người lao động | Nhân viên | 1984 | 042184003677 | 0948245334 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+89 |  | Lê Viết Lâm | Người lao động | Nhân viên | 1985 | 074085001971 | 0906343364 | 06/07/2026 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+90 |  | Nguyễn Duy Bảo | Người lao động | Nhân viên | 1990 | 074090001683 | 0933708392 | 06/07/2026 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+91 |  | Nguyễn Vương Phương Tùng | Người lao động | Nhân viên | 2000 | 074200001548 | 0922899179 | 46219 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+92 |  | Nguyễn Văn Băng | Người lao động | Nhân viên | 1966 | 074066001541 | 0918723170 | 07/07/2026 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+93 |  | Nguyễn Thị Thu Thủy | Người lao động | Nhân viên | 1984 | 074184000582 | 0942844832 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+94 |  | Lý Trí Hiếu | Người lao động | Nhân viên | 1985 | 079085000335 | 0902791313 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+95 |  | Nguyễn Văn Nghị | Người lao động | Nhân viên | 1992 | 042092001805 | 0348242992 | 09/07/2026 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+96 |  | Vũ Văn Hựu | Người lao động | Nhân viên | 1980 | 036080012207 | 0932104140 | 07/07/2026 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+97 |  | Trần Xuân Trường (làm việc tại CS1) | Người lao động | Nhân viên | 1996 | 079096022785 | 0933681375 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+98 |  | Nguyễn Hữu Nghị (làm việc tại CS1) | Người lao động | Nhân viên | 1972 | 033072014654 | 0903706318 | 46238 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+99 |  | Trần Văn Cừ (làm việc tại CS1) | Người lao động | Nhân viên | 1979 | 024079007259 | 0918859396 | 26/07/2026 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+100 |  | Phan Ngọc Hưng | Người lao động | Nhân viên | 1987 | 042087007945 | 0973838131 | 06/07/2026 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+101 |  | Đặng Hoàng Dũng | Người lao động | Nhân viên | 1994 | 074094000318 | 0975753573 | 04/08/2026 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+102 |  | Nguyễn Thị Trọng Xuân | Người lao động | Nhân viên | 1982 | 074182011983 | 0917553955 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+103 |  | Nguyễn Thị Phương Thùy | Người lao động | Nhân viên | 1988 | 074188001500 | 0374578018 | 06/07/2026 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+104 |  | Nguyễn Anh Kiệt | Người lao động | Nhân viên | 1983 | 060083002871 | 0988759195 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+105 |  | Nguyễn Thành Tâm | Người lao động | Nhân viên | 1984 | 074084003842 | 0938477387 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+106 |  | Trần Minh Quân | Người lao động | Nhân viên | 1980 | 074080000966 | 0901654654 | 06/07/2026 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+107 |  | Nguyễn Hoàng Trí | Người lao động | Nhân viên | 1983 | 074083007450 | 0909113494 | 07/07/2026 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+108 |  | Võ Đăng Khoa | Người lao động | Nhân viên | 1986 | 074086008328 | 0909474404 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+109 |  | Nguyễn Thị Đông Phương | Người lao động | Nhân viên | 1982 | 052182002156 | 0908247968 | 06/07/2026 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+110 |  | Kiều Bảo Trân | Người lao động | Nhân viên | 1987 | 060187002248 | 0937370551 | 06/07/2026 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+111 |  | Lê Thanh Lâm | Người lao động | Nhân viên | 1991 | 074091007200 | 0945686068 | 08/07/2026 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+112 |  | Nguyễn Hữu Tuyết | Người lao động | Nhân viên | 1983 | 001083046288 | 0983638003 | 31/07/2026 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+113 |  | Phạm Thị Thùy Dung | Người lao động | Nhân viên | 1992 | 074192001604 | 0779148312 | 31/07/2026 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+114 |  | Phạm Thị Bích Thuận | Người lao động | Nhân viên | 1988 | 087188003786 | 0984343379 | 07/07/2026 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+ | Phòng Pháp chế và kiểm soát cải cách hành chính |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+115 |  | Đoàn Thanh Hùng | Viên chức | Phó trưởng phòng | 1978 | 074078010395 | 0918168505 | 31/07/2026 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+116 |  | Võ Văn Hiền | Viên chức | Phó trưởng phòng | 1979 | 074079003065 | 0908037637 | 06/07/2026 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+117 |  | Nguyễn Hải Hồng Hạnh | Người lao động | Nhân viên | 1984 | 074184004158 | 0985304434 | 46233 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+118 |  | Phạm Ngọc Quỳnh Như | Người lao động | Nhân viên | 2000 | 074300007749 | 0913235926 | 31/07/2026 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+119 |  | Hồ Thị Phương Dung | Người lao động | Nhân viên | 1999 | 074199005152 | 0979763774 | 31/07/2026 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+
+=== SHEET: CN23 (Kích thước: 280 hàng x 27 cột) ===
+SỞ NÔNG NGHIỆP VÀ MÔI TRƯỜNG |  |  |  |  |  | CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+THÀNH PHỐ HỒ CHÍ MINH |  |  |  |  |  | Độ lập - Tự do - Hạnh phúc |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+VĂN PHÒNG ĐĂNG KÝ ĐẤT ĐAI |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+ | DANH SÁCH VIÊN CHỨC, NGƯỜI LAO ĐỘNG ĐÃ HOÀN THÀNH 
+"CHƯƠNG TRÌNH PHỔ CẬP KỸ NĂNG SỐ DÀNH CHO VIÊN CHỨC VÀ NGƯỜI LAO ĐỘNG " 
+TRÊN NỀN TẢNG BÌNH DÂN HỌC VỤ SỐ |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+(Đính kèm Công văn số          /VPĐK-HC ngày     tháng    năm 2026 của Văn phòng đăng ký đất đai Thành phố) |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+STT | Tên đơn vị |  | Họ và tên | Nhóm đối tượng | Chức vụ | Năm sinh | CCCD | Số điện thoại | Ngày hoàn thành khóa học |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+ |  |  | Ví dụ: Nguyễn Văn A | Chỉ nhập một trong 4 giá trị: Cán bộ, Công chức, Viên chức, Người lao động | Ví dụ: Chuyên viên | 4 chữ số, ví dụ 1988 | 12 chữ số | 10 chữ số | Định dạng ngày: dd/mm/yyyy hoặc yyyy-mm-dd |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+STT | Tên đơn vị |  | Họ và tên | Nhóm đối tượng | Chức vụ | Năm sinh | CCCD | Số điện thoại | Ngày hoàn thành khóa học |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+1 | Chi nhánh số 23 | x | Nguyễn Thị Lệ Hằng | Viên chức | Phó giám đốc | 1982 | 74182013514 | 918606045 | 46234 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+2 | Chi nhánh số 23 | x | Đặng Huy Cường | Viên chức | Phó giám đốc | 1982 | 74082001909 | 913975579 | 46240 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+3 | Chi nhánh số 23 |  | Nguyễn Thành Như Bảo | Viên chức | Tổ phó 
+Tổ Đăng ký Cấp GCN | 1984 | 74184006938 | 907259775 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+4 | Chi nhánh số 23 |  | Đoàn Thị Hoàng An | Người lao động | Nhân viên | 1985 | 74185000312 | 907259775 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+5 | Chi nhánh số 23 |  | Nguyễn Duy Tấn | Người lao động | Nhân viên | 1989 | 74089005525 | 942245858 | 46223 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+6 | Chi nhánh số 23 |  | Lê Ngọc Bảo Ngân | Người lao động | Nhân viên | 1987 | 74187000969 | 985992556 | 46212 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+7 | Chi nhánh số 23 |  | Nguyễn Thị Mai | Người lao động | nhân viên | 1987 | 66187007583 | 984506056 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+8 | Chi nhánh số 23 |  | Nguyễn Thị Ngọc Thảo | Người lao động | Nhân viên | 1991 | 79191004702 | 903523534 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+9 | Chi nhánh số 23 |  | Trần Đình Siêu | Người lao động | Nhân viên | 2002 | 74202008455 | 928517724 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+10 | Chi nhánh số 23 |  | Phạm Hoàng Oanh | Người lao động | nhân viên | 1986 | 074186000948 | 982436448 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+11 | Chi nhánh số 23 |  | Nguyễn Thanh Điền | Người lao động | nhân viên | 1990 | 74090000994 | 911496161 | 46211 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+12 | Chi nhánh số 23 |  | Nguyễn Văn Khánh | Người lao động | nhân viên | 1984 | 1084041275 | 918856839 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+13 | Chi nhánh số 23 |  | Nguyễn Tiến Thịnh | Người lao động | nhân viên | 1997 | 74097008452 | 927988753 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+14 | Chi nhánh số 23 |  | Nguyễn Hoàng Tiến | Người lao động | nhân viên | 2002 | 74202004657 | 813441815 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+15 | Chi nhánh số 23 |  | Nguyễn Trung Thành | Người lao động | nhân viên | 1988 | 74088008228 | 855572555 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+16 | Chi nhánh số 23 |  | Nguyễn Thị Bích Tuyền | Người lao động | Tổ trưởng Tổ HCTH | 1982 | 70182000478 | 909736435 | 46211 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+17 | Chi nhánh số 23 |  | Hồ Lê Thanh Vũ | Người lao động | Nhân viên | 1992 | 74092001148 | 356039473 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+18 | Chi nhánh số 23 |  | Nguyễn Thị Thùy Trang | Viên chức | Tổ Trưởng Tổ ĐKCGCN | 1981 | 70181000414 | 945859956 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+19 | Chi nhánh số 23 |  | Trần Thanh Triết | Người lao động | Tổ trưởng 
+Tổ KTĐC và LT | 1981 | 89081000484 | 919266474 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+20 | Chi nhánh số 23 |  | Nguyễn Bích Ngọc | Người lao động | Nhân viên | 1984 | 74184029295 | 909409961 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+21 | Chi nhánh số 23 |  | Phạm Nguyễn Lan Anh | Người lao động | Nhân viên | 1986 | 74186001229 | 933991003 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+22 | Chi nhánh số 23 |  | Nguyễn Thị Dáng | Người lao động | Nhân viên | 1983 | 30183016846 | 937496139 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+23 | Chi nhánh số 23 |  | Đỗ Thị Yến | Người lao động | Nhân viên | 1993 | 38193048288 | 387805470 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+24 | Chi nhánh số 23 |  | Phạm Thị Yến Nhi | Người lao động | Nhân viên | 1984 | 74184007130 | 918047179 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+25 | Chi nhánh số 23 |  | Hoàng Minh Tú | Người lao động | Nhân viên | 1993 | 74093005624 | 914645945 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+26 | Chi nhánh số 23 |  | Trần Thị Thùy Trang | Người lao động | Nhân viên | 1990 | 74190008803 | 917339468 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+27 | Chi nhánh số 23 |  | Trần Nguyễn Hoài Lam | Người lao động | Nhân viên | 1984 | 74184005637 | 916646669 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+28 | Chi nhánh số 23 |  | Nguyễn Anh Khôi | Người lao động | Nhân viên | 2002 | 74202003866 | 395780608 | 46212 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+29 | Chi nhánh số 23 |  | Đoàn Văn Sang | Người lao động | Nhân viên | 1986 | 74086005188 | 974118474 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+30 | Chi nhánh số 23 |  | Hồ Thị Hồng Linh | Người lao động | Tổ phó Tổ HCTH | 1984 | 83184009837 | 906395984 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+31 | Chi nhánh số 23 |  | Vương Ánh Xuân | Người lao động | Nhân viên | 1989 | 74189007529 | 945004594 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+32 | Chi nhánh số 23 |  | Nguyễn Thảo Tuyết Nhi | Người lao động | Nhân viên | 1999 | 70199005001 | 342242523 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+33 | Chi nhánh số 23 |  | Nguyễn Khánh Duy | Người lao động | Nhân viên | 1997 | 74097004501 | 902373837 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+34 | Chi nhánh số 23 |  | Nguyễn Thị Thu Minh | Viên chức | Tổ phó
+Tổ Đăng ký Cấp GCN | 1981 | 60181004687 | 917711148 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+35 | Chi nhánh số 23 | x | Huỳnh Thành Duy | Người lao động | Nhân viên | 1992 | 74092001090 | 815433332 | 46211 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+36 | Chi nhánh số 23 |  | Nguyễn Trần Thảo Vy | Người lao động | Nhân viên | 1990 | 79190029572 | 786186199 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+37 | Chi nhánh số 23 |  | Nguyễn Hoàng Xuân | Người lao động | Nhân viên | 1984 | 74084026863 | 913789990 | 46211 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+38 | Chi nhánh số 23 |  | Phạm Minh Trí | Người lao động | Nhân viên | 1984 | 74084003392 | 839676646 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+39 | Chi nhánh số 23 |  | Ngô Thị Cẩm Thúy | Người lao động | Nhân viên | 1980 | 74180001297 | 909364549 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+40 | Chi nhánh số 23 |  | Trương Ngô Hồng Duyên | Người lao động | Nhân viên | 2000 | 74300000890 | 961395817 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+41 | Chi nhánh số 23 |  | Huỳnh Tấn Nguyên | Người lao động | Tổ phó 
+Tổ Đăng ký & Cấp GCN | 1984 | 74084006084 | 909195709 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+42 | Chi nhánh số 23 |  | Nguyễn Thị Lệ Thu | Người lao động | Nhân viên | 1981 | 51181020203 | 974751752 | 46220 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+43 | Chi nhánh số 23 |  | Nguyễn Tuấn Anh | Người lao động | Nhân viên | 1995 | 74095007388 | 795300995 | 46213 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+44 | Chi nhánh số 23 |  | Phạm Thành Vũ | Người lao động | Nhân viên | 1989 | 89089005666 | 972888838 | 46211 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+45 | Chi nhánh số 23 |  | Nguyễn Thị Ngọc Trản | Người lao động | Nhân viên | 1982 | 74182004180 | 903052099 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+46 | Chi nhánh số 23 |  | Quản Nguyễn Thảo Nguyên | Người lao động | Nhân viên | 2000 | 74300000239 | 335817578 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+47 | Chi nhánh số 23 |  | Phạm Trần Hồng Như | Người lao động | Nhân viên | 1980 | 74180008326 | 909348840 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+48 | Chi nhánh số 23 |  | Trần Quốc Hưng | Người lao động | Nhân viên | 1983 | 74083003636 | 917540409 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+49 | Chi nhánh số 23 |  | Võ Phi Trúc | Viên chức | Kế toán viên | 1978 | 74178009735 | 919037479 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+50 | Chi nhánh số 23 |  | Nguyễn Thị Huỳnh Mai | Người lao động | Nhân viên | 1984 | 74184000428 | 983771739 | 46211 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+51 | Chi nhánh số 23 |  | Đặng Thị Tuyết Trinh | Người lao động | Tổ phó 
+Tổ KTĐC và Lưu trữ | 1994 | 46194012557 | 334505304 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+52 | Chi nhánh số 23 |  | Nguyễn Hoàng Duy | Người lao động | Người lao động | 1972 | 74072008426 | 918352101 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+53 | Chi nhánh số 23 |  | Lê Thị Phương Mai | Người lao động | Người lao động | 1984 | 74184000430 | 972709729 | 46213 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+54 | Chi nhánh số 23 |  | Nguyễn Nhật Quyền Trinh | Người lao động | Người lao động | 1996 | 74196001328 | 839655449 | 46213 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+55 | Chi nhánh số 23 |  | Lê Sơn Thanh | Người lao động | Nhân viên | 1989 | 74189008338 | 947810655 | 46211 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+56 | Chi nhánh số 23 |  | Huỳnh Thị Ái Nhi | Người lao động | Nhân viên | 1997 | 52197013121 | 964610889 | 46213 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+57 | Chi nhánh số 23 | x | Lý Minh Tân | Người Lao Động | Tổ phó 
+Tổ KTĐC và Lưu trữ | 1984 | 74084008297 | 934043647 | 46234 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+58 | Chi nhánh số 23 |  | Đoàn Thanh Phong | Người Lao Động | Nhân viên | 1996 | 74096005075 | 373445790 | 46234 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+59 | Chi nhánh số 23 |  | Bùi Thị Minh Nguyệt | Viên chức | Tổ phó Tổ HCTH | 1982 | 74182013628 | 918983455 | 46234 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+60 | Chi nhánh số 23 |  | Tạ Nguyễn Bích Trang | Người Lao Động | Nhân viên | 1989 | 74189001179 | 938940303 | 46234 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+61 | Chi nhánh số 23 |  | Lê Quang Khoa | Người Lao Động | Nhân viên | 1993 | 87093014630 | 918949878 | 46211 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+62 | Chi nhánh số 23 |  | Phan Trọng Hiệp | Người Lao Động | Nhân viên | 1979 | 40079007604 | 949309399 | 46221 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+63 | Chi nhánh số 23 |  | Nguyễn Thị Trúc Phương | Người Lao Động | Nhân viên | 1989 | 74189007600 | 917624629 | 46234 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+64 | Chi nhánh số 23 |  | Ân Văn Tuấn | Người Lao Động | Nhân viên | 1982 | 74082007752 | 978945739 | 46234 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+65 | Chi nhánh số 23 |  | Lê Thị Thùy Duyên | Người Lao Động | Nhân viên | 1992 | 74192006524 | 936688880 | 46214 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+66 | Chi nhánh số 23 | x | Nguyễn Thanh Sang | Người lao động | Nhân viên | 1982 | 74082000355 | 906488008 | 46238 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+67 | Chi nhánh số 23 |  | Nguyễn Quốc Danh | Người Lao Động | Nhân viên | 1994 | 74094004258 | 963252038 | 46211 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+68 | Chi nhánh số 23 |  | Nguyễn Tuấn Kiệt | Người Lao Động | Nhân viên | 1997 | 74097007620 | 868644860 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+69 | Chi nhánh số 23 | x | Lưu Văn Tuấn | Người Lao Động | Nhân viên | 1984 | 74084010128 | 909912281 | 46240 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+70 | Chi nhánh số 23 |  | Phạm Minh Hoàng | Người Lao Động | Nhân viên | 1986 | 74086002733 | 977000369 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+
+=== SHEET: CN24 (Kích thước: 999 hàng x 26 cột) ===
+ |  |  |  |  | CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+THÀNH PHỐ HỒ CHÍ MINH |  |  |  |  | Độ lập - Tự do - Hạnh phúc |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+VĂN PHÒNG ĐĂNG KÝ ĐẤT ĐAI |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+ | DANH SÁCH VIÊN CHỨC, NGƯỜI LAO ĐỘNG ĐÃ HOÀN THÀNH 
+"CHƯƠNG TRÌNH PHỔ CẬP KỸ NĂNG SỐ DÀNH CHO VIÊN CHỨC VÀ NGƯỜI LAO ĐỘNG " 
+TRÊN NỀN TẢNG BÌNH DÂN HỌC VỤ SỐ |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+(Đính kèm Công văn số          /VPĐK-HC ngày     tháng    năm 2026 của Văn phòng đăng ký đất đai Thành phố) |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+STT | Tên đơn vị | Họ và tên | Nhóm đối tượng | Chức vụ | Năm sinh | CCCD | Số điện thoại | Ngày hoàn thành khóa học |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+ |  | Ví dụ: Nguyễn Văn A | Chỉ nhập một trong 4 giá trị: Cán bộ, Công chức, Viên chức, Người lao động | Ví dụ: Chuyên viên | 4 chữ số, ví dụ 1988 | 12 chữ số | 10 chữ số | Định dạng ngày: dd/mm/yyyy hoặc yyyy-mm-dd |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+1 | Chi nhánh số 24 | Nguyễn Hà Minh Thành | Viên chức | Giám đốc | 1976 | 083076014702 | 0913631355 | 46254 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+2 | Chi nhánh số 24 | Lê Minh Hiếu | Viên chức | Phó Giám đốc | 1977 | 074077006815 | 0903940244 | 46259 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+3 | Chi nhánh số 24 | Nguyễn Thị Chinh | Viên chức | Phó Giám đốc | 1976 | 074176005944 | 0915511186 | 46258 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+4 | Chi nhánh số 24 | Trần Thanh Phong | Viên chức | Chuyên viên | 1980 | 074080004489 | 0919562696 | 46251 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+5 | Chi nhánh số 24 | Trần Bảo Lộc | Người lao động | Nhân viên | 1990 | 80090020384 | 0948878339 | 46248 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+6 | Chi nhánh số 24 | Võ Minh Hùng | Người lao động | Nhân viên | 1989 | 074089010156 | 983449526 | 46258 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+7 | Chi nhánh số 24 | Lê Minh Nguyệt | Người lao động | Nhân viên | 1987 | 079187002752 | 0935700388 | 46256 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+8 | Chi nhánh số 24 | Trần Đức Long | Người lao động | Nhân viên | 1977 | 035077007535 | 0947833128 | 46235 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+9 | Chi nhánh số 24 | Nguyễn Thanh Sang | Người lao động | Nhân viên | 1995 | 074095004216 | 0397774135 | 46257 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+10 | Chi nhánh số 24 | Nguyễn Hữu Huy | Người lao động | Nhân viên | 1982 | 54082011216 | 0989444432 | 46245 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+11 | Chi nhánh số 24 | Phạm Thùy Pha Lê | Người lao động | Nhân viên | 1989 | 054189008869 | 0396078858 | 46224 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+12 | Chi nhánh số 24 | Trần Thị Huyền Diễm | Người lao động | Nhân viên | 1990 | 060190014048 | 973582738 | 46224 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+13 | Chi nhánh số 24 | Vũ Thúy Hiền | Người lao động | Nhân viên | 1996 | 019196010470 | 0326300388 | 46228 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+14 | Chi nhánh số 24 | Thái Văn Hoài | Viên chức | Nhân viên | 1983 | 60083009697 | 985375696 | 46253 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+15 | Chi nhánh số 24 | Lê Ngọc Trà My | Người lao động | Nhân viên | 1988 | 074188005833 | 0908886171 | 2026-08-14 00:00:00 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+16 | Chi nhánh số 24 | Phạm Thị Hòa | Người lao động | Nhân viên | 1985 | 074185007496 | 0938594648 | 46245 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+17 | Chi nhánh số 24 | Nguyễn Thị Tâm | Người lao động | Nhân viên | 1977 | 040177004523 | 0988046359 | 46216 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+18 | Chi nhánh số 24 | Phan Văn Son | Người lao động | Nhân viên | 1992 | 074092006158 | 0976517826 | 46253 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+19 | Chi nhánh số 24 | Lê Thị Song Hằng | Người lao động | Nhân viên | 1989 | 074189004740 | 0987273479 | 46255 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+20 | Chi nhánh số 24 | Đào Duy Thanh Trúc | Người lao động | Nhân viên | 1993 | 074193008033 | 0382160291 | 46211 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+21 | Chi nhánh số 24 | Trương Hoàng Tuấn | Người lao động | Nhân viên | 1994 | 074094004210 | 0947857164 | 46254 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+22 | Chi nhánh số 24 | Võ Ngọc Trà My | Người lao động | Nhân viên | 1996 | 080196011774 | 0378879880 | 46250 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+23 | Chi nhánh số 24 | Trần Thị Cẩm Nhung | Người lao động | Nhân viên | 1988 | 74188010376 | 0979224045 | 46231 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+24 | Chi nhánh số 24 | Nguyễn Văn Linh | Người lao động | Nhân viên | 1994 | 040094021790 | 0869231237 | 46216 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+25 | Chi nhánh số 24 | Lê Hoàng Yến | Người lao động | Nhân viên | 1993 | 079193032377 | 0356995487 | 46212 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+26 | Chi nhánh số 24 | Nguyễn Thị Thanh Tuyền | Người lao động | Nhân viên | 1991 | 074191001056 | 0937327232 | 46234 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+27 | Chi nhánh số 24 | Trần Thị Tuyết Nhung | Người lao động | Nhân viên | 1987 | 080187009971 | 0909534327 | 46244 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+28 | Chi nhánh số 24 | Nguyễn Thị Xuân Lan | Người lao động | Nhân viên | 1984 | 074184005693 | 0918884594 | 46258 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+29 | Chi nhánh số 24 | Phan Chí Thắng | Người lao động | Nhân viên | 1994 | 042094007366 | 0977562433 | 46232 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+30 | Chi nhánh số 24 | Lê Kim Anh | Người lao động | Nhân viên | 1983 | 074183003291 | 0982246339 | 46257 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+31 | Chi nhánh số 24 | Đoàn Tấn Phát | Người lao động | Nhân viên | 1996 | 079096031328 | 0376636108 | 46256 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+32 | Chi nhánh số 24 | Đỗ Quốc Thái | Người lao động | Nhân viên | 1984 | 83084015043 | 936233624 | 46255 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+33 | Chi nhánh số 24 | Trần Thị Thu Cúc | Người lao động | nhân viên | 1987 | 82187023322 | 934113185 | 46253 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+34 | Chi nhánh số 24 | Đào Duy Phúc | Người lao động | nhân viên | 1989 | 083090012342 | 0989799791 | 46253 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+35 | Chi nhánh số 24 | Trần Thanh Hên | Người lao động | nhân viên | 1969 | 87069017347 | 906030656 | 46255 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+36 | Chi nhánh số 24 | Nguyễn Tuấn Dũng | Người lao động | nhân viên | 1983 | 79083029761 | 777797768 | 46254 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+37 | Chi nhánh số 24 | Bùi Hồng Nam | Người lao động | Nhân viên | 1977 | 1077070915 | 913887738 | 46217 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+38 | Chi nhánh số 24 | Lê Minh Chung | Người lao động | Nhân viên | 1987 | 38087027603 | 934402773 | 46255 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+39 | Chi nhánh số 24 | Trần Văn Thưởng | Người lao động | Nhân viên | 1983 | 64083003079 | 0975869286 | 46238 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+40 | Chi nhánh số 24 | Đinh Hoàng Vinh | Người lao động | Nhân viên | 1995 | 092095005009 | 0935792795 | 46227 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+41 | Chi nhánh số 24 | Trần Ngọc Hoàng | Người lao động | Nhân viên | 1987 | 046087019123 | 0901563923 | 46254 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+42 | Chi nhánh số 24 | Huỳnh Trương Thanh Thủy | Người lao động | Nhân viên | 1993 | 74193005686 | 972325002 | 46211 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+43 | Chi nhánh số 24 | Nguyễn Thế Thu | Người lao động | Nhân viên | 1984 | 70084005986 | 0963227095 | 46234 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+44 | Chi nhánh số 24 | Nguyễn Đình Hoàng | Người lao động | Nhân viên | 1989 | 40089030274 | 0979128295 | 46248 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+45 | Chi nhánh số 24 | Phạm Duy Khanh | Người lao động | Nhân viên | 1999 | 75099002660 | 0921423244 | 46253 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+46 | Chi nhánh số 24 | Trần Thị Mỹ Châu | Người lao động | Nhân viên | 1987 | 75187006312 | 0987079879 | 46253 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+47 | Chi nhánh số 24 | Trương Ngọc Lâm | Người lao động | Nhân viên | 1985 | 075085017532 | 0978314567 | 46225 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+48 | Chi nhánh số 24 | Trần Thị Cẩm Vân | Người lao động | Nhân viên | 1985 | 086185005434 | 0379086206 | 46238 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+49 | Chi nhánh số 24 | Lê Đức Quế | Người lao động | Nhân viên | 1970 | 42070004298 | 0582653939 | 46241 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+50 | Chi nhánh số 24 | Nguyễn Thị Quỳnh Oanh | Người lao động | Nhân viên | 1987 | 066187016163 | 0905482651 | 46245 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+51 | Chi nhánh số 24 | Trần Thị Cẩm Thúy | Người lao động | Nhân viên | 1988 | 074188006725 | 0362337437 | 46234 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+52 | Chi nhánh số 24 | Phạm Thị Trang | Người lao động | Nhân viên | 1988 | 074188007998 | 0914641631 | 46254 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+53 | Chi nhánh số 24 | Lê Thị Thùy Dương | Người lao động | Nhân viên | 1993 | 074193040103 | 0937057003 | 46254 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+54 | Chi nhánh số 24 | Nguyễn Thị Thùy Trang | Người lao động | Nhân viên | 1992 | 070192005638 | 0395512024 | 46250 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+55 | Chi nhánh số 24 | Phạm Thị Yến | Người lao động | Nhân viên | 1995 | 034195008995 | 0972694059 | 46254 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+56 | Chi nhánh số 24 | Nguyễn Quốc Trung | Người lao động | Nhân viên | 1977 | 56077000022 | 919528819 | 46258 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+57 | Chi nhánh số 24 | Phan Thanh Huân | Người lao động | Nhân viên | 1991 | 46091002438 | 988559930 | 46253 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+58 | Chi nhánh số 24 | Bùi Thị Ngọc Xuân | Người lao động | Nhân viên | 1989 | 074189007597 | 0938111088 | 46253 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+59 | Chi nhánh số 24 | Nguyễn Long Hải | Người lao động | Nhân viên | 1991 | 74091004400 | 982463600 | 46253 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+60 | Chi nhánh số 24 | Cao Văn Thu | Người lao động | Nhân viên | 1979 | 82079001556 | 0919928428 | 46253 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+61 | Chi nhánh số 24 | Nguyễn Lê Hoàng Anh | Người lao động | Nhân viên | 1989 | 74089001925 | 0902052922 | 46258 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+62 | Chi nhánh số 24 | Nguyễn Thanh Trung | Người lao động | Nhân viên | 1988 | 74088001574 | 976733992 | 46253 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+63 | Chi nhánh số 24 | Đào Anh Tú | Người lao động | Nhân viên | 1991 | 79091015297 | 919658659 | 46253 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+64 | Chi nhánh số 24 | Hồ Thế Hạnh | Người lao động | Nhân viên | 1976 | 042076020910 | 0918746527 | 46221 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+
+=== SHEET: CN25 (Kích thước: 259 hàng x 26 cột) ===
+ |  |  |  |  | CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+THÀNH PHỐ HỒ CHÍ MINH |  |  |  |  | Độ lập - Tự do - Hạnh phúc |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+VĂN PHÒNG ĐĂNG KÝ ĐẤT ĐAI |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+ | DANH SÁCH VIÊN CHỨC, NGƯỜI LAO ĐỘNG ĐÃ HOÀN THÀNH 
+"CHƯƠNG TRÌNH PHỔ CẬP KỸ NĂNG SỐ DÀNH CHO VIÊN CHỨC VÀ NGƯỜI LAO ĐỘNG " 
+TRÊN NỀN TẢNG BÌNH DÂN HỌC VỤ SỐ |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+(Đính kèm Công văn số          /VPĐK-HC ngày     tháng    năm 2026 của Văn phòng đăng ký đất đai Thành phố) |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+STT | Tên đơn vị | Họ và tên | Nhóm đối tượng | Chức vụ | Năm sinh | CCCD | Số điện thoại | Ngày hoàn thành khóa học |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+ |  | Ví dụ: Nguyễn Văn A | Chỉ nhập một trong 4 giá trị: Cán bộ, Công chức, Viên chức, Người lao động | Ví dụ: Chuyên viên | 4 chữ số, ví dụ 1988 | 12 chữ số | 10 chữ số | Định dạng ngày: dd/mm/yyyy hoặc yyyy-mm-dd |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+1 | Chi nhánh số 25 | Đỗ Thị Hồng Nhung | Viên chức | Giám đốc | 1976 | 074176002190 | 0918157838 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+2 | Chi nhánh số 25 | Ngô Thị Bích Huyền | Viên chức | Phó Giám đốc | 1980 | 074180000343 | 0918237023 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+3 | Chi nhánh số 25 | Phạm Minh Huy Hoàng | Viên chức | Phó Giám đốc | 1987 | 074087000247 | 0985066191 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+4 | Chi nhánh số 25 | Võ Thị Nga | Viên chức | địa chính viên hạng III | 1982 | 051182000817 | 0982289870 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+5 | Chi nhánh số 25 | Phạm Ngọc Giàu | Người lao động | Nhân viên | 1986 | 087186019383 | 0772591368 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+6 | Chi nhánh số 25 | Lê Thị Mai Phương | Người lao động | Nhân viên | 1988 | 083188016427 | 0938213259 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+7 | Chi nhánh số 25 | Nguyễn Ngọc Nga | Người lao động | Nhân viên | 1993 | 074193000092 | 0393721079 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+8 | Chi nhánh số 25 | Phan Thị Ngọc Loan | Người lao động | Nhân viên | 1995 | 066195016461 | 0976943339 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+9 | Chi nhánh số 25 | Trần Việt Thắng | Người lao động | Nhân viên | 1989 | 074089016910 | 0984517590 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+10 | Chi nhánh số 25 | Nguyễn Khắc Huy | Người lao động | Nhân viên | 2001 | 086201004570 | 0784871007 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+11 | Chi nhánh số 25 | Phan Thành Phát | Người lao động | Nhân viên | 2000 | 074200001299 | 0349860095 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+12 | Chi nhánh số 25 | Nguyễn Thành Nhân | Người lao động | Nhân viên | 2002 | 074202002114 | 0339738756 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+13 | Chi nhánh số 25 | Mai Thị Yến Nhi | Người lao động | Nhân viên | 1984 | 074184000375 | 0907655784 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+14 | Chi nhánh số 25 | Hoàng Văn Bé | Người lao động | Nhân viên | 1994 | 067094003330 | 0984861649 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+15 | Chi nhánh số 25 | Phạm Hoàng Kim Quý | Người lao động | Nhân viên | 1992 | 074192000241 | 0908494657 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+16 | Chi nhánh số 25 | Nguyễn Thị Tuyết Minh | Người lao động | Nhân viên | 1985 | 074185000425 | 0987456742 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+17 | Chi nhánh số 25 | Lê Thị Ngọc Oanh | Người lao động | Nhân viên | 1988 | 070188003991 | 0902649394 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+18 | Chi nhánh số 25 | Lê Trần Duy Bảo | Người lao động | Nhân viên | 1996 | 074096000155 | 0962683743 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+19 | Chi nhánh số 25 | Nguyễn Thị Thanh Loan | Viên chức | Đo đạc bản đồ viên hạng III | 1988 | 066188015383 | 0933884167 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+20 | Chi nhánh số 25 | Nguyễn Công Trí | Người lao động | Nhân viên | 1987 | 051087000612 | 0932038599 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+21 | Chi nhánh số 25 | Nguyễn Văn Quyết | Người lao động | Nhân viên | 1971 | 001071032461 | 0913969903 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+22 | Chi nhánh số 25 | Trần Trung Hiếu | Người lao động | Nhân viên | 1994 | 083094000271 | 0977781159 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+23 | Chi nhánh số 25 | Huỳnh Quốc Công | Người lao động | Nhân viên | 1980 | 079080028138 | 0985628739 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+24 | Chi nhánh số 25 | Mai Phước Tín | Người lao động | Nhân viên | 1981 | 074081000281 | 0913065216 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+25 | Chi nhánh số 25 | Võ Bá Dương | Người lao động | Nhân viên | 1981 | 051081000674 | 0967915678 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+26 | Chi nhánh số 25 | Võ Hoàng Anh | Người lao động | Nhân viên | 1989 | 074089000219 | 0932757892 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+27 | Chi nhánh số 25 | Phạm Phước Nhân | Người lao động | Nhân viên | 1994 | 074094000165 | 0367844800 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+28 | Chi nhánh số 25 | Nguyễn Quang Đại | Người lao động | Nhân viên | 1995 | 038095017279 | 0975685201 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+29 | Chi nhánh số 25 | Nguyễn Công Lợi | Người lao động | Nhân viên | 1996 | 070096009972 | 0912884823 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+30 | Chi nhánh số 25 | Nguyễn Thành Công | Người lao động | Nhân viên | 1982 | 074082011830 | 0988907159 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+31 | Chi nhánh số 25 | Nguyễn Gia Lộc | Người lao động | Nhân viên | 1986 | 083086002099 | 0965688388 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+32 | Chi nhánh số 25 | Lê Thị Ngọc Thu | Người lao động | Nhân viên | 1995 | 064195001176 | 0903937492 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+33 | Chi nhánh số 25 | Nguyễn Thanh Thúy Ngọc | Người lao động | Nhân viên | 2002 | 054302007085 | 0345532774 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+34 | Chi nhánh số 25 | Huỳnh Thị Phi Vân | Người lao động | Nhân viên | 2001 | 074301006392 | 0398037724 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+35 | Chi nhánh số 25 | Lê Đức Trọng | Người lao động | Nhân viên | 2003 | 035203000761 | 0358594932 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+36 | Chi nhánh số 25 | Nguyễn Thị Kim Phụng | Người lao động | Nhân viên | 2002 | 083302006303 | 0383818821 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+37 | Chi nhánh số 25 | Trịnh Thị Yến | Người lao động | Nhân viên | 1996 | 038196009558 | 0397841266 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+38 | Chi nhánh số 25 | Hồ Thị Thanh Phượng | Người lao động | Nhân viên | 1995 | 074195006894 | 0939681568 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+39 | Chi nhánh số 25 | Nguyễn Xuân Khương | Người lao động | Nhân viên | 1999 | 074199000138 | 0335706779 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+40 | Chi nhánh số 25 | Trương Phúc Luân | Người lao động | Nhân viên | 1999 | 074099001936 | 0961830201 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+41 | Chi nhánh số 25 | Nguyễn Thu Hiền | Người lao động | Nhân viên | 1991 | 060191008696 | 0369160291 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+42 | Chi nhánh số 25 | Nguyễn Thị Điệp | Người lao động | Nhân viên | 1999 | 054199006034 | 0376771937 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+43 | Chi nhánh số 25 | Võ Thị Nhã Trúc | Người lao động | Nhân viên | 1994 | 052194008111 | 0364843739 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+44 | Chi nhánh số 25 | Nguyễn Thị Thảo Nguyên | Người lao động | Nhân viên | 1987 | 064187008654 | 0935620936 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+45 | Chi nhánh số 25 | Lê Thị Xuân Xanh | Người lao động | Nhân viên | 1990 | 051190004095 | 0972299375 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+46 | Chi nhánh số 25 | Nguyễn Văn Đệ | Người lao động | Nhân viên | 1999 | 074099066996 | 0373461611 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+47 | Chi nhánh số 25 | Đào Quang Linh | Người lao động | Nhân viên | 1994 | 036094008710 | 0835166570 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+48 | Chi nhánh số 25 | Bùi Thị Hương | Người lao động | Nhân viên | 1988 | 040188038982 | 0343257489 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+49 | Chi nhánh số 25 | Nguyễn Tuyết Nhung | Người lao động | Nhân viên | 1998 | 074198004400 | 0777965726 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+50 | Chi nhánh số 25 | Hồ Thị Khương | Người lao động | Nhân viên | 1986 | 079186028633 | 0971988237 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+
+=== SHEET: CN26 (Kích thước: 284 hàng x 26 cột) ===
+SỞ NÔNG NGHIỆP VÀ MÔI TRƯỜNG |  |  |  |  | CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+THÀNH PHỐ HỒ CHÍ MINH |  |  |  |  | Độ lập - Tự do - Hạnh phúc |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+VĂN PHÒNG ĐĂNG KÝ ĐẤT ĐAI |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+ | DANH SÁCH VIÊN CHỨC, NGƯỜI LAO ĐỘNG ĐÃ HOÀN THÀNH 
+"CHƯƠNG TRÌNH PHỔ CẬP KỸ NĂNG SỐ DÀNH CHO VIÊN CHỨC VÀ NGƯỜI LAO ĐỘNG " 
+TRÊN NỀN TẢNG BÌNH DÂN HỌC VỤ SỐ |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+(Đính kèm Công văn số          /VPĐK-HC ngày     tháng    năm 2026 của Văn phòng đăng ký đất đai Thành phố) |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+STT | Tên đơn vị | Họ và tên | Nhóm đối tượng | Chức vụ | Năm sinh | CCCD | Số điện thoại | Ngày hoàn thành khóa học |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+ |  | Ví dụ: Nguyễn Văn A | Chỉ nhập một trong 4 giá trị: Cán bộ, Công chức, Viên chức, Người lao động | Ví dụ: Chuyên viên | 4 chữ số, ví dụ 1988 | 12 chữ số | 10 chữ số | Định dạng ngày: dd/mm/yyyy hoặc yyyy-mm-dd |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+1 | Chi nhánh Văn phòng đăng ký đất đai số 26 | Võ Phi Hải | Viên chức | Giám đốc | 1979 | 074079001644 | 0913799442 | 46217 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+2 | Chi nhánh Văn phòng đăng ký đất đai số 26 | Nguyễn Thị Thanh Thúy | Viên chức | Phó Giám đốc | 1983 | 074183010275 | 0916738647 | 46214 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+3 | Chi nhánh Văn phòng đăng ký đất đai số 26 | Nguyễn Trung Bình | Viên chức | Phó Giám đốc | 1978 | 74078011471 | 0918168535 | 46212 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+4 | Chi nhánh Văn phòng đăng ký đất đai số 26 | Võ Hồng Hạnh | Viên chức | Chuyên viên | 1976 | 074176006168 | 0906659658 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+5 | Chi nhánh Văn phòng đăng ký đất đai số 26 | Lê Võ Như Ngọc | Người lao động | Nhân viên | 1988 | 074188007025 | 0909100735 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+6 | Chi nhánh Văn phòng đăng ký đất đai số 26 | Nguyễn Thị Kim Thoa | Viên chức | Tổ trưởng Tổ Đăng ký và cấp Giấy chứng nhận | 1987 | 074187006428 | 0943760879 | 09/7/2026 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+7 | Chi nhánh Văn phòng đăng ký đất đai số 26 | Nguyễn Thị Hương Lan | Người lao động | Tổ phó tổ Đăng ký và cấp Giấy chứng nhận | 1982 | 075182007818 | 0838014512 | 46212 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+8 | Chi nhánh Văn phòng đăng ký đất đai số 26 | Nguyễn Thành Trí | Người lao động | Tổ phó tổ Đăng ký và cấp Giấy chứng nhận | 1991 | 080091008803 | 0979559101 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+9 | Chi nhánh Văn phòng đăng ký đất đai số 26 | Dương Công Trí | Viên chức | Tổ trưởng Tổ Kỹ thuật địa chính và lưu trữ | 1978 | 074078011709 | 0903156382 | 46211 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+10 | Chi nhánh Văn phòng đăng ký đất đai số 26 | Thân Thị Cẩm | Viên chức | Tổ phó tổ Kỹ Thuật Địa chính và Lưu Trữ | 1979 | 042179008451 | 0916698630 | 46213 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+11 | Chi nhánh Văn phòng đăng ký đất đai số 26 | Lê Tính Tiền | Người lao động | Tổ phó tổ Kỹ Thuật Địa chính và Lưu Trữ | 1983 | 74083006921 | 0943760839 | 09/7/2026 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+12 | Chi nhánh Văn phòng đăng ký đất đai số 26 | Lê Văn Sáng | Người lao động | Tổ phó tổ Kỹ Thuật Địa chính và Lưu Trữ | 1981 | 038081034254 | 0888358359 | 46211 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+13 | Chi nhánh Văn phòng đăng ký đất đai số 26 | Phạm Trung Nhân | Người lao động | Nhân viên | 1983 | 074083006205 | 0938923939 | 46220 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+14 | Chi nhánh Văn phòng đăng ký đất đai số 26 | Ngô Ngọc Châu | Người lao động | Nhân viên | 1982 | 074182010858 | 0918983553 | 46211 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+15 | Chi nhánh Văn phòng đăng ký đất đai số 26 | Lê Thị Xuân Thu | Người lao động | Nhân viên | 1989 | 074189003481 | 0938463896 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+16 | Chi nhánh Văn phòng đăng ký đất đai số 26 | Hồ Mộng Loan | Người lao động | Nhân viên | 1989 | 074189000417 | 0379690837 | 46211 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+17 | Chi nhánh Văn phòng đăng ký đất đai số 26 | Bùi Thanh Tòng | Người lao động | Nhân viên | 1996 | 074096006930 | 0964742341 | 46211 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+18 | Chi nhánh Văn phòng đăng ký đất đai số 26 | Nguyễn Minh Tú | Người lao động | Nhân viên | 1996 | 030096004312 | 032630774 | 46217 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+19 | Chi nhánh Văn phòng đăng ký đất đai số 26 | Bùi Ngọc Hằng | Người lao động | Nhân viên | 1999 | 074199001472 | 0969000532 | 46211 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+20 | Chi nhánh Văn phòng đăng ký đất đai số 26 | Phạm Văn Hạnh | Người lao động | Nhân viên | 1982 | 034082004589 | 0938605669 | 46218 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+21 | Chi nhánh Văn phòng đăng ký đất đai số 26 | Nguyễn Viết Minh | Người lao động | Nhân viên | 1977 | 038077028000 | 0985655572 | 07/7/2026 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+22 | Chi nhánh Văn phòng đăng ký đất đai số 26 | Nguyễn Thị Ánh Trúc | Người lao động | Nhân Viên | 1986 | 074186006706 | 967226949 | 46212 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+23 | Chi nhánh Văn phòng đăng ký đất đai số 26 | Nguyễn Thị Minh Trang | Người lao động | Nhân viên | 1987 | 077187009440 | 0988632734 | 07/07/2026 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+24 | Chi nhánh Văn phòng đăng ký đất đai số 26 | Trần Thanh Hương | Người lao động | Nhân viên | 1986 | 074186008092 | 0978168222 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+25 | Chi nhánh Văn phòng đăng ký đất đai số 26 | Nguyễn Ngọc Nhi | Người lao động | Nhân viên | 1992 | 074192007973 | 0345008880 | 07/07/2026 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+26 | Chi nhánh Văn phòng đăng ký đất đai số 26 | Nguyễn Hoàng Thơ | Người lao động | Nhân viên | 1994 | 074194007504 | 0372424211 | 07/7/2026 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+27 | Chi nhánh Văn phòng đăng ký đất đai số 26 | Bùi Chí Công | Người lao động | Nhân viên | 1988 | 074088009039 | 0918405099 | 46217 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+28 | Chi nhánh Văn phòng đăng ký đất đai số 26 | Vũ Văn Thủy | Người lao động | Nhân viên | 1989 | 030089017801 | 0819522468 | 46211 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+29 | Chi nhánh Văn phòng đăng ký đất đai số 26 | Lý Hữu Minh Tân | Người lao động | Nhân viên | 1996 | 049096002373 | 0989442471 | 46219 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+30 | Chi nhánh Văn phòng đăng ký đất đai số 26 | Võ Minh Luân | Người lao động | Nhân viên | 1984 | 074084006449 | 0911556779 | 46211 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+31 | Chi nhánh Văn phòng đăng ký đất đai số 26 | Trần Minh Nhựt | Người lao động | Nhân viên | 1986 | 074086008284 | 0938117771 | 46216 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+32 | Chi nhánh Văn phòng đăng ký đất đai số 26 | Trần Thanh Tâm | Người lao động | Nhân viên | 1987 | 074087000827 | 0986222287 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+33 | Chi nhánh Văn phòng đăng ký đất đai số 26 | Nguyễn Nhật Trường | Người lao động | Nhân viên | 1987 | 074087006936 | 0988365539 | 06/072026 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+34 | Chi nhánh Văn phòng đăng ký đất đai số 26 | Nguyễn Mộng Ái Uyên | Người lao động | Nhân viên | 1985 | 074185010163 | 0352985649 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+35 | Chi nhánh Văn phòng đăng ký đất đai số 26 | Thân Thị Lan | Người lao động | Nhân viên | 1979 | 42179015481 | 0358242813 | 46218 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+36 | Chi nhánh Văn phòng đăng ký đất đai số 26 | Võ Văn Nhớ | Người lao động | Nhân viên | 1992 | 070092011444 | 0982777616 | 46218 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+37 | Chi nhánh Văn phòng đăng ký đất đai số 26 | Lê Văn Phương | Người lao động | Nhân viên | 1982 | 074082002419 | 0906814560 | 46211 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+38 | Chi nhánh Văn phòng đăng ký đất đai số 26 | Lê Thị Quỳnh Trang | Người lao động | Nhân viên | 1990 | 074190008138 | 0938350945 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+39 | Chi nhánh Văn phòng đăng ký đất đai số 26 | Ngô Thanh Thuận | Người lao động | Nhân viên | 1989 | 074089004326 | 0918283845 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+40 | Chi nhánh Văn phòng đăng ký đất đai số 26 | Lê Phương Trang | Người lao động | Nhân viên | 1986 | 074186005809 | 0384475734 | 46211 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+41 | Chi nhánh Văn phòng đăng ký đất đai số 26 | Đặng Như Không | Người lao động | Nhân viên | 1988 | 52088016483 | 989044891 | 46212 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+42 | Chi nhánh Văn phòng đăng ký đất đai số 26 | Bùi Thị Quyên | Người lao động | Nhân viên | 1985 | 036185020229 | 0986987316 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+43 | Chi nhánh Văn phòng đăng ký đất đai số 26 | Trần Thị Hồng Oanh | Người lao động | Nhân viên | 1987 | 074187005644 | 0917039639 | 46218 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+44 | Chi nhánh Văn phòng đăng ký đất đai số 26 | Trần Văn Tường | Người lao động | Nhân viên | 1981 | 074081000329 | 0918230345 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+45 | Chi nhánh Văn phòng đăng ký đất đai số 26 | Đỗ Chí Lễ | Người lao động | NHân viên | 1985 | 074085000835 | 0918693777 | 46211 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+46 | Chi nhánh Văn phòng đăng ký đất đai số 26 | Võ Thị Vương Hồng | Người lao động | Nhân viên | 1992 | 074192006269 | 0933761286 | 46217 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+47 | Chi nhánh Văn phòng đăng ký đất đai số 26 | Bùi Thị Diễm My | Người lao động | Nhân viên | 1998 | 074198006699 | 0708463872 | 46211 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+48 | Chi nhánh Văn phòng đăng ký đất đai số 26 | Nguyễn Hoàng Nam | Người lao động | Nhân viên | 1981 | 087081010022 | 0949700071 | 46211 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+49 | Chi nhánh Văn phòng đăng ký đất đai số 26 | Lê Thị Trang | Người lao động | Nhân viên | 1990 | 038190052614 | 0986863943 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+50 | Chi nhánh Văn phòng đăng ký đất đai số 26 | Bùi Vũ Linh | Người lao động | Nhân viên | 1989 | 74089001862 | 902939829 | 46217 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+51 | Chi nhánh Văn phòng đăng ký đất đai số 26 | Nguyễn Viết Dũng | Người lao động | Nhân viên | 1990 | 066090006919 | 0979559279 | 46211 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+52 | Chi nhánh Văn phòng đăng ký đất đai số 26 | Lâm Thành Long | Người lao động | Nhân viên | 1995 | 74095002867 | 944203603 | 46218 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+53 | Chi nhánh Văn phòng đăng ký đất đai số 26 | Lê Thị Hà | Người lao động | Nhân viên | 1978 | 074178007950 | 792040878 | 46211 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+54 | Chi nhánh Văn phòng đăng ký đất đai số 26 | Lê Ngọc Ánh | Người lao động | Nhân viên | 1999 | 074199004678 | 0335249351 | 46211 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+55 | Chi nhánh Văn phòng đăng ký đất đai số 26 | Nguyễn Thị Kiều Oanh | Người lao động | Nhân viên | 1986 | 074186003032 | 0944000165 | 46211 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+56 | Chi nhánh Văn phòng đăng ký đất đai số 26 | Nguyễn Trọng Hiếu | Người lao động | Nhân viên | 1989 | 074089005395 | 0911550246 | 07/7/2026 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+57 | Chi nhánh Văn phòng đăng ký đất đai số 26 | Phạm Phương Thảo | Người lao động | Nhân viên | 1981 | 074181009532 | 0835134567 | 46211 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+58 | Chi nhánh Văn phòng đăng ký đất đai số 26 | Võ Ngọc Xuân Quỳnh | Người lao động | Nhân viên | 1989 | 074189008389 | 0968300389 | 46211 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+59 | Chi nhánh Văn phòng đăng ký đất đai số 26 | Dương Minh Quế Hương | Người lao động | Nhân viên | 1992 | 074192004577 | 0703887724 | 46217 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+60 | Chi nhánh Văn phòng đăng ký đất đai số 26 | Lê Ngọc Thảo | Người lao động | Nhân viên | 1983 | 074183001089 | 0982095402 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+61 | Chi nhánh Văn phòng đăng ký đất đai số 26 | Nguyễn Tấn Lập | Người lao động | Nhân viên | 1985 | 74085006198 | 902844815 | 15/072026 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+62 | Chi nhánh Văn phòng đăng ký đất đai số 26 | Nguyễn Khắc Bình | Người lao động | Nhân viên | 1984 | 074084005110 | 0913697839 | 46211 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+63 | Chi nhánh Văn phòng đăng ký đất đai số 26 | Phan Hồng Tân | Người lao động | Nhân viên | 1982 | 074182009928 | 0909927292 | 46211 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+64 | Chi nhánh Văn phòng đăng ký đất đai số 26 | Trần Lê Minh Hiếu | Người lao động | Nhân viên | 1986 | 74086007084 | 0922201182 | 08/07/2026 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+65 | Chi nhánh Văn phòng đăng ký đất đai số 26 | Trần Trọng Nghĩa | Người lao động | Nhân viên | 1989 | 74089000745 | 907463464 | 46213 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+66 | Chi nhánh Văn phòng đăng ký đất đai số 26 | Trần Minh Tuấn | Người lao động | Nhân viên | 1988 | 74088001572 | 937222011 | 46219 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+67 | Chi nhánh Văn phòng đăng ký đất đai số 26 | Bùi Ngọc Anh Tuấn | Người lao động | Nhân viên | 1992 | 074092006273 | 981573011 | 46211 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+68 | Chi nhánh Văn phòng đăng ký đất đai số 26 | Trần Hoài Việt | Người lao động | Nhân viên | 1992 | 074092006247 | 0919327297 | 46219 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+69 | Chi nhánh Văn phòng đăng ký đất đai số 26 | Huỳnh Chí Trung | Người lao động | Nhân viên | 1992 | 074092007340 | 0903035072 | 46211 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+70 | Chi nhánh Văn phòng đăng ký đất đai số 26 | Phạm Đắc Thắng | Người lao động | Nhân viên | 1994 | 074094007217 | 0963147926 | 46217 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+71 | Chi nhánh Văn phòng đăng ký đất đai số 26 | Lê An Dương | Người lao động | Nhân viên | 1992 | 074092007947 | 0909190692 | 46211 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+72 | Chi nhánh Văn phòng đăng ký đất đai số 26 | Nguyễn Hữu Trí | Người lao động | Nhân viên | 1995 | 074095001417 | 0938390600 | 46211 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+73 | Chi nhánh Văn phòng đăng ký đất đai số 26 | Thái Duy Thường | Người lao động | Nhân viên | 1994 | 40094013194 | 366218999 | 46220 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+74 | Chi nhánh Văn phòng đăng ký đất đai số 26 | Huỳnh Anh | Người lao động | Nhân viên | 1989 | 74089007056 | 909287228 | 46219 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+75 | Chi nhánh Văn phòng đăng ký đất đai số 26 | Nguyễn Ngọc Lý | Người lao động | Nhân viên | 1983 | 074183008265 | 0908913814 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+
+=== SHEET: CN27 (Kích thước: 269 hàng x 26 cột) ===
+SỞ NÔNG NGHIỆP VÀ MÔI TRƯỜNG |  |  |  |  | CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+THÀNH PHỐ HỒ CHÍ MINH |  |  |  |  | Độ lập - Tự do - Hạnh phúc |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+VĂN PHÒNG ĐĂNG KÝ ĐẤT ĐAI |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+ | DANH SÁCH VIÊN CHỨC, NGƯỜI LAO ĐỘNG ĐÃ HOÀN THÀNH 
+"CHƯƠNG TRÌNH PHỔ CẬP KỸ NĂNG SỐ DÀNH CHO VIÊN CHỨC VÀ NGƯỜI LAO ĐỘNG " 
+TRÊN NỀN TẢNG BÌNH DÂN HỌC VỤ SỐ |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+(Đính kèm Công văn số          /VPĐK-HC ngày     tháng    năm 2026 của Văn phòng đăng ký đất đai Thành phố) |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+STT | Tên đơn vị | Họ và tên | Nhóm đối tượng | Chức vụ | Năm sinh | CCCD | Số điện thoại | Ngày hoàn thành khóa học |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+ |  | Ví dụ: Nguyễn Văn A | Chỉ nhập một trong 4 giá trị: Cán bộ, Công chức, Viên chức, Người lao động | Ví dụ: Chuyên viên | 4 chữ số, ví dụ 1988 | 12 chữ số | 10 chữ số | Định dạng ngày: dd/mm/yyyy hoặc yyyy-mm-dd |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+1 | Chi nhánh VPĐKĐĐ số 27 | Trần Minh Hoang | Viên chức | Giám đốc | 1983 | 074083001991 | 0986539539 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+2 | Chi nhánh VPĐKĐĐ số 27 | Đặng Thanh Sơn | Viên chức | Phó Giám đốc | 1979 | 075079012243 | 0913100199 | 46213 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+3 | Chi nhánh VPĐKĐĐ số 27 | Phạm Thị Huệ | Viên chức | Chuyên viên | 1983 | 074183007751 | 0974 287 119 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+4 | Chi nhánh VPĐKĐĐ số 27 | Trần Thị Chung Anh | Viên chức | Chuyên viên | 1984 | 074184008789 | 0902659183 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+5 | Chi nhánh VPĐKĐĐ số 27 | Lương Văn Đẩu | Viên chức | Chuyên viên | 1985 | 074085007633 | 0973195395 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+6 | Chi nhánh VPĐKĐĐ số 27 | Dương Văn Siêm | Viên chức | Chuyên viên | 1987 | 083087008830 | 0985238365 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+7 | Chi nhánh VPĐKĐĐ số 27 | Nguyễn Rô Phen | Viên chức | Chuyên viên | 1981 | 074081004332 | 0918561973 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+8 | Chi nhánh VPĐKĐĐ số 27 | Nguyễn Thị Ngọc Phương | Người lao động | Nhân viên | 1992 | 074192007461 | 0972209710 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+9 | Chi nhánh VPĐKĐĐ số 27 | Võ Văn Tiến | Người lao động | nhân viên | 1984 | 074084008925 | 0963378837 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+10 | Chi nhánh VPĐKĐĐ số 27 | Trần Thị Ngọc Trang | Người lao động | Nhân viên | 1985 | 074185000465 | 0947479792 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+11 | Chi nhánh VPĐKĐĐ số 27 | Phạm Thị Giang | Người lao động | nhân viên | 1983 | 074183001643 | 0907565304 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+12 | Chi nhánh VPĐKĐĐ số 27 | Nguyễn Thị Thanh Chi | Người lao động | nhân viên | 1985 | 074185002269 | 0985262087 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+13 | Chi nhánh VPĐKĐĐ số 27 | Trương Thị Diệu Quân | Người lao động | Nhân viên | 1990 | 074190006418 | 0765755507 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+14 | Chi nhánh VPĐKĐĐ số 27 | Phạm Thị Kim Cúc | Người lao động | Nhân viên | 1982 | 062182004052 | 0972114407 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+15 | Chi nhánh VPĐKĐĐ số 27 | Lê Thị Vân Anh | Người lao động | Nhân viên | 1987 | 074187006984 | 0979781717 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+16 | Chi nhánh VPĐKĐĐ số 27 | Nguyễn Hoài Bảo | Người lao động | Nhân viên | 1984 | 074084002990 | 0982003807 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+17 | Chi nhánh VPĐKĐĐ số 27 | Nguyễn Duy Thông | Người lao động | Nhân viên | 1987 | 074087002804 | 0976235578 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+18 | Chi nhánh VPĐKĐĐ số 27 | Nguyễn Văn Tú | Người lao động | Nhân viên | 1984 | 044084012018 | 0961161525 | 46223 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+19 | Chi nhánh VPĐKĐĐ số 27 | Nguyễn Thị Thanh Chi | Người lao động | nhân viên | 1984 | 074184010085 | 0985840498 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+20 | Chi nhánh VPĐKĐĐ số 27 | Hoàng Thị Tâm | Người lao động | nhân viên | 1990 | 040190037787 | 0973916554 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+21 | Chi nhánh VPĐKĐĐ số 27 | Trương Thanh Trúc | Người lao động | nhân viên | 1991 | 074191008667 | 0949762638 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+22 | Chi nhánh VPĐKĐĐ số 27 | Thượng Tấn Phong | Người lao động | nhân viên | 1985 | 074085003101 | 0982897816 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+23 | Chi nhánh VPĐKĐĐ số 27 | Đặng Thanh Dũng | Người lao động | nhân viên | 1989 | 070089009030 | 0967667765 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+24 | Chi nhánh VPĐKĐĐ số 27 | Nguyễn Ngọc Phương Thảo | Người lao động | Nhân viên | 1996 | 074196004124 | 0964691551 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+25 | Chi nhánh VPĐKĐĐ số 27 | Nguyễn Hồ Thanh Tuấn | Người lao động | nhân viên | 1985 | 086085016138 | 0914767890 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+26 | Chi nhánh VPĐKĐĐ số 27 | Trần Thị Ngọc Quyền | Người lao động | nhân viên | 1991 | 074191002537 | 0933010050 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+27 | Chi nhánh VPĐKĐĐ số 27 | Văn Quang Tân | Người lao động | Nhân viên | 1986 | 074086001430 | 0975195254 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+28 | Chi nhánh VPĐKĐĐ số 27 | Hồ Chí Trung | Người lao động | Nhân viên | 1987 | 074087001839 | 0388383101 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+29 | Chi nhánh VPĐKĐĐ số 27 | Phạm Văn Hường | Người lao động | Nhân viên | 1986 | 074086007576 | 0329213141 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+30 | Chi nhánh VPĐKĐĐ số 27 | Nguyễn Văn Chơn | Người lao động | Nhân viên | 1989 | 083089012853 | 0865739639 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+31 | Chi nhánh VPĐKĐĐ số 27 | Đoàn Tấn Đạt | Người lao động | Nhân viên | 1986 | 074086005730 | 0945784734 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+32 | Chi nhánh VPĐKĐĐ số 27 | Nguyễn Anh Tuấn | Người lao động | Nhân viên | 1990 | 074090003303 | 0374644006 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+33 | Chi nhánh VPĐKĐĐ số 27 | Bùi Trọng Hiếu | Người lao động | Nhân viên | 1988 | 074088007717 | 0889077379 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+34 | Chi nhánh VPĐKĐĐ số 27 | Đỗ Trọng Giàu | Người lao động | Nhân viên | 1982 | 074082011441 | 0926303979 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+35 | Chi nhánh VPĐKĐĐ số 27 | Vũ Văn Linh | Người lao động | Nhân viên | 1989 | 072089016411 | 0979063648 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+36 | Chi nhánh VPĐKĐĐ số 27 | Kim Văn Có | Người lao động | Nhân viên | 1993 | 074093008772 | 0344082242 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+37 | Chi nhánh VPĐKĐĐ số 27 | Nguyễn Quang Tiến | Người lao động | Nhân viên | 1992 | 074092006163 | 0974212502 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+38 | Chi nhánh VPĐKĐĐ số 27 | Nguyễn Văn Giây | Người lao động | Nhân viên | 1985 | 074085006363 | 0937090993 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+39 | Chi nhánh VPĐKĐĐ số 27 | Đào Thị Hồng Thư | Người lao động | Nhân viên | 1984 | 079084026672 | 0974955817 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+40 | Chi nhánh VPĐKĐĐ số 27 | Mai Thanh Tân | Người lao động | Nhân viên | 1990 | 074090008756 | 0968939937 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+41 | Chi nhánh VPĐKĐĐ số 27 | Dương Tình Mạnh | Người lao động | Nhân viên | 1989 | 042089010860 | 0978202060 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+42 | Chi nhánh VPĐKĐĐ số 27 | Nguyễn Đức Huy | Người lao động | Nhân viên | 1984 | 079084026672 | 0974955817 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+43 | Chi nhánh VPĐKĐĐ số 27 | Lê Anh Nam | Người lao động | Nhân viên | 1978 | 038078030151 | 0949323345 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+44 | Chi nhánh VPĐKĐĐ số 27 | Bùi Thị Huệ | Người lao động | Nhân viên | 1985 | 036185027163 | 0906493283 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+45 | Chi nhánh VPĐKĐĐ số 27 | Nguyễn Thị Tiên | Người lao động | Nhân viên | 1996 | 074196002338 | 0369199073 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+46 | Chi nhánh VPĐKĐĐ số 27 | Thượng Minh Hiếu | Người lao động | Nhân viên | 1998 | 074098007176 | 0982019330 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+47 | Chi nhánh VPĐKĐĐ số 27 | Võ Anh Hoài | Người lao động | Nhân viên | 1997 | 074097000268 | 0352199102 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+48 | Chi nhánh VPĐKĐĐ số 27 | Vũ Anh Thư | Người lao động | Nhân viên | 2000 | 074300001735 | 0961357649 | 46213 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+49 | Chi nhánh VPĐKĐĐ số 27 | Lê Minh Hải | Người lao động | Nhân viên | 1984 | 074084000313 | 0978539537 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+50 | Chi nhánh VPĐKĐĐ số 27 | Nguyễn Duy Thích | Người lao động | Nhân viên | 1997 | 042097001278 | 0977590751 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+51 | Chi nhánh VPĐKĐĐ số 27 | Trần Thị Phượng Hằng | Người lao động | Nhân viên | 1992 | 074192006942 | 0823001196 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+52 | Chi nhánh VPĐKĐĐ số 27 | Bùi Hồng Sơn | Người lao động | Nhân viên | 1998 | 074098004660 | 0966062260 | 06/072026 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+53 | Chi nhánh VPĐKĐĐ số 27 | Trần Thanh Tùng | Người lao động | Nhân viên | 1997 | 074097002077 | 0334863825 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+54 | Chi nhánh VPĐKĐĐ số 27 | Trương Thanh Tân | Người lao động | Nhân viên | 1984 | 074084000821 | 0938181894 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+55 | Chi nhánh VPĐKĐĐ số 27 | Nguyễn Quang Vinh | Người lao động | Nhân viên | 1993 | 074093002236 | 0967473734 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+56 | Chi nhánh VPĐKĐĐ số 27 | Trần Minh Hiếu | Người lao động | Nhân viên | 1983 | 074083000202 | 0914931939 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+57 | Chi nhánh VPĐKĐĐ số 27 | Trần Thị Kiều | Người lao động | Nhân viên | 1986 | 074186005205 | 0919791079 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+58 | Chi nhánh VPĐKĐĐ số 27 | Lê Đình Hòa | Người lao động | Nhân viên | 1985 | 038085002224 | 0976622646 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+59 | Chi nhánh VPĐKĐĐ số 27 | Huỳnh Công Tiến | Người lao động | Nhân viên | 1988 | 074088005052 | 0985103737 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+60 | Chi nhánh VPĐKĐĐ số 27 | Lê Thị Ngọc Duy | Người lao động | Nhân viên | 1984 | 074184008772 | 0908401800 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+
+=== SHEET: CN28 (Kích thước: 262 hàng x 26 cột) ===
+SỞ NÔNG NGHIỆP VÀ MÔI TRƯỜNG |  |  |  |  | CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+THÀNH PHỐ HỒ CHÍ MINH |  |  |  |  | Độ lập - Tự do - Hạnh phúc |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+VĂN PHÒNG ĐĂNG KÝ ĐẤT ĐAI |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+ | DANH SÁCH VIÊN CHỨC, NGƯỜI LAO ĐỘNG ĐÃ HOÀN THÀNH 
+"CHƯƠNG TRÌNH PHỔ CẬP KỸ NĂNG SỐ DÀNH CHO VIÊN CHỨC VÀ NGƯỜI LAO ĐỘNG " 
+TRÊN NỀN TẢNG BÌNH DÂN HỌC VỤ SỐ |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+(Đính kèm Công văn số          /VPĐK-HC ngày     tháng    năm 2026 của Văn phòng đăng ký đất đai Thành phố) |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+STT | Tên đơn vị | Họ và tên | Nhóm đối tượng | Chức vụ | Năm sinh | CCCD | Số điện thoại | Ngày hoàn thành khóa học |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+ |  | Ví dụ: Nguyễn Văn A | Chỉ nhập một trong 4 giá trị: Cán bộ, Công chức, Viên chức, Người lao động | Ví dụ: Chuyên viên | 4 chữ số, ví dụ 1988 | 12 chữ số | 10 chữ số | Định dạng ngày: dd/mm/yyyy hoặc yyyy-mm-dd |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+01 | Chi nhánh số 28 | Nguyễn Tấn Đoàn | Viên chức | Giám đốc | 1983 | 074083005094 | 0919485445 | 46245 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+02 | Chi nhánh số 28 | Huỳnh Thị Lam | Viên chức | Phó Giám đốc | 1984 | 074184007815 | 0946468064 | 46234 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+03 | Chi nhánh số 28 | Nguyễn Gia Lâm | Viên chức | Phó Giám đốc | 1983 | 052083016698 | 0913148999 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+04 | Chi nhánh số 28 | Phạm Thanh Vân | Viên chức | Chuyên viên | 1991 | 075191023277 | 0983712880 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+05 | Chi nhánh số 28 | Nguyễn Thị Tuyết Mai | Viên chức | Địa chính viên hạng III | 1990 | 074190004690 | 0383222700 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+06 | Chi nhánh số 28 | Đoàn Thanh Hóa | Viên chức | Đo đạc bản đồ viên hạng III | 1988 | 074088019999 | 0975564564 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+07 | Chi nhánh số 28 | Nguyễn Hoàng Bảo | Viên chức | Đo đạc bản đồ viên hạng III | 1985 | 074085006287 | 0918761440 | 46211 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+08 | Chi nhánh số 28 | Di Thành Vủ | Người lao động | Nhân viên | 1993 | 074093001529 | 0385918414 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+09 | Chi nhánh số 28 | Nguyễn Thị Bạch Tuyết | Người lao động | Nhân viên | 1993 | 074193002770 | 0968801015 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+10 | Chi nhánh số 28 | Đặng Văn Tuấn | Người lao động | Nhân viên | 1986 | 075086004371 | 0917853849 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+11 | Chi nhánh số 28 | Thượng Thị Diệu | Người lao động | Nhân viên | 1991 | 074191004629 | 0979332044 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+12 | Chi nhánh số 28 | Trần Thị Đào | Người lao động | Nhân viên | 1989 | 074189007027 | 0974298815 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+13 | Chi nhánh số 28 | Nguyễn Thị Chí Thanh | Người lao động | Nhân viên | 1996 | 074196005259 | 0971487273 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+14 | Chi nhánh số 28 | Phan Thị Minh Tâm | Người lao động | Nhân viên | 1997 | 074197004633 | 0829431831 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+15 | Chi nhánh số 28 | Huỳnh Hiếu Thảo | Người lao động | Nhân viên | 1998 | 074198001314 | 0815332178 | 46215 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+16 | Chi nhánh số 28 | Nguyễn Ngọc Hoàng | Người lao động | Nhân viên | 1986 | 073186007333 | 0983303285 | 46211 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+17 | Chi nhánh số 28 | Hồ Minh Tâm | Người lao động | Nhân viên | 1996 | 074096006310 | 0978401699 | 46214 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+18 | Chi nhánh số 28 | Lê Thị Thùy Trang | Người lao động | Nhân viên | 1993 | 074193002543 | 0989742773 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+19 | Chi nhánh số 28 | Võ Thị Thu Hồng | Người lao động | Nhân viên | 1992 | 074192002369 | 0971720839 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+20 | Chi nhánh số 28 | Nguyễn Thị Ngọc Lợi | Người lao động | Nhân viên | 1991 | 074191005405 | 0982005936 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+21 | Chi nhánh số 28 | Nguyễn Duy | Người lao động | Nhân viên | 1997 | 074097007508 | 0917279549 | 46247 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+22 | Chi nhánh số 28 | Nguyễn Thị Vân Quỳnh | Người lao động | Nhân viên | 1999 | 074199003666 | 0352731031 | 46213 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+23 | Chi nhánh số 28 | Đoàn Tấn Lộc | Người lao động | Nhân viên | 1996 | 074096004011 | 0703626668 | 46233 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+24 | Chi nhánh số 28 | Vũ Duy Thanh | Người lao động | Nhân viên | 1996 | 035096000211 | 0855700104 | 46213 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+25 | Chi nhánh số 28 | Nguyễn Minh Trung | Người lao động | Nhân viên | 1994 | 074094006624 | 0979412398 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+26 | Chi nhánh số 28 | Đoàn Huy Trường | Người lao động | Nhân viên | 1992 | 074092000951 | 0865149889 | 46213 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+27 | Chi nhánh số 28 | Trịnh Thanh Quân | Người lao động | Nhân viên | 1991 | 075091009269 | 0398314008 | 46213 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+28 | Chi nhánh số 28 | Nguyễn Quý Tấn | Người lao động | Nhân viên | 1993 | 074093008774 | 0969896264 | 46213 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+29 | Chi nhánh số 28 | Dương Tuấn Phong | Người lao động | nhân viên | 1995 | 074095001669 | 0968353393 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+30 | Chi nhánh số 28 | Dương Nhật Trường | Người lao động | nhân viên | 1989 | 083089002012 | 0973536861 | 46213 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+31 | Chi nhánh số 28 | Nguyễn Duy Tài | Người lao động | Nhân viên | 1997 | 075097000255 | 0981862223 | 46233 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+32 | Chi nhánh số 28 | Lê Thành Vinh | Người lao động | Nhân viên | 1996 | 060096005316 | 0325554879 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+33 | Chi nhánh số 28 | Nguyễn Quang Dương | Người lao động | nhân viên | 1999 | 074099001258 | 0365530539 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+34 | Chi nhánh số 28 | Nguyễn Minh Thông | Người lao động | nhân viên | 1999 | 074099001363 | 0799304567 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+35 | Chi nhánh số 28 | Nguyễn Hải Quan | Người lao động | Nhân viên | 1987 | 074087008542 | 0907335903 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+36 | Chi nhánh số 28 | Nguyễn Nhật Chiêu | Người lao động | Nhân viên | 1998 | 058098005072 | 0399717210 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+37 | Chi nhánh số 28 | Lương Hòa Thịnh | Người lao động | Nhân viên | 1996 | 074096001989 | 0377240468 | 46213 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+38 | Chi nhánh số 28 | Nguyễn Hoàng Nam | Người lao động | Nhân viên | 1998 | 074098006056 | 0705707268 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+39 | Chi nhánh số 28 | Đặng Thanh Phương | Người lao động | Nhân viên | 1991 | 089091006031 | 0356139046 | 46213 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+40 | Chi nhánh số 28 | Nguyễn Ngọc Yến Nhi | Người lao động | Nhân viên | 1998 | 074198006567 | 0943698659 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+41 | Chi nhánh số 28 | Trần Thị Minh Thùy | Người lao động | Nhân viên | 1997 | 070197001977 | 0397070900 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+42 | Chi nhánh số 28 | Nguyễn Thị Hoàng Quyên | Người lao động | Nhân viên | 1995 | 096195004779 | 0923698981 | 46213 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+43 | Chi nhánh số 28 | Nguyễn Võ Thị Kim Liễu | Người lao động | Nhân viên | 2002 | 074302007252 | 0373765090 | 46213 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+44 | Chi nhánh số 28 | Nguyễn Thị Trúc | Người lao động | Nhân viên | 1987 | 075187002832 | 0824955399 | 46213 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+45 | Chi nhánh số 28 | Nguyễn Đình Tâm | Người lao động | Nhân viên | 1993 | 074093006190 | 0969775932 | 46213 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+46 | Chi nhánh số 28 | Trần Văn Phương | Người lao động | Nhân viên | 1991 | 74091007250 | 0973001426 | 46213 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+47 | Chi nhánh số 28 | Đoàn Huy Vũ | Người lao động | Nhân viên | 1990 | 074090005963 | 0349699379 | 46213 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+48 | Chi nhánh số 28 | Nguyễn Như Phụng | Người lao động | Nhân viên | 1993 | 074193002329 | 0986744550 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+49 | Chi nhánh số 28 | Hồ Sỹ Thương | Người lao động | Nhân viên | 1996 | 074096000381 | 0985957212 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+50 | Chi nhánh số 28 | Trần Thanh Linh | Người lao động | Nhân viên | 1996 | 074096000186 | 0796976663 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+51 | Chi nhánh số 28 | Thái Văn Tín | Người lao động | Nhân viên | 1989 | 74089009318 | 0973316056 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+52 | Chi nhánh số 28 | Phạm Thị Thúy | Người lao động | Nhân viên | 1988 | 074188004795 | 0357023479 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+53 | Chi nhánh số 28 | Huỳnh Phúc Cường | Người lao động | Nhân viên | 1988 | 074088006950 | 0909820113 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+
+=== SHEET: CN29 (Kích thước: 242 hàng x 26 cột) ===
+SỞ NÔNG NGHIỆP VÀ MÔI TRƯỜNG |  |  |  |  | CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+THÀNH PHỐ HỒ CHÍ MINH |  |  |  |  | Độ lập - Tự do - Hạnh phúc |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+VĂN PHÒNG ĐĂNG KÝ ĐẤT ĐAI |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+ | DANH SÁCH VIÊN CHỨC, NGƯỜI LAO ĐỘNG ĐÃ HOÀN THÀNH 
+"CHƯƠNG TRÌNH PHỔ CẬP KỸ NĂNG SỐ DÀNH CHO VIÊN CHỨC VÀ NGƯỜI LAO ĐỘNG " 
+TRÊN NỀN TẢNG BÌNH DÂN HỌC VỤ SỐ |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+(Đính kèm Công văn số          /VPĐK-HC ngày     tháng    năm 2026 của Văn phòng đăng ký đất đai Thành phố) |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+STT | Tên đơn vị | Họ và tên | Nhóm đối tượng | Chức vụ | Năm sinh | CCCD | Số điện thoại | Ngày hoàn thành khóa học |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+ |  | Ví dụ: Nguyễn Văn A | Chỉ nhập một trong 4 giá trị: Cán bộ, Công chức, Viên chức, Người lao động | Ví dụ: Chuyên viên | 4 chữ số, ví dụ 1988 | 12 chữ số | 10 chữ số | Định dạng ngày: dd/mm/yyyy hoặc yyyy-mm-dd |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+1 | Ban Giám đốc | Bạch Thanh Trọng | Viên chức | Giám đốc Chi nhánh | 1981 | 074081008287 | 909433456 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+2 | Ban Giám đốc | Đỗ Kim Tính | Viên chức | Phó Giám đốc Chi nhánh | 1984 | 074084008691 | 778887778 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+3 | Tổ Hành chính - Tổng hợp | Nguyễn Thanh Thủy | Viên chức | Chuyên viên - Tổ trưởng Tổ Hành chính - Tổng hợp | 1981 | 074181009951 | 916760076 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+4 |  | Nguyễn Thanh Phương | Người lao động | Nhân viên - Tổ phó Tổ Hành chính - Tổng hợp | 1987 | 074187008116 | 366899668 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+5 |  | Nguyễn Thị Ánh Tuyết | Người lao động | Nhân viên | 1987 | 074187006456 | 949727878 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+6 |  | Bùi Thị Thúy Ngân | Người lao động | Nhân viên | 1991 | 074191005938 | 965503575 | 46234 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+7 |  | Nguyễn Tấn Lực | Người lao động | Nhân viên | 1992 | 74092005591 | 972088489 | 46234 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+8 |  | Trần Thanh Duy | Người lao động | Nhân viên | 1994 | 74094003826 | 939445533 | 46234 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+9 |  | Huỳnh Anh Huyền | Người lao động | Nhân viên | 1993 | 74093004352 | 388773174 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+10 |  | Nguyễn Thị Hồng Thắm | Người lao động | Nhân viên | 1996 | 074196007573 | 355299525 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+11 |  | Lê Thị Thu Thủy | Người lao động | Nhân viên | 1990 | 74190001416 | 968401699 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+12 |  | Võ Thị Thanh Trâm | Người lao động | Nhân viên | 1991 | 60191016084 | 948804476 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+13 |  | Tạ Thanh Tùng | Người lao động | Nhân viên | 1989 | 91089007536 | 948636771 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+14 |  | Ngô Duy Khoa | Người lao động | Nhân viên | 1996 | 74096000920 | 913723968 | 46234 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+15 |  | Liêu Ngọc Phương Linh | Người lao động | Nhân viên | 1999 | 74199000375 | 869226869 | 46234 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+16 |  | Nguyễn Văn Sĩ | Người lao động | Nhân viên | 1988 | 74088009485 | 919878838 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+17 |  | Nguyễn Thị Ngọc Sinh | Người lao động | Nhân viên | 2000 | 74300002421 | 813106179 | 46234 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+18 |  | Phạm Khắc Thìn | Người lao động | Nhân viên | 1988 | 74088008157 | 397028628 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+19 |  | Trần Thị Mỹ Duyên | Người lao động | Nhân viên | 1994 | 74194000929 | 835999964 | 46234 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+20 |  | Nguyễn Hải Đăng | Người lao động | Nhân viên | 2001 | 40201018850 | 326991176 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+21 |  | Nguyễn Thị Mỹ Lệ | Người lao động | Nhân viên | 1996 | 74196005282 | 358156158 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+22 |  | Hồ Thị Bé | Người lao động | Nhân viên | 1989 | 74189008622 | 974708080 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+23 |  | Mai Ngọc Loan | Người lao động | Nhân viên | 1994 | 79194039037 | 963206408 | 46234 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+24 |  | Thái Quốc Tuấn | Người lao động | Nhân viên | 1995 | 74095005536 | 387764567 | 46234 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+25 | Tổ Đăng ký và Cấp giấy chứng nhận | Nguyễn Tấn Tài | Người lao động | Nhân viên - Tổ trưởng Tổ Đăng ký và Cấp giấy chứng nhận | 1987 | 74087001091 | 947228066 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+26 |  | Nguyễn Văn Cường | Người lao động | Nhân viên - Tổ phó Tổ Đăng ký và Cấp giấy chứng nhận | 1990 | 74090009460 | 935448911 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+27 |  | Phan Thị Hương | Người lao động | Nhân viên - Tổ phó Tổ Đăng ký và Cấp giấy chứng nhận | 1991 | 42191020331 | 975380051 | 46212 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+28 |  | Huỳnh Thị Ren | Người lao động | Nhân viên | 1982 | 74182010669 | 915838909 | 46211 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+29 |  | Bùi Ngọc Tấn | Người lao động | Nhân viên | 1987 | 74087008374 | 949166565 | 46211 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+30 |  | Phan Văn Dương | Người lao động | Nhân viên | 1983 | 74083003320 | 902272800 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+31 |  | Nguyễn Tâm Nguyên | Người lao động | Nhân viên | 1982 | 74082008589 | 979361717 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+32 |  | Nguyễn Văn Châu | Người lao động | Nhân viên | 1984 | 74084008749 | 982390239 | 46211 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+33 |  | Nguyễn Thế Lộc | Người lao động | Nhân viên | 1984 | 74084026819 | 908788777 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+34 |  | Nguyễn Minh Việt | Người lao động | Nhân viên | 1993 | 64093009299 | 357587648 | 46220 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+35 |  | Đỗ Thị Kim Tuyến | Người lao động | Nhân viên | 1986 | 74186008605 | 939685580 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+36 |  | Nguyễn Thị Hoài Trâm | Người lao động | Nhân viên | 1992 | 74192004912 | 917320079 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+37 |  | Nguyễn Thanh Phước | Người lao động | Nhân viên | 1995 | 74095007900 | 969884777 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+38 |  | Lê Thị Hồng Nguyên | Người lao động | Nhân viên | 1985 | 74185005240 | 916278880 | 46211 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+39 |  | Nguyễn Thị Ngọc Vàng | Người lao động | Nhân viên | 1992 | 74192007988 | 822383723 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+40 |  | Tạ Thị Hằng | Người lao động | Nhân viên | 1983 | 34183023563 | 919405228 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+41 |  | Thừa Thị Quỳnh Anh | Người lao động | Nhân viên | 1996 | 74196007974 | 788522688 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+42 |  | Bùi Thị Việt Châu | Người lao động | Nhân viên | 1982 | 74182011196 | 903347703 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+43 |  | Phan Thị Ngọc | Người lao động | Nhân viên | 1986 | 74186004889 | 938498541 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+44 |  | Phạm Thị Hường | Người lao động | Nhân viên | 1989 | 38189024219 | 979002339 | 46211 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+45 |  | Nguyễn Thị Hồng Thúy | Người lao động | Nhân viên | 1983 | 74183008554 | 909291235 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+46 |  | Lê Minh Thuận | Người lao động | Nhân viên | 1990 | 74090007251 | 967258625 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+47 |  | Nguyễn Anh Thơ | Người lao động | Nhân viên | 1990 | 40190018971 | 989888072 | 46213 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+48 |  | Trần Trọng Quyết | Người lao động | Nhân viên | 1997 | 34097007787 | 326199475 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+49 |  | Nguyễn Thị Thu Hằng | Người lao động | Nhân viên | 1991 | 74191005170 | 903808779 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+50 |  | Nguyễn Thị Bảo Trâm | Người lao động | Nhân viên | 1993 | 74193008648 | 357388802 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+51 |  | Nguyễn Thu Hương | Người lao động | Nhân viên | 1990 | 70190008413 | 985915262 | 46212 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+52 | Tổ Kỹ thuật Địa chính và Lưu trữ | Đỗ Văn Thích | Người lao động | Nhân viên - Tổ trưởng Tổ Kỹ thuật Địa chính và Lưu trữ | 1986 | 74086002764 | 938377272 | 46234 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+53 |  | Nguyễn Thanh Thảo | Người lao động | Nhân viên - Tổ phó Tổ Kỹ thuật Địa chính và Lưu trữ | 1978 | 74078013054 | 839222323 | 46234 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+54 |  | Dương Văn Long | Người lao động | Nhân viên - Tổ phó Tổ Kỹ thuật Địa chính và Lưu trữ | 1984 | 40084009809 | 988640090 | 46234 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+55 |  | Bùi Thị Thu Phương | Người lao động | Nhân viên - Tổ phó Tổ Kỹ thuật Địa chính và Lưu trữ | 1993 | 34193017159 | 344122193 | 46234 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+56 |  | Nguyễn Văn Lân | Người lao động | Nhân viên | 1982 | 74082008697 | 919151512 | 46234 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+57 |  | Nguyễn Thị Kim Yến | Người lao động | Nhân viên | 1991 | 74191006821 | 898928969 | 46234 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+58 |  | Nguyễn Thị Châu | Người lao động | Nhân viên | 1984 | 74184005985 | 919806637 | 46234 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+59 |  | Trần Thị Lệ Kiều | Người lao động | Nhân viên | 1985 | 74185006502 | 949117755 | 46234 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+60 |  | Nguyễn Thị Trà Mi | Người lao động | Nhân viên | 1994 | 74194005118 | 902909777 | 46234 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+61 |  | Đỗ Thị Kim Quyên | Người lao động | Nhân viên | 1981 | 94181000389 | 917245406 | 46234 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+62 |  | Phan Ngọc Huỳnh Anh | Người lao động | Nhân viên | 1993 | 80193006755 | 927533110 | 46234 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+63 |  | Trương Minh Thông | Người lao động | Nhân viên | 1992 | 74092004163 | 388319179 | 46247 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+64 |  | Nguyễn Thị Yến Tâm | Người lao động | Nhân viên | 1994 | 74194004959 | 974215701 | 46234 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+65 |  | Nguyễn Ngọc Quý | Người lao động | Nhân viên | 1993 | 34093021103 | 707069069 | 46234 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+66 |  | Nguyễn Văn Tú | Người lao động | Nhân viên | 1988 | 74088009004 | 915713133 | 46234 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+67 |  | Lê Hữu Trọng | Người lao động | Nhân viên | 1989 | 74089008849 | 907301962 | 46234 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+68 |  | Nguyễn Phi Khanh | Người lao động | Nhân viên | 1985 | 74085003921 | 938282978 | 46234 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+69 |  | Nguyễn Văn Thơm | Người lao động | Nhân viên | 1985 | 707085004974 | 937811881 | 46234 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+70 |  | Trần Minh Tuấn | Người lao động | Nhân viên | 1988 | 74088006121 | 913168681 | 46234 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+71 |  | Nguyến Thái An | Người lao động | Nhân viên | 1992 | 79092019428 | 964092992 | 46247 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+72 |  | Nguyễn Sỹ Hòa Bình | Người lao động | Nhân viên | 1987 | 42087011110 | 972972244 | 46234 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+73 |  | Nguyễn Văn Công | Người lao động | Nhân viên | 1969 | 30069008909 | 911613088 | 46234 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+74 |  | Nguyễn Hữu Sơn | Người lao động | Nhân viên | 1982 | 42082009730 | 987066995 | 46234 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+75 |  | Nguyễn Minh Tiến | Người lao động | Nhân viên | 1989 | 74089007128 | 933329922 | 46234 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+76 |  | Hoàng Danh Hưng | Người lao động | Nhân viên | 1991 | 40091033501 | 945903679 | 46234 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+77 |  | Phạm Văn Định | Người lao động | Nhân viên | 1986 | 64086008322 | 979551492 | 46234 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+78 |  | Hoàng Mạnh Tuấn Anh | Người lao động | Nhân viên | 1991 | 74091001538 | 906048153 | 46234 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+79 |  | Lê Văn Phú | Người lao động | Nhân viên | 1988 | 38088041435 | 971011088 | 46234 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+80 |  | Nguyễn Đình Thế | Người lao động | Nhân viên | 1989 | 42089020914 | 979888368 | 46234 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+81 |  | Phạm Văn Nam | Người lao động | Nhân viên | 1975 | 25075004510 | 983474524 | 46234 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+82 |  | Lâm Ngọc Đức | Người lao động | Nhân viên | 1989 | 70089004030 | 942461561 | 46234 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+83 |  | Tô Thanh Thiên | Người lao động | Nhân viên | 1996 | 72096009486 | 972871914 | 46234 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+84 |  | Ngô Văn Lực | Người lao động | Nhân viên | 1988 | 38088044361 | 334088388 | 46234 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+85 |  | Phan Văn Tuấn | Người lao động | Nhân viên | 1989 | 37089003165 | 989493589 | 46234 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+86 |  | Lê Đức Vinh | Người lao động | Nhân viên | 1995 | 38095031530 | 964173495 | 46234 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+87 |  | Lê Thị Thu Vân | Người lao động | Nhân viên | 1980 | 51180010894 | 913837886 | 46234 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+
+=== SHEET: CN30 (Kích thước: 904 hàng x 32 cột) ===
+SỞ NÔNG NGHIỆP VÀ MÔI TRƯỜNG |  |  |  |  | CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+THÀNH PHỐ HỒ CHÍ MINH |  |  |  |  | Độ lập - Tự do - Hạnh phúc |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+VĂN PHÒNG ĐĂNG KÝ ĐẤT ĐAI |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+ | DANH SÁCH VIÊN CHỨC, NGƯỜI LAO ĐỘNG ĐÃ HOÀN THÀNH 
+"CHƯƠNG TRÌNH PHỔ CẬP KỸ NĂNG SỐ DÀNH CHO VIÊN CHỨC VÀ NGƯỜI LAO ĐỘNG " 
+TRÊN NỀN TẢNG BÌNH DÂN HỌC VỤ SỐ |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+(Đính kèm Công văn số /VPĐK-HC ngày tháng năm 2026 của Văn phòng đăng ký đất đai Thành phố) |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+STT | Tên đơn vị | Họ và tên | Nhóm đối tượng | Chức vụ | Năm sinh | CCCD | Số điện thoại | Ngày hoàn thành khóa học |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+ |  | Ví dụ: Nguyễn Văn A | Chỉ nhập một trong 4 giá trị: Cán bộ, Công chức, Viên chức, Người lao động | Ví dụ: Chuyên viên | 4 chữ số, ví dụ 1988 | 12 chữ số | 10 chữ số | Định dạng ngày: dd/mm/yyyy hoặc yyyy-mm-dd |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+1 | Chi nhánh VPĐKĐĐ số 30 | Trần Quốc Dương | Viên chức | Giám đốc | 1972 | 074072000683 | 0913945700 | 07/07/2026 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+2 | Chi nhánh VPĐKĐĐ số 30 | Nguyễn Ngọc Thanh | Người lao động | nhân viên | 1991 | 074191000269 | 0335220642 | 07/07/2026 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+3 | Chi nhánh VPĐKĐĐ số 30 | Bùi Thị Thanh Hương | Người lao động | nhân viên | 1986 | 074186000735 | 975410372 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+4 | Chi nhánh VPĐKĐĐ số 30 | Dương Kiều Hoa | Người lao động | nhân viên | 1988 | 074188000713 | 984441431 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+5 | Chi nhánh VPĐKĐĐ số 30 | Nguyễn Thị Linh Quyên | Người lao động | nhân viên | 1985 | 074185000911 | 909732572 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+6 | Chi nhánh VPĐKĐĐ số 30 | Nguyễn Thị Thúy Lâm | Người lao động | nhân viên | 1988 | 074188000395 | 0973919609 | 06/07/2026 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+7 | Chi nhánh VPĐKĐĐ số 30 | Võ Thị Thu Trúc | Người lao động | nhân viên | 1984 | 074184000330 | 979729607 | 06/07/2026 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+8 | Chi nhánh VPĐKĐĐ số 30 | Nguyễn Châu Duy | Người lao động | nhân viên | 1989 | 074089000607 | 0799918989 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+9 | Chi nhánh VPĐKĐĐ số 30 | Trần Thị Kim Thanh | Người lao động | nhân viên | 1984 | 074184000855 | 971232638 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+10 | Chi nhánh VPĐKĐĐ số 30 | Bùi Quý Lân | Viên chức | Chuyên viên | 1990 | 07419000592 | 0972800355 | 46180 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+11 | Chi nhánh VPĐKĐĐ số 30 | Phạm Thị Cẩm Tuyết | Người lao động | Nhân Viên | 1989 | 074189000739 | 938694459 | 46180 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+12 | Chi nhánh VPĐKĐĐ số 30 | Dương Thị Liêm | Người lao động | Nhân Viên | 1988 | 024188002411 | 0359591988 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+13 | Chi nhánh VPĐKĐĐ số 30 | Nguyễn Thiện Thân | Người lao động | Nhân Viên | 1991 | 074091005626 | 0376963178 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+14 | Chi nhánh VPĐKĐĐ số 30 | Nguyễn Thị Hường | Người lao động | Nhân Viên | 1989 | 074189009330 | 0382879938 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+15 | Chi nhánh VPĐKĐĐ số 30 | Đỗ Mỹ Uyên | Người lao động | Nhân Viên | 1989 | 074189000699 | 0989840195 | 46219 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+16 | Chi nhánh VPĐKĐĐ số 30 | Lê Thanh Nam | Người lao động | Nhân Viên | 1993 | 074093006332 | 0985118840 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+17 | Chi nhánh VPĐKĐĐ số 30 | Nguyễn Văn Khá | Người lao động | Nhân Viên | 1988 | 074088001878 | 0982025821 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+18 | Chi nhánh VPĐKĐĐ số 30 | Phạm Thị Mỹ Phượng | Viên chức | Chuyên viên | 1980 | 074180004618 | 0918597214 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+19 | Chi nhánh VPĐKĐĐ số 30 | Nguyễn Thành Trung | Người lao động | Nhân Viên | 1990 | 072090013454 | 0974451552 | 2026-07-29 00:00:00 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+20 | Chi nhánh VPĐKĐĐ số 30 | Dương Tùng Quân | Người lao động | Nhân Viên | 1994 | 074094000433 | 0388028279 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+21 | Chi nhánh VPĐKĐĐ số 30 | Nguyễn Thị Thanh Bình | Người lao động | Nhân Viên | 2000 | 074300007699 | 0355488441 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+22 | Chi nhánh VPĐKĐĐ số 30 | Võ Kim Ngọc | Người lao động | Nhân viên | 1985 | 074185000467 | 0395205549 | 2026-07-06 00:00:00 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+23 | Chi nhánh VPĐKĐĐ số 30 | Trần Minh Tài | Người lao động | Nhân viên | 1996 | 074096000459 | 0969464139 | 2026-07-07 00:00:00 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+24 | Chi nhánh VPĐKĐĐ số 30 | Trần Trung Hiếu | Viên chức | Nhân viên | 1982 | 074082000717 | 0399696717 | 2026-07-06 00:00:00 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+25 | Chi nhánh VPĐKĐĐ số 30 | Nguyễn Thị Hạnh | Người lao động | Nhân viên | 1984 | 074184000853 | 0353022701 | 2026-07-06 00:00:00 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+26 | Chi nhánh VPĐKĐĐ số 30 | Đỗ Ngọc Linh | Người lao động | Nhân viên | 1985 | 074185000904 | 0385325284 | 2026-07-06 00:00:00 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+27 | Chi nhánh VPĐKĐĐ số 30 | Hồ Thị Thanh Vân | Người lao động | Nhân viên | 1985 | 074185000868 | 0975929858 | 2026-07-07 00:00:00 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+28 | Chi nhánh VPĐKĐĐ số 30 | Nguyễn Thị Thuận | Viên chức | Nhân viên | 1984 | 024184002481 | 0973522201 | 2026-07-06 00:00:00 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+29 | Chi nhánh VPĐKĐĐ số 30 | Trần Thị Bắc | Người lao động | Nhân viên | 1981 | 042181001664 | 03915595779 | 2026-07-06 00:00:00 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+30 | Chi nhánh VPĐKĐĐ số 30 | Nguyễn Thị Hương | Người lao động | Nhân viên | 1991 | 074191000624 | 0979905516 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+31 | Chi nhánh VPĐKĐĐ số 30 | Đinh Phát Đạt | Người lao động | Nhân viên | 1999 | 074099004218 | 0987982457 | 46231 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+32 | Chi nhánh VPĐKĐĐ số 30 | Nguyễn Văn Trường | Người lao động | Nhân viên | 1990 | 074090000553 | 0976022755 | 29/07/2026 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+33 | Chi nhánh VPĐKĐĐ số 30 | Quách Văn Thuận | Người lao động | Nhân viên | 1988 | 074088000605 | 0909110133 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+34 | Chi nhánh VPĐKĐĐ số 30 | Bùi Quý Công | Người lao động | Nhân viên | 1988 | 074088004851 | 0389777972 | 2026-07-30 00:00:00 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+35 | Chi nhánh VPĐKĐĐ số 30 | Nguyễn Thị Kim Thủy | Người lao động | Nhân viên | 1986 | 074186000702 | 0972118167 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+36 | Chi nhánh VPĐKĐĐ số 30 | Lê Văn Thịnh | Người lao động | Nhân viên | 1990 | 074090000590 | 0979905615 | 2026-07-07 00:00:00 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+37 | Chi nhánh VPĐKĐĐ số 30 | Võ Thị Cẩm Vân | Người lao động | Nhân viên | 1973 | 074173004073 | 919450171'0 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+38 | Chi nhánh VPĐKĐĐ số 30 | Nguyễn Thị Mỹ Nga | Người lao động | Nhân viên | 1986 | 074186008738 | 0979023187 | 07/07/2026 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+39 | Chi nhánh VPĐKĐĐ số 30 | Trần Văn Khanh | Viên chức | Nhân viên | 1989 | 074089000513 | 0978793374 | 31/7/2026 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+40 | Chi nhánh VPĐKĐĐ số 30 | Phạm Hoàng Khánh | Người lao động | Nhân viên | 1995 | 074095000472 | 0387158766 | 2026-07-30 00:00:00 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+41 | Chi nhánh VPĐKĐĐ số 30 | Nguyễn Minh Chánh | Viên chức | Phó Giám đốc | 1983 | 074083007285 | 919359345'0 | 2026-08-04 00:00:00 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+42 | Chi nhánh VPĐKĐĐ số 30 | Bùi Công Danh | Người lao động | Nhân viên | 1989 | 074089007182 | 902697596'0 | 2026-08-10 00:00:00 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+43 | Chi nhánh VPĐKĐĐ số 30 | Nguyễn Thanh tấn | Người lao động | Nhân viên | 1978 | 074078009869 | 0918092801 | 2026-08-12 00:00:00 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+44 | Chi nhánh VPĐKĐĐ số 30 | Trần Quốc Duy | Người lao động | Nhân viên | 1985 | 74085009214 | 913006982 | 2026-08-12 00:00:00 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+45 | Chi nhánh VPĐKĐĐ số 30 | Nguyễn Minh Qúy | Người lao động | Nhân viên | 1985 | 74085006637 | 0982446515 | 2026-08-25 00:00:00 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+
+=== SHEET: CN31 (Kích thước: 173 hàng x 26 cột) ===
+SỞ NÔNG NGHIỆP VÀ MÔI TRƯỜNG |  |  |  |  | CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+THÀNH PHỐ HỒ CHÍ MINH |  |  |  |  | Độ lập - Tự do - Hạnh phúc |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+VĂN PHÒNG ĐĂNG KÝ ĐẤT ĐAI |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+ | DANH SÁCH VIÊN CHỨC, NGƯỜI LAO ĐỘNG ĐÃ HOÀN THÀNH 
+"CHƯƠNG TRÌNH PHỔ CẬP KỸ NĂNG SỐ DÀNH CHO VIÊN CHỨC VÀ NGƯỜI LAO ĐỘNG " 
+TRÊN NỀN TẢNG BÌNH DÂN HỌC VỤ SỐ |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+(Đính kèm Công văn số          /VPĐK-HC ngày     tháng    năm 2026 của Văn phòng đăng ký đất đai Thành phố) |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+STT | Tên đơn vị | Họ và tên | Nhóm đối tượng | Chức vụ | Năm sinh | CCCD | Số điện thoại | Ngày hoàn thành khóa học |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+ |  | Ví dụ: Nguyễn Văn A | Chỉ nhập một trong 4 giá trị: Cán bộ, Công chức, Viên chức, Người lao động | Ví dụ: Chuyên viên | 4 chữ số, ví dụ 1988 | 12 chữ số | 10 chữ số | Định dạng ngày: dd/mm/yyyy hoặc yyyy-mm-dd |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+1 | Chi nhánh VPĐKĐĐ số 31 | Nguyễn Minh Thuận | Viên chức | Phó Giám đốc | 1987 | 074087007730 | 0834454549 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+2 | Chi nhánh VPĐKĐĐ số 31 | Nguyễn Minh Trí | Viên chức | Phó Giám đốc | 1983 | 074083007502 | 0909900915 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+3 | Chi nhánh VPĐKĐĐ số 31 | Liêu Kim Tân | Viên chức | Chuyên viên | 1990 | 074090006011 | 0915245664 | 46211 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+4 | Chi nhánh VPĐKĐĐ số 31 | Lê Thị Bích Thủy | Người lao động | Nhân viên | 1990 | 070190009696 | 0933377500 | 46218 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+5 | Chi nhánh VPĐKĐĐ số 31 | Trần Thị Kim Loan | Người lao động | Nhân viên | 1988 | 074188000595 | 0944833864 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+6 | Chi nhánh VPĐKĐĐ số 31 | La Chí Dũng | Người lao động | Nhân viên | 1992 | 087092006873 | 0961963575 | 46219 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+7 | Chi nhánh VPĐKĐĐ số 31 | Huỳnh Thi Ngọc Duyên | Người lao động | Nhân viên | 1999 | 074199005287 | 0915191916 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+8 | Chi nhánh VPĐKĐĐ số 31 | Nguyễn Thị Kim Thành | Người lao động | Nhân viên | 1989 | 074189007628 | 0968548854 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+9 | Chi nhánh VPĐKĐĐ số 31 | Huỳnh Thị Cẩm Tiên | Người lao động | Nhân viên | 1995 | 074195002210 | 0975777310 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+10 | Chi nhánh VPĐKĐĐ số 31 | Phan Thị Hồng Đào | Người lao động | Nhân viên | 1991 | 074191008339 | 0933123899 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+11 | Chi nhánh VPĐKĐĐ số 31 | Trần Thị Kim Khánh | Người lao động | Nhân viên | 1999 | 074199006425 | 0983891858 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+12 | Chi nhánh VPĐKĐĐ số 31 | Dương Thị Yến | Người lao động | Nhân viên | 1995 | 052195005945 | 0976048042 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+13 | Chi nhánh VPĐKĐĐ số 31 | Đoàn Thị Kim Dung | Người lao động | Nhân viên | 1989 | 079189030343 | 0933875254 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+14 | Chi nhánh VPĐKĐĐ số 31 | Mai Trọng Hân | Người lao động | Nhân viên | 1993 | 074093004180 | 0936021616 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+15 | Chi nhánh VPĐKĐĐ số 31 | Nguyễn Thu Hiền | Người lao động | Nhân viên | 1993 | 074193002443 | 0974307554 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+16 | Chi nhánh VPĐKĐĐ số 31 | Dương Ngọc Thuận | Người lao động | Nhân viên | 1992 | 074192004657 | 0974878487 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+17 | Chi nhánh VPĐKĐĐ số 31 | Nguyễn Ngọc Linh | Người lao động | Nhân viên | 1995 | 074095004565 | 0368434064 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+18 | Chi nhánh VPĐKĐĐ số 31 | Vương Hoài Thanh | Người lao động | Nhân viên | 1989 | 074089008828 | 0961833591 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+19 | Chi nhánh VPĐKĐĐ số 31 | Phạm Quốc Tài | Người lao động | Nhân viên | 1986 | 074086005290 | 0908445533 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+20 | Chi nhánh VPĐKĐĐ số 31 | Đỗ Thị Kim Nhung | Người lao động | Nhân viên | 1982 | 074182009699 | 0933217977 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+21 | Chi nhánh VPĐKĐĐ số 31 | Trà Xuân Tấn | Người lao động | Nhân viên | 1982 | 074082010470 | 0969505055 | 46211 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+22 | Chi nhánh VPĐKĐĐ số 31 | Nguyễn Minh Hoàng | Người lao động | Nhân viên | 1995 | 074095005810 | 0937191916 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+23 | Chi nhánh VPĐKĐĐ số 31 | Võ Hồng Danh | Người lao động | Nhân viên | 1991 | 074091005276 | 0979532465 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+24 | Chi nhánh VPĐKĐĐ số 31 | Nguyễn Thành Trí | Người lao động | Nhân viên | 1994 | 074094006314 | 0905558598 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+25 | Chi nhánh VPĐKĐĐ số 31 | Phạm Bình Khánh | Người lao động | Nhân viên | 2002 | 074202007863 | 0786637339 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+26 | Chi nhánh VPĐKĐĐ số 31 | Nguyễn Ngọc Thanh Ngân | Người lao động | Nhân viên | 1999 | 074199006104 | 0941472477 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+27 | Chi nhánh VPĐKĐĐ số 31 | Nguyễn Văn Kiện | Người lao động | Nhân viên | 1990 | 074090009105 | 0886704567 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+28 | Chi nhánh VPĐKĐĐ số 31 | Dương Ngọc Dễ | Viên chức | Địa chính viên hạng III | 1993 | 049093001048 | 0396648167 | 46212 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+29 | Chi nhánh VPĐKĐĐ số 31 | Trần Thị Yến Nhi | Người lao động | Nhân viên | 1996 | 074196004260 | 0976653588 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+30 | Chi nhánh VPĐKĐĐ số 31 | Trần Không | Người lao động | Nhân viên | 1985 | 046085008290 | 0908460689 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+31 | Chi nhánh VPĐKĐĐ số 31 | Lê Nhựt Toàn | Người lao động | Nhân viên | 1995 | 074095000970 | 0904040930 | 46211 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+32 | Chi nhánh VPĐKĐĐ số 31 | Đoàn Thị Trang Diễm | Người lao động | Nhân viên | 1992 | 074192007428 | 0369456757 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+33 | Chi nhánh VPĐKĐĐ số 31 | Lê Xuân Hiếu | Người lao động | Nhân viên | 1990 | 074090004817 | 0961232939 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+34 | Chi nhánh VPĐKĐĐ số 31 | Nguyễn Văn Đại | Người lao động | Nhân viên | 1992 | 040092032444 | 0907133866 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+35 | Chi nhánh VPĐKĐĐ số 31 | Nguyễn Minh Tân | Người lao động | Nhân viên | 1990 | 074090002637 | 0966929262 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+36 | Chi nhánh VPĐKĐĐ số 31 | Phạm Huỳnh Hoài Thanh | Người lao động | Nhân viên | 1988 | 074088007733 | 0947206999 | 46211 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+37 | Chi nhánh VPĐKĐĐ số 31 | Nguyễn Thị Kim Nhung | Người lao động | Nhân viên | 1987 | 074187005205 | 0946128029 | 46216 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+38 | Chi nhánh VPĐKĐĐ số 31 | Mai Hoàng Trọng | Người lao động | Nhân viên | 1984 | 074184010053 | 0906818147 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+39 | Chi nhánh VPĐKĐĐ số 31 | Phan Thị Diễm | Người lao động | Nhân viên | 1989 | 074189004965 | 0977178778 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+40 | Chi nhánh VPĐKĐĐ số 31 | Lê Thị Thủy | Người lao động | Nhân viên | 1994 | 042194007935 | 0966816139 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+41 | Chi nhánh VPĐKĐĐ số 31 | Lê Sỹ Phương | Người lao động | Nhân viên | 1987 | 038087024287 | 0978282876 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+42 | Chi nhánh VPĐKĐĐ số 31 | Huỳnh Thị Trang Thanh | Người lao động | Nhân viên | 1990 | 074190001229 | 0964621838 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+43 | Chi nhánh VPĐKĐĐ số 31 | Bồ Văn Phí | Người lao động | Nhân viên | 1987 | 074087005733 | 0972956957 | 46234 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+44 | Chi nhánh VPĐKĐĐ số 31 | Nguyễn Thành Luân | Người lao động | Nhân viên | 1984 | 074084026866 | 0982061061 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+45 | Chi nhánh VPĐKĐĐ số 31 | Lê Trần Tiểu Giang | Người lao động | Nhân viên | 1991 | 074091004779 | 0965384636 | 46230 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+46 | Chi nhánh VPĐKĐĐ số 31 | Võ Thế Trọng | Người lao động | Nhân viên | 1989 | 074089005186 | 0902311799 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+47 | Chi nhánh VPĐKĐĐ số 31 | Nguyễn Thanh Vũ | Người lao động | Nhân viên | 1988 | 074088009014 | 0984667077 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+48 | Chi nhánh VPĐKĐĐ số 31 | Nguyễn Sơn Bình | Người lao động | Nhân viên | 1993 | 074093006529 | 0949277177 | 46234 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+49 | Chi nhánh VPĐKĐĐ số 31 | Phan Duy Bình | Người lao động | Nhân viên | 2001 | 074201001438 | 0978797975 | 46210 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+50 | Chi nhánh VPĐKĐĐ số 31 | Chu Đức Thể | Người lao động | Nhân viên | 1971 | 074071002362 | 0918216775 | 46234 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+51 | Chi nhánh VPĐKĐĐ số 31 | Nguyễn Thị Loan | Viên chức | Địa chính viên hạng III | 1992 | 074192002635 | 0978907575 | 46209 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+52 | Chi nhánh VPĐKĐĐ số 31 | Trần Văn Tiến | Người lao động | Nhân viên | 1985 | 074085006850 | 0987880097 | 46211 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+
+=== SHEET: Bao ve (Kích thước: 107 hàng x 26 cột) ===
+SỞ NÔNG NGHIỆP VÀ MÔI TRƯỜNG |  |  |  |  | CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+THÀNH PHỐ HỒ CHÍ MINH |  |  |  |  | Độ lập - Tự do - Hạnh phúc |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+VĂN PHÒNG ĐĂNG KÝ ĐẤT ĐAI |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+ | DANH SÁCH VIÊN CHỨC, NGƯỜI LAO ĐỘNG ĐÃ HOÀN THÀNH 
+"CHƯƠNG TRÌNH PHỔ CẬP KỸ NĂNG SỐ DÀNH CHO VIÊN CHỨC VÀ NGƯỜI LAO ĐỘNG " 
+TRÊN NỀN TẢNG BÌNH DÂN HỌC VỤ SỐ |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+(Đính kèm Công văn số          /VPĐK-HC ngày     tháng    năm 2026 của Văn phòng đăng ký đất đai Thành phố) |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+STT | Tên đơn vị | Họ và tên | Nhóm đối tượng | Chức vụ | Năm sinh | CCCD | Số điện thoại | Ngày hoàn thành khóa học |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+ |  | Ví dụ: Nguyễn Văn A | Chỉ nhập một trong 4 giá trị: Cán bộ, Công chức, Viên chức, Người lao động | Ví dụ: Chuyên viên | 4 chữ số, ví dụ 1988 | 12 chữ số | 10 chữ số | Định dạng ngày: dd/mm/yyyy hoặc yyyy-mm-dd |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+1 | Phòng Hành chính - Tổng hợp - CS2 | Nguyễn Minh Thành | Người lao động | Bảo vệ | 1958 | 074058000214 | 0385916496 | Không tham gia |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+2 | Phòng Hành chính - Tổng hợp - CS2 | Trương Văn Vĩnh | Người lao động | Bảo vệ | 1964 | 046064001670 | 0947307536 | Không tham gia |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+3 | Phòng Hành chính - Tổng hợp - CS2 | Lê Văn Tuấn | Người lao động | Tạp vụ | 1970 | 080070003973 | 0354539668 | Không tham gia |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+4 | Phòng Hành chính - Tổng hợp - CS2 | Lê Ngọc Tuyền | Người lao động | Tạp vụ | 2001 | 086301001273 | 0794703773 | Không tham gia |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+5 | Phòng Hành chính - Tổng hợp - CS2 | Trần Thị Mỹ Dung | Người lao động | Tạp vụ | 1964 | 074164001433 | 0859005583 | Không tham gia |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+6 | Phòng Hành chính - Tổng hợp - CS2 | Hồ Ngọc Thành | Người lao động | Lái xe | 1977 | 052077009551 | O966931486 | Không tham gia |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+7 | Chi nhánh số 23 | Nguyễn Thanh Phú | Người lao động | Bảo vệ | 1983 | 079083020288 | 0938977895 | Không tham gia |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+8 | Chi nhánh số 23 | Lê Hồng Phong | Người lao động | Bảo vệ | 1978 | 079078016779 | 0366574040 | Không tham gia |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+9 | Chi nhánh số 23 | Lê Thị Thúy Hằng | Người lao động | Tạp vụ | 1986 | 082186002115 | 0938557321 | Không tham gia |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+10 | Chi nhánh số 24 | Thái Minh Vương | Người lao động | Lái xe | 1984 | 074084006130 | 0938469179 | 46256 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+11 | Chi nhánh số 24 | Bùi Trọng Hiếu | Người lao động | Tạp vụ | 1988 | 074088009607 | 0977792007 | 46255 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+12 | Chi nhánh số 25 | Huỳnh Kim Hoàng | Người lao động | Tạp vụ | 1982 | 074182010856 | 0947143658 | Không tham gia |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+13 | Chi nhánh số 26 | Nguyễn Hoàng Nam | Người lao động | Lái xe | 1981 | 087081010022 | 0949700071 | 2026-07-08 00:00:00 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+14 | Chi nhánh số 26 | Vi Thị Tám | Người lao động | Tạp vụ | 1964 | 074164005662 | 0363339925 | Không tham gia |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+15 | Chi nhánh số 26 | Dương Hồng Thành | Người lao động | Bảo vệ | 1957 | 074057001827 | 0946183610 | Không tham gia |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+16 | Chi nhánh số 26 | Hà Văn Sang | Người lao động | Bảo vệ | 1974 | 074074008028 | 0904322560 | Không tham gia |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+17 | Chi nhánh số 27 | Đặng Văn Nụ | Người lao động | Bảo vệ | 1958 | 034058008496 | 0976079323 | Không tham gia |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+18 | Chi nhánh số 27 | Lê Thị Mỹ Trang | Người lao động | tạp vụ | 1979 | 054179000269 | 0975338040 | Không tham gia |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+19 | Chi nhánh số 27 | Trần Khắc Duy | Người lao động | Lái xe | 1999 | 074099002111 | 0971058409 | Không tham gia |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+20 | Chi nhánh số 27 | Hoàng Thị Hấu | Người lao động | tạp vụ | 1960 | 341160014954 | 0388420095 | Không tham gia |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+21 | Chi nhánh số 28 | Trương Thị Mỹ Linh | Người lao động | tạp vụ | 1980 | 074180006390 | 0913537588 | Không tham gia |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+22 | Chi nhánh số 28 | Ngô Hữu Huân | Người lao động | Bảo vệ | 1967 | 074067003887 | 0389531935 | Không tham gia |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+23 | Chi nhánh số 29 | Ngô Tin | Người lao động | Bảo vệ | 1961 | 046061000783 | 0849581109 | Không tham gia |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+24 | Chi nhánh số 29 | Nguyễn Tấn Lâm | Người lao động | Bảo vệ | 1963 | 074063009261 | 0961359026 | Không tham gia |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+25 | Chi nhánh số 29 | Pham Thị Thu Nga | Người lao động | Tạp vụ | 1974 | 080174006203 | 0906758952 | Không tham gia |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+26 | Chi nhánh số 29 | Nguyễn Thượng Giang | Người lao động | Lái xe | 1983 | 074083007029 | 0949491178 | Không tham gia |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+27 | Chi nhánh số 30 | Ya Thanh | Người lao động | Bảo vệ | 1978 | 074075000519 | 0394202339 | Không tham gia |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+28 | Chi nhánh số 30 | Nguyễn Thị Đượm | Người lao động | Tạp vụ | 1972 | 074172007897 | 0377632300 | Không tham gia |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+29 | Chi nhánh số 30 | Võ Thanh Điền | Người lao động | Tài xế | 1987 | 074087000606 | 0989233009 | Không tham gia |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+30 | Chi nhánh số 30 | Nguyễn Huy Diệp | Người lao động | Bảo vệ | 1981 | 074081006784 | 0972718844 | Không tham gia |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+31 | Chi nhánh số 31 | Lê Thanh Tân | Người lao động | Lái xe | 1984 | 074084003859 | 0908076676 | Không tham gia |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+32 | Chi nhánh số 31 | Lê Thị Bích Sơn | Người lao động | Tạp vụ | 1968 | 048168009413 | 0907004574 | Không tham gia |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+33 | Chi nhánh số 31 | Nguyễn Văn Xân | Người lao động | Bảo vệ | 1961 | 070061000657 | 0907499223 | Không tham gia |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+55 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+56 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+57 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 
+58 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | 

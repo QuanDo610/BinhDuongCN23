@@ -1,8 +1,4 @@
 # -*- coding: utf-8 -*-
-import json
-
-with open("A_THANG/danh_sach_tai_khoan_cn23.json", "r", encoding="utf-8") as f:
-    accounts = json.load(f)
 
 html_content = '''<!DOCTYPE html>
 <html lang="vi">
@@ -54,32 +50,34 @@ html_content = '''<!DOCTYPE html>
 
     <!-- ==================== 1. MÀN HÌNH ĐĂNG NHẬP ==================== -->
     <section id="loginSection" class="card login-card">
-      <div class="card-header text-center">
-        <div style="font-size: 2.2rem; color: #1e40af; margin-bottom: 6px;">
+      <!-- Đầu form: Xếp DỌC (TRÊN DƯỚI) hoàn toàn, không chia 2 cột -->
+      <div class="login-card-header">
+        <div class="login-icon-box">
           <i class="fa-solid fa-shield-halved"></i>
         </div>
-        <h2>ĐĂNG NHẬP HỆ THỐNG NỘI BỘ</h2>
-        <p class="text-muted">Cổng dịch vụ cán bộ - Chi nhánh số 23</p>
+        <h2 class="login-title">ĐĂNG NHẬP HỆ THỐNG NỘI BỘ</h2>
+        <p class="login-subtitle">Cổng dịch vụ cán bộ - Chi nhánh số 23</p>
       </div>
+
       <div class="card-body">
         <form id="loginForm" autocomplete="on">
           <div class="form-group">
             <label for="loginPhone">Số điện thoại (Tên đăng nhập): <span class="required">*</span></label>
             <div class="password-input-group">
-              <input type="tel" id="loginPhone" class="form-control" placeholder="Nhập 10 chữ số điện thoại cán bộ" required autocomplete="username">
+              <input type="tel" id="loginPhone" class="form-control" placeholder="Nhập số điện thoại cán bộ" required autocomplete="username">
             </div>
-            <small class="field-hint">Ví dụ: 0907259775 hoặc 0909736435</small>
+            <small class="field-hint">Nhập đúng số điện thoại đã được nạp trên Google Sheet</small>
           </div>
 
           <div class="form-group">
             <label for="loginPassword">Mật khẩu: <span class="required">*</span></label>
             <div class="password-input-group">
-              <input type="password" id="loginPassword" class="form-control" placeholder="Nhập mật khẩu (8 ký tự)" required autocomplete="current-password">
+              <input type="password" id="loginPassword" class="form-control" placeholder="Nhập mật khẩu" required autocomplete="current-password">
               <button type="button" class="btn-toggle-password" id="btnToggleLoginPassword" title="Hiện/ẩn mật khẩu">
                 <i class="fa-regular fa-eye"></i>
               </button>
             </div>
-            <small class="field-hint">Mật khẩu gồm 8 ký tự (chữ hoa, chữ thường, số, ký tự đặc biệt)</small>
+            <small class="field-hint">Mật khẩu được cấp hoặc sửa đổi trực tiếp từ Google Sheet</small>
           </div>
 
           <div class="form-check-group login-options-row">
@@ -189,7 +187,7 @@ html_content = '''<!DOCTYPE html>
           <i class="fa-solid fa-folder-open text-amber-500 mr-1"></i> Mở Kho Phần Mềm Cài Đặt (Google Drive)
         </a>
         <a href="DANH_SACH_TAI_KHOAN_CN23.md" target="_blank" class="btn btn-secondary btn-sm" style="text-decoration: none;">
-          <i class="fa-solid fa-address-book text-blue-500 mr-1"></i> Xem Danh Sách 70 Tài Khoản CN23 (MD)
+          <i class="fa-solid fa-address-book text-blue-500 mr-1"></i> Xem Danh Sách Cán Bộ CN23 (MD)
         </a>
       </div>
     </section>
@@ -198,7 +196,7 @@ html_content = '''<!DOCTYPE html>
 
   <!-- ==================== SCRIPT XỬ LÝ ĐĂNG NHẬP & HUB ==================== -->
   <script>
-    const INITIAL_ACCOUNTS = ''' + json.dumps(accounts, ensure_ascii=False) + ''';
+    // Link kết nối trực tiếp đến Google Apps Script & Google Sheet
     const DEFAULT_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxLjARkYWp2TegCCdMcfVc3W6qQm6PmhFz71-y8zB_xFXxXbRXpsUhk6aPbJtqVqUHE/exec";
     
     // Toast Notification
@@ -230,7 +228,7 @@ html_content = '''<!DOCTYPE html>
     const btnForgot = document.getElementById("btnForgotPassword");
     if (btnForgot) {
       btnForgot.addEventListener("click", () => {
-        alert("THÔNG BÁO QUÊN MẬT KHẨU:\n\nVui lòng liên hệ Tổ Hành chính - Tổng hợp (Đ/c Tuyền - SĐT: 0909736435) hoặc Quản trị viên để được kiểm tra và cấp lại mật khẩu đăng nhập.");
+        alert("THÔNG BÁO QUÊN MẬT KHẨU:\\n\\nVui lòng liên hệ Tổ Hành chính - Tổng hợp (Đ/c Tuyền - SĐT: 0909736435) hoặc Quản trị viên để được kiểm tra và cấp lại mật khẩu trực tiếp trên Google Sheet.");
       });
     }
 
@@ -299,12 +297,12 @@ html_content = '''<!DOCTYPE html>
       });
     }
 
-    // Xử lý Đăng nhập
+    // XỬ LÝ ĐĂNG NHẬP: LUÔN KIỂM TRA TRỰC TIẾP TỪ GOOGLE SHEET THEO THỜI GIAN THỰC
     const loginForm = document.getElementById("loginForm");
     if (loginForm) {
       loginForm.addEventListener("submit", async (e) => {
         e.preventDefault();
-        let phone = (document.getElementById("loginPhone").value || "").trim().replace(/^'+/, "");
+        let phone = (document.getElementById("loginPhone").value || "").trim().replace(/[\\s\\.\\-]+/g, "").replace(/^'+/, "");
         const password = (document.getElementById("loginPassword").value || "").trim();
         const remember = document.getElementById("rememberMe").checked;
 
@@ -315,76 +313,57 @@ html_content = '''<!DOCTYPE html>
 
         if (phone.length === 9 && !phone.startsWith("0")) phone = "0" + phone;
 
-        // 1. Kiểm tra tài khoản trong danh sách 70 cán bộ CN23
-        const acc = INITIAL_ACCOUNTS.find(a => {
-          let p = (a.so_dien_thoai || "").toString().trim().replace(/^'+/, "");
-          if (p.length === 9 && !p.startsWith("0")) p = "0" + p;
-          return p === phone;
-        });
-
-        if (acc) {
-          // Kiểm tra cán bộ đã nghỉ
-          if (acc.trang_thai === "Đã nghỉ") {
-            alert(`❌ CẢNH BÁO TRUY CẬP:\n\nCán bộ ${acc.ho_ten} đã nghỉ việc tại đơn vị Chi nhánh số 23.\nTài khoản đã được thu hồi và không thể đăng nhập hệ thống.`);
-            return;
-          }
-
-          if (acc.mat_khau !== password) {
-            showToast("Mật khẩu không chính xác! Vui lòng kiểm tra lại.", "error");
-            return;
-          }
-
-          const userObj = {
-            fullname: acc.ho_ten,
-            name: acc.ho_ten,
-            phone: phone,
-            email: phone,
-            position: acc.chuc_vu || "Cán bộ",
-            department: acc.don_vi || "Chi nhánh số 23",
-            role: "user",
-            status: acc.trang_thai || "Đang làm việc"
-          };
-
-          if (remember) {
-            localStorage.setItem("binhduong_user", JSON.stringify(userObj));
-            localStorage.setItem("vpdk_current_user", JSON.stringify(userObj));
-          } else {
-            sessionStorage.setItem("binhduong_user", JSON.stringify(userObj));
-            sessionStorage.setItem("vpdk_current_user", JSON.stringify(userObj));
-          }
-
-          showToast(`Xin chào ${acc.ho_ten}! Đăng nhập thành công.`, "success");
-          showHub(userObj);
-          return;
-        }
-
-        // 2. Fallback gọi online lên Google Apps Script nếu tài khoản mới
         const btnLogin = document.getElementById("btnLogin");
         btnLogin.disabled = true;
-        btnLogin.innerHTML = '<i class="fa-solid fa-spinner fa-spin mr-1"></i> Đang xác thực...';
+        btnLogin.innerHTML = '<i class="fa-solid fa-spinner fa-spin mr-1"></i> Đang xác thực từ Google Sheet...';
 
+        let result = null;
+
+        // 1. Gửi trực tiếp lên Google Sheet qua POST (text/plain để không bị CORS preflight)
         try {
           const res = await fetch(DEFAULT_SCRIPT_URL, {
             method: "POST",
+            headers: { "Content-Type": "text/plain;charset=utf-8" },
             body: JSON.stringify({ action: "login", phone: phone, password: password })
           });
-          const result = await res.json();
-          if (result && result.success && result.user) {
+          result = await res.json();
+        } catch (postErr) {
+          console.warn("POST error, fallback to GET:", postErr);
+        }
+
+        // 2. Dự phòng qua GET nếu POST bị mạng chặn
+        if (!result) {
+          try {
+            const getUrl = `${DEFAULT_SCRIPT_URL}?action=login&phone=${encodeURIComponent(phone)}&password=${encodeURIComponent(password)}&t=${Date.now()}`;
+            const resGet = await fetch(getUrl);
+            result = await resGet.json();
+          } catch (getErr) {
+            console.warn("GET error:", getErr);
+          }
+        }
+
+        btnLogin.disabled = false;
+        btnLogin.innerHTML = '<i class="fa-solid fa-arrow-right-to-bracket mr-1"></i> <span class="btn-text">Đăng Nhập Vào Hệ Thống</span>';
+
+        if (result) {
+          if (result.success && result.user) {
             const u = result.user;
             if (u.status === "Đã nghỉ") {
-              alert(`❌ CẢNH BÁO TRUY CẬP:\n\nCán bộ ${u.fullname} đã nghỉ việc tại đơn vị Chi nhánh số 23.\nKhông thể đăng nhập hệ thống.`);
+              alert(`❌ CẢNH BÁO TRUY CẬP:\\n\\nCán bộ ${u.fullname} đã được ghi nhận trạng thái ĐÃ NGHỈ LÀM VIỆC trên Google Sheet.\\nTài khoản đã bị vô hiệu hóa.`);
               return;
             }
+
             const userObj = {
-              fullname: u.fullname,
-              name: u.fullname,
-              phone: u.phone,
-              email: u.phone,
-              position: u.position,
-              department: u.department,
+              fullname: u.fullname || ("Cán bộ " + phone),
+              name: u.fullname || ("Cán bộ " + phone),
+              phone: u.phone || phone,
+              email: u.phone || phone,
+              position: u.position || "Cán bộ",
+              department: u.department || "Chi nhánh số 23",
               role: u.role || "user",
-              status: u.status
+              status: u.status || "Đang làm việc"
             };
+
             if (remember) {
               localStorage.setItem("binhduong_user", JSON.stringify(userObj));
               localStorage.setItem("vpdk_current_user", JSON.stringify(userObj));
@@ -392,16 +371,21 @@ html_content = '''<!DOCTYPE html>
               sessionStorage.setItem("binhduong_user", JSON.stringify(userObj));
               sessionStorage.setItem("vpdk_current_user", JSON.stringify(userObj));
             }
-            showToast(`Xin chào ${u.fullname}! Đăng nhập thành công.`, "success");
+
+            showToast(`Xin chào ${userObj.fullname}! Đăng nhập thành công.`, "success");
             showHub(userObj);
+            return;
           } else {
-            showToast(result.message || "Số điện thoại hoặc Mật khẩu không đúng!", "error");
+            if (result.isRetired) {
+              alert(`❌ CẢNH BÁO TRUY CẬP:\\n\\n${result.message}`);
+            } else {
+              showToast(result.message || "Số điện thoại hoặc Mật khẩu không chính xác!", "error");
+            }
+            return;
           }
-        } catch (err) {
-          showToast("Số điện thoại hoặc Mật khẩu không đúng!", "error");
-        } finally {
-          btnLogin.disabled = false;
-          btnLogin.innerHTML = '<i class="fa-solid fa-arrow-right-to-bracket mr-1"></i> <span class="btn-text">Đăng Nhập Vào Hệ Thống</span>';
+        } else {
+          // Lỗi mất kết nối Internet hoàn toàn
+          showToast("Không thể kết nối đến máy chủ Google Sheet! Vui lòng kiểm tra lại đường truyền mạng.", "error");
         }
       });
     }

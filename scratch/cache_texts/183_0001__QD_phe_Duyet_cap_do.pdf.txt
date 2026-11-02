@@ -1,0 +1,81 @@
+=== TRANG 1/2 ===
+UBND TỈNH BÌNH DƯƠNG
+CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM
+SỞ THÔNG TIN VÀ TRUYỀN THÔNG
+Độc lập - Tự do - Hạnh phúc
+Số: 183 /QĐ-STTTT
+Bình Dương, ngày29 tháng 6 năm 2023
+QUYẾT ĐỊNH
+CHI NHÁNH VĂN PHONG ĐẠNG Về việc phê duyệt cấp độ an toàn hệ thông thông ti
+HÀNH PHO THU DAU MỘ
+Hệ thông mạng nội bộ tại Chi nhánh văn phòng Đăng ký đất đai
+ĐẾN Số:
+Thành phố Thủ Dầu Một
+Ngày: 03/2/2014
+Chuyển:…
+GIÁM ĐỐC SỞ THÔNG TIN VÀ TRUYỀN THÔNG
+Số và ký hiệu HS
+Căn cứ Luật An toàn thông tin mạng ngày 19/11/2015;
+Căn cứ Nghị định số 85/2016/NĐ-CP ngày 01/7/2016 của Chính phủ về
+OLý . GD6B
+bảo đảm an toàn hệ thống thông tin theo cấp độ;
+1 của
+Căn cứ Thông tư 12/2022/TT-BTTTT ngày 12/8/2022 của Bộ Thông tin và
+TrÁó
+Truyền thông về việc quy định chi tiết và hướng dẫn một số điều của Nghị định
+Tân
+85/2016/NĐ-CP ngày 01/7/2016 của Chính phủ về bảo đảm an toàn hệ thống
+thông tin theo cấp độ;
+Тесті
+Công văn số 713/CATTT-TĐQLGS ngày 25 tháng 7 năm 2019
+của Cục An toàn thông tin về việc hướng dẫn xác định và thực thi bảo vệ hệ
+thống thông tin theo cấp độ.
+Theo đề nghị của Chi nhánh Văn phòng Đăng ký đất đai Thành phố Thủ
+Dầu Một và báo cáo thẩm định số 05/BCTĐ-HĐTĐ của Hội đồng thầm định ngày
+27/6/2023.
+QUYẾT ĐỊNH:
+Điêu 1. Phê duyệt câp độ an toàn hệ thông thông tin đôi với Chi nhánh Văn
+phòng Đăng ký đất đai Thành phố Thủ Dầu Một, cụ thê như sau:
+1. Thông tin chung
+a) Tên hệ thông thông tin: Hệ thông mạng nội bộ tại Chi nhánh Văn phòng
+Đăng ký đât đai Thành phô Thủ Dầu Một.
+b) Đơn vị vận hành hệ thống thông tin: Chi nhánh Văn phòng Đăng ký đất
+đai Thành phố Thủ Dầu Một.
+c) Địa chỉ: số 358 đường Huỳnh Văn Cù, phường Chánh Mỹ, thành phố
+Thủ Dâu Một, tỉnh Bình Dương.
+2. Cấp độ an toàn hệ thống thông tin: cấp độ 2.
+3. Phương án đảm bảo an toàn thông tin:
+hành hê thống tương ứng với cấn đô 1 là nhù hơn với Tiân chuẩn quấc via TCVN
+Phương án bảo đảm an toàn thông tin trong thiết kế hệ thống, quá trình vận
+=== TRANG 2/2 ===
+11930:2017 về công nghệ thông tin - các kỹ thuật an toàn - yêu cầu cơ bản về an
+toàn hệ thống thông tin theo cấp độ và quy định tại Thông tư số 12/2022/TT-
+BTTTT ngày 12/8/2022 của Bộ Thông tin và Truyền thông quy định chi tiết và
+hướng dẫn một số điều của Nghị định số 85/2016/NĐ-CP ngày 01/7/2016 của
+Chính phủ về bảo đảm an toàn hệ thống thông tin theo cấp độ.
+Điều 2. Tổ chức thực hiện
+1. Văn phòng đăng ký đât đai Tỉnh Bình Dương và Chi nhánh Văn phòng
+Đăng ký đât đai Thành phô Thủ Dâu Một có trách nhiệm bảo đảm an toàn Hệ
+thông Chi nhánh Văn phòng Đăng ký đât đai Thành phô Thủ Dâu Một theo các
+quy định tại Điêu 22 Nghị định sô 85/2016/NĐ-CP ngày 01/7/2016 của Chính
+phủ.
+Điều 3. Điều khoản thi hành
+Văn phòng đăng ký đất đai Tỉnh Bình Dương; Chi nhánh Văn phòng Đăng
+ký đất đai Thành phố Thủ Dầu Một và các cơ quan, đơn vị liên quan chịu trách
+nhiệm thi hành Quyết định này.
+Đơn vị chuyên trách an toàn thông tin của Sở Thông tin và Truyền thông
+có trách nhiệm kiểm tra, giám sát thực hiện Quyết định này và báo cáo Sở Thông
+tin và Truyền thông theo quy định của pháp luật.
+Quyết định này có hiệu lực kể từ ngày ký./.
+Nơi nhận:
+- Như điều 3;
+GIÁM ĐÓC
+- Lưu: VT, Tín.
+HOA K.H.CN HO
+- ÓNG
+SO
+THONG TIN V
+*
+TRUYÊN THÔNG
+TÀNH BÌNH DƯỢT
+Lê Tuần Anh

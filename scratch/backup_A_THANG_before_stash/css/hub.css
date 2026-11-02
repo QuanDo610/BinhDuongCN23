@@ -1,0 +1,261 @@
+/* =========================================================================
+   HUB.CSS: GIAO DIỆN CỔNG HUB TRUNG TÂM & MÀN HÌNH ĐĂNG NHẬP
+   Hệ Thống Web Portal - Văn Phòng Đăng Ký Đất Đai Chi Nhánh Số 23
+   ========================================================================= */
+
+@import url("base.css");
+
+/* ==================== 1. MÀN HÌNH ĐĂNG NHẬP ==================== */
+.login-card {
+  max-width: 480px;
+  margin: 60px auto 40px auto;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  border: 1px solid var(--color-border-subtle);
+  background-color: var(--color-bg-surface);
+}
+
+.login-card-header {
+  padding: 28px 24px 20px 24px;
+  background-color: var(--color-bg-subtle);
+  border-bottom: 1px solid var(--color-border-subtle);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 8px;
+  width: 100%;
+}
+
+.login-icon-box {
+  font-size: 2.5rem;
+  color: var(--color-primary);
+  margin-bottom: 4px;
+}
+
+.login-title {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  letter-spacing: -0.01em;
+  text-align: center;
+}
+
+.login-subtitle {
+  margin: 0;
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+  text-align: center;
+}
+
+.login-options-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  font-size: var(--font-size-xs);
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  color: var(--color-text-secondary);
+}
+
+.btn-forgot-password {
+  background: none;
+  border: none;
+  color: var(--color-primary);
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.btn-block {
+  width: 100%;
+}
+
+/* ==================== 2. MÀN HÌNH PORTAL HUB (4 PHÂN HỆ) ==================== */
+.hub-section {
+  max-width: var(--container-max-width);
+  margin: 20px auto;
+  padding: 0 16px;
+  width: 100%;
+}
+
+.hub-hero-banner {
+  background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 60%, #3b82f6 100%);
+  color: #ffffff;
+  padding: 28px 32px;
+  border-radius: var(--radius-xl);
+  box-shadow: 0 8px 24px -4px rgba(30, 58, 138, 0.25);
+  margin-bottom: 26px;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 4px solid var(--color-accent);
+}
+
+.hub-hero-content h2 {
+  font-size: 1.65rem;
+  font-weight: 800;
+  margin-bottom: 6px;
+  letter-spacing: -0.02em;
+}
+
+.hub-hero-content p {
+  font-size: 0.95rem;
+  color: #e0e7ff;
+  max-width: 750px;
+  line-height: 1.5;
+}
+
+.hub-hero-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 0.82rem;
+}
+
+.hub-hero-meta-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+}
+
+/* Grid 4 Card Phân Hệ Nghiệp Vụ */
+.hub-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 22px;
+  margin-bottom: 30px;
+}
+
+.hub-selection-card {
+  background: #ffffff;
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-xl);
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: var(--shadow-card);
+  transition: all var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+}
+
+.hub-selection-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: #cbd5e1;
+}
+
+.hub-selection-card.card-schedule::before { background: linear-gradient(90deg, #15803d, #22c55e); }
+.hub-selection-card.card-it::before { background: linear-gradient(90deg, #1e40af, #3b82f6); }
+.hub-selection-card.card-task::before { background: linear-gradient(90deg, #d97706, #f59e0b); }
+.hub-selection-card.card-report::before { background: linear-gradient(90deg, #0d9488, #06b6d4); }
+
+.hub-selection-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 32px -6px rgba(15, 23, 42, 0.14);
+  border-color: #cbd5e1;
+}
+
+.hub-card-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 14px;
+}
+
+.hub-card-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.65rem;
+  flex-shrink: 0;
+}
+
+.card-schedule .hub-card-icon { background: #dcfce7; color: #15803d; }
+.card-it .hub-card-icon { background: #dbeafe; color: #1e40af; }
+.card-task .hub-card-icon { background: #fef3c7; color: #b45309; }
+.card-report .hub-card-icon { background: #ccfbf1; color: #0f766e; }
+
+.hub-card-titles h3 {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--color-text-main);
+  margin-bottom: 2px;
+}
+
+.hub-card-subtitle {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.hub-card-desc {
+  color: var(--color-text-secondary);
+  font-size: 0.88rem;
+  line-height: 1.55;
+  margin-bottom: 18px;
+  flex-grow: 1;
+}
+
+.hub-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 20px;
+}
+
+.hub-card-tag {
+  font-size: 0.72rem;
+  padding: 4px 10px;
+  border-radius: var(--radius-md);
+  background: var(--color-bg-canvas);
+  color: var(--color-text-secondary);
+  border: 1px solid var(--color-border-subtle);
+  display: inline-flex;
+  align-items: center;
+}
+
+.btn-enter-system {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 18px;
+  border-radius: var(--radius-md);
+  background: var(--color-primary);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: var(--font-size-sm);
+  transition: all var(--transition-fast);
+}
+
+.btn-enter-system:hover {
+  background: var(--color-primary-hover);
+  color: #ffffff;
+  transform: translateY(-1px);
+}
